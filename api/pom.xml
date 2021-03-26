@@ -11,4 +11,21 @@
 	<packaging>jar</packaging>
 	<name>Revenue collection dashboard summaries API</name>
 	<description>API project for Revenue collection dashboard summaries</description>
+	<dependencies>
+	<dependency>
+		<groupId>org.openmrs.module</groupId>
+		<artifactId>kenyaui-api</artifactId>
+		<version>${kenyauiVersion}</version>
+	</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>metadatadeploy-api</artifactId>
+			<version>${metadatadeployVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>kenyaemr-api</artifactId>
+			<version>${kenyaemrVersion}</version>
+		</dependency>
+	</dependencies>
 </project>
