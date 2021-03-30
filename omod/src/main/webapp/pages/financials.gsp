@@ -1,15 +1,36 @@
-<% ui.decorateWith("appui", "standardEmrPage") %>
+<%
+    ui.decorateWith("kenyaemr", "standardPage")
+    ui.includeJavascript("ehrconfigs", "jquery.dataTables.min.js")
+    ui.includeCss("ehrconfigs", "jquery.dataTables.min.css")
+%>
+<script type="text/javascript">
+    jQuery(function() {
+        jQuery("#startDate").datepicker();
+        jQuery("#endDate").datepicker();
 
-Hello, world.
+    });
+</script>
 
-<% if (context.authenticated) { %>
-    And a special hello to you, $context.authenticatedUser.personName.fullName.
-    Your roles are:
-    <% context.authenticatedUser.roles.findAll { !it.retired }.each { %>
-        $it.role ($it.description)
-    <% } %>
-<% } else { %>
-    You are not logged in.
-<% } %>
+<div class="ke-page-content">
+    <fieldset>
+        <legend>Financial Report</legend>
+        <form method="post">
+                <table>
+                    <tr>
+                        <td>
+                            Start Date:<input type="text" id="startDate" name="startDate"/>
+                        </td>
+                        <td>
+                            End Date:<input type="text" id="endDate" name="endDate"/>
+                        </td>
+                        <td>
+                            <input type="submit" value="Filter" >
+                        </td>
+                    </tr>
 
-${ ui.includeFragment("financials", "users") }
+                </table>
+        </form>
+
+    </fieldset>
+
+</div>
