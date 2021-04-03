@@ -38,8 +38,12 @@
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>kenyaui-api</artifactId>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>calculation-api</artifactId>
+		</dependency>
     </dependencies>
 
 	<build>

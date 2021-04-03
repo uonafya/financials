@@ -63,4 +63,96 @@
         <constructor-arg value="financials:apps/revenue.png"/>
         <constructor-arg value="3000"/>
     </bean>
+    <bean id="ehraddon.add.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
+        <property name="targetUuid" value="7a822d3e-8d40-11eb-92cc-5f145f16bd2e" />
+        <property name="eligibilityCalculation" value="org.openmrs.module.financials.calculation.EligibleForEhrAddonProgramCalculation" />
+        <property name="defaultEnrollmentForm" ref="ehraddons.form.enrollment" />
+        <property name="defaultCompletionForm" ref="ehraddons.form.enrollment" />
+        <property name="reports">
+            <set>
+                <ref bean="ehraddons.common.705a" />
+                <ref bean="ehraddons.common.705b" />
+                <ref bean="ehraddons.common.717" />
+                <ref bean="ehraddons.common.report.labadults" />
+                <ref bean="ehraddons.common.report.labchildren" />
+
+            </set>
+        </property>
+        <property name="fragments">
+            <map>
+                <entry key="enrollment-summary" value="financials:ehraddonEnrollmentSummary" />
+                <entry key="care-panel" value="financials:ehraddonsCarePanel" />
+                <entry key="completion-summary" value="financials:ehraddonsCompletionSummary" />
+            </map>
+        </property>
+        <property name="order" value="1000" />
+    </bean>
+    <bean id="ehraddons.common.705a" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+        <property name="targetUuid" value="64033c7a-8330-11eb-8436-ffdeb21f9dd8" />
+        <property name="name" value="MOH 705 A" />
+        <property name="description" value="MOH 705 A Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set></property>
+        <property name="template" value="financials:MOH_705a.xls" />
+    </bean>
+
+    <bean id="ehraddons.common.705b" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+        <property name="targetUuid" value="495ece88-8331-11eb-872a-270ce8ccc6b5" />
+        <property name="name" value="MOH 705 B" />
+        <property name="description" value="MOH 705 B Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set></property>
+        <property name="template" value="financials:MOH_705b.xls" />
+    </bean>
+
+    <bean id="ehraddons.common.717" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+        <property name="targetUuid" value="27b030f4-85c7-11eb-810d-4b0bf1a63105" />
+        <property name="name" value="MOH 717" />
+        <property name="description" value="MOH 717 Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set></property>
+        <property name="template" value="financials:MOH_717.xls" />
+    </bean>
+    <bean id="ehraddons.common.report.labadults" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="f85b114a-86eb-11eb-9eda-eb0964963ce6" />
+        <property name="name" value="Laboratory Results Report for adults" />
+        <property name="description" value="Laboratory Results Report for adults" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:labadults.xls" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:labadults" />
+    </bean>
+
+    <bean id="ehraddons.common.report.labchildren" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="36f5d2c4-8d44-11eb-bc85-cbebdbabd35c" />
+        <property name="name" value="Laboratory Results Listing Report for children" />
+        <property name="description" value="Laboratory Results Report for adults" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:labadults.xls" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:labadults" />
+    </bean>
+
+    <bean id="ehraddons.form.enrollment" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+        <property name="targetUuid" value="66c4664a-8d45-11eb-9ab1-3359b033ed37" />
+        <property name="apps">
+            <set>
+                <ref bean="initialpatientqueueapp.app.initialpatientqueueapp.queue" />
+            </set>
+        </property>
+        <property name="icon" value="kenyaui:forms/generic.png" />
+        <property name="htmlform" value="financials:test.html" />
+    </bean>
 </beans>

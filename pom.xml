@@ -68,6 +68,18 @@
 				<version>${kenyaemrVersion}</version>
 				<scope>provided</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>calculation-api</artifactId>
+				<version>${calculationVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>reporting-api</artifactId>
+				<version>${reportingVersion}</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -102,5 +114,7 @@
 		<kenyauiVersion>2.1.1</kenyauiVersion>
 		<metadatadeployVersion>1.2</metadatadeployVersion>
 		<kenyaemrVersion>17.0.3</kenyaemrVersion>
+		<calculationVersion>1.1</calculationVersion>
+		<reportingVersion>0.9.8.1</reportingVersion>
 	</properties>
 </project>
