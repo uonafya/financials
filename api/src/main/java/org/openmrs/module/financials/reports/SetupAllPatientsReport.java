@@ -68,7 +68,6 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		
 		PatientDataSetDefinition allVisits = allPatients();
 		allVisits.addRowFilter(allPatientsCohort());
-		//DataSetDefinition allPatientsDSD = allVisits;
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) allVisits, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
