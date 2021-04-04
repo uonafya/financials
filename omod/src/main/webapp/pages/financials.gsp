@@ -7,6 +7,7 @@
     jQuery(function() {
         jQuery("#startDate").datepicker();
         jQuery("#endDate").datepicker();
+        jQuery("#details").DataTable();
 
     });
 </script>
@@ -32,5 +33,33 @@
         </form>
 
     </fieldset>
+    <table id="details">
+        <thead>
+            <th>Service bill #</th>
+            <th>Patient name</th>
+            <th>Amount</th>
+            <th>Actual Amount</th>
+            <th>Rebate Amount</th>
+            <th>CategoryNumber</th>
+            <th>Patient Category</th>
+            <th>Admitted Days</th>
+            <th>Patient SubCategory</th>
+        </thead>
+        <tbody>
+        <% bills.each {%>
+            <tr>
+                <td>${it.patientServiceBillId}</td>
+                <td>${it.patient}</td>
+                <td>${it.amount}</td>
+                <td>${it.actualAmount}</td>
+                <td>${it.rebateAmount}</td>
+                <td>${it.categoryNumber}</td>
+                <td>${it.patientCategory}</td>
+                <td>${it.admittedDays}</td>
+                <td>${it.patientSubCategory}</td>
+            </tr>
+        <%}%>
+        </tbody>
+    </table>
 
 </div>

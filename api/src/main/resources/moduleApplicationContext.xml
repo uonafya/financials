@@ -75,6 +75,7 @@
                 <ref bean="ehraddons.common.717" />
                 <ref bean="ehraddons.common.report.labadults" />
                 <ref bean="ehraddons.common.report.labchildren" />
+                <ref bean="ehraddons.common.report.allPatients" />
 
             </set>
         </property>
@@ -154,5 +155,18 @@
         </property>
         <property name="icon" value="kenyaui:forms/generic.png" />
         <property name="htmlform" value="financials:test.html" />
+    </bean>
+
+    <bean id="ehraddons.common.report.allPatients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="7ee5f974-9532-11eb-a389-bffa872cf1d8" />
+        <property name="name" value="All patients on visit" />
+        <property name="description" value="Patients who visit a facility on a given date" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:all.xls" />
+        <property name="repeatingSection" value="sheet:1,row:7,dataset:all" />
     </bean>
 </beans>
