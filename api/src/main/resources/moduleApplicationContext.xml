@@ -130,20 +130,20 @@
             </set>
         </property>
         <property name="template" value="financials:labadults.xls" />
-        <property name="repeatingSection" value="sheet:1,row:4,dataset:labadults" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:LA" />
     </bean>
 
     <bean id="ehraddons.common.report.labchildren" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="36f5d2c4-8d44-11eb-bc85-cbebdbabd35c" />
         <property name="name" value="Laboratory Results Listing Report for children" />
-        <property name="description" value="Laboratory Results Report for adults" />
+        <property name="description" value="Laboratory Results Report for children" />
         <property name="apps">
             <set>
                 <ref bean="kenyaemr.app.reports" />
             </set>
         </property>
-        <property name="template" value="financials:labadults.xls" />
-        <property name="repeatingSection" value="sheet:1,row:4,dataset:labadults" />
+        <property name="template" value="financials:labchildren.xls" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:LC" />
     </bean>
 
     <bean id="ehraddons.form.enrollment" class="org.openmrs.module.kenyacore.form.FormDescriptor">
