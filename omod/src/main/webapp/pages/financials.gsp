@@ -14,26 +14,38 @@
 
     });
 </script>
+<style>
+    .format{
+         text-align: center;
+         background-color: lightgrey;
+         font-size: 16px;
+    }
+</style>
 
 <div class="ke-page-content">
-    <fieldset>
-        <legend>Financial Report</legend>
+    <div>
+        <p align="center">
+            <b>Financial Report</b>
+        </p>
+    </div>
         <table>
             <tr>
                 <td valign="top">
-                    <span>Cummulative Revenue</span>
+                    <span class="format">Cummulative Revenue</span>
                     <table id="details">
                         <thead>
-                        <th>Service bill #</th>
-                        <th>Transaction Date</th>
-                        <th>Patient Identifier</th>
-                        <th>Patient Names</th>
-                        <th>Patient Category</th>
-                        <th>Patient SubCategory</th>
-                        <th>Waiver Amount</th>
-                        <th>Rebate Amount</th>
-                        <th>Actual Amount</th>
-                        <th>Paid Amount</th>
+                        <tr>
+                            <th>Service bill #</th>
+                            <th>Transaction Date</th>
+                            <th>Patient Identifier</th>
+                            <th>Patient Names</th>
+                            <th>Patient Category</th>
+                            <th>Patient SubCategory</th>
+                            <th>Waiver Amount</th>
+                            <th>Rebate Amount</th>
+                            <th>Actual Amount</th>
+                            <th>Paid Amount</th>
+                        </tr>
                         </thead>
                         <tbody>
                         <% bills.each {%>
@@ -55,13 +67,17 @@
                 </td>
                 <td>
                     <table id="servicePoint" valign="top">
-                        <span>Revenue per departiments</span>
+                        <span class="format">Revenue per departiments</span>
+                        <thead>
+                            <tr>
+                                <th>Depatiment</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
                     </table>
 
                 </td>
             </tr>
         </table>
-    </fieldset>
-
 
 </div>

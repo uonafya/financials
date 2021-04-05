@@ -31,9 +31,9 @@ public class FinancialsPageController {
 			patientBillSummary.setRebate(String.valueOf(patientServiceBill.getRebateAmount()));
 			patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
 			patientBillSummary.setIdentifier(patientServiceBill.getPatient().getPatientIdentifier().getIdentifier());
-			//add this build object to the list
-			allBills.add(patientBillSummary);
 		}
+		//add this build object to the list
+		allBills.add(patientBillSummary);
 		
 		model.addAttribute("bills", allBills);
 	}
