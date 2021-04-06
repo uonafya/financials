@@ -32,8 +32,17 @@ public class FinancialsPageController {
 			PatientBillSummary patientBillSummary = new PatientBillSummary();
 			patientBillSummary.setBillId(patientServiceBill.getPatientServiceBillId());
 			patientBillSummary.setPatient(patientServiceBill.getPatient().getPersonName().getFullName());
-			patientBillSummary.setCategory(patientServiceBill.getPatient().getAttribute(paymentCategory).getValue());
-			patientBillSummary.setSubCategory(patientServiceBill.getPatient().getAttribute(paymentSubCategory).getValue());
+			if (patientServiceBill.getPatient().getAttribute(paymentCategory) != null) {
+				patientBillSummary.setCategory(patientServiceBill.getPatient().getAttribute(paymentCategory).getValue());
+			} else {
+				patientBillSummary.setCategory("");
+			}
+			if (patientServiceBill.getPatient().getAttribute(paymentSubCategory) != null) {
+				patientBillSummary.setSubCategory(patientServiceBill.getPatient().getAttribute(paymentSubCategory)
+				        .getValue());
+			} else {
+				patientBillSummary.setSubCategory("");
+			}
 			patientBillSummary.setWaiver(String.valueOf(patientServiceBill.getWaiverAmount()));
 			patientBillSummary.setActualAmount(String.valueOf(patientServiceBill.getActualAmount()));
 			patientBillSummary.setPaidAmount(String.valueOf(patientServiceBill.getAmount()));
