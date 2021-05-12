@@ -1,11 +1,16 @@
 package org.openmrs.module.financials.fragment.controller;
 
+import org.apache.commons.lang.StringUtils;
 import org.openmrs.PersonAttributeType;
 import org.openmrs.api.PersonService;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.financials.GeneralRevenuePerUnit;
 import org.openmrs.module.financials.PatientBillSummary;
 import org.openmrs.module.hospitalcore.BillingService;
+import org.openmrs.module.hospitalcore.HospitalCoreService;
+import org.openmrs.module.hospitalcore.model.OpdTestOrder;
 import org.openmrs.module.hospitalcore.model.PatientServiceBill;
+import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
 import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.fragment.FragmentModel;
 import org.openmrs.ui.framework.page.PageModel;
@@ -52,6 +57,28 @@ public class SummaryFragmentController {
 		}
 		
 		model.addAttribute("bills", allBills);
+		
+		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange();
+		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
+		        .getAllPatientServiceBillItemsByDate();
+		GeneralRevenuePerUnit generalRevenuePerUnit = null;
+		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
+		
+		for (OpdTestOrder opdTestOrder : allOpdOrders) {
+			for (PatientServiceBillItem patientServiceBillItem : patientServiceBillItems) {
+				if (opdTestOrder.getBillableService().equals(patientServiceBillItem.getService())
+				        && opdTestOrder.getFromDept() != null) {
+					generalRevenuePerUnit = new GeneralRevenuePerUnit();
+					generalRevenuePerUnit.setTransactionDate(opdTestOrder.getScheduleDate());
+					generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
+					generalRevenuePerUnit.setTotalAmount(patientServiceBillItem.getActualAmount());
+					break;
+				}
+			}
+			summarizedResults.add(generalRevenuePerUnit);
+		}
+		
+		model.addAttribute("summaryAccounts", summarizedResults);
 		
 	}
 }

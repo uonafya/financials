@@ -10,11 +10,21 @@
 package org.openmrs.module.financials.api;
 
 import org.openmrs.api.OpenmrsService;
+import org.openmrs.module.hospitalcore.model.OpdTestOrder;
+import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * The main service of this module, which is exposed for other modules. See
  * moduleApplicationContext.xml on how it is wired up.
  */
+@Transactional
 public interface RevenuecollectiondashboardsummariesService extends OpenmrsService {
+	
+	List<OpdTestOrder> getRevenuesPerDepartmentByDate();
+	
+	List<PatientServiceBillItem> getPatientBilledItems();
 	
 }

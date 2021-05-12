@@ -6,7 +6,68 @@
 <script type="text/javascript">
     jQuery(function() {
         jQuery("#details").DataTable({
-            ordering: true
+            searching: true,
+            lengthChange: false,
+            pageLength: 10,
+            jQueryUI: true,
+            pagingType: 'full_numbers',
+            sort: true,
+            select: true,
+            dom: 'Bfrtip',
+            language: {
+                zeroRecords: 'No Services billed.',
+                paginate: {
+                    first: 'First',
+                    previous: 'Previous',
+                    next: 'Next',
+                    last: 'Last'
+                }
+            },
+            buttons: [
+                {
+                    extend: 'collection',
+                    text: 'Export',
+                    buttons: [
+                        'copy',
+                        'excel',
+                        'csv',
+                        'pdf',
+                        'print'
+                    ]
+                }
+                ]
+        });
+        jQuery("#summaryDpt").DataTable({
+            searching: true,
+            lengthChange: false,
+            pageLength: 10,
+            jQueryUI: true,
+            pagingType: 'full_numbers',
+            select: true,
+            sort: true,
+            dom: 'Bfrtip',
+            language: {
+                zeroRecords: 'No Services billed.',
+                paginate: {
+                    first: 'First',
+                    previous: 'Previous',
+                    next: 'Next',
+                    last: 'Last'
+                }
+            },
+            buttons: [
+                {
+                    extend: 'collection',
+                    text: 'Export',
+                    buttons: [
+                        'copy',
+                        'excel',
+                        'csv',
+                        'pdf',
+                        'print'
+                    ]
+                }
+            ]
         });
     });
 </script>
@@ -62,4 +123,24 @@
             </tr>
         </table>
     </div>
+<div class="ke-panel-content">
+<table border="0" id="summaryDpt">
+    <thead>
+        <tr>
+            <td>Transaction date</td>
+            <td>Department</td>
+            <td>Amount collected</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% summaryAccounts.each {%>
+        <tr>
+            <td>${it.transactionDate}</td>
+            <td>${it.department}</td>
+            <td>${it.totalAmount}</td>
+        </tr>
+    <% } %>
+    </tbody>
+</table>
+</div>
 </div>

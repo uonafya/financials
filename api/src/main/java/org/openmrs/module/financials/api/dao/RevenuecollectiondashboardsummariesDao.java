@@ -9,8 +9,15 @@
  */
 package org.openmrs.module.financials.api.dao;
 
+import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+import org.openmrs.module.financials.GeneralRevenuePerUnit;
+import org.openmrs.module.hospitalcore.model.OpdTestOrder;
+import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository("financials.RevenuecollectiondashboardsummariesDao")
 public class RevenuecollectiondashboardsummariesDao {
@@ -23,5 +30,19 @@ public class RevenuecollectiondashboardsummariesDao {
 	
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
+	}
+	
+	public List<OpdTestOrder> getRevenuesPerDepartmentByDate() {
+		
+		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(OpdTestOrder.class, "test_order");
+		criteria.add(Restrictions.eq("billingStatus", 1));
+		
+		return criteria.list();
+	}
+	
+	public List<PatientServiceBillItem> getPatientBilledItems() {
+		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(PatientServiceBillItem.class, "billed_items");
+		
+		return criteria.list();
 	}
 }

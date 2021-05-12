@@ -13,6 +13,10 @@ import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
 import org.openmrs.module.financials.api.RevenuecollectiondashboardsummariesService;
 import org.openmrs.module.financials.api.dao.RevenuecollectiondashboardsummariesDao;
+import org.openmrs.module.hospitalcore.model.OpdTestOrder;
+import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
+
+import java.util.List;
 
 public class RevenuecollectiondashboardsummariesServiceImpl extends BaseOpenmrsService implements RevenuecollectiondashboardsummariesService {
 	
@@ -25,5 +29,16 @@ public class RevenuecollectiondashboardsummariesServiceImpl extends BaseOpenmrsS
 	 */
 	public void setDao(RevenuecollectiondashboardsummariesDao dao) {
 		this.dao = dao;
+	}
+	
+	@Override
+	public List<OpdTestOrder> getRevenuesPerDepartmentByDate() {
+		
+		return dao.getRevenuesPerDepartmentByDate();
+	}
+	
+	@Override
+	public List<PatientServiceBillItem> getPatientBilledItems() {
+		return null;
 	}
 }
