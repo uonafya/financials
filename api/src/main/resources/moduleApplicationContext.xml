@@ -76,6 +76,7 @@
                 <ref bean="ehraddons.common.report.labadults" />
                 <ref bean="ehraddons.common.report.labchildren" />
                 <ref bean="ehraddons.common.report.allPatients" />
+                <ref bean="ehraddons.common.report.malaria" />
 
             </set>
         </property>
@@ -168,5 +169,18 @@
         </property>
         <property name="template" value="financials:all.xls" />
         <property name="repeatingSection" value="sheet:1,row:7,dataset:all" />
+    </bean>
+
+    <bean id="ehraddons.common.report.malaria" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="a36882d2-b5ba-11eb-aaee-ff5cd06f3f0d" />
+        <property name="name" value="Malaria report" />
+        <property name="description" value="Patients who have malaria on a given period" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:malaria.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:malaria" />
     </bean>
 </beans>
