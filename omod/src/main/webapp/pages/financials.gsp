@@ -25,7 +25,7 @@
                     href: ui.pageLink("financials", "financials", [ section: "departmentFinanceSummaries" ]),
                     active: (selection == "section-departmentFinanceSummaries"),
                     iconProvider: "financials",
-                    icon: "forms/upline.png"
+                    icon: "buttons/upline.png"
             ]
     ]
 %>
