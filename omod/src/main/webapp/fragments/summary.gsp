@@ -1,6 +1,6 @@
 <%
-    ui.includeJavascript("ehrconfigs", "jquery.dataTables.min.js")
-    ui.includeCss("ehrconfigs", "datatables/dataTables_jui.css")
+    ui.includeJavascript("financials", "jquery.dataTables.min.js")
+    ui.includeCss("financials", "jquery.dataTables.min.css")
 %>
 
 <script type="text/javascript">
@@ -10,7 +10,7 @@
             "pagingType": "full_numbers",
             searching: true,
             lengthChange: false,
-            pageLength: 15,
+            pageLength: 20,
             jQueryUI: true,
             sort: true,
             select: true,
@@ -35,7 +35,7 @@
             "pagingType": "full_numbers",
             searching: true,
             lengthChange: false,
-            pageLength: 15,
+            pageLength: 20,
             jQueryUI: true,
             select: true,
             sort: true,
@@ -76,7 +76,7 @@ th:last-child{
 }
 </style>
 <div class="ke-panel-frame">
-    <div class="ke-panel-heading">Financial Report and Statements</div>
+    <div class="ke-panel-heading">Financial Report and Statements today</div>
     <div class="ke-panel-content">
         <h4>Patient Summary</h4>
         <table border="0" cellpadding="5" cellspacing="0" id="details" width="75%">
@@ -93,7 +93,14 @@ th:last-child{
                 </tr>
             </thead>
             <tbody>
-                <% bills.each {%>
+            <% if (bills.empty) { %>
+                <tr>
+                    <td colspan="7">
+                        No records found for today
+                    </td>
+                </tr>
+            <% } %>
+            <% bills.each {%>
                 <tr>
                     <td>${it.transactionDate}</td>
                     <td>${it.identifier}</td>
@@ -104,10 +111,9 @@ th:last-child{
                     <td>${it.actualAmount}</td>
                     <td>${it.paidAmount}</td>
                 </tr>
-                <%}%>
+            <%}%>
             </tbody>
         </table>
-        <br />
         <h4>Departmental Summaries</h4>
         <table border="0" id="summaryDpt" width="75%" cellspacing="0" cellpadding="5">
             <thead>
@@ -118,6 +124,13 @@ th:last-child{
             </tr>
             </thead>
             <tbody>
+            <% if (summaryAccounts.empty) { %>
+            <tr>
+                <td colspan="3">
+                    No records found for today
+                </td>
+            </tr>
+            <% } %>
             <% summaryAccounts.each {%>
             <tr>
                 <td>${it.transactionDate}</td>

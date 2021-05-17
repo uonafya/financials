@@ -34,8 +34,8 @@ public class SummaryFragmentController {
 		for (PatientServiceBill patientServiceBill : allBils) {
 			String createdDate = formatterDate.format(patientServiceBill.getCreatedDate());
 			String today = formatterDate.format(new Date());
-			PatientBillSummary patientBillSummary = null;
-			if (createdDate.equals(today)) {
+			PatientBillSummary patientBillSummary;
+			if (createdDate.equals(today) && patientServiceBill.getCreatedDate() != null) {
 				patientBillSummary = new PatientBillSummary();
 				patientBillSummary.setBillId(patientServiceBill.getPatientServiceBillId());
 				patientBillSummary.setPatient(patientServiceBill.getPatient().getPersonName().getFullName());
@@ -54,11 +54,11 @@ public class SummaryFragmentController {
 				patientBillSummary.setActualAmount(String.valueOf(patientServiceBill.getActualAmount()));
 				patientBillSummary.setPaidAmount(String.valueOf(patientServiceBill.getAmount()));
 				patientBillSummary.setRebate(String.valueOf(patientServiceBill.getRebateAmount()));
-				patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
+				patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getCreatedDate()));
 				patientBillSummary.setIdentifier(patientServiceBill.getPatient().getPatientIdentifier().getIdentifier());
 				//add this build object to the list
+				allBills.add(patientBillSummary);
 			}
-			allBills.add(patientBillSummary);
 		}
 		
 		model.addAttribute("bills", allBills);

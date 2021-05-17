@@ -1,6 +1,6 @@
 <%
-    ui.includeJavascript("ehrconfigs", "jquery.dataTables.min.js")
-    ui.includeCss("ehrconfigs", "datatables/dataTables_jui.css")
+    ui.includeJavascript("financials", "jquery.dataTables.min.js")
+    ui.includeCss("financials", "jquery.dataTables.min.css")
 %>
 <script type="text/javascript">
     jQuery(function() {
