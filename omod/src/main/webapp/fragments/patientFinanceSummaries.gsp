@@ -4,9 +4,10 @@
 %>
 <script type="text/javascript">
     jQuery(function() {
-        jQuery("#pDetails").DataTable({
-
-        });
+        var table =  jQuery("#pDetails").DataTable();
+        jQuery('#pDetails tbody').on( 'click', 'tr', function () {
+            console.log( table.row( this ).data() );
+        } );
     });
 </script>
 <div class="ke-panel-frame">

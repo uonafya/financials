@@ -5,79 +5,13 @@
 
 <script type="text/javascript">
     jQuery(function() {
-        jQuery("#details").DataTable({
-            "processing": true,
-            "pagingType": "full_numbers",
-            searching: true,
-            lengthChange: false,
-            pageLength: 20,
-            jQueryUI: true,
-            sort: true,
-            select: true,
-            dom: 't<"fg-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix"ip>',
-            language: {
-                zeroRecords: 'No Services billed.',
-                paginate: {
-                    first: 'First',
-                    previous: 'Previous',
-                    next: 'Next',
-                    last: 'Last'
-                }
-            },
-            buttons: [
-                'colvis',
-                'excel',
-                'print'
-            ]
-        });
-        jQuery("#summaryDpt").DataTable({
-            "processing": true,
-            "pagingType": "full_numbers",
-            searching: true,
-            lengthChange: false,
-            pageLength: 20,
-            jQueryUI: true,
-            select: true,
-            sort: true,
-            dom: 't<"fg-toolbar ui-widget-header ui-corner-tl ui-corner-tr ui-helper-clearfix"ip>',
-            language: {
-                zeroRecords: 'No Services billed.',
-                paginate: {
-                    first: 'First',
-                    previous: 'Previous',
-                    next: 'Next',
-                    last: 'Last'
-                }
-            },
-            buttons: [
-                'colvis',
-                'excel',
-                'print'
-            ]
-        });
+        jQuery("#details").DataTable();
+        jQuery("#summaryDpt").DataTable();
     });
 </script>
-<style type="text/css">
-#report-search-form input {
-    display: inline;
-    margin-top: 5px;
-}
-#summaryDpt {
-    margin-top: 1em;
-}
-.paging_full_numbers .fg-button {
-    margin: 1px;
-}
-th:last-child{
-    width: 75px!important;
-}
-#details {
-    margin-top: 1em;
-}
-</style>
 <div class="ke-panel-frame">
     <div class="ke-panel-heading">Financial Report and Statements today</div>
-    <div class="ke-panel-content">
+    <div class="ke-panel-content" style="background-color: #F3F9FF">
         <h4>Patient Summary</h4>
         <table border="0" cellpadding="5" cellspacing="0" id="details" width="75%">
             <thead>
