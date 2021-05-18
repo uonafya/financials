@@ -106,8 +106,8 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("County", new CalculationDataDefinition("County", new CountyAddressCalculation()), "",
 		    new CalculationResultConverter());
 		dsd.addColumn("Results", new ObsForPersonDataDefinition("Return Visit Date", TimeQualifier.LAST, Context
-		        .getConceptService().getConceptByUuid("32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null),
-		    "onOrBefore=${endDate},onOrAfter=${startDate}", new ObsValueConverter());
+		        .getConceptService().getConceptByUuid("32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "",
+		    new ObsValueConverter());
 		return dsd;
 	}
 	
