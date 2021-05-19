@@ -6,7 +6,11 @@ import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.PatientBillSummary;
 import org.openmrs.module.hospitalcore.BillingService;
 import org.openmrs.module.hospitalcore.model.PatientServiceBill;
+import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
+import org.openmrs.ui.framework.SimpleObject;
+import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.fragment.FragmentModel;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,5 +58,18 @@ public class PatientFinanceSummariesFragmentController {
 		
 		model.addAttribute("bills", allBills);
 		
+	}
+	
+	public SimpleObject getBilledItemsPerServiceBill(
+	        @RequestParam(value = "billId", required = false) Integer patientServiceBill, UiUtils ui) {
+		
+		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(BillingService.class)
+		        .getPatientBillableServicesByPatientServiceBill(
+		            Context.getService(BillingService.class).getPatientServiceBillById(patientServiceBill));
+		
+		List<SimpleObject> items = SimpleObject.fromCollection(patientServiceBillItems, ui, "service", "unitPrice",
+		    "amount", "actualAmount", "quantity", "name", "createdDate");
+		
+		return SimpleObject.create("items", items);
 	}
 }

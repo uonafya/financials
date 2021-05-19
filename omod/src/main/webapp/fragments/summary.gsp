@@ -5,13 +5,41 @@
 
 <script type="text/javascript">
     jQuery(function() {
-        jQuery("#details").DataTable();
-        jQuery("#summaryDpt").DataTable();
+        var table = jQuery("#details").DataTable();
+        var table1 = Query("#summaryDpt").DataTable();
     });
 </script>
+<style type="text/css">
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+body {
+    font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+
+table#details.dataTable tbody tr:hover {
+    background-color: #43fff8;
+}
+
+table#details.dataTable tbody tr:hover > .sorting_1 {
+    background-color: #43fff8;
+}
+table1#summaryDpt.dataTable tbody tr:hover {
+    background-color: #43fff8;
+}
+
+table1#summaryDpt.dataTable tbody tr:hover > .sorting_1 {
+    background-color: #43fff8;
+}
+</style>
 <div class="ke-panel-frame">
     <div class="ke-panel-heading">Financial Report and Statements today</div>
-    <div class="ke-panel-content" style="background-color: #F3F9FF">
+    <div class="ke-panel-content" style="background-color: #F3F9FF;">
         <h4>Patient Summary</h4>
         <table border="0" cellpadding="5" cellspacing="0" id="details" width="75%">
             <thead>

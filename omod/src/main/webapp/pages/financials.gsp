@@ -26,6 +26,12 @@
                     active: (selection == "section-departmentFinanceSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/upline.png"
+            ],
+            [
+                    label: "Cummulative patient Summaries",
+                    href: ui.pageLink("financials", "cummulativePatientSummary"),
+                    iconProvider: "financials",
+                    icon: "buttons/Zoom-in.png"
             ]
     ]
 %>
