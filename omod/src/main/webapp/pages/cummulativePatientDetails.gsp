@@ -1,15 +1,6 @@
 <%
-    ui.decorateWith("kenyaemr", "standardPage", [ layout: "sidebar" ])
-    def menuItems = [
-            [ label: "Back to revenue summary",
-              iconProvider: "kenyaui",
-              icon: "buttons/back.png",
-              href: ui.pageLink("financials", "financials")
-            ]
-    ]
+    ui.decorateWith("kenyaemr", "standardPage", [ patient: currentPatient ])
 %>
-<div class="ke-page-sidebar">
-    ${ ui.includeFragment("kenyaui", "widget/panelMenu", [ heading: "Tasks", items: menuItems ]) }
-</div>
 <div class="ke-page-content">
+    <div class="ke-panel-heading">Patient payment history</div>
 </div>

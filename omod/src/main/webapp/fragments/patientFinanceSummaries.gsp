@@ -42,8 +42,9 @@
     function createTable(data) {
         resultstable = jq('<table><thead><tr><th>Index</th><th>Created On</th><th>Name</th><th>Quantity</th><th>Unit price</th><th>Amount</th></tr><thead></table>').attr({ id: "results" });
         jq(data.items).each(function(index, dt){
-            alert(dt);
-          jq('<tr><td>{{index + 1}}</td><td>{{dt.createdDate}}</td><td>dt.name</td><td>dt.quantity</td><td>dt.unitPrice</td>dt.actualAmount<td></td></tr>').appendTo(resultstable);
+            dt.createdDate;
+            dt.name;
+          jq('<tr><td>index + 1</td><td>dt.createdDate</td><td>dt.name</td><td>dt.quantity</td><td>dt.unitPrice</td>dt.actualAmount<td></td></tr>').appendTo(resultstable);
         });
         resultstable.appendTo("#items-detail");
     }
