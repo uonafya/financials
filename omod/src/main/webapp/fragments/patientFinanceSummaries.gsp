@@ -27,7 +27,7 @@
                             }
                         },
                         open: function(event, ui) {
-                            $("#results tr").remove();
+                            jq("#results tr").remove();
                             createTable(data)
                         }
                     });

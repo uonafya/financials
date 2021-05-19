@@ -4,7 +4,7 @@
             [ label: "Back to revenue summary",
               iconProvider: "kenyaui",
               icon: "buttons/back.png",
-              href: ui.pageLink("financials", "cummulativePatientDetails")
+              href: ui.pageLink("financials", "financials")
             ]
     ]
 %>

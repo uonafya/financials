@@ -11,8 +11,6 @@
 
 <div class="ke-page-sidebar">
     ${ ui.includeFragment("kenyaemr", "patient/patientSearchForm", [ defaultWhich: "all" ]) }
-</div>
-<div class="ke-page-sidebar">
     ${ ui.includeFragment("kenyaui", "widget/panelMenu", [ heading: "Tasks", items: menuItems ]) }
 </div>
 
