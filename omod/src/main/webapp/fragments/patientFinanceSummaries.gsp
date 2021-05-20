@@ -10,44 +10,10 @@
             jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries" ,"getBilledItemsPerServiceBill") }',
                 { 'billId' : billId[0] }
             ).success(function (data) {
-                if (data.items.length > 0) {
-                    jQuery('#items-detail').dialog({
-                        dialogClass: "no-close",
-                        autoOpen: true,
-                        height: 400,
-                        modal: true,
-                        title: "Patient Billed Items Summary",
-                        width: 500,
-                        buttons: {
-                            Close: function () {
-                                jq(this).dialog("close");
-                            },
-                            Print: function () {
-
-                            }
-                        },
-                        open: function(event, ui) {
-                            jq("#results tr").remove();
-                            createTable(data)
-                        }
-                    });
-                }
-
+                ui.navigate('financials', 'billedItems', {billedId: data.service.serviceId});
             })
-
         } );
     });
-
-
-    function createTable(data) {
-        resultstable = jq('<table><thead><tr><th>Index</th><th>Created On</th><th>Name</th><th>Quantity</th><th>Unit price</th><th>Amount</th></tr><thead></table>').attr({ id: "results" });
-        jq(data.items).each(function(index, dt){
-            dt.createdDate;
-            dt.name;
-          jq('<tr><td>index + 1</td><td>dt.createdDate</td><td>dt.name</td><td>dt.quantity</td><td>dt.unitPrice</td>dt.actualAmount<td></td></tr>').appendTo(resultstable);
-        });
-        resultstable.appendTo("#items-detail");
-    }
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
@@ -88,6 +54,13 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             </tr>
             </thead>
             <tbody>
+            <% if (bills.empty) { %>
+            <tr>
+                <td colspan="9">
+                    No records found for this patirnt
+                </td>
+            </tr>
+            <% } %>
             <% bills.each {%>
             <tr>
                 <td>${it.billId}</td>
@@ -105,4 +78,3 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
         </table>
         </div>
 </div>
-<div class="ke-panel-content" id="items-detail"></div>
