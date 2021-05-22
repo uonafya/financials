@@ -234,7 +234,7 @@ public class EhrAddonsConstants {
 		public static final String CHRONIC_PHYSICAL_DISABILITY = "164538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//special clinics
-		public static final String SPECIAL_CLINIC = "f5c89e8c-c79e-4e20-9048-b7ef8f30b272"; // 165386
+		public static final String SPECIAL_CLINIC = "b5e0cfd3-1009-4527-8e36-83b5e902b3ea"; // 165386
 		
 		public static final String EYE_CLINIC = "a91acb56-4bdb-4b48-b9ef-1962efda55b4"; // 	165384
 		
@@ -242,7 +242,7 @@ public class EhrAddonsConstants {
 		
 		public static final String CCC_CLINIC = "162050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //  162050
 		
-		public static final String MCH_CLINIC = "159937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //159937
+		public static final String MCH_CLINIC = "1acb3707-9e03-40e3-b157-ce28451c3fd0"; //159937
 		
 	}
 	

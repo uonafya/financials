@@ -4,14 +4,11 @@
 %>
 <script type="text/javascript">
     jQuery(function() {
+        jQuery("#dataIn").DataTable();
         var table =  jQuery("#pDetails").DataTable();
         jQuery('#pDetails tbody').on( 'click', 'tr', function () {
             var billId = table.row( this ).data();
-            jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries" ,"getBilledItemsPerServiceBill") }',
-                { 'billId' : billId[0] }
-            ).success(function (data) {
-                ui.navigate('financials', 'billedItems', {billedId: data.service.serviceId});
-            })
+            ui.navigate('financials', 'billedItems', {billedId: billId[0]});
         } );
     });
 </script>

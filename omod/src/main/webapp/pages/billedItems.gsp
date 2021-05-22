@@ -38,44 +38,52 @@ table#summary.dataTable tbody tr:hover {
 }
 
 </style>
-<div class="ke-page-sidebar">
-    ${ ui.includeFragment("kenyaui", "widget/panelMenu", [ heading: "Tasks", items: menuItems ]) }
-</div>
-<div class="ke-panel-frame">
-    <div class="ke-panel-heading">Patient Finance Summaries </div>
-    <div class="ke-panel-content" style="background-color: #F3F9FF;">
-        <table id="tbl">
-            <thead>
-                <tr>
-                    <th>Created Date</th>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                    <th>Actual Amount</th>
-                    <th>Waiver Amount</th>
-                    <th>Receipt Number</th>
-                </tr>
-            </thead>
-            <tbody>
-            <% if (billedItems.empty) { %>
-            <tr>
-                <td colspan="7">
-                    No records found for this patirnt
-                </td>
-            </tr>
-            <% } %>
-            <% billedItems.each {%>
-                <tr>
-                <td>${it.createdDate}</td>
-                <td>${it.name}</td>
-                <td>${it.quantity}</td>
-                <td>${it.unitPrice}</td>
-                <td>${it.actualAmount}</td>
-                <td>${it.patientServiceBill.waiverAmount}</td>
-                <td>${it.patientServiceBill.receipt.id}</td>
-                </tr>
-            <%}%>
-            </tbody>
-        </table>
-    </div>
-</div>
+<table>
+    <tr>
+        <td>
+            <div class="ke-page-sidebar">
+                ${ ui.includeFragment("kenyaui", "widget/panelMenu", [ heading: "Tasks", items: menuItems ]) }
+            </div>
+        </td>
+        <td>
+            <div class="ke-panel-frame">
+                <div class="ke-panel-heading">Patient Finance Summaries </div>
+                <div class="ke-panel-content" style="background-color: #F3F9FF;">
+                    <table id="tbl">
+                        <thead>
+                            <tr>
+                                <th>Created Date</th>
+                                <th>Name</th>
+                                <th>Quantity</th>
+                                <th>Unit Price</th>
+                                <th>Actual Amount</th>
+                                <th>Waiver Amount</th>
+                                <th>Receipt Number</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% if (billedItems.empty) { %>
+                        <tr>
+                            <td colspan="7">
+                                No records found for this patirnt
+                            </td>
+                        </tr>
+                        <% } %>
+                        <% billedItems.each {%>
+                            <tr>
+                            <td>${it.createdDate}</td>
+                            <td>${it.name}</td>
+                            <td>${it.quantity}</td>
+                            <td>${it.unitPrice}</td>
+                            <td>${it.actualAmount}</td>
+                            <td>${it.patientServiceBill.waiverAmount}</td>
+                            <td>${it.patientServiceBill.receipt.id}</td>
+                            </tr>
+                        <%}%>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+</tr>
+</table>
