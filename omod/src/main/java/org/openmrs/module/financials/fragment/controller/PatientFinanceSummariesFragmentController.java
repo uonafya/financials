@@ -52,6 +52,7 @@ public class PatientFinanceSummariesFragmentController {
 			patientBillSummary.setRebate(String.valueOf(patientServiceBill.getRebateAmount()));
 			patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
 			patientBillSummary.setIdentifier(patientServiceBill.getPatient().getPatientIdentifier().getIdentifier());
+			patientBillSummary.setPatientId(patientServiceBill.getPatient().getPatientId());
 			//add this build object to the list
 			allBills.add(patientBillSummary);
 		}

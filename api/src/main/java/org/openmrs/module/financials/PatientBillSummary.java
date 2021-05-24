@@ -101,4 +101,14 @@ public class PatientBillSummary {
 	}
 	
 	private String identifier;
+	
+	public Integer getPatientId() {
+		return patientId;
+	}
+	
+	public void setPatientId(Integer patientId) {
+		this.patientId = patientId;
+	}
+	
+	private Integer patientId;
 }

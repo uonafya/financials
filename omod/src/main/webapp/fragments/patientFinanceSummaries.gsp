@@ -8,7 +8,7 @@
         var table =  jQuery("#pDetails").DataTable();
         jQuery('#pDetails tbody').on( 'click', 'tr', function () {
             var billId = table.row( this ).data();
-            ui.navigate('financials', 'billedItems', {billedId: billId[0]});
+            ui.navigate('financials', 'billedItems', {billedId: billId[0], patientId: billId[1]});
         } );
     });
 </script>
@@ -40,6 +40,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             <thead>
             <tr>
                 <td>Service Id</td>
+                <td>Patient Id</td>
                 <th>Transaction Date</th>
                 <th>Patient Identifier</th>
                 <th>Patient Names</th>
@@ -61,6 +62,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             <% bills.each {%>
             <tr>
                 <td>${it.billId}</td>
+                <td>${it.patientId}</td>
                 <td>${it.transactionDate}</td>
                 <td>${it.identifier}</td>
                 <td>${it.patient}</td>
