@@ -40,9 +40,9 @@ table1#summaryDpt.dataTable tbody tr:hover > .sorting_1 {
 <div class="ke-panel-frame" style="background-color: #ffffff">
     <div class="ke-panel-heading">Financial Report and Statements today</div>
         <br />
-        <table cellspacing="0" cellpadding="0" width="100%">
+        <table cellspacing="0" cellpadding="5" width="100%">
             <tr>
-                <td width="70%" valign="top">
+                <td width="60%" valign="top">
                     <div class="ke-panel-frame">
                         <div class="ke-panel-heading">Departmental Summaries </div>
                         <div class="ke-panel-content" style="background-color: #F3F9FF;">
@@ -74,10 +74,19 @@ table1#summaryDpt.dataTable tbody tr:hover > .sorting_1 {
                         </div>
                     </div>
                 </td>
-                <td width="30%" valign="top">
+                <td width="40%" valign="top">
                     <div class="ke-panel-frame">
                         <div class="ke-panel-heading">Cummulative Summaries</div>
                         <div class="ke-panel-content">
+                            <% if(totalSumPerDepartiment.empty) { %>
+                                <p>No records to display</p>
+                           <%}%>
+
+                            <% totalSumPerDepartiment.each { name, value -> %>
+                                    <% if(value) {%>
+                                        ${name} - ${value}
+                                    <%}%>
+                            <%}%>
 
                         </div>
                     </div>
@@ -88,7 +97,7 @@ table1#summaryDpt.dataTable tbody tr:hover > .sorting_1 {
                     <div class="ke-panel-frame">
                         <div class="ke-panel-heading">Patient Summary</div>
                         <div class="ke-panel-content" style="background-color: #F3F9FF;">
-                            <table border="0" cellpadding="5" cellspacing="0" id="details" width="100%">
+                            <table border="0" cellpadding="0" cellspacing="0" id="details" width="100%">
                                 <thead>
                                 <tr>
                                     <th>Transaction Date</th>

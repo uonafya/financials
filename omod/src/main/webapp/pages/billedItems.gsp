@@ -38,7 +38,7 @@ table#summary.dataTable tbody tr:hover {
 }
 
 </style>
-<table cellpadding="0" cellspacing="0" width="100%">
+<table cellpadding="5" cellspacing="0" width="100%">
     <thead>
 
     </thead>
@@ -51,7 +51,7 @@ table#summary.dataTable tbody tr:hover {
                 </div>
             </div>
         </td>
-        <td width="100%">
+        <td width="70%">
             <div class="ke-panel-frame">
                 <div class="ke-panel-heading">Patient Finance Summaries </div>
                 <div class="ke-panel-content" style="background-color: #F3F9FF;">

@@ -12,10 +12,15 @@ import org.openmrs.module.hospitalcore.model.PatientServiceBill;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
 import org.openmrs.ui.framework.fragment.FragmentModel;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class SummaryFragmentController {
 	
@@ -84,6 +89,27 @@ public class SummaryFragmentController {
 		}
 		
 		model.addAttribute("summaryAccounts", summarizedResults);
+		
+		//get all departiments as names in a list
+		Set<String> departiments = new HashSet<String>();
+		for (GeneralRevenuePerUnit unit : summarizedResults) {
+			if (unit != null) {
+				departiments.add(unit.getDepartment());
+			}
+		}
+		Map<String, BigDecimal> totalsPerDepartment = new HashMap<String, BigDecimal>();
+		BigDecimal totals = BigDecimal.ZERO;
+		for (String str : departiments) {
+			for (GeneralRevenuePerUnit unit : summarizedResults) {
+				if (str.equals(unit.getDepartment())) {
+					totals.add(unit.getTotalAmount());
+				}
+				//add the departiment and totals to the map
+				totalsPerDepartment.put(str, totals);
+			}
+			
+		}
+		model.addAttribute("totalSumPerDepartiment", totalsPerDepartment);
 		
 	}
 }
