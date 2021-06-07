@@ -18,9 +18,10 @@
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-financials.git</connection>
-		<developerConnection>scm:git:git@github.com:openmrs/openmrs-module-financials.git</developerConnection>
-		<url>https://github.com/openmrs/openmrs-module-financials/</url>
+		<connection>scm:git:https://github.com/uonafya/financials.git</connection>
+		<developerConnection>scm:git:https://github.com/uonafya/financials.git</developerConnection>
+		<url>https://github.com/uonafya/financials.git</url>
+		<tag>HEAD</tag>
 	</scm>
 
 	<modules>
@@ -41,7 +42,7 @@
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>hospitalcore-api</artifactId>
-				<version>1.0.0-SNAPSHOT</version>
+				<version>1.0.0</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
@@ -112,7 +113,7 @@
 		<kenyacoreVersion>2.4.1</kenyacoreVersion>
 		<uiframeworkVersion>3.8</uiframeworkVersion>
 		<kenyauiVersion>2.1.1</kenyauiVersion>
-		<metadatadeployVersion>1.2</metadatadeployVersion>
+		<metadatadeployVersion>1.3</metadatadeployVersion>
 		<kenyaemrVersion>17.0.3</kenyaemrVersion>
 		<calculationVersion>1.1</calculationVersion>
 		<reportingVersion>0.9.8.1</reportingVersion>
