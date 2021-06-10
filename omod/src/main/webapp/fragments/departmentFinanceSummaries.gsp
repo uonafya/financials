@@ -34,6 +34,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
 <div class="ke-panel-frame">
     <div class="ke-panel-heading">Departmental Finance Summaries </div>
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
+
         <table id="dDetails">
             <thead>
             <tr>
@@ -43,6 +44,13 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             </tr>
             </thead>
             <tbody>
+            <% if (summaryAccounts.empty) { %>
+            <tr>
+                <td colspan="3">
+                    No records found
+                </td>
+            </tr>
+            <% } %>
             <% summaryAccounts.each {%>
             <tr>
                 <td>${it.transactionDate}</td>
@@ -52,5 +60,6 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <% } %>
             </tbody>
         </table>
+
     </div>
 </div>

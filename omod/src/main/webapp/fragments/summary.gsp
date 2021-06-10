@@ -83,6 +83,7 @@ table1#summaryDpt.dataTable tbody tr:hover > .sorting_1 {
                            <%}%>
 
                             <% totalSumPerDepartiment.each { name, value -> %>
+                                     ${name} - ${value}
                                     <% if(value) {%>
                                         ${name} - ${value}
                                     <%}%>

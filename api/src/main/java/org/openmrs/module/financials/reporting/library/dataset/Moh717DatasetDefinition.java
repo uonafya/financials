@@ -43,14 +43,14 @@ public class Moh717DatasetDefinition {
 		    EhrAddonUtils.getGeneralOutPatientFilters());
 		
 		//TODO replace hardcoded mch  clinic
-		EhrReportingUtils.addRow(
+		/*EhrReportingUtils.addRow(
 		    dsd,
 		    "SPC",
 		    "SPECIAL CLINICS",
 		    ReportUtils.map(
 		        moh717IndicatorDefinition.getSpecialClinicPatients(EhrAddonsConstants.getConcept(
 		            EhrAddonsConstants._EhrAddOnConcepts.MCH_CLINIC).getConceptId()), indParams),
-		    EhrAddonUtils.getSpecialClinicPatientFilters());
+		    EhrAddonUtils.getSpecialClinicPatientFilters());*/
 		return dsd;
 	}
 	

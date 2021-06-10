@@ -55,7 +55,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             <% if (bills.empty) { %>
             <tr>
                 <td colspan="9">
-                    No records found for this patirnt
+                    No records found
                 </td>
             </tr>
             <% } %>
