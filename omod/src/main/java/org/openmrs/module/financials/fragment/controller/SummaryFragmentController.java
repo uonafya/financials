@@ -23,19 +23,19 @@ import java.util.Map;
 import java.util.Set;
 
 public class SummaryFragmentController {
-
+	
 	public void controller(FragmentModel model) {
 		List<PatientServiceBill> allBils = Context.getService(BillingService.class).getAllPatientServiceBill();
 		PersonService personService = Context.getPersonService();
 		List<PatientBillSummary> allBills = new ArrayList<PatientBillSummary>();
 		SimpleDateFormat formatterDate = new SimpleDateFormat("yyyy-MM-dd");
-
+		
 		//get person attribute for patient category and sub category
 		PersonAttributeType paymentCategory = personService
-				.getPersonAttributeTypeByUuid("09cd268a-f0f5-11ea-99a8-b3467ddbf779");
+		        .getPersonAttributeTypeByUuid("09cd268a-f0f5-11ea-99a8-b3467ddbf779");
 		PersonAttributeType paymentSubCategory = personService
-				.getPersonAttributeTypeByUuid("972a32aa-6159-11eb-bc2d-9785fed39154");
-
+		        .getPersonAttributeTypeByUuid("972a32aa-6159-11eb-bc2d-9785fed39154");
+		
 		for (PatientServiceBill patientServiceBill : allBils) {
 			String createdDate = formatterDate.format(patientServiceBill.getCreatedDate());
 			String today = formatterDate.format(new Date());
@@ -51,7 +51,7 @@ public class SummaryFragmentController {
 				}
 				if (patientServiceBill.getPatient().getAttribute(paymentSubCategory) != null) {
 					patientBillSummary.setSubCategory(patientServiceBill.getPatient().getAttribute(paymentSubCategory)
-							.getValue());
+					        .getValue());
 				} else {
 					patientBillSummary.setSubCategory("");
 				}
@@ -65,19 +65,19 @@ public class SummaryFragmentController {
 				allBills.add(patientBillSummary);
 			}
 		}
-
+		
 		model.addAttribute("bills", allBills);
-
+		
 		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(true);
 		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
-				.getAllPatientServiceBillItemsByDate(true);
+		        .getAllPatientServiceBillItemsByDate(true);
 		GeneralRevenuePerUnit generalRevenuePerUnit = null;
 		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
-
+		
 		for (OpdTestOrder opdTestOrder : allOpdOrders) {
 			for (PatientServiceBillItem patientServiceBillItem : patientServiceBillItems) {
 				if (opdTestOrder.getBillableService().equals(patientServiceBillItem.getService())
-						&& opdTestOrder.getFromDept() != null) {
+				        && opdTestOrder.getFromDept() != null) {
 					generalRevenuePerUnit = new GeneralRevenuePerUnit();
 					generalRevenuePerUnit.setTransactionDate(opdTestOrder.getScheduleDate());
 					generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
@@ -88,7 +88,7 @@ public class SummaryFragmentController {
 			summarizedResults.add(generalRevenuePerUnit);
 		}
 		model.addAttribute("summaryAccounts", summarizedResults);
-
+		
 		//get all departiments as names in a list
 		Set<String> departiments = new HashSet<String>();
 		for (GeneralRevenuePerUnit unit : summarizedResults) {
@@ -105,9 +105,9 @@ public class SummaryFragmentController {
 				}
 			}
 			totalsPerDepartment.put(str, valueHolder);
-
+			
 		}
 		model.addAttribute("totalSumPerDepartiment", totalsPerDepartment);
-
+		
 	}
 }
