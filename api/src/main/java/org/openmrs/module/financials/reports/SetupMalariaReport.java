@@ -2,6 +2,7 @@ package org.openmrs.module.financials.reports;
 
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.financials.reporting.converter.ObsCommentsConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -11,6 +12,7 @@ import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyacore.report.data.patient.definition.CalculationDataDefinition;
 import org.openmrs.module.kenyaemr.calculation.library.hiv.CountyAddressCalculation;
 import org.openmrs.module.kenyaemr.calculation.library.hiv.SubCountyAddressCalculation;
+import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
 import org.openmrs.module.kenyaemr.metadata.HivMetadata;
 import org.openmrs.module.kenyaemr.reporting.data.converter.CalculationResultConverter;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
@@ -84,13 +86,13 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 	
 	protected PatientDataSetDefinition allPatients() {
 		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
-		dsd.setName("malaria");
+		dsd.setName("mal");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		String defParam = "startDate=${startDate},endDate=${endDate}";
 		
 		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,
-		    HivMetadata._PatientIdentifierType.UNIQUE_PATIENT_NUMBER);
+		    CommonMetadata._PatientIdentifierType.OPENMRS_ID);
 		DataConverter identifierFormatter = new ObjectFormatter("{identifier}");
 		DataDefinition identifierDef = new ConvertedPatientDataDefinition("identifier", new PatientIdentifierDataDefinition(
 		        upn.getName(), upn), identifierFormatter);
@@ -103,13 +105,14 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		dsd.addColumn("Age", new AgeDataDefinition(), "", null);
-		dsd.addColumn("Sub county", new CalculationDataDefinition("Sub county", new SubCountyAddressCalculation()), "",
+		dsd.addColumn("SubCounty", new CalculationDataDefinition("SubCounty", new SubCountyAddressCalculation()), "",
 		    new CalculationResultConverter());
 		dsd.addColumn("County", new CalculationDataDefinition("County", new CountyAddressCalculation()), "",
 		    new CalculationResultConverter());
-		dsd.addColumn("Results", new ObsForPersonDataDefinition("Return Visit Date", TimeQualifier.LAST, Context
-		        .getConceptService().getConceptByUuid("32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "",
-		    new ObsValueConverter());
+		dsd.addColumn("Results", new ObsForPersonDataDefinition("Results", TimeQualifier.LAST, Context.getConceptService()
+		        .getConceptByUuid("32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "", new ObsValueConverter());
+		dsd.addColumn("Comments", new ObsForPersonDataDefinition("Comments", TimeQualifier.LAST, Context.getConceptService()
+		        .getConceptByUuid("32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "", new ObsCommentsConverter());
 		return dsd;
 	}
 	
