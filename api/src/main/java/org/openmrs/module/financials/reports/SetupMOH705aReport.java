@@ -24,25 +24,22 @@ public class SetupMOH705aReport extends AbstractReportBuilder {
 	
 	private Moh705aDatasetDefinition moh705aDatasetDefinition;
 	
-	private CommonDatasetDefinition commonDatasetDefinition;
-	
 	@Autowired
 	public SetupMOH705aReport(Moh705aDatasetDefinition moh705aDatasetDefinition,
 	    CommonDatasetDefinition commonDatasetDefinition) {
 		this.moh705aDatasetDefinition = moh705aDatasetDefinition;
-		this.commonDatasetDefinition = commonDatasetDefinition;
 	}
 	
 	@Override
 	protected List<Parameter> getParameters(ReportDescriptor reportDescriptor) {
 		return Arrays.asList(new Parameter("startDate", "Start Date", Date.class), new Parameter("endDate", "End Date",
-		        Date.class));
+		        Date.class), new Parameter("dateBasedReporting", "", String.class));
 	}
 	
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(map(moh705aDatasetDefinition.getMoh705aDataset(), "startDate=${startDate},endDate=${endDate}"),
-		    map(commonDatasetDefinition.getFacilityMetadata(), ""));
+		return Arrays.asList(map(moh705aDatasetDefinition.getMoh705aDataset(), "startDate=${startDate},endDate=${endDate}"));
+		//map(commonDatasetDefinition.getFacilityMetadata(), ""));
 	}
 }

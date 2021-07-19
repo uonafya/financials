@@ -35,13 +35,11 @@ public class Moh705aDatasetDefinition {
 	public DataSetDefinition getMoh705aDataset() {
 		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
 		String indParam = "startDate=${startDate},endDate=${endDate}";
-		//dsd.addDimension("days", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "endDate=${endDate}"));
 		dsd.setName("MOH705A");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "endDate=${endDate}"));
-		// populate datasets
-		//getDiarrhoea(dsd, indParam);
+		
 		EhrReportingUtils.addRow(dsd, "DC", "Diarrhoea", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());

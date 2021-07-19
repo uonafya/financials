@@ -7,6 +7,7 @@ import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
+import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
 import org.openmrs.module.kenyaemr.metadata.HivMetadata;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
@@ -82,7 +83,7 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		String defParam = "startDate=${startDate},endDate=${endDate}";
 		
 		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,
-		    HivMetadata._PatientIdentifierType.UNIQUE_PATIENT_NUMBER);
+		    CommonMetadata._PatientIdentifierType.OPENMRS_ID);
 		DataConverter identifierFormatter = new ObjectFormatter("{identifier}");
 		DataDefinition identifierDef = new ConvertedPatientDataDefinition("identifier", new PatientIdentifierDataDefinition(
 		        upn.getName(), upn), identifierFormatter);
