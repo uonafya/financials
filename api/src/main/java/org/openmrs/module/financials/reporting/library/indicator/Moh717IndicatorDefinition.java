@@ -24,9 +24,9 @@ public class Moh717IndicatorDefinition {
 	}
 	
 	//use mch_clinic for test
-	public CohortIndicator getSpecialClinicPatients(int name) {
-		return cohortIndicator("Special clinics report", ReportUtils.map(
-		    moh717CohortDefinition.getSpecialClinicPatients(name), "startDate=${startDate},endDate=${endDate}"));
+	public CohortIndicator getSpecialClinicPatients() {
+		return cohortIndicator("Special clinics report",
+		    ReportUtils.map(moh717CohortDefinition.getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 }

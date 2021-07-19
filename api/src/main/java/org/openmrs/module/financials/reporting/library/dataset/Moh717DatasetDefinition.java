@@ -38,20 +38,20 @@ public class Moh717DatasetDefinition {
 		dsd.addDimension("state", map(ehrAddonDimesion.getNewOrRevisitPatients(), "endDate=${endDate}"));
 		dsd.addDimension("age", map(ehrAddonDimesion.getAge(), "effectiveDate=${endDate}"));
 		
-		EhrReportingUtils.addRow(dsd, "OS", "OUTPATIENT SERVICES",
+		/*EhrReportingUtils.addRow(dsd, "OS", "OUTPATIENT SERVICES",
 		    ReportUtils.map(moh717IndicatorDefinition.getAllPatients(), indParams),
 		    EhrAddonUtils.getGeneralOutPatientFilters());
 		
 		//TODO replace hardcoded mch  clinic
-		/*EhrReportingUtils.addRow(
+		EhrReportingUtils.addRow(
 		    dsd,
 		    "SPC",
 		    "SPECIAL CLINICS",
 		    ReportUtils.map(
-		        moh717IndicatorDefinition.getSpecialClinicPatients(EhrAddonsConstants.getConcept(
-		            EhrAddonsConstants._EhrAddOnConcepts.MCH_CLINIC).getConceptId()), indParams),
-		    EhrAddonUtils.getSpecialClinicPatientFilters());*/
+		        moh717IndicatorDefinition.getSpecialClinicPatients(), indParams),
+				EhrAddonUtils.getSpecialClinicPatientFilters());*/
+		dsd.addColumn("T1", "Test 1", ReportUtils.map(moh717IndicatorDefinition.getAllPatients(), indParams), "");
+		dsd.addColumn("T2", "Test 1", ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicPatients(), indParams), "");
 		return dsd;
 	}
-	
 }

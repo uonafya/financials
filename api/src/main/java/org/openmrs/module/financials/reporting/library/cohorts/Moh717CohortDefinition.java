@@ -26,20 +26,16 @@ public class Moh717CohortDefinition {
 	/**
 	 * Get special clinic patients
 	 * 
-	 * @param answer
+	 * @param
 	 * @return
 	 */
-	public CohortDefinition getSpecialClinicPatients(int answer) {
+	public CohortDefinition getSpecialClinicPatients() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.setName("Special Clinic Patients");
 		cd.addParameter(new Parameter("startDate", "startDate", Date.class));
 		cd.addParameter(new Parameter("endDate", "endDate", Date.class));
-		cd.setQuery(Moh717Queries.getSpecialClinicPatients(EhrAddonsMetadata.getAdultsInitialEncounterType()
-		        .getEncounterTypeId(), EhrAddonsMetadata.getAdultReturnEncounterType().getEncounterTypeId(),
-		    EhrAddonsMetadata.getPedsInitialEncounterType().getEncounterTypeId(), EhrAddonsMetadata
-		            .getPedsReturnEncounterType().getEncounterTypeId(), EhrAddonsMetadata.getCheckInEncounterType()
-		            .getEncounterTypeId(), EhrAddonsMetadata.getAncEncounterType().getEncounterTypeId(), EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.SPECIAL_CLINIC).getConceptId(), answer));
+		cd.setQuery(Moh717Queries.getSpecialClinicPatients(EhrAddonsConstants.getConcept(
+		    EhrAddonsConstants._EhrAddOnConcepts.SPECIAL_CLINIC).getConceptId()));
 		
 		return cd;
 	}

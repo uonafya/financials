@@ -72,7 +72,7 @@
             <set>
                 <ref bean="ehraddons.common.705a" />
                 <ref bean="ehraddons.common.705b" />
-                <ref bean="ehraddons.common.717" />
+                <!--<ref bean="ehraddons.common.717" />-->
                 <ref bean="ehraddons.common.report.labadults" />
                 <ref bean="ehraddons.common.report.labchildren" />
                 <ref bean="ehraddons.common.report.allPatients" />
