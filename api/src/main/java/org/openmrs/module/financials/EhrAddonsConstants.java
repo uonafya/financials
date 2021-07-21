@@ -234,15 +234,33 @@ public class EhrAddonsConstants {
 		public static final String CHRONIC_PHYSICAL_DISABILITY = "164538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//special clinics
-		public static final String SPECIAL_CLINIC = "b5e0cfd3-1009-4527-8e36-83b5e902b3ea"; // 165386
+		public static final String SPECIAL_CLINIC = "b5e0cfd3-1009-4527-8e36-83b5e902b3ea"; // 1000005
 		
-		public static final String EYE_CLINIC = "a91acb56-4bdb-4b48-b9ef-1962efda55b4"; // 	165384
+		public static final String EYE_CLINIC = "36f7a4c9-a64b-4351-bd08-fe185c7470dc"; // 	1000155
 		
-		public static final String PSYCHIATRIC_CLINIC = "59218b74-e6fc-4928-a62d-08bcef9e1510"; //  165385
+		public static final String PSYCHIATRIC_CLINIC = "160461AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //  160461
 		
 		public static final String CCC_CLINIC = "162050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //  162050
 		
 		public static final String MCH_CLINIC = "1acb3707-9e03-40e3-b157-ce28451c3fd0"; //159937
+		
+		public static final String ENT = "160455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160455
+		
+		public static final String TBL = "d0ed935d-0c32-451f-b9f4-f5743e267bbe"; //1000044
+		
+		public static final String STI = "160546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160546
+		
+		public static final String ORT = "160465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160465
+		
+		public static final String OCP = "c2f85aed-695f-49b1-973e-002c37cbdebf"; //1000209
+		
+		public static final String PHYS = "c2f85aed-695f-49b1-973e-002c37cbdebf"; //1000209 to create
+		
+		public static final String SC = "db1ba5ed-1da0-430d-9744-4dcc006f98b0"; //1000047
+		
+		public static final String PAED = "160544AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160544
+		
+		public static final String OG = "160456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160456
 		
 	}
 	

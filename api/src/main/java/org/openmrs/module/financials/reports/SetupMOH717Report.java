@@ -17,12 +17,13 @@ import java.util.List;
 
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
-//@Component
+@Component
 @Builds({ "ehraddons.common.717" })
 public class SetupMOH717Report extends AbstractReportBuilder {
 	
 	private Moh717DatasetDefinition moh717DatasetDefinition;
 	
+	@Autowired
 	public SetupMOH717Report(Moh717DatasetDefinition moh717DatasetDefinition) {
 		this.moh717DatasetDefinition = moh717DatasetDefinition;
 	}
@@ -38,7 +39,6 @@ public class SetupMOH717Report extends AbstractReportBuilder {
 	        ReportDefinition reportDefinition) {
 		return Arrays.asList(map(moh717DatasetDefinition.constructMoh717Dataset(),
 		    "startDate=${startDate},endDate=${endDate}"));
-		//map(commonDatasetDefinition.getFacilityMetadata(), ""));
 	}
 	
 }

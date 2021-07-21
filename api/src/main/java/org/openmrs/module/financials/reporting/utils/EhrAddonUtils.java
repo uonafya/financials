@@ -72,65 +72,71 @@ public class EhrAddonUtils {
 	
 	public static List<ColumnParameters> getSpecialClinicPatientFilters() {
 		
-		ColumnParameters entNew = new ColumnParameters("ENTNew", "ENT Clinic", "state=NEW", "01");
-		ColumnParameters entRevisit = new ColumnParameters("ENTRevisit", "ENT Clinic", "state=RVT", "02");
+		ColumnParameters entNew = new ColumnParameters("ENTNew", "ENT Clinic", "state=NEW|clinic=ENT", "01");
+		ColumnParameters entRevisit = new ColumnParameters("ENTRevisit", "ENT Clinic", "state=RVT|clinic=ENT", "02");
 		
-		ColumnParameters eyeClinicNew = new ColumnParameters("eyeClinicNew", "Eye Clinic", "state=NEW", "03");
-		ColumnParameters eyeClinicRevisit = new ColumnParameters("eyeClinicRevisit", "Eye Clinic", "state=RVT", "04");
+		ColumnParameters eyeClinicNew = new ColumnParameters("eyeClinicNew", "Eye Clinic", "state=NEW|clinic=EYE", "03");
+		ColumnParameters eyeClinicRevisit = new ColumnParameters("eyeClinicRevisit", "Eye Clinic", "state=RVT|clinic=EYE",
+		        "04");
 		
-		ColumnParameters tbAndLeprosyNew = new ColumnParameters("tbAndLeprosyNew", "TB and Leprosy", "state=NEW", "05");
-		ColumnParameters tbAndLeprosyRevisit = new ColumnParameters("tbAndLeprosyRevisit", "TB and Leprosy", "state=RVT",
-		        "06");
+		ColumnParameters tbAndLeprosyNew = new ColumnParameters("tbAndLeprosyNew", "TB and Leprosy", "state=NEW|clinic=TBL",
+		        "05");
+		ColumnParameters tbAndLeprosyRevisit = new ColumnParameters("tbAndLeprosyRevisit", "TB and Leprosy",
+		        "state=RVT|clinic=TBL", "06");
 		
 		ColumnParameters sexuallyTransmittedNew = new ColumnParameters("sexuallyTransmittedNew",
-		        "Sexually Transmitted infection", "state=NEW", "07");
+		        "Sexually Transmitted infection", "state=NEW|clinic=STI", "07");
 		ColumnParameters sexuallyTransmittedRevisit = new ColumnParameters("sexuallyTransmittedRevisit",
-		        "Sexually Transmitted infection", "state=RVT", "08");
+		        "Sexually Transmitted infection", "state=RVT|clinic=STI", "08");
 		
-		ColumnParameters cccNew = new ColumnParameters("cccNew", "Comprehensive Care Clinic (CCC)", "state=NEW", "09");
-		ColumnParameters cccRevisit = new ColumnParameters("cccRevisit", "Comprehensive Care Clinic (CCC)", "state=RVT",
-		        "10");
+		ColumnParameters cccNew = new ColumnParameters("cccNew", "Comprehensive Care Clinic (CCC)", "state=NEW|clinic=CCC",
+		        "09");
+		ColumnParameters cccRevisit = new ColumnParameters("cccRevisit", "Comprehensive Care Clinic (CCC)",
+		        "state=RVT|clinic=CCC", "10");
 		
-		ColumnParameters psychiatryNew = new ColumnParameters("psychiatryNew", "Psychiatry", "state=NEW", "11");
-		ColumnParameters psychiatryRevisit = new ColumnParameters("psychiatryRevisit", "Psychiatry", "state=RVT", "12");
+		ColumnParameters psychiatryNew = new ColumnParameters("psychiatryNew", "Psychiatry", "state=NEW|clinic=PSY", "11");
+		ColumnParameters psychiatryRevisit = new ColumnParameters("psychiatryRevisit", "Psychiatry", "state=RVT|clinic=PSY",
+		        "12");
 		
-		ColumnParameters orthopaedicNew = new ColumnParameters("orthopaedicNew", "Orthopaedic Clinic", "state=NEW", "13");
-		ColumnParameters orthopaedicRevisit = new ColumnParameters("orthopaedicRevisit", "Orthopaedic Clinic", "state=RVT",
-		        "14");
+		ColumnParameters orthopaedicNew = new ColumnParameters("orthopaedicNew", "Orthopaedic Clinic",
+		        "state=NEW|clinic=ORT", "13");
+		ColumnParameters orthopaedicRevisit = new ColumnParameters("orthopaedicRevisit", "Orthopaedic Clinic",
+		        "state=RVT|clinic=ORT", "14");
 		
 		ColumnParameters occupationalTherapyNew = new ColumnParameters("occupationalTherapyNew",
-		        "Occupational Therapy Clinic", "state=NEW", "15");
+		        "Occupational Therapy Clinic", "state=NEW|clinc=OCP", "15");
 		ColumnParameters occupationalTherapyRevisit = new ColumnParameters("occupationalTherapyRevisit",
-		        "Occupational Therapy Clinic", "state=RVT", "16");
+		        "Occupational Therapy Clinic", "state=RVT|clinic=OCP", "16");
 		
-		ColumnParameters physiotherapyNew = new ColumnParameters("physiotherapyNew", "Physiotherapy Clinic", "state=NEW",
-		        "17");
+		ColumnParameters physiotherapyNew = new ColumnParameters("physiotherapyNew", "Physiotherapy Clinic",
+		        "state=NEW|clinic=PHYS", "17");
 		ColumnParameters physiotherapyRevisit = new ColumnParameters("physiotherapyRevisit", "Physiotherapy Clinic",
-		        "state=RVT", "18");
+		        "state=RVT|clinic=PHYS", "18");
 		
-		ColumnParameters medicalClinicsNew = new ColumnParameters("medicalClinicsNew", "Medical Clinics", "state=NEW", "19");
+		/*ColumnParameters medicalClinicsNew = new ColumnParameters("medicalClinicsNew", "Medical Clinics", "state=NEW|clinic=MC", "19");
 		ColumnParameters medicalClinicsRevisit = new ColumnParameters("medicalClinicsRevisit", "Medical Clinics",
-		        "state=RVT", "20");
+		        "state=RVT|clinic=MC", "20");*/
 		
-		ColumnParameters surgicalClinicsNew = new ColumnParameters("surgicalClinicsNew", "Surgical Clinics", "state=NEW",
-		        "21");
+		ColumnParameters surgicalClinicsNew = new ColumnParameters("surgicalClinicsNew", "Surgical Clinics",
+		        "state=NEW|clinic=SC", "21");
 		ColumnParameters surgicalClinicsRevisit = new ColumnParameters("surgicalClinicsRevisit", "Surgical Clinics",
-		        "state=RVT", "22");
+		        "state=RVT|clinic=SC", "22");
 		
-		ColumnParameters paediatricsNew = new ColumnParameters("paediatricsNew", "Paediatrics", "state=NEW", "23");
-		ColumnParameters paediatricsRevisit = new ColumnParameters("paediatricsRevisit", "Paediatrics", "state=RVT", "24");
+		ColumnParameters paediatricsNew = new ColumnParameters("paediatricsNew", "Paediatrics", "state=NEW|clinic=PAED",
+		        "23");
+		ColumnParameters paediatricsRevisit = new ColumnParameters("paediatricsRevisit", "Paediatrics",
+		        "state=RVT|clinic=PAED", "24");
 		
 		ColumnParameters obstetricsGynaecologyNew = new ColumnParameters("obstetricsGynaecologyNew",
-		        "Obstetrics/Gynaecology", "state=RVT", "25");
+		        "Obstetrics/Gynaecology", "state=NEW|clinic=OG", "25");
 		ColumnParameters obstetricsGynaecologyRevisit = new ColumnParameters("obstetricsGynaecologyRevisit",
-		        "Obstetrics/Gynaecology", "state=RVT", "26");
+		        "Obstetrics/Gynaecology", "state=RVT|clinic=OG", "26");
 		
 		return Arrays.asList(entNew, entRevisit, entNew, eyeClinicNew, eyeClinicRevisit, tbAndLeprosyNew,
 		    tbAndLeprosyRevisit, sexuallyTransmittedNew, sexuallyTransmittedRevisit, cccNew, cccRevisit, psychiatryNew,
 		    psychiatryRevisit, orthopaedicNew, orthopaedicRevisit, occupationalTherapyNew, occupationalTherapyRevisit,
-		    psychiatryNew, physiotherapyNew, physiotherapyRevisit, medicalClinicsNew, medicalClinicsRevisit,
-		    surgicalClinicsNew, surgicalClinicsRevisit, paediatricsNew, paediatricsRevisit, obstetricsGynaecologyNew,
-		    obstetricsGynaecologyRevisit);
+		    psychiatryNew, physiotherapyNew, physiotherapyRevisit, surgicalClinicsNew, surgicalClinicsRevisit,
+		    paediatricsNew, paediatricsRevisit, obstetricsGynaecologyNew, obstetricsGynaecologyRevisit);
 		
 	}
 	
