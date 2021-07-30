@@ -41,7 +41,13 @@
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>hospitalcore-api</artifactId>
-				<version>1.0.0</version>
+				<version>${hospitalcoreVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>ehrconfigs-api</artifactId>
+				<version>${ehrconfigsVersion}</version>
 				<scope>provided</scope>
 			</dependency>
 			<dependency>
@@ -116,5 +122,7 @@
 		<kenyaemrVersion>17.0.3</kenyaemrVersion>
 		<calculationVersion>1.1</calculationVersion>
 		<reportingVersion>0.9.8.1</reportingVersion>
+		<ehrconfigsVersion>1.0.0</ehrconfigsVersion>
+		<hospitalcoreVersion>1.0.0</hospitalcoreVersion>
 	</properties>
 </project>

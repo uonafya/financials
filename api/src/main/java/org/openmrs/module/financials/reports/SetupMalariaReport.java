@@ -88,7 +88,6 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		dsd.setName("mal");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		String defParam = "startDate=${startDate},endDate=${endDate}";
 		
 		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,
 		    CommonMetadata._PatientIdentifierType.OPENMRS_ID);
@@ -120,7 +119,7 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("Active Patients");
-		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id INNER JOIN obs o ON e.encounter_id=o.encounter_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND o.concept_id IN(32)");
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id INNER JOIN obs o ON e.encounter_id=o.encounter_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND o.concept_id IN(32,1643)");
 		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 }
