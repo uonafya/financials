@@ -1396,4 +1396,23 @@ public class DiagnosisLists {
 		
 		);
 	}
+	
+	public static List<Integer> getConfirmedMalariaResults() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.POSITIVE).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Positive_for_Plasmodium_falciparum).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Positive_for_Plasmodium_vivax).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Positive_for_both_Plasmodium_falciparum_and_Plasmodium_vivax)
+		            .getConceptId());
+	}
+	
+	public static List<Integer> getSuspectedMalariaResults() {
+		return Arrays
+		        .asList(
+		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEGATIVE).getConceptId(),
+		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.INDETERMINATE).getConceptId(),
+		            getConcept(
+		                EhrAddonsConstants._EhrAddOnConcepts.Test_not_performed_due_to_lack_of_availability_of_test_materials)
+		                    .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed)
+		                    .getConceptId());
+	}
 }

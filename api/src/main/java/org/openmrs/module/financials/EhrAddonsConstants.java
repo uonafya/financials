@@ -522,6 +522,24 @@ public class EhrAddonsConstants {
 		
 		public static final String Non_falciparum_malaria = "162754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		//malaria confirmed
+		public static final String POSITIVE = "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Positive_for_Plasmodium_falciparum = "161246AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Positive_for_Plasmodium_vivax = "161247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Positive_for_both_Plasmodium_falciparum_and_Plasmodium_vivax = "161248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Malaria suspected
+		public static final String NEGATIVE = "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String INDETERMINATE = "1138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Test_not_performed_due_to_lack_of_availability_of_test_materials = "160352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Procedure_not_performed = "160414AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 	}
 	
 	/**

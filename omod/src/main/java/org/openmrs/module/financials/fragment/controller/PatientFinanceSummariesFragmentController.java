@@ -30,31 +30,32 @@ public class PatientFinanceSummariesFragmentController {
 		        .getPersonAttributeTypeByUuid("972a32aa-6159-11eb-bc2d-9785fed39154");
 		
 		for (PatientServiceBill patientServiceBill : allBils) {
-			
-			PatientBillSummary patientBillSummary = null;
-			patientBillSummary = new PatientBillSummary();
-			patientBillSummary.setBillId(patientServiceBill.getPatientServiceBillId());
-			patientBillSummary.setPatient(patientServiceBill.getPatient().getPersonName().getFullName());
-			if (patientServiceBill.getPatient().getAttribute(paymentCategory) != null) {
-				patientBillSummary.setCategory(patientServiceBill.getPatient().getAttribute(paymentCategory).getValue());
-			} else {
-				patientBillSummary.setCategory("");
+			if (patientServiceBill.getPatient().getPatientIdentifier() != null) {
+				PatientBillSummary patientBillSummary;
+				patientBillSummary = new PatientBillSummary();
+				patientBillSummary.setBillId(patientServiceBill.getPatientServiceBillId());
+				patientBillSummary.setPatient(patientServiceBill.getPatient().getPersonName().getFullName());
+				if (patientServiceBill.getPatient().getAttribute(paymentCategory) != null) {
+					patientBillSummary.setCategory(patientServiceBill.getPatient().getAttribute(paymentCategory).getValue());
+				} else {
+					patientBillSummary.setCategory("");
+				}
+				if (patientServiceBill.getPatient().getAttribute(paymentSubCategory) != null) {
+					patientBillSummary.setSubCategory(patientServiceBill.getPatient().getAttribute(paymentSubCategory)
+					        .getValue());
+				} else {
+					patientBillSummary.setSubCategory("");
+				}
+				patientBillSummary.setWaiver(String.valueOf(patientServiceBill.getWaiverAmount()));
+				patientBillSummary.setActualAmount(String.valueOf(patientServiceBill.getActualAmount()));
+				patientBillSummary.setPaidAmount(String.valueOf(patientServiceBill.getAmount()));
+				patientBillSummary.setRebate(String.valueOf(patientServiceBill.getRebateAmount()));
+				patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
+				patientBillSummary.setIdentifier(patientServiceBill.getPatient().getPatientIdentifier().getIdentifier());
+				patientBillSummary.setPatientId(patientServiceBill.getPatient().getPatientId());
+				//add this build object to the list
+				allBills.add(patientBillSummary);
 			}
-			if (patientServiceBill.getPatient().getAttribute(paymentSubCategory) != null) {
-				patientBillSummary.setSubCategory(patientServiceBill.getPatient().getAttribute(paymentSubCategory)
-				        .getValue());
-			} else {
-				patientBillSummary.setSubCategory("");
-			}
-			patientBillSummary.setWaiver(String.valueOf(patientServiceBill.getWaiverAmount()));
-			patientBillSummary.setActualAmount(String.valueOf(patientServiceBill.getActualAmount()));
-			patientBillSummary.setPaidAmount(String.valueOf(patientServiceBill.getAmount()));
-			patientBillSummary.setRebate(String.valueOf(patientServiceBill.getRebateAmount()));
-			patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
-			patientBillSummary.setIdentifier(patientServiceBill.getPatient().getPatientIdentifier().getIdentifier());
-			patientBillSummary.setPatientId(patientServiceBill.getPatient().getPatientId());
-			//add this build object to the list
-			allBills.add(patientBillSummary);
 		}
 		
 		model.addAttribute("bills", allBills);

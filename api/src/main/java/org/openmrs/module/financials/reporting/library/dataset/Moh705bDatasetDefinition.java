@@ -94,13 +94,21 @@ public class Moh705bDatasetDefinition {
 		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getFeversList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "SUA", "Suspected malaria",
-		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getMalariaList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "SUA",
+		    "Suspected malaria",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
+		            DiagnosisLists.getSuspectedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "COA", "Confirmed Malaria positive",
-		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getMalariaList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "COA",
+		    "Confirmed Malaria positive",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
+		            DiagnosisLists.getConfirmedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "MPA", "Malaria In Pregnancy", ReportUtils.map(
 		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getMalariaInPregnancyList()), indParam),

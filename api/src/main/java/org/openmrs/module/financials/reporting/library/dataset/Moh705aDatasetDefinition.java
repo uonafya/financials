@@ -95,15 +95,13 @@ public class Moh705aDatasetDefinition {
 		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getFeversList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "SMC", "Suspected Malaria", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMalariaList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(dsd, "SMC", "Suspected Malaria", ReportUtils.map(
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
+		        DiagnosisLists.getSuspectedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "CMC", "Confirmed Malaria", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMalariaList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(dsd, "CMC", "Confirmed Malaria", ReportUtils.map(
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
+		        DiagnosisLists.getConfirmedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "UTC", "Urinary Tract Infection", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getUrinaryTractInfectionList()), indParam),
