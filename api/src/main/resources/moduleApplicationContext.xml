@@ -80,6 +80,8 @@
                 <ref bean="ehraddons.common.report.turn.around.time" />
                 <ref bean="ehraddons.common.report.705.a.all" />
                 <ref bean="ehraddons.common.report.705.b.all" />
+                <ref bean="ehraddons.common.report.705.b.allDiagnosis" />
+                <ref bean="ehraddons.common.report.705.a.allDiagnosis" />
 
             </set>
         </property>
@@ -209,7 +211,7 @@
             </set>
         </property>
         <property name="template" value="financials:all705a.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:tat" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:aall" />
     </bean>
 
     <bean id="ehraddons.common.report.705.b.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
@@ -222,6 +224,32 @@
             </set>
         </property>
         <property name="template" value="financials:all705b.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:tat" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:ball" />
+    </bean>
+
+    <bean id="ehraddons.common.report.705.a.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="64ea08c0-f3c5-11eb-b752-c79311863139" />
+        <property name="name" value="All diagnosis for children - sumation for days" />
+        <property name="description" value="Get all the diagnosis for children on a given period for 705A - Summation" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:all705all.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:aall" />
+    </bean>
+
+    <bean id="ehraddons.common.report.705.b.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="92103aea-f3c5-11eb-a248-7f5870ee2b5d" />
+        <property name="name" value="All diagnosis for adults - summation" />
+        <property name="description" value="Get allpatients diagnosis on a given period - Summation 705 B" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:all705ball.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:ball" />
     </bean>
 </beans>

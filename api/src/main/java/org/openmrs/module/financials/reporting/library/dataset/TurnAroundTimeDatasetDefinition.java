@@ -14,7 +14,6 @@ import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
 import org.openmrs.module.reporting.data.converter.ObjectFormatter;
-import org.openmrs.module.reporting.data.encounter.definition.EncounterDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.ConvertedPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.EncountersForPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.PatientIdentifierDataDefinition;
@@ -24,7 +23,6 @@ import org.openmrs.module.reporting.data.person.definition.ConvertedPersonDataDe
 import org.openmrs.module.reporting.data.person.definition.GenderDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
-import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
@@ -80,11 +78,20 @@ public class TurnAroundTimeDatasetDefinition {
 	}
 	
 	public Mapped<CohortDefinition> allPatientsCohort() {
+		EncounterType registration = MetadataUtils.existing(EncounterType.class, "356d447a-b494-11ea-8337-f7bcaf3e8fec");
+		EncounterType triage = MetadataUtils.existing(EncounterType.class,
+		    EhrCommonMetadata._EhrEncounterTypes.TRIAGEENCOUNTER);
+		EncounterType opd = MetadataUtils.existing(EncounterType.class, EhrCommonMetadata._EhrEncounterTypes.OPDENCOUNTER);
+		EncounterType lab = MetadataUtils.existing(EncounterType.class, EhrCommonMetadata._EhrEncounterTypes.LABENCOUNTER);
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("All Patients");
-		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id INNER JOIN obs o ON e.encounter_id=o.encounter_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate");
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		        + " INNER JOIN obs o ON e.encounter_id=o.encounter_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate" + " AND e.encounter_type IN("
+		        + registration.getEncounterTypeId() + "," + triage.getEncounterTypeId() + "," + opd.getEncounterTypeId()
+		        + "," + lab.getEncounterTypeId() + ")");
 		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 }
