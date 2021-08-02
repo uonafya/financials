@@ -45,7 +45,7 @@ public class Moh705Queries {
 	 * @return String
 	 */
 	public static String getMoh705aQuery(int classId) {
-		String sql = "SELECT pa.patient_id AS patientId, pn.given_name AS Given_Name, pn.family_name AS Family_name,"
+		String sql = "SELECT "
 		        + " cn.name AS Diagnosis, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 1 THEN 1 ELSE 0 END) AS 1st, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 2 THEN 1 ELSE 0 END) AS 2nd, "
@@ -97,7 +97,7 @@ public class Moh705Queries {
 	 * @return String
 	 */
 	public static String getMoh705bQuery(int classId) {
-		String sql = "SELECT SELECT pa.patient_id AS patientId, pn.given_name AS Given_Name, pn.family_name AS Family_name,"
+		String sql = "SELECT "
 		        + " cn.name AS Diagnosis, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 1 THEN 1 ELSE 0 END) AS 1st, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 2 THEN 1 ELSE 0 END) AS 2nd, "
