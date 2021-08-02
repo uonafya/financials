@@ -78,6 +78,8 @@
                 <ref bean="ehraddons.common.report.allPatients" />
                 <ref bean="ehraddons.common.report.malaria" />
                 <ref bean="ehraddons.common.report.turn.around.time" />
+                <ref bean="ehraddons.common.report.705.a.all" />
+                <ref bean="ehraddons.common.report.705.b.all" />
 
             </set>
         </property>
@@ -194,6 +196,32 @@
             </set>
         </property>
         <property name="template" value="financials:turnAroundTime.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:tat" />
+    </bean>
+
+    <bean id="ehraddons.common.report.705.a.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="29713e2a-f38a-11eb-b3d4-1ba0e621f2bb" />
+        <property name="name" value="All diagnosis for children" />
+        <property name="description" value="Get all the diagnosis for children on a given period" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:all705a.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:tat" />
+    </bean>
+
+    <bean id="ehraddons.common.report.705.b.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="634ade6c-f38a-11eb-aaad-4f1e526b4d64" />
+        <property name="name" value="All diagnosis for adults" />
+        <property name="description" value="Get realtime patients turn around time on a given period" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:all705b.xls" />
         <property name="repeatingSection" value="sheet:1,row:6,dataset:tat" />
     </bean>
 </beans>

@@ -9,6 +9,7 @@ import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
+import org.openmrs.module.reporting.common.TimeQualifier;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
@@ -74,6 +75,7 @@ public class TurnAroundTimeDatasetDefinition {
 		dsd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
 		dsd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
 		dsd.addType(encounterType);
+		dsd.setWhich(TimeQualifier.LAST);
 		return dsd;
 	}
 	
