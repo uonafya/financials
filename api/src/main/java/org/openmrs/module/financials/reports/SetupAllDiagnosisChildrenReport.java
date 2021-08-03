@@ -41,7 +41,7 @@ public class SetupAllDiagnosisChildrenReport extends AbstractHybridReportBuilder
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
 		SqlDataSetDefinition dsd = new SqlDataSetDefinition();
-		dsd.setName("AAR");
+		dsd.setName("ball");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.setSqlQuery(Moh705Queries.getMoh705aQuery(4));
