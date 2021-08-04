@@ -18,7 +18,7 @@ public class Moh705Queries {
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id "
 		        + " INNER JOIN concept c ON c.concept_id=ob.value_coded "
 		        + " WHERE "
-		        + " e.encounter_datetime BETWEEN DATE_ADD(:startDate, interval -1 DAY) AND DATE_ADD(:endDate, interval 1 DAY) "
+		        + " e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND ob.value_coded IS NOT NULL " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) < 5 "
 		        + " AND c.class_id IN(%d) " + " AND ob.value_coded IN(%s)";
 		return String.format(query, classId, list);
@@ -33,7 +33,7 @@ public class Moh705Queries {
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id "
 		        + " INNER JOIN concept c ON c.concept_id=ob.value_coded "
 		        + " WHERE "
-		        + " e.encounter_datetime BETWEEN DATE_ADD(:startDate, interval -1 DAY) AND DATE_ADD(:endDate, interval 1 DAY) "
+		        + " e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND ob.value_coded IS NOT NULL " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) >= 5 "
 		        + " AND c.class_id IN(%d) " + " AND ob.value_coded IN(%s)";
 		return String.format(query, classId, list);

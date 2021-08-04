@@ -73,7 +73,7 @@ public class SetupAllDiagnosisForChildrenReport extends AbstractHybridReportBuil
 	
 	protected PatientDataSetDefinition allPatientsDiagnisChildre() {
 		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
-		dsd.setName("aall");
+		dsd.setName("aall1");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		

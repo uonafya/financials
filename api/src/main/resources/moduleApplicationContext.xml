@@ -211,7 +211,7 @@
             </set>
         </property>
         <property name="template" value="financials:all705a.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:aall" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:aall1" />
     </bean>
 
     <bean id="ehraddons.common.report.705.b.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
@@ -224,7 +224,7 @@
             </set>
         </property>
         <property name="template" value="financials:all705b.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:ball" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:ball1" />
     </bean>
 
     <bean id="ehraddons.common.report.705.a.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
@@ -242,7 +242,7 @@
 
     <bean id="ehraddons.common.report.705.b.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="92103aea-f3c5-11eb-a248-7f5870ee2b5d" />
-        <property name="name" value="All diagnosis for adults - summation" />
+        <property name="name" value="All diagnosis for adults - summation for days" />
         <property name="description" value="Get allpatients diagnosis on a given period - Summation 705 B" />
         <property name="apps">
             <set>
