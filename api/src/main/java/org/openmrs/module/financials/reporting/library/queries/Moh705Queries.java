@@ -40,7 +40,7 @@ public class Moh705Queries {
 	 * 
 	 * @return String
 	 */
-	public static String getMoh705aQuery(int classId, int encounter_type) {
+	public static String getMoh705aQuery(int classId) {
 		String sql = "SELECT "
 		        + " cn.name AS Diagnosis, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 1 THEN 1 ELSE 0 END) AS 1st, "
@@ -82,10 +82,9 @@ public class Moh705Queries {
 		        + "INNER JOIN concept_name cn ON cn.concept_id = o.value_coded AND locale = 'en' AND cn.locale_preferred = 1 "
 		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id " + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND o.value_coded IS NOT NULL "
-		        + " AND e.encounter_type IN(%d) " + " AND c.class_id IN(%d) "
-		        + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 " + "GROUP BY cn.name";
+		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 " + "GROUP BY cn.name";
 		
-		return String.format(sql, encounter_type, classId);
+		return String.format(sql, classId);
 	}
 	
 	/**
@@ -93,7 +92,7 @@ public class Moh705Queries {
 	 * 
 	 * @return String
 	 */
-	public static String getMoh705bQuery(int classId, int encounter_type) {
+	public static String getMoh705bQuery(int classId) {
 		String sql = "SELECT "
 		        + " cn.name AS Diagnosis, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 1 THEN 1 ELSE 0 END) AS 1st, "
@@ -135,10 +134,9 @@ public class Moh705Queries {
 		        + "INNER JOIN concept_name cn ON cn.concept_id = o.value_coded AND locale = 'en' AND cn.locale_preferred = 1 "
 		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id " + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND o.value_coded IS NOT NULL "
-		        + " AND e.encounter_type IN(%d) " + " AND c.class_id IN(%d) "
-		        + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 " + "GROUP BY cn.name";
+		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 " + "GROUP BY cn.name";
 		
-		return String.format(sql, encounter_type, classId);
+		return String.format(sql, classId);
 	}
 	
 }

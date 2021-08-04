@@ -228,6 +228,382 @@ public class EhrAddonsConstants {
 		
 		public static final String MULTI_DRUG_RESISTANT_TUBERCULOSIS = "159345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 1213
 		
+		public static final String EPTB = "5042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String HIV_STAGING_TUBERCULOSIS_WITHIN_YEAR = "5338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Tuberculosis_Polyserositis = "111787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Tuberculous_Pleurisy_in_Primary_Progressive_Tuberculosis = "111809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Erythema_Nodosum_with_Hypersensitivity_Reaction_in_Tuberculosis = "111844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Tuberculosis_of_Joint = "111866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Addisons_Disease_due_to_Tuberculosis = "111875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Tuberculosis_of_Urinary_Organs = "111911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Tuberculosis_of_Ureter = "111918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Tuberculosis_of_Thyroid_Gland = "111925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Tuberculosis_of_Spleen = "111932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TSS = "111933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TSS1 = "111934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TSS2 = "111935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TSS3 = "111937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TSS4 = "111939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TSS5 = "111946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TSS6 = "111953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB1 = "111968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB2 = "111969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB3 = "111971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB4 = "111973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB5 = "111974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB6 = "111981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB7 = "111988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB8 = "111995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB9 = "112002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB10 = "112009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB11 = "112023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB12 = "112030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB13 = "112037AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB14 = "112044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB15 = "112051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB16 = "112066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB17 = "112073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB18 = "112080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB19 = "112087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB20 = "112094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB21 = "112101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB22 = "112108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB23 = "112115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB24 = "112116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB25 = "112130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB26 = "112137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB27 = "112139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB28 = "113024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB29 = "113025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB30 = "113486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB31 = "113487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB32 = "113488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB33 = "113489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB34 = "113491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB35 = "113663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB36 = "115233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB37 = "116592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB38 = "117002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB39 = "117825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB40 = "118890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB41 = "124020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB42 = "124021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB43 = "124022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB44 = "124023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB45 = "124024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB46 = "124025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB47 = "124026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB48 = "124027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB49 = "124028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB50 = "124029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB51 = "124030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB52 = "124031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB53 = "124032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB54 = "124033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB55 = "124039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB56 = "124040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB57 = "124041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB58 = "124042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB59 = "124043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB60 = "124044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB61 = "124045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB62 = "124046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB63 = "124049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB64 = "124051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB65 = "124054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB66 = "124055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB67 = "124056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB68 = "124057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB69 = "124058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB70 = "124059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB71 = "124060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB72 = "124061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB73 = "124062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB74 = "124063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB75 = "124066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB76 = "124067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB77 = "124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB78 = "126497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB79 = "127893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB80 = "128255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB81 = "130052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB82 = "133604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB83 = "134579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB84 = "134580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB85 = "134581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB86 = "134582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB87 = "136040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB88 = "136044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB89 = "136055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB90 = "136465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB91 = "136487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB92 = "137675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB93 = "139519AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB94 = "141048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB95 = "143645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB96 = "145154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB97 = "145286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB98 = "145351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB99 = "148068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB100 = "149488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB101 = "149855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB102 = "151141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB103 = "151363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB104 = "151632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB105 = "152012AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB106 = "152293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB107 = "152306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB108 = "152424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB109 = "152427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB110 = "152460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB111 = "153467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB112 = "153471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB113 = "153781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB114 = "153782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB115 = "153783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB116 = "153784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB117 = "154164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB118 = "156080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB119 = "159167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB120 = "159168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB121 = "159169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB122 = "159170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB123 = "159171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB124 = "159172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB125 = "159173AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB126 = "159346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB127 = "159788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB128 = "159789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB129 = "159790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB130 = "159871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB131 = "159874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB132 = "159875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB133 = "159876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB134 = "159877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB135 = "159878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB136 = "160156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB137 = "160247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB138 = "160248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB139 = "161355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB140 = "163324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB141 = "164366AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB142 = "164367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB143 = "5042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB144 = "5338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB145 = "111787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB146 = "111809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB147 = "111844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB148 = "111866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB149 = "111875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB150 = "111911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB151 = "111918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB152 = "111925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB153 = "111932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB154 = "111933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB155 = "111934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB156 = "111935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB157 = "111937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB158 = "111939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB159 = "111946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB160 = "111953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB161 = "111968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB162 = "111969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB163 = "111971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB164 = "111973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB165 = "111974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB166 = "111981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB167 = "111988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB168 = "111995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB169 = "112002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String TB170 = "112009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 		public static final String MUMPS = "133671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String FEVERS = "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";

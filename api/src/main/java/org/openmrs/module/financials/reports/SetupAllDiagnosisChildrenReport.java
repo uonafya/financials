@@ -48,7 +48,7 @@ public class SetupAllDiagnosisChildrenReport extends AbstractHybridReportBuilder
 		dsd.setName("aall");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.setSqlQuery(Moh705Queries.getMoh705aQuery(4, opd.getEncounterTypeId()));
+		dsd.setSqlQuery(Moh705Queries.getMoh705aQuery(4));
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
