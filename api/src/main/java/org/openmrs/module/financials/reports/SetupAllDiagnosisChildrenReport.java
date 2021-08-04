@@ -1,5 +1,7 @@
 package org.openmrs.module.financials.reports;
 
+import org.openmrs.EncounterType;
+import org.openmrs.module.ehrconfigs.metadata.EhrCommonMetadata;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.financials.reporting.library.queries.Moh705Queries;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
@@ -7,6 +9,7 @@ import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
+import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
@@ -40,11 +43,12 @@ public class SetupAllDiagnosisChildrenReport extends AbstractHybridReportBuilder
 	
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
+		EncounterType opd = MetadataUtils.existing(EncounterType.class, EhrCommonMetadata._EhrEncounterTypes.OPDENCOUNTER);
 		SqlDataSetDefinition dsd = new SqlDataSetDefinition();
 		dsd.setName("aall");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.setSqlQuery(Moh705Queries.getMoh705aQuery(4));
+		dsd.setSqlQuery(Moh705Queries.getMoh705aQuery(4, opd.getEncounterTypeId()));
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
