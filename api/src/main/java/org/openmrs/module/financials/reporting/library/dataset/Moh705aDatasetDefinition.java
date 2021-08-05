@@ -62,7 +62,7 @@ public class Moh705aDatasetDefinition {
 		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMeningococcalMeningitisList()),
 		        indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "OMC", "Other Menigitis", ReportUtils.map(
+		EhrReportingUtils.addRow(dsd, "OMC", "Other Menignitis", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherMenigitisList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		

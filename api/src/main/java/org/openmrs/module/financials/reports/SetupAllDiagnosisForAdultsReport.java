@@ -2,7 +2,6 @@ package org.openmrs.module.financials.reports;
 
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
-import org.openmrs.module.financials.reporting.library.queries.Moh705Queries;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
@@ -27,7 +26,6 @@ import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinitio
 import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
-import org.openmrs.module.reporting.dataset.definition.SqlDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
@@ -62,6 +60,7 @@ public class SetupAllDiagnosisForAdultsReport extends AbstractHybridReportBuilde
 		allAdultsDiagnosis.addParameter(new Parameter("endDate", "End Date", Date.class));
 		allAdultsDiagnosis.setName("All adults data set bulider");
 		allAdultsDiagnosis.addRowFilter(allAdultsDiagnosisPatientsCohort());
+		report.setBaseCohortDefinition(allAdultsDiagnosisPatientsCohort());
 		return Arrays.asList(
 		    ReportUtils.map((DataSetDefinition) allAdultsDiagnosis, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));

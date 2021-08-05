@@ -203,8 +203,8 @@
 
     <bean id="ehraddons.common.report.705.a.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="29713e2a-f38a-11eb-b3d4-1ba0e621f2bb" />
-        <property name="name" value="All diagnosis for children" />
-        <property name="description" value="Get all the diagnosis for children on a given period" />
+        <property name="name" value="All diagnosis for children row per patient" />
+        <property name="description" value="Get all the diagnosis for children on a given period detailed per patient" />
         <property name="apps">
             <set>
                 <ref bean="kenyaemr.app.reports" />
@@ -216,8 +216,8 @@
 
     <bean id="ehraddons.common.report.705.b.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="634ade6c-f38a-11eb-aaad-4f1e526b4d64" />
-        <property name="name" value="All diagnosis for adults" />
-        <property name="description" value="Get realtime patients turn around time on a given period" />
+        <property name="name" value="All diagnosis for adults row per patient" />
+        <property name="description" value="Get realtime patients turn around time on a given period detailed per patient" />
         <property name="apps">
             <set>
                 <ref bean="kenyaemr.app.reports" />

@@ -60,6 +60,7 @@ public class SetupAllDiagnosisForChildrenReport extends AbstractHybridReportBuil
 		allChildrennDiagnosis.addParameter(new Parameter("endDate", "End Date", Date.class));
 		allChildrennDiagnosis.setName("All Children data set builder");
 		allChildrennDiagnosis.addRowFilter(allChildrenDiagnosisPatientsCohort());
+		report.setBaseCohortDefinition(allChildrenDiagnosisPatientsCohort());
 		return Arrays.asList(
 		    ReportUtils.map((DataSetDefinition) allPatientsDiagnisChildre(), "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
@@ -97,7 +98,7 @@ public class SetupAllDiagnosisForChildrenReport extends AbstractHybridReportBuil
 		return dsd;
 	}
 	
-	protected Mapped<CohortDefinition> allChildrenDiagnosisPatientsCohort() {
+	private Mapped<CohortDefinition> allChildrenDiagnosisPatientsCohort() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
