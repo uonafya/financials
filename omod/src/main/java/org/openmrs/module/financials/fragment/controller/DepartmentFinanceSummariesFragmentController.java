@@ -25,7 +25,14 @@ public class DepartmentFinanceSummariesFragmentController {
 				        && opdTestOrder.getFromDept() != null) {
 					generalRevenuePerUnit = new GeneralRevenuePerUnit();
 					generalRevenuePerUnit.setTransactionDate(opdTestOrder.getScheduleDate());
-					generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
+					
+					if (opdTestOrder.getConcept().getConceptId() == 1000021) {
+						generalRevenuePerUnit.setDepartment("LABORATORY");
+					} else if (opdTestOrder.getConcept().getConceptId() == 1651) {
+						generalRevenuePerUnit.setDepartment("PROCEDURE ROOM");
+					} else {
+						generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
+					}
 					generalRevenuePerUnit.setTotalAmount(patientServiceBillItem.getActualAmount());
 					break;
 				}
