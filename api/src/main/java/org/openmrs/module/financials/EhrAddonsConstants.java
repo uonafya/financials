@@ -450,6 +450,51 @@ public class EhrAddonsConstants {
 		
 		public static final String HP114 = "163325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		//Mumps
+		public static final String MUMPS1 = "115486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS2 = "115487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS3 = "129750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS4 = "133658AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS5 = "133659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS6 = "133660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS7 = "133661AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS8 = "133662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS9 = "133663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS10 = "133664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS11 = "133665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS12 = "133666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS13 = "133667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS14 = "133668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS15 = "133669AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS16 = "133670AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS17 = "133671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS18 = "152238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS19 = "154763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS20 = "157186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS21 = "157870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String MUMPS22 = "157871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 		// Diarrhoe
 		public static final String ACUTE_DIARRHEA = "149856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -1249,8 +1294,6 @@ public class EhrAddonsConstants {
 		public static final String TB302 = "164367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//end TB diagnosis
-		
-		public static final String MUMPS = "133671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String FEVERS = "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
