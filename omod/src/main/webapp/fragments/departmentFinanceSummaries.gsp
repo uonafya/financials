@@ -63,3 +63,6 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
 
     </div>
 </div>
+<div>
+    ${ ui.includeFragment("financials", "cumulativeDepartmentalFinanceSummaries") }
+</div>

@@ -13,7 +13,8 @@ import java.util.List;
 public class DepartmentFinanceSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
-		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(false);
+		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(false,
+		    "", "");
 		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
 		        .getAllPatientServiceBillItemsByDate(false);
 		GeneralRevenuePerUnit generalRevenuePerUnit = null;
