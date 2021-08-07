@@ -9,7 +9,15 @@
     jq(function() {
 
         var summaryData =  getCumulativeSummariesByDateRange();
-        var table =  jQuery("#summaryDetails").DataTable();
+        var table =  jQuery("#summaryDetails").DataTable(
+                {
+                    initComplete: function (){
+                        jq(this.api().table().container()).find('input[type="search"]').parent().wrap('<form>').parent().attr('autocomplete','off').css('overflow','hidden').css('margin','auto');
+                    }
+                }
+            );
+
+
         jq('#summaryDetails tbody').on( 'click', 'tr', function () {
             console.log( table.row( this ).data() );
         } );
@@ -21,7 +29,7 @@
         }
 
         function updateTable() {
-             summaryData=getCumulativeSummariesByDateRange(jq("#cashier").val().trim(),moment(jq("#summaryFromDate").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'));
+             summaryData=getCumulativeSummariesByDateRange(jq("#cashier").val().trim(),moment(jq("#summaryFromDate-field").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'));
                 list.departmentSummaries(summaryData);
 
         }
@@ -110,7 +118,7 @@ table#summaryDetails.dataTable tbody tr:hover > .sorting_1 {
             <tbody data-bind="foreach: departmentSummaries">
             <tr>
                 <td data-bind="text: \$index() + 1"></td>
-                <td data-bind="tex: department"></td>
+                <td data-bind="text: department"></td>
                 <td data-bind="text: totalAmount"></td>
             </tr>
             </tbody>
