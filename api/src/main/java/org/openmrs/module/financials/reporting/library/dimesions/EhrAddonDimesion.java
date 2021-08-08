@@ -191,7 +191,8 @@ public class EhrAddonDimesion {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id"
 		        + " WHERE p.voided= 0 AND e.voided = 0 AND e.encounter_datetime BETWEEN DATE_ADD(:startDate, INTERVAL "
-		        + day + " DAY) AND DATE_ADD(DATE_ADD(:startDate, INTERVAL " + day + " DAY), INTERVAL 23 HOUR) ");
+		        + day + " DAY) AND DATE_ADD(DATE_ADD(DATE_ADD(:startDate, INTERVAL " + day
+		        + " DAY), INTERVAL 23 HOUR), INTERVAL 59 MINUTE) ");
 		return cd;
 	}
 }
