@@ -39,7 +39,7 @@ public class Moh705bDatasetDefinition {
 		dsd.setName("MOH705B");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "endDate=${endDate}"));
+		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "startDate=${startDate}"));
 		;
 		// populate datasets
 		EhrReportingUtils.addRow(dsd, "DA", "Diarrhoea", ReportUtils.map(

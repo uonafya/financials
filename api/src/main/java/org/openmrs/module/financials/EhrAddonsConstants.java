@@ -5,7 +5,7 @@ import org.openmrs.api.context.Context;
 
 public class EhrAddonsConstants {
 	
-	public final class _EhrAddOnConceptClasses {
+	public static final class _EhrAddOnConceptClasses {
 		
 		public static final String DIAGNOSIS_CLASS = "8d4918b0-c2cc-11de-8d13-0010c6dffd0f"; // 4
 		
@@ -17,7 +17,7 @@ public class EhrAddonsConstants {
 		
 	}
 	
-	public final class _EhrAddOnConcepts {
+	public static final class _EhrAddOnConcepts {
 		
 		// Dysentery (Blood Bloody diarrhoea)
 		public static final String DYSENTERY = "152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 152
@@ -2093,6 +2093,13 @@ public class EhrAddonsConstants {
 		public static final String MALN29 = "163302AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String MALN30 = "163303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Diagnosis concepts
+		public static final String PROBLEM_ADDED = "6042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String PROVISIONAL_DIAGNOSIS = "160249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String FINA_DIAGNOSIS = "160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 	}
 	

@@ -38,8 +38,10 @@ public class Moh705aDatasetDefinition {
 		dsd.setName("MOH705A");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "endDate=${endDate}"));
+		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "startDate=${startDate}"));
 		
+		dsd.addColumn("DIARRHEA", "DIARRHEA ALL", ReportUtils.map(
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList()), indParam), "");
 		EhrReportingUtils.addRow(dsd, "DC", "Diarrhoea", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
