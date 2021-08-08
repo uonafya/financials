@@ -71,7 +71,7 @@ public class SummaryFragmentController extends CumulativeDepartmentalFinanceSumm
 		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(true, "",
 		    "");
 		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
-		        .getAllPatientServiceBillItemsByDate(true);
+		        .getAllPatientServiceBillItemsByDate(true, "", "");
 		GeneralRevenuePerUnit generalRevenuePerUnit = null;
 		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
 		
