@@ -96,7 +96,11 @@ public class Moh705aDatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "FC", "Fevers",
 		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getFeversList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
-		
+		dsd.addColumn(
+		    "MALARIA",
+		    "MALARIA ALL",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMalariaList()), indParam),
+		    "");
 		EhrReportingUtils.addRow(dsd, "SMC", "Suspected Malaria", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
 		        DiagnosisLists.getSuspectedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
