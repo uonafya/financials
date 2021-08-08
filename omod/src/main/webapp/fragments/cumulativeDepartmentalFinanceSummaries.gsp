@@ -1,20 +1,18 @@
-<%
-    ui.includeJavascript("financials", "jquery.dataTables.min.js")
-    ui.includeCss("financials", "jquery.dataTables.min.css")
-    ui.includeJavascript("ehrconfigs", "knockout-3.4.0.js")
-    ui.includeJavascript("ehrcashier", "moment.js")
-
-%>
 <script type="text/javascript">
     jq(function() {
 
         var summaryData =  getCumulativeSummariesByDateRange();
         var table =  jQuery("#summaryDetails").DataTable(
                 {
+                    dom: 'Bfrtip',
+                    buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
                     initComplete: function (){
+
                         jq(this.api().table().container()).find('input[type="search"]').parent().wrap('<form>').parent().attr('autocomplete','off').css('overflow','hidden').css('margin','auto');
+
                     }
                 }
+
             );
 
 
@@ -29,6 +27,7 @@
         }
 
         function updateTable() {
+            summaryData="";
              summaryData=getCumulativeSummariesByDateRange(jq("#cashier").val().trim(),moment(jq("#summaryFromDate-field").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'));
                 list.departmentSummaries(summaryData);
 

@@ -31,7 +31,7 @@ public class CumulativeDepartmentalFinanceSummariesFragmentController {
 		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(false,
 		    fromDate, toDate);
 		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
-		        .getAllPatientServiceBillItemsByDate(false);
+		        .getAllPatientServiceBillItemsByDate(false, fromDate, toDate);
 		GeneralRevenuePerUnit generalRevenuePerUnit = null;
 		List<GeneralRevenuePerUnit> cumulativeSummarries = new ArrayList<GeneralRevenuePerUnit>();
 		

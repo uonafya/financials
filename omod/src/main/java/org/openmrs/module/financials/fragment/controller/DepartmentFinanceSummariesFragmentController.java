@@ -16,7 +16,7 @@ public class DepartmentFinanceSummariesFragmentController {
 		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(false,
 		    "", "");
 		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
-		        .getAllPatientServiceBillItemsByDate(false);
+		        .getAllPatientServiceBillItemsByDate(false, "", "");
 		GeneralRevenuePerUnit generalRevenuePerUnit = null;
 		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
 		
