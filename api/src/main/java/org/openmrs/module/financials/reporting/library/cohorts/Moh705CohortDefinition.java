@@ -51,18 +51,6 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
-	private CohortDefinition getPatientsWhoHaveDiagnosis705B(List<Integer> list) {
-		SqlCohortDefinition cd = new SqlCohortDefinition();
-		cd.setName("Get adults patients who have diagnosis based on list of concepts");
-		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.setQuery(Moh705Queries.getPatientsWhoMatchDiagnosisBasedOnConcepts(
-		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROBLEM_ADDED).getConceptId(),
-		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS).getConceptId(),
-		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS).getConceptId(), list));
-		return cd;
-	}
-	
 	public CohortDefinition getPatientsWhoHaveDiagnosis705BWithAge(List<Integer> list) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get children with diagnosis");
@@ -93,8 +81,8 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705A",
-		    ReportUtils.map(getPatientsWhoHaveDiagnosis705A(list), "startDate=${startDate},endDate=${endDate"));
-		cd.addSearch("status", ReportUtils.map(getMalariaStatus(ansList), "startDate=${startDate},endDate=${endDate"));
+		    ReportUtils.map(getPatientsWhoHaveDiagnosis705AWithAge(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("status", ReportUtils.map(getMalariaStatus(ansList), "startDate=${startDate},endDate=${endDate}"));
 		cd.setCompositionString("MOH705A AND status");
 		return cd;
 	}
@@ -105,8 +93,8 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705B",
-		    ReportUtils.map(getPatientsWhoHaveDiagnosis705B(list), "startDate=${startDate},endDate=${endDate"));
-		cd.addSearch("status", ReportUtils.map(getMalariaStatus(ansList), "startDate=${startDate},endDate=${endDate"));
+		    ReportUtils.map(getPatientsWhoHaveDiagnosis705BWithAge(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("status", ReportUtils.map(getMalariaStatus(ansList), "startDate=${startDate},endDate=${endDate}"));
 		cd.setCompositionString("MOH705B AND status");
 		return cd;
 	}

@@ -45,4 +45,5 @@ public class Moh705IndicatorDefinitions {
 		return cohortIndicator("Diagnosis for malaria for 705 B",
 		    map(moh705aCohortDefinition.getMalariaDiagnosis705B(list, ans), "startDate=${startDate},endDate=${endDate}"));
 	}
+	
 }
