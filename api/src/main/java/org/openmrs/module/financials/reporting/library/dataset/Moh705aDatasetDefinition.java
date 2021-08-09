@@ -38,8 +38,10 @@ public class Moh705aDatasetDefinition {
 		dsd.setName("MOH705A");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "endDate=${endDate}"));
+		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "startDate=${startDate}"));
 		
+		dsd.addColumn("DIARRHEA", "DIARRHEA ALL", ReportUtils.map(
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList()), indParam), "");
 		EhrReportingUtils.addRow(dsd, "DC", "Diarrhoea", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
@@ -62,7 +64,7 @@ public class Moh705aDatasetDefinition {
 		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMeningococcalMeningitisList()),
 		        indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "OMC", "Other Menigitis", ReportUtils.map(
+		EhrReportingUtils.addRow(dsd, "OMC", "Other Menignitis", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherMenigitisList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
@@ -94,7 +96,11 @@ public class Moh705aDatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "FC", "Fevers",
 		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getFeversList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
-		
+		dsd.addColumn(
+		    "MALARIA",
+		    "MALARIA ALL",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMalariaList()), indParam),
+		    "");
 		EhrReportingUtils.addRow(dsd, "SMC", "Suspected Malaria", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
 		        DiagnosisLists.getSuspectedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());

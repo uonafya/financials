@@ -25,17 +25,12 @@ public class EncountersBasedOnDaySuppliedCalculation extends AbstractPatientCalc
 		CalculationResultMap resultMap = new CalculationResultMap();
 		Integer day = (Integer) parameterValues.get("day");
 		
-		Calendar amonthAgo = Calendar.getInstance();
-		amonthAgo.setTime(context.getNow());
-		amonthAgo.add(Calendar.MONTH, -1);
-		
-		EncounterType opdEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-		    "ba45c278-f290-11ea-9666-1b3e6e848887");
-		
-		CalculationResultMap encounter = Calculations.lastEncounter(opdEncounter, cohort, context);
+		CalculationResultMap encounter = Calculations.lastEncounter(null, cohort, context);
 		for (Integer pId : cohort) {
 			boolean found = false;
 			Encounter patientEncounter = EmrCalculationUtils.encounterResultForPatient(encounter, pId);
+			System.out.println("The dates found is>> " + formatDate(getDateBasedOnValue(context.getNow(), day))
+			        + " encounter >>>" + patientEncounter.getEncounterType().getName());
 			if (patientEncounter != null && patientEncounter.getEncounterDatetime() != null && day != null) {
 				if (formatDate(patientEncounter.getEncounterDatetime()).equals(
 				    formatDate(getDateBasedOnValue(context.getNow(), day)))) {
