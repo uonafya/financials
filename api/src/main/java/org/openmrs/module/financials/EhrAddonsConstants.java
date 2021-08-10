@@ -3049,6 +3049,21 @@ public class EhrAddonsConstants {
 		
 		public static final String ERA7 = "156628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		//upper respiratory tract infections
+		public static final String URT1 = "120023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String URT2 = "121172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String URT3 = "123093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String URT4 = "123561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String URT5 = "123562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String URT6 = "127784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String URT7 = "149478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 	}
 	
 	/**
