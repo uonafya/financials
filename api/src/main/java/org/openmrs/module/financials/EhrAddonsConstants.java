@@ -3034,6 +3034,21 @@ public class EhrAddonsConstants {
 		
 		public static final String OE311 = "163032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		//Ear infections
+		public static final String ERA1 = "110189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String ERA2 = "110889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String ERA3 = "117086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String ERA4 = "117087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String ERA5 = "123119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String ERA6 = "139740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String ERA7 = "156628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 	}
 	
 	/**

@@ -1523,6 +1523,7 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE306).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE307).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE308).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE309).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE310).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE311).getConceptId()
 		
@@ -1530,26 +1531,21 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getEarInfectionsConditionsList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ERA1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ERA2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ERA3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ERA4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ERA5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ERA6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ERA7).getConceptId()
 		
 		);
 	}
 	
 	public static List<Integer> getUpperRespiratoryTractInfectionsList() {
-		return Arrays.asList(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
+		        .getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    //		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ENCOUNTER_FOR_SCREENING_FOR_RESPIRATORY_TUBERCULOSIS)
-		    //		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.MILIARY_TUBERCULOSIS).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
