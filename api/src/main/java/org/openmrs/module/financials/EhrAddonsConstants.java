@@ -3181,6 +3181,9 @@ public class EhrAddonsConstants {
 		public static final String ASTHMA57 = "157792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String ASTHMA58 = "157802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		//Tonsililites
+		public static final String TONSILITIES = "112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 	}
 	
