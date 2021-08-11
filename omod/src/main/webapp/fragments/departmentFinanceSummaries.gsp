@@ -1,10 +1,22 @@
 <%
     ui.includeJavascript("financials", "jquery.dataTables.min.js")
     ui.includeCss("financials", "jquery.dataTables.min.css")
+    ui.includeJavascript("ehrconfigs", "knockout-3.4.0.js")
+    ui.includeJavascript("ehrcashier", "moment.js")
+    ui.includeJavascript("financials", "dataTables.buttons.min.js")
+    ui.includeJavascript("financials", "pdfmake.min.js")
+    ui.includeJavascript("financials", "vfs_fonts.js")
+    ui.includeJavascript("financials", "buttons.html5.js")
+    ui.includeJavascript("financials", "buttons.print.min.js")
+    ui.includeCss("financials", "buttons.dataTables.min.css")
 %>
 <script type="text/javascript">
     jQuery(function() {
-            var table =  jQuery("#dDetails").DataTable();
+            var table =  jQuery("#dDetails").DataTable({
+                dom: 'Bfrtip',
+                buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+
+            });
             jQuery('#dDetails tbody').on( 'click', 'tr', function () {
                 console.log( table.row( this ).data() );
             } );
@@ -62,4 +74,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
         </table>
 
     </div>
+</div>
+<div>
+    ${ ui.includeFragment("financials", "cumulativeDepartmentalFinanceSummaries") }
 </div>

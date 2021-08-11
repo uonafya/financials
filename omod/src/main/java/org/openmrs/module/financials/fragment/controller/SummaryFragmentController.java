@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class SummaryFragmentController {
+public class SummaryFragmentController extends CumulativeDepartmentalFinanceSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
 		List<PatientServiceBill> allBils = Context.getService(BillingService.class).getAllPatientServiceBill();
@@ -68,9 +68,10 @@ public class SummaryFragmentController {
 		
 		model.addAttribute("bills", allBills);
 		
-		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(true);
+		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(true, "",
+		    "");
 		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
-		        .getAllPatientServiceBillItemsByDate(true);
+		        .getAllPatientServiceBillItemsByDate(true, "", "");
 		GeneralRevenuePerUnit generalRevenuePerUnit = null;
 		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
 		
@@ -89,25 +90,7 @@ public class SummaryFragmentController {
 		}
 		model.addAttribute("summaryAccounts", summarizedResults);
 		
-		//get all departiments as names in a list
-		Set<String> departiments = new HashSet<String>();
-		for (GeneralRevenuePerUnit unit : summarizedResults) {
-			if (unit != null) {
-				departiments.add(unit.getDepartment());
-			}
-		}
-		Map<String, Double> totalsPerDepartment = new HashMap<String, Double>();
-		for (String str : departiments) {
-			double valueHolder = 0.0;
-			for (GeneralRevenuePerUnit unit : summarizedResults) {
-				if (str.equals(unit.getDepartment())) {
-					valueHolder += unit.getTotalAmount().doubleValue();
-				}
-			}
-			totalsPerDepartment.put(str, valueHolder);
-			
-		}
-		model.addAttribute("totalSumPerDepartiment", totalsPerDepartment);
+		model.addAttribute("totalSumPerDepartiment", getRevenueTotalsPerDepartment(summarizedResults));
 		
 	}
 }
