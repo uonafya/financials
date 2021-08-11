@@ -3181,9 +3181,30 @@ public class EhrAddonsConstants {
 		public static final String ASTHMA57 = "157792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String ASTHMA58 = "157802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-
+		
 		//Tonsililites
 		public static final String TONSILITIES = "112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Chromosomes abnomarlities
+		public static final String CHRAB1 = "116496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB2 = "116497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB3 = "116498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB4 = "120684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB5 = "120685AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB6 = "140250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB7 = "140251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB8 = "145521AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB9 = "154401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CHRAB10 = "157676AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 	}
 	

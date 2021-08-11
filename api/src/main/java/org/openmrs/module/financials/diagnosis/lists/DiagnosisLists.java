@@ -1619,23 +1619,22 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getTonsilitiesList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.TONSILITIES)
-		        .getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.TONSILITIES).getConceptId()
 		
 		);
 	}
 	
 	public static List<Integer> getChromosomalAbnormalitiesList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB8).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRAB10).getConceptId()
 		
 		);
 	}
