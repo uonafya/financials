@@ -46,9 +46,11 @@ public class CumulativeDepartmentalFinanceSummariesFragmentController {
 				        && opdTestOrder.getFromDept() != null) {
 					generalRevenuePerUnit = new GeneralRevenuePerUnit();
 					generalRevenuePerUnit.setTransactionDate(opdTestOrder.getScheduleDate());
-					if (opdTestOrder.getConcept().getConceptId() == 1000021) {
+					if (opdTestOrder.getConcept().getConceptId() == Context.getConceptService()
+					        .getConceptByUuid("0179f241-8c1d-47c1-8128-841f6508e251").getConceptId()) {
 						generalRevenuePerUnit.setDepartment("LABORATORY");
-					} else if (opdTestOrder.getConcept().getConceptId() == 1651) {
+					} else if (opdTestOrder.getConcept().getConceptId() == (Context.getConceptService().getConceptByUuid(
+					    "1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId())) {
 						generalRevenuePerUnit.setDepartment("PROCEDURE ROOM");
 					} else {
 						generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
