@@ -13,9 +13,10 @@ import java.util.List;
 public class DepartmentFinanceSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
-		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(false);
+		List<OpdTestOrder> allOpdOrders = Context.getService(HospitalCoreService.class).getAllOpdOrdersByDateRange(false,
+		    "", "");
 		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
-		        .getAllPatientServiceBillItemsByDate(false);
+		        .getAllPatientServiceBillItemsByDate(false, "", "");
 		GeneralRevenuePerUnit generalRevenuePerUnit = null;
 		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
 		
@@ -25,7 +26,16 @@ public class DepartmentFinanceSummariesFragmentController {
 				        && opdTestOrder.getFromDept() != null) {
 					generalRevenuePerUnit = new GeneralRevenuePerUnit();
 					generalRevenuePerUnit.setTransactionDate(opdTestOrder.getScheduleDate());
-					generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
+					
+					if (opdTestOrder.getConcept().equals(
+					    Context.getConceptService().getConceptByUuid("0179f241-8c1d-47c1-8128-841f6508e251"))) {
+						generalRevenuePerUnit.setDepartment("LABORATORY");
+					} else if (opdTestOrder.getConcept().equals(
+					    Context.getConceptService().getConceptByUuid("1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))) {
+						generalRevenuePerUnit.setDepartment("PROCEDURE ROOM");
+					} else {
+						generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
+					}
 					generalRevenuePerUnit.setTotalAmount(patientServiceBillItem.getActualAmount());
 					break;
 				}
