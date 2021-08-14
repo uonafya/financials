@@ -13,10 +13,12 @@ public class Moh705Queries {
 	        List<Integer> listOptions) {
 		String str1 = String.valueOf(listOptions).replaceAll("\\[", "");
 		String list = str1.replaceAll("]", "");
-		String query = "SELECT pat.patient_id FROM patient pat " + " INNER JOIN encounter e ON pat.patient_id=e.patient_id "
-		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id " + " WHERE "
-		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND ob.concept_id IN(%d, %d, %d) "
-		        + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded IN(%s)";
+		String query = "SELECT pat.patient_id FROM patient pat "
+		        + " INNER JOIN encounter e ON pat.patient_id=e.patient_id "
+		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id "
+		        + " WHERE "
+		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " AND ob.concept_id IN(%d, %d, %d) " + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded IN(%s)";
 		return String.format(query, provisional, finalDiagnosis, problemAdded, list);
 	}
 	
@@ -65,10 +67,11 @@ public class Moh705Queries {
 		        + " INNER JOIN person_name pn ON pn.person_id=pe.person_id "
 		        + " INNER JOIN patient pa ON pa.patient_id=pe.person_id "
 		        + "INNER JOIN concept_name cn ON cn.concept_id = o.value_coded AND locale = 'en' AND cn.locale_preferred = 1 "
-		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id " + "WHERE "
-		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND o.value_coded IS NOT NULL "
-		        + " AND o.concept_id IN(6042, 160249, 160250)" + " AND c.class_id IN(%d) "
-		        + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 " + "GROUP BY cn.name";
+		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id "
+		        + "WHERE "
+		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250)"
+		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 " + "GROUP BY cn.name";
 		
 		return String.format(sql, classId);
 	}
@@ -118,10 +121,11 @@ public class Moh705Queries {
 		        + " INNER JOIN person_name pn ON pn.person_id=pe.person_id "
 		        + " INNER JOIN patient pa ON pa.patient_id=pe.person_id "
 		        + "INNER JOIN concept_name cn ON cn.concept_id = o.value_coded AND locale = 'en' AND cn.locale_preferred = 1 "
-		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id " + "WHERE "
-		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND o.value_coded IS NOT NULL "
-		        + " AND o.concept_id IN(6042, 160249, 160250)" + " AND c.class_id IN(%d) "
-		        + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 " + "GROUP BY cn.name";
+		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id "
+		        + "WHERE "
+		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250)"
+		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 " + "GROUP BY cn.name";
 		
 		return String.format(sql, classId);
 	}
