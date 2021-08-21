@@ -45,8 +45,7 @@ public class EhrAddonUtils {
 	
 	public static List<ColumnParameters> getGeneralOutPatientFilters() {
 		
-		ColumnParameters under5MaleNew = new ColumnParameters("under5MaleNew", "below 5 and new",
-		        "state=NEW|age=<5|gender=M", "01");
+		ColumnParameters under5MaleNew = new ColumnParameters("under5MaleNew", "below 5 and new", "age=<5|gender=M", "01");
 		ColumnParameters under5MaleRevisit = new ColumnParameters("over5MaleRevisit", "below 5 and revisit",
 		        "state=RVT|age=<5|gender=M", "02");
 		ColumnParameters under5FemaleNew = new ColumnParameters("under5FemaleNew", "below 5 and new",
@@ -113,9 +112,10 @@ public class EhrAddonUtils {
 		ColumnParameters physiotherapyRevisit = new ColumnParameters("physiotherapyRevisit", "Physiotherapy Clinic",
 		        "state=RVT|clinic=PHYS", "18");
 		
-		/*ColumnParameters medicalClinicsNew = new ColumnParameters("medicalClinicsNew", "Medical Clinics", "state=NEW|clinic=MC", "19");
+		ColumnParameters medicalClinicsNew = new ColumnParameters("medicalClinicsNew", "Medical Clinics",
+		        "state=NEW|clinic=MC", "19");
 		ColumnParameters medicalClinicsRevisit = new ColumnParameters("medicalClinicsRevisit", "Medical Clinics",
-		        "state=RVT|clinic=MC", "20");*/
+		        "state=RVT|clinic=MC", "20");
 		
 		ColumnParameters surgicalClinicsNew = new ColumnParameters("surgicalClinicsNew", "Surgical Clinics",
 		        "state=NEW|clinic=SC", "21");

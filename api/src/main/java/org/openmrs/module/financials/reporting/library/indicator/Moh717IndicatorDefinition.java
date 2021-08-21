@@ -18,15 +18,26 @@ public class Moh717IndicatorDefinition {
 		this.moh717CohortDefinition = moh717CohortDefinition;
 	}
 	
-	public CohortIndicator getAllPatients() {
-		return cohortIndicator("All patients for 717 report",
-		    ReportUtils.map(moh717CohortDefinition.getAllPatients(), "startDate=${startDate},endDate=${endDate}"));
+	public CohortIndicator getAllNewPatients() {
+		return cohortIndicator("All patients new patients for 717 report",
+		    ReportUtils.map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	//use mch_clinic for test
-	public CohortIndicator getSpecialClinicPatients() {
-		return cohortIndicator("Special clinics report",
-		    ReportUtils.map(moh717CohortDefinition.getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate}"));
+	public CohortIndicator getAllRevisitPatients() {
+		return cohortIndicator("All patients rebvisit patients for 717 report",
+		    ReportUtils.map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	//special clinic new patients
+	public CohortIndicator getSpecialClinicNewPatients() {
+		return cohortIndicator("Special clinics new patients report", ReportUtils.map(
+		    moh717CohortDefinition.getNewSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	//special clinic new revisit patients
+	public CohortIndicator getSpecialClinicRevisitPatients() {
+		return cohortIndicator("Special clinics revisit patients report", ReportUtils.map(
+		    moh717CohortDefinition.getRevistSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 }

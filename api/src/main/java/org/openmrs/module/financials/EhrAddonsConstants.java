@@ -1445,6 +1445,8 @@ public class EhrAddonsConstants {
 		
 		public static final String OG = "160456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160456
 		
+		public static final String MOPC = "66710a6d-5894-4f7d-a874-b449df77314d"; //1000042
+		
 		//Cholera
 		public static final String DIARRHEA_CHOLERA = "15AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -5374,6 +5376,11 @@ public class EhrAddonsConstants {
 		public static final String POISONING_49 = "129969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String POISONING_50 = "129968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//New and revisit clients
+		public static final String NEW_PATIENT = "164144AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REVISIT_PATIENT = "d5ea1533-7346-4e0b-8626-9bff6cd183b2";
 		
 	}
 	

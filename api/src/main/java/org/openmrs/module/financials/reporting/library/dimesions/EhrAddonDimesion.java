@@ -1,5 +1,7 @@
 package org.openmrs.module.financials.reporting.library.dimesions;
 
+import org.openmrs.EncounterType;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh717CohortDefinition;
 import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 @Component
@@ -72,21 +75,6 @@ public class EhrAddonDimesion {
 	}
 	
 	/**
-	 * Patients who are new or revisits with a month
-	 * 
-	 * @return @{@link org.openmrs.module.reporting.indicator.dimension.CohortDimension}
-	 */
-	public CohortDefinitionDimension getNewOrRevisitPatients() {
-		CohortDefinitionDimension dim = new CohortDefinitionDimension();
-		dim.setName("Patient with new or revisit status");
-		dim.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dim.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		dim.addCohortDefinition("NEW", map(commonLibrary.getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
-		dim.addCohortDefinition("RVT", map(commonLibrary.getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
-		return dim;
-	}
-	
-	/**
 	 * Get age based on the based on DOB and context date
 	 * 
 	 * @return @{@link org.openmrs.module.reporting.indicator.dimension.CohortDimension}
@@ -126,62 +114,57 @@ public class EhrAddonDimesion {
 		dim.addParameter(new Parameter("onOrBefore", "Before date", Date.class));
 		dim.addCohortDefinition(
 		    "ENT",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.ENT)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ENT)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "EYE",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.EYE_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.EYE_CLINIC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "TBL",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.TBL)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.TBL)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "STI",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "CCC",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCC_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCC_CLINIC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "PSY",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.PSYCHIATRIC_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition
+		            .getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PSYCHIATRIC_CLINIC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "ORT",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.ORT)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ORT)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "OCP",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.OCP)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OCP)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "PHYS",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYS)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYS)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "SC",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.SC)), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.SC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "PAED",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.PAED)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PAED)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
 		    "OG",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(EhrAddonsConstants
-		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.OG)), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OG)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
+		dim.addCohortDefinition(
+		    "MOPC",
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		return dim;
 	}
 	
