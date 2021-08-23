@@ -16,7 +16,6 @@ import java.util.List;
 public class PharmacyRevenueSummariesController {
 	
 	public void controller(PageModel model) {
-		fetchPharmacySummaries("", "", new UiUtils() {});
 	}
 	
 	public List<SimpleObject> fetchPharmacySummaries(@RequestParam(value = "startDate", required = false) String startDate,
@@ -36,7 +35,7 @@ public class PharmacyRevenueSummariesController {
 			
 		}
 		
-		return SimpleObject.fromCollection(pharmacyTransactions, uiUtils, "createdOn", "drug.name", "formulation.name", "issueQuantity",
-		    "totalPrice");
+		return SimpleObject.fromCollection(pharmacyTransactions, uiUtils, "createdOn", "drug.name", "formulation.name",
+		    "issueQuantity", "totalPrice");
 	}
 }
