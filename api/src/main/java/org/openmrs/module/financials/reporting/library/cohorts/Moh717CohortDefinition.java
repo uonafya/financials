@@ -26,9 +26,6 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh717CohortDefinition {
 	
-	EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-	    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
-	
 	@Autowired
 	private EhrAddonCommons commonLibrary;
 	
@@ -49,6 +46,8 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getNewPatients() {
+		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get new patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -70,6 +69,8 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getRevisitPatients() {
+		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get revisit patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -110,6 +111,8 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getNewSpecialClinicPatients() {
+		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get new patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -130,6 +133,8 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getRevistSpecialClinicPatients() {
+		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get revisit patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
