@@ -43,6 +43,7 @@ public class Moh717DatasetDefinition {
 		dsd.addDimension("gender", map(ehrAddonDimesion.getGender(), ""));
 		dsd.addDimension("clinic",
 		    map(ehrAddonDimesion.getSpecialClinicVisits(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
+		dsd.addDimension("state", map(ehrAddonDimesion.newOrRevisits(), "startDate=${startDate},endDate=${endDate}"));
 		
 		EhrReportingUtils.addRow(dsd, "OSN", "OUTPATIENT SERVICES NEW PATIENTS",
 		    ReportUtils.map(moh717IndicatorDefinition.getAllNewPatients(), indParams), getGeneralOutPatientFilters());
@@ -57,6 +58,10 @@ public class Moh717DatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "SPCR", "SPECIAL CLINICS REVISIT PATIENTS",
 		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicRevisitPatients(), indParams),
 		    getSpecialClinicPatientFilters());
+		dsd.addColumn("AOSCN", "All Other special Clinic - New",
+		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicOutOfRangePatients(), indParams), "state=NEW");
+		dsd.addColumn("AOSCR", "All Other special Clinic - Revisit",
+		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicOutOfRangePatients(), indParams), "state=RVT");
 		
 		return dsd;
 	}
@@ -106,8 +111,14 @@ public class Moh717DatasetDefinition {
 		ColumnParameters obstetricsGynaecologyClinic = new ColumnParameters("obstetricsGynaecologyClinic",
 		        "Obstetrics/Gynaecology clinic", "clinic=OG", "13");
 		
+		ColumnParameters nutritionClinic = new ColumnParameters("nutritionClinic", "Nutrition clinic", "clinic=NUC", "14");
+		
+		ColumnParameters oncologyClinic = new ColumnParameters("oncologyClinic", "Oncology clinic", "clinic=ONC", "15");
+		
+		ColumnParameters renalClinic = new ColumnParameters("renalClinic", "Renal clinic", "clinic=RENAL", "16");
+		
 		return Arrays.asList(entClinic, eyeClinic, tbClinic, stiClinic, cccClinic, psychiatryClinic, orthopaedicClinic,
 		    occupationalTherapyClinic, physiotherapyClinic, medicalClinicsClinic, surgicalClinic, paediatricsClinic,
-		    obstetricsGynaecologyClinic);
+		    obstetricsGynaecologyClinic, nutritionClinic, oncologyClinic, renalClinic);
 	}
 }

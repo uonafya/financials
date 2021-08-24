@@ -5382,6 +5382,13 @@ public class EhrAddonsConstants {
 		
 		public static final String REVISIT_PATIENT = "d5ea1533-7346-4e0b-8626-9bff6cd183b2";
 		
+		//Additional special clinic concepts
+		public static final String NUTRITION_PROGRAM = "160552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String RENAL_CLINIC = "160475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String ONCOLOGY_CLINIC = "116030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 	}
 	
 	/**

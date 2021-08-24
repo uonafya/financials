@@ -165,6 +165,20 @@ public class EhrAddonDimesion {
 		    "MOPC",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC)),
 		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
+		dim.addCohortDefinition(
+		    "NUC",
+		    map(moh717CohortDefinition
+		            .getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NUTRITION_PROGRAM)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
+		dim.addCohortDefinition(
+		    "ONC",
+		    map(moh717CohortDefinition
+		            .getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ONCOLOGY_CLINIC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
+		dim.addCohortDefinition(
+		    "RENAL",
+		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.RENAL_CLINIC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		return dim;
 	}
 	
@@ -177,5 +191,24 @@ public class EhrAddonDimesion {
 		        + day + " DAY) AND DATE_ADD(DATE_ADD(DATE_ADD(:startDate, INTERVAL " + day
 		        + " DAY), INTERVAL 23 HOUR), INTERVAL 59 MINUTE) ");
 		return cd;
+	}
+	
+	public CohortDefinitionDimension newOrRevisits() {
+		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
+		CohortDefinitionDimension dim = new CohortDefinitionDimension();
+		dim.setName("New or revists patients");
+		dim.addParameter(new Parameter("startDate", "After date", Date.class));
+		dim.addParameter(new Parameter("endDate", "Before date", Date.class));
+		dim.addCohortDefinition(
+		    "RVT",
+		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
+		            .getConceptId(), patientQueueEncounter.getEncounterTypeId()),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+		dim.addCohortDefinition(
+		    "NEW",
+		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
+		        patientQueueEncounter.getEncounterTypeId()), "startDate=${startDate},endDate=${endDate+1d}"));
+		return dim;
 	}
 }

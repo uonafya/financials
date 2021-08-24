@@ -160,4 +160,30 @@ public class Moh717CohortDefinition {
 		cd.setValueList(Arrays.asList(concept));
 		return cd;
 	}
+	
+	public CohortDefinition getSpecialCLinicPatientsOutOfRange() {
+		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
+		sqlCohortDefinition.setName("Special clinic reports out of range");
+		sqlCohortDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sqlCohortDefinition.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sqlCohortDefinition.setQuery(Moh717Queries.getSpecialClinicPatientsOutsideRange(
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.SPECIAL_CLINIC).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.ENT).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.EYE_CLINIC).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.TBL).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCC_CLINIC).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.PSYCHIATRIC_CLINIC).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.ORT).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.OCP).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYS).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.SC).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.PAED).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PAED).getConceptId(), EhrAddonsConstants
+		            .getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.NUTRITION_PROGRAM).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.ONCOLOGY_CLINIC).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.RENAL_CLINIC).getConceptId()));
+		return sqlCohortDefinition;
+	}
 }

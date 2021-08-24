@@ -82,6 +82,7 @@
                 <ref bean="ehraddons.common.report.705.b.all" />
                 <ref bean="ehraddons.common.report.705.b.allDiagnosis" />
                 <ref bean="ehraddons.common.report.705.a.allDiagnosis" />
+                <ref bean="ehraddons.common.706" />
 
             </set>
         </property>
@@ -251,5 +252,16 @@
         </property>
         <property name="template" value="financials:all705ball.xls" />
         <property name="repeatingSection" value="sheet:1,row:6,dataset:ball" />
+    </bean>
+
+    <bean id="ehraddons.common.706" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+        <property name="targetUuid" value="c3e084ee-04c3-11ec-a7c4-9ff99a953d59" />
+        <property name="name" value="MOH 706" />
+        <property name="description" value="MOH 706 Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set></property>
+        <property name="template" value="financials:MOH_706.xls" />
     </bean>
 </beans>

@@ -40,4 +40,10 @@ public class Moh717IndicatorDefinition {
 		    moh717CohortDefinition.getRevistSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
+	//Get all patients who does NOt match the climics provided
+	public CohortIndicator getSpecialClinicOutOfRangePatients() {
+		return cohortIndicator("Special clinics that are out of range", ReportUtils.map(
+		    moh717CohortDefinition.getSpecialCLinicPatientsOutOfRange(), "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
 }
