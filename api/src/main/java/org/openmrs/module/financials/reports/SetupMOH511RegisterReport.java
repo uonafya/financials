@@ -32,7 +32,7 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.510" })
+@Builds({ "ehraddons.common.report.511" })
 public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;
@@ -51,7 +51,7 @@ public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
 		PatientDataSetDefinition dsd = ipdList();
-		dsd.setName("ipd");
+		dsd.setName("cwcr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		

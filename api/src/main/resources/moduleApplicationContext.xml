@@ -84,7 +84,9 @@
                 <ref bean="ehraddons.common.report.705.a.allDiagnosis" />
                 <ref bean="ehraddons.common.706" />
                 <ref bean="ehraddons.common.report.301" />
+                <ref bean="ehraddons.common.report.511" />
                 <ref bean="ehraddons.common.report.510" />
+                <ref bean="ehraddons.common.report.240" />
 
             </set>
         </property>
@@ -278,7 +280,7 @@
         <property name="template" value="financials:MOH_301.xls" />
         <property name="repeatingSection" value="sheet:1,row:6,dataset:ipd" />
     </bean>
-    <bean id="ehraddons.common.report.510" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="ehraddons.common.report.511" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="7732b820-05c1-11ec-89c5-634583e66953" />
         <property name="name" value="Child Welfare Clinic Register - MOH 511" />
         <property name="description" value="Child Welfare Clinic Register - MOH 511 Report" />
@@ -288,6 +290,32 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_511.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:ipd" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:cwcr" />
+    </bean>
+
+    <bean id="ehraddons.common.report.510" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="24481c24-05c4-11ec-afa0-a33c15ffbabf" />
+        <property name="name" value="Family Planning Services Register - MOH 512" />
+        <property name="description" value="Family Planning Services Register - MOH 512 Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:MOH_512.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:fpsr" />
+    </bean>
+
+    <bean id="ehraddons.common.report.240" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="4447b0e2-05cf-11ec-9325-9f6cc7c31b9c" />
+        <property name="name" value="Laboratory Register - MOH 240" />
+        <property name="description" value="Laboratory Register - MOH 240 Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:MOH_240.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:lrr" />
     </bean>
 </beans>
