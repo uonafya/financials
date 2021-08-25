@@ -84,6 +84,7 @@
                 <ref bean="ehraddons.common.report.705.a.allDiagnosis" />
                 <ref bean="ehraddons.common.706" />
                 <ref bean="ehraddons.common.report.301" />
+                <ref bean="ehraddons.common.report.510" />
 
             </set>
         </property>
@@ -275,6 +276,18 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_301.xls" />
+        <property name="repeatingSection" value="sheet:1,row:6,dataset:ipd" />
+    </bean>
+    <bean id="ehraddons.common.report.510" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="7732b820-05c1-11ec-89c5-634583e66953" />
+        <property name="name" value="Child Welfare Clinic Register - MOH 511" />
+        <property name="description" value="Child Welfare Clinic Register - MOH 511 Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:MOH_511.xls" />
         <property name="repeatingSection" value="sheet:1,row:6,dataset:ipd" />
     </bean>
 </beans>
