@@ -34,47 +34,46 @@ import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORM
 @Component
 @Builds({ "ehraddons.common.report.240" })
 public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
-
-    private CommonDatasetDefinition commonDatasetDefinition;
-
-    @Autowired
-    public SetupMOH240RegisterReport(CommonDatasetDefinition commonDatasetDefinition) {
-        this.commonDatasetDefinition = commonDatasetDefinition;
-    }
-
-    @Override
-    protected Mapped<CohortDefinition> buildCohort(HybridReportDescriptor hybridReportDescriptor,
-                                                   PatientDataSetDefinition patientDataSetDefinition) {
-        return null;
-    }
-
-    @Override
-    protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
-        PatientDataSetDefinition dsd = ipdList();
-        dsd.setName("cwcr");
-        dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
-        dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-
-        return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
-                ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
-    }
-
-    @Override
-    protected List<Parameter> getParameters(ReportDescriptor reportDescriptor) {
-        return Arrays.asList(new Parameter("startDate", "Start Date", Date.class), new Parameter("endDate", "End Date",
-                Date.class), new Parameter("dateBasedReporting", "", String.class));
-    }
-
-    private PatientDataSetDefinition ipdList() {
-        PatientDataSetDefinition dsd = new PatientDataSetDefinition();
-        DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}");
-        DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
-        dsd.addColumn("id", new PersonIdDataDefinition(), "");
-        dsd.addColumn("Name", nameDef, "");
-        dsd.addColumn("Sex", new GenderDataDefinition(), "", new GenderConverter());
-        dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
-        return dsd;
-
-    }
+	
+	private CommonDatasetDefinition commonDatasetDefinition;
+	
+	@Autowired
+	public SetupMOH240RegisterReport(CommonDatasetDefinition commonDatasetDefinition) {
+		this.commonDatasetDefinition = commonDatasetDefinition;
+	}
+	
+	@Override
+	protected Mapped<CohortDefinition> buildCohort(HybridReportDescriptor hybridReportDescriptor,
+	        PatientDataSetDefinition patientDataSetDefinition) {
+		return null;
+	}
+	
+	@Override
+	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
+		PatientDataSetDefinition dsd = ipdList();
+		dsd.setName("lrr");
+		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
+		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
+	}
+	
+	@Override
+	protected List<Parameter> getParameters(ReportDescriptor reportDescriptor) {
+		return Arrays.asList(new Parameter("startDate", "Start Date", Date.class), new Parameter("endDate", "End Date",
+		        Date.class), new Parameter("dateBasedReporting", "", String.class));
+	}
+	
+	private PatientDataSetDefinition ipdList() {
+		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
+		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}");
+		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
+		dsd.addColumn("id", new PersonIdDataDefinition(), "");
+		dsd.addColumn("Name", nameDef, "");
+		dsd.addColumn("Sex", new GenderDataDefinition(), "", new GenderConverter());
+		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
+		return dsd;
+		
+	}
 }
-

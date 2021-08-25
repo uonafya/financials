@@ -32,13 +32,13 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.510" })
-public class SetupMOH510RegisterReport extends AbstractHybridReportBuilder {
+@Builds({ "ehraddons.common.report.333" })
+public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;
 	
 	@Autowired
-	public SetupMOH510RegisterReport(CommonDatasetDefinition commonDatasetDefinition) {
+	public SetupMOH333ReportRegister(CommonDatasetDefinition commonDatasetDefinition) {
 		this.commonDatasetDefinition = commonDatasetDefinition;
 	}
 	
