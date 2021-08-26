@@ -32,6 +32,13 @@
                     href: ui.pageLink("financials", "cummulativePatientSummary"),
                     iconProvider: "financials",
                     icon: "buttons/Zoom-in.png"
+            ],
+            [
+                    label: "Pharmacy Department Summaries",
+                    href: ui.pageLink("financials", "financials", [section: "pharmacyRevenueSummaries"]),
+                    active: (selection == "section-pharmacyRevenueSummaries"),
+                    iconProvider: "financials",
+                    icon: "buttons/Zoom-in.png"
             ]
     ]
 %>
@@ -46,5 +53,7 @@
     ${ ui.includeFragment("financials", "patientFinanceSummaries") }
     <% } else  if (section == "departmentFinanceSummaries") { %>
     ${ ui.includeFragment("financials", "departmentFinanceSummaries") }
+    <% } else  if (section == "pharmacyRevenueSummaries") { %>
+    ${ ui.includeFragment("financials", "pharmacyRevenueSummaries") }
     <% } %>
 </div>
