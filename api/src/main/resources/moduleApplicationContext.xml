@@ -363,7 +363,7 @@
     </bean>
 
     <bean id="ehraddons.common.report.209" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
-        <property name="targetUuid" value="d1453810-05da-11ec-994d-a3605f14757f" />
+        <property name="targetUuid" value="927436e4-0626-11ec-bff8-e3c2f9321eb2" />
         <property name="name" value="Radiology(X-RAY) Register - MOH 209" />
         <property name="description" value="Radiology(X-RAY) Register - MOH 209 Report" />
         <property name="apps">
