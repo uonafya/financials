@@ -19,8 +19,15 @@ import java.util.List;
 @Component
 public class Moh705CohortDefinition {
 	
-	@Autowired
 	private EhrAddonCommons ehrAddonCommons;
+	
+	private Moh717CohortDefinition moh717CohortDefinition;
+	
+	@Autowired
+	public Moh705CohortDefinition(EhrAddonCommons ehrAddonCommons, Moh717CohortDefinition moh717CohortDefinition) {
+		this.ehrAddonCommons = ehrAddonCommons;
+		this.moh717CohortDefinition = moh717CohortDefinition;
+	}
 	
 	/**
 	 * Get adult patients who have given diagnosis - MOH705A
@@ -96,6 +103,54 @@ public class Moh705CohortDefinition {
 		    ReportUtils.map(getPatientsWhoHaveDiagnosis705BWithAge(list), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("status", ReportUtils.map(getMalariaStatus(ansList), "startDate=${startDate},endDate=${endDate}"));
 		cd.setCompositionString("MOH705B AND status");
+		return cd;
+	}
+	
+	public CohortDefinition getNewChildrenPatients() {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Children visiting for the first time");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("NEW",
+		    ReportUtils.map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
+		cd.setCompositionString("NEW AND CHILD");
+		return cd;
+	}
+	
+	public CohortDefinition getNewAdultsrenPatients() {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Adults visiting for the first time");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("NEW",
+		    ReportUtils.map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
+		cd.setCompositionString("NEW AND ADULT");
+		return cd;
+	}
+	
+	public CohortDefinition getRevisitsChildrenPatients() {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Children with revisits");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("RVT",
+		    ReportUtils.map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
+		cd.setCompositionString("RVT AND CHILD");
+		return cd;
+	}
+	
+	public CohortDefinition getRevisitAdultsrenPatients() {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Adults with revisit");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("RVT",
+		    ReportUtils.map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
+		cd.setCompositionString("RVT AND ADULT");
 		return cd;
 	}
 	

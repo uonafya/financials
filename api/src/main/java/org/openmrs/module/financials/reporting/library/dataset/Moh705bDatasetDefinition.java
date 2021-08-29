@@ -321,13 +321,13 @@ public class Moh705bDatasetDefinition {
 		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAllOtherDiseasesList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "NFAA", "No. Of First Attendances", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getNoOfFirstAttendancesList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(dsd, "NFAA", "No. Of First Attendances",
+		    ReportUtils.map(moh705aIndicator.getNewAdultsPatients(), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RETA", "Re-Attendances", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getReAttendancesList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils
+		        .addRow(dsd, "RETA", "Re-Attendances",
+		            ReportUtils.map(moh705aIndicator.getRevisitsAdultsPatients(), indParam),
+		            EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "RFHA", "Referrals From Other Health Facility", ReportUtils.map(
 		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getReferralsFromOtherHealthFacilityList()),
