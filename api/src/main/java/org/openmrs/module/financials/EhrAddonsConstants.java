@@ -6571,6 +6571,12 @@ public class EhrAddonsConstants {
 		public static final String   INJURY1179 = "163487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		public static final String   INJURY1180 = "163864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
+		//Victims of violences
+		public static final String VIOLENCE1 = "123160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String VIOLENCE2 = "124824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String VIOLENCE3 = "141814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String VIOLENCE4 = "158358AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
 	}
 	
 	/**
