@@ -1534,11 +1534,10 @@ public class EhrAddonsConstants {
 		public static final String Mixed_Malaria = "134041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Maternal_Malaria_with_Delivery_with_Current_Postpartum_Complication = "134592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
 		public static final String Maternal_Malaria_During_Pregnancy_Baby_Not_Yet_Delivered = "134594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Malaria_in_pregnancy = "134594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
+
 		public static final String Malarial_Nephrosis = "135359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Malarial_Hepatitis = "135360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
