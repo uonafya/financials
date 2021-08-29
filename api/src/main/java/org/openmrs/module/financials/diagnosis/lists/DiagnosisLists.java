@@ -3971,8 +3971,7 @@ public class DiagnosisLists {
 			getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJURY1177).getConceptId(),
 			getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJURY1178).getConceptId(),
 			getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJURY1179).getConceptId(),
-			getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJURY1180).getConceptId(),
-
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJURY1180).getConceptId(
 		
 		);
 		

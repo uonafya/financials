@@ -6619,6 +6619,11 @@ public class EhrAddonsConstants {
 		public static final String SNAKEBITE3 = "132684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		public static final String SNAKEBITE4 = "158628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
+		//sexual assault
+		public static final String  SEXUAL1= "123160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String  SEXUAL2="126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String  SEXUAL3="158805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
 	}
 	
 	/**
