@@ -35,6 +35,7 @@
 
     var list = new SummariesDataListView();
     ko.applyBindings(list, jq("#dDetails")[0]);
+    console.log(list);
 
     function updateTable() {
         summaryData=" "
@@ -105,6 +106,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
         <table id="dDetails">
             <thead>
             <tr>
+                <td>#</td>
                 <td>Transaction date</td>
                 <td>Drug Name</td>
                 <td>Formulation</td>
@@ -115,7 +117,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <tbody data-bind="foreach: departmentSummaries">
             <tr>
                 <td data-bind="text: \$index() + 1"></td>
-                <td data-bind="text: createdOn"></td>
+                <td data-bind="text: (createdOn).substring(0, 11).replaceAt(2, ',').replaceAt(6, ' ').insertAt(3, 0, ' ') "></td>
                 <td data-bind="text: drug.name"></td>
                 <td data-bind="text: formulation.name"></td>
                 <td data-bind="text: issueQuantity"></td>

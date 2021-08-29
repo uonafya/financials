@@ -23,14 +23,13 @@ public class PharmacyRevenueSummariesFragmentController {
 	        @RequestParam(value = "endDate", required = false) String endDate, UiUtils uiUtils) {
 		
 		InventoryCommonService inventoryCommonService = Context.getService(InventoryCommonService.class);
-
+		
 		List<InventoryStoreDrugPatient> storeDrugPatientList = inventoryCommonService.getAllIssueByDateRange(startDate,
 		    endDate);
 		List<InventoryStoreDrugTransactionDetail> pharmacyTransactions = new ArrayList<InventoryStoreDrugTransactionDetail>();
 		
 		for (InventoryStoreDrugPatient isdp : storeDrugPatientList) {
 			for (InventoryStoreDrugPatientDetail isdpDetail : inventoryCommonService.getDrugDetailOfPatient(isdp)) {
-				System.out.println("###" + isdpDetail.getTransactionDetail().getDrug().getName());
 				pharmacyTransactions.add(isdpDetail.getTransactionDetail());
 			}
 			
