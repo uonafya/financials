@@ -4004,16 +4004,31 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getBurnsList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN1).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN2).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN3).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN4).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN5).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN6).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN7).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN8).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN9).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN10).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN11).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN12).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN13).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN14).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN15).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN16).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN17).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN18).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN19).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN20).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN21).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN22).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN23).getConceptId()
+
 		
 		);
 	}
