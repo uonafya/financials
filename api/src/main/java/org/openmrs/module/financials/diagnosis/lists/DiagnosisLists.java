@@ -2774,22 +2774,6 @@ public class DiagnosisLists {
 		);
 	}
 	
-	public static List<Integer> getRoadTrafficInjuriesList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
-		
-		);
-		
-	}
-	
 	public static List<Integer> getOtherInjuriesList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJURY1).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJURY2).getConceptId(),
@@ -3977,16 +3961,9 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getSexualAssaultList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.SEXUAL1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.SEXUAL2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.SEXUAL3).getConceptId()
 		
 		);
 	}
@@ -4001,46 +3978,53 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getBurnsList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN8).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN10).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN11).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN12).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN13).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN14).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN15).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN16).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN17).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN18).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN19).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN20).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN21).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN22).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BURN23).getConceptId()
 		
 		);
 	}
 	
 	public static List<Integer> getSnakeBitesList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.SNAKEBITE1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.SNAKEBITE2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.SNAKEBITE3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.SNAKEBITE4).getConceptId()
 		
 		);
 	}
 	
 	public static List<Integer> getDogBitesList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_8).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOGBITE_10).getConceptId()
 		
 		);
 		
@@ -4585,6 +4569,12 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
 		
 		);
+		
+	}
+	
+	public static List<Integer> getRoadTrafficInjuriesList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.DEATHS_DUE_TO_ROAD_TRAFFIC_INJURIES)
+		        .getConceptId());
 		
 	}
 	
