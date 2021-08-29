@@ -3066,6 +3066,7 @@ public class DiagnosisLists {
 				getConcept(EhrAddonsConstants._EhrAddOnConcepts.OTHER_BITES180).getConceptId(),
 				getConcept(EhrAddonsConstants._EhrAddOnConcepts.OTHER_BITES181).getConceptId(),
 				getConcept(EhrAddonsConstants._EhrAddOnConcepts.OTHER_BITES182).getConceptId()
+
 		);
 		
 	}
