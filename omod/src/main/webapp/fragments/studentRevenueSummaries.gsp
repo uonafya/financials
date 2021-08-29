@@ -34,7 +34,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
 }
 </style>
 <div class="ke-panel-frame">
-    <div class="ke-panel-heading">Patient Finance Summaries </div>
+    <div class="ke-panel-heading">Student Finance Summaries </div>
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
         <table id="pDetails">
             <thead>
@@ -46,6 +46,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <th>Patient Names</th>
                 <th>Category</th>
                 <th>SubCategory</th>
+                <th>Institution</th>
                 <th>Waiver Amount</th>
                 <th>Actual Amount</th>
                 <th>Paid Amount</th>
@@ -60,6 +61,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             </tr>
             <% } %>
             <% bills.each {%>
+            <% if (it.subCategory == "Student") { %>
             <tr>
                 <td>${it.billId}</td>
                 <td>${it.patientId}</td>
@@ -74,7 +76,8 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <td>${it.paidAmount}</td>
             </tr>
             <%}%>
+            <%}%>
             </tbody>
         </table>
-        </div>
+    </div>
 </div>

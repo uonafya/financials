@@ -1,5 +1,7 @@
 package org.openmrs.module.financials;
 
+import org.openmrs.PersonAttribute;
+
 public class PatientBillSummary {
 	
 	private Integer billId;
@@ -9,6 +11,8 @@ public class PatientBillSummary {
 	private String category;
 	
 	private String subCategory;
+	
+	private String studentAttributeName;
 	
 	public Integer getBillId() {
 		return billId;
@@ -111,4 +115,12 @@ public class PatientBillSummary {
 	}
 	
 	private Integer patientId;
+	
+	public void setStudentAttributeName(String studentAttributeName) {
+		this.studentAttributeName = studentAttributeName;
+	}
+	
+	public String getStudentAttributeName() {
+		return studentAttributeName;
+	}
 }

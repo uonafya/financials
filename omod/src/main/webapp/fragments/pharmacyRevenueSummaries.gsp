@@ -14,7 +14,12 @@
     jQuery(function() {
         var table =  jQuery("#dDetails").DataTable({
             dom: 'Bfrtip',
-            buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+            buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+            initComplete: function (){
+
+                jq(this.api().table().container()).find('input[type="search"]').parent().wrap('<form>').parent().attr('autocomplete','off').css('overflow','hidden').css('margin','auto');
+
+            }
 
         });
         jQuery('#dDetails tbody').on( 'click', 'tr', function () {

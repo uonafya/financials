@@ -39,6 +39,13 @@
                     active: (selection == "section-pharmacyRevenueSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/Zoom-in.png"
+            ],
+            [
+                    label: "Student Account Summaries",
+                    href: ui.pageLink("financials", "financials", [section: "studentRevenueSummaries"]),
+                    active: (selection == "section-studentRevenueSummaries"),
+                    iconProvider: "financials",
+                    icon: "buttons/Zoom-in.png"
             ]
     ]
 %>
@@ -55,5 +62,7 @@
     ${ ui.includeFragment("financials", "departmentFinanceSummaries") }
     <% } else  if (section == "pharmacyRevenueSummaries") { %>
     ${ ui.includeFragment("financials", "pharmacyRevenueSummaries") }
+    <%} else if(section == "studentRevenueSummaries") { %>
+    ${ui.includeFragment("financials","studentRevenueSummaries")}
     <% } %>
 </div>
