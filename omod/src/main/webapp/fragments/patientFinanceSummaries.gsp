@@ -68,7 +68,6 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <td>${it.patient}</td>
                 <td>${it.category}</td>
                 <td>${it.subCategory}</td>
-                <td>${it.studentAttributeName}</td>
                 <td>${it.waiver}</td>
                 <td>${it.actualAmount}</td>
                 <td>${it.paidAmount}</td>
