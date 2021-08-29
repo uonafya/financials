@@ -386,6 +386,6 @@
                 <ref bean="kenyaemr.app.reports" />
             </set>
         </property>
-        <property name="template" value="financials:MOH_opthalmic.xls" />
+        <property name="template" value="financials:MOH_Opthalmic_ Services_ Unit_ Summary_ Form.xls" />
     </bean>
 </beans>
