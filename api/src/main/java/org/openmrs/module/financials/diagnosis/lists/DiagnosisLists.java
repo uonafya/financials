@@ -4209,16 +4209,37 @@ getConcept(EhrAddonsConstants._EhrAddOnConcepts.EPILEPSY_109).getConceptId()
 	}
 	
 	public static List<Integer> getCardiovascularConditionsList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_1).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_2).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_3).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_4).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_5).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_6).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_7).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_8).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_9).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_10).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_11).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_12).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_13).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_14).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_15).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_16).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_17).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_18).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_19).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_20).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_21).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_22).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_23).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_24).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_25).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_26).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_27).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_28).getConceptId(),
+getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_29).getConceptId()
+
 		
 		);
 	}
