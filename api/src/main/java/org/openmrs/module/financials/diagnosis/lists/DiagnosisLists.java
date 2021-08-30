@@ -4,6 +4,7 @@ import org.openmrs.module.financials.DiabetesDiagnosisConstants;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.HivDiagnosisConstants;
 import org.openmrs.module.financials.MascularDiagnosisConstants;
+import org.openmrs.module.financials.MentalPalsyDiagnosisConstants;
 import org.openmrs.module.financials.OncologyDiagnosisConstants;
 import org.openmrs.module.financials.OtherBitesDiagnosisConstants;
 
@@ -6373,16 +6374,56 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getCerebralPalsyList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(MentalPalsyDiagnosisConstants.PALSY1).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY2).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY3).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY4).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY5).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY6).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY7).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY8).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY9).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY10).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY11).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY12).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY13).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY14).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY15).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY16).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY17).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY18).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY19).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY20).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY21).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY22).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY23).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY23).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY24).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY25).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY26).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY27).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY28).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY29).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY30).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY31).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY32).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY33).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY34).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY35).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY36).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY37).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY38).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY39).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY40).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY41).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY42).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY43).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY44).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY45).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY46).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY47).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY48).getConceptId(),
+		    getConcept(MentalPalsyDiagnosisConstants.PALSY49).getConceptId()
 		
 		);
 	}
@@ -6498,4 +6539,3 @@ public class DiagnosisLists {
 		                    .getConceptId());
 	}
 }
-g
