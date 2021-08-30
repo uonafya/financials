@@ -95,4 +95,3 @@ table#summary.dataTable tbody tr:hover {
     </tbody>
 </table>
 
-
