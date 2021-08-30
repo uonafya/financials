@@ -1,11 +1,42 @@
 <%
     ui.includeJavascript("financials", "jquery.dataTables.min.js")
     ui.includeCss("financials", "jquery.dataTables.min.css")
+    ui.includeJavascript("ehrconfigs", "knockout-3.4.0.js")
+    ui.includeJavascript("ehrcashier", "moment.js")
+    ui.includeJavascript("financials", "dataTables.buttons.min.js")
+    ui.includeJavascript("financials", "pdfmake.min.js")
+    ui.includeJavascript("financials", "vfs_fonts.js")
+    ui.includeJavascript("financials", "buttons.html5.js")
+    ui.includeJavascript("financials", "buttons.print.min.js")
+    ui.includeCss("financials", "buttons.dataTables.min.css")
+    ui.includeJavascript("financials", "logo.js")
 %>
 <script type="text/javascript">
     jQuery(function() {
         jQuery("#dataIn").DataTable();
-        var table =  jQuery("#pDetails").DataTable();
+        var table =  jQuery("#pDetails").DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                'copy',
+                'csv',
+                'excel',
+                {   extend: 'print',
+                    customize: function ( win ) {
+                        jq(win.document.body)
+                            .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                    }
+                },
+                {
+                    extend: 'pdfHtml5',
+                    customize: function ( doc ) {
+                        jq(doc.content.body).prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                    }
+                }
+            ],
+            initComplete: function (){
+            jq(this.api().table().container()).find('input[type="search"]').parent().wrap('<form>').parent().attr('autocomplete','off').css('overflow','hidden').css('margin','auto');
+        }
+        });
         jQuery('#pDetails tbody').on( 'click', 'tr', function () {
             var billId = table.row( this ).data();
             ui.navigate('financials', 'billedItems', {billedId: billId[0], patientId: billId[1]});
@@ -81,3 +112,4 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
         </table>
     </div>
 </div>
+
