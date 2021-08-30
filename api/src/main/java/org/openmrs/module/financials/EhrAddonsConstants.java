@@ -9104,6 +9104,10 @@ public class EhrAddonsConstants {
 		public static final String CARDIOVASCULAR_28 = "155434AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String CARDIOVASCULAR_29 = "155687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		//Overweight
+		public static final String OVERWEIGHT1 = "114413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+public static final String OVERWEIGHT2 =  "158204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 	}
 	
 	/**
