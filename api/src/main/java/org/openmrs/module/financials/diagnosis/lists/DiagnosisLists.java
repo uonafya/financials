@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.diagnosis.lists;
 
+import org.openmrs.module.financials.DiabetesDiagnosisConstants;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.MascularDiagnosisConstants;
 import org.openmrs.module.financials.OncologyDiagnosisConstants;
@@ -4032,20 +4033,32 @@ public class DiagnosisLists {
 		);
 		
 	}
-	
+
 	public static List<Integer> getDiabetesList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC1).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC2).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC3).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC4).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC5).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC6).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC7).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC8).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC9).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIABETIC10).getConceptId()
-		
-		);
+		return Arrays.asList(getConcept(DiabetesDiagnosisConstants.DIABETIC1).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC2).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC3).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC4).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC5).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC6).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC7).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC8).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC9).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC10).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC11).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC12).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC13).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC14).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC15).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC16).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC17).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC18).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC19).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC20).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC21).getConceptId(),
+				getConcept(DiabetesDiagnosisConstants.DIABETIC22).getConceptId(),
+
+				);
 	}
 	
 	public static List<Integer> getOtherBitesList() {
