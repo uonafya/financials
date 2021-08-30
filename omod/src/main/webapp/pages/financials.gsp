@@ -38,14 +38,14 @@
                     href: ui.pageLink("financials", "financials", [section: "pharmacyRevenueSummaries"]),
                     active: (selection == "section-pharmacyRevenueSummaries"),
                     iconProvider: "financials",
-                    icon: "buttons/Zoom-in.png"
+                    icon: "buttons/pharmacy_summary.png"
             ],
             [
                     label: "Student Account Summaries",
                     href: ui.pageLink("financials", "financials", [section: "studentRevenueSummaries"]),
                     active: (selection == "section-studentRevenueSummaries"),
                     iconProvider: "financials",
-                    icon: "buttons/Zoom-in.png"
+                    icon: "buttons/student.png"
             ]
     ]
 %>
