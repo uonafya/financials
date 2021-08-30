@@ -4743,7 +4743,7 @@ getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_29).getConceptId(
 			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CENTRAL_NAVAL47).getConceptId(),
 			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CENTRAL_NAVAL48).getConceptId(),
 			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CENTRAL_NAVAL49).getConceptId(),
-			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CENTRAL_NAVAL50).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CENTRAL_NAVAL50).getConceptId()
 		
 		);
 	}
