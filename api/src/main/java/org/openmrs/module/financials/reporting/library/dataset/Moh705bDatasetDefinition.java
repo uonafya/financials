@@ -264,7 +264,7 @@ public class Moh705bDatasetDefinition {
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "CNSA", "Central Nervous System Conditions", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getCentralNervousSystemConditionsList()),
+		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getOtherCentralNervousSystemConditionsList()),
 		    indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "OVA", "Overweight", ReportUtils.map(
