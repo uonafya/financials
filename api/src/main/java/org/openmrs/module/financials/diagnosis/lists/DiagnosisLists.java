@@ -4469,7 +4469,7 @@ getConcept(EhrAddonsConstants._EhrAddOnConcepts.CARDIOVASCULAR_29).getConceptId(
 				getConcept(EhrAddonsConstants._EhrAddOnConcepts.FISTULA177).getConceptId(),
 				getConcept(EhrAddonsConstants._EhrAddOnConcepts.FISTULA178).getConceptId(),
 				getConcept(EhrAddonsConstants._EhrAddOnConcepts.FISTULA179).getConceptId(),
-				getConcept(EhrAddonsConstants._EhrAddOnConcepts.FISTULA180).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.FISTULA180).getConceptId()
 		
 		);
 	}
