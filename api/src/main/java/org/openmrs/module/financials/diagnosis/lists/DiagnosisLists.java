@@ -4064,6 +4064,7 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getEpilepsyList() {
+		
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
 		        .getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
