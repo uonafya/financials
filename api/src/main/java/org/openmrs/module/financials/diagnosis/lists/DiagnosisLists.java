@@ -6167,8 +6167,8 @@ public class DiagnosisLists {
 	
 	public static List<Integer> getViralHaemorrhagicFeverList() {
 		return Arrays.asList(
-			getConcept(EhrAddonsConstants._EhrAddOnConcepts.HAEMORRHAGICFever_1).getConceptId(),
-			getConcept(EhrAddonsConstants._EhrAddOnConcepts.HAEMORRHAGICFever_2).getConceptId()
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.HAEMORRHAGICFEVER_1).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.HAEMORRHAGICFEVER_2).getConceptId()
 		);
 	}
 	
