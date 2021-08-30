@@ -5972,16 +5972,16 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getYellowFeverList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_1).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_2).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_3).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_4).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_5).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_6).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_7).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_8).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.YELLOWFEVER_9).getConceptId()
 		
 		);
 	}
