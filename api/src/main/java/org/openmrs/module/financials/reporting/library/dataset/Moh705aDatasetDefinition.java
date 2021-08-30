@@ -3,6 +3,7 @@ package org.openmrs.module.financials.reporting.library.dataset;
 import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
 import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
 import org.openmrs.module.financials.reporting.library.indicator.Moh705IndicatorDefinitions;
+import org.openmrs.module.financials.reporting.library.indicator.Moh717IndicatorDefinition;
 import org.openmrs.module.financials.reporting.utils.EhrAddonUtils;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
 import org.openmrs.module.kenyacore.report.ReportUtils;
@@ -307,12 +308,11 @@ public class Moh705aDatasetDefinition {
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAllOtherDiseasesList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "NFAC", "No of first attendances", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getNoOfFirstAttendancesList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(dsd, "NFAC", "No of first attendances",
+		    ReportUtils.map(moh705aIndicator.getNewChildrenPatients(), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RAC", "Re-attendances", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getReAttendancesList()), indParam),
+		EhrReportingUtils.addRow(dsd, "RAC", "Re-attendances",
+		    ReportUtils.map(moh705aIndicator.getRevisitsChildrenPatients(), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "RFHC", "Referrals from other health facility", ReportUtils.map(
