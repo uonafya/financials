@@ -932,16 +932,9 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Mixed_Malaria).getConceptId(),
 		    getConcept(
 		        EhrAddonsConstants._EhrAddOnConcepts.Maternal_Malaria_with_Delivery_with_Current_Postpartum_Complication)
-		            .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Maternal_Malaria_During_Pregnancy_Baby_Not_Yet_Delivered)
-		            .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malaria_in_pregnancy).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malarial_Nephrosis).getConceptId(),
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malarial_Nephrosis).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malarial_Hepatitis).getConceptId(),
-		    getConcept(
-		        EhrAddonsConstants._EhrAddOnConcepts.Malaria_in_Mother_Complicating_Pregnancy_Childbirth_and_or_Puerperium)
-		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malaria_during_pregnancy)
-		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Induced_Malaria).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Induced_Malaria).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.hyper_reactive_malarial_splenomegaly).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.HO_Malaria).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Congenital_Malaria).getConceptId(),
@@ -6131,16 +6124,12 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getPhysicalDisabilityList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYSICAL_DISABILITY2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYSICAL_DISABILITY3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYSICAL_DISABILITY4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYSICAL_DISABILITY5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYSICAL_DISABILITY6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYSICAL_DISABILITY7).getConceptId()
 		
 		);
 	}
@@ -6285,16 +6274,12 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getMalariaInPregnancyList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malaria_in_pregnancy).getConceptId(),
+		    getConcept(
+		        EhrAddonsConstants._EhrAddOnConcepts.Malaria_in_Mother_Complicating_Pregnancy_Childbirth_and_or_Puerperium)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malaria_during_pregnancy)
+		            .getConceptId()
 		
 		);
 	}
