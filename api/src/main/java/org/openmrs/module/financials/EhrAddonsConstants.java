@@ -1394,6 +1394,9 @@ public class EhrAddonsConstants {
 		
 		public static final String TB302 = "164367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		//ViralHaemorrhagicFever
+		public static final String HAEMORRHAGICFEVER_1 = "123112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String HAEMORRHAGICFEVER_2 = "148483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		//end TB diagnosis
 		
 		public static final String FEVERS = "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
