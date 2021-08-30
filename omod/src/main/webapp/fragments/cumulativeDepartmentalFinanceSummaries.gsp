@@ -28,8 +28,8 @@
 
         function updateTable() {
             summaryData="";
-             summaryData=getCumulativeSummariesByDateRange(jq("#cashier").val().trim(),moment(jq("#summaryFromDate-field").val()).format('yyyy-MM-dd'), moment(jq('#summaryToDate-field').val()).format('yyyy-MM-dd'));
-                list.departmentSummaries(summaryData);
+             summaryData=getCumulativeSummariesByDateRange(jq("#cashier").val().trim(),moment(jq("#summaryFromDate-field").val()).format('YYYY-MM-DD'), moment(jq('#summaryToDate-field').val()).format('YYYY-MM-DD'));
+             list.departmentSummaries(summaryData);
 
         }
 
