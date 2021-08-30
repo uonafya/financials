@@ -10222,12 +10222,16 @@ public static final String 	CANCER_1219  = "164666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 		public static final String CARDIOVASCULAR_28 = "155434AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String CARDIOVASCULAR_29 = "155687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
+
+		public static final String ViralHaemorrhagicFever_1 = "123112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String ViralHaemorrhagicFever_2 = "148483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+			
 		//Overweight
 		public static final String OVERWEIGHT1 = "114413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String OVERWEIGHT2 = "158204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 	}
+
 	
 	/**
 	 * @return the Concept that matches the passed uuid, name, source:code mapping, or primary key
