@@ -139,7 +139,7 @@ public class Moh705bDatasetDefinition {
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "ANEA", "Aneamia",
-		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAneamiaList()), indParam),
+		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAnaemiaList()), indParam),
 		    
 		    EhrAddonUtils.getAdultChildrenColumns());
 		EhrReportingUtils.addRow(dsd, "EYA", "Eye Infections", ReportUtils.map(
