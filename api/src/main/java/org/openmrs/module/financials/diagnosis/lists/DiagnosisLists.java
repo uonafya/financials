@@ -2,6 +2,7 @@ package org.openmrs.module.financials.diagnosis.lists;
 
 import org.openmrs.module.financials.DiabetesDiagnosisConstants;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.HivDiagnosisConstants;
 import org.openmrs.module.financials.MascularDiagnosisConstants;
 import org.openmrs.module.financials.OncologyDiagnosisConstants;
 import org.openmrs.module.financials.OtherBitesDiagnosisConstants;
@@ -4557,33 +4558,20 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getNewlyDiagnosedHivList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept(HivDiagnosisConstants.HIV_0).getConceptId()
 		
 		);
 	}
 	
 	public static List<Integer> getBrucellosisList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
-		
-		);
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELLOSIS).getConceptId());
 	}
 	
 	public static List<Integer> getCardiovascularConditionsList() {
