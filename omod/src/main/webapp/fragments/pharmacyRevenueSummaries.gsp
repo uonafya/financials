@@ -9,6 +9,8 @@
     ui.includeJavascript("financials", "buttons.html5.js")
     ui.includeJavascript("financials", "buttons.print.min.js")
     ui.includeCss("financials", "buttons.dataTables.min.css")
+    ui.includeJavascript("ehrconfigs", "underscore-min.js")
+
 %>
 <script type="text/javascript">
     jQuery(function() {
@@ -40,20 +42,22 @@
 
     var list = new SummariesDataListView();
     ko.applyBindings(list, jq("#dDetails")[0]);
-    console.log(list);
 
     function updateTable() {
-        summaryData=" "
-        summaryData=fetchPharmacySummariesByDateRange(jq("#cashier").val().trim(),moment(jq("#summaryFromDate-field").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'));
+        summaryData=""
+        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('YYYY-MM-DD'), moment(jq('#summaryToDate-field').val()).format('YYYY-MM-DD'));
         list.departmentSummaries(summaryData);
+        console.log(list.departmentSummaries);
 
     }
 
     jq('#summaryFromDate').on('change',function(){
+        console.log("update table fromdate");
         updateTable();
     });
 
     jq('#summaryToDate').on('change',function(){
+        console.log("update table toDate");
         updateTable();
     });
 
@@ -74,6 +78,7 @@
                 toReturn = data;
             }
         });
+        console.log("Return data",fromDate,toDate,"value###"+toReturn)
         return toReturn;
     }
 </script>
