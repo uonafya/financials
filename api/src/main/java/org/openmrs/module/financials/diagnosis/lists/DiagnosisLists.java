@@ -4588,7 +4588,6 @@ public class DiagnosisLists {
 		    getConcept(HivDiagnosisConstants.HIV_30).getConceptId(),
 		    getConcept(HivDiagnosisConstants.HIV_31).getConceptId(),
 		    getConcept(HivDiagnosisConstants.HIV_32).getConceptId(),
-			
 		    getConcept(HivDiagnosisConstants.HIV_33).getConceptId(),
 		    getConcept(HivDiagnosisConstants.HIV_34).getConceptId(),
 		    getConcept(HivDiagnosisConstants.HIV_35).getConceptId(),
