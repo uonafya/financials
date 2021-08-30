@@ -4559,6 +4559,7 @@ public class DiagnosisLists {
 	
 	public static List<Integer> getNewlyDiagnosedHivList() {
 		return Arrays.asList(
+<<<<<<< HEAD
 			
 			getConcept(EhrAddonsConstants._EhrAddOnConcepts.HIV_0).getConceptId(),
 getConcept(EhrAddonsConstants._EhrAddOnConcepts.HIV_1).getConceptId(),
@@ -4618,6 +4619,60 @@ getConcept(EhrAddonsConstants._EhrAddOnConcepts.HIV_54).getConceptId(),
 getConcept(EhrAddonsConstants._EhrAddOnConcepts.HIV_55).getConceptId(),
 getConcept(EhrAddonsConstants._EhrAddOnConcepts.HIV_56).getConceptId()
 
+=======
+		
+		getConcept(HivDiagnosisConstants.HIV_0).getConceptId(), getConcept(HivDiagnosisConstants.HIV_1).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_2).getConceptId(), getConcept(HivDiagnosisConstants.HIV_3).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_4).getConceptId(), getConcept(HivDiagnosisConstants.HIV_5).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_6).getConceptId(), getConcept(HivDiagnosisConstants.HIV_7).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_8).getConceptId(), getConcept(HivDiagnosisConstants.HIV_9).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_10).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_11).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_12).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_13).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_14).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_15).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_16).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_17).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_18).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_19).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_20).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_21).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_22).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_23).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_24).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_25).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_26).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_27).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_28).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_29).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_30).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_31).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_32).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_33).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_34).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_35).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_36).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_37).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_38).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_39).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_40).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_41).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_42).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_43).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_44).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_45).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_46).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_47).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_48).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_49).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_50).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_51).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_52).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_53).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_54).getConceptId(),
+		    getConcept(HivDiagnosisConstants.HIV_55).getConceptId(), getConcept(HivDiagnosisConstants.HIV_56).getConceptId()
+>>>>>>> 4f7c56982a49e3dd1cb46bd81c015710d4a4e703
 		
 		);
 	}
@@ -6225,17 +6280,9 @@ getConcept(EhrAddonsConstants._EhrAddOnConcepts.HIV_56).getConceptId()
 	}
 	
 	public static List<Integer> getViralHaemorrhagicFeverList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
-		
+		return Arrays.asList(
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.HAEMORRHAGICFEVER_1).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.HAEMORRHAGICFEVER_2).getConceptId()
 		);
 	}
 	
