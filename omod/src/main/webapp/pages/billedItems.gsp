@@ -65,6 +65,8 @@ table#summary.dataTable tbody tr:hover {
                             <th>Actual Amount</th>
                             <th>Waiver Amount</th>
                             <th>Receipt Number</th>
+                            <th>Receipt Number</th>
+                            <th>Receipt Number</th>
                         </tr>
                         </thead>
                         <tbody>
