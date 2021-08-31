@@ -6479,16 +6479,36 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getOtherConvulsiveDisordersList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE8).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE10).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE11).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE12).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE13).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE14).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE15).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE16).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE17).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE18).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE19).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE20).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE21).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE22).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE23).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE24).getConceptId(),
+			getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE25).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE26).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE27).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CONVULSIVE28).getConceptId()
+		   
 		
 		);
 	}
