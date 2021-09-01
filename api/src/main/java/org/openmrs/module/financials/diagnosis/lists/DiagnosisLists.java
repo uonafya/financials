@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.diagnosis.lists;
 
+import org.openmrs.module.financials.ConvulsiveDiagnosisConstants;
 import org.openmrs.module.financials.DiabetesDiagnosisConstants;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.HivDiagnosisConstants;
@@ -6479,16 +6480,35 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getOtherConvulsiveDisordersList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE1).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE2).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE3).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE4).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE5).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE6).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE7).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE8).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE9).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE10).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE11).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE12).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE13).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE14).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE15).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE16).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE17).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE18).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE19).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE20).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE21).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE22).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE23).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE24).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE25).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE26).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE27).getConceptId(),
+				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE28).getConceptId()
 		
 		);
 	}
