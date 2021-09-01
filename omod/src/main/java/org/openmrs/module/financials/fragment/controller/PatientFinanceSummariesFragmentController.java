@@ -18,6 +18,7 @@ import java.util.List;
 public class PatientFinanceSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
+		String STUDENT_ID = "88546440-0271-11eb-b43f-c392cfe8f5df";
 		
 		List<PatientServiceBill> allBils = Context.getService(BillingService.class).getAllPatientServiceBill();
 		PersonService personService = Context.getPersonService();
@@ -31,8 +32,7 @@ public class PatientFinanceSummariesFragmentController {
 		
 		for (PatientServiceBill patientServiceBill : allBils) {
 			if (patientServiceBill.getPatient().getPatientIdentifier() != null) {
-				PatientBillSummary patientBillSummary;
-				patientBillSummary = new PatientBillSummary();
+				PatientBillSummary patientBillSummary = new PatientBillSummary();
 				patientBillSummary.setBillId(patientServiceBill.getPatientServiceBillId());
 				patientBillSummary.setPatient(patientServiceBill.getPatient().getPersonName().getFullName());
 				if (patientServiceBill.getPatient().getAttribute(paymentCategory) != null) {
@@ -53,6 +53,15 @@ public class PatientFinanceSummariesFragmentController {
 				patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
 				patientBillSummary.setIdentifier(patientServiceBill.getPatient().getPatientIdentifier().getIdentifier());
 				patientBillSummary.setPatientId(patientServiceBill.getPatient().getPatientId());
+				
+				PersonAttributeType studentIdAttributeType = Context.getPersonService().getPersonAttributeTypeByUuid(
+				    STUDENT_ID);
+				if ((patientServiceBill.getPatient().getAttribute(studentIdAttributeType) != null)) {
+					patientBillSummary.setStudentAttributeName(patientServiceBill.getPatient()
+					        .getAttribute(studentIdAttributeType).getValue());
+				} else {
+					patientBillSummary.setStudentAttributeName("");
+				}
 				//add this build object to the list
 				allBills.add(patientBillSummary);
 			}
@@ -73,5 +82,9 @@ public class PatientFinanceSummariesFragmentController {
 		    "amount", "actualAmount", "quantity", "name", "createdDate");
 		
 		return SimpleObject.create("items", items);
+	}
+	
+	public void updateModelBillAttributes(List<PatientServiceBill> allBils) {
+		
 	}
 }
