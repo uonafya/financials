@@ -9,7 +9,6 @@
     ui.includeJavascript("financials", "buttons.html5.js")
     ui.includeJavascript("financials", "buttons.print.min.js")
     ui.includeCss("financials", "buttons.dataTables.min.css")
-    ui.includeJavascript("financials", "logo.js")
 %>
 <script type="text/javascript">
     jQuery(function() {
@@ -24,13 +23,13 @@
                     customize: function ( win ) {
                         jq(win.document.body)
                             .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
-                    }
-                },
-                {
-                    extend: 'pdfHtml5',
-                    customize: function ( doc ) {
-                        jq(doc.content.body).prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
-                    }
+                    },
+                    repeatingHead: {
+                        logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                        logoPosition: 'center',
+                        logoStyle: ''
+                    },
+                    title: ''
                 }
             ],
             initComplete: function (){
