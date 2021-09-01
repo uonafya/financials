@@ -28,6 +28,13 @@ public class Moh705IndicatorDefinitions {
 		        "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	
+	public CohortIndicator getAllChildrenPatientsWithOtherDiagnosis(List<Integer> list) {
+		return cohortIndicator(
+		    "Other Diagnosis",
+		    map(moh705CohortDefinition.getPatientsWhoHaveOtherDiagnosis705AWithAge(list),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
 	public CohortIndicator getAllChildrenPatientsWithDiagnosisForMalaria(List<Integer> list, List<Integer> ans) {
 		return cohortIndicator("Diagnosis for malaria for 705 A",
 		    map(moh705CohortDefinition.getMalariaDiagnosis705A(list, ans), "startDate=${startDate},endDate=${endDate+1d}"));
@@ -38,6 +45,13 @@ public class Moh705IndicatorDefinitions {
 		return cohortIndicator(
 		    "Diagnosis",
 		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705BWithAge(list),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getAllAdultPatientsWithOtherDiagnosis(List<Integer> list) {
+		return cohortIndicator(
+		    "Other Diagnosis",
+		    map(moh705CohortDefinition.getPatientsWhoHaveOtherDiagnosis705BWithAge(list),
 		        "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	

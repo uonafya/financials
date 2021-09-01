@@ -305,7 +305,7 @@ public class Moh705aDatasetDefinition {
 		        .getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "AODC", "All other diseases", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAllOtherDiseasesList()), indParam),
+		    moh705aIndicator.getAllChildrenPatientsWithOtherDiagnosis(DiagnosisLists.getAllOtherDiseasesList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "NFAC", "No of first attendances",

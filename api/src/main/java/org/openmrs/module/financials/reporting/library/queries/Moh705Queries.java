@@ -22,6 +22,20 @@ public class Moh705Queries {
 		return String.format(query, provisional, finalDiagnosis, problemAdded, list);
 	}
 	
+	public static String getPatientsWhoMatchOtherDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis,
+	        int problemAdded, List<Integer> listOptions) {
+		String str1 = String.valueOf(listOptions).replaceAll("\\[", "");
+		String list = str1.replaceAll("]", "");
+		String query = "SELECT pat.patient_id FROM patient pat "
+		        + " INNER JOIN encounter e ON pat.patient_id=e.patient_id "
+		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id "
+		        + " WHERE "
+		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " AND ob.concept_id IN(%d, %d, %d) " + " AND ob.value_coded IS NOT NULL "
+		        + " AND ob.value_coded NOT IN(%s)";
+		return String.format(query, provisional, finalDiagnosis, problemAdded, list);
+	}
+	
 	/**
 	 * put you first indicator query here MOH 705a
 	 * 

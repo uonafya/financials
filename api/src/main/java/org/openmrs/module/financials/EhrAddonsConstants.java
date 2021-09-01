@@ -8704,6 +8704,15 @@ public class EhrAddonsConstants {
 		
 		public static final String PLAGUE17 = "158376AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		//STI
+		public static final String STI1 = "112992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String STI2 = "156660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String STI3 = "160202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String STI4 = "163771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 	}
 	
 	/**

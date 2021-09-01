@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.diagnosis.lists;
 
+import org.openmrs.module.financials.AutismDiagnosisConstants;
 import org.openmrs.module.financials.ConvulsiveDiagnosisConstants;
 import org.openmrs.module.financials.DiabetesDiagnosisConstants;
 import org.openmrs.module.financials.EhrAddonsConstants;
@@ -10,6 +11,7 @@ import org.openmrs.module.financials.OncologyDiagnosisConstants;
 import org.openmrs.module.financials.OtherBitesDiagnosisConstants;
 import org.openmrs.module.financials.RicketsDiagnosisConstants;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -6375,33 +6377,121 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getDaracuncolosisGuineaWormList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+		return Arrays.asList(getConcept("137458AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId());
+	}
+	
+	public static List<Integer> getSexuallyTransmittedInfectionsList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI4).getConceptId());
+	}
+	
+	public static List<Integer> getAutismList() {
+		return Arrays.asList(getConcept(AutismDiagnosisConstants.AUTISM_1).getConceptId(),
+		    getConcept(AutismDiagnosisConstants.AUTISM_2).getConceptId(), getConcept(AutismDiagnosisConstants.AUTISM_3)
+		            .getConceptId(), getConcept(AutismDiagnosisConstants.AUTISM_4).getConceptId(),
+		    getConcept(AutismDiagnosisConstants.AUTISM_5).getConceptId(), getConcept(AutismDiagnosisConstants.AUTISM_6)
+		            .getConceptId());
+	}
+	
+	public static List<Integer> getOtherConvulsiveDisordersList() {
+		return Arrays.asList(getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE1).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE2).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE3).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE4).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE5).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE6).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE7).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE8).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE9).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE10).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE11).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE12).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE13).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE14).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE15).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE16).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE17).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE18).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE19).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE20).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE21).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE22).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE23).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE24).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE25).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE26).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE27).getConceptId(),
+		    getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE28).getConceptId()
 		
 		);
 	}
 	
-	public static List<Integer> getAllOtherDiseasesList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
+	public static List<Integer> getJiggersInfestationList() {
+		return Arrays.asList(getConcept("123964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId());
 		
-		);
+	}
+	
+	public static List<Integer> getAllOtherDiseasesList() {
+		List<Integer> allListedDiagnosis = new ArrayList<Integer>();
+		
+		allListedDiagnosis.addAll(getDiarrheaDiagnosisList());
+		allListedDiagnosis.addAll(getTuberculosisDiagnosisList());
+		allListedDiagnosis.addAll(getDysenteryList());
+		allListedDiagnosis.addAll(getMeningococcalMeningitisList());
+		allListedDiagnosis.addAll(getOtherMenigitisList());
+		allListedDiagnosis.addAll(getPoliomyelitisList());
+		allListedDiagnosis.addAll(getCholeraList());
+		allListedDiagnosis.addAll(getNeonatalTetanusList());
+		allListedDiagnosis.addAll(getChickenPoxList());
+		allListedDiagnosis.addAll(getMeaslesList());
+		allListedDiagnosis.addAll(getHepatitisList());
+		allListedDiagnosis.addAll(getMumpsList());
+		allListedDiagnosis.addAll(getFeversList());
+		allListedDiagnosis.addAll(getMalariaList());
+		allListedDiagnosis.addAll(getUrinaryTractInfectionList());
+		allListedDiagnosis.addAll(getTyphoidList());
+		allListedDiagnosis.addAll(getBilharziaList());
+		allListedDiagnosis.addAll(getInterstinalwormsList());
+		allListedDiagnosis.addAll(getMalnutritionList());
+		allListedDiagnosis.addAll(getAnaemiaList());
+		allListedDiagnosis.addAll(getEyeInfectionsList());
+		allListedDiagnosis.addAll(getOtherEyeConditionsList());
+		allListedDiagnosis.addAll(getEarInfectionsConditionsList());
+		allListedDiagnosis.addAll(getUpperRespiratoryTractInfectionsList());
+		allListedDiagnosis.addAll(getAsthmaList());
+		allListedDiagnosis.addAll(getTonsilitiesList());
+		allListedDiagnosis.addAll(getChromosomalAbnormalitiesList());
+		allListedDiagnosis.addAll(getCongenitalAnomaliesList());
+		allListedDiagnosis.addAll(getPneumoniaList());
+		allListedDiagnosis.addAll(getOtherDisOfRespiratorySystemList());
+		allListedDiagnosis.addAll(getAbortionList());
+		allListedDiagnosis.addAll(getDisOfPuerperiumChildbathList());
+		allListedDiagnosis.addAll(getHypertensionList());
+		allListedDiagnosis.addAll(getMentalDisordersList());
+		allListedDiagnosis.addAll(getDentalDisordersList());
+		allListedDiagnosis.addAll(getDiseaseOfTheSkinList());
+		allListedDiagnosis.addAll(getAnthritisJointPainsList());
+		allListedDiagnosis.addAll(getPoisoningList());
+		allListedDiagnosis.addAll(getOtherInjuriesList());
+		allListedDiagnosis.addAll(getSexualAssaultList());
+		allListedDiagnosis.addAll(getViolenceRelatedInjuriesList());
+		allListedDiagnosis.addAll(getBurnsList());
+		allListedDiagnosis.addAll(getSnakeBitesList());
+		allListedDiagnosis.addAll(getDogBitesList());
+		allListedDiagnosis.addAll(getDiabetesList());
+		allListedDiagnosis.addAll(getOtherBitesList());
+		allListedDiagnosis.addAll(getEpilepsyList());
+		allListedDiagnosis.addAll(getNewlyDiagnosedHivList());
+		allListedDiagnosis.addAll(getBrucellosisList());
+		allListedDiagnosis.addAll(getCardiovascularConditionsList());
+		allListedDiagnosis.addAll(getOvrerweightList());
+		allListedDiagnosis.addAll(getMuscularSkeletalConditionsList());
+		allListedDiagnosis.addAll(getFistulaBirthRelatedList());
+		allListedDiagnosis.addAll(getNeoplamsList());
+		
+		return allListedDiagnosis;
 	}
 	
 	public static List<Integer> getReferralsFromOtherHealthFacilityList() {
@@ -6449,70 +6539,6 @@ public class DiagnosisLists {
 		);
 	}
 	
-	public static List<Integer> getSexuallyTransmittedInfectionsList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
-		
-		);
-	}
-	
-	public static List<Integer> getAutismList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
-		
-		);
-	}
-	
-	public static List<Integer> getOtherConvulsiveDisordersList() {
-		return Arrays.asList(
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE1).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE2).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE3).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE4).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE5).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE6).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE7).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE8).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE9).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE10).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE11).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE12).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE13).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE14).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE15).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE16).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE17).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE18).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE19).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE20).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE21).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE22).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE23).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE24).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE25).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE26).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE27).getConceptId(),
-				getConcept(ConvulsiveDiagnosisConstants.CONVULSIVE28).getConceptId()
-		
-		);
-	}
-	
 	public static List<Integer> getDeathsDuetoRoadTraficInjuriesList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
 		        .getConceptId(),
@@ -6526,21 +6552,5 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
 		
 		);
-	}
-	
-	public static List<Integer> getJiggersInfestationList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED)
-		        .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EXTRAPULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MULTI_DRUG_RESISTANT_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PULMONARY_TUBERCULOSIS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_OF_OTHER_ORGANS).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS_IN_PREGNANCY).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.TUBERCULOSIS).getConceptId()
-		
-		);
-		
 	}
 }

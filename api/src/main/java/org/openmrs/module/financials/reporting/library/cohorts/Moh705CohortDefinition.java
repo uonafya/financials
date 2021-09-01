@@ -46,6 +46,18 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
+	private CohortDefinition getPatientsWhoHaveOtherDiagnosis705A(List<Integer> list) {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("Get children patients who have other diagnosis based on list of concepts");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setQuery(Moh705Queries.getPatientsWhoMatchOtherDiagnosisBasedOnConcepts(
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROBLEM_ADDED).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS).getConceptId(), list));
+		return cd;
+	}
+	
 	public CohortDefinition getPatientsWhoHaveDiagnosis705AWithAge(List<Integer> list) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get children with diagnosis");
@@ -58,6 +70,18 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
+	public CohortDefinition getPatientsWhoHaveOtherDiagnosis705AWithAge(List<Integer> list) {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Get children with diagnosis");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("MOH705A",
+		    ReportUtils.map(getPatientsWhoHaveOtherDiagnosis705A(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
+		cd.setCompositionString("MOH705A AND CHILD");
+		return cd;
+	}
+	
 	public CohortDefinition getPatientsWhoHaveDiagnosis705BWithAge(List<Integer> list) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get children with diagnosis");
@@ -65,6 +89,18 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705B",
 		    ReportUtils.map(getPatientsWhoHaveDiagnosis705A(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
+		cd.setCompositionString("MOH705B AND ADULT");
+		return cd;
+	}
+	
+	public CohortDefinition getPatientsWhoHaveOtherDiagnosis705BWithAge(List<Integer> list) {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Get children with diagnosis");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("MOH705B",
+		    ReportUtils.map(getPatientsWhoHaveOtherDiagnosis705A(list), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("MOH705B AND ADULT");
 		return cd;
