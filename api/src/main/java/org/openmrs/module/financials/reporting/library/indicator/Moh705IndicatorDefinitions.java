@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reporting.library.indicator;
 
+import org.openmrs.Concept;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh705CohortDefinition;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,4 +81,17 @@ public class Moh705IndicatorDefinitions {
 		    map(moh705CohortDefinition.getRevisitAdultsrenPatients(), "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	
+	public CohortIndicator getAllChildrenPatientsReferrals(int question, int ans) {
+		return cohortIndicator(
+		    "Get children patients with referral",
+		    map(moh705CohortDefinition.getAllChildrenPatientsReferrals(question, ans),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getAllAdultPatientsWithReferrals(int question, int ans) {
+		return cohortIndicator(
+		    "Get adults patients with referral",
+		    map(moh705CohortDefinition.getAllAdultsPatientsReferrals(question, ans),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
 }

@@ -15,6 +15,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
+import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
+
 @Component
 public class Moh705aDatasetDefinition {
 	
@@ -296,9 +298,14 @@ public class Moh705aDatasetDefinition {
 		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getPlagueList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "DRTC", "Deaths due to Road Trafic injuries", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDeathsDuetoRoadTraficInjuriesList()),
-		    indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DRTC",
+		    "Deaths due to Road Trafic injuries",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsReferrals(
+		        getConcept("1599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId(),
+		        getConcept("1603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "OVC", "Overweight", ReportUtils.map(
 		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getOvrerweightList()), indParam), EhrAddonUtils
@@ -315,18 +322,32 @@ public class Moh705aDatasetDefinition {
 		    ReportUtils.map(moh705aIndicator.getRevisitsChildrenPatients(), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RFHC", "Referrals from other health facility", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getReferralsFromOtherHealthFacilityList()),
-		    indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "RFHC",
+		    "Referrals from other health facility",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsReferrals(
+		        getConcept("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId(),
+		        getConcept("1537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RFCC", "Referrals from Community Unit", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getReferralsFromOtherCommunityUnitList()),
-		    indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "RFCC",
+		    "Referrals from Community Unit",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsReferrals(
+		        getConcept("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId(),
+		        getConcept("4fcf003e-71cf-47a5-a967-47d24aa61092").getConceptId()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RTC", "Referrals to Community Unit",
-		    ReportUtils.map(
-		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getReferralsToCommunityUnitList()),
-		        indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "RTC",
+		    "Referrals to Community Unit",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsReferrals(
+		        getConcept("477a7484-0f99-4026-b37c-261be587a70b").getConceptId(),
+		        getConcept("4fcf003e-71cf-47a5-a967-47d24aa61092").getConceptId()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		return dsd;
 		
 	}

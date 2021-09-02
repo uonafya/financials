@@ -190,4 +190,35 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
+	public CohortDefinition getAllChildrenPatientsReferrals(int qn, int ans) {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Children with referrals to this facility");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("REF", ReportUtils.map(getReferrals(qn, ans), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
+		cd.setCompositionString("REF AND CHILD");
+		return cd;
+	}
+	
+	public CohortDefinition getAllAdultsPatientsReferrals(int qn, int ans) {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Adults with referrals to this facility");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("REF", ReportUtils.map(getReferrals(qn, ans), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
+		cd.setCompositionString("REF AND ADULT");
+		return cd;
+	}
+	
+	private CohortDefinition getReferrals(int qn, int ans) {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("Get referrals for patients");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setQuery(Moh705Queries.getPatientsWhoAreReferred(qn, ans));
+		return cd;
+	}
+	
 }
