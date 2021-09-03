@@ -47,7 +47,7 @@ public class Moh717CohortDefinition {
 	 */
 	public CohortDefinition getNewPatients() {
 		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get new patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -70,7 +70,7 @@ public class Moh717CohortDefinition {
 	 */
 	public CohortDefinition getRevisitPatients() {
 		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get revisit patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -112,7 +112,7 @@ public class Moh717CohortDefinition {
 	 */
 	public CohortDefinition getNewSpecialClinicPatients() {
 		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get new patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -134,7 +134,7 @@ public class Moh717CohortDefinition {
 	 */
 	public CohortDefinition getRevistSpecialClinicPatients() {
 		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get revisit patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
