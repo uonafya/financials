@@ -10,7 +10,7 @@ public class Moh705Queries {
 	 * @return String of children
 	 */
 	public static String getPatientsWhoMatchDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis, int problemAdded,
-	        List<Integer> listOptions) {
+	        int medicalCase, List<Integer> listOptions) {
 		String str1 = String.valueOf(listOptions).replaceAll("\\[", "");
 		String list = str1.replaceAll("]", "");
 		String query = "SELECT pat.patient_id FROM patient pat "
@@ -19,11 +19,11 @@ public class Moh705Queries {
 		        + " WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
 		        + " AND ob.concept_id IN(%d, %d, %d) " + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded IN(%s)";
-		return String.format(query, provisional, finalDiagnosis, problemAdded, list);
+		return String.format(query, provisional, finalDiagnosis, problemAdded, medicalCase, list);
 	}
 	
 	public static String getPatientsWhoMatchOtherDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis,
-	        int problemAdded, List<Integer> listOptions) {
+	        int problemAdded, int medicalCase, List<Integer> listOptions) {
 		String str1 = String.valueOf(listOptions).replaceAll("\\[", "");
 		String list = str1.replaceAll("]", "");
 		String query = "SELECT pat.patient_id FROM patient pat "
@@ -33,7 +33,7 @@ public class Moh705Queries {
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
 		        + " AND ob.concept_id IN(%d, %d, %d) " + " AND ob.value_coded IS NOT NULL "
 		        + " AND ob.value_coded NOT IN(%s)";
-		return String.format(query, provisional, finalDiagnosis, problemAdded, list);
+		return String.format(query, provisional, finalDiagnosis, problemAdded, medicalCase, list);
 	}
 	
 	public static String getPatientsWhoAreReferred(int question, int ans) {
