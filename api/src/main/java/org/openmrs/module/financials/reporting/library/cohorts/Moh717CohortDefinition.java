@@ -46,18 +46,21 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getNewPatients() {
-		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
 		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get new patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatients(patientQueueEncounter.getEncounterTypeId()),
+		cd.addSearch("ALL", ReportUtils.map(getAllPatients(registrationInitial.getEncounterTypeId()),
 		    "startDate=${startDate},endDate=${endDate+1d}"));
 		cd.addSearch(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
-		        patientQueueEncounter.getEncounterTypeId()), "startDate=${startDate},endDate=${endDate+1d}"));
+		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
 		cd.setCompositionString("ALL AND NEW");
 		return cd;
 		
@@ -69,18 +72,20 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getRevisitPatients() {
-		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
 		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get revisit patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatients(patientQueueEncounter.getEncounterTypeId()),
+		cd.addSearch("ALL", ReportUtils.map(getAllPatients(registrationInitial.getEncounterTypeId()),
 		    "startDate=${startDate},endDate=${endDate+1d}"));
 		cd.addSearch(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
-		            .getConceptId(), patientQueueEncounter.getEncounterTypeId()),
+		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
 		        "startDate=${startDate},endDate=${endDate+1d}"));
 		cd.setCompositionString("ALL AND RVT");
 		return cd;
@@ -111,8 +116,10 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getNewSpecialClinicPatients() {
-		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
 		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get new patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -121,7 +128,8 @@ public class Moh717CohortDefinition {
 		cd.addSearch(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
-		        patientQueueEncounter.getEncounterTypeId()), "startDate=${startDate},endDate=${endDate+1d}"));
+		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
 		cd.setCompositionString("SPC AND NEW");
 		return cd;
 	}
@@ -133,7 +141,9 @@ public class Moh717CohortDefinition {
 	 * @return @{@link CohortDefinition}
 	 */
 	public CohortDefinition getRevistSpecialClinicPatients() {
-		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
 		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get revisit patients on special clinics");
@@ -143,7 +153,7 @@ public class Moh717CohortDefinition {
 		cd.addSearch(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
-		            .getConceptId(), patientQueueEncounter.getEncounterTypeId()),
+		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
 		        "startDate=${startDate},endDate=${endDate+1d}"));
 		cd.setCompositionString("SPC AND RVT");
 		return cd;

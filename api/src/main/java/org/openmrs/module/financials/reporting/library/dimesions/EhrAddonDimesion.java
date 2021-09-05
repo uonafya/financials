@@ -194,8 +194,10 @@ public class EhrAddonDimesion {
 	}
 	
 	public CohortDefinitionDimension newOrRevisits() {
-		EncounterType patientQueueEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-		    "356d447a-b494-11ea-8337-f7bcaf3e8fec");
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CohortDefinitionDimension dim = new CohortDefinitionDimension();
 		dim.setName("New or revists patients");
 		dim.addParameter(new Parameter("startDate", "After date", Date.class));
@@ -203,12 +205,13 @@ public class EhrAddonDimesion {
 		dim.addCohortDefinition(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
-		            .getConceptId(), patientQueueEncounter.getEncounterTypeId()),
+		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
 		        "startDate=${startDate},endDate=${endDate+1d}"));
 		dim.addCohortDefinition(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
-		        patientQueueEncounter.getEncounterTypeId()), "startDate=${startDate},endDate=${endDate+1d}"));
+		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
 		return dim;
 	}
 }

@@ -83,17 +83,41 @@ public class EhrAddonCommons {
 	 * 
 	 * @return @CohortDefinition
 	 */
-	public CohortDefinition getPatientStates(int answer, int encounter) {
+	public CohortDefinition getPatientStates(int answer, int enc1, int enc2) {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.setName("has obs between dates");
 		cd.addParameter(new Parameter("endDate", "Before Date", Date.class));
 		cd.addParameter(new Parameter("startDate", "After Date", Date.class));
-		String sql = "SELECT tbl.patient_id FROM(" + " SELECT p.patient_id, MAX(e.encounter_datetime) FROM patient p "
-		        + " INNER JOIN encounter e ON p.patient_id=e.patient_id "
-		        + " INNER JOIN obs o ON e.encounter_id=o.encounter_id " + " WHERE e.encounter_type=" + encounter
-		        + " AND e.voided= 0 AND p.voided = 0 AND o.voided=0 "
-		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND o.value_coded =" + answer
-		        + " GROUP BY p.patient_id) tbl";
+		String sql = " SELECT patient_id FROM( " + " SELECT max_enc.patient_id, max_enc.encounter_date FROM ( "
+		        + " SELECT p.patient_id AS patient_id, MAX(e.encounter_datetime) AS encounter_date FROM patient p "
+		        + " INNER JOIN encounter e " + " ON p.patient_id=e.patient_id " + " WHERE " + " p.voided=0 "
+		        + " AND e.voided=0" + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " AND e.encounter_type IN("
+		        + enc1
+		        + ","
+		        + enc2
+		        + ")"
+		        + " GROUP BY p.patient_id) max_enc "
+		        
+		        + " INNER JOIN "
+		        + " ( "
+		        + " SELECT pp.patient_id AS patient_id, ee.encounter_datetime AS encounter_date FROM patient pp "
+		        + "  INNER JOIN encounter ee ON pp.patient_id=ee.patient_id "
+		        + " INNER JOIN obs o ON ee.encounter_id=o.encounter_id "
+		        + " WHERE ee.encounter_type IN ("
+		        + enc1
+		        + ","
+		        + enc2
+		        + ")"
+		        + " AND ee.voided= 0  "
+		        + " AND pp.voided = 0 "
+		        + " AND o.voided=0 "
+		        + " AND ee.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " AND o.value_coded ="
+		        + answer
+		        + " )max_obs ON max_enc.patient_id=max_obs.patient_id "
+		        
+		        + " WHERE max_enc.encounter_date = max_obs.encounter_date) out_table ";
 		cd.setQuery(sql);
 		return cd;
 	}

@@ -18,7 +18,8 @@ public class Moh705Queries {
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id "
 		        + " WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
-		        + " AND ob.concept_id IN(%d, %d, %d) " + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded IN(%s)";
+		        + " AND ob.concept_id IN(%d, %d, %d, %d) " + " AND ob.value_coded IS NOT NULL "
+		        + " AND ob.value_coded IN(%s)";
 		return String.format(query, provisional, finalDiagnosis, problemAdded, medicalCase, list);
 	}
 	
@@ -31,7 +32,7 @@ public class Moh705Queries {
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id "
 		        + " WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
-		        + " AND ob.concept_id IN(%d, %d, %d) " + " AND ob.value_coded IS NOT NULL "
+		        + " AND ob.concept_id IN(%d, %d, %d, %d) " + " AND ob.value_coded IS NOT NULL "
 		        + " AND ob.value_coded NOT IN(%s)";
 		return String.format(query, provisional, finalDiagnosis, problemAdded, medicalCase, list);
 	}
@@ -94,7 +95,7 @@ public class Moh705Queries {
 		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id "
 		        + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
-		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250)"
+		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250, 1000483)"
 		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 " + "GROUP BY cn.name";
 		
 		return String.format(sql, classId);
@@ -148,7 +149,7 @@ public class Moh705Queries {
 		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id "
 		        + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
-		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250)"
+		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250, 1000483)"
 		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 " + "GROUP BY cn.name";
 		
 		return String.format(sql, classId);
