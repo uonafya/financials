@@ -5,6 +5,7 @@ import org.openmrs.EncounterType;
 import org.openmrs.api.PatientSetService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
 import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
 import org.openmrs.module.financials.reporting.library.queries.Moh717Queries;
 import org.openmrs.module.kenyacore.report.ReportUtils;
@@ -28,6 +29,9 @@ public class Moh717CohortDefinition {
 	
 	@Autowired
 	private EhrAddonCommons commonLibrary;
+	
+	@Autowired
+	private Moh705CohortDefinition moh705CohortDefinition;
 	
 	public CohortDefinition getAllPatients(int initialQueue) {
 		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
@@ -224,5 +228,29 @@ public class Moh717CohortDefinition {
 		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.ONCOLOGY_CLINIC).getConceptId(),
 		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.RENAL_CLINIC).getConceptId()));
 		return sqlCohortDefinition;
+	}
+	
+	public CohortDefinition getDentalSpecialClinic(int c1, int c2) {
+		CompositionCohortDefinition compositionCohortDefinition = new CompositionCohortDefinition();
+		compositionCohortDefinition.setName("Include dental diagnosis");
+		compositionCohortDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		compositionCohortDefinition.addParameter(new Parameter("endDate", "End Date", Date.class));
+		
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("Special clinic - Dental");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setQuery("SELECT p.patient_id FROM patient p " + " INNER JOIN encounter e ON p.patient_id=e.patient_id"
+		        + " INNER JOIN obs o ON e.encounter_id=o.encounter_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " AND p.voided=0 AND e.voided=0 AND o.voided=0 " + " AND o.value_coded IN(" + c1 + "," + c2 + ")");
+		
+		compositionCohortDefinition.addSearch("SPD", map(cd, "startDate=${startDate},endDate=${endDate+1d}"));
+		compositionCohortDefinition.addSearch(
+		    "DIAGNOSIS",
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705(DiagnosisLists.getDentalDisordersList()),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+		compositionCohortDefinition.setCompositionString("SPD OR DIAGNOSIS");
+		return compositionCohortDefinition;
 	}
 }

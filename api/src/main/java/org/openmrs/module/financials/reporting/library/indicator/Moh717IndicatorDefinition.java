@@ -2,6 +2,7 @@ package org.openmrs.module.financials.reporting.library.indicator;
 
 import org.openmrs.module.financials.reporting.library.cohorts.Moh717CohortDefinition;
 import org.openmrs.module.kenyacore.report.ReportUtils;
+import org.openmrs.module.reporting.evaluation.parameter.Parameterizable;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -52,4 +53,8 @@ public class Moh717IndicatorDefinition {
 		    ReportUtils.map(moh717CohortDefinition.getMopSpecialClinic(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
 	}
 	
+	public CohortIndicator getDentalVisits(int c1, int c2) {
+		return cohortIndicator("Special clinic Dental", ReportUtils.map(
+		    moh717CohortDefinition.getDentalSpecialClinic(c1, c2), "startDate=${startDate},endDate=${endDate+1d}"));
+	}
 }

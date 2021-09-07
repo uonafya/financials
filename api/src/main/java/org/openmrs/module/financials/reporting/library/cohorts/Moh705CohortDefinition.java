@@ -32,7 +32,7 @@ public class Moh705CohortDefinition {
 	 * 
 	 * @return @{@link org.openmrs.module.reporting.cohort.definition.CohortDefinition}
 	 */
-	private CohortDefinition getPatientsWhoHaveDiagnosis705(List<Integer> list) {
+	public CohortDefinition getPatientsWhoHaveDiagnosis705(List<Integer> list) {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.setName("Get children and adult patients who have diagnosis based on list of concepts");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));

@@ -17,6 +17,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 @Component
@@ -69,6 +70,22 @@ public class Moh717DatasetDefinition {
 		
 		dsd.addColumn("MOPCRVT", "All MOPC - REVISIT",
 		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicMopc(), indParams), "state=RVT");
+		
+		dsd.addColumn(
+		    "DENTALNEW",
+		    "Attendances (Excluding fillings and extractions) - NEW",
+		    ReportUtils.map(moh717IndicatorDefinition.getDentalVisits(
+		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_OPD).getConceptId(),
+		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_SPECIAL_CLINIC).getConceptId()), indParams),
+		    "state=NEW");
+		
+		dsd.addColumn(
+		    "DENTALRVT",
+		    "Attendances (Excluding fillings and extractions) - REVISIT",
+		    ReportUtils.map(moh717IndicatorDefinition.getDentalVisits(
+		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_OPD).getConceptId(),
+		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_SPECIAL_CLINIC).getConceptId()), indParams),
+		    "state=RVT");
 		
 		return dsd;
 	}

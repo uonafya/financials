@@ -8715,6 +8715,10 @@ public class EhrAddonsConstants {
 		
 		public static final String MOPC_TRAIGE = "98f596cc-5ad1-4c58-91e8-d1ea0329c89d";
 		
+		public static final String DENTAL_OPD = "548bf465-fdfb-43f1-836e-76d0416789bf";
+		
+		public static final String DENTAL_SPECIAL_CLINIC = "30aff715-92de-4662-aa33-fa6b6179fed0";
+		
 	}
 	
 	/**
