@@ -28,7 +28,7 @@
             console.log( table.row( this ).data() );
         } );
     });
-
+``
     var summaryData = fetchPharmacySummariesByDateRange();
 
     function SummariesDataListView() {
@@ -116,23 +116,32 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
         <table id="dDetails">
             <thead>
             <tr>
-                <td>#</td>
                 <td>Transaction date</td>
                 <td>Drug Name</td>
                 <td>Formulation</td>
                 <td>Issued Quantity</td>
                 <td>Total Price</td>
             </tr>
+
             </thead>
-            <tbody data-bind="foreach: departmentSummaries">
+            <tbody>
+            <% if (departmentSummaries.empty) { %>
             <tr>
-                <td data-bind="text: \$index() + 1"></td>
-                <td data-bind="text: (createdOn).substring(0, 11).replaceAt(2, ',').replaceAt(6, ' ').insertAt(3, 0, ' ') "></td>
-                <td data-bind="text: drug.name"></td>
-                <td data-bind="text: formulation.name"></td>
-                <td data-bind="text: issueQuantity"></td>
-                <td data-bind="text: totalPrice"></td>
+                <td colspan="3">
+                    No records found
+                </td>
             </tr>
+            <% } %>
+
+            <% departmentSummaries.each { %>
+            <tr>
+                <td>${it.createdOn}</td>
+                <td >${it.drugName}</td>
+                <td>${it.formulationName}</td>
+                <td>${it.issueQuantity}</td>
+                <td>${it.totalPrice}</td>
+            </tr>
+            <% } %>
             </tbody>
         </table>
 
