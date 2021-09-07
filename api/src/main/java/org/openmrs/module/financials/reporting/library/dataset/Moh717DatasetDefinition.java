@@ -58,10 +58,17 @@ public class Moh717DatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "SPCR", "SPECIAL CLINICS REVISIT PATIENTS",
 		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicRevisitPatients(), indParams),
 		    getSpecialClinicPatientFilters());
+		
 		dsd.addColumn("AOSCN", "All Other special Clinic - New",
 		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicOutOfRangePatients(), indParams), "state=NEW");
 		dsd.addColumn("AOSCR", "All Other special Clinic - Revisit",
 		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicOutOfRangePatients(), indParams), "state=RVT");
+		
+		dsd.addColumn("MOPCNEW", "All MOPC - NEW",
+		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicMopc(), indParams), "state=NEW");
+		
+		dsd.addColumn("MOPCRVT", "All MOPC - REVISIT",
+		    ReportUtils.map(moh717IndicatorDefinition.getSpecialClinicMopc(), indParams), "state=RVT");
 		
 		return dsd;
 	}
@@ -100,9 +107,6 @@ public class Moh717DatasetDefinition {
 		ColumnParameters physiotherapyClinic = new ColumnParameters("physiotherapyClinic", "Physiotherapy Clinic",
 		        "clinic=PHYS", "09");
 		
-		ColumnParameters medicalClinicsClinic = new ColumnParameters("medicalClinicsClinic", "Medical Clinics",
-		        "clinic=MOPC", "10");
-		
 		ColumnParameters surgicalClinic = new ColumnParameters("surgicalClinics", "Surgical Clinics", "clinic=SC", "11");
 		
 		ColumnParameters paediatricsClinic = new ColumnParameters("paediatricsClinic", "Paediatrics Clinic", "clinic=PAED",
@@ -118,7 +122,7 @@ public class Moh717DatasetDefinition {
 		ColumnParameters renalClinic = new ColumnParameters("renalClinic", "Renal clinic", "clinic=RENAL", "16");
 		
 		return Arrays.asList(entClinic, eyeClinic, tbClinic, stiClinic, cccClinic, psychiatryClinic, orthopaedicClinic,
-		    occupationalTherapyClinic, physiotherapyClinic, medicalClinicsClinic, surgicalClinic, paediatricsClinic,
-		    obstetricsGynaecologyClinic, nutritionClinic, oncologyClinic, renalClinic);
+		    occupationalTherapyClinic, physiotherapyClinic, surgicalClinic, paediatricsClinic, obstetricsGynaecologyClinic,
+		    nutritionClinic, oncologyClinic, renalClinic);
 	}
 }

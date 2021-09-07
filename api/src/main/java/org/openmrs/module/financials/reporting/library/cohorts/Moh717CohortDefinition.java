@@ -171,6 +171,35 @@ public class Moh717CohortDefinition {
 		return cd;
 	}
 	
+	private CohortDefinition getMopcFromTriageOrOpd() {
+		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
+		sqlCohortDefinition.setName("Special clinic from triage and opd");
+		sqlCohortDefinition.addParameter(new Parameter("onOrAfter", "Start Date", Date.class));
+		sqlCohortDefinition.addParameter(new Parameter("onOrBefore", "End Date", Date.class));
+		sqlCohortDefinition.setQuery(Moh717Queries.getMopcClinicQuery(getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC_TRAIGE).getConceptId()));
+		return sqlCohortDefinition;
+	}
+	
+	public CohortDefinition getMopSpecialClinic() {
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.addParameter(new Parameter("onOrAfter", "After date", Date.class));
+		cd.addParameter(new Parameter("onOrBefore", "Before date", Date.class));
+		cd.setName("MOPC clinic");
+		cd.addSearch(
+		    "CLINIC",
+		    map(getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC)),
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
+		cd.addSearch("TOPD", map(getMopcFromTriageOrOpd(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
+		
+		cd.setCompositionString("(CLINIC OR TOPD)");
+		return cd;
+	}
+	
 	public CohortDefinition getSpecialCLinicPatientsOutOfRange() {
 		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
 		sqlCohortDefinition.setName("Special clinic reports out of range");

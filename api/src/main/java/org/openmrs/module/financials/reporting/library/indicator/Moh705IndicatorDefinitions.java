@@ -31,7 +31,7 @@ public class Moh705IndicatorDefinitions {
 	
 	public CohortIndicator getAllChildrenPatientsWithOtherDiagnosis(List<Integer> list) {
 		return cohortIndicator(
-		    "Other Diagnosis",
+		    "Other Diagnosis for children",
 		    map(moh705CohortDefinition.getPatientsWhoHaveOtherDiagnosis705AWithAge(list),
 		        "startDate=${startDate},endDate=${endDate+1d}"));
 	}

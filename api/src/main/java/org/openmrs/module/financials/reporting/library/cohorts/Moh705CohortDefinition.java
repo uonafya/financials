@@ -72,7 +72,7 @@ public class Moh705CohortDefinition {
 	
 	public CohortDefinition getPatientsWhoHaveOtherDiagnosis705AWithAge(List<Integer> list) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
-		cd.setName("Get children with diagnosis");
+		cd.setName("Get children with other diagnosis");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705A",

@@ -8713,6 +8713,8 @@ public class EhrAddonsConstants {
 		
 		public static final String STI4 = "163771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		public static final String MOPC_TRAIGE = "98f596cc-5ad1-4c58-91e8-d1ea0329c89d";
+		
 	}
 	
 	/**

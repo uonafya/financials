@@ -162,10 +162,6 @@ public class EhrAddonDimesion {
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OG)),
 		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
 		dim.addCohortDefinition(
-		    "MOPC",
-		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
-		dim.addCohortDefinition(
 		    "NUC",
 		    map(moh717CohortDefinition
 		            .getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NUTRITION_PROGRAM)),

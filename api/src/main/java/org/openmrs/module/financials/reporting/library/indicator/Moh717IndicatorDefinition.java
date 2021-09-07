@@ -46,4 +46,10 @@ public class Moh717IndicatorDefinition {
 		    moh717CohortDefinition.getSpecialCLinicPatientsOutOfRange(), "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	
+	//Get all patients who have MOPC clinic visit
+	public CohortIndicator getSpecialClinicMopc() {
+		return cohortIndicator("Special clinic MOPC",
+		    ReportUtils.map(moh717CohortDefinition.getMopSpecialClinic(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
+	}
+	
 }
