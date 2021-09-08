@@ -20,6 +20,7 @@
                 'csv',
                 'excel',
                 {   extend: 'print',
+                    messageTop: 'Student A/C revenue transactions.',
                     customize: function ( win ) {
                         jq(win.document.body)
                             .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);

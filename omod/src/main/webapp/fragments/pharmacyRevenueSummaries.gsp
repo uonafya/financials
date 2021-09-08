@@ -16,7 +16,21 @@
     jQuery(function() {
         var table =  jQuery("#dDetails").DataTable({
             dom: 'Bfrtip',
-            buttons: ['copy', 'csv', 'excel', 'pdf', 'print'],
+            buttons: ['copy', 'csv', 'excel',
+                {   extend: 'print',
+                    messageTop: 'Pharmacy revenue transactions.',
+                    customize: function ( win ) {
+                        jq(win.document.body)
+                            .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                    },
+                    repeatingHead: {
+                        logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                        logoPosition: 'center',
+                        logoStyle: ''
+                    },
+                    title: ''
+                }
+                ],
             initComplete: function (){
 
                 jq(this.api().table().container()).find('input[type="search"]').parent().wrap('<form>').parent().attr('autocomplete','off').css('overflow','hidden').css('margin','auto');
