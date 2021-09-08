@@ -29,8 +29,6 @@ public class EncountersBasedOnDaySuppliedCalculation extends AbstractPatientCalc
 		for (Integer pId : cohort) {
 			boolean found = false;
 			Encounter patientEncounter = EmrCalculationUtils.encounterResultForPatient(encounter, pId);
-			System.out.println("The dates found is>> " + formatDate(getDateBasedOnValue(context.getNow(), day))
-			        + " encounter >>>" + patientEncounter.getEncounterType().getName());
 			if (patientEncounter != null && patientEncounter.getEncounterDatetime() != null && day != null) {
 				if (formatDate(patientEncounter.getEncounterDatetime()).equals(
 				    formatDate(getDateBasedOnValue(context.getNow(), day)))) {

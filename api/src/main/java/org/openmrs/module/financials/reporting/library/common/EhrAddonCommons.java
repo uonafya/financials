@@ -78,27 +78,42 @@ public class EhrAddonCommons {
 	 * 
 	 * @return @CohortDefinition
 	 */
-	public CohortDefinition getNewPatients() {
-		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
-		sqlCohortDefinition.setName("New patients");
-		sqlCohortDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		sqlCohortDefinition.addParameter(new Parameter("endDate", "End Date", Date.class));
-		sqlCohortDefinition
-		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  "
-		                + "(SELECT COUNT(p.patient_id) AS patient_count, p.patient_id AS patient_id FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		                + " WHERE v.date_started <=:endDate group by p.patient_id ) visits ON p.patient_id=visits.patient_id WHERE visits.patient_count <= 1 ");
-		return sqlCohortDefinition;
-	}
-	
-	public CohortDefinition getRevisitPatients() {
-		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
-		sqlCohortDefinition.setName("Revisit patients");
-		sqlCohortDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		sqlCohortDefinition.addParameter(new Parameter("endDate", "End Date", Date.class));
-		sqlCohortDefinition
-		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  "
-		                + "(SELECT COUNT(p.patient_id) AS patient_count, p.patient_id AS patient_id FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		                + " WHERE v.date_started <=:endDate group by p.patient_id ) visits ON p.patient_id=visits.patient_id WHERE visits.patient_count > 1 ");
-		return sqlCohortDefinition;
+	public CohortDefinition getPatientStates(int answer, int enc1, int enc2) {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("has obs between dates");
+		cd.addParameter(new Parameter("endDate", "Before Date", Date.class));
+		cd.addParameter(new Parameter("startDate", "After Date", Date.class));
+		String sql = " SELECT patient_id FROM( " + " SELECT max_enc.patient_id, max_enc.encounter_date FROM ( "
+		        + " SELECT p.patient_id AS patient_id, MAX(e.encounter_datetime) AS encounter_date FROM patient p "
+		        + " INNER JOIN encounter e " + " ON p.patient_id=e.patient_id " + " WHERE " + " p.voided=0 "
+		        + " AND e.voided=0" + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " AND e.encounter_type IN("
+		        + enc1
+		        + ","
+		        + enc2
+		        + ")"
+		        + " GROUP BY p.patient_id) max_enc "
+		        
+		        + " INNER JOIN "
+		        + " ( "
+		        + " SELECT pp.patient_id AS patient_id, ee.encounter_datetime AS encounter_date FROM patient pp "
+		        + "  INNER JOIN encounter ee ON pp.patient_id=ee.patient_id "
+		        + " INNER JOIN obs o ON ee.encounter_id=o.encounter_id "
+		        + " WHERE ee.encounter_type IN ("
+		        + enc1
+		        + ","
+		        + enc2
+		        + ")"
+		        + " AND ee.voided= 0  "
+		        + " AND pp.voided = 0 "
+		        + " AND o.voided=0 "
+		        + " AND ee.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " AND o.value_coded ="
+		        + answer
+		        + " )max_obs ON max_enc.patient_id=max_obs.patient_id "
+		        
+		        + " WHERE max_enc.encounter_date = max_obs.encounter_date) out_table ";
+		cd.setQuery(sql);
+		return cd;
 	}
 }

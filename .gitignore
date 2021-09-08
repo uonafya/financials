@@ -7,6 +7,8 @@
 **/target
 *.iml
 /.idea
+INJURY.java
+central.java
 **/bin
 **/*.classpath
  .idea/
@@ -16,3 +18,4 @@
     omod/financials-omod.iml
     omod/src/main/webapp/resources/
     omod/target/
+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

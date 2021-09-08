@@ -42,7 +42,7 @@
             console.log( table.row( this ).data() );
         } );
     });
-``
+
     var summaryData = fetchPharmacySummariesByDateRange();
 
     function SummariesDataListView() {
@@ -136,7 +136,6 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
                 <td>Issued Quantity</td>
                 <td>Total Price</td>
             </tr>
-
             </thead>
             <tbody>
             <% if (departmentSummaries.empty) { %>
@@ -156,6 +155,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
                 <td>${it.totalPrice}</td>
             </tr>
             <% } %>
+
             </tbody>
         </table>
 

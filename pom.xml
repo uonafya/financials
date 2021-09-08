@@ -123,6 +123,10 @@
 		<calculationVersion>1.1</calculationVersion>
 		<reportingVersion>0.9.8.1</reportingVersion>
 		<ehrconfigsVersion>1.0.0</ehrconfigsVersion>
+<<<<<<< HEAD
 		<hospitalcoreVersion>1.0.5-SNAPSHOT</hospitalcoreVersion>
+=======
+		<hospitalcoreVersion>1.0.5</hospitalcoreVersion>
+>>>>>>> 91fd1c9c784b74e82d23f1c2fa5fae5d60b156ae
 	</properties>
 </project>

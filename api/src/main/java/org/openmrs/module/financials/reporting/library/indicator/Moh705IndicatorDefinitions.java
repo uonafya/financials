@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reporting.library.indicator;
 
+import org.openmrs.Concept;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh705CohortDefinition;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,37 +14,84 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh705IndicatorDefinitions {
 	
-	private Moh705CohortDefinition moh705aCohortDefinition;
+	private Moh705CohortDefinition moh705CohortDefinition;
 	
 	@Autowired
 	public Moh705IndicatorDefinitions(Moh705CohortDefinition moh705aCohortDefinition) {
-		this.moh705aCohortDefinition = moh705aCohortDefinition;
+		this.moh705CohortDefinition = moh705aCohortDefinition;
 	}
 	
 	//Diagnonosis 705A
 	public CohortIndicator getAllChildrenPatientsWithDiagnosis(List<Integer> list) {
 		return cohortIndicator(
 		    "Diagnosis",
-		    map(moh705aCohortDefinition.getPatientsWhoHaveDiagnosis705AWithAge(list),
-		        "startDate=${startDate},endDate=${endDate}"));
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705AWithAge(list),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getAllChildrenPatientsWithOtherDiagnosis(List<Integer> list) {
+		return cohortIndicator(
+		    "Other Diagnosis for children",
+		    map(moh705CohortDefinition.getPatientsWhoHaveOtherDiagnosis705AWithAge(list),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	
 	public CohortIndicator getAllChildrenPatientsWithDiagnosisForMalaria(List<Integer> list, List<Integer> ans) {
 		return cohortIndicator("Diagnosis for malaria for 705 A",
-		    map(moh705aCohortDefinition.getMalariaDiagnosis705A(list, ans), "startDate=${startDate},endDate=${endDate}"));
+		    map(moh705CohortDefinition.getMalariaDiagnosis705A(list, ans), "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	
 	//Diagnonosis 705B
 	public CohortIndicator getAllAdultPatientsWithDiagnosis(List<Integer> list) {
 		return cohortIndicator(
 		    "Diagnosis",
-		    map(moh705aCohortDefinition.getPatientsWhoHaveDiagnosis705BWithAge(list),
-		        "startDate=${startDate},endDate=${endDate}"));
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705BWithAge(list),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getAllAdultPatientsWithOtherDiagnosis(List<Integer> list) {
+		return cohortIndicator(
+		    "Other Diagnosis",
+		    map(moh705CohortDefinition.getPatientsWhoHaveOtherDiagnosis705BWithAge(list),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	
 	public CohortIndicator getAllAdultPatientsWithDiagnosisForMalaria(List<Integer> list, List<Integer> ans) {
 		return cohortIndicator("Diagnosis for malaria for 705 B",
-		    map(moh705aCohortDefinition.getMalariaDiagnosis705B(list, ans), "startDate=${startDate},endDate=${endDate}"));
+		    map(moh705CohortDefinition.getMalariaDiagnosis705B(list, ans), "startDate=${startDate},endDate=${endDate+1d}"));
 	}
 	
+	public CohortIndicator getNewChildrenPatients() {
+		return cohortIndicator("New children patients",
+		    map(moh705CohortDefinition.getNewChildrenPatients(), "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getNewAdultsPatients() {
+		return cohortIndicator("New adults patients",
+		    map(moh705CohortDefinition.getNewAdultsrenPatients(), "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getRevisitsChildrenPatients() {
+		return cohortIndicator("Revisit children patients",
+		    map(moh705CohortDefinition.getRevisitsChildrenPatients(), "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getRevisitsAdultsPatients() {
+		return cohortIndicator("Revisit adults patients",
+		    map(moh705CohortDefinition.getRevisitAdultsrenPatients(), "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getAllChildrenPatientsReferrals(int question, int ans) {
+		return cohortIndicator(
+		    "Get children patients with referral",
+		    map(moh705CohortDefinition.getAllChildrenPatientsReferrals(question, ans),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
+	
+	public CohortIndicator getAllAdultPatientsWithReferrals(int question, int ans) {
+		return cohortIndicator(
+		    "Get adults patients with referral",
+		    map(moh705CohortDefinition.getAllAdultsPatientsReferrals(question, ans),
+		        "startDate=${startDate},endDate=${endDate+1d}"));
+	}
 }
