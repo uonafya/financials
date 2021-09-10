@@ -11,16 +11,24 @@ import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class PharmacyRevenueSummariesFragmentController {
 	
-	public void controller(PageModel model, @RequestParam(value = "startDate", required = false) String startDate,
-	        @RequestParam(value = "endDate", required = false) String endDate, UiUtils uiUtils) {
-		pullSummaries(startDate, endDate);
+	public void controller(PageModel model) {
 		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>();
-		pharmacyTransactions.addAll(pullSummaries(startDate, endDate));
+		
+		Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.MONTH, -1);
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		String startAt = formatter.format(cal.getTime());
+		String endAt = formatter.format(new Date());
+		
+		pharmacyTransactions.addAll(pullSummaries(startAt, endAt));
 		
 		model.addAttribute("departmentSummaries", pharmacyTransactions);
 	}
@@ -44,20 +52,20 @@ public class PharmacyRevenueSummariesFragmentController {
 		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>();
 		
 		for (InventoryStoreDrugPatient isdp : storeDrugPatientList) {
-			for (InventoryStoreDrugPatientDetail isdpDetail : inventoryCommonService.getDrugDetailOfPatient(isdp)) {
-				PharmacyBillSummary billSummary = new PharmacyBillSummary();
-				InventoryStoreDrugTransactionDetail detail = isdpDetail.getTransactionDetail();
-				billSummary.setCreatedOn(detail.getCreatedOn());
-				billSummary.setDrugName(detail.getDrug().getName());
-				billSummary.setFormulationName(detail.getFormulation().getName());
-				billSummary.setIssueQuantity(detail.getIssueQuantity());
-				billSummary.setTotalPrice(detail.getTotalPrice());
+			if (isdp.getStatuss() != null) {
+				for (InventoryStoreDrugPatientDetail isdpDetail : inventoryCommonService.getDrugDetailOfPatient(isdp)) {
+					PharmacyBillSummary billSummary = new PharmacyBillSummary();
+					InventoryStoreDrugTransactionDetail detail = isdpDetail.getTransactionDetail();
+					billSummary.setCreatedOn(detail.getCreatedOn());
+					billSummary.setDrugName(detail.getDrug().getName());
+					billSummary.setFormulationName(detail.getFormulation().getName()+":"+detail.getFormulation().getDozage());
+					billSummary.setIssueQuantity(detail.getIssueQuantity());
+					billSummary.setTotalPrice(detail.getTotalPrice());
+					pharmacyTransactions.add(billSummary);
+				}
 				
-				pharmacyTransactions.add(billSummary);
 			}
-			
 		}
-		System.out.println("Total transactions were :" + pharmacyTransactions.size());
 		return pharmacyTransactions;
 	}
 }
