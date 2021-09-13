@@ -36,4 +36,8 @@ public class Moh717Queries {
 		
 	}
 	
+	public static String getMopcFromOpdLog(Integer conceptId) {
+		String sql = "SELECT patient_id FROM opd_patient_queue_log WHERE opd_concept_id=%d AND created_on BETWEEN :onOrAfter AND :onOrBefore ";
+		return String.format(sql, conceptId);
+	}
 }
