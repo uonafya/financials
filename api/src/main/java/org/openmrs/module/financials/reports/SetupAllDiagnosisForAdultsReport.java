@@ -110,7 +110,7 @@ public class SetupAllDiagnosisForAdultsReport extends AbstractHybridReportBuilde
 		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND o.value_coded IS NOT NULL "
 		        + " AND cn.locale = 'en' AND cn.locale_preferred = 1 "
-		        + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 " + " AND c.class_id IN(4)");
+		        + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) >= 5 " + " AND c.class_id IN(4)");
 		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 	

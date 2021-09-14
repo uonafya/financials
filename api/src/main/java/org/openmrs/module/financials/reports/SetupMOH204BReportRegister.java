@@ -8,6 +8,7 @@ import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyaemr.reporting.calculation.converter.GenderConverter;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
@@ -50,10 +51,11 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 	
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
-		PatientDataSetDefinition dsd = ipdList();
+		PatientDataSetDefinition dsd = moh204bDatasetDefinition();
 		dsd.setName("opro");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		report.setBaseCohortDefinition(allAdultsDiagnosisPatientsCohort());
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
@@ -65,7 +67,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		        Date.class), new Parameter("dateBasedReporting", "", String.class));
 	}
 	
-	private PatientDataSetDefinition ipdList() {
+	private PatientDataSetDefinition moh204bDatasetDefinition() {
 		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
@@ -75,5 +77,21 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		return dsd;
 		
+	}
+	
+	private Mapped<CohortDefinition> allAdultsDiagnosisPatientsCohort() {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setName("Active Adults Patients");
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id INNER JOIN obs o ON e.encounter_id=o.encounter_id "
+		        + " INNER JOIN concept_name cn ON cn.concept_id = o.value_coded "
+		        + " INNER JOIN person pe ON p.patient_id=pe.person_id "
+		        + " INNER JOIN concept c ON c.concept_id = cn.concept_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " AND o.value_coded IS NOT NULL "
+		        + " AND cn.locale = 'en' AND cn.locale_preferred = 1 "
+		        + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) >= 5 " + " AND c.class_id IN(4)");
+		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 }

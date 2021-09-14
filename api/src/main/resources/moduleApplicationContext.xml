@@ -348,12 +348,12 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_204A.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:opru" />
+        <property name="repeatingSection" value="sheet:3,row:3,dataset:opru" />
     </bean>
 
     <bean id="ehraddons.common.report.204B" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="d1453810-05da-11ec-994d-a3605f14757f" />
-        <property name="name" value="Outpatient Register overr 5yrs - MOH 204B" />
+        <property name="name" value="Outpatient Register over 5yrs - MOH 204B" />
         <property name="description" value="Outpatient Register over 5yrs - MOH 204B Report" />
         <property name="apps">
             <set>
@@ -361,7 +361,7 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_204B.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:opro" />
+        <property name="repeatingSection" value="sheet:3,row:3,dataset:opro" />
     </bean>
 
     <bean id="ehraddons.common.report.209" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
