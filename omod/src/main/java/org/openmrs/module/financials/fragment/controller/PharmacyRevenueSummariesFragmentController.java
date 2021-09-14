@@ -24,7 +24,7 @@ public class PharmacyRevenueSummariesFragmentController {
 		
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, -1);
-		String startAt = new SimpleDateFormat("dd/MM/yyyy").format(cal.getTime())+" 00:00:00";
+		String startAt = new SimpleDateFormat("dd/MM/yyyy").format(cal.getTime()) + " 00:00:00";
 		String endAt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
 		
 		pharmacyTransactions.addAll(pullSummaries(startAt, endAt));
