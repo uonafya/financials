@@ -53,6 +53,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             </thead>
             <tbody>
             <% if (bills.empty) { %>
+
             <tr>
                 <td colspan="9">
                     No records found
