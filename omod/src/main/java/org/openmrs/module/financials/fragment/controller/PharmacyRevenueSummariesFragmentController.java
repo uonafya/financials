@@ -24,9 +24,8 @@ public class PharmacyRevenueSummariesFragmentController {
 		
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.MONTH, -1);
-		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-		String startAt = formatter.format(cal.getTime());
-		String endAt = formatter.format(new Date());
+		String startAt = new SimpleDateFormat("dd/MM/yyyy").format(cal.getTime())+" 00:00:00";
+		String endAt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
 		
 		pharmacyTransactions.addAll(pullSummaries(startAt, endAt));
 		
@@ -58,7 +57,8 @@ public class PharmacyRevenueSummariesFragmentController {
 					InventoryStoreDrugTransactionDetail detail = isdpDetail.getTransactionDetail();
 					billSummary.setCreatedOn(detail.getCreatedOn());
 					billSummary.setDrugName(detail.getDrug().getName());
-					billSummary.setFormulationName(detail.getFormulation().getName()+":"+detail.getFormulation().getDozage());
+					billSummary.setFormulationName(detail.getFormulation().getName() + ":"
+					        + detail.getFormulation().getDozage());
 					billSummary.setIssueQuantity(detail.getIssueQuantity());
 					billSummary.setTotalPrice(detail.getTotalPrice());
 					pharmacyTransactions.add(billSummary);
