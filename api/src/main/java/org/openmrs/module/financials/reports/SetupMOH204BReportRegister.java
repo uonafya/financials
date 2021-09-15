@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
+import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -14,8 +15,6 @@ import org.openmrs.module.kenyacore.report.data.patient.definition.CalculationDa
 import org.openmrs.module.kenyaemr.calculation.library.TelephoneNumberCalculation;
 import org.openmrs.module.kenyaemr.calculation.library.hiv.BMIAtLastVisitCalculation;
 import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
-import org.openmrs.module.kenyaemr.metadata.HivMetadata;
-import org.openmrs.module.kenyaemr.reporting.calculation.converter.GenderConverter;
 import org.openmrs.module.kenyaemr.reporting.data.converter.CalculationResultConverter;
 import org.openmrs.module.kenyaemr.reporting.data.converter.IdentifierConverter;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
@@ -27,8 +26,7 @@ import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
 import org.openmrs.module.reporting.data.converter.ObjectFormatter;
-import org.openmrs.module.reporting.data.encounter.definition.EncounterDatetimeDataDefinition;
-import org.openmrs.module.reporting.data.encounter.definition.EncounterIdDataDefinition;
+import org.openmrs.module.reporting.data.converter.ObsValueConverter;
 import org.openmrs.module.reporting.data.patient.definition.ConvertedPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.EncountersForPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.PatientIdentifierDataDefinition;
@@ -40,12 +38,9 @@ import org.openmrs.module.reporting.data.person.definition.ObsForPersonDataDefin
 import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
-import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
-import org.openmrs.module.reporting.query.encounter.definition.EncounterQuery;
-import org.openmrs.module.reporting.query.encounter.definition.SqlEncounterQuery;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -75,7 +70,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 	
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
-		EncounterDataSetDefinition dsd = (EncounterDataSetDefinition) moh204bDatasetDefinition();
+		PatientDataSetDefinition dsd = (PatientDataSetDefinition) moh204bDatasetDefinition();
 		dsd.setName("opro");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
@@ -97,7 +92,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addSortCriteria("id", SortCriteria.SortDirection.ASC);
-		dsd.addSortCriteria("encounterId", SortCriteria.SortDirection.DESC);
+		dsd.addRowFilter(getRowFilterRow(), "startDate=${startDate},endDate=${endDate+1d}");
 		
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
@@ -108,9 +103,8 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		        opdNumber.getName(), opdNumber), new IdentifierConverter());
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("encounterId", new EncounterIdDataDefinition(), "");
 		dsd.addColumn("identifier", identifierDef, "");
-		dsd.addColumn("Date", new EncounterDatetimeDataDefinition(), "", null);
+		dsd.addColumn("Date", getEncounterDate(), "", new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
@@ -121,10 +115,10 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		    new CalculationResultConverter());
 		dsd.addColumn("weight",
 		    getObservation(Context.getConceptService().getConceptByUuid("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "",
-		    new CalculationResultConverter());
+		    new ObsValueConverter());
 		dsd.addColumn("height",
 		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "",
-		    new CalculationResultConverter());
+		    new ObsValueConverter());
 		dsd.addColumn("BMI", new CalculationDataDefinition("BMI", new BMIAtLastVisitCalculation()), "",
 		    new CalculationResultConverter());
 		return dsd;
@@ -137,6 +131,12 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		obs.setQuestion(question);
 		return obs;
 		
+	}
+	
+	private DataDefinition getEncounterDate() {
+		EncountersForPatientDataDefinition dsd = new EncountersForPatientDataDefinition();
+		dsd.setWhich(TimeQualifier.LAST);
+		return dsd;
 	}
 	
 	private CohortDefinition allAdultsDiagnosisPatientsCohort() {
@@ -155,13 +155,13 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		return cd;
 	}
 	
-	public EncounterQuery getEncounterQuery() {
-		SqlEncounterQuery sqlEncounterQuery = new SqlEncounterQuery();
+	private CohortDefinition getRowFilterRow() {
+		SqlCohortDefinition sqlEncounterQuery = new SqlCohortDefinition();
 		sqlEncounterQuery.setName("Get unique encounters based on the date range");
 		sqlEncounterQuery.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		sqlEncounterQuery.addParameter(new Parameter("endDate", "End Date", Date.class));
 		sqlEncounterQuery
-		        .setQuery("SELECT encounter_id FROM encounter WHERE encounter_datetime BETWEEN :startDate AND :endDate AND voided=0 ");
+		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.voided=0 AND p.voided = 0 ");
 		return sqlEncounterQuery;
 	}
 }
