@@ -3,6 +3,7 @@ package org.openmrs.module.financials.reports;
 import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
 import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
@@ -75,9 +76,9 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		report.setBaseCohortDefinition(ReportUtils.map(allChildrenDiagnosisPatientsCohort(),
-		    "startDate=${startDate},endDate=${endDate}"));
+		    "startDate=${startDate},endDate=${endDate+23h}"));
 		
-		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate+23h}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
 	}
 	
@@ -93,7 +94,7 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addSortCriteria("id", SortCriteria.SortDirection.ASC);
-		dsd.addRowFilter(getRowFilterRow(), "startDate=${startDate},endDate=${endDate+1d}");
+		dsd.addRowFilter(getRowFilterRow(), "startDate=${startDate},endDate=${endDate+23h}");
 		
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
@@ -121,17 +122,17 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("height",
 		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("BMI", getBMI(), "endDate=${endDate+23h}",
-		    new CalculationResultConverter());
+		dsd.addColumn("BMI", getBMI(), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate+23h}", new CalculationResultConverter());
 		return dsd;
 		
 	}
-
+	
 	private DataDefinition getBMI() {
 		CalculationDataDefinition cd = new CalculationDataDefinition("BMI", new BMIAtLastVisitCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
-
+		
 	}
 	
 	private DataDefinition getObservation(Concept question) {
@@ -176,5 +177,12 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		sqlEncounterQuery
 		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.voided=0 AND p.voided = 0 ");
 		return sqlEncounterQuery;
+	}
+
+	private DataDefinition getRevisit() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+
 	}
 }
