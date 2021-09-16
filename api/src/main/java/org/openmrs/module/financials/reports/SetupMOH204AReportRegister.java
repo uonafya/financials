@@ -105,7 +105,8 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("identifier", identifierDef, "");
-		dsd.addColumn("Date", getEncounterDate(), "", new EncounterDateConverter());
+		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		    new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
@@ -115,19 +116,28 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("telephone", new CalculationDataDefinition("telephone", new TelephoneNumberCalculation()), "",
 		    new CalculationResultConverter());
 		dsd.addColumn("weight",
-		    getObservation(Context.getConceptService().getConceptByUuid("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "",
-		    new ObsValueConverter());
+		    getObservation(Context.getConceptService().getConceptByUuid("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
+		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
 		dsd.addColumn("height",
-		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "",
-		    new ObsValueConverter());
-		dsd.addColumn("BMI", new CalculationDataDefinition("BMI", new BMIAtLastVisitCalculation()), "",
+		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
+		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
+		dsd.addColumn("BMI", getBMI(), "endDate=${endDate+23h}",
 		    new CalculationResultConverter());
 		return dsd;
 		
 	}
+
+	private DataDefinition getBMI() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("BMI", new BMIAtLastVisitCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+
+	}
 	
 	private DataDefinition getObservation(Concept question) {
 		ObsForPersonDataDefinition obs = new ObsForPersonDataDefinition();
+		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
 		obs.setWhich(TimeQualifier.LAST);
 		obs.setQuestion(question);
 		return obs;
@@ -136,6 +146,8 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 	
 	private DataDefinition getEncounterDate() {
 		EncountersForPatientDataDefinition dsd = new EncountersForPatientDataDefinition();
+		dsd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		dsd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
 		dsd.setWhich(TimeQualifier.LAST);
 		return dsd;
 	}
