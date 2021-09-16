@@ -133,12 +133,12 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		return cd;
 		
 	}
-
+	
 	private DataDefinition getRevisit() {
 		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
-
+		
 	}
 	
 	private DataDefinition getObservation(Concept question) {

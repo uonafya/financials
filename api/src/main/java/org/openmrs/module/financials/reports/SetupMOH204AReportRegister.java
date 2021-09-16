@@ -178,11 +178,11 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.voided=0 AND p.voided = 0 ");
 		return sqlEncounterQuery;
 	}
-
+	
 	private DataDefinition getRevisit() {
 		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
-
+		
 	}
 }

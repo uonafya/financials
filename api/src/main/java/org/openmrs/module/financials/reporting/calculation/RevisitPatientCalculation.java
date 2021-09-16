@@ -24,43 +24,46 @@ import java.util.List;
 import java.util.Map;
 
 public class RevisitPatientCalculation extends AbstractPatientCalculation {
-
-    @Override
-    public CalculationResultMap evaluate(Collection<Integer> cohort, Map<String, Object> parameterValues,
-                                         PatientCalculationContext context) {
-
-        VisitsForPatientDataDefinition definition = new VisitsForPatientDataDefinition();
-        CalculationResultMap data = CalculationUtils.evaluateWithReporting(definition, cohort, parameterValues, null, context);
-        CalculationResultMap ret = new CalculationResultMap();
-
-        PatientIdentifierType opdNumber = MetadataUtils.existing(PatientIdentifierType.class,
-                CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
-
-        for (Integer ptid : cohort) {
-            String opdNumnberValue = "";
-            ListResult result = (ListResult) data.get(ptid);
-            List<Visit> visits = CalculationUtils.extractResultValues(result);
-            List<Visit> visitsWithinAyear = new ArrayList<Visit>();
-            for(Visit visit: visits) {
-               if(visit.getStartDatetime().compareTo(getAyearFromToday(context.getNow())) >= 0 && visit.getStartDatetime().compareTo(getAyearFromToday(context.getNow())) <= 0) {
-                   visitsWithinAyear.add(visit);
-               }
-            }
-            if(visitsWithinAyear.size() > 1) {
-                opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber).getIdentifier();
-            }
-
-            ret.put(ptid, new SimpleResult(opdNumnberValue, this));
-        }
-
-        return ret;
-    }
-
-    private Date getAyearFromToday(Date today) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(today);
-        calendar.add(Calendar.YEAR, -1);
-        return calendar.getTime();
-
-    }
+	
+	@Override
+	public CalculationResultMap evaluate(Collection<Integer> cohort, Map<String, Object> parameterValues,
+	        PatientCalculationContext context) {
+		
+		VisitsForPatientDataDefinition definition = new VisitsForPatientDataDefinition();
+		CalculationResultMap data = CalculationUtils.evaluateWithReporting(definition, cohort, parameterValues, null,
+		    context);
+		CalculationResultMap ret = new CalculationResultMap();
+		
+		PatientIdentifierType opdNumber = MetadataUtils.existing(PatientIdentifierType.class,
+		    CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
+		
+		for (Integer ptid : cohort) {
+			String opdNumnberValue = "";
+			ListResult result = (ListResult) data.get(ptid);
+			List<Visit> visits = CalculationUtils.extractResultValues(result);
+			List<Visit> visitsWithinAyear = new ArrayList<Visit>();
+			for (Visit visit : visits) {
+				if (visit.getStartDatetime().compareTo(getAyearFromToday(context.getNow())) >= 0
+				        && visit.getStartDatetime().compareTo(getAyearFromToday(context.getNow())) <= 0) {
+					visitsWithinAyear.add(visit);
+				}
+			}
+			if (visitsWithinAyear.size() > 1) {
+				opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber)
+				        .getIdentifier();
+			}
+			
+			ret.put(ptid, new SimpleResult(opdNumnberValue, this));
+		}
+		
+		return ret;
+	}
+	
+	private Date getAyearFromToday(Date today) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(today);
+		calendar.add(Calendar.YEAR, -1);
+		return calendar.getTime();
+		
+	}
 }
