@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
 import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
@@ -129,6 +130,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("DIAG",
 		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
+		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new CalculationResultConverter());
 		return dsd;
 		
 	}
@@ -152,6 +154,13 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
 		
+	}
+
+	private DataDefinition getDrugs() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("DR", new CurrentDrugsCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+
 	}
 	
 	private DataDefinition getObservation(Concept question) {
