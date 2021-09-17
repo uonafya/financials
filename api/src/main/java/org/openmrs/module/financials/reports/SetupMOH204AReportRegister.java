@@ -3,6 +3,8 @@ package org.openmrs.module.financials.reports;
 import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
 import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
@@ -124,6 +126,10 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
 		dsd.addColumn("BMI", getBMI(), "endDate=${endDate+23h}", new CalculationResultConverter());
 		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("FV", getFevers(), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("DIAG",
+		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
+		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
 		return dsd;
 		
 	}
@@ -142,6 +148,13 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		obs.setWhich(TimeQualifier.LAST);
 		obs.setQuestion(question);
 		return obs;
+		
+	}
+	
+	private DataDefinition getFevers() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("FV", new FeversForPatientCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
 		
 	}
 	

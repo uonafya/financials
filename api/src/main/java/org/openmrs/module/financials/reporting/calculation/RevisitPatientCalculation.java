@@ -44,11 +44,12 @@ public class RevisitPatientCalculation extends AbstractPatientCalculation {
 			List<Visit> visitsWithinAyear = new ArrayList<Visit>();
 			for (Visit visit : visits) {
 				if (visit.getStartDatetime().compareTo(getAyearFromToday(context.getNow())) >= 0
-				        && visit.getStartDatetime().compareTo(getAyearFromToday(context.getNow())) <= 0) {
+				        && visit.getStartDatetime().compareTo(context.getNow()) <= 0) {
 					visitsWithinAyear.add(visit);
 				}
 			}
-			if (visitsWithinAyear.size() > 1) {
+			if (visitsWithinAyear.size() > 1
+			        && Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber) != null) {
 				opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber)
 				        .getIdentifier();
 			}
