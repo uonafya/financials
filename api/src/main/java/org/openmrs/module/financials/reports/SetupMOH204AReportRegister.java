@@ -8,7 +8,11 @@ import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculati
 import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
+import org.openmrs.module.financials.reporting.converter.DrugListConverter;
 import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
+import org.openmrs.module.financials.reporting.converter.OutcomeConverter;
+import org.openmrs.module.financials.reporting.converter.ReferralFromConverter;
+import org.openmrs.module.financials.reporting.converter.ReferralToConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -131,7 +135,17 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("DIAG",
 		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new DrugListConverter());
+		dsd.addColumn("OUT",
+		    getObservation(Context.getConceptService().getConceptByUuid("160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
+		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new OutcomeConverter());
+		dsd.addColumn("RFF",
+		    getObservation(Context.getConceptService().getConceptByUuid("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
+		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralFromConverter());
+		dsd.addColumn("RFT",
+		    getObservation(Context.getConceptService().getConceptByUuid("477a7484-0f99-4026-b37c-261be587a70b")),
+		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralToConverter());
+		
 		return dsd;
 		
 	}
@@ -152,12 +166,12 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		return obs;
 		
 	}
-
+	
 	private DataDefinition getDrugs() {
 		CalculationDataDefinition cd = new CalculationDataDefinition("DR", new CurrentDrugsCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
-
+		
 	}
 	
 	private DataDefinition getFevers() {
