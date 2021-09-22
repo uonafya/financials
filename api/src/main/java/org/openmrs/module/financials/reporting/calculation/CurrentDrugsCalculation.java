@@ -35,7 +35,7 @@ public class CurrentDrugsCalculation extends AbstractPatientCalculation {
 			for (OpdDrugOrder opdDrugOrder : opdDrugs) {
 				drugs.append(opdDrugOrder.getInventoryDrug().getName() + " "
 				        + opdDrugOrder.getInventoryDrugFormulation().getName() + " " + opdDrugOrder.getDosage() + " "
-				        + opdDrugOrder.getFrequency().getName().getName());
+				        + opdDrugOrder.getFrequency().getName().getName() + "\n");
 			}
 			ret.put(pId, new SimpleResult(drugs, this));
 		}
