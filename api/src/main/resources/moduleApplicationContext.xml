@@ -273,7 +273,7 @@
             <set>
                 <ref bean="kenyaemr.app.reports" />
             </set></property>
-        <property name="template" value="financials:MOH_706.xls" />
+        <property name="template" value="financials:MOH706.xls" />
     </bean>
     <bean id="ehraddons.common.report.301" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="67365ce0-056e-11ec-8c48-1bd1b510875e" />
