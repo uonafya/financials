@@ -50,7 +50,7 @@ public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 	
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
-		PatientDataSetDefinition dsd = ipdList();
+		PatientDataSetDefinition dsd = getCwcRegister();
 		dsd.setName("cwcr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
@@ -65,9 +65,10 @@ public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 		        Date.class), new Parameter("dateBasedReporting", "", String.class));
 	}
 	
-	private PatientDataSetDefinition ipdList() {
+	private PatientDataSetDefinition getCwcRegister() {
 		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
-		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}");
+		dsd.setName("cwcr");
+		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("Name", nameDef, "");

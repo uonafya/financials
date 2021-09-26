@@ -72,28 +72,29 @@
             <set>
                 <ref bean="ehraddons.common.705a" />
                 <ref bean="ehraddons.common.705b" />
+                <ref bean="ehraddons.common.706" />
                 <ref bean="ehraddons.common.717" />
+                <ref bean="ehraddons.common.report.opthalimic" />
+
                 <ref bean="ehraddons.common.report.labadults" />
                 <ref bean="ehraddons.common.report.labchildren" />
                 <ref bean="ehraddons.common.report.allPatients" />
                 <ref bean="ehraddons.common.report.malaria" />
                 <ref bean="ehraddons.common.report.turn.around.time" />
+
+                <ref bean="ehraddons.common.report.204A" />
+                <ref bean="ehraddons.common.report.204B" />
+                <ref bean="ehraddons.common.report.209" />
+                <ref bean="ehraddons.common.report.240" />
+                <ref bean="ehraddons.common.report.301" />
+                <ref bean="ehraddons.common.report.333" />
                 <ref bean="ehraddons.common.report.705.a.all" />
                 <ref bean="ehraddons.common.report.705.b.all" />
                 <ref bean="ehraddons.common.report.705.b.allDiagnosis" />
                 <ref bean="ehraddons.common.report.705.a.allDiagnosis" />
-                <!--<ref bean="ehraddons.common.706" />-->
-                <ref bean="ehraddons.common.report.301" />
-                <ref bean="ehraddons.common.report.511" />
                 <ref bean="ehraddons.common.report.510" />
-                <ref bean="ehraddons.common.report.240" />
-                <ref bean="ehraddons.common.report.333" />
-                <ref bean="ehraddons.common.report.204A" />
-                <ref bean="ehraddons.common.report.204B" />
-                <ref bean="ehraddons.common.report.209" />
-                <!--<ref bean="ehraddons.common.report.opthalimic" />-->
-
-
+                <ref bean="ehraddons.common.report.511" />
+                <ref bean="ehraddons.common.report.512" />
             </set>
         </property>
         <property name="fragments">
@@ -296,20 +297,20 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_511.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:cwcr" />
+        <property name="repeatingSection" value="sheet:1,row:3,dataset:cwcr" />
     </bean>
 
     <bean id="ehraddons.common.report.510" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="24481c24-05c4-11ec-afa0-a33c15ffbabf" />
-        <property name="name" value="Family Planning Services Register - MOH 512" />
-        <property name="description" value="Family Planning Services Register - MOH 512 Report" />
+        <property name="name" value="MOH 510_Immunisation register - MOH 510" />
+        <property name="description" value="MOH 510_Immunisation register - MOH 510 Report" />
         <property name="apps">
             <set>
                 <ref bean="kenyaemr.app.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_510.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:fpsr" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:imr" />
     </bean>
 
     <bean id="ehraddons.common.report.240" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
@@ -335,7 +336,7 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_333.xls" />
-        <property name="repeatingSection" value="sheet:1,row:6,dataset:mr" />
+        <property name="repeatingSection" value="sheet:1,row:8,dataset:mr" />
     </bean>
 
     <bean id="ehraddons.common.report.204A" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
@@ -387,5 +388,18 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_Opthalmic_ Services_ Unit_ Summary_ Form.xls" />
+    </bean>
+
+    <bean id="ehraddons.common.report.512" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="2220baec-1ee1-11ec-aff2-0f10cbf8fc8d" />
+        <property name="name" value="MOH 512_FP Register- MOH 512" />
+        <property name="description" value="MOH 512_FP Register - MOH 512 Report" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:MOH_512.xls" />
+        <property name="repeatingSection" value="sheet:1,row:5,dataset:fpr" />
     </bean>
 </beans>

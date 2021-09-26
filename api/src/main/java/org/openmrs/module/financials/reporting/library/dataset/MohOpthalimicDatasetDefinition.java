@@ -1,6 +1,8 @@
 package org.openmrs.module.financials.reporting.library.dataset;
 
 import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.indicator.MohOpthlamicIndicatorDefinition;
+import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
@@ -14,9 +16,13 @@ public class MohOpthalimicDatasetDefinition {
 	
 	private EhrAddonDimesion ehrAddonDimesion;
 	
+	private MohOpthlamicIndicatorDefinition mohOpthalimicIndicatorDefinotion;
+	
 	@Autowired
-	MohOpthalimicDatasetDefinition(EhrAddonDimesion ehrAddonDimesion) {
+	MohOpthalimicDatasetDefinition(EhrAddonDimesion ehrAddonDimesion,
+	    MohOpthlamicIndicatorDefinition mohOpthalimicIndicatorDefinotion) {
 		this.ehrAddonDimesion = ehrAddonDimesion;
+		this.mohOpthalimicIndicatorDefinotion = mohOpthalimicIndicatorDefinotion;
 	}
 	
 	public DataSetDefinition getMohOpthlamicDataset() {
@@ -25,6 +31,8 @@ public class MohOpthalimicDatasetDefinition {
 		dsd.setName("MOHOP");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsd.addColumn("ALL01", "All patients 706",
+		    ReportUtils.map(mohOpthalimicIndicatorDefinotion.getAllPatientsWhovistedEyeDepartiment(), ""), "");
 		
 		return dsd;
 	}

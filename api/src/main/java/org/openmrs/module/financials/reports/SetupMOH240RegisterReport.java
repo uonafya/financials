@@ -5,8 +5,10 @@ import org.openmrs.EncounterType;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
+import org.openmrs.module.financials.reporting.converter.DrugListConverter;
 import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
@@ -77,7 +79,7 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		dsd.setName("lrr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		report.setBaseCohortDefinition(ReportUtils.map(getBaseCohort(), "startDate=${startDate},endDate=${endDate}"));
+		report.setBaseCohortDefinition(ReportUtils.map(getLabOrderEncounter(), "startDate=${startDate},endDate=${endDate}"));
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
@@ -91,6 +93,9 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 	
 	private PatientDataSetDefinition LabRegister() {
 		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
+		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsd.addRowFilter(getLabOrderEncounter(), "startDate=${startDate},endDate=${endDate+23h}");
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		
@@ -115,29 +120,30 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("DIAG",
 		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
+		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new DrugListConverter());
 		return dsd;
 		
 	}
 	
+	private DataDefinition getDrugs() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("DR", new CurrentDrugsCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+		
+	}
+	
 	private DataDefinition getEncounterDate() {
+		EncounterType labEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
+		EncounterType labResults = Context.getEncounterService().getEncounterTypeByUuid(
+		    "17a381d1-7e29-406a-b782-aa903b963c28");
+		
 		EncountersForPatientDataDefinition dsd = new EncountersForPatientDataDefinition();
 		dsd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
 		dsd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		dsd.setTypes(Arrays.asList(labEncounter, labResults));
 		dsd.setWhich(TimeQualifier.LAST);
 		return dsd;
-	}
-	
-	private CohortDefinition getBaseCohort() {
-		EncounterType labEncounter = Context.getEncounterService().getEncounterTypeByUuid(
-		    "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
-		SqlCohortDefinition cd = new SqlCohortDefinition();
-		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.setName("Base cohort for the lab encounter");
-		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id"
-		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 "
-		        + " AND e.encounter_type=" + labEncounter.getEncounterTypeId());
-		return cd;
 	}
 	
 	private DataDefinition getRevisit() {
@@ -155,5 +161,22 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		obs.setQuestion(question);
 		return obs;
 		
+	}
+	
+	private CohortDefinition getLabOrderEncounter() {
+		EncounterType labEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
+		EncounterType labResults = Context.getEncounterService().getEncounterTypeByUuid(
+		    "17a381d1-7e29-406a-b782-aa903b963c28");
+		SqlCohortDefinition sqlEncounterQuery = new SqlCohortDefinition();
+		sqlEncounterQuery.setName("Get unique lab enounter types");
+		sqlEncounterQuery.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sqlEncounterQuery.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sqlEncounterQuery
+		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  encounter e ON p.patient_id=e.patient_id "
+		                + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.voided=0 AND p.voided = 0 "
+		                + " AND e.encounter_type IN(" + labEncounter.getEncounterTypeId() + ","
+		                + labResults.getEncounterTypeId() + ")");
+		return sqlEncounterQuery;
 	}
 }
