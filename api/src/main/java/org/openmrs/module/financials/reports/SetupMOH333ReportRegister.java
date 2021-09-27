@@ -89,7 +89,7 @@ public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 	private CohortDefinition getMaternityRegisterCohort() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.setName("Get maternity register");
-		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN person pe ON p.patient_id=pe.patient_id "
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN person pe ON p.patient_id=pe.person_id "
 		        + " WHERE p.voided=0 AND pe.voided=0 AND pe.gender='F'");
 		return cd;
 	}

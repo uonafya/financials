@@ -1,7 +1,6 @@
 package org.openmrs.module.financials.reports;
 
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
-import org.openmrs.module.financials.reporting.library.queries.LabResultsQueries;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
@@ -22,7 +21,6 @@ import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinitio
 import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
-import org.openmrs.module.reporting.dataset.definition.SqlDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
@@ -58,7 +56,7 @@ public class SetupIpdRegister301Report extends AbstractHybridReportBuilder {
 		dsd.setName("ipd");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		report.setBaseCohortDefinition(allMalariaPatientsCohort());
+		report.setBaseCohortDefinition(allIpdPatientsCohort());
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
@@ -84,7 +82,7 @@ public class SetupIpdRegister301Report extends AbstractHybridReportBuilder {
 		
 	}
 	
-	protected Mapped<CohortDefinition> allMalariaPatientsCohort() {
+	private Mapped<CohortDefinition> allIpdPatientsCohort() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));

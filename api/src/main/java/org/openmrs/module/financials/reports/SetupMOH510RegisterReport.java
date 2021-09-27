@@ -8,6 +8,7 @@ import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyaemr.reporting.calculation.converter.GenderConverter;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
@@ -54,6 +55,7 @@ public class SetupMOH510RegisterReport extends AbstractHybridReportBuilder {
 		dsd.setName("imr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		report.setBaseCohortDefinition(all510PatientsCohort());
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
@@ -75,5 +77,14 @@ public class SetupMOH510RegisterReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		return dsd;
 		
+	}
+	
+	private Mapped<CohortDefinition> all510PatientsCohort() {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setName("Admitted patients");
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN person pe ON p.patient_id=pe.patient_id  WHERE TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) < 5");
+		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 }

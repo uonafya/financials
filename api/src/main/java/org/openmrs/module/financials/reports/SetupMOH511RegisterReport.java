@@ -1,5 +1,7 @@
 package org.openmrs.module.financials.reports;
 
+import org.openmrs.Program;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -8,6 +10,7 @@ import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyaemr.reporting.calculation.converter.GenderConverter;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
@@ -54,9 +57,9 @@ public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 		dsd.setName("cwcr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		report.setBaseCohortDefinition(all511PatientsCohort());
 		
-		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
-		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	@Override
@@ -76,5 +79,17 @@ public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		return dsd;
 		
+	}
+	
+	private Mapped<CohortDefinition> all511PatientsCohort() {
+		Program program = Context.getProgramWorkflowService().getProgramByUuid("645d7e4c-fbdb-11ea-911a-5fe00fc87a47");
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setName("Admitted patients");
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN person pe ON p.patient_id=pe.patient_id  "
+		        + " INNER JOIN patient_program pp ON p.patient_id=pp.patient_id  INNER JOIN program p ON p.program_id=pp.program_id "
+		        + " WHERE TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) < 5 AND p.program_id=" + program.getProgramId());
+		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 }

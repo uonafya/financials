@@ -65,7 +65,6 @@ public class SetupFpRegisterReport extends AbstractHybridReportBuilder {
 		dsd.setName("fpr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		//report.setBaseCohortDefinition(ReportUtils.map(getRadiologyEncounter(), "startDate=${startDate},endDate=${endDate}"));
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"));
 	}
@@ -81,7 +80,6 @@ public class SetupFpRegisterReport extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.setName("fpr");
-		//dsd.addRowFilter(getRadiologyEncounter(), "startDate=${startDate},endDate=${endDate+23h}");
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		PatientIdentifierType opdNumber = MetadataUtils.existing(PatientIdentifierType.class,
@@ -91,8 +89,6 @@ public class SetupFpRegisterReport extends AbstractHybridReportBuilder {
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("identifier", identifierDef, "");
-		//dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
-		//new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
