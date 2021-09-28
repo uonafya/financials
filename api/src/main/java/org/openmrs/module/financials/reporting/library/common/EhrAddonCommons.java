@@ -6,6 +6,7 @@ import org.openmrs.module.reporting.cohort.definition.AgeCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.GenderCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
+import org.openmrs.module.reporting.common.DurationUnit;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.stereotype.Component;
 
@@ -114,6 +115,62 @@ public class EhrAddonCommons {
 		        
 		        + " WHERE max_enc.encounter_date = max_obs.encounter_date) out_table ";
 		cd.setQuery(sql);
+		return cd;
+	}
+	
+	/**
+	 * Patients who at most maxAge years old on ${effectiveDate}
+	 * 
+	 * @return the cohort definition
+	 */
+	public CohortDefinition agedAtMost(int maxAge) {
+		AgeCohortDefinition cd = new AgeCohortDefinition();
+		cd.setName("aged at most " + maxAge);
+		cd.addParameter(new Parameter("effectiveDate", "Effective Date", Date.class));
+		cd.setMaxAge(maxAge);
+		return cd;
+	}
+	
+	/**
+	 * Patients who are at least minAge years old on ${effectiveDate}
+	 * 
+	 * @return the cohort definition
+	 */
+	public CohortDefinition agedAtLeast(int minAge) {
+		AgeCohortDefinition cd = new AgeCohortDefinition();
+		cd.setName("aged at least " + minAge);
+		cd.addParameter(new Parameter("effectiveDate", "Effective Date", Date.class));
+		cd.setMinAge(minAge);
+		return cd;
+	}
+	
+	/**
+	 * patients who are at least minAge years old and at most years old on ${effectiveDate}
+	 * 
+	 * @return CohortDefinition
+	 */
+	public CohortDefinition agedAtLeastAgedAtMost(int minAge, int maxAge) {
+		AgeCohortDefinition cd = new AgeCohortDefinition();
+		cd.setName("aged between " + minAge + " and " + maxAge + " years");
+		cd.addParameter(new Parameter("effectiveDate", "Effective Date", Date.class));
+		cd.setMinAge(minAge);
+		cd.setMaxAge(maxAge);
+		return cd;
+	}
+	
+	/**
+	 * patients who are at least minAge months old and at most months old on ${effectiveDate}
+	 * 
+	 * @return CohortDefinition
+	 */
+	public CohortDefinition agedAtLeastAgedAtMostInMonths(int minAge, int maxAge) {
+		AgeCohortDefinition cd = new AgeCohortDefinition();
+		cd.setName("aged between " + minAge + " and " + maxAge + " years");
+		cd.addParameter(new Parameter("effectiveDate", "Effective Date", Date.class));
+		cd.setMinAge(minAge);
+		cd.setMaxAge(maxAge);
+		cd.setMinAgeUnit(DurationUnit.MONTHS);
+		cd.setMaxAgeUnit(DurationUnit.MONTHS);
 		return cd;
 	}
 }

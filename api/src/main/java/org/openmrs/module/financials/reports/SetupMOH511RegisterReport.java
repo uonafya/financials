@@ -82,14 +82,16 @@ public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 	}
 	
 	private Mapped<CohortDefinition> all511PatientsCohort() {
-		Program program = Context.getProgramWorkflowService().getProgramByUuid("645d7e4c-fbdb-11ea-911a-5fe00fc87a47");
+		Program program1 = Context.getProgramWorkflowService().getProgramByUuid("645d7e4c-fbdb-11ea-911a-5fe00fc87a47");
+		Program program2 = Context.getProgramWorkflowService().getProgramByUuid("c2ecdf11-97cd-432a-a971-cfd9bd296b83");
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("Admitted patients");
 		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN person pe ON p.patient_id=pe.patient_id  "
-		        + " INNER JOIN patient_program pp ON p.patient_id=pp.patient_id  INNER JOIN program p ON p.program_id=pp.program_id "
-		        + " WHERE TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) < 5 AND p.program_id=" + program.getProgramId());
+		        + " INNER JOIN patient_program pp ON p.patient_id=pp.patient_id  INNER JOIN program pr ON pr.program_id=pp.program_id "
+		        + " WHERE TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) < 5 AND pr.program_id IN(" + program1.getProgramId()
+		        + "," + program2.getProgramId() + ")");
 		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 }

@@ -210,4 +210,20 @@ public class EhrAddonDimesion {
 		        "startDate=${startDate},endDate=${endDate+1d}"));
 		return dim;
 	}
+	
+	/**
+	 * Dimension of age between
+	 * 
+	 * @return Dimension
+	 */
+	public CohortDefinitionDimension moh710AgeGroups() {
+		CohortDefinitionDimension dim = new CohortDefinitionDimension();
+		dim.setName("Fine age between(<1,>=1)");
+		dim.addParameter(new Parameter("onDate", "Date", Date.class));
+		dim.addCohortDefinition("<1", map(commonLibrary.agedAtMost(0), "effectiveDate=${onDate}"));
+		dim.addCohortDefinition(">=1", map(commonLibrary.agedAtLeast(1), "effectiveDate=${onDate}"));
+		dim.addCohortDefinition("18-24", map(commonLibrary.agedAtLeastAgedAtMostInMonths(18, 24), "effectiveDate=${onDate}"));
+		dim.addCohortDefinition(">2", map(commonLibrary.agedAtLeast(2), "effectiveDate=${onDate}"));
+		return dim;
+	}
 }
