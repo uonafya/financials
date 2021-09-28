@@ -31,8 +31,8 @@ public class MohOpthalimicDatasetDefinition {
 		dsd.setName("MOHOP");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.addColumn("ALL01", "All patients 706",
-		    ReportUtils.map(mohOpthalimicIndicatorDefinotion.getAllPatientsWhovistedEyeDepartiment(), ""), "");
+		dsd.addColumn("ALL01", "All patients in the eye departiment",
+		    ReportUtils.map(mohOpthalimicIndicatorDefinotion.getAllPatientsWhovistedEyeDepartiment(), indParam), "");
 		
 		return dsd;
 	}

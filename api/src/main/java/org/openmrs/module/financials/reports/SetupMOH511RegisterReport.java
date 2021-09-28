@@ -88,7 +88,7 @@ public class SetupMOH511RegisterReport extends AbstractHybridReportBuilder {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("Admitted patients");
-		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN person pe ON p.patient_id=pe.patient_id  "
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN person pe ON p.patient_id=pe.person_id  "
 		        + " INNER JOIN patient_program pp ON p.patient_id=pp.patient_id  INNER JOIN program pr ON pr.program_id=pp.program_id "
 		        + " WHERE TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) < 5 AND pr.program_id IN(" + program1.getProgramId()
 		        + "," + program2.getProgramId() + ")");
