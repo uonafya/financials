@@ -81,8 +81,7 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		report.setBaseCohortDefinition(ReportUtils.map(getLabOrderEncounter(), "startDate=${startDate},endDate=${endDate}"));
 		
-		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
-		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	@Override
@@ -93,6 +92,7 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 	
 	private PatientDataSetDefinition LabRegister() {
 		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
+		dsd.setName("lrr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addRowFilter(getLabOrderEncounter(), "startDate=${startDate},endDate=${endDate+23h}");
