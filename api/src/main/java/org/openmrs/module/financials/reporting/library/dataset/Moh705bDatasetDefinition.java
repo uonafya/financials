@@ -323,7 +323,7 @@ public class Moh705bDatasetDefinition {
 		        getConcept("1603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "AODA", "All other diseases", ReportUtils.map(
+		EhrReportingUtils.addRow(dsd, "AODA", "All other diseases for adults", ReportUtils.map(
 		    moh705aIndicator.getAllAdultPatientsWithOtherDiagnosis(DiagnosisLists.getAllOtherDiseasesList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		

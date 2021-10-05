@@ -311,7 +311,7 @@ public class Moh705aDatasetDefinition {
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOvrerweightList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "AODC", "All other diseases", ReportUtils.map(
+		EhrReportingUtils.addRow(dsd, "AODC", "All other diseases for children", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithOtherDiagnosis(DiagnosisLists.getAllOtherDiseasesList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
