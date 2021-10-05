@@ -33,14 +33,13 @@ public class Moh717CohortDefinition {
 	@Autowired
 	private Moh705CohortDefinition moh705CohortDefinition;
 	
-	public CohortDefinition getAllPatients(int initialQueue) {
+	public CohortDefinition getAllPatients() {
 		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
 		sqlCohortDefinition.setName("All patients for 717 report");
 		sqlCohortDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		sqlCohortDefinition.addParameter(new Parameter("endDate", "End Date", Date.class));
 		sqlCohortDefinition
-		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.encounter_type = "
-		                + initialQueue);
+		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) ");
 		return sqlCohortDefinition;
 	}
 	
@@ -58,14 +57,16 @@ public class Moh717CohortDefinition {
 		cd.setName("Get new patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatients(registrationInitial.getEncounterTypeId()),
-		    "startDate=${startDate},endDate=${endDate+1d}"));
+		cd.addSearch("ALL", ReportUtils.map(getAllPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
 		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+1d}"));
-		cd.setCompositionString("ALL AND NEW");
+		        "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("VISIT",
+		    map(commonLibrary.getPatientWithNewVisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
+		
+		cd.setCompositionString("ALL AND (NEW OR VISIT)");
 		return cd;
 		
 	}
@@ -84,14 +85,15 @@ public class Moh717CohortDefinition {
 		cd.setName("Get revisit patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatients(registrationInitial.getEncounterTypeId()),
-		    "startDate=${startDate},endDate=${endDate+1d}"));
+		cd.addSearch("ALL", ReportUtils.map(getAllPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
 		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+1d}"));
-		cd.setCompositionString("ALL AND RVT");
+		        "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("VISIT",
+		    map(commonLibrary.getPatientRevisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
+		cd.setCompositionString("ALL AND (RVT OR VISIT)");
 		return cd;
 		
 	}
@@ -128,13 +130,16 @@ public class Moh717CohortDefinition {
 		cd.setName("Get new patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate+1d}"));
+		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate+23h}"));
 		cd.addSearch(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
 		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+1d}"));
-		cd.setCompositionString("SPC AND NEW");
+		        "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("VISIT",
+		    map(commonLibrary.getPatientWithNewVisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
+		
+		cd.setCompositionString("SPC AND (NEW OR VISIT)");
 		return cd;
 	}
 	
@@ -153,13 +158,15 @@ public class Moh717CohortDefinition {
 		cd.setName("Get revisit patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate+1d}"));
+		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate+23h}"));
 		cd.addSearch(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
 		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+1d}"));
-		cd.setCompositionString("SPC AND RVT");
+		        "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("VISIT",
+		    map(commonLibrary.getPatientRevisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
+		cd.setCompositionString("SPC AND (RVT OR VISIT)");
 		return cd;
 	}
 	
@@ -207,9 +214,9 @@ public class Moh717CohortDefinition {
 		cd.addSearch(
 		    "CLINIC",
 		    map(getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
-		cd.addSearch("TOPD", map(getMopcFromTriageOrOpd(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
-		cd.addSearch("LOG", map(getMopcFromOpdLog(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+1d}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		cd.addSearch("TOPD", map(getMopcFromTriageOrOpd(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		cd.addSearch("LOG", map(getMopcFromOpdLog(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
 		
 		cd.setCompositionString("(CLINIC OR TOPD OR LOG)");
 		return cd;
@@ -256,11 +263,11 @@ public class Moh717CohortDefinition {
 		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND p.voided=0 AND e.voided=0 AND o.voided=0 " + " AND o.value_coded IN(" + c1 + "," + c2 + ")");
 		
-		compositionCohortDefinition.addSearch("SPD", map(cd, "startDate=${startDate},endDate=${endDate+1d}"));
+		compositionCohortDefinition.addSearch("SPD", map(cd, "startDate=${startDate},endDate=${endDate+23h}"));
 		compositionCohortDefinition.addSearch(
 		    "DIAGNOSIS",
 		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705(DiagnosisLists.getDentalDisordersList()),
-		        "startDate=${startDate},endDate=${endDate+1d}"));
+		        "startDate=${startDate},endDate=${endDate+23h}"));
 		compositionCohortDefinition.setCompositionString("SPD OR DIAGNOSIS");
 		return compositionCohortDefinition;
 	}
