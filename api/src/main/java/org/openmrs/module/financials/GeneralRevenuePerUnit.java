@@ -33,5 +33,15 @@ public class GeneralRevenuePerUnit {
 	
 	private String department;
 	
+	private String servicePaidFor;
+	
 	private BigDecimal totalAmount;
+	
+	public String getServicePaidFor() {
+		return servicePaidFor;
+	}
+	
+	public void setServicePaidFor(String servicePaidFor) {
+		this.servicePaidFor = servicePaidFor;
+	}
 }

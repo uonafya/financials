@@ -66,6 +66,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <tr>
                 <td>Transaction date</td>
                 <td>Department</td>
+                <td>Service</td>
                 <td>Amount collected</td>
             </tr>
             </thead>
@@ -81,7 +82,9 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <tr>
                 <td>${it.transactionDate}</td>
                 <td>${it.department}</td>
+                <td>${it.servicePaidFor}</td>
                 <td>${it.totalAmount}</td>
+
             </tr>
             <% } %>
             </tbody>
