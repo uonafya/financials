@@ -74,6 +74,7 @@
                 <ref bean="ehraddons.common.705b" />
                 <ref bean="ehraddons.common.706" />
                 <ref bean="ehraddons.common.report.moh710" />
+                <ref bean="ehraddons.report.moh711" />
                 <ref bean="ehraddons.common.717" />
                 <ref bean="ehraddons.common.report.opthalimic" />
 
@@ -423,5 +424,13 @@
         <property name="description" value="MOH Immunization Report" />
         <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
         <property name="template" value="kenyaemr:moh710.xls" />
+    </bean>
+
+    <bean id="ehraddons.report.moh711" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+        <property name="targetUuid" value="ddb6ac14-2849-11ec-9e50-0333f0e9356a" />
+        <property name="name" value="MOH 711" />
+        <property name="description" value="National Integrated Form for Reproductive Health, HIV/AIDS, Malaria, TB and Child Nutrition" />
+        <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
+        <property name="template" value="financials:MOH_711.xls" />
     </bean>
 </beans>
