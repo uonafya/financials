@@ -362,6 +362,11 @@ public class Moh705bDatasetDefinition {
 		        getConcept("4fcf003e-71cf-47a5-a967-47d24aa61092").getConceptId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
+		//additional indicators added
+		EhrReportingUtils.addRow(dsd, "AM", "AMOEBIASIS",
+		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAmoebiasis()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
+		
 		return dsd;
 		
 	}

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.openmrs.module.financials.EhrAddonsConstants._EhrAddOnConcepts.DIARRHEA_AMOEBIASIS;
 import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
 
 public class DiagnosisLists {
@@ -25,7 +26,6 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FUNCTIONAL_DIARRHOEA).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Hemorrhagic_Diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Bacterial_Gastroenteritis).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIARRHEA_AMOEBIASIS).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIARRHOEA).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIARRHOEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN)
 		            .getConceptId(),
@@ -6430,7 +6430,11 @@ public class DiagnosisLists {
 	
 	public static List<Integer> getJiggersInfestationList() {
 		return Arrays.asList(getConcept("123964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId());
-		
+	}
+	
+	public static List<Integer> getAmoebiasis() {
+		return Arrays.asList(getConcept(DIARRHEA_AMOEBIASIS).getConceptId(),
+		    getConcept("124AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId());
 	}
 	
 	public static List<Integer> getAllOtherDiseasesList() {
@@ -6490,6 +6494,7 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getMuscularSkeletalConditionsList());
 		allListedDiagnosis.addAll(getFistulaBirthRelatedList());
 		allListedDiagnosis.addAll(getNeoplamsList());
+		allListedDiagnosis.addAll(getAmoebiasis());
 		
 		return allListedDiagnosis;
 	}
