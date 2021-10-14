@@ -6346,26 +6346,53 @@ public class DiagnosisLists {
 		
 		);
 	}
-
+	
 	public static List<Integer> getRiftValleyFeverList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.RIFT_VALLEY_FEVER).getConceptId());
 	}
-
+	
 	public static List<Integer> getChikungunyaFeverList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chikungunya_Fever).getConceptId(),
-				getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chikungunya_Haemorrhagic_Fever).getConceptId());
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chikungunya_Haemorrhagic_Fever).getConceptId());
 	}
-
+	
 	public static List<Integer> getDengueFeverList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_haemorrhagic_fever).getConceptId(),
-				getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_fever).getConceptId(),
-				getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_Shock_Syndrome).getConceptId());
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_fever).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_Shock_Syndrome).getConceptId());
+	}
+	
+	public static List<Integer> getCutaneousLeishmaniasisList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dry_Form_of_Cutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Zoonotic_Form_of_Cutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Wet_Form_of_Cutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Ulcerating_Cutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Recurrent_Cutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Late_Cutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Disseminated_Mucocutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Diffuse_Cutaneous_Leishmaniasis)
+		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Cutaneous_Leishmaniasis).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Asian_Desert_Cutaneous_Leishmaniasis).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.American_Cutaneous_Mucocutaneous_Leishmaniasis).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_Necrotising_Cutaneous_Leishmaniasis).getConceptId());
+	}
+	
+	public static List<Integer> getAnthraxList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Pulmonary_Anthrax).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Contact_with_or_Exposure_to_Anthrax).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Anthrax).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastrointestinal_Anthrax).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Cutaneous_Anthrax).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Anthrax_Septicaemia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Anthrax_Pneumonia).getConceptId());
 	}
 	
 	public static List<Integer> getAllOtherDiseasesList() {
 		List<Integer> allListedDiagnosis = new ArrayList<Integer>();
 		
 		allListedDiagnosis.addAll(getDiarrheaDiagnosisList());
+		allListedDiagnosis.addAll(getAnthraxList());
+		allListedDiagnosis.addAll(getCutaneousLeishmaniasisList());
 		allListedDiagnosis.addAll(getChikungunyaFeverList());
 		allListedDiagnosis.addAll(getDengueFeverList());
 		allListedDiagnosis.addAll(getAutismList());
@@ -6437,7 +6464,7 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getYellowFeverList());
 		allListedDiagnosis.addAll(getViralHaemorrhagicFeverList());
 		allListedDiagnosis.addAll(getRiftValleyFeverList());
-
+		
 		return allListedDiagnosis;
 	}
 }

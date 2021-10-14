@@ -347,18 +347,27 @@ public class Moh705bDatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "AM", "AMOEBIASIS",
 		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAmoebiasis()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
-
+		
 		EhrReportingUtils.addRow(dsd, "RVF", "Rift valley fever",
-				ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getRicketsList()), indParam),
-				EhrAddonUtils.getAdultChildrenColumns());
-
-		EhrReportingUtils.addRow(dsd, "CKU", "Chikungunya fever",
-				ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getChikungunyaFeverList()), indParam),
-				EhrAddonUtils.getAdultChildrenColumns());
-
-		EhrReportingUtils.addRow(dsd, "DENF", "Dengue fever",
-				ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getDengueFeverList()), indParam),
-				EhrAddonUtils.getAdultChildrenColumns());
+		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getRicketsList()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(dsd, "CKU", "Chikungunya fever", ReportUtils.map(
+		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getChikungunyaFeverList()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(dsd, "DENF", "Dengue fever", ReportUtils.map(
+		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getDengueFeverList()), indParam), EhrAddonUtils
+		        .getAdultChildrenColumns());
+		
+		EhrReportingUtils
+		        .addRow(dsd, "CL", "Cutaneous Leishmaniasis", ReportUtils.map(
+		            moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getCutaneousLeishmaniasisList()),
+		            indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(dsd, "ANT", "Suspected Anthrax",
+		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAnthraxList()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		return dsd;
 		
 	}
