@@ -760,153 +760,6 @@ public class DiagnosisLists {
 		);
 	}
 	
-	public static List<Integer> getFeversList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER1).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER2).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER3).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER4).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER5).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER6).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER7).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER8).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER9).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER10).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER11).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER12).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER13).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER14).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER15).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER16).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER17).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER18).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER19).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER20).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER21).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER22).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER23).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER24).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER25).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER26).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER27).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER28).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER29).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER30).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER31).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER32).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER33).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER34).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER35).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER36).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER37).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER38).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER39).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER40).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER41).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER42).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER43).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER44).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER45).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER46).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER47).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER48).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER49).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER50).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER51).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER52).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER53).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER54).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER55).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER56).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER57).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER58).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER59).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER60).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER61).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER62).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER63).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER64).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER65).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER66).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER67).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER68).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER69).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER70).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER71).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER72).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER73).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER74).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER75).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER76).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER77).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER78).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER79).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER80).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER81).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER82).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER83).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER84).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER85).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER86).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER87).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER88).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER89).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER90).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER91).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER92).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER93).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER94).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER95).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER96).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER97).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER98).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER99).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER100).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER101).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER102).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER103).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER103).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER104).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER105).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER106).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER107).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER108).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER109).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER110).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER111).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER112).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER113).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER114).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER115).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER116).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER117).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER118).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER119).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER120).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER121).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER122).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER123).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER124).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER125).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER126).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER127).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER128).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER129).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER130).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER131).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER132).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER133).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER134).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER135).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER136).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER137).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER138).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER139).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER140).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER141).getConceptId()
-		
-		);
-	}
-	
 	public static List<Integer> getMalariaList() {
 		return Arrays.asList(
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MALARIA_MILD).getConceptId(),
@@ -4550,64 +4403,6 @@ public class DiagnosisLists {
 		);
 	}
 	
-	public static List<Integer> getNewlyDiagnosedHivList1() {
-		return Arrays.asList(
-		
-		getConcept(HivDiagnosisConstants.HIV_0).getConceptId(), getConcept(HivDiagnosisConstants.HIV_1).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_2).getConceptId(), getConcept(HivDiagnosisConstants.HIV_3).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_4).getConceptId(), getConcept(HivDiagnosisConstants.HIV_5).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_6).getConceptId(), getConcept(HivDiagnosisConstants.HIV_7).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_8).getConceptId(), getConcept(HivDiagnosisConstants.HIV_9).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_10).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_11).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_12).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_13).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_14).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_15).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_16).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_17).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_18).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_19).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_20).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_21).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_22).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_23).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_24).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_25).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_26).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_27).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_28).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_29).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_30).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_31).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_32).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_33).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_34).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_35).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_36).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_37).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_38).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_39).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_40).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_41).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_42).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_43).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_44).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_45).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_46).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_47).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_48).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_49).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_50).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_51).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_52).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_53).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_54).getConceptId(),
-		    getConcept(HivDiagnosisConstants.HIV_55).getConceptId(), getConcept(HivDiagnosisConstants.HIV_56).getConceptId()
-		
-		);
-	}
-	
 	public static List<Integer> getBrucellosisList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS1).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.BRUCELOSIS2).getConceptId(),
@@ -6168,28 +5963,6 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.HAEMORRHAGICFEVER_2).getConceptId());
 	}
 	
-	public static List<Integer> getPlagueList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE1).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE2).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE3).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE4).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE5).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE6).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE7).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE8).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE9).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE10).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE11).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE12).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE13).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE14).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE15).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE16).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PLAGUE17).getConceptId()
-		
-		);
-	}
-	
 	public static List<Integer> getMalariaInPregnancyList() {
 		return Arrays.asList(
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Malaria_in_pregnancy).getConceptId(),
@@ -6371,10 +6144,6 @@ public class DiagnosisLists {
 		                    .getConceptId());
 	}
 	
-	public static List<Integer> getDaracuncolosisGuineaWormList() {
-		return Arrays.asList(getConcept("137458AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId());
-	}
-	
 	public static List<Integer> getSexuallyTransmittedInfectionsList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI1).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI2).getConceptId(),
@@ -6432,10 +6201,169 @@ public class DiagnosisLists {
 		    getConcept("124AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId());
 	}
 	
+	public static List<Integer> getFeversList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER8).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER10).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER11).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER12).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER13).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER14).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER15).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER16).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER17).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER18).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER19).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER20).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER21).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER22).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER23).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER24).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER25).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER26).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER27).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER28).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER29).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER30).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER31).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER32).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER33).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER34).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER35).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER36).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER37).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER38).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER39).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER40).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER41).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER42).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER43).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER44).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER45).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER46).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER47).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER48).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER49).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER50).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER51).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER52).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER53).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER54).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER55).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER56).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER57).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER58).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER59).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER60).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER61).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER62).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER63).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER64).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER65).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER66).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER67).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER68).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER69).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER70).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER71).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER72).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER73).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER74).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER75).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER76).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER77).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER78).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER79).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER80).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER81).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER82).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER83).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER84).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER85).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER86).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER87).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER88).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER89).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER90).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER91).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER92).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER93).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER94).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER95).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER96).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER97).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER98).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER99).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER100).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER101).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER102).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER103).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER103).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER104).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER105).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER106).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER107).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER108).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER109).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER110).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER111).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER112).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER113).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER114).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER115).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER116).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER117).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER118).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER119).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER120).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER121).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER122).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER123).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER124).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER125).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER126).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER127).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER128).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER129).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER130).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER131).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER132).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER133).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER134).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER135).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER136).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER137).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER138).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER139).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER140).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER141).getConceptId()
+		
+		);
+	}
+	
 	public static List<Integer> getAllOtherDiseasesList() {
 		List<Integer> allListedDiagnosis = new ArrayList<Integer>();
 		
 		allListedDiagnosis.addAll(getDiarrheaDiagnosisList());
+		allListedDiagnosis.addAll(getAutismList());
+		allListedDiagnosis.addAll(getJiggersInfestationList());
+		allListedDiagnosis.addAll(getOtherConvulsiveDisordersList());
+		allListedDiagnosis.addAll(getSexuallyTransmittedInfectionsList());
+		allListedDiagnosis.addAll(getSuspectedMalariaResults());
+		allListedDiagnosis.addAll(getConfirmedMalariaResults());
+		allListedDiagnosis.addAll(getRoadTrafficInjuriesList());
+		allListedDiagnosis.addAll(getOtherCentralNervousSystemConditionsList());
+		allListedDiagnosis.addAll(getCerebralPalsyList());
+		allListedDiagnosis.addAll(getMalariaInPregnancyList());
+		allListedDiagnosis.addAll(getEarInfectionConditionsList());
+		allListedDiagnosis.addAll(getRicketsList());
 		allListedDiagnosis.addAll(getTuberculosisDiagnosisList());
 		allListedDiagnosis.addAll(getDysenteryList());
 		allListedDiagnosis.addAll(getMeningococcalMeningitisList());
@@ -6447,7 +6375,6 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getMeaslesList());
 		allListedDiagnosis.addAll(getHepatitisList());
 		allListedDiagnosis.addAll(getMumpsList());
-		allListedDiagnosis.addAll(getFeversList());
 		allListedDiagnosis.addAll(getMalariaList());
 		allListedDiagnosis.addAll(getUrinaryTractInfectionList());
 		allListedDiagnosis.addAll(getTyphoidList());
@@ -6488,6 +6415,11 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getFistulaBirthRelatedList());
 		allListedDiagnosis.addAll(getNeoplamsList());
 		allListedDiagnosis.addAll(getAmoebiasis());
+		allListedDiagnosis.addAll(getPhysicalDisabilityList());
+		allListedDiagnosis.addAll(getTryponomiasisList());
+		allListedDiagnosis.addAll(getKalazarLeishmaniasisList());
+		allListedDiagnosis.addAll(getYellowFeverList());
+		allListedDiagnosis.addAll(getViralHaemorrhagicFeverList());
 		
 		return allListedDiagnosis;
 	}

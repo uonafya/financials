@@ -95,10 +95,6 @@ public class Moh705aDatasetDefinition {
 		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMumpsList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "FC", "Fevers",
-		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getFeversList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
 		EhrReportingUtils.addRow(dsd, "SMC", "Suspected Malaria", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
 		        DiagnosisLists.getSuspectedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
@@ -277,21 +273,12 @@ public class Moh705aDatasetDefinition {
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getKalazarLeishmaniasisList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "DWC", "Daracuncolosis Guinea Worm",
-		    ReportUtils.map(
-		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDaracuncolosisGuineaWormList()),
-		        indParam), EhrAddonUtils.getAdultChildrenColumns());
-		
 		EhrReportingUtils.addRow(dsd, "YFC", "Yellow Fever", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getYellowFeverList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "VHC", "Viral Haemorrhagic Fever", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getViralHaemorrhagicFeverList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "PLC", "Plague",
-		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getPlagueList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(
