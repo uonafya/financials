@@ -1983,9 +1983,9 @@ public class EhrAddonsConstants {
 		
 		public static final String FEVER106 = "141564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER107 = "142591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String Dengue_haemorrhagic_fever = "142591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER108 = "142592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String Dengue_fever = "142592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String FEVER109 = "142629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -8718,6 +8718,9 @@ public class EhrAddonsConstants {
 		public static final String DENTAL_OPD = "548bf465-fdfb-43f1-836e-76d0416789bf";
 		
 		public static final String DENTAL_SPECIAL_CLINIC = "30aff715-92de-4662-aa33-fa6b6179fed0";
+
+		//Dangue fever
+		public static final String Dengue_Shock_Syndrome = "142590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
 	}
 	

@@ -355,6 +355,10 @@ public class Moh705bDatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "CKU", "Chikungunya fever",
 				ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getChikungunyaFeverList()), indParam),
 				EhrAddonUtils.getAdultChildrenColumns());
+
+		EhrReportingUtils.addRow(dsd, "DENF", "Dengue fever",
+				ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getDengueFeverList()), indParam),
+				EhrAddonUtils.getAdultChildrenColumns());
 		return dsd;
 		
 	}

@@ -6308,8 +6308,8 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER104).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER105).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER106).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER107).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER108).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_haemorrhagic_fever).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_fever).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER109).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER110).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER111).getConceptId(),
@@ -6355,12 +6355,19 @@ public class DiagnosisLists {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chikungunya_Fever).getConceptId(),
 				getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chikungunya_Haemorrhagic_Fever).getConceptId());
 	}
+
+	public static List<Integer> getDengueFeverList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_haemorrhagic_fever).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_fever).getConceptId(),
+				getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_Shock_Syndrome).getConceptId());
+	}
 	
 	public static List<Integer> getAllOtherDiseasesList() {
 		List<Integer> allListedDiagnosis = new ArrayList<Integer>();
 		
 		allListedDiagnosis.addAll(getDiarrheaDiagnosisList());
 		allListedDiagnosis.addAll(getChikungunyaFeverList());
+		allListedDiagnosis.addAll(getDengueFeverList());
 		allListedDiagnosis.addAll(getAutismList());
 		allListedDiagnosis.addAll(getJiggersInfestationList());
 		allListedDiagnosis.addAll(getOtherConvulsiveDisordersList());
