@@ -347,6 +347,10 @@ public class Moh705bDatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "AM", "AMOEBIASIS",
 		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAmoebiasis()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
+
+		EhrReportingUtils.addRow(dsd, "RVF", "Rift valley fever",
+				ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getRicketsList()), indParam),
+				EhrAddonUtils.getAdultChildrenColumns());
 		
 		return dsd;
 		

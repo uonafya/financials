@@ -1787,7 +1787,7 @@ public class EhrAddonsConstants {
 		
 		public static final String FEVER8 = "113213AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER9 = "113217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String RIFT_VALLEY_FEVER = "113217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String FEVER10 = "113228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		

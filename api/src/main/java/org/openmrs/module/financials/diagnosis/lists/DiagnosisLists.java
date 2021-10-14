@@ -4,7 +4,6 @@ import org.openmrs.module.financials.AutismDiagnosisConstants;
 import org.openmrs.module.financials.ConvulsiveDiagnosisConstants;
 import org.openmrs.module.financials.DiabetesDiagnosisConstants;
 import org.openmrs.module.financials.EhrAddonsConstants;
-import org.openmrs.module.financials.HivDiagnosisConstants;
 import org.openmrs.module.financials.MascularDiagnosisConstants;
 import org.openmrs.module.financials.MentalPalsyDiagnosisConstants;
 import org.openmrs.module.financials.OncologyDiagnosisConstants;
@@ -6210,7 +6209,7 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER6).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER7).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER8).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.RIFT_VALLEY_FEVER).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER10).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER11).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FEVER12).getConceptId(),
@@ -6347,6 +6346,10 @@ public class DiagnosisLists {
 		
 		);
 	}
+
+	public static List<Integer> getRiftValleyFeverList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.RIFT_VALLEY_FEVER).getConceptId());
+	}
 	
 	public static List<Integer> getAllOtherDiseasesList() {
 		List<Integer> allListedDiagnosis = new ArrayList<Integer>();
@@ -6420,7 +6423,8 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getKalazarLeishmaniasisList());
 		allListedDiagnosis.addAll(getYellowFeverList());
 		allListedDiagnosis.addAll(getViralHaemorrhagicFeverList());
-		
+		allListedDiagnosis.addAll(getRiftValleyFeverList());
+
 		return allListedDiagnosis;
 	}
 }
