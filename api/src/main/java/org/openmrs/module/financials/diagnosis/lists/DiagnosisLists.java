@@ -1212,15 +1212,10 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getEyeInfectionsList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.EI1).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EI2).getConceptId()
-		
-		);
-	}
-	
-	public static List<Integer> getOtherEyeConditionsList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE1).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EI1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.EI2).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE3).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE4).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OE5).getConceptId(),
@@ -6461,7 +6456,6 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getMalnutritionList());
 		allListedDiagnosis.addAll(getAnaemiaList());
 		allListedDiagnosis.addAll(getEyeInfectionsList());
-		allListedDiagnosis.addAll(getOtherEyeConditionsList());
 		allListedDiagnosis.addAll(getEarInfectionsConditionsList());
 		allListedDiagnosis.addAll(getUpperRespiratoryTractInfectionsList());
 		allListedDiagnosis.addAll(getAsthmaList());

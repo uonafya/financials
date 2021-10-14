@@ -148,10 +148,6 @@ public class Moh705bDatasetDefinition {
 		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getEyeInfectionsList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "OEYA", "Other Eye Conditions", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getOtherEyeConditionsList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
 		EhrReportingUtils
 		        .addRow(dsd, "EIA", "Ear Infection Conditions", ReportUtils.map(
 		            moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getEarInfectionConditionsList()),
