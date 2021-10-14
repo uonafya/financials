@@ -4550,7 +4550,7 @@ public class DiagnosisLists {
 		);
 	}
 	
-	public static List<Integer> getNewlyDiagnosedHivList() {
+	public static List<Integer> getNewlyDiagnosedHivList1() {
 		return Arrays.asList(
 		
 		getConcept(HivDiagnosisConstants.HIV_0).getConceptId(), getConcept(HivDiagnosisConstants.HIV_1).getConceptId(),
@@ -6481,7 +6481,6 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getDiabetesList());
 		allListedDiagnosis.addAll(getOtherBitesList());
 		allListedDiagnosis.addAll(getEpilepsyList());
-		allListedDiagnosis.addAll(getNewlyDiagnosedHivList());
 		allListedDiagnosis.addAll(getBrucellosisList());
 		allListedDiagnosis.addAll(getCardiovascularConditionsList());
 		allListedDiagnosis.addAll(getOvrerweightList());

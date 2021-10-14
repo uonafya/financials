@@ -248,10 +248,6 @@ public class Moh705bDatasetDefinition {
 		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getEpilepsyList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "NHA", "Newly Diagnosed Hiv", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getNewlyDiagnosedHivList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
 		EhrReportingUtils.addRow(dsd, "BRLA", "Brucellosis", ReportUtils.map(
 		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getBrucellosisList()), indParam), EhrAddonUtils
 		        .getAdultChildrenColumns());
