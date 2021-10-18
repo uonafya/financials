@@ -331,6 +331,22 @@ public class Moh705aDatasetDefinition {
 		        getConcept("477a7484-0f99-4026-b37c-261be587a70b").getConceptId(),
 		        getConcept("4fcf003e-71cf-47a5-a967-47d24aa61092").getConceptId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
+		
+		//Dehydrated related diagnosis
+		EhrReportingUtils.addRow(dsd, "DWSOD", "Diarrhoea with some dehydration",
+		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.mildDehydration()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils
+		        .addRow(dsd, "DWSED", "Diarrhoea with severe dehydration", ReportUtils.map(
+		            moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.severeDehydration()), indParam),
+		            EhrAddonUtils.getAdultChildrenColumns());
+
+		EhrReportingUtils
+				.addRow(dsd, "GAS", "Gastroenteritis", ReportUtils.map(
+						moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getGastroenteritisList()), indParam),
+						EhrAddonUtils.getAdultChildrenColumns());
+		
 		return dsd;
 		
 	}

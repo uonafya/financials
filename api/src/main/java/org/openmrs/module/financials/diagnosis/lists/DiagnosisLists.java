@@ -24,13 +24,9 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.ACUTE_DIARRHEA).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.FUNCTIONAL_DIARRHOEA).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Hemorrhagic_Diarrhea).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Bacterial_Gastroenteritis).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIARRHOEA).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIARRHOEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN)
-		            .getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.DIARRHEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN_1)
-		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Diarrhea_for_less_than_one_month)
-		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRONIC_DIARRHEA).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Diarrhea_for_less_than_one_month).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRONIC_DIARRHEA).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.WHO_HIV_CRYPTOSPORIDIOSIS_WITH_DIARRHEA).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Clostridium_Difficile_Diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Antibiotic_Associated_Diarrhea).getConceptId(),
@@ -60,9 +56,7 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Irritable_Bowel_Syndrome_with_Diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRONIC_DIARRHEA_1).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_diarrhea_more_than_three_stools_in_24_hours)
-		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Adverse_Reaction_of_Antidiarrheal_Drug)
-		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Bacterial_diarrhea).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.diarrhea_bacterial).getConceptId(),
+		            .getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chronic_Diarrhea_of_Infants_and_Young_Children).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Diarrhoea_chronic_1_month_unexplained).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chronic_diarrhea_of_unknown_origin).getConceptId(),
@@ -6362,6 +6356,18 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dengue_Shock_Syndrome).getConceptId());
 	}
 	
+	public static List<Integer> mildDehydration() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.DEHYDRATION).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Neonatal_dehydration).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dehydration).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Moderate_dehydration).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Mild_dehydration).getConceptId());
+	}
+	
+	public static List<Integer> severeDehydration() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.severe_dehydration).getConceptId());
+	}
+	
 	public static List<Integer> getCutaneousLeishmaniasisList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dry_Form_of_Cutaneous_Leishmaniasis)
 		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Zoonotic_Form_of_Cutaneous_Leishmaniasis)
@@ -6385,6 +6391,36 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Cutaneous_Anthrax).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Anthrax_Septicaemia).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Anthrax_Pneumonia).getConceptId());
+	}
+	
+	public static List<Integer> getGastroenteritisList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_8).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_10).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_11).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_14).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_13).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_15).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_16).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_17).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_18).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_19).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_20).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_21).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_22).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_23).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_24).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_25).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_26).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_27).getConceptId()
+				);
 	}
 	
 	public static List<Integer> getAllOtherDiseasesList() {
@@ -6464,6 +6500,9 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getYellowFeverList());
 		allListedDiagnosis.addAll(getViralHaemorrhagicFeverList());
 		allListedDiagnosis.addAll(getRiftValleyFeverList());
+		allListedDiagnosis.addAll(mildDehydration());
+		allListedDiagnosis.addAll(severeDehydration());
+		allListedDiagnosis.addAll(getGastroenteritisList());
 		
 		return allListedDiagnosis;
 	}

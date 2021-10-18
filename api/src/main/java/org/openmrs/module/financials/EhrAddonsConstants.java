@@ -605,15 +605,15 @@ public class EhrAddonsConstants {
 		
 		public static final String Hemorrhagic_Diarrhea = "138868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String Bacterial_Gastroenteritis = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final String Bacterial_Gastroenteritis = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String DIARRHEA_AMOEBIASIS = "14AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String DIARRHOEA = "16AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String DIARRHOEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN = "197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final String DIARRHOEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN = "197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String DIARRHEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN_1 = "900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final String DIARRHEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN_1 = "900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Diarrhea_for_less_than_one_month = "1467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -709,9 +709,9 @@ public class EhrAddonsConstants {
 		
 		public static final String Chronic_Diarrhea_of_Infants_and_Young_Children = "145444AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String diarrhea_bacterial = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final String diarrhea_bacterial = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String Bacterial_diarrhea = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final String Bacterial_diarrhea = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Adverse_Reaction_of_Antidiarrheal_Drug = "148588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -8760,6 +8760,72 @@ public class EhrAddonsConstants {
 		public static final String Anthrax_Septicaemia = "148600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Anthrax_Pneumonia = "148601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Dehydration
+		public static final String DEHYDRATION = "991AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Neonatal_dehydration = "133410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Dehydration = "142630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String severe_dehydration = "154015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Moderate_dehydration = "154016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Mild_dehydration = "154017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Gastroenteritis
+		public static final String Gastroenteritis_1 = "197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_2 = "428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_3 = "900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_4 = "112749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_5 = "113172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_6 = "117050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_7 = "117889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_8 = "118586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_9 = "123113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_10 = "123114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_11 = "124445AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_13 = "127943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_14 = "132860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_15 = "132941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_16 = "137284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_17 = "139591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_18 = "142379AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_19 = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_20 = "149097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_21 = "149098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_22 = "149725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_23 = "149727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_24 = "149779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_25 = "151875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_26 = "151876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastroenteritis_27 = "151877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 	}
 	
