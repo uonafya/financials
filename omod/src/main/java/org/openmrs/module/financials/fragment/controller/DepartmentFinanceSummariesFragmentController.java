@@ -30,11 +30,14 @@ public class DepartmentFinanceSummariesFragmentController {
 					if (opdTestOrder.getConcept().equals(
 					    Context.getConceptService().getConceptByUuid("0179f241-8c1d-47c1-8128-841f6508e251"))) {
 						generalRevenuePerUnit.setDepartment("LABORATORY");
+						generalRevenuePerUnit.setServicePaidFor(opdTestOrder.getConcept().getName().getName());
 					} else if (opdTestOrder.getConcept().equals(
 					    Context.getConceptService().getConceptByUuid("1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))) {
 						generalRevenuePerUnit.setDepartment("PROCEDURE ROOM");
+						generalRevenuePerUnit.setServicePaidFor(opdTestOrder.getConcept().getName().getName());
 					} else {
 						generalRevenuePerUnit.setDepartment(opdTestOrder.getFromDept());
+						generalRevenuePerUnit.setServicePaidFor(opdTestOrder.getConcept().getName().getName());
 					}
 					generalRevenuePerUnit.setTotalAmount(patientServiceBillItem.getActualAmount());
 					break;
