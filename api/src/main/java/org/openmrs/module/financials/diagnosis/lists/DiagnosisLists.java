@@ -6574,14 +6574,119 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_7).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_8).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_9).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_10).getConceptId());
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_10).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_11).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_12).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_13).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_14).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_15).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_16).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_17).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_18).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_19).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_20).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_21).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_22).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_23).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_24).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_25).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_26).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_27).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_28).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_29).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_30).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_31).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_32).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_33).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_34).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_35).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_36).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_37).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_38).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_39).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_40).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_41).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_42).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_43).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_44).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_45).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_46).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_47).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_48).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_49).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_50).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_51).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_52).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_53).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_54).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_55).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_56).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_57).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_58).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_59).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_60).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_61).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_62).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_63).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_64).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_65).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_66).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_67).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_68).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_69).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_70).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_71).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_72).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_73).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_74).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_75).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_76).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_77).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_78).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_79).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_80).getConceptId());
 	}
 	
 	public static List<Integer> getAllOtherDiseasesListForChildren() {
 		List<Integer> allListedDiagnosisForChildren = new ArrayList<Integer>();
 		allListedDiagnosisForChildren.addAll(getDiarrheaDiagnosisList());
+		allListedDiagnosisForChildren.addAll(mildDehydration());
+		allListedDiagnosisForChildren.addAll(severeDehydration());
+		allListedDiagnosisForChildren.addAll(severeDehydration());
+		allListedDiagnosisForChildren.addAll(getCholeraList());
+		allListedDiagnosisForChildren.addAll(getDysenteryList());
+		allListedDiagnosisForChildren.addAll(getGastroenteritisList());
+		allListedDiagnosisForChildren.addAll(getPneumoniaList());
+		allListedDiagnosisForChildren.addAll(getSeverePneumoniaList());
+		allListedDiagnosisForChildren.addAll(getUpperRespiratoryTractInfectionsList());
+		allListedDiagnosisForChildren.addAll(getSLowerTractInfectionList());
+		allListedDiagnosisForChildren.addAll(getAsthmaList());
+		allListedDiagnosisForChildren.addAll(getTuberculosisDiagnosisList());
+		allListedDiagnosisForChildren.addAll(getSuspectedMalariaResults());
+		allListedDiagnosisForChildren.addAll(getConfirmedMalariaResults());
+		allListedDiagnosisForChildren.addAll(getEarInfectionsConditionsList());
+		allListedDiagnosisForChildren.addAll(getMalnutritionList());
+		allListedDiagnosisForChildren.addAll(getAnaemiaList());
+		allListedDiagnosisForChildren.addAll(getMeningococcalMeningitisList());
+		allListedDiagnosisForChildren.addAll(getOtherMenigitisList());
+		allListedDiagnosisForChildren.addAll(getNeutalSepsisList());
+		allListedDiagnosisForChildren.addAll(getNeonatalTetanusList());
+		allListedDiagnosisForChildren.addAll(getPoliomyelitisList());
+		allListedDiagnosisForChildren.addAll(getChickenPoxList());
+		allListedDiagnosisForChildren.addAll(getMeaslesList());
+		allListedDiagnosisForChildren.addAll(getAmoebiasis());
+		allListedDiagnosisForChildren.addAll(getMumpsList());
+		allListedDiagnosisForChildren.addAll(getTyphoidList());
+		allListedDiagnosisForChildren.addAll(getTyphoidList());
+		
 		allListedDiagnosisForChildren.addAll(getReumonicFeverList());
 		allListedDiagnosisForChildren.addAll(getHypoxaemiaList());
+		allListedDiagnosisForChildren.addAll(getChildHoodCancerist());
+		allListedDiagnosisForChildren.addAll(getOtherDisOfRespiratorySystemList());
+		allListedDiagnosisForChildren.addAll(getNeutalSepsisList());
+		allListedDiagnosisForChildren.addAll(getSLowerTractInfectionList());
+		allListedDiagnosisForChildren.addAll(getSeverePneumoniaList());
+		
 		return allListedDiagnosisForChildren;
 	}
 }
