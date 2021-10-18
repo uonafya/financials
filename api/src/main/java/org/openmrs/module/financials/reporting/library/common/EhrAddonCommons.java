@@ -84,10 +84,15 @@ public class EhrAddonCommons {
 		cd.setName("has obs between dates");
 		cd.addParameter(new Parameter("endDate", "Before Date", Date.class));
 		cd.addParameter(new Parameter("startDate", "After Date", Date.class));
-		String sql = " SELECT patient_id FROM( " + " SELECT max_enc.patient_id, max_enc.encounter_date FROM ( "
+		String sql = " SELECT patient_id FROM( "
+		        + " SELECT max_enc.patient_id, max_enc.encounter_date FROM ( "
 		        + " SELECT p.patient_id AS patient_id, MAX(e.encounter_datetime) AS encounter_date FROM patient p "
-		        + " INNER JOIN encounter e " + " ON p.patient_id=e.patient_id " + " WHERE " + " p.voided=0 "
-		        + " AND e.voided=0" + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " INNER JOIN encounter e "
+		        + " ON p.patient_id=e.patient_id "
+		        + " WHERE "
+		        + " p.voided=0 "
+		        + " AND e.voided=0"
+		        + " AND e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
 		        + " AND e.encounter_type IN("
 		        + enc1
 		        + ","
@@ -108,13 +113,37 @@ public class EhrAddonCommons {
 		        + " AND ee.voided= 0  "
 		        + " AND pp.voided = 0 "
 		        + " AND o.voided=0 "
-		        + " AND ee.encounter_datetime BETWEEN :startDate AND :endDate "
-		        + " AND o.value_coded ="
-		        + answer
-		        + " )max_obs ON max_enc.patient_id=max_obs.patient_id "
+		        + " AND ee.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " AND o.value_coded =" + answer + " )max_obs ON max_enc.patient_id=max_obs.patient_id "
 		        
 		        + " WHERE max_enc.encounter_date = max_obs.encounter_date) out_table ";
 		cd.setQuery(sql);
+		return cd;
+	}
+	
+	public CohortDefinition getPatientRevisitsBasedOnVisits() {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("Has visits within a period of time REVISTS");
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.setQuery("SELECT tbl.patient_id FROM( "
+		        + " SELECT p.patient_id, COUNT(visit_id) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
+		        + " WHERE v.date_started BETWEEN DATE_ADD(:endDate, INTERVAL -12 MONTH) AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " GROUP BY p.patient_id HAVING COUNT(visit_id) > 1) tbl ");
+		
+		return cd;
+	}
+	
+	public CohortDefinition getPatientWithNewVisitsBasedOnVisits() {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("Has visits within a period of time NEW VISITS");
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.setQuery("SELECT tbl.patient_id FROM( "
+		        + " SELECT p.patient_id, COUNT(visit_id) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
+		        + " WHERE v.date_started BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " GROUP BY p.patient_id HAVING COUNT(visit_id) <= 1) tbl ");
+		
 		return cd;
 	}
 	

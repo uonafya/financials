@@ -82,6 +82,19 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
+	public CohortDefinition getExactOtherDiagnosisForPatientsMOH705A(List<Integer> list) {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Get exact other diagnosis for the children patients");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("OTHER",
+		    ReportUtils.map(getPatientsWhoHaveOtherDiagnosis705AWithAge(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("PASS",
+		    ReportUtils.map(getPatientsWhoHaveDiagnosis705AWithAge(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.setCompositionString("OTHER AND NOT PASS");
+		return cd;
+	}
+	
 	public CohortDefinition getPatientsWhoHaveDiagnosis705BWithAge(List<Integer> list) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Get adults with diagnosis");
@@ -96,13 +109,26 @@ public class Moh705CohortDefinition {
 	
 	public CohortDefinition getPatientsWhoHaveOtherDiagnosis705BWithAge(List<Integer> list) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
-		cd.setName("Get children with diagnosis");
+		cd.setName("Get adults with other diagnosis");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705B",
 		    ReportUtils.map(getPatientsWhoHaveOtherDiagnosis705(list), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("MOH705B AND ADULT");
+		return cd;
+	}
+	
+	public CohortDefinition getExactOtherDiagnosisForPatientsMOH705B(List<Integer> list) {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Get exact other diagnosis for the adults patients");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("OTHER",
+		    ReportUtils.map(getPatientsWhoHaveOtherDiagnosis705BWithAge(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("PASS",
+		    ReportUtils.map(getPatientsWhoHaveDiagnosis705BWithAge(list), "startDate=${startDate},endDate=${endDate}"));
+		cd.setCompositionString("OTHER AND NOT PASS");
 		return cd;
 	}
 	

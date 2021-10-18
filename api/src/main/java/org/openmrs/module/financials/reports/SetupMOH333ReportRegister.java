@@ -127,6 +127,7 @@ public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
 		
 		PatientDataSetDefinition allPatients = maternityDataSetDefinition();
+		allPatients.setName("mr");
 		allPatients.addRowFilter(allPatientsCohort());
 		//allPatients.addRowFilter(buildCohort(descriptor));
 		DataSetDefinition allPatientsDSD = allPatients;
@@ -143,7 +144,7 @@ public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 	
 	protected PatientDataSetDefinition maternityDataSetDefinition() {
 		
-		PatientDataSetDefinition dsd = new PatientDataSetDefinition("maternityAllClients");
+		PatientDataSetDefinition dsd = new PatientDataSetDefinition("mr");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,

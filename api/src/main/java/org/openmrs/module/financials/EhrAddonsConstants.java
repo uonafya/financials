@@ -1787,7 +1787,7 @@ public class EhrAddonsConstants {
 		
 		public static final String FEVER8 = "113213AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER9 = "113217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String RIFT_VALLEY_FEVER = "113217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String FEVER10 = "113228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -1807,9 +1807,9 @@ public class EhrAddonsConstants {
 		
 		public static final String FEVER18 = "119353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER19 = "120742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String Chikungunya_Fever = "120742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER20 = "120743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String Chikungunya_Haemorrhagic_Fever = "120743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String FEVER21 = "121005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -1983,9 +1983,9 @@ public class EhrAddonsConstants {
 		
 		public static final String FEVER106 = "141564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER107 = "142591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String Dengue_haemorrhagic_fever = "142591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String FEVER108 = "142592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String Dengue_fever = "142592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String FEVER109 = "142629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -8718,6 +8718,48 @@ public class EhrAddonsConstants {
 		public static final String DENTAL_OPD = "548bf465-fdfb-43f1-836e-76d0416789bf";
 		
 		public static final String DENTAL_SPECIAL_CLINIC = "30aff715-92de-4662-aa33-fa6b6179fed0";
+		
+		//Dangue fever
+		public static final String Dengue_Shock_Syndrome = "142590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Dry_Form_of_Cutaneous_Leishmaniasis = "118825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Zoonotic_Form_of_Cutaneous_Leishmaniasis = "122736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Wet_Form_of_Cutaneous_Leishmaniasis = "122866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Ulcerating_Cutaneous_Leishmaniasis = "123882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Recurrent_Cutaneous_Leishmaniasis = "127835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Late_Cutaneous_Leishmaniasis = "136110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Disseminated_Mucocutaneous_Leishmaniasis = "141897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Diffuse_Cutaneous_Leishmaniasis = "142362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Cutaneous_Leishmaniasis = "143074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Asian_Desert_Cutaneous_Leishmaniasis = "148329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String American_Cutaneous_Mucocutaneous_Leishmaniasis = "148988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Acute_Necrotising_Cutaneous_Leishmaniasis = "149635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Anthrax
+		public static final String Pulmonary_Anthrax = "116937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Contact_with_or_Exposure_to_Anthrax = "121554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Anthrax = "121555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Gastrointestinal_Anthrax = "139588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Cutaneous_Anthrax = "143086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Anthrax_Septicaemia = "148600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Anthrax_Pneumonia = "148601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 	}
 	

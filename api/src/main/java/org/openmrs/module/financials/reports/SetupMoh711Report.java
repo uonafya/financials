@@ -1,7 +1,6 @@
 package org.openmrs.module.financials.reports;
 
-import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
-import org.openmrs.module.financials.reporting.library.dataset.Moh705bDatasetDefinition;
+import org.openmrs.module.financials.reporting.library.dataset.Moh711DatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
@@ -19,15 +18,14 @@ import java.util.List;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 @Component
-@Builds({ "ehraddons.common.705b" })
-public class SetupMOH705bReport extends AbstractReportBuilder {
+@Builds({ "ehraddons.report.moh711" })
+public class SetupMoh711Report extends AbstractReportBuilder {
 	
-	private Moh705bDatasetDefinition moh705bDatasetDefinition;
+	private Moh711DatasetDefinition moh711DatasetDefinition;
 	
 	@Autowired
-	public SetupMOH705bReport(Moh705bDatasetDefinition moh705bDatasetDefinition,
-	    CommonDatasetDefinition commonDatasetDefinition) {
-		this.moh705bDatasetDefinition = moh705bDatasetDefinition;
+	public SetupMoh711Report(Moh711DatasetDefinition moh711DatasetDefinition) {
+		this.moh711DatasetDefinition = moh711DatasetDefinition;
 	}
 	
 	@Override
@@ -39,7 +37,6 @@ public class SetupMOH705bReport extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(map(moh705bDatasetDefinition.getMoh705bDataset(), "startDate=${startDate},endDate=${endDate}"));
+		return Arrays.asList(map(moh711DatasetDefinition.getMoh711Dataset(), "startDate=${startDate},endDate=${endDate}"));
 	}
-	
 }
