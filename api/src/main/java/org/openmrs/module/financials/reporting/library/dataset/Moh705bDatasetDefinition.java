@@ -305,8 +305,8 @@ public class Moh705bDatasetDefinition {
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "AODA", "All other diseases for adults", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithOtherDiagnosis(DiagnosisLists.getAllOtherDiseasesList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllAdultPatientsWithOtherDiagnosis(DiagnosisLists.getAllOtherDiseasesListForAdults()),
+		    indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "NFAA", "No. Of First Attendances",
 		    ReportUtils.map(moh705aIndicator.getNewAdultsPatients(), indParam), EhrAddonUtils.getAdultChildrenColumns());
@@ -348,8 +348,8 @@ public class Moh705bDatasetDefinition {
 		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAmoebiasis()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RVF", "Rift valley fever",
-		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getRicketsList()), indParam),
+		EhrReportingUtils.addRow(dsd, "RVF", "Rift valley fever", ReportUtils.map(
+		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getRiftValleyFeverList()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "CKU", "Chikungunya fever", ReportUtils.map(

@@ -1387,13 +1387,28 @@ public class DiagnosisLists {
 	}
 	
 	public static List<Integer> getUpperRespiratoryTractInfectionsList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.URT1).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.URT2).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.URT3).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.URT4).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.URT5).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.URT6).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.URT7).getConceptId()
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.UPPER_RESPIRATORY_TRACT_INFECTION)
+		        .getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.WHO_HIV_RECURRENT_UPPER_RESPIRATORY_INFECTIONS).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Congenital_Anomaly_of_Upper_Respiratory_System).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Congenital_Abnormality_of_Upper_Respiratory_Tract)
+		            .getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Benign_Neoplasm_of_Upper_Respiratory_Tract).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Viral_Upper_Respiratory_Tract_Infection).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Upper_Respiratory_Tract_Obstruction).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Upper_Respiratory_Tract_Hypersensitivity_Reaction)
+		            .getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Upper_Respiratory_Inflammation_due_to_Fumes_and_or_Vapors)
+		            .getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Upper_Respiratory_Inflammation_due_to_Chemical_Fumes)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Upper_Respiratory_Infection)
+		            .getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Recurrent_Upper_Respiratory_Tract_Infection).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Influenzal_Acute_Upper_Respiratory_Infection).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Disorder_of_Upper_Respiratory_System).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_Upper_Respiratory_Infection_of_Multiple_Sites)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_Upper_Respiratory_Infection)
+		            .getConceptId()
 		
 		);
 	}
@@ -1489,7 +1504,6 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.COAN3).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.COAN4).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.COAN5).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.COAN6).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.COAN7).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.COAN8).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.COAN9).getConceptId(),
@@ -1634,12 +1648,10 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_2).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_3).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_4).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_5).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_6).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_7).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_8).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_9).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_10).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_11).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_12).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_13).getConceptId(),
@@ -1651,7 +1663,6 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_19).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_20).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_21).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_22).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_23).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_24).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_25).getConceptId(),
@@ -1732,9 +1743,6 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_101).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_102).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_103).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_104).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_105).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_106).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_107).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_108).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_109).getConceptId(),
@@ -1744,24 +1752,12 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_113).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_114).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_115).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_116).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_117).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_118).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_119).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_120).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_121).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_122).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_123).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_124).getConceptId()
-		
-		);
-	}
-	
-	public static List<Integer> getOtherDisOfRespiratorySystemList() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OTHER_REP_1).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OTHER_REP_2).getConceptId()
-		
-		);
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.PNEUMONIA_122).getConceptId());
 	}
 	
 	public static List<Integer> getAbortionList() {
@@ -6419,15 +6415,57 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_24).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_25).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_26).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_27).getConceptId()
-				);
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Gastroenteritis_27).getConceptId());
 	}
 	
-	public static List<Integer> getAllOtherDiseasesList() {
+	public static List<Integer> getSeverePneumoniaList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.acute_bacterial_pneumonia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_Interstitial_Pneumonia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Chronic_Interstitial_Pneumonia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.acute_bronchitis_due_to_Mycoplasma_pneumoniae).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.acute_mucous_pneumonia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.bilateral_pneumonia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.neonatal_pneumonia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_bacterial_pneumonia_presumed).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Sub_acute_pneumonia_presumed_PCP).getConceptId());
+	}
+	
+	public static List<Integer> getSLowerTractInfectionList() {
+		return Arrays
+		        .asList(
+		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.Lower_Respiratory_Tract_Infection).getConceptId(),
+		            getConcept(
+		                EhrAddonsConstants._EhrAddOnConcepts.Chronic_Obstructive_Pulmonary_Disease_with_Acute_Lower_Respiratory_Infection)
+		                    .getConceptId(),
+		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.unspecified_acute_lower_respiratory_infection)
+		                    .getConceptId());
+	}
+	
+	public static List<Integer> getNeutalSepsisList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEUTAL_SEPISIS).getConceptId());
+	}
+	
+	public static List<Integer> getDownSyndromeList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.DOWN_SYNDROME).getConceptId());
+	}
+	
+	public static List<Integer> getOtherDisOfRespiratorySystemList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OTHER_REP_1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.OTHER_REP_2).getConceptId()
+		
+		);
+	}
+	
+	public static List<Integer> getAllOtherDiseasesListForAdults() {
 		List<Integer> allListedDiagnosis = new ArrayList<Integer>();
 		
 		allListedDiagnosis.addAll(getDiarrheaDiagnosisList());
+		allListedDiagnosis.addAll(getDownSyndromeList());
+		allListedDiagnosis.addAll(getOtherDisOfRespiratorySystemList());
+		allListedDiagnosis.addAll(getNeutalSepsisList());
+		allListedDiagnosis.addAll(getSLowerTractInfectionList());
 		allListedDiagnosis.addAll(getAnthraxList());
+		allListedDiagnosis.addAll(getSeverePneumoniaList());
 		allListedDiagnosis.addAll(getCutaneousLeishmaniasisList());
 		allListedDiagnosis.addAll(getChikungunyaFeverList());
 		allListedDiagnosis.addAll(getDengueFeverList());
@@ -6466,10 +6504,7 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getUpperRespiratoryTractInfectionsList());
 		allListedDiagnosis.addAll(getAsthmaList());
 		allListedDiagnosis.addAll(getTonsilitiesList());
-		allListedDiagnosis.addAll(getChromosomalAbnormalitiesList());
-		allListedDiagnosis.addAll(getCongenitalAnomaliesList());
 		allListedDiagnosis.addAll(getPneumoniaList());
-		allListedDiagnosis.addAll(getOtherDisOfRespiratorySystemList());
 		allListedDiagnosis.addAll(getAbortionList());
 		allListedDiagnosis.addAll(getDisOfPuerperiumChildbathList());
 		allListedDiagnosis.addAll(getHypertensionList());
@@ -6505,5 +6540,48 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getGastroenteritisList());
 		
 		return allListedDiagnosis;
+	}
+	
+	public static List<Integer> getReumonicFeverList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_8).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_10).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_11).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.REUMONIC_FEVER_12).getConceptId()
+		
+		);
+	}
+	
+	public static List<Integer> getHypoxaemiaList() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Hypoxaemia).getConceptId());
+	}
+	
+	public static List<Integer> getChildHoodCancerist() {
+		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_1).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_2).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_3).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_4).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_5).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_6).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_7).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_8).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_9).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCANCER_10).getConceptId());
+	}
+	
+	public static List<Integer> getAllOtherDiseasesListForChildren() {
+		List<Integer> allListedDiagnosisForChildren = new ArrayList<Integer>();
+		allListedDiagnosisForChildren.addAll(getDiarrheaDiagnosisList());
+		allListedDiagnosisForChildren.addAll(getReumonicFeverList());
+		allListedDiagnosisForChildren.addAll(getHypoxaemiaList());
+		return allListedDiagnosisForChildren;
 	}
 }

@@ -611,10 +611,6 @@ public class EhrAddonsConstants {
 		
 		public static final String DIARRHOEA = "16AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		//public static final String DIARRHOEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN = "197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		//public static final String DIARRHEA_AND_GASTROENTERITIS_OF_PRESUMED_INFECTIOUS_ORIGIN_1 = "900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
 		public static final String Diarrhea_for_less_than_one_month = "1467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String CHRONIC_DIARRHEA = "1468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
@@ -1431,11 +1427,6 @@ public class EhrAddonsConstants {
 		public static final String CHRONIC_EXTERNAL_EAR_INFECTION = "110889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//Respiratory Tract Infections
-		public static final String ACUTE_UPPER_RESPIRATORY_INFECTION = "149478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String VIRAL_UPPER_RESPIRATORY_TRACT_INFECTION = "123093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String RECURRENT_UPPER_RESPIRATORY_TRACT_INFECTION = "127784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String ASTHMA = "121375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -1444,8 +1435,6 @@ public class EhrAddonsConstants {
 		public static final String PNEUMONIA = "114100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String CHRONIC_DISEASE_OF_RESPIRATORY_SYSTEM = "145437AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String DISORDER_OF_UPPER_RESPIRATORY_SYSTEM = "141964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String MENTAL_DISORDER = "134337AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -3145,21 +3134,6 @@ public class EhrAddonsConstants {
 		
 		public static final String ERA7 = "156628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		//upper respiratory tract infections
-		public static final String URT1 = "120023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String URT2 = "121172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String URT3 = "123093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String URT4 = "123561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String URT5 = "123562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String URT6 = "127784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String URT7 = "149478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
 		//Atshima cases
 		
 		public static final String ASTHMA1 = "4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
@@ -3312,8 +3286,6 @@ public class EhrAddonsConstants {
 		public static final String COAN4 = "119956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String COAN5 = "120020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String COAN6 = "120022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String COAN7 = "120024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -3598,8 +3570,6 @@ public class EhrAddonsConstants {
 		
 		public static final String PNEUMONIA_4 = "1215AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String PNEUMONIA_5 = "1463AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
 		public static final String PNEUMONIA_6 = "5024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_7 = "110131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
@@ -3607,8 +3577,6 @@ public class EhrAddonsConstants {
 		public static final String PNEUMONIA_8 = "110290AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_9 = "110839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String PNEUMONIA_10 = "111028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_11 = "111802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -3631,8 +3599,6 @@ public class EhrAddonsConstants {
 		public static final String PNEUMONIA_20 = "115379AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_21 = "115447AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String PNEUMONIA_22 = "116708AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_23 = "116709AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -3794,12 +3760,6 @@ public class EhrAddonsConstants {
 		
 		public static final String PNEUMONIA_103 = "150584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String PNEUMONIA_104 = "154944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String PNEUMONIA_105 = "154964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String PNEUMONIA_106 = "155296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
 		public static final String PNEUMONIA_107 = "155714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_108 = "155715AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
@@ -3818,8 +3778,6 @@ public class EhrAddonsConstants {
 		
 		public static final String PNEUMONIA_115 = "157470AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String PNEUMONIA_116 = "157907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
 		public static final String PNEUMONIA_117 = "158384AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_118 = "158444AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
@@ -3831,10 +3789,6 @@ public class EhrAddonsConstants {
 		public static final String PNEUMONIA_121 = "158702AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String PNEUMONIA_122 = "159277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String PNEUMONIA_123 = "160437AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		
-		public static final String PNEUMONIA_124 = "160438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//respiratory disorders
 		public static final String OTHER_REP_1 = "148393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
@@ -8826,6 +8780,120 @@ public class EhrAddonsConstants {
 		public static final String Gastroenteritis_26 = "151876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Gastroenteritis_27 = "151877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//severe pneumonia
+		public static final String acute_bacterial_pneumonia = "1463AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Acute_Interstitial_Pneumonia = "111028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Chronic_Interstitial_Pneumonia = "116708AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String acute_bronchitis_due_to_Mycoplasma_pneumoniae = "154944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String acute_mucous_pneumonia = "154964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String bilateral_pneumonia = "155296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String neonatal_pneumonia = "157907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Acute_bacterial_pneumonia_presumed = "160437AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Sub_acute_pneumonia_presumed_PCP = "160438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//lower tract infection
+		public static final String Lower_Respiratory_Tract_Infection = "135556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Chronic_Obstructive_Pulmonary_Disease_with_Acute_Lower_Respiratory_Infection = "152062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String unspecified_acute_lower_respiratory_infection = "159222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//upeer tract infection
+		public static final String UPPER_RESPIRATORY_TRACT_INFECTION = "895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String WHO_HIV_RECURRENT_UPPER_RESPIRATORY_INFECTIONS = "5331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Congenital_Anomaly_of_Upper_Respiratory_System = "120022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Congenital_Abnormality_of_Upper_Respiratory_Tract = "120023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Benign_Neoplasm_of_Upper_Respiratory_Tract = "121172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Viral_Upper_Respiratory_Tract_Infection = "123093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Upper_Respiratory_Tract_Obstruction = "123561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Upper_Respiratory_Tract_Hypersensitivity_Reaction = "123562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Upper_Respiratory_Inflammation_due_to_Fumes_and_or_Vapors = "123563AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Upper_Respiratory_Inflammation_due_to_Chemical_Fumes = "123564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Upper_Respiratory_Infection = "123565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Recurrent_Upper_Respiratory_Tract_Infection = "127784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Influenzal_Acute_Upper_Respiratory_Infection = "137165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Disorder_of_Upper_Respiratory_System = "141964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Acute_Upper_Respiratory_Infection_of_Multiple_Sites = "149477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String Acute_Upper_Respiratory_Infection = "149478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Neutal Sepsis
+		public static final String NEUTAL_SEPISIS = "226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Down's syndrome
+		public static final String DOWN_SYNDROME = "144481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//Reumonic fever
+		public static final String REUMONIC_FEVER_1 = "1870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_2 = "113228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_3 = "113229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_4 = "113230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_5 = "121843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_6 = "127447AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_7 = "145182AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_8 = "149533AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_9 = "149939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_10 = "152161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_11 = "152456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String REUMONIC_FEVER_12 = "156659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//
+		public static final String Hypoxaemia = "117312AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//cHILDHOOD CANCERS
+		public static final String CCANCER_1 = "216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_2 = "217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_3 = "112679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_4 = "112683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_5 = "112685AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_6 = "115436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_7 = "115438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_8 = "115714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_9 = "116170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String CCANCER_10 = "116174AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 	}
 	
