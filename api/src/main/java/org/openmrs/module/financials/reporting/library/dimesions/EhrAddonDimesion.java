@@ -91,6 +91,21 @@ public class EhrAddonDimesion {
 	}
 	
 	/**
+	 *
+	 *
+	*/
+	public CohortDefinitionDimension getStandardAge() {
+		CohortDefinitionDimension dim = new CohortDefinitionDimension();
+		dim.addParameter(new Parameter("effectiveDate", "Effective Date", Date.class));
+		dim.setName("Standard age");
+		dim.addCohortDefinition("10-14", map(commonLibrary.createXtoYAgeCohort(10, 14), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("15-19", map(commonLibrary.createXtoYAgeCohort(15, 19), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("20-24", map(commonLibrary.createXtoYAgeCohort(20, 24), "effectiveDate=${effectiveDate}"));
+		
+		return dim;
+	}
+	
+	/**
 	 * Get patient gender
 	 * 
 	 * @return @{@link org.openmrs.module.reporting.indicator.dimension.CohortDimension}
@@ -199,19 +214,19 @@ public class EhrAddonDimesion {
 		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
 		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CohortDefinitionDimension dim = new CohortDefinitionDimension();
-		dim.setName("New or revists patients");
+		dim.setName("New or revisits patients");
 		dim.addParameter(new Parameter("startDate", "After date", Date.class));
 		dim.addParameter(new Parameter("endDate", "Before date", Date.class));
 		dim.addCohortDefinition(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
 		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+1d}"));
+		        "startDate=${startDate},endDate=${endDate+23h+59m}"));
 		dim.addCohortDefinition(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
 		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+1d}"));
+		        "startDate=${startDate},endDate=${endDate+23h+59m}"));
 		return dim;
 	}
 	
