@@ -217,16 +217,10 @@ public class EhrAddonDimesion {
 		dim.setName("New or revisits patients");
 		dim.addParameter(new Parameter("startDate", "After date", Date.class));
 		dim.addParameter(new Parameter("endDate", "Before date", Date.class));
-		dim.addCohortDefinition(
-		    "RVT",
-		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
-		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+23h+59m}"));
-		dim.addCohortDefinition(
-		    "NEW",
-		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
-		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
-		        "startDate=${startDate},endDate=${endDate+23h+59m}"));
+		dim.addCohortDefinition("RVT",
+		    map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate+23h+59m}"));
+		dim.addCohortDefinition("NEW",
+		    map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate+23h+59m}"));
 		return dim;
 	}
 	
