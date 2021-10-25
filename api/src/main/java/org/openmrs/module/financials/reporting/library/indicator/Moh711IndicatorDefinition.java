@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reporting.library.indicator;
 
+import org.openmrs.Concept;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh711CohortDefinition;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +19,10 @@ public class Moh711IndicatorDefinition {
 		this.moh711CohortDefinition = moh711CohortDefinition;
 	}
 	
-	public CohortIndicator getAllPatients() {
+	public CohortIndicator getAllAncClients(Concept... entryPoints) {
 		
-		return cohortIndicator("All",
-		    map(moh711CohortDefinition.getAllPatients(), "startDate=${startDate},endDate=${endDate}"));
+		return cohortIndicator("ANC Clients",
+		    map(moh711CohortDefinition.getAllAncPmtctClients(entryPoints), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 }

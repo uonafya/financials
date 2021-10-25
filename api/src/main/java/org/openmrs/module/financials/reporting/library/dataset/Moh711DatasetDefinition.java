@@ -4,6 +4,7 @@ import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesio
 import org.openmrs.module.financials.reporting.library.indicator.Moh711IndicatorDefinition;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
 import org.openmrs.module.kenyacore.report.ReportUtils;
+import org.openmrs.module.kenyaemr.Dictionary;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
@@ -30,7 +31,7 @@ public class Moh711DatasetDefinition {
 		this.ehrAddonDimesion = ehrAddonDimesion;
 	}
 	
-	public DataSetDefinition getMoh711Dataset() {
+	public DataSetDefinition getMohAncPmtctDataset() {
 		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
 		String indParams = "startDate=${startDate},endDate=${endDate}";
 		dsd.setName("A");
@@ -55,9 +56,10 @@ public class Moh711DatasetDefinition {
 		List<ColumnParameters> femaleColumns = Arrays.asList(f10To14, f15To19, f20To24, total);
 		List<ColumnParameters> femaleStatesColumns = Arrays.asList(fNew, fRevisit, fTotal);
 		
-		//EhrReportingUtils.addRow(dsd, "A1-1", "No. of ANC Clients", ReportUtils.map(hivIndicators.enrolledExcludingTransfersAndReferredFrom(pmtct), indParams), femaleStatesColumns);
+		EhrReportingUtils.addRow(dsd, "A1-1", "No. of ANC Clients", ReportUtils.map(
+		    moh711IndicatorDefinition.getAllAncClients(Dictionary.getConcept(Dictionary.PMTCT_PROGRAM)), indParams),
+		    femaleStatesColumns);
 		
-		dsd.addColumn("PALL", "ALL PATIENTS", ReportUtils.map(moh711IndicatorDefinition.getAllPatients(), indParams), "");
 		return dsd;
 	}
 	
