@@ -1,15 +1,25 @@
 package org.openmrs.module.financials.reporting.library.common;
 
+import org.openmrs.Concept;
+import org.openmrs.EncounterType;
+import org.openmrs.Program;
+import org.openmrs.api.PatientSetService;
 import org.openmrs.module.financials.reporting.calculation.EncountersBasedOnDaySuppliedCalculation;
 import org.openmrs.module.kenyacore.report.cohort.definition.CalculationCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.AgeCohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.CodedObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.EncounterCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.GenderCohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.ProgramEnrollmentCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.common.DurationUnit;
+import org.openmrs.module.reporting.common.SetComparator;
+import org.openmrs.module.reporting.common.TimeQualifier;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Date;
 
 @Component
@@ -200,6 +210,59 @@ public class EhrAddonCommons {
 		cd.setMaxAge(maxAge);
 		cd.setMinAgeUnit(DurationUnit.MONTHS);
 		cd.setMaxAgeUnit(DurationUnit.MONTHS);
+		return cd;
+	}
+	
+	/**
+	 * Patients who have an encounter between ${onOrAfter} and ${onOrBefore}
+	 * 
+	 * @param types the encounter types
+	 * @return the cohort definition
+	 */
+	public CohortDefinition hasEncounter(EncounterType... types) {
+		EncounterCohortDefinition cd = new EncounterCohortDefinition();
+		cd.setName("has encounter between dates");
+		cd.setTimeQualifier(TimeQualifier.ANY);
+		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		if (types.length > 0) {
+			cd.setEncounterTypeList(Arrays.asList(types));
+		}
+		return cd;
+	}
+	
+	/**
+	 * Patients who have an obs between ${onOrAfter} and ${onOrBefore}
+	 * 
+	 * @param question the question concept
+	 * @param answers the answers to include
+	 * @return the cohort definition
+	 */
+	public CohortDefinition hasObs(Concept question, Concept... answers) {
+		CodedObsCohortDefinition cd = new CodedObsCohortDefinition();
+		cd.setName("has obs between dates");
+		cd.setQuestion(question);
+		cd.setOperator(SetComparator.IN);
+		cd.setTimeModifier(PatientSetService.TimeModifier.ANY);
+		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		if (answers.length > 0) {
+			cd.setValueList(Arrays.asList(answers));
+		}
+		return cd;
+	}
+	
+	/**
+	 * Patients enrolled in different programs within the EHR
+	 */
+	public CohortDefinition programEnrollment(Program... programs) {
+		ProgramEnrollmentCohortDefinition cd = new ProgramEnrollmentCohortDefinition();
+		cd.setName("enrolled in program between dates");
+		cd.addParameter(new Parameter("enrolledOnOrAfter", "After Date", Date.class));
+		cd.addParameter(new Parameter("enrolledOnOrBefore", "Before Date", Date.class));
+		if (programs.length > 0) {
+			cd.setPrograms(Arrays.asList(programs));
+		}
 		return cd;
 	}
 }

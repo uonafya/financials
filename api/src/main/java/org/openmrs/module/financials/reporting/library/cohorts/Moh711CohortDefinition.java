@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.EncounterType;
 import org.openmrs.Program;
 import org.openmrs.api.PatientSetService;
+import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
 import org.openmrs.module.kenyaemr.Dictionary;
 import org.openmrs.module.kenyaemr.metadata.HivMetadata;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
@@ -11,8 +12,10 @@ import org.openmrs.module.reporting.cohort.definition.CodedObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CompositionCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.ProgramEnrollmentCohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.common.SetComparator;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -24,6 +27,13 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh711CohortDefinition {
 	
+	private EhrAddonCommons ehrAddonCommons;
+	
+	@Autowired
+	public Moh711CohortDefinition(EhrAddonCommons ehrAddonCommons) {
+		this.ehrAddonCommons = ehrAddonCommons;
+	}
+	
 	public CohortDefinition getAllAncPmtctClients(Concept... entryPoints) {
 		Program program = MetadataUtils.existing(Program.class, "e8751e5c-fbda-11ea-9bba-ff7e8cea17d3");
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
@@ -31,7 +41,8 @@ public class Moh711CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("MOH 711 patients - ANC and PMTCT Clients");
 		cd.addSearch("PMTCTHIV", map(referredFrom(entryPoints), "onOrAfter=${startDate},onOrBefore=${endDate}"));
-		cd.addSearch("ANC", map(programEnrollment(program), "enrolledOnOrAfter=${startDate},enrolledOnOrBefore=${endDate}"));
+		cd.addSearch("ANC",
+		    map(ehrAddonCommons.programEnrollment(program), "enrolledOnOrAfter=${startDate},enrolledOnOrBefore=${endDate}"));
 		cd.setCompositionString("PMTCTHIV OR ANC");
 		return cd;
 	}
@@ -59,17 +70,49 @@ public class Moh711CohortDefinition {
 		return cd;
 	}
 	
-	/**
-	 * Patients enrolled in different programs within the EHR
-	 */
-	public CohortDefinition programEnrollment(Program... programs) {
-		ProgramEnrollmentCohortDefinition cd = new ProgramEnrollmentCohortDefinition();
-		cd.setName("enrolled in program between dates");
-		cd.addParameter(new Parameter("enrolledOnOrAfter", "After Date", Date.class));
-		cd.addParameter(new Parameter("enrolledOnOrBefore", "Before Date", Date.class));
-		if (programs.length > 0) {
-			cd.setPrograms(Arrays.asList(programs));
+	public CohortDefinition getPatientVaccines(Concept... answers) {
+		Concept immunization = Dictionary.getConcept(Dictionary.IMMUNIZATIONS);
+		CodedObsCohortDefinition cd = new CodedObsCohortDefinition();
+		cd.setName("referred from");
+		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		cd.setTimeModifier(PatientSetService.TimeModifier.ANY);
+		cd.setQuestion(immunization);
+		cd.setValueList(Arrays.asList(answers));
+		cd.setOperator(SetComparator.IN);
+		return cd;
+	}
+	
+	public CohortDefinition getIptVaccinesGivenToMothers(int squence) {
+		Program program = MetadataUtils.existing(Program.class, "335517a1-04bc-438b-9843-1ba49fb7fcd9");
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("IPT Vaccines given to the maother");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("program",
+		    map(ehrAddonCommons.programEnrollment(program), "enrolledOnOrAfter=${startDate},enrolledOnOrBefore=${endDate}"));
+		cd.addSearch("dose1", map(getIptDosesSql(1), ""));
+		cd.addSearch("dose2", map(getIptDosesSql(2), ""));
+		cd.addSearch("dose3", map(getIptDosesSql(3), ""));
+		if (squence == 1) {
+			cd.setCompositionString("(program AND dose1) AND NOT (dose2 OR dose3)");
+		} else if (squence == 2) {
+			cd.setCompositionString("(program AND dose2) AND NOT (dose1 OR dose3)");
+		} else if (squence == 3) {
+			cd.setCompositionString("(program AND dose3) AND NOT (dose1 OR dose2)");
 		}
+		
+		return cd;
+	}
+	
+	private CohortDefinition getIptDosesSql(int threshold) {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		EncounterType iptEncounterType = MetadataUtils.existing(EncounterType.class, "aadeafbe-a3b1-4c57-bc76-8461b778ebd6");
+		cd.setName("IPT doses in sequency");
+		cd.setQuery("SELECT hold.patient_id FROM (SELECT p.patient_id, COUNT(e.encounter_id) FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		        + " WHERE p.voided=0 AND e.voided=0 AND e.encounter_type="
+		        + iptEncounterType.getEncounterTypeId()
+		        + " GROUP BY p.patient_id HAVING COUNT(e.encounter_id)=" + threshold + ") hold");
 		return cd;
 	}
 }

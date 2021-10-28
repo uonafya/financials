@@ -59,6 +59,12 @@ public class Moh711DatasetDefinition {
 		EhrReportingUtils.addRow(dsd, "A1-1", "No. of ANC Clients", ReportUtils.map(
 		    moh711IndicatorDefinition.getAllAncClients(Dictionary.getConcept(Dictionary.PMTCT_PROGRAM)), indParams),
 		    femaleStatesColumns);
+		dsd.addColumn("A2", "Number of clients given IPT (1st dose)",
+		    map(moh711IndicatorDefinition.getAllImmunizedPatientsOnIPT(1), ""), "");
+		dsd.addColumn("A3", "Number of clients given IPT (2nd dose)",
+		    map(moh711IndicatorDefinition.getAllImmunizedPatientsOnIPT(2), ""), "");
+		dsd.addColumn("A4", "Number of clients given IPT (3rd dose)",
+		    map(moh711IndicatorDefinition.getAllImmunizedPatientsOnIPT(3), ""), "");
 		
 		return dsd;
 	}

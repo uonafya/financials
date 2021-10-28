@@ -25,4 +25,10 @@ public class Moh711IndicatorDefinition {
 		    map(moh711CohortDefinition.getAllAncPmtctClients(entryPoints), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
+	public CohortIndicator getAllImmunizedPatientsOnIPT(int sequence) {
+		
+		return cohortIndicator("Immunized Clients on IPT",
+		    map(moh711CohortDefinition.getIptVaccinesGivenToMothers(sequence), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
 }
