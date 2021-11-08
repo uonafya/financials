@@ -4,16 +4,23 @@ import org.openmrs.Concept;
 import org.openmrs.EncounterType;
 import org.openmrs.Program;
 import org.openmrs.api.PatientSetService;
+import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
+import org.openmrs.module.financials.reporting.calculation.GestationPeriodCalculation;
 import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
+import org.openmrs.module.kenyacore.report.cohort.definition.CalculationCohortDefinition;
+import org.openmrs.module.kenyacore.report.data.patient.definition.CalculationDataDefinition;
 import org.openmrs.module.kenyaemr.Dictionary;
 import org.openmrs.module.kenyaemr.metadata.HivMetadata;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CodedObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CompositionCohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.NumericObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.ProgramEnrollmentCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
+import org.openmrs.module.reporting.common.RangeComparator;
 import org.openmrs.module.reporting.common.SetComparator;
+import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -70,14 +77,13 @@ public class Moh711CohortDefinition {
 		return cd;
 	}
 	
-	public CohortDefinition getPatientVaccines(Concept... answers) {
-		Concept immunization = Dictionary.getConcept(Dictionary.IMMUNIZATIONS);
+	public CohortDefinition getPatientWithCodedObs(Concept question, Concept... answers) {
 		CodedObsCohortDefinition cd = new CodedObsCohortDefinition();
-		cd.setName("referred from");
+		cd.setName("Has observation of " + question.getName().getName());
 		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
 		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
 		cd.setTimeModifier(PatientSetService.TimeModifier.ANY);
-		cd.setQuestion(immunization);
+		cd.setQuestion(question);
 		cd.setValueList(Arrays.asList(answers));
 		cd.setOperator(SetComparator.IN);
 		return cd;
@@ -114,5 +120,37 @@ public class Moh711CohortDefinition {
 		        + iptEncounterType.getEncounterTypeId()
 		        + " GROUP BY p.patient_id HAVING COUNT(e.encounter_id)=" + threshold + ") hold");
 		return cd;
+	}
+	
+	public CohortDefinition getAllClientsWithHbLessThanAthreshold(Concept question, int threshold,
+	        RangeComparator rangeComparator) {
+		NumericObsCohortDefinition cd = new NumericObsCohortDefinition();
+		cd.setName("Threshold value for the " + question.getName().getName() + " of value <" + threshold);
+		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		cd.setTimeModifier(PatientSetService.TimeModifier.ANY);
+		cd.setQuestion(question);
+		cd.setOperator1(rangeComparator);
+		cd.setValue1((double) threshold);
+		return cd;
+	}
+	
+	public CohortDefinition getMotherServicesProgramAndServices(Program program, Concept question, Concept... ans) {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Program and services offered to the pregnant women");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("PROGRAM",
+		    map(ehrAddonCommons.programEnrollment(program), "enrolledOnOrAfter=${startDate},enrolledOnOrBefore=${endDate}"));
+		cd.addSearch("CODED", map(getPatientWithCodedObs(question, ans), "onOrAfter=${startDate},onOrBefore=${endDate}"));
+		cd.setCompositionString("PROGRAM OR CODED");
+		return cd;
+	}
+	
+	public CohortDefinition getGestationPeriod() {
+		CalculationCohortDefinition cd = new CalculationCohortDefinition("Gestation", new GestationPeriodCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+		
 	}
 }

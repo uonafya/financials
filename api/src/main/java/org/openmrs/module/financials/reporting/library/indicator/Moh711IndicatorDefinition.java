@@ -1,7 +1,9 @@
 package org.openmrs.module.financials.reporting.library.indicator;
 
 import org.openmrs.Concept;
+import org.openmrs.Program;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh711CohortDefinition;
+import org.openmrs.module.reporting.common.RangeComparator;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -29,6 +31,36 @@ public class Moh711IndicatorDefinition {
 		
 		return cohortIndicator("Immunized Clients on IPT",
 		    map(moh711CohortDefinition.getIptVaccinesGivenToMothers(sequence), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getAllClientsWithMumericValuesComparedToAthreshold(Concept concept, int threshold,
+	        RangeComparator rangeComparator) {
+		
+		return cohortIndicator(
+		    "Numeric values comapred to threshold",
+		    map(moh711CohortDefinition.getAllClientsWithHbLessThanAthreshold(concept, threshold, rangeComparator),
+		        "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getPatientWithCodedObs(Concept concept, Concept... answers) {
+		
+		return cohortIndicator(
+		    "Number of patients with coded obs over time",
+		    map(moh711CohortDefinition.getPatientWithCodedObs(concept, answers), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getPatientWithCodedObsAndProgram(Program program, Concept question, Concept... ans) {
+		
+		return cohortIndicator(
+		    "Number of patients with coded obs over time and program",
+		    map(moh711CohortDefinition.getMotherServicesProgramAndServices(program, question, ans),
+		        "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getPatientGestationPeriod() {
+		
+		return cohortIndicator("Number of patients with gestation period of 121 weeks",
+		    map(moh711CohortDefinition.getGestationPeriod(), "endDate=${endDate}"));
 	}
 	
 }

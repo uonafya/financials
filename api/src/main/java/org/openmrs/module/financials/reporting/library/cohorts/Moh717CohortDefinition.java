@@ -127,7 +127,7 @@ public class Moh717CohortDefinition {
 		cd.setName("Get new patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate+23h}"));
+		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("NEW", map(getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
 		
 		cd.setCompositionString("SPC AND NEW");
@@ -149,7 +149,7 @@ public class Moh717CohortDefinition {
 		cd.setName("Get revisit patients on special clinics");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate+23h}"));
+		cd.addSearch("SPC", map(getSpecialClinicPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("RVT", map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
 		
 		cd.setCompositionString("SPC AND RVT");
@@ -200,9 +200,9 @@ public class Moh717CohortDefinition {
 		cd.addSearch(
 		    "CLINIC",
 		    map(getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.MOPC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
-		cd.addSearch("TOPD", map(getMopcFromTriageOrOpd(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
-		cd.addSearch("LOG", map(getMopcFromOpdLog(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		cd.addSearch("TOPD", map(getMopcFromTriageOrOpd(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
+		cd.addSearch("LOG", map(getMopcFromOpdLog(), "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		
 		cd.setCompositionString("(CLINIC OR TOPD OR LOG)");
 		return cd;
@@ -249,11 +249,11 @@ public class Moh717CohortDefinition {
 		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND p.voided=0 AND e.voided=0 AND o.voided=0 " + " AND o.value_coded IN(" + c1 + "," + c2 + ")");
 		
-		compositionCohortDefinition.addSearch("SPD", map(cd, "startDate=${startDate},endDate=${endDate+23h}"));
+		compositionCohortDefinition.addSearch("SPD", map(cd, "startDate=${startDate},endDate=${endDate}"));
 		compositionCohortDefinition.addSearch(
 		    "DIAGNOSIS",
 		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705(DiagnosisLists.getDentalDisordersList()),
-		        "startDate=${startDate},endDate=${endDate+23h}"));
+		        "startDate=${startDate},endDate=${endDate}"));
 		compositionCohortDefinition.setCompositionString("SPD OR DIAGNOSIS");
 		return compositionCohortDefinition;
 	}
