@@ -147,9 +147,10 @@ public class Moh711CohortDefinition {
 		return cd;
 	}
 	
-	public CohortDefinition getGestationPeriod() {
+	public CohortDefinition getGestationPeriod(Integer period) {
 		CalculationCohortDefinition cd = new CalculationCohortDefinition("Gestation", new GestationPeriodCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addCalculationParameter("period", period);
 		return cd;
 		
 	}

@@ -8807,6 +8807,10 @@ public class EhrAddonsConstants {
 		
 		public static final String unspecified_acute_lower_respiratory_infection = "159222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		public static final String RESPIRATORY_TRACT_INFECTION_LOWER = "998AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String RESPIRATORY_TRACT_COVID = "165868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 		//upeer tract infection
 		public static final String UPPER_RESPIRATORY_TRACT_INFECTION = "895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
@@ -8839,6 +8843,8 @@ public class EhrAddonsConstants {
 		public static final String Acute_Upper_Respiratory_Infection_of_Multiple_Sites = "149477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String Acute_Upper_Respiratory_Infection = "149478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String COVID = "165633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//Neutal Sepsis
 		public static final String NEUTAL_SEPISIS = "226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";

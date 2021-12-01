@@ -1408,7 +1408,7 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Disorder_of_Upper_Respiratory_System).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_Upper_Respiratory_Infection_of_Multiple_Sites)
 		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Acute_Upper_Respiratory_Infection)
-		            .getConceptId()
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.COVID).getConceptId()
 		
 		);
 	}
@@ -6437,6 +6437,8 @@ public class DiagnosisLists {
 		            getConcept(
 		                EhrAddonsConstants._EhrAddOnConcepts.Chronic_Obstructive_Pulmonary_Disease_with_Acute_Lower_Respiratory_Infection)
 		                    .getConceptId(),
+		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.RESPIRATORY_TRACT_INFECTION_LOWER).getConceptId(),
+		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.RESPIRATORY_TRACT_COVID).getConceptId(),
 		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.unspecified_acute_lower_respiratory_infection)
 		                    .getConceptId());
 	}

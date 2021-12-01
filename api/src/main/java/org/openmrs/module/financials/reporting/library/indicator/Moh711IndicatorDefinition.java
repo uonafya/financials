@@ -57,10 +57,10 @@ public class Moh711IndicatorDefinition {
 		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getPatientGestationPeriod() {
+	public CohortIndicator getPatientGestationPeriod(int period) {
 		
-		return cohortIndicator("Number of patients with gestation period of 121 weeks",
-		    map(moh711CohortDefinition.getGestationPeriod(), "endDate=${endDate}"));
+		return cohortIndicator("Number of patients with gestation period of 12 weeks",
+		    map(moh711CohortDefinition.getGestationPeriod(period), "endDate=${endDate}"));
 	}
 	
 }

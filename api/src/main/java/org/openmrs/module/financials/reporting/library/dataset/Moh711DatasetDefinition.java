@@ -35,6 +35,7 @@ public class Moh711DatasetDefinition {
 		this.ehrAddonDimesion = ehrAddonDimesion;
 	}
 	
+	//A
 	public DataSetDefinition getMohAncPmtctDataset() {
 		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
 		String indParams = "startDate=${startDate},endDate=${endDate}";
@@ -71,6 +72,8 @@ public class Moh711DatasetDefinition {
 		Concept yes = Dictionary.getConcept("1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 		Concept serviceType = Dictionary.getConcept("160478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 		Concept anc = Dictionary.getConcept("1622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+		Concept ironFollate = Dictionary.getConcept("104677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+		Concept ironGiven = Dictionary.getConcept("161004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 		
 		//program diclarartion
 		Program ancProgram = MetadataUtils.existing(Program.class, "335517a1-04bc-438b-9843-1ba49fb7fcd9");
@@ -117,7 +120,48 @@ public class Moh711DatasetDefinition {
 		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), ""),
 		    "gender=F|age=20-24");
 		dsd.addColumn("A16", "No. of Women presenting with pregnancy  at 1ST ANC in the First Trimeseter(<= 12 Weeks)",
-		    map(moh711IndicatorDefinition.getPatientGestationPeriod(), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientGestationPeriod(12), ""), "gender=F");
+		dsd.addColumn("A17", "No. of clients issued with Iron",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironGiven, yes), ""), "gender=F");
+		dsd.addColumn("A16", "No. of clients issued with Folic",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironFollate, yes), ""), "gender=F");
+		dsd.addColumn("A19", "No. of clients issued with Combined Ferrous Folate",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), ""), "gender=F");
+		dsd.addColumn("A20", "No. of pregnant women presenting in ANC with complication associated with FGM",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), ""), "gender=F");
+		
+		return dsd;
+	}
+	
+	//B
+	public DataSetDefinition getMohMeternityAndNewBornsDataset() {
+		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+		String indParams = "startDate=${startDate},endDate=${endDate}";
+		dsd.setName("B");
+		dsd.setDescription("Maternity and Newborn");
+		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		
+		dsd.addColumn(
+		    "B1",
+		    "Normal Deliveries",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
+		        Dictionary.getConcept("1170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
+		dsd.addColumn(
+		    "B2",
+		    "Caesarean Sections",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
+		        Dictionary.getConcept("1171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
+		dsd.addColumn(
+		    "B3",
+		    "Breech Delivery",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
+		        Dictionary.getConcept("1172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
+		dsd.addColumn(
+		    "B4",
+		    "Assisted Vaginal Deliveries (Vacuum Extraction)",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
+		        Dictionary.getConcept("118159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
 		
 		return dsd;
 	}
