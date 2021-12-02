@@ -47,18 +47,11 @@ public class Moh711DatasetDefinition {
 		dsd.addDimension("gender", ReportUtils.map(ehrAddonDimesion.getGender()));
 		dsd.addDimension("state", map(ehrAddonDimesion.newOrRevisits(), "startDate=${startDate},endDate=${endDate}"));
 		
-		//add the required dimension
-		ColumnParameters f10To14 = new ColumnParameters("FA1014", "10-14 years, female", "gender=F|age=10-14", "01");
-		ColumnParameters f15To19 = new ColumnParameters("FA1519", "15-19 years, female", "gender=F|age=15-19", "02");
-		ColumnParameters f20To24 = new ColumnParameters("FA2024", "20-24 years, female", "gender=F|age=20-24", "03");
-		ColumnParameters total = new ColumnParameters("FAT", "Total female", "", "04");
-		
 		//Add state dimensions
 		ColumnParameters fNew = new ColumnParameters("FANEW", "New cases female", "state=NEW", "01");
 		ColumnParameters fRevisit = new ColumnParameters("FARVT", "Revisit cases female", "state=RVT", "02");
 		ColumnParameters fTotal = new ColumnParameters("FATT", "Total cases female", "", "03");
 		
-		List<ColumnParameters> femaleColumns = Arrays.asList(f10To14, f15To19, f20To24, total);
 		List<ColumnParameters> femaleStatesColumns = Arrays.asList(fNew, fRevisit, fTotal);
 		
 		//concepts declarations
@@ -175,6 +168,31 @@ public class Moh711DatasetDefinition {
 		        Dictionary.getConcept("5916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), 2500, RangeComparator.LESS_THAN), indParams),
 		    "");
 		
+		return dsd;
+	}
+	
+	//C
+	public DataSetDefinition getSexualAndGenderBasedViolence() {
+		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+		String indParams = "startDate=${startDate},endDate=${endDate}";
+		dsd.setName("C");
+		dsd.setDescription("Maternity and Newborn");
+		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsd.addDimension("age", ReportUtils.map(ehrAddonDimesion.getStandardAge(), "effectiveDate=${endDate}"));
+		//add the required dimension
+		ColumnParameters zeroTo9 = new ColumnParameters("zeroTo9", "0-9 years", "age=0-9", "01");
+		ColumnParameters tenTo17 = new ColumnParameters("tenTo17", "10-17 years", "age=10-17", "02");
+		ColumnParameters eighteenTo49 = new ColumnParameters("eighteenTo49", "18-49 years", "age=18-49", "03");
+		ColumnParameters fiftyPlus = new ColumnParameters("fiftyPlus", "50+ years", "age=50+", "04");
+		ColumnParameters total = new ColumnParameters("FAT", "Total", "", "05");
+		
+		//sum all the columns into a list
+		List<ColumnParameters> disagg = Arrays.asList(zeroTo9, tenTo17, eighteenTo49, fiftyPlus, total);
+		
+		EhrReportingUtils.addRow(dsd, "C0", "Total SGBV survivors seen(Rape, attempted rape , defilement and assault)",
+		    ReportUtils.map(moh711IndicatorDefinition.getAllAncClients(Dictionary.getConcept(Dictionary.PMTCT_PROGRAM)),
+		        indParams), disagg);
 		return dsd;
 	}
 	
