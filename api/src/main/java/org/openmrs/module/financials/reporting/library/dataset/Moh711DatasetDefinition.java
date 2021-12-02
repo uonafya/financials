@@ -162,6 +162,18 @@ public class Moh711DatasetDefinition {
 		    "Assisted Vaginal Deliveries (Vacuum Extraction)",
 		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
 		        Dictionary.getConcept("118159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
+		dsd.addColumn(
+		    "B6",
+		    "Live Births",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(
+		        Dictionary.getConcept("159917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        Dictionary.getConcept("151849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "");
+		dsd.addColumn(
+		    "B7",
+		    "No. of Low birth weight Babies (below 2500 grams)",
+		    map(moh711IndicatorDefinition.getAllClientsWithMumericValuesComparedToAthreshold(
+		        Dictionary.getConcept("5916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), 2500, RangeComparator.LESS_THAN), indParams),
+		    "");
 		
 		return dsd;
 	}
