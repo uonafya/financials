@@ -13,10 +13,12 @@ import org.openmrs.module.reporting.cohort.definition.BaseObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CodedObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CompositionCohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.EncounterCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.NumericObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.common.RangeComparator;
 import org.openmrs.module.reporting.common.SetComparator;
+import org.openmrs.module.reporting.common.TimeQualifier;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -149,5 +151,37 @@ public class Moh711CohortDefinition {
 		cd.addCalculationParameter("period", period);
 		return cd;
 		
+	}
+	//GBV cohorts
+	public CohortDefinition getSgbvCases() {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		String mappings = "startDate=${onOrAfter},endDate=${onOrBefore}";
+		EncounterType gbv1 = MetadataUtils.existing(EncounterType.class, "03767614-1384-4ce3-aea9-27e2f4e67d01");
+		EncounterType gbv2 = MetadataUtils.existing(EncounterType.class, "bec91024-5433-11ec-8ddd-bf8f24d733fa");
+		cd.setName("All the SGBV cases reported");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("CODED", map(getPatientWithCodedObs(Dictionary.getConcept("17b33cd3-1af9-4a1b-a65b-b5e30540b189"), Dictionary.getConcept("126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), mappings));
+		cd.addSearch("ENCOUNTER", map(hasEncounter(gbv1, gbv2), mappings));
+		cd.setCompositionString("CODED OR ENCOUNTER");
+
+		return cd;
+	}
+
+	/**
+	 * Patients who have an encounter between ${onOrAfter} and ${onOrBefore}
+	 * @param types the encounter types
+	 * @return the cohort definition
+	 */
+	public CohortDefinition hasEncounter(EncounterType... types) {
+		EncounterCohortDefinition cd = new EncounterCohortDefinition();
+		cd.setName("has encounter between dates");
+		cd.setTimeQualifier(TimeQualifier.ANY);
+		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		if (types.length > 0) {
+			cd.setEncounterTypeList(Arrays.asList(types));
+		}
+		return cd;
 	}
 }
