@@ -2,13 +2,13 @@ package org.openmrs.module.financials.reporting.library.cohorts;
 
 import org.openmrs.Concept;
 import org.openmrs.EncounterType;
-import org.openmrs.api.PatientSetService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
 import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
 import org.openmrs.module.financials.reporting.library.queries.Moh717Queries;
 import org.openmrs.module.kenyacore.report.ReportUtils;
+import org.openmrs.module.reporting.cohort.definition.BaseObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CodedObsCohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.CompositionCohortDefinition;
@@ -163,7 +163,7 @@ public class Moh717CohortDefinition {
 		cd.setName("Special clinic visits by clinic type");
 		cd.setQuestion(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.SPECIAL_CLINIC));
 		cd.setOperator(SetComparator.IN);
-		cd.setTimeModifier(PatientSetService.TimeModifier.LAST);
+		cd.setTimeModifier(BaseObsCohortDefinition.TimeModifier.LAST);
 		cd.setValueList(Arrays.asList(concept));
 		return cd;
 	}
