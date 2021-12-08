@@ -62,5 +62,13 @@ public class Moh711IndicatorDefinition {
 		return cohortIndicator("Number of patients with gestation period of 12 weeks",
 		    map(moh711CohortDefinition.getGestationPeriod(period), "endDate=${endDate}"));
 	}
+
+	public CohortIndicator getPatientWithSgbv() {
+
+		return cohortIndicator("Number of gender based violence reported",
+				map(moh711CohortDefinition.getSgbvCases(), "startDate=${startDate},endDate=${endDate}"));
+	}
+
+
 	
 }
