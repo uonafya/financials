@@ -6129,7 +6129,7 @@ public class DiagnosisLists {
 		            getConcept(EhrAddonsConstants._EhrAddOnConcepts.INDETERMINATE).getConceptId(),
 		            getConcept(
 		                EhrAddonsConstants._EhrAddOnConcepts.Test_not_performed_due_to_lack_of_availability_of_test_materials)
-		                    .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed)
+		                    .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.POSITIVE).getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed)
 		                    .getConceptId());
 	}
 	
