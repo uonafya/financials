@@ -152,6 +152,7 @@ public class Moh711CohortDefinition {
 		return cd;
 		
 	}
+	
 	//GBV cohorts
 	public CohortDefinition getSgbvCases() {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
@@ -161,15 +162,19 @@ public class Moh711CohortDefinition {
 		cd.setName("All the SGBV cases reported");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("CODED", map(getPatientWithCodedObs(Dictionary.getConcept("17b33cd3-1af9-4a1b-a65b-b5e30540b189"), Dictionary.getConcept("126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), mappings));
+		cd.addSearch(
+		    "CODED",
+		    map(getPatientWithCodedObs(Dictionary.getConcept("17b33cd3-1af9-4a1b-a65b-b5e30540b189"),
+		        Dictionary.getConcept("126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), mappings));
 		cd.addSearch("ENCOUNTER", map(hasEncounter(gbv1, gbv2), mappings));
 		cd.setCompositionString("CODED OR ENCOUNTER");
-
+		
 		return cd;
 	}
-
+	
 	/**
 	 * Patients who have an encounter between ${onOrAfter} and ${onOrBefore}
+	 * 
 	 * @param types the encounter types
 	 * @return the cohort definition
 	 */

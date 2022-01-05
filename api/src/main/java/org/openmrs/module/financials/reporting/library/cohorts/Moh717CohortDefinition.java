@@ -33,14 +33,15 @@ public class Moh717CohortDefinition {
 	@Autowired
 	private Moh705CohortDefinition moh705CohortDefinition;
 	
-	public CohortDefinition getAllPatients() {
-		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
-		sqlCohortDefinition.setName("All patients for 717 report");
-		sqlCohortDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		sqlCohortDefinition.addParameter(new Parameter("endDate", "End Date", Date.class));
-		sqlCohortDefinition
-		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) ");
-		return sqlCohortDefinition;
+	public CohortDefinition getAllPatientsWithDiagnosis() {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("All patients who have at least diagnosis recorded");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("DIAGNOSIS",
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosisOverral(), "startDate=${startDate},endDate=${endDate}"));
+		cd.setCompositionString("DIAGNOSIS");
+		return cd;
 	}
 	
 	/**
@@ -57,7 +58,7 @@ public class Moh717CohortDefinition {
 		cd.setName("Get new patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("ALL", ReportUtils.map(getAllPatientsWithDiagnosis(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
@@ -86,7 +87,7 @@ public class Moh717CohortDefinition {
 		cd.setName("Get revisit patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("ALL", ReportUtils.map(getAllPatientsWithDiagnosis(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
