@@ -155,4 +155,20 @@ public class Moh705Queries {
 		return String.format(sql, classId);
 	}
 	
+	/**
+	 * Get patients who conform to the diagnosis based on given concepts
+	 * 
+	 * @return String of children
+	 */
+	public static String getPatientsWhoMatchAtLeastDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis,
+	        int problemAdded, int medicalCase) {
+		String query = "SELECT pat.patient_id FROM patient pat "
+		        + " INNER JOIN encounter e ON pat.patient_id=e.patient_id "
+		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id "
+		        + " WHERE "
+		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " AND ob.concept_id IN(%d, %d, %d, %d) " + " AND ob.value_coded IS NOT NULL ";
+		return String.format(query, provisional, finalDiagnosis, problemAdded, medicalCase);
+	}
+	
 }

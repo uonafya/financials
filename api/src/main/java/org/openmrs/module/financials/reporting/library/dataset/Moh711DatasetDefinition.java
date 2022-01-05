@@ -191,8 +191,7 @@ public class Moh711DatasetDefinition {
 		List<ColumnParameters> disagg = Arrays.asList(zeroTo9, tenTo17, eighteenTo49, fiftyPlus, total);
 		
 		EhrReportingUtils.addRow(dsd, "CO", "Total SGBV survivors seen(Rape, attempted rape , defilement and assault)",
-		    ReportUtils.map(moh711IndicatorDefinition.getPatientWithSgbv(),
-		        indParams), disagg);
+		    ReportUtils.map(moh711IndicatorDefinition.getPatientWithSgbv(), indParams), disagg);
 		return dsd;
 	}
 	

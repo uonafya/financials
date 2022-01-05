@@ -45,6 +45,24 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
+	/**
+	 * Get adult patients who have given diagnosis - overral
+	 * 
+	 * @return @{@link org.openmrs.module.reporting.cohort.definition.CohortDefinition}
+	 */
+	public CohortDefinition getPatientsWhoHaveDiagnosisOverral() {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("Get children and adult patients who have diagnosis based on list of concepts overral");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setQuery(Moh705Queries.getPatientsWhoMatchAtLeastDiagnosisBasedOnConcepts(
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROBLEM_ADDED).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS).getConceptId(),
+		    EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS).getConceptId(),
+		    EhrAddonsConstants.getConcept("17b33cd3-1af9-4a1b-a65b-b5e30540b189").getConceptId()));
+		return cd;
+	}
+	
 	private CohortDefinition getPatientsWhoHaveOtherDiagnosis705(List<Integer> list) {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.setName("Get children patients who have other diagnosis based on list of concepts");

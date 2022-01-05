@@ -135,8 +135,9 @@ public class EhrAddonUtils {
 		return Arrays.asList(entNew, entRevisit, entNew, eyeClinicNew, eyeClinicRevisit, tbAndLeprosyNew,
 		    tbAndLeprosyRevisit, sexuallyTransmittedNew, sexuallyTransmittedRevisit, cccNew, cccRevisit, psychiatryNew,
 		    psychiatryRevisit, orthopaedicNew, orthopaedicRevisit, occupationalTherapyNew, occupationalTherapyRevisit,
-		    psychiatryNew, physiotherapyNew, physiotherapyRevisit, medicalClinicsNew, medicalClinicsRevisit, surgicalClinicsNew, surgicalClinicsRevisit,
-		    paediatricsNew, paediatricsRevisit, obstetricsGynaecologyNew, obstetricsGynaecologyRevisit);
+		    psychiatryNew, physiotherapyNew, physiotherapyRevisit, medicalClinicsNew, medicalClinicsRevisit,
+		    surgicalClinicsNew, surgicalClinicsRevisit, paediatricsNew, paediatricsRevisit, obstetricsGynaecologyNew,
+		    obstetricsGynaecologyRevisit);
 		
 	}
 	
