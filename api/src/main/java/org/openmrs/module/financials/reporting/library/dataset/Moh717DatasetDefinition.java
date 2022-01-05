@@ -48,7 +48,7 @@ public class Moh717DatasetDefinition {
 		
 		EhrReportingUtils.addRow(dsd, "OSN", "OUTPATIENT SERVICES NEW PATIENTS",
 		    ReportUtils.map(moh717IndicatorDefinition.getAllNewPatients(), indParams), getGeneralOutPatientFilters());
-		
+
 		EhrReportingUtils.addRow(dsd, "OSR", "OUTPATIENT SERVICES REVIST PATIENTS",
 		    ReportUtils.map(moh717IndicatorDefinition.getAllRevisitPatients(), indParams), getGeneralOutPatientFilters());
 		
