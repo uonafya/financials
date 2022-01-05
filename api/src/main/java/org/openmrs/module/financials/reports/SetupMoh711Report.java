@@ -37,9 +37,12 @@ public class SetupMoh711Report extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(
-		    map(moh711DatasetDefinition.getMohAncPmtctDataset(), "startDate=${startDate},endDate=${endDate}"),
-		    map(moh711DatasetDefinition.getMohMeternityAndNewBornsDataset(), "startDate=${startDate},endDate=${endDate}"),
-		    map(moh711DatasetDefinition.getSexualAndGenderBasedViolence(), "startDate=${startDate},endDate=${endDate}"));
+		return Arrays
+		        .asList(
+		            map(moh711DatasetDefinition.getMohAncPmtctDataset(), "startDate=${startDate},endDate=${endDate+23h}"),
+		            map(moh711DatasetDefinition.getMohMeternityAndNewBornsDataset(),
+		                "startDate=${startDate},endDate=${endDate+23h}"),
+		            map(moh711DatasetDefinition.getSexualAndGenderBasedViolence(),
+		                "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 }

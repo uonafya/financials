@@ -157,7 +157,7 @@ public class Moh711CohortDefinition {
 	public CohortDefinition getSgbvCases() {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		String mappings = "startDate=${onOrAfter},endDate=${onOrBefore}";
-		EncounterType gbv1 = MetadataUtils.existing(EncounterType.class, "03767614-1384-4ce3-aea9-27e2f4e67d01");
+		EncounterType gbv1 = MetadataUtils.existing(EncounterType.class, "94eebf1a-83a1-11ea-bc55-0242ac130003");
 		EncounterType gbv2 = MetadataUtils.existing(EncounterType.class, "bec91024-5433-11ec-8ddd-bf8f24d733fa");
 		cd.setName("All the SGBV cases reported");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
