@@ -98,6 +98,8 @@
                 <ref bean="ehraddons.common.report.705.b.all" />
                 <ref bean="ehraddons.common.report.705.b.allDiagnosis" />
                 <ref bean="ehraddons.common.report.705.a.allDiagnosis" />
+                <ref bean="ehraddons.common.report.nhif.patients" />
+                <ref bean="ehraddons.common.report.non.paying.patients" />
             </set>
         </property>
         <property name="fragments">
@@ -432,5 +434,28 @@
         <property name="description" value="National Integrated Form for Reproductive Health, HIV/AIDS, Malaria, TB and Child Nutrition" />
         <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
         <property name="template" value="financials:MOH_711.xls" />
+    </bean>
+
+    <bean id="ehraddons.common.report.nhif.patients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="8f7a2fa4-6efc-11ec-9ef0-ffc41a8a2a5b" />
+        <property name="name" value="NHIF Clients" />
+        <property name="description" value="NHIF patients in the facility" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set></property>
+        <property name="template" value="financials:nhif.xls" />
+        <property name="repeatingSection" value="sheet:1,row:5,dataset:nhif" />
+    </bean>
+    <bean id="ehraddons.common.report.non.paying.patients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="ab7c2f42-6eff-11ec-9067-3f22c7466c00" />
+        <property name="name" value="Non paying Clients" />
+        <property name="description" value="Non paying patients in the facility" />
+        <property name="apps">
+            <set>
+                <ref bean="kenyaemr.app.reports" />
+            </set></property>
+        <property name="template" value="financials:nonPaying.xls" />
+        <property name="repeatingSection" value="sheet:1,row:5,dataset:nonPaying" />
     </bean>
 </beans>
