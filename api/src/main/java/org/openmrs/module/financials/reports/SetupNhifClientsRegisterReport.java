@@ -2,6 +2,7 @@ package org.openmrs.module.financials.reports;
 
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.PersonAttributeType;
+import org.openmrs.module.ehrconfigs.metadata.EhrCommonMetadata;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
@@ -9,6 +10,8 @@ import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
 import org.openmrs.module.kenyaemr.metadata.HivMetadata;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
+import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.common.SortCriteria;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
@@ -29,6 +32,8 @@ import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
+import org.openmrs.module.reporting.query.encounter.definition.EncounterQuery;
+import org.openmrs.module.reporting.query.encounter.definition.SqlEncounterQuery;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
 import org.springframework.stereotype.Component;
 
@@ -38,6 +43,7 @@ import java.util.List;
 
 import static org.openmrs.module.financials.reports.SetupANCRegisterReport.DATE_FORMAT;
 import static org.openmrs.module.financials.reports.SetupANCRegisterReport.ENC_DATE_FORMAT;
+import static org.openmrs.module.financials.utils.EhrReportingUtils.getEncounterLimitsByDate;
 
 @Component
 @Builds({ "ehraddons.common.report.nhif.patients" })
@@ -52,7 +58,9 @@ public class SetupNhifClientsRegisterReport extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(ReportUtils.map(datasetColumns(), "startDate=${startDate},endDate=${endDate}"));
+		reportDefinition.setBaseCohortDefinition(ReportUtils.map(allNhifPatientsCohort(),
+		    "startDate=${startDate},endDate=${endDate+23h}"));
+		return Arrays.asList(ReportUtils.map(datasetColumns(), "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 	
 	protected DataSetDefinition datasetColumns() {
@@ -76,17 +84,31 @@ public class SetupNhifClientsRegisterReport extends AbstractReportBuilder {
 		PersonAttributeType phoneNumber = MetadataUtils.existing(PersonAttributeType.class,
 		    CommonMetadata._PersonAttributeType.TELEPHONE_CONTACT);
 		
+		PersonAttributeType nhifNumber = MetadataUtils.existing(PersonAttributeType.class,
+		    EhrCommonMetadata._EhrPersonAttributeType.NHIF_CARD_NUMBER);
+		
 		dsd.addColumn("id", new PatientIdDataDefinition(), "");
 		dsd.addColumn("Name", nameDef, "");
 		
 		dsd.addColumn("Sex", new GenderDataDefinition(), "");
 		
 		dsd.addColumn("Identifier", identifierDef, null);
+		dsd.addColumn("NHIF Number", new PersonAttributeDataDefinition(nhifNumber), "");
 		
 		dsd.addColumn("Visit Date", new EncounterDatetimeDataDefinition(), "", new DateConverter(ENC_DATE_FORMAT));
 		dsd.addColumn("Telephone No", new PersonAttributeDataDefinition(phoneNumber), "");
 		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		
+		dsd.addRowFilter(getEncounterLimitsByDate(), paramMapping);
 		return dsd;
+	}
+	
+	private CohortDefinition allNhifPatientsCohort() {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setName("NHIF Patients");
+		cd.setQuery("SELECT patient_id FROM billing_patient_service_bill  WHERE created_date BETWEEN :startDate AND :endDate AND patient_subcategory ='NHIF patient'");
+		return cd;
 	}
 }

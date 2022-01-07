@@ -6,6 +6,8 @@ import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDef
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
+import org.openmrs.module.reporting.query.encounter.definition.EncounterQuery;
+import org.openmrs.module.reporting.query.encounter.definition.SqlEncounterQuery;
 
 import java.util.Date;
 import java.util.List;
@@ -40,6 +42,15 @@ public class EhrReportingUtils {
 			String label = baseLabel + " (" + column.getLabel() + ")";
 			cohortDsd.addColumn(name, label, indicator, column.getDimensions());
 		}
+	}
+	
+	public static EncounterQuery getEncounterLimitsByDate() {
+		SqlEncounterQuery query = new SqlEncounterQuery();
+		query.setName("Encounter per the given date");
+		query.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		query.addParameter(new Parameter("endDate", "End Date", Date.class));
+		query.setQuery("SELECT encounter_id FROM encounter WHERE encounter_datetime BETWEEN :startDate AND :endDate");
+		return query;
 	}
 	
 }

@@ -8,6 +8,8 @@ import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
+import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
+import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.common.SortCriteria;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
@@ -27,6 +29,8 @@ import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
+import org.openmrs.module.reporting.query.encounter.definition.EncounterQuery;
+import org.openmrs.module.reporting.query.encounter.definition.SqlEncounterQuery;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
 import org.springframework.stereotype.Component;
 
@@ -36,6 +40,7 @@ import java.util.List;
 
 import static org.openmrs.module.financials.reports.SetupANCRegisterReport.DATE_FORMAT;
 import static org.openmrs.module.financials.reports.SetupANCRegisterReport.ENC_DATE_FORMAT;
+import static org.openmrs.module.financials.utils.EhrReportingUtils.getEncounterLimitsByDate;
 
 @Component
 @Builds({ "ehraddons.common.report.non.paying.patients" })
@@ -50,7 +55,9 @@ public class SetupNonPayingClientsReport extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(ReportUtils.map(datasetColumns(), "startDate=${startDate},endDate=${endDate}"));
+		reportDefinition.setBaseCohortDefinition(ReportUtils.map(allNonPayingPatientsCohort(),
+		    "startDate=${startDate},endDate=${endDate+23h}"));
+		return Arrays.asList(ReportUtils.map(datasetColumns(), "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 	
 	protected DataSetDefinition datasetColumns() {
@@ -61,7 +68,7 @@ public class SetupNonPayingClientsReport extends AbstractReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		
-		String paramMapping = "startDate=${startDate},endDate=${endDate}";
+		String paramMapping = "startDate=${startDate},endDate=${endDate+23h}";
 		
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName} {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
@@ -85,6 +92,16 @@ public class SetupNonPayingClientsReport extends AbstractReportBuilder {
 		dsd.addColumn("Telephone No", new PersonAttributeDataDefinition(phoneNumber), "");
 		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		
+		dsd.addRowFilter(getEncounterLimitsByDate(), paramMapping);
 		return dsd;
+	}
+	
+	private CohortDefinition allNonPayingPatientsCohort() {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setName("Non paying Patients");
+		cd.setQuery("SELECT patient_id FROM billing_patient_service_bill  WHERE created_date BETWEEN :startDate AND :endDate AND patient_category ='Non paying'");
+		return cd;
 	}
 }

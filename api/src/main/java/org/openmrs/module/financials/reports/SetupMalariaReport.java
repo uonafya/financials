@@ -17,12 +17,15 @@ import org.openmrs.module.kenyaemr.reporting.data.converter.CalculationResultCon
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
+import org.openmrs.module.reporting.common.SortCriteria;
 import org.openmrs.module.reporting.common.TimeQualifier;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
+import org.openmrs.module.reporting.data.converter.DateConverter;
 import org.openmrs.module.reporting.data.converter.ObjectFormatter;
 import org.openmrs.module.reporting.data.converter.ObsValueConverter;
+import org.openmrs.module.reporting.data.encounter.definition.EncounterDatetimeDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.ConvertedPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.PatientIdentifierDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.AgeDataDefinition;
@@ -33,6 +36,7 @@ import org.openmrs.module.reporting.data.person.definition.ObsForPersonDataDefin
 import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
+import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
@@ -43,6 +47,9 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+
+import static org.openmrs.module.financials.reports.SetupANCRegisterReport.ENC_DATE_FORMAT;
+import static org.openmrs.module.financials.utils.EhrReportingUtils.getEncounterLimitsByDate;
 
 @Component
 @Builds({ "ehraddons.common.report.malaria" })
@@ -76,28 +83,28 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
 		
-		PatientDataSetDefinition allVisits = allPatients();
-		allVisits.addRowFilter(allMalariaPatientsCohort());
-		
-		return Arrays.asList(ReportUtils.map((DataSetDefinition) allVisits, "startDate=${startDate},endDate=${endDate}"),
-		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
+		report.setBaseCohortDefinition(ReportUtils.map(allMalariaPatientsCohort(),
+		    "startDate=${startDate},endDate=${endDate+23h}"));
+		return Arrays.asList(ReportUtils.map(allPatients(), "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 	
-	protected PatientDataSetDefinition allPatients() {
-		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
+	protected DataSetDefinition allPatients() {
+		EncounterDataSetDefinition dsd = new EncounterDataSetDefinition();
 		dsd.setName("mal");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsd.addSortCriteria("Visit Date", SortCriteria.SortDirection.ASC);
 		
 		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,
-		    CommonMetadata._PatientIdentifierType.OPENMRS_ID);
+		    CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
 		DataConverter identifierFormatter = new ObjectFormatter("{identifier}");
 		DataDefinition identifierDef = new ConvertedPatientDataDefinition("identifier", new PatientIdentifierDataDefinition(
 		        upn.getName(), upn), identifierFormatter);
 		
-		DataConverter formatter = new ObjectFormatter("{familyName}, {givenName}");
+		DataConverter formatter = new ObjectFormatter("{familyName}, {middleName} {givenName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), formatter);
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
+		dsd.addColumn("Visit Date", new EncounterDatetimeDataDefinition(), "", new DateConverter(ENC_DATE_FORMAT));
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Identifier", identifierDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
@@ -111,15 +118,20 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		        .getConceptByUuid("32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "", new ObsValueConverter());
 		dsd.addColumn("Comments", new ObsForPersonDataDefinition("Comments", TimeQualifier.LAST, Context.getConceptService()
 		        .getConceptByUuid("32AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "", new ObsCommentsConverter());
+		dsd.addColumn("Onset Date", new ObsForPersonDataDefinition("Onset Date", TimeQualifier.LAST, Context
+		        .getConceptService().getConceptByUuid("164428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "",
+		    new ObsCommentsConverter());
+		
+		dsd.addRowFilter(getEncounterLimitsByDate(), "startDate=${startDate},endDate=${endDate}");
 		return dsd;
 	}
 	
-	protected Mapped<CohortDefinition> allMalariaPatientsCohort() {
+	protected CohortDefinition allMalariaPatientsCohort() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("Active Patients");
 		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id INNER JOIN obs o ON e.encounter_id=o.encounter_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND o.concept_id IN(32,1643)");
-		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
+		return cd;
 	}
 }
