@@ -39,14 +39,15 @@ public class Moh711IndicatorDefinition {
 		return cohortIndicator(
 		    "Numeric values comapred to threshold",
 		    map(moh711CohortDefinition.getAllClientsWithHbLessThanAthreshold(concept, threshold, rangeComparator),
-		        "startDate=${startDate},endDate=${endDate}"));
+		        "onOrAfter=${startDate},onOrBefore=${endDate}"));
 	}
 	
 	public CohortIndicator getPatientWithCodedObs(Concept concept, Concept... answers) {
 		
 		return cohortIndicator(
 		    "Number of patients with coded obs over time",
-		    map(moh711CohortDefinition.getPatientWithCodedObs(concept, answers), "startDate=${startDate},endDate=${endDate}"));
+		    map(moh711CohortDefinition.getPatientWithCodedObs(concept, answers),
+		        "onOrAfter=${startDate},onOrBefore=${endDate}"));
 	}
 	
 	public CohortIndicator getPatientWithCodedObsAndProgram(Program program, Concept question, Concept... ans) {
