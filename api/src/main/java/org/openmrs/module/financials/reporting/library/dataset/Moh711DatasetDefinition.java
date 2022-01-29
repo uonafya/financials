@@ -84,44 +84,44 @@ public class Moh711DatasetDefinition {
 		    "A6",
 		    "No. of Clients with Hb < 11 g/dl",
 		    map(moh711IndicatorDefinition.getAllClientsWithMumericValuesComparedToAthreshold(hb, 11,
-		        RangeComparator.LESS_THAN), ""), "");
+		        RangeComparator.LESS_THAN), indParams), "");
 		dsd.addColumn(
 		    "A7",
 		    "No. of Clients completed 4 Antenatal Visits",
 		    map(moh711IndicatorDefinition.getAllClientsWithMumericValuesComparedToAthreshold(ancNumber, 4,
-		        RangeComparator.EQUAL), ""), "");
+		        RangeComparator.EQUAL), indParams), "");
 		dsd.addColumn("A8", "No.LLINs distributed to under 1 year",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, llins), ""), "age=0-1");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, llins), indParams), "age=0-1");
 		
 		dsd.addColumn("A9", "No. of LLINs distributed to ANC clients",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, llins), ""), "gender=F|age=15+");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, llins), indParams), "gender=F|age=15+");
 		
 		dsd.addColumn("A10", "No. of clients who tested for syphilis",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest), indParams), "gender=F");
 		
 		dsd.addColumn("A11", "No. of clients who tested for syphilis positive",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest, syphilisTestPositive), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest, syphilisTestPositive), indParams), "gender=F");
 		dsd.addColumn("A12", "Total women done breast examination",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(breastExamDone, yes), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(breastExamDone, yes), indParams), "gender=F");
 		dsd.addColumn("A13", "No. of adolescents (10-14 years) presenting with pregnancy at 1st ANC Visit",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), ""),
+		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), indParams),
 		    "gender=F|age=10-14");
 		dsd.addColumn("A14", "No. of adolescents (15-19 years) presenting with pregnancy at 1st ANC Visit",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), ""),
+		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), indParams),
 		    "gender=F|age=15-19");
 		dsd.addColumn("A15", "No. of adolescents (20-24 years) presenting with pregnancy at 1st ANC Visit",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), ""),
+		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), indParams),
 		    "gender=F|age=20-24");
 		dsd.addColumn("A16", "No. of Women presenting with pregnancy  at 1ST ANC in the First Trimeseter(<= 12 Weeks)",
-		    map(moh711IndicatorDefinition.getPatientGestationPeriod(12), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientGestationPeriod(12), indParams), "gender=F");
 		dsd.addColumn("A17", "No. of clients issued with Iron",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironGiven, yes), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironGiven, yes), indParams), "gender=F");
 		dsd.addColumn("A16", "No. of clients issued with Folic",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironFollate, yes), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironFollate, yes), indParams), "gender=F");
 		dsd.addColumn("A19", "No. of clients issued with Combined Ferrous Folate",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), indParams), "gender=F");
 		dsd.addColumn("A20", "No. of pregnant women presenting in ANC with complication associated with FGM",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), ""), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), indParams), "gender=F");
 		
 		return dsd;
 	}
