@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reporting.library.cohorts;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openmrs.Concept;
 import org.openmrs.EncounterType;
 import org.openmrs.Program;
@@ -23,9 +24,11 @@ import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
@@ -75,16 +78,24 @@ public class Moh711CohortDefinition {
 		return cd;
 	}
 	
-	public CohortDefinition getPatientWithCodedObs(Concept question, Concept... answers) {
-		CodedObsCohortDefinition cd = new CodedObsCohortDefinition();
-		cd.setName("Has observation of " + question.getName().getName());
-		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
-		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
-		cd.setTimeModifier(PatientSetService.TimeModifier.ANY);
-		cd.setQuestion(question);
-		cd.setValueList(Arrays.asList(answers));
-		cd.setOperator(SetComparator.IN);
-		return cd;
+	public CohortDefinition getPatientWithCodedObs(Concept question, List<Concept> answers) {
+		List<Integer> listOfAnswers = new ArrayList<Integer>();
+		for (Concept concept : answers) {
+			listOfAnswers.add(concept.getConceptId());
+		}
+		SqlCohortDefinition sqlCohortDefinition = new SqlCohortDefinition();
+		sqlCohortDefinition.setName("Has observation over time");
+		sqlCohortDefinition.addParameter(new Parameter("startDate", "After Date", Date.class));
+		sqlCohortDefinition.addParameter(new Parameter("endDate", "Before Date", Date.class));
+		sqlCohortDefinition
+		        .setQuery("SELECT p.patient_id FROM patient p "
+		                + " INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		                + " INNER JOIN obs o ON e.encounter_id=o.encounter_id "
+		                + " WHERE p.voided= 0 AND e.voided=0 AND o.voided=0 AND e.encounter_datetime BETWEEN :startDate AND :endDate"
+		                + " AND o.concept_id=" + question.getConceptId() + " AND o.value_coded IN("
+		                + StringUtils.join(listOfAnswers, ",") + ")");
+		
+		return sqlCohortDefinition;
 	}
 	
 	public CohortDefinition getIptVaccinesGivenToMothers(int squence) {
@@ -133,14 +144,14 @@ public class Moh711CohortDefinition {
 		return cd;
 	}
 	
-	public CohortDefinition getMotherServicesProgramAndServices(Program program, Concept question, Concept... ans) {
+	public CohortDefinition getMotherServicesProgramAndServices(Program program, Concept question, List<Concept> ans) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("Program and services offered to the pregnant women");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("PROGRAM",
 		    map(ehrAddonCommons.programEnrollment(program), "enrolledOnOrAfter=${startDate},enrolledOnOrBefore=${endDate}"));
-		cd.addSearch("CODED", map(getPatientWithCodedObs(question, ans), "onOrAfter=${startDate},onOrBefore=${endDate}"));
+		cd.addSearch("CODED", map(getPatientWithCodedObs(question, ans), "startDate=${startDate},endDate=${endDate}"));
 		cd.setCompositionString("PROGRAM OR CODED");
 		return cd;
 	}
@@ -156,7 +167,7 @@ public class Moh711CohortDefinition {
 	//GBV cohorts
 	public CohortDefinition getSgbvCases() {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
-		String mappings = "startDate=${onOrAfter},endDate=${onOrBefore}";
+		String mappings = "onOrAfter=${startDate},onOrBefore=${endDate}";
 		EncounterType gbv1 = MetadataUtils.existing(EncounterType.class, "94eebf1a-83a1-11ea-bc55-0242ac130003");
 		EncounterType gbv2 = MetadataUtils.existing(EncounterType.class, "bec91024-5433-11ec-8ddd-bf8f24d733fa");
 		cd.setName("All the SGBV cases reported");
@@ -165,7 +176,8 @@ public class Moh711CohortDefinition {
 		cd.addSearch(
 		    "CODED",
 		    map(getPatientWithCodedObs(Dictionary.getConcept("17b33cd3-1af9-4a1b-a65b-b5e30540b189"),
-		        Dictionary.getConcept("126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), mappings));
+		        Arrays.asList(Dictionary.getConcept("126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))),
+		        "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("ENCOUNTER", map(hasEncounter(gbv1, gbv2), mappings));
 		cd.setCompositionString("CODED OR ENCOUNTER");
 		

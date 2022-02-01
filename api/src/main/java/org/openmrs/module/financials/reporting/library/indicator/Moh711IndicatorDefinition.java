@@ -8,6 +8,8 @@ import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 import static org.openmrs.module.financials.utils.EhrReportingUtils.cohortIndicator;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
@@ -42,15 +44,14 @@ public class Moh711IndicatorDefinition {
 		        "onOrAfter=${startDate},onOrBefore=${endDate}"));
 	}
 	
-	public CohortIndicator getPatientWithCodedObs(Concept concept, Concept... answers) {
+	public CohortIndicator getPatientWithCodedObs(Concept concept, List<Concept> answers) {
 		
 		return cohortIndicator(
 		    "Number of patients with coded obs over time",
-		    map(moh711CohortDefinition.getPatientWithCodedObs(concept, answers),
-		        "onOrAfter=${startDate},onOrBefore=${endDate}"));
+		    map(moh711CohortDefinition.getPatientWithCodedObs(concept, answers), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getPatientWithCodedObsAndProgram(Program program, Concept question, Concept... ans) {
+	public CohortIndicator getPatientWithCodedObsAndProgram(Program program, Concept question, List<Concept> ans) {
 		
 		return cohortIndicator(
 		    "Number of patients with coded obs over time and program",

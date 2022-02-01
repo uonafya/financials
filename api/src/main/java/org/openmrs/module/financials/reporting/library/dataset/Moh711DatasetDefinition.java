@@ -91,95 +91,111 @@ public class Moh711DatasetDefinition {
 		    map(moh711IndicatorDefinition.getAllClientsWithMumericValuesComparedToAthreshold(ancNumber, 4,
 		        RangeComparator.EQUAL), indParams), "");
 		dsd.addColumn("A8", "No.LLINs distributed to under 1 year",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, llins), indParams), "age=0-1");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, Arrays.asList(llins)), indParams), "age=0-1");
 		
 		dsd.addColumn("A9", "No. of LLINs distributed to ANC clients",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, llins), indParams), "gender=F|age=15+");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, Arrays.asList(llins)), indParams),
+		    "gender=F|age=15+");
 		
-		dsd.addColumn("A10", "No. of clients who tested for syphilis",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest), indParams), "gender=F");
+		dsd.addColumn(
+		    "A10",
+		    "No. of clients who tested for syphilis",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest, Arrays.asList(syphilisTestPositive)),
+		        indParams), "gender=F");
 		
-		dsd.addColumn("A11", "No. of clients who tested for syphilis positive",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest, syphilisTestPositive), indParams), "gender=F");
+		dsd.addColumn(
+		    "A11",
+		    "No. of clients who tested for syphilis positive",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(syphilisTest, Arrays.asList(syphilisTestPositive)),
+		        indParams), "gender=F");
 		dsd.addColumn("A12", "Total women done breast examination",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(breastExamDone, yes), indParams), "gender=F");
-		dsd.addColumn("A13", "No. of adolescents (10-14 years) presenting with pregnancy at 1st ANC Visit",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), indParams),
-		    "gender=F|age=10-14");
-		dsd.addColumn("A14", "No. of adolescents (15-19 years) presenting with pregnancy at 1st ANC Visit",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), indParams),
-		    "gender=F|age=15-19");
-		dsd.addColumn("A15", "No. of adolescents (20-24 years) presenting with pregnancy at 1st ANC Visit",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, anc), indParams),
-		    "gender=F|age=20-24");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(breastExamDone, Arrays.asList(yes)), indParams), "gender=F");
+		dsd.addColumn(
+		    "A13",
+		    "No. of adolescents (10-14 years) presenting with pregnancy at 1st ANC Visit",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, Arrays.asList(anc)),
+		        indParams), "gender=F|age=10-14");
+		dsd.addColumn(
+		    "A14",
+		    "No. of adolescents (15-19 years) presenting with pregnancy at 1st ANC Visit",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, Arrays.asList(anc)),
+		        indParams), "gender=F|age=15-19");
+		dsd.addColumn(
+		    "A15",
+		    "No. of adolescents (20-24 years) presenting with pregnancy at 1st ANC Visit",
+		    map(moh711IndicatorDefinition.getPatientWithCodedObsAndProgram(ancProgram, serviceType, Arrays.asList(anc)),
+		        indParams), "gender=F|age=20-24");
 		dsd.addColumn("A16", "No. of Women presenting with pregnancy  at 1ST ANC in the First Trimeseter(<= 12 Weeks)",
 		    map(moh711IndicatorDefinition.getPatientGestationPeriod(12), indParams), "gender=F");
 		dsd.addColumn("A17", "No. of clients issued with Iron",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironGiven, yes), indParams), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironGiven, Arrays.asList(yes)), indParams), "gender=F");
 		dsd.addColumn("A16", "No. of clients issued with Folic",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironFollate, yes), indParams), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(ironFollate, Arrays.asList(yes)), indParams), "gender=F");
 		dsd.addColumn("A19", "No. of clients issued with Combined Ferrous Folate",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), indParams), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, Arrays.asList(ironFollate)), indParams),
+		    "gender=F");
 		dsd.addColumn("A20", "No. of pregnant women presenting in ANC with complication associated with FGM",
-		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, ironFollate), indParams), "gender=F");
+		    map(moh711IndicatorDefinition.getPatientWithCodedObs(immunization, Arrays.asList(ironFollate)), indParams),
+		    "gender=F");
 		
 		return dsd;
 	}
 	
 	//B
 	public DataSetDefinition getMohMeternityAndNewBornsDataset() {
-		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+		CohortIndicatorDataSetDefinition dsdb = new CohortIndicatorDataSetDefinition();
 		String indParams = "startDate=${startDate},endDate=${endDate}";
-		dsd.setName("B");
-		dsd.setDescription("Maternity and Newborn");
-		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsdb.setName("B");
+		dsdb.setDescription("Maternity and Newborn");
+		dsdb.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsdb.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsdb.addDimension("gender", ReportUtils.map(ehrAddonDimesion.getGender()));
 		
-		dsd.addColumn(
+		dsdb.addColumn(
 		    "B1",
 		    "Normal Deliveries",
 		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
-		        Dictionary.getConcept("1170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
-		dsd.addColumn(
+		        Arrays.asList(Dictionary.getConcept("1170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))), indParams), "gender=F");
+		dsdb.addColumn(
 		    "B2",
 		    "Caesarean Sections",
 		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
-		        Dictionary.getConcept("1171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
-		dsd.addColumn(
+		        Arrays.asList(Dictionary.getConcept("1171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))), indParams), "gender=F");
+		dsdb.addColumn(
 		    "B3",
 		    "Breech Delivery",
 		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
-		        Dictionary.getConcept("1172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
-		dsd.addColumn(
+		        Arrays.asList(Dictionary.getConcept("1172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))), indParams), "gender=F");
+		dsdb.addColumn(
 		    "B4",
 		    "Assisted Vaginal Deliveries (Vacuum Extraction)",
 		    map(moh711IndicatorDefinition.getPatientWithCodedObs(Dictionary.getConcept(Dictionary.METHOD_OF_DELIVERY),
-		        Dictionary.getConcept("118159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "gender=F");
-		dsd.addColumn(
+		        Arrays.asList(Dictionary.getConcept("118159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))), indParams), "gender=F");
+		dsdb.addColumn(
 		    "B6",
 		    "Live Births",
 		    map(moh711IndicatorDefinition.getPatientWithCodedObs(
 		        Dictionary.getConcept("159917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
-		        Dictionary.getConcept("151849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), indParams), "");
-		dsd.addColumn(
+		        Arrays.asList(Dictionary.getConcept("151849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))), indParams), "");
+		dsdb.addColumn(
 		    "B7",
 		    "No. of Low birth weight Babies (below 2500 grams)",
 		    map(moh711IndicatorDefinition.getAllClientsWithMumericValuesComparedToAthreshold(
 		        Dictionary.getConcept("5916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), 2500, RangeComparator.LESS_THAN), indParams),
 		    "");
 		
-		return dsd;
+		return dsdb;
 	}
 	
 	//C
 	public DataSetDefinition getSexualAndGenderBasedViolence() {
-		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+		CohortIndicatorDataSetDefinition dsdc = new CohortIndicatorDataSetDefinition();
 		String indParams = "startDate=${startDate},endDate=${endDate}";
-		dsd.setName("C");
-		dsd.setDescription("Maternity and Newborn");
-		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.addDimension("age", ReportUtils.map(ehrAddonDimesion.getStandardAge(), "effectiveDate=${endDate}"));
+		dsdc.setName("C");
+		dsdc.setDescription("Maternity and Newborn");
+		dsdc.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsdc.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsdc.addDimension("age", ReportUtils.map(ehrAddonDimesion.getStandardAge(), "effectiveDate=${endDate}"));
 		//add the required dimension
 		ColumnParameters zeroTo9 = new ColumnParameters("zeroTo9", "0-9 years", "age=0-9", "01");
 		ColumnParameters tenTo17 = new ColumnParameters("tenTo17", "10-17 years", "age=10-17", "02");
@@ -190,9 +206,9 @@ public class Moh711DatasetDefinition {
 		//sum all the columns into a list
 		List<ColumnParameters> disagg = Arrays.asList(zeroTo9, tenTo17, eighteenTo49, fiftyPlus, total);
 		
-		EhrReportingUtils.addRow(dsd, "CO", "Total SGBV survivors seen(Rape, attempted rape , defilement and assault)",
+		EhrReportingUtils.addRow(dsdc, "CO", "Total SGBV survivors seen(Rape, attempted rape , defilement and assault)",
 		    ReportUtils.map(moh711IndicatorDefinition.getPatientWithSgbv(), indParams), disagg);
-		return dsd;
+		return dsdc;
 	}
 	
 }
