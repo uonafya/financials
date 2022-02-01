@@ -2,7 +2,7 @@ package org.openmrs.module.financials.reporting.library.cohorts;
 
 import org.openmrs.Concept;
 import org.openmrs.EncounterType;
-import org.openmrs.api.PatientSetService;
+import org.openmrs.module.reporting.cohort.definition.BaseObsCohortDefinition.TimeModifier;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
@@ -164,7 +164,7 @@ public class Moh717CohortDefinition {
 		cd.setName("Special clinic visits by clinic type");
 		cd.setQuestion(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.SPECIAL_CLINIC));
 		cd.setOperator(SetComparator.IN);
-		cd.setTimeModifier(PatientSetService.TimeModifier.LAST);
+		cd.setTimeModifier(TimeModifier.LAST);
 		cd.setValueList(Arrays.asList(concept));
 		return cd;
 	}
