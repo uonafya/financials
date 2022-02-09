@@ -104,6 +104,11 @@ public class EhrAddonDimesion {
 		dim.addCohortDefinition("20-24", map(commonLibrary.createXtoYAgeCohort(20, 24), "effectiveDate=${effectiveDate}"));
 		dim.addCohortDefinition("15+", map(commonLibrary.createXtoYAgeCohort(15, 150), "effectiveDate=${effectiveDate}"));
 		
+		dim.addCohortDefinition("0-9", map(commonLibrary.createXtoYAgeCohort(0, 9), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("10-17", map(commonLibrary.createXtoYAgeCohort(10, 17), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("18-49", map(commonLibrary.createXtoYAgeCohort(10, 17), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("50+", map(commonLibrary.createXtoYAgeCohort(50, 150), "effectiveDate=${effectiveDate}"));
+		
 		return dim;
 	}
 	
