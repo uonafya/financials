@@ -104,6 +104,11 @@ public class EhrAddonDimesion {
 		dim.addCohortDefinition("20-24", map(commonLibrary.createXtoYAgeCohort(20, 24), "effectiveDate=${effectiveDate}"));
 		dim.addCohortDefinition("15+", map(commonLibrary.createXtoYAgeCohort(15, 150), "effectiveDate=${effectiveDate}"));
 		
+		dim.addCohortDefinition("0-9", map(commonLibrary.createXtoYAgeCohort(0, 9), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("10-17", map(commonLibrary.createXtoYAgeCohort(10, 17), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("18-49", map(commonLibrary.createXtoYAgeCohort(10, 17), "effectiveDate=${effectiveDate}"));
+		dim.addCohortDefinition("50+", map(commonLibrary.createXtoYAgeCohort(50, 150), "effectiveDate=${effectiveDate}"));
+		
 		return dim;
 	}
 	
@@ -211,10 +216,7 @@ public class EhrAddonDimesion {
 	}
 	
 	public CohortDefinitionDimension newOrRevisits() {
-		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
-		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
-		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
-		    "98d42234-f28f-11ea-b609-bbd062a0383b");
+		
 		CohortDefinitionDimension dim = new CohortDefinitionDimension();
 		dim.setName("New or revisits patients");
 		dim.addParameter(new Parameter("startDate", "After date", Date.class));
