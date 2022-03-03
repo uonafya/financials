@@ -3,8 +3,8 @@ package org.openmrs.module.financials.reporting.library.dataset;
 import org.openmrs.module.financials.ColumnParameters;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.indicator.Moh711IndicatorDefinition;
 import org.openmrs.module.financials.reporting.library.indicator.Moh717IndicatorDefinition;
-import org.openmrs.module.financials.reporting.utils.EhrAddonUtils;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -24,13 +24,15 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 public class Moh717DatasetDefinition {
 	
 	private Moh717IndicatorDefinition moh717IndicatorDefinition;
+	private Moh711IndicatorDefinition moh711IndicatorDefinition;
 	
 	private EhrAddonDimesion ehrAddonDimesion;
 	
 	@Autowired
-	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimesion ehrAddonDimesion) {
+	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimesion ehrAddonDimesion, Moh711IndicatorDefinition moh711IndicatorDefinition) {
 		this.moh717IndicatorDefinition = moh717IndicatorDefinition;
 		this.ehrAddonDimesion = ehrAddonDimesion;
+		this.moh711IndicatorDefinition = moh711IndicatorDefinition;
 	}
 	
 	public DataSetDefinition constructMoh717Dataset() {
@@ -86,7 +88,66 @@ public class Moh717DatasetDefinition {
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_OPD).getConceptId(),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_SPECIAL_CLINIC).getConceptId()), indParams),
 		    "state=RVT");
-		
+		//additional indicators on 717 report
+		dsd.addColumn("DENTALFILLNEW", "Filling - NEW", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Temporary_Filling_Per_Tooth),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Amalgam_filling),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Composite_Filling),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Glass_Lonomer_Filling))), indParams), "state=NEW");
+		dsd.addColumn("DENTALFILLRVT", "Filling - RVT", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Temporary_Filling_Per_Tooth),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Amalgam_filling),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Composite_Filling),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Glass_Lonomer_Filling))), indParams), "state=RVT");
+		dsd.addColumn("DENTALEXTNEW", "Extraction - NEW", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Extra_Tooth_extraction),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Tooth_Extraction_simple),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Excision_of_Tooth))), indParams), "state=NEW");
+		dsd.addColumn("DENTALEXTRVT", "Extraction - RVT", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Extra_Tooth_extraction),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Tooth_Extraction_simple),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Excision_of_Tooth))), indParams), "state=RVT");
+		dsd.addColumn("MEDEXAM", "MEdical Examination", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.MEDICAL_EXAMINATION_ROUTINE),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Student_Medical_Assessment))), indParams), "");
+		dsd.addColumn("DRESSING", "Dressing", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.CLEAN_AND_DRESSING),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Suture_wound_with_dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Wound_Dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Change_of_Dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Burn_dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dressing_change_under_anesthesia),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dressing_change_for_open_wound_of_breast),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Cleaning_and_Dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Casualty_Dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.ENT_Dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Removal_Of_Ear_Dressing),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Wound_Dressing_ENT),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dressing_Per_Session_Female_Medical_Ward))), indParams), "");
+		dsd.addColumn("REMSTI", "Removal of Stitches", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Removal_Of_Stitches),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Removal_Of_Corneal_Stitches))), indParams), "");
+		dsd.addColumn("INJEC", "Injection", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJECTION),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Sub_Conjuctiral_Sub_Tenon_Injections),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Intra_arterial_injection),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Intralesional_injection))), indParams), "");
+		dsd.addColumn("STITCH", "Stitching", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
+						getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.STITCHING),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Stitching_Casualty),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Stitching_In_Minor_Theatre),
+										getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dental_stitching))), indParams), "");
+
+
 		return dsd;
 	}
 	

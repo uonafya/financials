@@ -9040,6 +9040,77 @@ public class EhrAddonsConstants {
 		public static final String CCANCER_79 = "157588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		public static final String CCANCER_80 = "159349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		//filling concepts ids
+		public static final String Temporary_Filling_Per_Tooth = "492c1b4c-dc68-479e-8700-8a9160211db6";
+
+		public static final String Amalgam_filling = "088cf47e-9c72-42c3-8ae3-23e3440a55ce";
+
+		public static final String Composite_Filling = "5673cd1b-e2e9-4504-8e62-1da76193e989";
+
+		public static final String Glass_Lonomer_Filling = "a0d71bb5-bd1e-4212-b788-cfcab4effa27";
+
+		//extraction concept ids
+		public static final String Extra_Tooth_extraction = "91ab29ba-bcaa-4873-86fb-4317fcc0c8bd";
+
+		public static final String Tooth_Extraction_simple = "0ba0f575-ec75-4a51-86c4-97b6ce467684";
+
+		public static final String Excision_of_Tooth = "d8c2d969-bd65-4d39-9434-ebbb6195852d";
+
+		//Medical examination
+		public static final String MEDICAL_EXAMINATION_ROUTINE = "432AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Student_Medical_Assessment = "367a3526-4a8b-4704-a686-a746e74032f3";
+
+		//Dressing
+		public static final String CLEAN_AND_DRESSING = "441AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Suture_wound_with_dressing = "1934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Wound_Dressing = "1935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Change_of_Dressing = "151596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Burn_dressing = "161668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Dressing_change_under_anesthesia = "161945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Dressing_change_for_open_wound_of_breast = "162210AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Cleaning_and_Dressing = "5bc4313c-b70c-4c1a-ab30-6cacb0220160";
+
+		public static final String Casualty_Dressing = "de9cb59a-cabc-4587-af0d-ef6a81622237";
+
+		public static final String ENT_Dressing = "25e5ea00-0efd-4b3d-a610-d3f81de3c9b5";
+
+		public static final String Removal_Of_Ear_Dressing = "21032bc9-64e4-43f5-9afb-294c37affe3b";
+
+		public static final String Wound_Dressing_ENT = "63ace222-6715-4c09-bf2b-a102766a8077";
+
+		public static final String Dressing_Per_Session_Female_Medical_Ward = "50b00c63-5f99-4dc2-b0ae-616ab6b225fe";
+
+		//Removal of stitches
+		public static final String Removal_Of_Stitches = "5cf63618-0279-4f2c-a174-144f127a5281";
+
+		public static final String Removal_Of_Corneal_Stitches = "a769ccf8-f28d-405f-9941-a3c2fbc56c29";
+
+		//injection
+		public static final String INJECTION = "0aeb848d-aaa3-49d7-a1a1-f24b6a163611";
+
+		public static final String Sub_Conjuctiral_Sub_Tenon_Injections = "28dc3e2e-fc22-4b9c-b814-4bdb26f5eb86";
+
+		public static final String Intra_arterial_injection = "164677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		public static final String Intralesional_injection = "164000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+		//Stitching
+		public static final String STITCHING = "0aeb848d-aaa3-49d7-a1a1-f24b6a163611";
+
+		public static final String Stitching_Casualty = "92862b02-36ff-4b92-b08a-2383d8802399";
+
+		public static final String Stitching_In_Minor_Theatre = "8e425311-0572-4ce0-8bf5-ab424fca1b78";
+
+		public static final String Dental_stitching = "18f3951d-6b4d-4472-803d-0ef8cb8f8abf";
 		
 	}
 	
