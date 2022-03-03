@@ -50,7 +50,9 @@ public class PatientFinanceSummariesFragmentController {
 				patientBillSummary.setActualAmount(String.valueOf(patientServiceBill.getActualAmount()));
 				patientBillSummary.setPaidAmount(String.valueOf(patientServiceBill.getAmount()));
 				patientBillSummary.setRebate(String.valueOf(patientServiceBill.getRebateAmount()));
-				patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
+				if(patientServiceBill.getReceipt() != null ) {
+					patientBillSummary.setTransactionDate(String.valueOf(patientServiceBill.getReceipt().getPaidDate()));
+				}
 				patientBillSummary.setIdentifier(patientServiceBill.getPatient().getPatientIdentifier().getIdentifier());
 				patientBillSummary.setPatientId(patientServiceBill.getPatient().getPatientId());
 				
