@@ -46,6 +46,13 @@
                     active: (selection == "section-studentRevenueSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/student.png"
+            ],
+            [
+                    label: "NHIF Summaries",
+                    href: ui.pageLink("financials", "financials", [section: "nhifSummaries"]),
+                    active: (selection == "section-nhifSummaries"),
+                    iconProvider: "financials",
+                    icon: "buttons/student.png"
             ]
     ]
 %>
@@ -64,5 +71,7 @@
     ${ ui.includeFragment("financials", "pharmacyRevenueSummaries") }
     <%} else if(section == "studentRevenueSummaries") { %>
     ${ui.includeFragment("financials","studentRevenueSummaries")}
+    <%} else if(section == "nhifSummaries") { %>
+    ${ui.includeFragment("financials","nhifSummaries")}
     <% } %>
 </div>

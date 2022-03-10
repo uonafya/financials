@@ -61,13 +61,13 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                 </td>
                             </tr>
                             <%}%>
-                            </tbody>
                             <% totalSumPerDepartiment.each { name, value -> %>
                             <tr>
                                 <td>${name} </td>
                                 <td>${value}</td>
                             </tr>
                             <%}%>
+                            </tbody>
                         </table>
 
                     </div>

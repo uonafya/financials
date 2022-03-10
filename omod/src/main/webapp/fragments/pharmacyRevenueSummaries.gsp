@@ -42,7 +42,6 @@
             console.log( table.row( this ).data() );
         } );
     });
-``
     var summaryData = fetchPharmacySummariesByDateRange();
 
     function SummariesDataListView() {
