@@ -7,6 +7,13 @@
               href: ui.pageLink("kenyaemr", "userHome")
             ],
             [
+                    label: "Dashboard",
+                    href: ui.pageLink("financials", "financials", [ section: "dashboard" ]),
+                    active: (selection == "section-dashboard"),
+                    iconProvider: "financials",
+                    icon: "buttons/overview.png"
+            ],
+            [
                     label: "Overview",
                     href: ui.pageLink("financials", "financials", [ section: "overview" ]),
                     active: (selection == "section-overview"),
@@ -56,6 +63,8 @@
 
     <% if (section == "overview") { %>
     ${ ui.includeFragment("financials", "summary") }
+    <%} else if (section == "dashboard") { %>
+    ${ui.includeFragment("financials", "dashboard")}
     <% } else if (section == "patientFinanceSummaries") { %>
     ${ ui.includeFragment("financials", "patientFinanceSummaries") }
     <% } else  if (section == "departmentFinanceSummaries") { %>
