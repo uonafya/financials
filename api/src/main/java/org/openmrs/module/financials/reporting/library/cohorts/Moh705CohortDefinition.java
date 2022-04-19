@@ -1,5 +1,7 @@
 package org.openmrs.module.financials.reporting.library.cohorts;
 
+import org.openmrs.EncounterType;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
 import org.openmrs.module.financials.reporting.library.queries.Moh705Queries;
@@ -14,17 +16,20 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.List;
 
+import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
+import static org.openmrs.module.kenyacore.report.ReportUtils.map;
+
 @Component
 public class Moh705CohortDefinition {
 	
 	private EhrAddonCommons ehrAddonCommons;
 	
-	private Moh717CohortDefinition moh717CohortDefinition;
+	private EhrAddonCommons commonLibrary;
 	
 	@Autowired
-	public Moh705CohortDefinition(EhrAddonCommons ehrAddonCommons, Moh717CohortDefinition moh717CohortDefinition) {
+	public Moh705CohortDefinition(EhrAddonCommons ehrAddonCommons, EhrAddonCommons commonLibrary) {
 		this.ehrAddonCommons = ehrAddonCommons;
-		this.moh717CohortDefinition = moh717CohortDefinition;
+		this.commonLibrary = commonLibrary;
 	}
 	
 	/**
@@ -191,8 +196,7 @@ public class Moh705CohortDefinition {
 		cd.setName("Children visiting for the first time");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("NEW",
-		    ReportUtils.map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("NEW", ReportUtils.map(getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
 		cd.setCompositionString("NEW AND CHILD");
 		return cd;
@@ -203,8 +207,7 @@ public class Moh705CohortDefinition {
 		cd.setName("Adults visiting for the first time");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("NEW",
-		    ReportUtils.map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("NEW", ReportUtils.map(getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("NEW AND ADULT");
 		return cd;
@@ -215,8 +218,7 @@ public class Moh705CohortDefinition {
 		cd.setName("Children with revisits");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("RVT",
-		    ReportUtils.map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("RVT", ReportUtils.map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
 		cd.setCompositionString("RVT AND CHILD");
 		return cd;
@@ -227,8 +229,7 @@ public class Moh705CohortDefinition {
 		cd.setName("Adults with revisit");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("RVT",
-		    ReportUtils.map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("RVT", ReportUtils.map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("RVT AND ADULT");
 		return cd;
@@ -263,6 +264,62 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setQuery(Moh705Queries.getPatientsWhoAreReferred(qn, ans));
 		return cd;
+	}
+	
+	private CohortDefinition getNewPatients() {
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Get new patients");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("ALL", ReportUtils.map(getAllPatientsWithDiagnosis(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch(
+		    "NEW",
+		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
+		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
+		        "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("VISIT",
+		    map(commonLibrary.getPatientWithNewVisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("REVISIT", map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
+		
+		cd.setCompositionString("(ALL AND (NEW OR VISIT)) AND NOT REVISIT");
+		return cd;
+		
+	}
+	
+	private CohortDefinition getAllPatientsWithDiagnosis() {
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("All patients who have at least diagnosis recorded");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("DIAGNOSIS", map(getPatientsWhoHaveDiagnosisOverral(), "startDate=${startDate},endDate=${endDate}"));
+		cd.setCompositionString("DIAGNOSIS");
+		return cd;
+	}
+	
+	private CohortDefinition getRevisitPatients() {
+		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
+		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
+		    "98d42234-f28f-11ea-b609-bbd062a0383b");
+		CompositionCohortDefinition cd = new CompositionCohortDefinition();
+		cd.setName("Get revisit patients");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addSearch("ALL", ReportUtils.map(getAllPatientsWithDiagnosis(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch(
+		    "RVT",
+		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
+		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
+		        "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("VISIT",
+		    map(commonLibrary.getPatientRevisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
+		cd.setCompositionString("ALL AND (RVT OR VISIT)");
+		return cd;
+		
 	}
 	
 }

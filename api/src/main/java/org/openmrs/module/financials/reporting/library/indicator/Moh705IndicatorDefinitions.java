@@ -15,6 +15,9 @@ public class Moh705IndicatorDefinitions {
 	
 	private Moh705CohortDefinition moh705CohortDefinition;
 	
+	public Moh705IndicatorDefinitions() {
+	}
+	
 	@Autowired
 	public Moh705IndicatorDefinitions(Moh705CohortDefinition moh705aCohortDefinition) {
 		this.moh705CohortDefinition = moh705aCohortDefinition;

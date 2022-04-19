@@ -27,11 +27,15 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh717CohortDefinition {
 	
-	@Autowired
 	private EhrAddonCommons commonLibrary;
 	
-	@Autowired
 	private Moh705CohortDefinition moh705CohortDefinition;
+	
+	@Autowired
+	public Moh717CohortDefinition(EhrAddonCommons commonLibrary, Moh705CohortDefinition moh705CohortDefinition) {
+		this.commonLibrary = commonLibrary;
+		this.moh705CohortDefinition = moh705CohortDefinition;
+	}
 	
 	public CohortDefinition getAllPatientsWithDiagnosis() {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
