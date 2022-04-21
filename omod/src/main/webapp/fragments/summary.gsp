@@ -1,40 +1,35 @@
-<%
-    ui.includeJavascript("financials", "jquery.dataTables.min.js")
-    ui.includeCss("financials", "jquery.dataTables.min.css")
-%>
-
 <script type="text/javascript">
-    jQuery(function() {
-        var table = jQuery("#details").DataTable();
-        var table1 = Query("#cummulative").DataTable();
-    });
+  jQuery(function() {
+    var table = jQuery("#details").DataTable();
+    var table1 = Query("#cummulative").DataTable();
+  });
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
-    display: none;
+  display: none;
 }
 body {
-    font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
 
 
 table#details.dataTable tbody tr:hover {
-    background-color: #43fff8;
+  background-color: #43fff8;
 }
 
 table#details.dataTable tbody tr:hover > .sorting_1 {
-    background-color: #43fff8;
+  background-color: #43fff8;
 }
 table1#cummulative.dataTable tbody tr:hover {
-    background-color: #43fff8;
+  background-color: #43fff8;
 }
 
 table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
-    background-color: #43fff8;
+  background-color: #43fff8;
 }
 </style>
 <div class="ke-panel-frame" style="background-color: #ffffff">

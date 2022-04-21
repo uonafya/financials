@@ -1,10 +1,35 @@
 <%
     ui.decorateWith("kenyaemr", "standardPage", [ layout: "sidebar" ])
+    ui.includeJavascript("financials", "jquery.dataTables.min.js")
+    ui.includeCss("financials", "jquery.dataTables.min.css")
+    ui.includeCss("financials", "bootstrap.min.css")
+    ui.includeCss("financials", "main.css")
+    ui.includeCss("financials", "bootstrap-datetimepicker.min.css")
+    ui.includeJavascript("ehrconfigs", "datetimepicker/bootstrap-datetimepicker.min.js")
+    ui.includeJavascript("ehrconfigs", "bootstrap.min.js")
+    ui.includeJavascript("kenyaemr", "highcharts.js")
+    ui.includeJavascript("kenyaemr", "highcharts-grouped-categories.js")
+    ui.includeJavascript("ehrconfigs", "knockout-3.4.0.js")
+    ui.includeJavascript("ehrcashier", "moment.js")
+    ui.includeJavascript("financials", "dataTables.buttons.min.js")
+    ui.includeJavascript("financials", "pdfmake.min.js")
+    ui.includeJavascript("financials", "vfs_fonts.js")
+    ui.includeJavascript("financials", "buttons.html5.js")
+    ui.includeJavascript("financials", "buttons.print.min.js")
+    ui.includeCss("financials", "buttons.dataTables.min.css")
+    ui.includeJavascript("ehrconfigs", "underscore-min.js")
     def menuItems = [
             [ label: "Back to home",
               iconProvider: "kenyaui",
               icon: "buttons/back.png",
               href: ui.pageLink("kenyaemr", "userHome")
+            ],
+            [
+                    label: "Dashboard",
+                    href: ui.pageLink("financials", "financials", [ section: "dashboard" ]),
+                    active: (selection == "section-dashboard"),
+                    iconProvider: "financials",
+                    icon: "buttons/dashboard.jpeg"
             ],
             [
                     label: "Overview",
@@ -46,6 +71,13 @@
                     active: (selection == "section-studentRevenueSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/student.png"
+            ],
+            [
+                    label: "NHIF Summaries",
+                    href: ui.pageLink("financials", "financials", [section: "nhifSummaries"]),
+                    active: (selection == "section-nhifSummaries"),
+                    iconProvider: "financials",
+                    icon: "buttons/nhif.jpeg"
             ]
     ]
 %>
@@ -53,8 +85,9 @@
     ${ ui.includeFragment("kenyaui", "widget/panelMenu", [ heading: "Tasks", items: menuItems ]) }
 </div>
 <div class="ke-page-content">
-
-    <% if (section == "overview") { %>
+    <% if (section == "dashboard") { %>
+    ${ ui.includeFragment("financials", "dashboard") }
+    <%} else if (section == "overview") { %>
     ${ ui.includeFragment("financials", "summary") }
     <% } else if (section == "patientFinanceSummaries") { %>
     ${ ui.includeFragment("financials", "patientFinanceSummaries") }
@@ -64,5 +97,7 @@
     ${ ui.includeFragment("financials", "pharmacyRevenueSummaries") }
     <%} else if(section == "studentRevenueSummaries") { %>
     ${ui.includeFragment("financials","studentRevenueSummaries")}
+    <%} else if(section == "nhifSummaries") { %>
+    ${ui.includeFragment("financials","nhifSummaries")}
     <% } %>
 </div>

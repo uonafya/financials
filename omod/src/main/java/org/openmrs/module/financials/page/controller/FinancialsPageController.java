@@ -14,7 +14,7 @@ public class FinancialsPageController {
 		String selection = null;
 		
 		if (StringUtils.isEmpty(section)) {
-			section = "overview";
+			section = "dashboard";
 		}
 		selection = "section-" + section;
 		

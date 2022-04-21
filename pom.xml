@@ -129,7 +129,7 @@
 		<calculationVersion>1.2</calculationVersion>
 		<reportingVersion>1.22.0</reportingVersion>
 		<ehrconfigsVersion>2.0.0</ehrconfigsVersion>
-		<hospitalcoreVersion>2.0.2</hospitalcoreVersion>
+		<hospitalcoreVersion>2.0.3-SNAPSHOT</hospitalcoreVersion>
 		<legacyUiVersion>1.5.0</legacyUiVersion>
 	</properties>
 </project>

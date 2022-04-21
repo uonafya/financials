@@ -1,15 +1,3 @@
-<%
-    ui.includeJavascript("financials", "jquery.dataTables.min.js")
-    ui.includeCss("financials", "jquery.dataTables.min.css")
-    ui.includeJavascript("ehrconfigs", "knockout-3.4.0.js")
-    ui.includeJavascript("ehrcashier", "moment.js")
-    ui.includeJavascript("financials", "dataTables.buttons.min.js")
-    ui.includeJavascript("financials", "pdfmake.min.js")
-    ui.includeJavascript("financials", "vfs_fonts.js")
-    ui.includeJavascript("financials", "buttons.html5.js")
-    ui.includeJavascript("financials", "buttons.print.min.js")
-    ui.includeCss("financials", "buttons.dataTables.min.css")
-%>
 <script type="text/javascript">
     jQuery(function() {
             var table =  jQuery("#dDetails").DataTable({

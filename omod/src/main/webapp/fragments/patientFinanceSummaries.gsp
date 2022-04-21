@@ -1,7 +1,3 @@
-<%
-    ui.includeJavascript("financials", "jquery.dataTables.min.js")
-    ui.includeCss("financials", "jquery.dataTables.min.css")
-%>
 <script type="text/javascript">
     jQuery(function() {
         jQuery("#dataIn").DataTable();
