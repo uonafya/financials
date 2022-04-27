@@ -1,8 +1,7 @@
 package org.openmrs.module.financials.fragment.controller;
 
 import org.openmrs.api.context.Context;
-import org.openmrs.module.financials.utils.Utils;
-import org.openmrs.module.hospitalcore.BillingService;
+import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.EhrDepartment;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
@@ -15,8 +14,8 @@ public class DashboardFragmentController {
 	
 	public void controller(FragmentModel model) {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
-		Date startOfDay = Utils.getStartOfDay(new Date());
-		Date endOfDay = Utils.getEndOfDay(new Date());
+		Date startOfDay = FinancialsUtils.getStartOfDay(new Date());
+		Date endOfDay = FinancialsUtils.getEndOfDay(new Date());
 		
 		model.addAttribute(
 		    "registration",
@@ -47,7 +46,6 @@ public class DashboardFragmentController {
 	private Double getDepartmentTotalsOnDateRange(HospitalCoreService hospitalCoreService, Date startDate, Date endDate,
 	        EhrDepartment ehrDepartment) {
 		double totals = 0.0;
-		BillingService billingService = Context.getService(BillingService.class);
 		List<PatientServiceBillItem> getBilledItemsPerDepartment = hospitalCoreService.getPatientServiceBillByDepartment(
 		    ehrDepartment, startDate, endDate);
 		if (getBilledItemsPerDepartment.size() > 0) {

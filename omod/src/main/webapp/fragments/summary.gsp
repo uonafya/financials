@@ -33,38 +33,54 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
 }
 </style>
 <div class="ke-panel-frame" style="background-color: #ffffff">
-    <div class="ke-panel-heading">Financial Report and Statements today</div>
-    <br />
     <table cellspacing="0" cellpadding="5" width="100%">
         <tr>
             <td width="40%" valign="top">
                 <div class="ke-panel-frame">
-                    <div class="ke-panel-heading">Cummulative Summaries - today</div>
+                    <div class="ke-panel-heading">Cummulative Summaries</div>
                     <div class="ke-panel-content">
-                        <table border="0" cellpadding="0" cellspacing="0" id="cummulative" width="40%" style="background-color: #F3F9FF;">
-                            <thead>
-                            <tr>
-                                <th>Department</th>
-                                <th>Commulative total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <% if(totalSumPerDepartiment.empty) { %>
-                            <tr>
-                                <td colspan="2">
-                                    No records to display
-                                </td>
-                            </tr>
-                            <%}%>
-                            </tbody>
-                            <% totalSumPerDepartiment.each { name, value -> %>
-                            <tr>
-                                <td>${name} </td>
-                                <td>${value}</td>
-                            </tr>
-                            <%}%>
-                        </table>
-
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4" style="margin-bottom: 10px;">
+                                        <div class="card" style="height: 100%; background: #43fff8">
+                                            <div class="stat-widget-one">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="stat-text">Registration fees</div>
+                                                        <div class="stat-digit">1000</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4" style="margin-bottom: 10px;">
+                                        <div class="card" style="height: 100%; background: #E6E6FA">
+                                            <div class="stat-widget-one">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="stat-text">Revisit fees</div>
+                                                        <div class="stat-digit">2000</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4" style="margin-bottom: 10px;">
+                                        <div class="card" style="height: 100%; background: #DAF7A1">
+                                            <div class="stat-widget-one">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="stat-text">Special Clinic fees</div>
+                                                        <div class="stat-digit">3000</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </td>
@@ -72,12 +88,13 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
         <tr>
             <td colspan="2">
                 <div class="ke-panel-frame">
-                    <div class="ke-panel-heading">Patient Summary - today</div>
+                    <div class="ke-panel-heading">Patient Summary</div>
                     <div class="ke-panel-content" style="background-color: #F3F9FF;">
                         <table border="0" cellpadding="0" cellspacing="0" id="details" width="100%">
                             <thead>
                             <tr>
                                 <th>Transaction Date</th>
+                                <th>Service Offered</th>
                                 <th>Patient Identifier</th>
                                 <th>Patient Names</th>
                                 <th>Category</th>
@@ -90,7 +107,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                             <tbody>
                             <% if (bills.empty) { %>
                             <tr>
-                                <td colspan="7">
+                                <td colspan="8">
                                     No records found for today
                                 </td>
                             </tr>
@@ -98,6 +115,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                             <% bills.each {%>
                             <tr>
                                 <td>${it.transactionDate}</td>
+                                <td>${it.serviceOffered}</td>
                                 <td>${it.identifier}</td>
                                 <td>${it.patient}</td>
                                 <td>${it.category}</td>

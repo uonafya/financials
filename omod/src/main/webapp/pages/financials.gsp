@@ -32,11 +32,11 @@
                     icon: "buttons/dashboard.jpeg"
             ],
             [
-                    label: "Overview",
-                    href: ui.pageLink("financials", "financials", [ section: "overview" ]),
-                    active: (selection == "section-overview"),
+                    label: "Registration",
+                    href: ui.pageLink("financials", "financials", [ section: "registration" ]),
+                    active: (selection == "section-registration"),
                     iconProvider: "financials",
-                    icon: "buttons/overview.png"
+                    icon: "buttons/printer.png"
             ],
             [
                     label: "Patient Summaries",
@@ -87,7 +87,7 @@
 <div class="ke-page-content">
     <% if (section == "dashboard") { %>
     ${ ui.includeFragment("financials", "dashboard") }
-    <%} else if (section == "overview") { %>
+    <%} else if (section == "registration") { %>
     ${ ui.includeFragment("financials", "summary") }
     <% } else if (section == "patientFinanceSummaries") { %>
     ${ ui.includeFragment("financials", "patientFinanceSummaries") }

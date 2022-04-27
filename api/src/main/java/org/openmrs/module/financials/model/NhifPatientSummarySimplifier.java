@@ -1,6 +1,6 @@
 package org.openmrs.module.financials.model;
 
-public class NhifPatientSimplifier {
+public class NhifPatientSummarySimplifier {
 	
 	private String names;
 	

@@ -12,7 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class Utils {
+public class FinancialsUtils {
 	
 	public static Calendar getCalendar(Date date) {
 		Calendar calendar = Calendar.getInstance();
