@@ -15,14 +15,11 @@ import java.util.Date;
 @Component
 public class Moh706DatasetDefinition {
 	
-	private Moh706IndicatorDefinitions moh706Indicator;
-	
-	private EhrAddonDimesion ehrAddonDimesion;
+	private final Moh706IndicatorDefinitions moh706Indicator;
 	
 	@Autowired
-	public Moh706DatasetDefinition(Moh706IndicatorDefinitions moh706Indicator, EhrAddonDimesion ehrAddonDimesion) {
+	public Moh706DatasetDefinition(Moh706IndicatorDefinitions moh706Indicator) {
 		this.moh706Indicator = moh706Indicator;
-		this.ehrAddonDimesion = ehrAddonDimesion;
 	}
 	
 	/**
@@ -33,12 +30,12 @@ public class Moh706DatasetDefinition {
 	public DataSetDefinition getMoh706bDataset() {
 		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
 		String indParam = "startDate=${startDate},endDate=${endDate}";
-		//dsd.addDimension("days", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "endDate=${endDate}"));
 		dsd.setName("MOH706");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		
-		dsd.addColumn("ALL01", "All patients 706", ReportUtils.map(moh706Indicator.getAllPatients(), ""), "");
+		dsd.addColumn("UAGL", "Urinalysis glucose presence",
+		    ReportUtils.map(moh706Indicator.getAllUrineAnalysisGlucoseTestsPositives(), indParam), "");
 		return dsd;
 	}
 }
