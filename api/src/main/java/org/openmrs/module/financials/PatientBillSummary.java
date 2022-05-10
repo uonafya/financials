@@ -11,15 +11,15 @@ public class PatientBillSummary {
 	private String subCategory;
 	
 	private String studentAttributeName;
-
+	
 	public String getServiceOffered() {
 		return serviceOffered;
 	}
-
+	
 	public void setServiceOffered(String serviceOffered) {
 		this.serviceOffered = serviceOffered;
 	}
-
+	
 	private String serviceOffered;
 	
 	public Integer getBillId() {

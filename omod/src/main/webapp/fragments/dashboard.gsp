@@ -94,7 +94,7 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">Procedures</div>
-                                            <div class="stat-digit">${procedure}}</div>
+                                            <div class="stat-digit">${procedure}</div>
                                         </div>
                                     </div>
                                 </div>

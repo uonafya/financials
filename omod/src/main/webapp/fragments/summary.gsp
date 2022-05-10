@@ -37,8 +37,30 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
         <tr>
             <td width="40%" valign="top">
                 <div class="ke-panel-frame">
-                    <div class="ke-panel-heading">Cummulative Summaries</div>
+                    <div class="ke-panel-heading">Cumulative Summaries</div>
                     <div class="ke-panel-content">
+                        <br />
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4" style="margin-bottom: 10px">
+                                        <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                    </div>
+                                    <div class="col-4" style="margin-bottom: 10px">
+                                        <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                    </div>
+                                    <div class="col-4" style="margin-bottom: 10px">
+                                        <button id="filter" type="button" class=" btn btn-primary right">${ui.message("Filter")}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <hr />
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="row">
@@ -47,8 +69,8 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                             <div class="stat-widget-one">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <div class="stat-text">Registration fees</div>
-                                                        <div class="stat-digit">1000</div>
+                                                        <div class="stat-text">General Registration Fees</div>
+                                                        <div class="stat-digit">${registrationFees}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -60,7 +82,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="stat-text">Revisit fees</div>
-                                                        <div class="stat-digit">2000</div>
+                                                        <div class="stat-digit">${revisitFees}</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -72,7 +94,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="stat-text">Special Clinic fees</div>
-                                                        <div class="stat-digit">3000</div>
+                                                        <div class="stat-digit">${specialClinicFees}</div>
                                                     </div>
                                                 </div>
                                             </div>

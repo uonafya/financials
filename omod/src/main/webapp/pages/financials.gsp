@@ -39,6 +39,13 @@
                     icon: "buttons/printer.png"
             ],
             [
+                    label: "Laboratory",
+                    href: ui.pageLink("financials", "financials", [ section: "laboratory" ]),
+                    active: (selection == "section-laboratory"),
+                    iconProvider: "financials",
+                    icon: "buttons/lab.png"
+            ],
+            [
                     label: "Patient Summaries",
                     href: ui.pageLink("financials", "financials", [ section: "patientFinanceSummaries" ]),
                     active: (selection == "section-patientFinanceSummaries"),
@@ -99,5 +106,7 @@
     ${ui.includeFragment("financials","studentRevenueSummaries")}
     <%} else if(section == "nhifSummaries") { %>
     ${ui.includeFragment("financials","nhifSummaries")}
-    <% } %>
+    <% } else if(section == "laboratory") { %>
+    ${ui.includeFragment("financials","laboratory")}
+    <%}%>
 </div>

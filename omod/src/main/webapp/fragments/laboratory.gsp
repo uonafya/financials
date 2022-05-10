@@ -1,38 +1,12 @@
 <script type="text/javascript">
-    jQuery(function() {
-        jQuery("#dataIn").DataTable();
-        var table =  jQuery("#pDetails").DataTable();
-        jQuery('#pDetails tbody').on( 'click', 'tr', function () {
-            var billId = table.row( this ).data();
-            ui.navigate('financials', 'billedItems', {billedId: billId[0], patientId: billId[1]});
-        } );
-    });
+  jQuery(function() {
+    jQuery("#laboratory").DataTable();
+  });
 </script>
-<style type="text/css">
-.no-close .ui-dialog-titlebar-close {
-    display: none;
-}
-body {
-    font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
 
-
-
-table#pDetails.dataTable tbody tr:hover {
-    background-color: #43fff8;
-}
-
-table#pDetails.dataTable tbody tr:hover > .sorting_1 {
-    background-color: #43fff8;
-}
-</style>
 <div class="ke-panel-frame">
-    <div class="ke-panel-heading">Patient Finance Summaries </div>
+    <div class="ke-panel-heading">Patient Summary</div>
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
-        <br />
         <div class="row">
             <div class="col-12">
                 <div class="row">
@@ -54,12 +28,11 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <hr />
             </div>
         </div>
-        <table id="pDetails">
+        <table border="0" cellpadding="0" cellspacing="0" id="laboratory" width="100%">
             <thead>
             <tr>
-                <td>Service Id</td>
-                <td>Patient Id</td>
                 <th>Transaction Date</th>
+                <th>Lab test</th>
                 <th>Patient Identifier</th>
                 <th>Patient Names</th>
                 <th>Category</th>
@@ -70,19 +43,17 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             </tr>
             </thead>
             <tbody>
-            <% if (bills.empty) { %>
-
+            <% if (labBills.empty) { %>
             <tr>
-                <td colspan="9">
-                    No records found
+                <td colspan="8">
+                    No records found for today
                 </td>
             </tr>
             <% } %>
-            <% bills.each {%>
+            <% labBills.each {%>
             <tr>
-                <td>${it.billId}</td>
-                <td>${it.patientId}</td>
                 <td>${it.transactionDate}</td>
+                <td>${it.serviceOffered}</td>
                 <td>${it.identifier}</td>
                 <td>${it.patient}</td>
                 <td>${it.category}</td>
@@ -94,5 +65,5 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             <%}%>
             </tbody>
         </table>
-        </div>
+    </div>
 </div>

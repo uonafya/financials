@@ -4,6 +4,7 @@ import org.openmrs.PersonAttributeType;
 import org.openmrs.api.PersonService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.PatientBillSummary;
+import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.BillingService;
 import org.openmrs.module.hospitalcore.model.PatientServiceBill;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
@@ -13,12 +14,15 @@ import org.openmrs.ui.framework.fragment.FragmentModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class PatientFinanceSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
 		String STUDENT_ID = "88546440-0271-11eb-b43f-c392cfe8f5df";
+		Date startOfDay = FinancialsUtils.getStartOfDay(new Date());
+		Date endOfDay = FinancialsUtils.getEndOfDay(new Date());
 		
 		List<PatientServiceBill> allBils = Context.getService(BillingService.class).getAllPatientServiceBill();
 		PersonService personService = Context.getPersonService();
