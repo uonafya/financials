@@ -34,6 +34,8 @@ public class Moh706DatasetDefinition {
 		
 		dsd.addColumn("UAGL", "Urinalysis glucose presence",
 		    ReportUtils.map(moh706Indicator.getAllUrineAnalysisGlucoseTestsPositives(), indParam), "");
+		dsd.addColumn("UAKET", "Urinalysis ketones presence",
+		    ReportUtils.map(moh706Indicator.getAllUrineAnalysisKetonesTestsPositives(), indParam), "");
 		return dsd;
 	}
 }

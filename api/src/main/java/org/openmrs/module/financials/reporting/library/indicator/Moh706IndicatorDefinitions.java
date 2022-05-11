@@ -24,4 +24,11 @@ public class Moh706IndicatorDefinitions {
 		    map(moh706CohortDefinition.getAllUrineAnalysisGlucoseTestsPositives(),
 		        "startDate=${startDate},endDate=${endDate}"));
 	}
+	
+	public CohortIndicator getAllUrineAnalysisKetonesTestsPositives() {
+		return cohortIndicator(
+		    "All patients who have urinalysis ketones",
+		    map(moh706CohortDefinition.getAllUrineAnalysisKetonesTestsPositives(),
+		        "startDate=${startDate},endDate=${endDate}"));
+	}
 }
