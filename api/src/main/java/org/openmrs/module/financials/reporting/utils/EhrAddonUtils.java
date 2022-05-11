@@ -141,4 +141,11 @@ public class EhrAddonUtils {
 		
 	}
 	
+	public static List<ColumnParameters> getAgeUnderOver5Columns() {
+		ColumnParameters malariaTotalUnder5 = new ColumnParameters("malariaTotalUnder5", "Total Exam - under 5", "age=<5",
+		        "01");
+		ColumnParameters malariaTotalOver5 = new ColumnParameters("malariaTotalOver5", "Total Exam - over 5", "age=>5", "02");
+		return Arrays.asList(malariaTotalUnder5, malariaTotalOver5);
+	}
+	
 }

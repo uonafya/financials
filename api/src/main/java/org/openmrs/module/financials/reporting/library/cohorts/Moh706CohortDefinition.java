@@ -52,4 +52,56 @@ public class Moh706CohortDefinition {
 		);
 		return sql;
 	}
+	
+	public CohortDefinition getAllMalariaTests() {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with malaria tests");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN (32) "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
+		);
+		return sql;
+	}
+	
+	public CohortDefinition getAllRapidMalariaTests() {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with rapid malaria tests");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN (1643) "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
+		);
+		return sql;
+	}
+	
+	public CohortDefinition getAllMalariaTestsPositiveCases() {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with malaria tests positive cases");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN (32,1643) AND o.value_coded IN (703,161246,161247,161248) "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
+		);
+		return sql;
+	}
+	
+	public CohortDefinition getAllRapidMalariaTestsPositiveCases() {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with rapid malaria tests positive cases");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN (1643) AND o.value_coded IN (703,161246,161247,161248) "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
+		);
+		return sql;
+	}
 }
