@@ -1,7 +1,6 @@
 package org.openmrs.module.financials.reports;
 
 import org.openmrs.module.financials.reporting.library.dataset.Moh706DatasetDefinition;
-import org.openmrs.module.financials.reporting.library.dataset.Moh717DatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
@@ -22,7 +21,7 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Builds({ "ehraddons.common.706" })
 public class SetupMOH706Report extends AbstractReportBuilder {
 	
-	private Moh706DatasetDefinition moh706DatasetDefinition;
+	private final Moh706DatasetDefinition moh706DatasetDefinition;
 	
 	@Autowired
 	public SetupMOH706Report(Moh706DatasetDefinition moh706DatasetDefinition) {
