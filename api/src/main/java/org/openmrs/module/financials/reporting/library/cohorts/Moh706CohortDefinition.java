@@ -5,6 +5,7 @@ import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Date;
 
 @Component
@@ -101,6 +102,19 @@ public class Moh706CohortDefinition {
 		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN (1643) AND o.value_coded IN (703,161246,161247,161248) "
 		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
 		
+		);
+		return sql;
+	}
+
+	public CohortDefinition getResponsesBasedOnAnswer(int question, int ... ans) {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with rapid malaria tests positive cases");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+						+ " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id="+question +" AND o.value_coded IN ("+ Arrays.toString(ans) +") "
+						+ " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+
 		);
 		return sql;
 	}

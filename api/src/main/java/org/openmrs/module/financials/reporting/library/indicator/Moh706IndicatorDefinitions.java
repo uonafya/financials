@@ -58,4 +58,8 @@ public class Moh706IndicatorDefinitions {
 		return cohortIndicator("All patients who have rapid malaria test done and are positive",
 		    map(moh706CohortDefinition.getAllRapidMalariaTestsPositiveCases(), "startDate=${startDate},endDate=${endDate}"));
 	}
+	public CohortIndicator getResponsesBasedOnAnswerIndicator(int q, int... ans) {
+		return cohortIndicator("All patients who have tests done based on a question and answers",
+						map(moh706CohortDefinition.getResponsesBasedOnAnswer(q, ans), "startDate=${startDate},endDate=${endDate}"));
+	}
 }
