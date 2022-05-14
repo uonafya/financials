@@ -5,6 +5,8 @@ import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 import static org.openmrs.module.financials.utils.EhrReportingUtils.cohortIndicator;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
@@ -58,8 +60,26 @@ public class Moh706IndicatorDefinitions {
 		return cohortIndicator("All patients who have rapid malaria test done and are positive",
 		    map(moh706CohortDefinition.getAllRapidMalariaTestsPositiveCases(), "startDate=${startDate},endDate=${endDate}"));
 	}
-	public CohortIndicator getResponsesBasedOnAnswerIndicator(int q, int... ans) {
+	
+	public CohortIndicator getResponsesBasedOnAnswerIndicator(int q, List<Integer> ans) {
 		return cohortIndicator("All patients who have tests done based on a question and answers",
-						map(moh706CohortDefinition.getResponsesBasedOnAnswer(q, ans), "startDate=${startDate},endDate=${endDate}"));
+		    map(moh706CohortDefinition.getResponsesBasedOnAnswer(q, ans), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getPatientsWithObsIndicator(int q) {
+		return cohortIndicator("All patients who have Obs recorded",
+		    map(moh706CohortDefinition.getPatientsWithObs(q), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getResponsesBasedOnAlistOfQuestionsAndListOfAnswers(List<Integer> q, List<Integer> ans) {
+		return cohortIndicator(
+		    "All patients who have tests done based on a question and answers based on list of questions and answers",
+		    map(moh706CohortDefinition.getResponsesBasedOnAlistOfQuestionsAndListOfAnswers(q, ans),
+		        "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getResponsesBasedOnAlistOfQuestions(List<Integer> q) {
+		return cohortIndicator("All patients who have tests done based on a question list",
+		    map(moh706CohortDefinition.getResponsesBasedOnAlistOfQuestions(q), "startDate=${startDate},endDate=${endDate}"));
 	}
 }

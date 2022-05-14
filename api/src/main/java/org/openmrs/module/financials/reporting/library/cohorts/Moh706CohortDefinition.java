@@ -1,12 +1,13 @@
 package org.openmrs.module.financials.reporting.library.cohorts;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @Component
 public class Moh706CohortDefinition {
@@ -105,16 +106,65 @@ public class Moh706CohortDefinition {
 		);
 		return sql;
 	}
-
-	public CohortDefinition getResponsesBasedOnAnswer(int question, int ... ans) {
+	
+	public CohortDefinition getResponsesBasedOnAnswer(int question, List<Integer> ans) {
 		SqlCohortDefinition sql = new SqlCohortDefinition();
-		sql.setName("Get patients with rapid malaria tests positive cases");
+		sql.setName("Get patients with obs recorded based on value coded");
 		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
 		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
-						+ " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id="+question +" AND o.value_coded IN ("+ Arrays.toString(ans) +") "
-						+ " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
-
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id="
+		        + question
+		        + " AND o.value_coded IN ("
+		        + StringUtils.join(ans, ',')
+		        + ") "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
+		);
+		return sql;
+	}
+	
+	public CohortDefinition getPatientsWithObs(int question) {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with obs recorded");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id="
+		        + question
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
+		);
+		return sql;
+	}
+	
+	public CohortDefinition getResponsesBasedOnAlistOfQuestionsAndListOfAnswers(List<Integer> question, List<Integer> ans) {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with obs recorded based on value coded list and question list and list of answers");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN ("
+		        + StringUtils.join(question, ',')
+		        + ") "
+		        + " AND o.value_coded IN ("
+		        + StringUtils.join(ans, ',')
+		        + ") "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
+		);
+		return sql;
+	}
+	
+	public CohortDefinition getResponsesBasedOnAlistOfQuestions(List<Integer> question) {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with obs recorded based on value coded list and question list");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN ("
+		        + StringUtils.join(question, ',') + ") " + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
+		
 		);
 		return sql;
 	}
