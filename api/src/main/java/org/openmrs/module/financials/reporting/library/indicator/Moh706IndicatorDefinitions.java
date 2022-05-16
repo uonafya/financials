@@ -90,7 +90,7 @@ public class Moh706IndicatorDefinitions {
 		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getResponsesBasedOnValueNumericQuestionBetweenLimits(int question, int lower, int upper) {
+	public CohortIndicator getResponsesBasedOnValueNumericQuestionBetweenLimits(int question, double lower, double upper) {
 		return cohortIndicator(
 		    "Get patients with obs recorded based on value numeric concept id within limits indicators",
 		    map(moh706CohortDefinition.getResponsesBasedOnValueNumericQuestionBetweenLimits(question, lower, upper),

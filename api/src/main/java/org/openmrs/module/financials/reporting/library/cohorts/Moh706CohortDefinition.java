@@ -184,7 +184,7 @@ public class Moh706CohortDefinition {
 		return sql;
 	}
 	
-	public CohortDefinition getResponsesBasedOnValueNumericQuestionBetweenLimits(int question, int lower, int upper) {
+	public CohortDefinition getResponsesBasedOnValueNumericQuestionBetweenLimits(int question, double lower, double upper) {
 		SqlCohortDefinition sql = new SqlCohortDefinition();
 		sql.setName("Get patients with obs recorded based on value numeric concept id within limits");
 		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));

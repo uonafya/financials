@@ -190,6 +190,56 @@ public class Moh706DatasetDefinition {
 		        Arrays.asList(703, 1228, 1311, 1312, 1313, 1314, 1315, 1316, 1317, 163621, 163622, 163623, 163624)),
 		    indParam), "");
 		
+		//2. BLOOD CHEMISTRY
+		
+		dsd.addColumn("BCBST", "2.1 BLOOD CHEMISTRY - Blood Sugar Test - Blood Sugar total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(887), indParam), "");
+		dsd.addColumn("BCBSL", "2.1 BLOOD CHEMISTRY - Blood Sugar Test - Low Blood Sugar total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(887, 0, 4), indParam), "");
+		dsd.addColumn("BCBSH", "2.1 BLOOD CHEMISTRY - Blood Sugar Test - Low Blood Sugar total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(887, 6, 20), indParam), "");
+		dsd.addColumn("OGTT", "2.2 BLOOD CHEMISTRY - Blood Sugar Test - OGTT total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(163594), indParam), "");
+		dsd.addColumn("OGTTL", "2.2 BLOOD CHEMISTRY - Blood Sugar Test - Low OGTT total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(163594, 20, 70), indParam),
+		    "");
+		dsd.addColumn("OGTTH", "2.2 BLOOD CHEMISTRY - Blood Sugar Test - High OGTT total", ReportUtils.map(
+		    moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(163594, 120, 450), indParam), "");
+		dsd.addColumn("BCLC", "2.4 BLOOD CHEMISTRY - Renal Function Test - Low Creatine",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(790, 0, 0.74), indParam),
+		    "");
+		dsd.addColumn("BCHC", "2.4 BLOOD CHEMISTRY -  Renal Function Test - High Creatine",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(790, 1.35, 2.0), indParam),
+		    "");
+		dsd.addColumn("BCLU", "2.5 BLOOD CHEMISTRY -  Renal Function Test - Low Urea",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(163699, 10, 20), indParam),
+		    "");
+		dsd.addColumn(
+		    "BCHU",
+		    "2.5 BLOOD CHEMISTRY -  Renal Function Test - High Urea",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(163699, 41, 200), indParam),
+		    "");
+		dsd.addColumn("BCLS", "2.6 BLOOD CHEMISTRY -  Renal Function Test - Low Sodium",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159656, 0, 2), indParam),
+		    "");
+		dsd.addColumn("BCHS", "2.6 BLOOD CHEMISTRY - Renal Function Test - High Sodium",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159656, 3, 100), indParam),
+		    "");
+		
+		dsd.addColumn("BCLP", "2.7 BLOOD CHEMISTRY - Renal Function Test -  Low Potassium",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159659, 0, 2), indParam),
+		    "");
+		dsd.addColumn("BCHP", "2.7 BLOOD CHEMISTRY - Renal Function Test -  High Potassium",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159659, 3, 100), indParam),
+		    "");
+		
+		dsd.addColumn("BCLCH", "2.8 BLOOD CHEMISTRY - Renal Function Test -  Low Chlorides",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159657, 0, 2), indParam),
+		    "");
+		dsd.addColumn("BCHCH", "2.8 BLOOD CHEMISTRY - Renal Function Test -  High Chlorides",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159657, 3, 100), indParam),
+		    "");
+		
 		return dsd;
 	}
 }
