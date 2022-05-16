@@ -136,6 +136,60 @@ public class Moh706DatasetDefinition {
 		
 		//Blood chemistry
 		
+		//4.Haematology
+		dsd.addColumn("FBCT", "4.1 Haematology tests Full blood count total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(21), indParam), "");
+		dsd.addColumn("FBC5", "4.1 Haematology tests Full blood count <5 g/dl",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(21, 0, 5), indParam), "");
+		dsd.addColumn("FBC510", "4.1 Haematology tests Full blood count <5 g/dl",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(21, 5, 10), indParam), "");
+		dsd.addColumn("CD4T", "4.3 Haematology tests CD4 count total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(5497), indParam), "");
+		dsd.addColumn("CD4T500", "4.3 Haematology tests CD4 count < 500",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(5497, 0, 500), indParam),
+		    "");
+		
+		//Other Haematology tests
+		dsd.addColumn("STT", "4.4 Other Haematology Tests Sickling test Totals",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnAlistOfQuestions(Arrays.asList(160225)), indParam), "");
+		dsd.addColumn("STP", "4.4 Other Haematology Tests Sickling test Totals", ReportUtils.map(
+		    moh706Indicator.getResponsesBasedOnAlistOfQuestionsAndListOfAnswers(Arrays.asList(45), Arrays.asList(703)),
+		    indParam), "");
+		dsd.addColumn("PBFT", "4.5 Other Haematology Tests Peripherial blood films Totals",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnAlistOfQuestions(Arrays.asList(1000071)), indParam), "");
+		dsd.addColumn("BMAT", "4.6 BMA Totals",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnAlistOfQuestions(Arrays.asList(163420)), indParam), "");
+		
+		dsd.addColumn("COAG", "4.7 Other Haematology Tests Coagulation",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnAlistOfQuestions(Arrays.asList(163666)), indParam), "");
+		
+		dsd.addColumn("RCT", "4.8 Other Haematology Tests Reticulocyte Count total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(166395), indParam), "");
+		dsd.addColumn("BGT", "4.10 Blood Grouping Total Blood Groups total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(300), indParam), "");
+		dsd.addColumn("BGT", "4.11 Blood Grouping Blood Units Grouped total",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(160232), indParam), "");
+		//Blood Screening at facility
+		dsd.addColumn("BSHIVP", "4.18 Blood Screening at facility HIV Positive",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnAnswerIndicator(1169, Arrays.asList(703)), indParam), "");
+		
+		dsd.addColumn(
+		    "BSHPBP",
+		    "4.19 Blood Screening at facility Hepatiti B Positive",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnAlistOfQuestionsAndListOfAnswers(
+		        Arrays.asList(159430, 1322, 161472), Arrays.asList(703)), indParam), "");
+		
+		dsd.addColumn(
+		    "BSHPCP",
+		    "4.20 Blood Screening at facility Hepatitis C Positive",
+		    ReportUtils.map(
+		        moh706Indicator.getResponsesBasedOnAlistOfQuestionsAndListOfAnswers(Arrays.asList(161471, 1325),
+		            Arrays.asList(703)), indParam), "");
+		dsd.addColumn("BSSP", "4.21 Blood Screening at facility Syphilis Positive", ReportUtils.map(
+		    moh706Indicator.getResponsesBasedOnAlistOfQuestionsAndListOfAnswers(Arrays.asList(163626, 299, 1031),
+		        Arrays.asList(703, 1228, 1311, 1312, 1313, 1314, 1315, 1316, 1317, 163621, 163622, 163623, 163624)),
+		    indParam), "");
+		
 		return dsd;
 	}
 }

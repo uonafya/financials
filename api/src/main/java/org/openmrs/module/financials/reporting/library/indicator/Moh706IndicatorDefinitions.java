@@ -82,4 +82,18 @@ public class Moh706IndicatorDefinitions {
 		return cohortIndicator("All patients who have tests done based on a question list",
 		    map(moh706CohortDefinition.getResponsesBasedOnAlistOfQuestions(q), "startDate=${startDate},endDate=${endDate}"));
 	}
+	
+	public CohortIndicator getResponsesBasedOnValueNumericQuestion(int q) {
+		return cohortIndicator(
+		    "Get patients with obs recorded based on value numeric concept id indicators",
+		    map(moh706CohortDefinition.getResponsesBasedOnValueNumericQuestion(q),
+		        "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getResponsesBasedOnValueNumericQuestionBetweenLimits(int question, int lower, int upper) {
+		return cohortIndicator(
+		    "Get patients with obs recorded based on value numeric concept id within limits indicators",
+		    map(moh706CohortDefinition.getResponsesBasedOnValueNumericQuestionBetweenLimits(question, lower, upper),
+		        "startDate=${startDate},endDate=${endDate}"));
+	}
 }

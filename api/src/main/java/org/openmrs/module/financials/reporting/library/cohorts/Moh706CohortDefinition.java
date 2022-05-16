@@ -168,4 +168,35 @@ public class Moh706CohortDefinition {
 		);
 		return sql;
 	}
+	
+	public CohortDefinition getResponsesBasedOnValueNumericQuestion(int question) {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with obs recorded based on value numeric concept id");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN ("
+		        + question
+		        + ") "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate AND o.value_numeric IS NOT NULL "
+		
+		);
+		return sql;
+	}
+	
+	public CohortDefinition getResponsesBasedOnValueNumericQuestionBetweenLimits(int question, int lower, int upper) {
+		SqlCohortDefinition sql = new SqlCohortDefinition();
+		sql.setName("Get patients with obs recorded based on value numeric concept id within limits");
+		sql.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		sql.addParameter(new Parameter("endDate", "End Date", Date.class));
+		sql.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id = e.patient_id INNER JOIN obs o ON e.encounter_id = o.encounter_id "
+		        + " WHERE p.voided=0 AND e.voided = 0 AND o.voided = 0 AND o.concept_id IN ("
+		        + question
+		        + ") "
+		        + " AND e.encounter_datetime BETWEEN :startDate AND :endDate AND o.value_numeric IS NOT NULL AND o.value_numeric BETWEEN "
+		        + lower + " AND " + upper
+		
+		);
+		return sql;
+	}
 }
