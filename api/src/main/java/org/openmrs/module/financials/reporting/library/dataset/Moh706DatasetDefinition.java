@@ -240,6 +240,130 @@ public class Moh706DatasetDefinition {
 		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159657, 3, 100), indParam),
 		    "");
 		
+		dsd.addColumn("LFTLTB", "2.10 BLOOD CHEMISTRY - Liver Function Test -  Low Total Bilirubin",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(655, 0, 2), indParam), "");
+		dsd.addColumn("LFTHTB", "2.10 BLOOD CHEMISTRY - Liver Function Test -  High Total Bilirubin",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(655, 3, 100), indParam), "");
+		dsd.addColumn("LFTLASAT", "2.11 BLOOD CHEMISTRY - Liver Function Test -  Low ASAT (SGOT)",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(653, 0, 24), indParam), "");
+		dsd.addColumn("LFTHASAT", "2.11 BLOOD CHEMISTRY - Liver Function Test -  High ASAT (SGOT)",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(653, 24, 50), indParam), "");
+		dsd.addColumn("LFTLSGPT", "2.12 BLOOD CHEMISTRY - Liver Function Test -  Low ALAT (SGPT)",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(654, 0, 1), indParam), "");
+		dsd.addColumn("LFTHSGPT", "2.12 BLOOD CHEMISTRY - Liver Function Test -  High ALAT (SGPT)",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(654, 2, 40), indParam), "");
+		dsd.addColumn("LFTLSP", "2.13 BLOOD CHEMISTRY - Liver Function Test -  Low Serum Protein",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(717, 0, 1), indParam), "");
+		dsd.addColumn("LFTHSP", "2.13 BLOOD CHEMISTRY - Liver Function Test -  High Serum Protein",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(717, 2, 40), indParam), "");
+		dsd.addColumn("LFTLA", "2.14 BLOOD CHEMISTRY - Liver Function Test -  Low Albumin",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(848, 0, 2.7), indParam), "");
+		dsd.addColumn("LFTHA", "2.14 BLOOD CHEMISTRY - Liver Function Test -  High Albumin",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(848, 2.9, 6.0), indParam),
+		    "");
+		dsd.addColumn("LFTLAP", "2.15 BLOOD CHEMISTRY - Liver Function Test -  Low Alkaline Phosphatase",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(785, 0, 2.7), indParam), "");
+		dsd.addColumn("LFTHAP", "2.15 BLOOD CHEMISTRY - Liver Function Test -  High Alkaline Phosphatase",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(785, 300, 541), indParam),
+		    "");
+		dsd.addColumn("LPTTC", "2.17 BLOOD CHEMISTRY - Lipid Profile Test -  Total Cholestrol ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(1006), indParam), "");
+		dsd.addColumn("LPTLC", "2.17 BLOOD CHEMISTRY - Lipid Profile Test -  Low Cholestrol ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(1006, 0, 1), indParam), "");
+		dsd.addColumn("LFTHC", "2.1 BLOOD CHEMISTRY - Lipid Profile Test -  High Cholestrol",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(1006, 5.18, 10), indParam),
+		    "");
+		
+		dsd.addColumn("LPTT", "2.18 BLOOD CHEMISTRY - Lipid Profile Test -  Total Triglycerides ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(166039), indParam), "");
+		dsd.addColumn("LPTLT", "2.18 BLOOD CHEMISTRY - Lipid Profile Test -  Low Triglycerides ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(166039, 0, 30), indParam),
+		    "");
+		dsd.addColumn("LFTHT", "2.18 BLOOD CHEMISTRY - Lipid Profile Test -  High Triglycerides", ReportUtils.map(
+		    moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(166039, 160, 200), indParam), "");
+		
+		dsd.addColumn("LPTLDL", "2.19 BLOOD CHEMISTRY - Lipid Profile Test -  Total LDL ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(166045), indParam), "");
+		dsd.addColumn("LPTLLDL", "2.19 BLOOD CHEMISTRY - Lipid Profile Test -  Low LDL ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(166045, 0, 30), indParam),
+		    "");
+		dsd.addColumn("LFTHLDL", "2.19 BLOOD CHEMISTRY - Lipid Profile Test -  High LDL", ReportUtils.map(
+		    moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(166045, 150, 200), indParam), "");
+		
+		dsd.addColumn("HTTT3", "2.20 BLOOD CHEMISTRY - Hormonal Test -  Total T3 ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(161503), indParam), "");
+		dsd.addColumn("HTLT3", "2.20 BLOOD CHEMISTRY - Hormonal Test -  Low T3 ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(161503, 0, 0.1), indParam),
+		    "");
+		dsd.addColumn(
+		    "HTHT3",
+		    "2.20 BLOOD CHEMISTRY - Hormonal Test -  High T3",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(161503, 0.6, 10), indParam),
+		    "");
+		
+		dsd.addColumn("HTTT4", "2.21 BLOOD CHEMISTRY - Hormonal Test -  Total T4 ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(161504), indParam), "");
+		dsd.addColumn("HTLT4", "2.21 BLOOD CHEMISTRY - Hormonal Test -  Low T4 ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(161504, 0, 0.1), indParam),
+		    "");
+		dsd.addColumn(
+		    "HTHT4",
+		    "2.21 BLOOD CHEMISTRY - Hormonal Test -  High T4",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(161504, 0.6, 10), indParam),
+		    "");
+		
+		dsd.addColumn("HTTTSH", "2.22 BLOOD CHEMISTRY - Hormonal Test -  Total TSH ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(161505), indParam), "");
+		dsd.addColumn("HTLTSH", "2.22 BLOOD CHEMISTRY - Hormonal Test -  Low TSH ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(161505, 0, 0.1), indParam),
+		    "");
+		dsd.addColumn(
+		    "HTHTSH",
+		    "2.22 BLOOD CHEMISTRY - Hormonal Test -  High TSH",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(161505, 0.6, 10), indParam),
+		    "");
+		dsd.addColumn("HTTPSA", "2.23 BLOOD CHEMISTRY - Hormonal Test -  Total PSA ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(160913), indParam), "");
+		dsd.addColumn("HTLPSA", "2.23 BLOOD CHEMISTRY - Hormonal Test -  Low PSA ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(160913, 0, 0.1), indParam),
+		    "");
+		dsd.addColumn(
+		    "HTHPSA",
+		    "2.23 BLOOD CHEMISTRY - Hormonal Test -  High PSA",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(160913, 0.6, 10), indParam),
+		    "");
+		dsd.addColumn("HTTCEA", "2.24 BLOOD CHEMISTRY - Tumor Makers -  Total CEA ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(160915), indParam), "");
+		dsd.addColumn("HTLCEA", "2.24 BLOOD CHEMISTRY - Tumor Makers -  Low CEA ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(160915, 0, 0.1), indParam),
+		    "");
+		dsd.addColumn(
+		    "HTHCEA",
+		    "2.24 BLOOD CHEMISTRY - Tumor Makers -  High CEA",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(160915, 0.6, 10), indParam),
+		    "");
+		
+		dsd.addColumn("CSFTP", "2.25 BLOOD CHEMISTRY - CSF Chemistry -  Total Proteins ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(159646), indParam), "");
+		dsd.addColumn("CSFLP", "2.25 BLOOD CHEMISTRY - CSF Chemistry -  Low Proteins",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159646, 0, 0.1), indParam),
+		    "");
+		dsd.addColumn(
+		    "CSFHP",
+		    "2.25 BLOOD CHEMISTRY - CSF Chemistry -  High Proteins",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159646, 0.6, 10), indParam),
+		    "");
+		dsd.addColumn("CSFTC", "2.26 BLOOD CHEMISTRY - CSF Chemistry -  Total Glucose ",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(159647), indParam), "");
+		dsd.addColumn("CSFLC", "2.26 BLOOD CHEMISTRY - CSF Chemistry -  Low Glucose",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159647, 0, 0.1), indParam),
+		    "");
+		dsd.addColumn(
+		    "CSFHC",
+		    "2.26 BLOOD CHEMISTRY - CSF Chemistry -  High Glucose",
+		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(159647, 0.6, 10), indParam),
+		    "");
+		
 		return dsd;
 	}
 }
