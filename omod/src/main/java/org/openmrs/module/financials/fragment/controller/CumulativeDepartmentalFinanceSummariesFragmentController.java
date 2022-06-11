@@ -1,10 +1,10 @@
 package org.openmrs.module.financials.fragment.controller;
 
-import org.codehaus.jackson.map.ObjectMapper;
 import org.openmrs.Role;
 import org.openmrs.User;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.GeneralRevenuePerUnit;
+import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.OpdTestOrder;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.Map;
-import java.util.HashMap;
+import java.util.Set;
 
 public class CumulativeDepartmentalFinanceSummariesFragmentController {
 	
@@ -45,7 +45,8 @@ public class CumulativeDepartmentalFinanceSummariesFragmentController {
 				if (opdTestOrder.getBillableService().equals(patientServiceBillItem.getService())
 				        && opdTestOrder.getFromDept() != null) {
 					generalRevenuePerUnit = new GeneralRevenuePerUnit();
-					generalRevenuePerUnit.setTransactionDate(opdTestOrder.getScheduleDate());
+					generalRevenuePerUnit.setTransactionDate(FinancialsUtils.formatDateWithTime(opdTestOrder
+					        .getScheduleDate()));
 					if (opdTestOrder.getConcept().equals(
 					    Context.getConceptService().getConceptByUuid("0179f241-8c1d-47c1-8128-841f6508e251"))) {
 						generalRevenuePerUnit.setDepartment("LABORATORY");

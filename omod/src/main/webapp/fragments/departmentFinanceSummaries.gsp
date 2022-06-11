@@ -48,7 +48,18 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
 <div class="ke-panel-frame">
     <div class="ke-panel-heading">Departmental Finance Summaries </div>
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
-
+        <div style="margin-top: -1px " class="onerow">
+            <i class="icon-filter" style="font-size: 26px!important; color: #5b57a6"></i>
+            <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+            <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+            <label for="dept">Department</label>
+            <select name="dept" id="dept" style="width: 200px;">
+                <option value="0">ALL</option>
+                <% departments.each { dept -> %>
+                <option value="${dept.id}">${cashier.name}</option>
+                <% } %>
+            </select>
+        </div>
         <table id="dDetails">
             <thead>
             <tr>
@@ -79,7 +90,4 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
         </table>
 
     </div>
-</div>
-<div>
-    ${ ui.includeFragment("financials", "cumulativeDepartmentalFinanceSummaries") }
 </div>

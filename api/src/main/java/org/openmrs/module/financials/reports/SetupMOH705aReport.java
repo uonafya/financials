@@ -1,6 +1,5 @@
 package org.openmrs.module.financials.reports;
 
-import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.financials.reporting.library.dataset.Moh705aDatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
@@ -38,6 +37,7 @@ public class SetupMOH705aReport extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(map(moh705aDatasetDefinition.getMoh705aDataset(), "startDate=${startDate},endDate=${endDate}"));
+		return Arrays.asList(map(moh705aDatasetDefinition.getMoh705aDataset(),
+		    "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 }

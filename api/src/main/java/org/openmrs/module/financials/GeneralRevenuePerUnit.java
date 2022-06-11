@@ -1,17 +1,16 @@
 package org.openmrs.module.financials;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 public class GeneralRevenuePerUnit {
 	
-	private Date transactionDate;
+	private String transactionDate;
 	
-	public Date getTransactionDate() {
+	public String getTransactionDate() {
 		return transactionDate;
 	}
 	
-	public void setTransactionDate(Date transactionDate) {
+	public void setTransactionDate(String transactionDate) {
 		this.transactionDate = transactionDate;
 	}
 	
