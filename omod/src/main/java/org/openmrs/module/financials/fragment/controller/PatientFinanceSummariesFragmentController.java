@@ -1,10 +1,10 @@
 package org.openmrs.module.financials.fragment.controller;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openmrs.PersonAttributeType;
 import org.openmrs.api.PersonService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.PatientBillSummary;
-import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.BillingService;
 import org.openmrs.module.hospitalcore.model.PatientServiceBill;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
@@ -14,39 +14,30 @@ import org.openmrs.ui.framework.fragment.FragmentModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class PatientFinanceSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
 		String STUDENT_ID = "88546440-0271-11eb-b43f-c392cfe8f5df";
-		Date startOfDay = FinancialsUtils.getStartOfDay(new Date());
-		Date endOfDay = FinancialsUtils.getEndOfDay(new Date());
 		
-		List<PatientServiceBill> allBils = Context.getService(BillingService.class).getAllPatientServiceBill();
+		List<PatientServiceBill> allBils = Context.getService(BillingService.class).getPatientBillsPerDateRange(null, null,
+		    null);
 		PersonService personService = Context.getPersonService();
 		List<PatientBillSummary> allBills = new ArrayList<PatientBillSummary>();
-		
-		//get person attribute for patient category and sub category
-		PersonAttributeType paymentCategory = personService
-		        .getPersonAttributeTypeByUuid("09cd268a-f0f5-11ea-99a8-b3467ddbf779");
-		PersonAttributeType paymentSubCategory = personService
-		        .getPersonAttributeTypeByUuid("972a32aa-6159-11eb-bc2d-9785fed39154");
 		
 		for (PatientServiceBill patientServiceBill : allBils) {
 			if (patientServiceBill.getPatient().getPatientIdentifier() != null) {
 				PatientBillSummary patientBillSummary = new PatientBillSummary();
 				patientBillSummary.setBillId(patientServiceBill.getPatientServiceBillId());
 				patientBillSummary.setPatient(patientServiceBill.getPatient().getPersonName().getFullName());
-				if (patientServiceBill.getPatient().getAttribute(paymentCategory) != null) {
-					patientBillSummary.setCategory(patientServiceBill.getPatient().getAttribute(paymentCategory).getValue());
+				if (StringUtils.isNotBlank(patientServiceBill.getPatientCategory())) {
+					patientBillSummary.setCategory(patientServiceBill.getPatientCategory());
 				} else {
 					patientBillSummary.setCategory("");
 				}
-				if (patientServiceBill.getPatient().getAttribute(paymentSubCategory) != null) {
-					patientBillSummary.setSubCategory(patientServiceBill.getPatient().getAttribute(paymentSubCategory)
-					        .getValue());
+				if (StringUtils.isNotBlank(patientServiceBill.getPatientSubCategory())) {
+					patientBillSummary.setSubCategory(patientServiceBill.getPatientSubCategory());
 				} else {
 					patientBillSummary.setSubCategory("");
 				}
