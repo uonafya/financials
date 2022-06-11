@@ -6,8 +6,8 @@
 
     function getBills(){
         jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getPatientBillsByDateTimeRange") }', {
-            startDate:jq("#summaryFromDate").val(),
-            endDate: jq("#summaryToDate").val()
+            fromDate:jq("#summaryFromDate-field").val(),
+            toDate: jq("#summaryToDate-field").val()
         }).success(function(data) {
             populateTable(data);
         });
