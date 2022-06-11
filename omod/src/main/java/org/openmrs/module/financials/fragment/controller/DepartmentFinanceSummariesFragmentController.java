@@ -20,14 +20,16 @@ public class DepartmentFinanceSummariesFragmentController {
 		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
 		
 		for (PatientServiceBillItem patientServiceBillItem : patientServiceBillItems) {
-			generalRevenuePerUnit = new GeneralRevenuePerUnit();
-			generalRevenuePerUnit.setTransactionDate(FinancialsUtils.formatDateWithTime(patientServiceBillItem
-			        .getCreatedDate()));
-			generalRevenuePerUnit.setDepartment(patientServiceBillItem.getDepartment().getName());
-			generalRevenuePerUnit.setServicePaidFor(patientServiceBillItem.getService().getName());
-			generalRevenuePerUnit.setTotalAmount(patientServiceBillItem.getActualAmount());
-			
-			summarizedResults.add(generalRevenuePerUnit);
+			if (patientServiceBillItem != null && patientServiceBillItem.getDepartment() != null) {
+				generalRevenuePerUnit = new GeneralRevenuePerUnit();
+				generalRevenuePerUnit.setTransactionDate(FinancialsUtils.formatDateWithTime(patientServiceBillItem
+				        .getCreatedDate()));
+				generalRevenuePerUnit.setDepartment(patientServiceBillItem.getDepartment().getName());
+				generalRevenuePerUnit.setServicePaidFor(patientServiceBillItem.getService().getName());
+				generalRevenuePerUnit.setTotalAmount(patientServiceBillItem.getActualAmount());
+				
+				summarizedResults.add(generalRevenuePerUnit);
+			}
 		}
 		model.addAttribute("summaryAccounts", summarizedResults);
 		model.addAttribute("departments", Context.getService(HospitalCoreService.class).getAllDepartment());

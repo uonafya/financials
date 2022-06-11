@@ -56,7 +56,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <select name="dept" id="dept" style="width: 200px;">
                 <option value="0">ALL</option>
                 <% departments.each { dept -> %>
-                <option value="${dept.id}">${cashier.name}</option>
+                <option value="${dept.id}">${dept.name}</option>
                 <% } %>
             </select>
         </div>

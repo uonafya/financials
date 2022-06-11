@@ -1,11 +1,10 @@
 package org.openmrs.module.financials;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 public class PharmacyBillSummary {
 	
-	private Date createdOn;
+	private String createdOn;
 	
 	private String drugName, formulationName;
 	
@@ -13,11 +12,11 @@ public class PharmacyBillSummary {
 	
 	private BigDecimal totalPrice;
 	
-	public Date getCreatedOn() {
+	public String getCreatedOn() {
 		return createdOn;
 	}
 	
-	public void setCreatedOn(Date createdOn) {
+	public void setCreatedOn(String createdOn) {
 		this.createdOn = createdOn;
 	}
 	
