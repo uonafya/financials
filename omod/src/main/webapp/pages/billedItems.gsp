@@ -15,10 +15,32 @@
 
 %>
 <script type="text/javascript">
-    jQuery(function() {
-
-        var table =  jQuery("#tbl").DataTable();
+    var jq = jQuery
+    jq.ready(function() {
+        getBills()
     });
+
+    function getBills(patientId){
+
+        jq.getJSON('${ ui.actionLink("financials", "billedItems", "getPatientBillItemsByDateRange") }', {
+            patientId:${patientId},
+            startDate:jq("#").val(),
+            endDate: jq("#").val()
+        }).success(function(data) {
+            populateTable(data);
+        });
+
+    }
+    function populateTable(data) {
+        jq('#tbl').DataTable().clear().destroy();
+        data.map((item) => {
+            jq("#billsTableBody").append("<tr><td>" + item.createdDate +"</td><td>" + item.name + "</td> <td>" + item.quantity + "</td><td>" + item.unitPrice + "</td> <td>" + item.actualAmount + "</td><td>" + item.patientServiceBill.waiverAmount + "</td><td>" + item.patientServiceBill.receipt.id + "</td> </tr>");
+
+        });
+
+        jq("#tbl").DataTable();
+
+    }
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
@@ -67,7 +89,7 @@ table#summary.dataTable tbody tr:hover {
                             <th>Receipt Number</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="billsTableBody">
                         <% if (billedItems.empty) { %>
                         <tr>
                             <td colspan="7">
@@ -86,6 +108,8 @@ table#summary.dataTable tbody tr:hover {
                             <td>${it.patientServiceBill.receipt.id}</td>
                         </tr>
                         <%}%>
+
+
                         </tbody>
                     </table>
                 </div>

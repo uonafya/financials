@@ -1,12 +1,37 @@
 <script type="text/javascript">
-    jQuery(function() {
-        jQuery("#dataIn").DataTable();
-        var table =  jQuery("#pDetails").DataTable();
-        jQuery('#pDetails tbody').on( 'click', 'tr', function () {
-            var billId = table.row( this ).data();
-            ui.navigate('financials', 'billedItems', {billedId: billId[0], patientId: billId[1]});
-        } );
+    jq = jQuery
+    jq(document).ready(function() {
+        getBills();
     });
+
+    function getBills(){
+        jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getPatientBillsByDateTimeRange") }', {
+            fromDate:jq("#summaryFromDate-field").val(),
+            toDate: jq("#summaryToDate-field").val()
+        }).success(function(data) {
+            populateTable(data);
+        });
+
+    }
+    function populateTable(data) {
+        jq('#pDetails').DataTable().clear().destroy();
+        if(data) {
+            data.map((item) => {
+                jq('#tbody').append("<tr><td>" + item.billId + "</td><td>" + item.patientId + "</td><td>" + item.transactionDate + "</td> <td>" + item.identifier + "</td><td>" + item.patient + "</td> <td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.waiver + "</td>><td>" + item.actualAmount + "</td>><td>" + item.paidAmount + "</td> </tr>");
+            });
+
+            var table =  jq("#pDetails").DataTable();
+            jq('#pDetails tbody').on('click', 'tr', function () {
+                var billId = table.row(this).data();
+                ui.navigate('financials', 'billedItems', {billedId: billId[0], patientId: billId[1]});
+            });
+
+        }else {
+            jq('#tbody').append("<tr><td colspan='10'>" +  "No records found for this patient" +  "</td></tr>");
+            jq("#pDetails").DataTable();
+
+        }
+    }
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
@@ -43,7 +68,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                         <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                     </div>
                     <div class="col-4" style="margin-bottom: 10px">
-                        <button id="filter" type="button" class=" btn btn-primary right">${ui.message("Filter")}
+                        <button id="filter" type="button"  onclick="getBills()"  class=" btn btn-primary right">${ui.message("Filter")}
                         </button>
                     </div>
                 </div>
@@ -69,29 +94,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <th>Paid Amount</th>
             </tr>
             </thead>
-            <tbody>
-            <% if (bills.empty) { %>
-
-            <tr>
-                <td colspan="9">
-                    No records found
-                </td>
-            </tr>
-            <% } %>
-            <% bills.each {%>
-            <tr>
-                <td>${it.billId}</td>
-                <td>${it.patientId}</td>
-                <td>${it.transactionDate}</td>
-                <td>${it.identifier}</td>
-                <td>${it.patient}</td>
-                <td>${it.category}</td>
-                <td>${it.subCategory}</td>
-                <td>${it.waiver}</td>
-                <td>${it.actualAmount}</td>
-                <td>${it.paidAmount}</td>
-            </tr>
-            <%}%>
+            <tbody id="tbody">
             </tbody>
         </table>
         </div>
