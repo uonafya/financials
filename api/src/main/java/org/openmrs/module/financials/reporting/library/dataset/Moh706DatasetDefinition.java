@@ -242,7 +242,7 @@ public class Moh706DatasetDefinition {
 		
 		dsd.addColumn("LFTLTB", "2.10 BLOOD CHEMISTRY - Liver Function Test -  Low Total Bilirubin",
 		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(655, 0, 2), indParam), "");
-		dsd.addColumn("LFTHTB", "2.10 BLOOD CHEMISTRY - Liver Function Test -  High Total Bilirubin",
+		dsd.addColumn("LFTLTB", "2.10 BLOOD CHEMISTRY - Liver Function Test -  High Total Bilirubin",
 		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(655, 3, 100), indParam), "");
 		dsd.addColumn("LFTLASAT", "2.11 BLOOD CHEMISTRY - Liver Function Test -  Low ASAT (SGOT)",
 		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(653, 0, 24), indParam), "");
@@ -270,7 +270,7 @@ public class Moh706DatasetDefinition {
 		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestion(1006), indParam), "");
 		dsd.addColumn("LPTLC", "2.17 BLOOD CHEMISTRY - Lipid Profile Test -  Low Cholestrol ",
 		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(1006, 0, 1), indParam), "");
-		dsd.addColumn("LFTHC", "2.1 BLOOD CHEMISTRY - Lipid Profile Test -  High Cholestrol",
+		dsd.addColumn("LFTHC", "2.17 BLOOD CHEMISTRY - Lipid Profile Test -  High Cholestrol",
 		    ReportUtils.map(moh706Indicator.getResponsesBasedOnValueNumericQuestionBetweenLimits(1006, 5.18, 10), indParam),
 		    "");
 		
