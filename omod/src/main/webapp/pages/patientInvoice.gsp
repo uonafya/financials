@@ -2,6 +2,8 @@
     ui.decorateWith("kenyaemr", "standardPage", [patient: currentPatient])
     ui.includeCss("financials", "jquery.dataTables.min.css")
     ui.includeCss("financials", "bootstrap.min.css")
+    ui.includeCss("financials", "bootstrap-print.css")
+
 
     ui.includeJavascript("ehrconfigs", "bootstrap.min.js")
     ui.includeJavascript("financials", "jquery.dataTables.min.js")
@@ -25,7 +27,6 @@
         jq("#invoice-detail").print({
             globalStyles: false,
             mediaPrint: false,
-            stylesheet: '${ui.resourceLink("patientdashboardapp", "styles/printout.css")}',
             iframe: false,
             width: 600,
             height: 700
@@ -47,11 +48,13 @@
             </button>
         </div>
     </div>
+    <br/>
     <div id="invoice-detail">
         <div id="person-detail">
-            <div class="row d-flex justify-content-center"><img src="/openmrs/ms/uiframework/resource/ehrinventoryapp/images/kenya_logo.bmp" width="60" height="60" align="middle">
-            </div>
             <div style="text-align: center;">
+                <center>
+                    <img src="/openmrs/ms/uiframework/resource/ehrinventoryapp/images/kenya_logo.bmp" width="60" height="60" align="middle">
+                </center>
                 ${ui.includeFragment("patientdashboardapp", "printHeader")}
             </div>
 
