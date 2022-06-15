@@ -36,7 +36,7 @@
 </script>
 
 <div class="p-20">
-    <div class="row">
+    <div class="row" style="display: none">
         <div class="col-4" style="margin-bottom: 10px">
             <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
         </div>
