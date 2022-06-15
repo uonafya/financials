@@ -60,7 +60,7 @@
                     icon: "buttons/upline.png"
             ],
             [
-                    label: "Cummulative patient Summaries",
+                    label: "Patient Invoices",
                     href: ui.pageLink("financials", "cummulativePatientSummary"),
                     iconProvider: "financials",
                     icon: "buttons/Zoom-in.png"
