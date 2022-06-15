@@ -1,7 +1,90 @@
 <script type="text/javascript">
   jQuery(function() {
-    jQuery('.datepicker').datepicker();
+    populateDashboard();
   })
+  function populateDashboard() {
+    jq("#filter").click(function (){
+      const summaryFromDate = jq('#summaryFromDate-field').val(),
+          summaryToDate = jq('#summaryToDate-field').val();
+
+      jq.getJSON('${ui.actionLink("financials", "Dashboard", "getDepartmentTotalsOnDateRange")}',
+          {
+            "fromDate" : summaryFromDate,
+            "toDate" : summaryToDate,
+          }
+      ).success(function(data) {
+        console.log(data)
+        jq('.stat-digit').eq(0).html(data.registration)
+        jq('.stat-digit').eq(1).html(data.pharmacy)
+        jq('.stat-digit').eq(2).html(data.laboratory)
+        jq('.stat-digit').eq(3).html(data.radiology)
+        jq('.stat-digit').eq(4).html(data.procedure)
+        jq('.stat-digit').eq(5).html(data.nhif)
+        jQuery("#graph-container").highcharts({
+          credits: {
+            enabled: false
+          },
+          chart: {
+            type: 'column'
+          },
+          title: {
+            text: ''
+          },
+          subtitle: {
+            text: ''
+          },
+          xAxis: {
+            type: 'category'
+          },
+          yAxis: {
+            title: {
+              text: 'Daily workload'
+            }
+          },
+          legend: {
+            enabled: false
+          },
+          plotOptions: {
+            series: {
+              borderWidth: 0,
+              dataLabels: {
+                enabled: true,
+                format: '{point.y:.0f}'
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>'
+          },
+          series: [{
+            name: 'Statistics',
+            colorByPoint: true,
+            data: [{
+              name: 'Registration',
+              y:data.registration,
+            }, {
+              name: 'Pharmacy',
+              y: data.pharmacy,
+            }, {
+              name: 'Laboratory',
+              y: data.laboratory,
+            }, {
+              name: 'Radiology',
+              y: data.radiology,
+            }, {
+              name: 'Procedures',
+              y: data.procedure,
+            },
+              {
+                name: 'NHIF',
+                y: data.nhif,
+              }]
+          }],
+        });
+      });
+    })
+  }
 </script>
 <style>
 html, body, #graph-container {
@@ -46,7 +129,7 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">REGISTRATION</div>
-                                            <div class="stat-digit">${registration}</div>
+                                            <div class="stat-digit"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +141,7 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">PHARMACY</div>
-                                            <div class="stat-digit">${pharmacy}</div>
+                                            <div class="stat-digit"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +153,7 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">LABORATORY</div>
-                                            <div class="stat-digit">${laboratory}</div>
+                                            <div class="stat-digit"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +165,7 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">Radiology</div>
-                                            <div class="stat-digit">${radiology}</div>
+                                            <div class="stat-digit"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +177,7 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">Procedures</div>
-                                            <div class="stat-digit">${procedure}</div>
+                                            <div class="stat-digit"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +189,7 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">NHIF</div>
-                                            <div class="stat-digit">${nhif}</div>
+                                            <div class="stat-digit"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -122,68 +205,5 @@ html, body, #graph-container {
 </div>
 
 <script type="text/javascript">
-  jQuery(function () {
-    jQuery("#graph-container").highcharts({
-      credits: {
-        enabled: false
-      },
-      chart: {
-        type: 'column'
-      },
-      title: {
-        text: ''
-      },
-      subtitle: {
-        text: ''
-      },
-      xAxis: {
-        type: 'category'
-      },
-      yAxis: {
-        title: {
-          text: 'Daily workload'
-        }
-      },
-      legend: {
-        enabled: false
-      },
-      plotOptions: {
-        series: {
-          borderWidth: 0,
-          dataLabels: {
-            enabled: true,
-            format: '{point.y:.0f}'
-          }
-        }
-      },
-      tooltip: {
-        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b><br/>'
-      },
-      series: [{
-        name: 'Statistics',
-        colorByPoint: true,
-        data: [{
-          name: 'Registration',
-          y:${registration},
-        }, {
-          name: 'Pharmacy',
-          y: ${pharmacy},
-        }, {
-          name: 'Laboratory',
-          y: ${laboratory},
-        }, {
-          name: 'Radiology',
-          y: ${radiology},
-        }, {
-          name: 'Procedures',
-          y: ${procedure},
-        },
-          {
-            name: 'NHIF',
-            y: ${nhif},
-          }]
-      }],
-    });
-  });
+
 </script>
