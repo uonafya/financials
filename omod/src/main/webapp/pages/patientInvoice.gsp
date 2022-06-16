@@ -15,13 +15,42 @@
 <script type="text/javascript">
     var jq = jQuery;
 
-    jq(document).ready(function () {
-        jq('#invoice-items').DataTable({
-            searchPanes: false,
-            searching: false,
-            'dom': ''
-        });
+    jq = jQuery
+    jq(document).ready(function() {
+        getBills();
     });
+
+    function getBills(){
+        jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getPatientBillsByDateTimeRange") }', {
+            patientId: jq("#patientId").val(),
+            fromDate:jq("#summaryFromDate-field").val(),
+            toDate: jq("#summaryToDate-field").val()
+        }).success(function(data) {
+            populateTable(data);
+        });
+
+    }
+    function populateTable(data) {
+        jq('#invoice-items').DataTable().clear().destroy();
+        if (data) {
+            data.map((it) => {
+                jq('#tbody').append("<tr><td>" + it.patientServiceBill.receipt.id + "</td><td>" + it.createdDate + "</td><td>" + it.name + "</td> <td>" + it.quantity + "</td><td>" + it.unitPrice + "</td> <td>" + it.actualAmount + "</td><td>" + it.patientServiceBill.waiverAmount  + "</td> </tr>");
+            });
+            jq('#invoice-items').DataTable({
+                searchPanes: false,
+                searching: false,
+                'dom': ''
+            });
+        } else {
+            jq('#tbody').append("<tr><td colspan='10'>" + "No records found for this patient" + "</td></tr>");
+            jq('#invoice-items').DataTable({
+                searchPanes: false,
+                searching: false,
+                'dom': ''
+            });
+
+        }
+    }
 
     function printInvoice() {
         jq("#invoice-detail").print({
@@ -47,6 +76,7 @@
             <button id="filter" type="button"  onclick="getBills()"  class=" btn btn-primary right">${ui.message("Filter")}
             </button>
         </div>
+        <input id="patientId" value="${patient.getPatientId()}" style="display: none">
     </div>
     <br/>
     <div id="invoice-detail">
