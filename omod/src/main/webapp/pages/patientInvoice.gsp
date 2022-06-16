@@ -4,7 +4,6 @@
     ui.includeCss("financials", "bootstrap.min.css")
     ui.includeCss("financials", "bootstrap-print.css")
 
-
     ui.includeJavascript("ehrconfigs", "bootstrap.min.js")
     ui.includeJavascript("financials", "jquery.dataTables.min.js")
     ui.includeJavascript("patientdashboardapp", "jq.print.js")
@@ -14,8 +13,6 @@
 
 <script type="text/javascript">
     var jq = jQuery;
-
-    jq = jQuery
     jq(document).ready(function() {
         getBills();
     });

@@ -1,9 +1,11 @@
 <script type="text/javascript">
   jQuery(function() {
     populateDashboard();
+    jq("#filter").click(function () {
+      populateDashboard();
+    });
   })
   function populateDashboard() {
-    jq("#filter").click(function (){
       const summaryFromDate = jq('#summaryFromDate-field').val(),
           summaryToDate = jq('#summaryToDate-field').val();
 
@@ -13,7 +15,6 @@
             "toDate" : summaryToDate,
           }
       ).success(function(data) {
-        console.log(data)
         jq('.stat-digit').eq(0).html(data.registration)
         jq('.stat-digit').eq(1).html(data.pharmacy)
         jq('.stat-digit').eq(2).html(data.laboratory)
@@ -83,7 +84,6 @@
           }],
         });
       });
-    })
   }
 </script>
 <style>
