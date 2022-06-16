@@ -102,8 +102,6 @@
     ${ ui.includeFragment("financials", "departmentFinanceSummaries") }
     <% } else  if (section == "pharmacyRevenueSummaries") { %>
     ${ ui.includeFragment("financials", "pharmacyRevenueSummaries") }
-    <%} else if(section == "studentRevenueSummaries") { %>
-    ${ui.includeFragment("financials","studentRevenueSummaries")}
     <%} else if(section == "nhifSummaries") { %>
     ${ui.includeFragment("financials","nhifSummaries")}
     <% } else if(section == "laboratory") { %>
