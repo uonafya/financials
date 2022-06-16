@@ -131,26 +131,7 @@
             </tr>
             </thead>
             <tbody>
-            <% if (billedItems.empty) { %>
-            <tr>
-                <td colspan="7">
-                    No records found for this patirnt
-                </td>
-            </tr>
-            <% } %>
 
-            <% billedItems.each { %>
-            <tr>
-                <td>${it.patientServiceBill.receipt.id}</td>
-                <td>${it.createdDate}</td>
-                <td>${it.name}</td>
-                <td>${it.quantity}</td>
-                <td>${it.unitPrice}</td>
-                <td>${it.actualAmount}</td>
-                <td>${it.patientServiceBill.waiverAmount}</td>
-
-            </tr>
-            <% } %>
             </tbody>
         </table>
 
