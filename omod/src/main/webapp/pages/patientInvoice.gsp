@@ -21,7 +21,7 @@
     });
 
     function getBills(){
-        jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getPatientBillsByDateTimeRange") }', {
+        jq.getJSON('${ ui.actionLink("financials", "patientInvoice", "getPatientBillsByDateTimeRange") }', {
             patientId: jq("#patientId").val(),
             fromDate:jq("#summaryFromDate-field").val(),
             toDate: jq("#summaryToDate-field").val()
