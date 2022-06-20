@@ -19,32 +19,8 @@ import java.util.stream.Collectors;
 @AppPage("financials.home")
 public class PatientInvoicePageController {
 	
-	public void controller(PageModel pageModel,  @RequestParam("patientId") Patient patient) {
-
-        pageModel.addAttribute("patient", patient);
+	public void controller(PageModel pageModel, @RequestParam("patientId") Patient patient) {
+		
+		pageModel.addAttribute("patient", patient);
 	}
-
-    public List<SimpleObject> getPatientBillsByDateTimeRange(
-            @RequestParam(value = "patientId", required = false) Patient patient,
-            @RequestParam(value = "fromDate", required = false) Date startDate,
-            @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
-        BillingService billingService = Context.getService(BillingService.class);
-
-        List<SimpleObject> simpleObjectList = new ArrayList<>();
-
-        List<PatientServiceBill> bills = billingService.getAllPatientServiceBill().stream().filter(bill ->
-                bill.getPatient() == patient).collect(Collectors.toList());
-        List<PatientServiceBillItem> patientBills = new ArrayList<>();
-        for (PatientServiceBill bill :
-                bills) {
-            patientBills.addAll(bill.getBillItems());
-        }
-
-        if (!(bills.isEmpty())) {
-            simpleObjectList = SimpleObject.fromCollection(bills, ui, "patientServiceBill", "createdDate", "name", "quantity", "unitPrice", "actualAmount");
-        }
-
-        return simpleObjectList;
-    }
-
 }

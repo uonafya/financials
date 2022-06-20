@@ -21,7 +21,7 @@
     });
 
     function getBills(){
-        jq.getJSON('${ ui.actionLink("financials", "patientInvoice", "getPatientBillsByDateTimeRange") }', {
+        jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getPatientBillsByDateTimeRange") }', {
             patientId: jq("#patientId").val(),
             fromDate:jq("#summaryFromDate-field").val(),
             toDate: jq("#summaryToDate-field").val()
@@ -65,7 +65,7 @@
 </script>
 
 <div class="p-20">
-    <div class="row" style="display: none">
+    <div class="row card">
         <div class="col-4" style="margin-bottom: 10px">
             <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
         </div>
