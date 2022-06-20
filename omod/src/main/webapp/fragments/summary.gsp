@@ -1,8 +1,39 @@
 <script type="text/javascript">
   jQuery(function() {
-    var table = jQuery("#details").DataTable();
-    var table1 = Query("#cummulative").DataTable();
+    jq("#regDetails").DataTable();
+    populateRegistrationDetails();
+    jq("#filterRegistration").click(function () {
+      populateRegistrationDetails();
+    });
   });
+  function populateRegistrationDetails() {
+    const fromDate = jq('#regFromDate-field').val(),
+        toDate = jq('#regFromDate-field').val();
+    jq.getJSON('${ui.actionLink("financials", "Summary", "getPatientServiceBillByDepartmentTotals")}',
+        {
+          "fromDate" : fromDate,
+          "toDate" : toDate,
+        }
+    ).success(function(data) {
+      jq('#regFees').html(data.regFees)
+      jq('#revFees').html(data.revFees)
+      jq('#specialFees').html(data.specialFees)
+  });
+    jq('#regDetails').DataTable().clear().destroy();
+    jq.getJSON('${ui.actionLink("financials", "Summary", "getPatientServiceBillByDepartmentTable")}',
+        {
+          "fromDate" : fromDate,
+          "toDate" : toDate,
+        }
+    ).success(function(regData) {
+      jq("#regDetails").DataTable();
+      regData.map((item) => {
+        jq('#regTbody').append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td> <td>" + item.patient + "</td><td>" + item.category + "</td> <td>" + item.subCategory + "</td><td>" + item.waiver + "</td>><td>" + item.actualAmount + "</td>><td>" + item.paidAmount + "</td> </tr>");
+      });
+
+    });
+
+  }
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
@@ -24,13 +55,6 @@ table#details.dataTable tbody tr:hover {
 table#details.dataTable tbody tr:hover > .sorting_1 {
   background-color: #43fff8;
 }
-table1#cummulative.dataTable tbody tr:hover {
-  background-color: #43fff8;
-}
-
-table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
-  background-color: #43fff8;
-}
 </style>
 <div class="ke-panel-frame" style="background-color: #ffffff">
     <table cellspacing="0" cellpadding="5" width="100%">
@@ -44,13 +68,13 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-4" style="margin-bottom: 10px">
-                                        <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                        <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regFromDate', id: 'regFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                                     </div>
                                     <div class="col-4" style="margin-bottom: 10px">
-                                        <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                        <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regToDate',    id: 'regToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                                     </div>
                                     <div class="col-4" style="margin-bottom: 10px">
-                                        <button id="filter" type="button" class=" btn btn-primary right">${ui.message("Filter")}
+                                        <button id="filterRegistration" type="button" class=" btn btn-primary right">${ui.message("Filter")}
                                         </button>
                                     </div>
                                 </div>
@@ -70,7 +94,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="stat-text">General Registration Fees</div>
-                                                        <div class="stat-digit">${registrationFees}</div>
+                                                        <div class="stat-digit" id="regFees"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,7 +106,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="stat-text">Revisit fees</div>
-                                                        <div class="stat-digit">${revisitFees}</div>
+                                                        <div class="stat-digit" id="revFees"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,7 +118,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="stat-text">Special Clinic fees</div>
-                                                        <div class="stat-digit">${specialClinicFees}</div>
+                                                        <div class="stat-digit" id="specialFees"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -112,7 +136,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                 <div class="ke-panel-frame">
                     <div class="ke-panel-heading">Patient Summary</div>
                     <div class="ke-panel-content" style="background-color: #F3F9FF;">
-                        <table border="0" cellpadding="0" cellspacing="0" id="details" width="100%">
+                        <table border="0" cellpadding="0" cellspacing="0" id="regDetails" width="100%">
                             <thead>
                             <tr>
                                 <th>Transaction Date</th>
@@ -126,27 +150,7 @@ table1#cummulative.dataTable tbody tr:hover > .sorting_1 {
                                 <th>Paid Amount</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            <% if (bills.empty) { %>
-                            <tr>
-                                <td colspan="8">
-                                    No records found for today
-                                </td>
-                            </tr>
-                            <% } %>
-                            <% bills.each {%>
-                            <tr>
-                                <td>${it.transactionDate}</td>
-                                <td>${it.serviceOffered}</td>
-                                <td>${it.identifier}</td>
-                                <td>${it.patient}</td>
-                                <td>${it.category}</td>
-                                <td>${it.subCategory}</td>
-                                <td>${it.waiver}</td>
-                                <td>${it.actualAmount}</td>
-                                <td>${it.paidAmount}</td>
-                            </tr>
-                            <%}%>
+                            <tbody id="regTbody">
                             </tbody>
                         </table>
                     </div>

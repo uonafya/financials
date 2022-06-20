@@ -60,7 +60,7 @@
                     icon: "buttons/upline.png"
             ],
             [
-                    label: "Cummulative patient Summaries",
+                    label: "Patient Invoices",
                     href: ui.pageLink("financials", "cummulativePatientSummary"),
                     iconProvider: "financials",
                     icon: "buttons/Zoom-in.png"
@@ -102,8 +102,6 @@
     ${ ui.includeFragment("financials", "departmentFinanceSummaries") }
     <% } else  if (section == "pharmacyRevenueSummaries") { %>
     ${ ui.includeFragment("financials", "pharmacyRevenueSummaries") }
-    <%} else if(section == "studentRevenueSummaries") { %>
-    ${ui.includeFragment("financials","studentRevenueSummaries")}
     <%} else if(section == "nhifSummaries") { %>
     ${ui.includeFragment("financials","nhifSummaries")}
     <% } else if(section == "laboratory") { %>
