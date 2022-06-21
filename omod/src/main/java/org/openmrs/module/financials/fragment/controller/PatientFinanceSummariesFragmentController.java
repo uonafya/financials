@@ -1,6 +1,7 @@
 package org.openmrs.module.financials.fragment.controller;
 
 import org.apache.commons.lang3.StringUtils;
+import org.openmrs.Patient;
 import org.openmrs.PersonAttributeType;
 import org.openmrs.api.PersonService;
 import org.openmrs.api.context.Context;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PatientFinanceSummariesFragmentController {
 	
@@ -87,6 +89,29 @@ public class PatientFinanceSummariesFragmentController {
             simpleObjectList = SimpleObject.fromCollection(allBills, ui, "billId", "patient", "category", "subCategory",
                     "studentAttributeName", "serviceOffered", "waiver", "actualAmount", "paidAmount", "rebate", "transactionDate",
                     "transactionDate", "identifier", "patientId");
+        }
+
+        return simpleObjectList;
+    }
+	
+	public List<SimpleObject> getItemizedPatientBillsByDateTimeRange(
+            @RequestParam(value = "patientId", required = false) Patient patient,
+            @RequestParam(value = "fromDate", required = false) Date startDate,
+            @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
+        BillingService billingService = Context.getService(BillingService.class);
+
+        List<SimpleObject> simpleObjectList = new ArrayList<>();
+
+        List<PatientServiceBill> bills = billingService.getPatientBillsPerDateRange(patient, startDate, endDate).stream().filter(bill ->
+                bill.getPatient() == patient).collect(Collectors.toList());
+
+        List<PatientServiceBillItem> patientBills = new ArrayList<>();
+        for (PatientServiceBill bill : bills) {
+            patientBills.addAll(bill.getBillItems());
+        }
+
+        if (!(bills.isEmpty())) {
+            simpleObjectList = SimpleObject.fromCollection(patientBills, ui, "patientServiceBill.patientServiceBillId","patientServiceBillItemId", "createdDate", "name", "quantity", "unitPrice", "actualAmount","patientServiceBill.waiverAmount");
         }
 
         return simpleObjectList;
