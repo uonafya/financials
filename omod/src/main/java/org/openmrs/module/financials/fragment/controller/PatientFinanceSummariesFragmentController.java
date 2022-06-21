@@ -94,7 +94,7 @@ public class PatientFinanceSummariesFragmentController {
         return simpleObjectList;
     }
 	
-	public List<SimpleObject> getPatientBillsByDateTimeRange(
+	public List<SimpleObject> getItemizedPatientBillsByDateTimeRange(
             @RequestParam(value = "patientId", required = false) Patient patient,
             @RequestParam(value = "fromDate", required = false) Date startDate,
             @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
@@ -111,7 +111,7 @@ public class PatientFinanceSummariesFragmentController {
         }
 
         if (!(bills.isEmpty())) {
-            simpleObjectList = SimpleObject.fromCollection(patientBills, ui, "patientServiceBill", "createdDate", "name", "quantity", "unitPrice", "actualAmount");
+            simpleObjectList = SimpleObject.fromCollection(patientBills, ui, "patientServiceBill.patientServiceBillId","patientServiceBillItemId", "createdDate", "name", "quantity", "unitPrice", "actualAmount","patientServiceBill.waiverAmount");
         }
 
         return simpleObjectList;

@@ -21,7 +21,7 @@
     });
 
     function getBills(){
-        jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getPatientBillsByDateTimeRange") }', {
+        jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getItemizedPatientBillsByDateTimeRange") }', {
             patientId: jq("#patientId").val(),
             fromDate:jq("#summaryFromDate-field").val(),
             toDate: jq("#summaryToDate-field").val()
@@ -34,7 +34,7 @@
         jq('#invoice-items').DataTable().clear().destroy();
         if (data) {
             data.map((it) => {
-                jq('#tbody').append("<tr><td>" + it.patientServiceBill.receipt.id + "</td><td>" + it.createdDate + "</td><td>" + it.name + "</td> <td>" + it.quantity + "</td><td>" + it.unitPrice + "</td> <td>" + it.actualAmount + "</td><td>" + it.patientServiceBill.waiverAmount  + "</td> </tr>");
+                jq('#tbody').append("<tr><td>" + it.patientServiceBill.patientServiceBillId + "</td><td>" + it.createdDate + "</td><td>" + it.name + "</td> <td>" + it.quantity + "</td><td>" + it.unitPrice + "</td> <td>" + it.actualAmount + "</td><td>" + it.patientServiceBill.waiverAmount  + "</td> </tr>");
             });
             jq('#invoice-items').DataTable({
                 searchPanes: false,
