@@ -1,6 +1,5 @@
 <script type="text/javascript">
   jQuery(function() {
-    jq("#regDetails").DataTable();
     populateRegistrationDetails();
     jq("#filterRegistration").click(function () {
       populateRegistrationDetails();
@@ -30,7 +29,6 @@
       regData.map((item) => {
         jq('#regTbody').append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td> <td>" + item.patient + "</td><td>" + item.category + "</td> <td>" + item.subCategory + "</td><td>" + item.waiver + "</td>><td>" + item.actualAmount + "</td>><td>" + item.paidAmount + "</td> </tr>");
       });
-
     });
 
   }

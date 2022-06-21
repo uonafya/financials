@@ -63,7 +63,6 @@ public class SummaryFragmentController {
 	        @RequestParam(value = "fromDate", required = false) Date startDate,
 	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
-		
 		List<PatientServiceBillItem> getBilledItemsPerDepartment = hospitalCoreService.getPatientServiceBillByDepartment(
 		    hospitalCoreService.getDepartmentByName("Registration"), startDate, endDate);
 		ConceptService conceptService = Context.getConceptService();

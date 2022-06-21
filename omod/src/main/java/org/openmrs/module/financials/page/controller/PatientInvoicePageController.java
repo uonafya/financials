@@ -19,12 +19,12 @@ import java.util.stream.Collectors;
 @AppPage("financials.home")
 public class PatientInvoicePageController {
 	
-	public void controller(PageModel pageModel,  @RequestParam("patientId") Patient patient) {
-
-        pageModel.addAttribute("patient", patient);
+	public void controller(PageModel pageModel, @RequestParam("patientId") Patient patient) {
+		
+		pageModel.addAttribute("patient", patient);
 	}
-
-    public List<SimpleObject> getPatientBillsByDateTimeRange(
+	
+	public List<SimpleObject> getPatientBillsByDateTimeRange(
             @RequestParam(value = "patientId", required = false) Patient patient,
             @RequestParam(value = "fromDate", required = false) Date startDate,
             @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
@@ -46,5 +46,4 @@ public class PatientInvoicePageController {
 
         return simpleObjectList;
     }
-
 }
