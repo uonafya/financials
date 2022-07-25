@@ -3,7 +3,6 @@ package org.openmrs.module.financials.reports;
 import org.openmrs.EncounterType;
 import org.openmrs.module.ehrconfigs.metadata.EhrCommonMetadata;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
-import org.openmrs.module.financials.reporting.library.queries.LabResultsQueries;
 import org.openmrs.module.financials.reporting.library.queries.Moh705Queries;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -26,7 +25,7 @@ import java.util.Date;
 import java.util.List;
 
 @Component
-@Builds({ "ehraddons.common.report.705.b.allDiagnosis" })
+@Builds({ "financials.common.report.705.b.allDiagnosis" })
 public class SetupAllDiagnosisAdultsReport extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;

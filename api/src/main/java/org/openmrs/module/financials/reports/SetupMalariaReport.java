@@ -25,7 +25,6 @@ import org.openmrs.module.reporting.data.converter.DataConverter;
 import org.openmrs.module.reporting.data.converter.DateConverter;
 import org.openmrs.module.reporting.data.converter.ObjectFormatter;
 import org.openmrs.module.reporting.data.converter.ObsValueConverter;
-import org.openmrs.module.reporting.data.encounter.definition.EncounterDatetimeDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.ConvertedPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.PatientIdentifierDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.AgeDataDefinition;
@@ -35,11 +34,13 @@ import org.openmrs.module.reporting.data.person.definition.GenderDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.ObsForPersonDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
+import org.openmrs.module.reporting.data.visit.definition.SqlVisitDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
-import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
+import org.openmrs.module.reporting.dataset.definition.VisitDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
+import org.openmrs.module.reporting.query.visit.definition.BasicVisitQuery;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -49,7 +50,6 @@ import java.util.Date;
 import java.util.List;
 
 import static org.openmrs.module.financials.reports.SetupANCRegisterReport.ENC_DATE_FORMAT;
-import static org.openmrs.module.financials.utils.EhrReportingUtils.getEncounterLimitsByDate;
 
 @Component
 @Builds({ "ehraddons.common.report.malaria" })
@@ -89,7 +89,7 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 	}
 	
 	protected DataSetDefinition allPatients() {
-		EncounterDataSetDefinition dsd = new EncounterDataSetDefinition();
+		VisitDataSetDefinition dsd = new VisitDataSetDefinition();
 		dsd.setName("mal");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
@@ -104,7 +104,7 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		DataConverter formatter = new ObjectFormatter("{familyName}, {middleName} {givenName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), formatter);
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("Visit Date", new EncounterDatetimeDataDefinition(), "", new DateConverter(ENC_DATE_FORMAT));
+		dsd.addColumn("Visit Date", getVisitDate(), "", new DateConverter(ENC_DATE_FORMAT));
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Identifier", identifierDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
@@ -122,7 +122,7 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		        .getConceptService().getConceptByUuid("164428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "",
 		    new ObsCommentsConverter());
 		
-		dsd.addRowFilter(getEncounterLimitsByDate(), "startDate=${startDate},endDate=${endDate}");
+		dsd.addRowFilter(new BasicVisitQuery(), "startedOnOrAfter=${startDate},startedOnOrBefore=${endDate}");
 		return dsd;
 	}
 	
@@ -133,5 +133,12 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		cd.setName("Active Patients");
 		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id INNER JOIN obs o ON e.encounter_id=o.encounter_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND o.concept_id IN(32,1643)");
 		return cd;
+	}
+	
+	private DataDefinition getVisitDate() {
+		SqlVisitDataDefinition visitDataDefinition = new SqlVisitDataDefinition();
+		visitDataDefinition
+		        .setSql("SELECT p.patient_id, v.date_started FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id WHERE p.voided=0 AND v.voided=0");
+		return visitDataDefinition;
 	}
 }

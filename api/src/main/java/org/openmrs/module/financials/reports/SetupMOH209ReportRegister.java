@@ -14,7 +14,6 @@ import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyacore.report.data.patient.definition.CalculationDataDefinition;
 import org.openmrs.module.kenyaemr.calculation.library.TelephoneNumberCalculation;
 import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
-import org.openmrs.module.kenyaemr.reporting.calculation.converter.GenderConverter;
 import org.openmrs.module.kenyaemr.reporting.data.converter.CalculationResultConverter;
 import org.openmrs.module.kenyaemr.reporting.data.converter.IdentifierConverter;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
@@ -49,7 +48,7 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.209" })
+@Builds({ "financials.common.report.209" })
 public class SetupMOH209ReportRegister extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;

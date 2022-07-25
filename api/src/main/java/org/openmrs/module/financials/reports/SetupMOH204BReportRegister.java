@@ -60,7 +60,7 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.204B" })
+@Builds({ "financials.common.report.204B" })
 public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;

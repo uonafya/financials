@@ -8,7 +8,6 @@ import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
-import org.openmrs.module.kenyaemr.metadata.HivMetadata;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
@@ -37,7 +36,7 @@ import java.util.Date;
 import java.util.List;
 
 @Component
-@Builds({ "ehraddons.common.report.allPatients" })
+@Builds({ "financials.common.report.allPatients" })
 public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 	
 	public static final String DATE_FORMAT = "dd/MM/yyyy";

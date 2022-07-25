@@ -18,7 +18,7 @@ import java.util.List;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 @Component
-@Builds({ "ehraddons.common.717" })
+@Builds({ "financials.common.717" })
 public class SetupMOH717Report extends AbstractReportBuilder {
 	
 	private Moh717DatasetDefinition moh717DatasetDefinition;

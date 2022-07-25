@@ -33,7 +33,7 @@ import java.util.Date;
 import java.util.List;
 
 @Component
-@Builds({ "ehraddons.common.report.moh710" })
+@Builds({ "financials.common.report.moh710" })
 public class SetupMoh710Report extends AbstractReportBuilder {
 	
 	protected static final Log log = LogFactory.getLog(SetupMoh710Report.class);
