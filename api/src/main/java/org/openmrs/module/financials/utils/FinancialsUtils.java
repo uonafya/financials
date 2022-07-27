@@ -5,6 +5,10 @@ import org.openmrs.Patient;
 import org.openmrs.PatientIdentifier;
 import org.openmrs.PersonName;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.reporting.common.TimeQualifier;
+import org.openmrs.module.reporting.data.DataDefinition;
+import org.openmrs.module.reporting.data.person.definition.ObsForPersonDataDefinition;
+import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.util.OpenmrsUtil;
 
 import java.text.Format;
@@ -126,5 +130,15 @@ public class FinancialsUtils {
 			}
 		}
 		return c;
+	}
+	
+	public static DataDefinition getObservation(Concept question) {
+		ObsForPersonDataDefinition obs = new ObsForPersonDataDefinition();
+		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		obs.setWhich(TimeQualifier.LAST);
+		obs.setQuestion(question);
+		return obs;
+		
 	}
 }
