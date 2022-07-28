@@ -20,10 +20,10 @@ public class VisitTypeConverter implements DataConverter {
 		}
 		Concept concept = obs.getValueCoded();
 		
-		if (concept.equals(Context.getConceptService().getConceptByUuid("164180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))) {
-			return "N";
-		} else {
+		if (concept.equals(Context.getConceptService().getConceptByUuid("d5ea1533-7346-4e0b-8626-9bff6cd183b2"))) {
 			return "R";
+		} else {
+			return "N";
 		}
 	}
 	

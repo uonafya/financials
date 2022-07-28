@@ -3,8 +3,7 @@ package org.openmrs.module.financials.reports;
 import org.apache.commons.lang3.StringUtils;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
-import org.openmrs.module.financials.calculation.DmHtnDiagnosisCalculation;
-import org.openmrs.module.financials.reporting.converter.HtnDmDataConverter;
+import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
 import org.openmrs.module.financials.reporting.converter.ObjectCounterConverter;
 import org.openmrs.module.financials.reporting.converter.VisitTypeConverter;
 import org.openmrs.module.financials.utils.FinancialsUtils;
@@ -44,6 +43,7 @@ import org.openmrs.module.reporting.query.encounter.definition.SqlEncounterQuery
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -83,7 +83,7 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		        upn.getName(), upn), identifierFormatter);
 		dsd.addRowFilter(ReportUtils.map(
 		    allDailyPatientsCohort(Context.getConceptService().getConceptByUuid("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-		            .getConceptId(), Arrays.asList(119481, 117399)), "startDate=${startDate},endDate=${endDate}"));
+		            .getConceptId()), "startDate=${startDate},endDate=${endDate+23h}"));
 		
 		DataConverter formatter = new ObjectFormatter("{familyName}, {givenName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), formatter);
@@ -98,7 +98,7 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		dsd.addColumn(
 		    "visit",
 		    FinancialsUtils.getObservation(Context.getConceptService().getConceptByUuid(
-		        "164181AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		        "81f2e941-d724-4794-98bf-8764b593c838")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
 		    new VisitTypeConverter());
 		dsd.addColumn(
 		    "weight",
@@ -129,14 +129,16 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		    new ObsValueConverter());
 		dsd.addColumn(
 		    "htn",
-		    FinancialsUtils.getObservation(Context.getConceptService().getConceptByUuid(
-		        "74eb8e8d-d078-4fa3-8973-2d710d8f46df")), "onOrAfter=${startDate},onOrBefore=${endDate+23h+59m}",
-		    new HtnDmDataConverter(1));
+		    FinancialsUtils.getObservation(
+		        Context.getConceptService().getConceptByUuid("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        DiagnosisLists.getHypertensionConceptList()), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		    new ObsValueConverter());
 		dsd.addColumn(
 		    "dm",
-		    FinancialsUtils.getObservation(Context.getConceptService().getConceptByUuid(
-		        "74eb8e8d-d078-4fa3-8973-2d710d8f46df")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
-		    new HtnDmDataConverter(2));
+		    FinancialsUtils.getObservation(
+		        Context.getConceptService().getConceptByUuid("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        DiagnosisLists.getDiabetesListConcepts()), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		    new ObsValueConverter());
 		dsd.addColumn(
 		    "rbs",
 		    FinancialsUtils.getObservation(Context.getConceptService().getConceptByUuid(
@@ -152,13 +154,13 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		    FinancialsUtils.getObservation(Context.getConceptService().getConceptByUuid(
 		        "160912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
 		    new ObsValueConverter());
-		dsd.addColumn("diagnosis", new CalculationDataDefinition("diagnosis", new DmHtnDiagnosisCalculation()), "",
-		    new CalculationResultConverter());
 		return dsd;
 	}
 	
-	private EncounterQuery allDailyPatientsCohort(int questionConceptId, List<Integer> answers) {
-		String codedValues = StringUtils.join(answers, ',');
+	private EncounterQuery allDailyPatientsCohort(int questionConceptId) {
+		List<Integer> allDiagnosis = new ArrayList<Integer>(DiagnosisLists.getDiabetesList());
+		allDiagnosis.addAll(DiagnosisLists.getHypertensionList());
+		String listToString = StringUtils.join(", ", allDiagnosis);
 		SqlEncounterQuery cd = new SqlEncounterQuery();
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
@@ -166,8 +168,8 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		cd.setQuery("SELECT e.encounter_id FROM encounter e  INNER JOIN patient p ON p.patient_id=e.patient_id inner join obs o ON e.encounter_id=o.encounter_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND e.voided = 0 AND o.voided = 0  AND o.concept_id IN("
 		        + questionConceptId
-		        + ") AND o.value_coded IN("
-		        + codedValues + ")");
+		        + ")"
+		        + " AND o.value_coded IN(" + listToString + ")");
 		return cd;
 	}
 	

@@ -141,4 +141,26 @@ public class FinancialsUtils {
 		return obs;
 		
 	}
+	
+	public static DataDefinition getObservation(Concept question, List<Concept> answers) {
+		ObsForPersonDataDefinition obs = new ObsForPersonDataDefinition();
+		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		obs.setWhich(TimeQualifier.LAST);
+		obs.setQuestion(question);
+		if (answers.size() > 0) {
+			obs.setValueCodedList(answers);
+		}
+		return obs;
+		
+	}
+	
+	/*public static DataDefinition getObservation(List<Concept> questions) {
+		SqlDataDefinition obs = new SqlDataSetDefinition();
+		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		obs.setSqlQuery("");
+		return obs;
+
+	}*/
 }
