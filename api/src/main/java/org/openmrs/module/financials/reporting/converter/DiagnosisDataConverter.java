@@ -1,7 +1,5 @@
 package org.openmrs.module.financials.reporting.converter;
 
-import org.openmrs.Obs;
-import org.openmrs.api.context.Context;
 import org.openmrs.module.reporting.data.converter.DataConverter;
 
 public class DiagnosisDataConverter implements DataConverter {
@@ -12,15 +10,14 @@ public class DiagnosisDataConverter implements DataConverter {
 	
 	public Object convert(Object obj) {
 		
-		Obs obs = (Obs) obj;
-		if (obs == null) {
-			return "N";
+		Integer results = (Integer) obj;
+		if (results == null) {
+			return "";
 		}
 		
-		if (obs.getConcept().equals(Context.getConceptService().getConceptByUuid("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))) {
+		if (results.equals(160250)) {
 			return "Final";
-		} else if (obs.getConcept().equals(
-		    Context.getConceptService().getConceptByUuid("160249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))) {
+		} else if (results.equals(160249)) {
 			return "Provisional";
 		} else {
 			//do nothing
