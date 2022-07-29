@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
+import org.openmrs.module.financials.reporting.converter.DiagnosisDataConverter;
 import org.openmrs.module.financials.reporting.converter.ObjectCounterConverter;
 import org.openmrs.module.financials.reporting.converter.VisitTypeConverter;
 import org.openmrs.module.financials.utils.FinancialsUtils;
@@ -27,6 +28,7 @@ import org.openmrs.module.reporting.data.converter.ObsValueConverter;
 import org.openmrs.module.reporting.data.encounter.definition.EncounterDatetimeDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.ConvertedPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.PatientIdentifierDataDefinition;
+import org.openmrs.module.reporting.data.patient.definition.SqlPatientDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.AgeDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.BirthdateDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.ConvertedPersonDataDefinition;
@@ -81,11 +83,9 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		DataConverter identifierFormatter = new ObjectFormatter("{identifier}");
 		DataDefinition identifierDef = new ConvertedPatientDataDefinition("identifier", new PatientIdentifierDataDefinition(
 		        upn.getName(), upn), identifierFormatter);
-		dsd.addRowFilter(ReportUtils.map(
-		    allDailyPatientsCohort(Context.getConceptService().getConceptByUuid("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
-		            .getConceptId()), "startDate=${startDate},endDate=${endDate+23h}"));
+		dsd.addRowFilter(ReportUtils.map(allDailyPatientsCohort(), "startDate=${startDate},endDate=${endDate+23h}"));
 		
-		DataConverter formatter = new ObjectFormatter("{familyName}, {givenName}");
+		DataConverter formatter = new ObjectFormatter("{familyName}, {givenName} {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), formatter);
 		dsd.addColumn("count", new PersonIdDataDefinition(), "", new ObjectCounterConverter());
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
@@ -142,7 +142,7 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		dsd.addColumn(
 		    "rbs",
 		    FinancialsUtils.getObservation(Context.getConceptService().getConceptByUuid(
-		        "887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		        "d0d107f7-9452-4129-a209-b9a4d1b46d4a")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
 		    new ObsValueConverter());
 		dsd.addColumn(
 		    "fbs",
@@ -152,25 +152,42 @@ public class SetupMoh222Register extends AbstractHybridReportBuilder {
 		dsd.addColumn(
 		    "hba1c",
 		    FinancialsUtils.getObservation(Context.getConceptService().getConceptByUuid(
-		        "160912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		        "159644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
 		    new ObsValueConverter());
+		dsd.addColumn("DiagnosisType", getFinalOrProvisionalDiagnosis(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		    new DiagnosisDataConverter());
 		return dsd;
 	}
 	
-	private EncounterQuery allDailyPatientsCohort(int questionConceptId) {
+	private EncounterQuery allDailyPatientsCohort() {
 		List<Integer> allDiagnosis = new ArrayList<Integer>(DiagnosisLists.getDiabetesList());
 		allDiagnosis.addAll(DiagnosisLists.getHypertensionList());
-		String listToString = StringUtils.join(", ", allDiagnosis);
+		String listToString = StringUtils.join(allDiagnosis, ",");
 		SqlEncounterQuery cd = new SqlEncounterQuery();
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("Active screened for DM and HTN Patients from MOPC");
 		cd.setQuery("SELECT e.encounter_id FROM encounter e  INNER JOIN patient p ON p.patient_id=e.patient_id inner join obs o ON e.encounter_id=o.encounter_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND e.voided = 0 AND o.voided = 0  AND o.concept_id IN("
-		        + questionConceptId
+		        + 160250
+		        + ","
+		        + 160249
 		        + ")"
 		        + " AND o.value_coded IN(" + listToString + ")");
 		return cd;
+	}
+	
+	private DataDefinition getFinalOrProvisionalDiagnosis() {
+		SqlPatientDataDefinition definition = new SqlPatientDataDefinition();
+		definition.setName("Final and Provisional diagnosis");
+		definition.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		definition.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		definition
+		        .setSql("SELECT p.patient_id,o.concept_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id INNER JOIN obs o ON e.encounter_id=o.encounter_id "
+		                + " WHERE p.voided= 0 AND e.voided= 0 AND o.voided=0 AND e.encounter_datetime BETWEEN :onOrAfter AND :onOrBefore AND o.concept_id IN("
+		                + 160250 + "," + 160249 + ")");
+		
+		return definition;
 	}
 	
 }

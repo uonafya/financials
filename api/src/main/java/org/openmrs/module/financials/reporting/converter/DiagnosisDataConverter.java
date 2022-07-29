@@ -1,13 +1,12 @@
 package org.openmrs.module.financials.reporting.converter;
 
-import org.openmrs.Concept;
 import org.openmrs.Obs;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.reporting.data.converter.DataConverter;
 
-public class VisitTypeConverter implements DataConverter {
+public class DiagnosisDataConverter implements DataConverter {
 	
-	public VisitTypeConverter() {
+	public DiagnosisDataConverter() {
 		
 	}
 	
@@ -17,13 +16,16 @@ public class VisitTypeConverter implements DataConverter {
 		if (obs == null) {
 			return "N";
 		}
-		Concept concept = obs.getValueCoded();
 		
-		if (concept.equals(Context.getConceptService().getConceptByUuid("d5ea1533-7346-4e0b-8626-9bff6cd183b2"))) {
-			return "R";
+		if (obs.getConcept().equals(Context.getConceptService().getConceptByUuid("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))) {
+			return "Final";
+		} else if (obs.getConcept().equals(
+		    Context.getConceptService().getConceptByUuid("160249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))) {
+			return "Provisional";
 		} else {
-			return "N";
+			//do nothing
 		}
+		return null;
 	}
 	
 	@Override
