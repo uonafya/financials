@@ -37,10 +37,8 @@ import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefi
 import org.openmrs.module.reporting.data.visit.definition.SqlVisitDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
-import org.openmrs.module.reporting.dataset.definition.VisitDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
-import org.openmrs.module.reporting.query.visit.definition.BasicVisitQuery;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -89,7 +87,7 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 	}
 	
 	protected DataSetDefinition allPatients() {
-		VisitDataSetDefinition dsd = new VisitDataSetDefinition();
+		PatientDataSetDefinition dsd = new PatientDataSetDefinition();
 		dsd.setName("mal");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
@@ -121,8 +119,6 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("Onset Date", new ObsForPersonDataDefinition("Onset Date", TimeQualifier.LAST, Context
 		        .getConceptService().getConceptByUuid("164428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"), null, null), "",
 		    new ObsCommentsConverter());
-		
-		dsd.addRowFilter(new BasicVisitQuery(), "startedOnOrAfter=${startDate},startedOnOrBefore=${endDate}");
 		return dsd;
 	}
 	
