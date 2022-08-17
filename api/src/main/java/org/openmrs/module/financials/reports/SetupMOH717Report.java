@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reports;
 
+import org.openmrs.module.financials.reporting.library.cohorts.Moh717CohortDefinition;
 import org.openmrs.module.financials.reporting.library.dataset.Moh717DatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
@@ -23,9 +24,12 @@ public class SetupMOH717Report extends AbstractReportBuilder {
 	
 	private Moh717DatasetDefinition moh717DatasetDefinition;
 	
+	private Moh717CohortDefinition moh717CohortDefinition;
+	
 	@Autowired
-	public SetupMOH717Report(Moh717DatasetDefinition moh717DatasetDefinition) {
+	public SetupMOH717Report(Moh717DatasetDefinition moh717DatasetDefinition, Moh717CohortDefinition moh717CohortDefinition) {
 		this.moh717DatasetDefinition = moh717DatasetDefinition;
+		this.moh717CohortDefinition = moh717CohortDefinition;
 	}
 	
 	@Override
@@ -37,8 +41,10 @@ public class SetupMOH717Report extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(map(moh717DatasetDefinition.constructMoh717Dataset(),
+		reportDefinition.setBaseCohortDefinition(map(moh717CohortDefinition.getAllPatientsWithDiagnosis(),
 		    "startDate=${startDate},endDate=${endDate}"));
+		return Arrays.asList(map(moh717DatasetDefinition.constructMoh717Dataset(),
+		    "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 	
 }
