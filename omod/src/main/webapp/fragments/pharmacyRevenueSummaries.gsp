@@ -27,6 +27,9 @@
         jQuery('#dDetails tbody').on( 'click', 'tr', function () {
             console.log( table.row( this ).data() );
         } );
+      jq("#filterPharmacy").click(function () {
+        updateTable();
+      });
     });
 ``
     var summaryData = fetchPharmacySummariesByDateRange();
@@ -46,8 +49,7 @@
     function updateTable() {
         summaryData=""
         summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('YYYY-MM-DD'), moment(jq('#summaryToDate-field').val()).format('YYYY-MM-DD'));
-        list.departmentSummaries(summaryData);
-        console.log(list.departmentSummaries);
+        console.log(summaryData);
 
     }
 
@@ -111,16 +113,21 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <i class="icon-filter" style="font-size: 26px!important; color: #5b57a6"></i>
             <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
             <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+            <div class="col-4" style="margin-bottom: 10px">
+                <button id="filterPharmacy" type="button" class=" btn btn-primary right">${ui.message("Filter")}
+                </button>
+            </div>
         </div>
 
         <table id="dDetails">
             <thead>
             <tr>
                 <td>Transaction date</td>
-                <td>Drug Name</td>
-                <td>Formulation</td>
-                <td>Issued Quantity</td>
-                <td>Total Price</td>
+                <td>Identifier</td>
+                <td>Patient Names</td>
+
+                <td>Total Waiver Amount</td>
+                <td>Total Amount Charged</td>
             </tr>
 
             </thead>
@@ -136,10 +143,10 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <% departmentSummaries.each { %>
             <tr>
                 <td>${it.createdOn}</td>
-                <td >${it.drugName}</td>
-                <td>${it.formulationName}</td>
-                <td>${it.issueQuantity}</td>
-                <td>${it.totalPrice}</td>
+                <td >${it.patientIdentifier}</td>
+                <td>${it.patientNames}</td>
+                <td>${it.waiverAmount}</td>
+                <td>${it.totalAMount}</td>
             </tr>
             <% } %>
             </tbody>
