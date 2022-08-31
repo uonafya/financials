@@ -48,23 +48,13 @@
 
     function updateTable() {
         summaryData=""
-        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('YYYY-MM-DD'), moment(jq('#summaryToDate-field').val()).format('YYYY-MM-DD'));
+        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('dd/mm/yyyy'), moment(jq('#summaryToDate-field').val()).format('dd/mm/yyyy'));
         console.log(summaryData);
 
     }
 
-    jq('#summaryFromDate').on('change',function(){
-        console.log("update table fromdate");
-        updateTable();
-    });
-
-    jq('#summaryToDate').on('change',function(){
-        console.log("update table toDate");
-        updateTable();
-    });
-
-
     function fetchPharmacySummariesByDateRange(fromDate, toDate) {
+      console.log(fromDate,toDate);
         var toReturn;
         jQuery.ajax({
             type: "GET",

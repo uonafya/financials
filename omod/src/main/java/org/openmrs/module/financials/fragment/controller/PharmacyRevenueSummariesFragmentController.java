@@ -32,8 +32,8 @@ public class PharmacyRevenueSummariesFragmentController {
 	}
 	
 	public List<SimpleObject> fetchPharmacySummariesByDateRange(
-	        @RequestParam(value = "startDate", required = false) String startDate,
-	        @RequestParam(value = "endDate", required = false) String endDate, UiUtils uiUtils) {
+	        @RequestParam(value = "fromDate", required = false) String startDate,
+	        @RequestParam(value = "toDate", required = false) String endDate, UiUtils uiUtils) {
 		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>(
 		        pullSummaries(startDate, endDate));
 		
@@ -41,8 +41,11 @@ public class PharmacyRevenueSummariesFragmentController {
 		    "waiverAmount", "totalAMount");
 	}
 	
-	private List<PharmacyBillSummary> pullSummaries(@RequestParam(value = "startDate", required = false) String startDate,
-	        @RequestParam(value = "endDate", required = false) String endDate) {
+	private List<PharmacyBillSummary> pullSummaries(String startDate, String endDate) {
+		/*String[] startDateParts = startDate.split("-");
+		String[] endDateParts = endDate.split("-");
+		String startDateFormat = startDateParts[2] + "/" + startDateParts[1] + "/" + startDateParts[0];
+		String endDateFormat = endDateParts[2] + "/" + endDateParts[1] + "/" + endDateParts[0];*/
 		InventoryCommonService inventoryCommonService = Context.getService(InventoryCommonService.class);
 		
 		List<InventoryStoreDrugPatient> inventoryStoreDrugPatientList = inventoryCommonService.getAllIssueByDateRange(
