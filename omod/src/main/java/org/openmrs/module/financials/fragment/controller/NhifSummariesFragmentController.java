@@ -5,23 +5,17 @@ import org.openmrs.module.financials.model.NhifPatientSummarySimplifier;
 import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.PatientCategoryDetails;
+import org.openmrs.ui.framework.SimpleObject;
+import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.fragment.FragmentModel;
-import java.util.Date;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class NhifSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
-		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
-		Date today = new Date();
-		Date startOfDay = FinancialsUtils.getStartOfDay(today);
-		Date endOfDay = FinancialsUtils.getEndOfDay(today);
-		
-		List<PatientCategoryDetails> getAllPatientWhoHaveNhif = hospitalCoreService.getAllPatientCategoryDetails(
-		    "payingCategory", "NHIF patient", startOfDay, endOfDay);
-		
-		model.addAttribute("nhifPatients", getNhifObjects(getAllPatientWhoHaveNhif));
 		
 	}
 	
@@ -46,5 +40,19 @@ public class NhifSummariesFragmentController {
 			}
 		}
 		return nhifPatientSummarySimplifierList;
+	}
+	
+	public List<SimpleObject> fetchNhifPatientsPerDateRange(
+	        @RequestParam(value = "fromDate", required = false) String startDate,
+	        @RequestParam(value = "toDate", required = false) String endDate, UiUtils uiUtils) {
+		System.out.println("The dates is " + startDate);
+		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
+		
+		List<PatientCategoryDetails> getAllPatientWhoHaveNhif = hospitalCoreService.getAllPatientCategoryDetails(
+		    "payingCategory", "NHIF patient", startDate, endDate);
+		
+		return SimpleObject.fromCollection(getNhifObjects(getAllPatientWhoHaveNhif), uiUtils, "names", "identifierValue",
+		    "nhifNumber", "visitType", "visitDate");
+		
 	}
 }

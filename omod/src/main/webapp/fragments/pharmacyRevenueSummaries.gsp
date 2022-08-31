@@ -33,9 +33,9 @@
         jQuery('#dDetails tbody').on( 'click', 'tr', function () {
             console.log( table.row( this ).data() );
         } );
-      fetchPharmacySummariesByDateRange();
+      updateTable();
       jq("#filterPharmacy").click(function () {
-        fetchPharmacySummariesByDateRange();
+        updateTable();
       });
     });
 
