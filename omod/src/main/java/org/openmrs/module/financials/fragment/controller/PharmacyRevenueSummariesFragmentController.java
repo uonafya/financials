@@ -11,24 +11,13 @@ import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class PharmacyRevenueSummariesFragmentController {
 	
 	public void controller(PageModel model) {
 		
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.MONTH, -1);
-		String startAt = new SimpleDateFormat("dd/MM/yyyy").format(cal.getTime()) + " 00:00:00";
-		String endAt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
-		
-		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>(pullSummaries("01/05/2022",
-		    "02/05/2022"));
-		model.addAttribute("departmentSummaries", pharmacyTransactions);
 	}
 	
 	public List<SimpleObject> fetchPharmacySummariesByDateRange(
@@ -42,10 +31,6 @@ public class PharmacyRevenueSummariesFragmentController {
 	}
 	
 	private List<PharmacyBillSummary> pullSummaries(String startDate, String endDate) {
-		/*String[] startDateParts = startDate.split("-");
-		String[] endDateParts = endDate.split("-");
-		String startDateFormat = startDateParts[2] + "/" + startDateParts[1] + "/" + startDateParts[0];
-		String endDateFormat = endDateParts[2] + "/" + endDateParts[1] + "/" + endDateParts[0];*/
 		InventoryCommonService inventoryCommonService = Context.getService(InventoryCommonService.class);
 		
 		List<InventoryStoreDrugPatient> inventoryStoreDrugPatientList = inventoryCommonService.getAllIssueByDateRange(

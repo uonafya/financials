@@ -1,7 +1,13 @@
 <script type="text/javascript">
     jQuery(function() {
         var table =  jQuery("#dDetails").DataTable({
-            dom: 'Bfrtip',
+            dom: 'rtp',
+              "oLanguage": {
+                "oPaginate": {
+                  "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
+                  "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
+                }
+              },
             buttons: ['copy', 'csv', 'excel',
                 {   extend: 'print',
                     messageTop: 'Pharmacy revenue transactions.',
@@ -27,34 +33,18 @@
         jQuery('#dDetails tbody').on( 'click', 'tr', function () {
             console.log( table.row( this ).data() );
         } );
+      fetchPharmacySummariesByDateRange();
       jq("#filterPharmacy").click(function () {
-        updateTable();
+        fetchPharmacySummariesByDateRange();
       });
     });
-``
-    var summaryData = fetchPharmacySummariesByDateRange();
-
-    function SummariesDataListView() {
-        var self = this;
-        self.departmentSummaries = ko.observableArray([]);
-        var mappedDepartmentSummaries = jQuery.map(summaryData, function (item) {
-            return item;
-        });
-        self.departmentSummaries(mappedDepartmentSummaries);
-    }
-
-    var list = new SummariesDataListView();
-    ko.applyBindings(list, jq("#dDetails")[0]);
 
     function updateTable() {
         summaryData=""
-        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('dd/mm/yyyy'), moment(jq('#summaryToDate-field').val()).format('dd/mm/yyyy'));
-        console.log(summaryData);
-
+        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'));
     }
 
     function fetchPharmacySummariesByDateRange(fromDate, toDate) {
-      console.log(fromDate,toDate);
         var toReturn;
         jQuery.ajax({
             type: "GET",
@@ -70,8 +60,13 @@
                 toReturn = data;
             }
         });
-        console.log("Return data",fromDate,toDate,"value###"+toReturn)
-        return toReturn;
+        return populateTableBodyForPatientPharmacySummary(toReturn);
+    }
+    function populateTableBodyForPatientPharmacySummary(data) {
+      jQuery("#patientPharmacySummaryItems").empty();
+      data.map((item) => {
+        jQuery("#patientPharmacySummaryItems").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
+      });
     }
 </script>
 <style type="text/css">
@@ -115,31 +110,11 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
                 <td>Transaction date</td>
                 <td>Identifier</td>
                 <td>Patient Names</td>
-
                 <td>Total Waiver Amount</td>
                 <td>Total Amount Charged</td>
             </tr>
-
             </thead>
-            <tbody>
-            <% if (departmentSummaries.empty) { %>
-            <tr>
-                <td colspan="3">
-                    No records found
-                </td>
-            </tr>
-            <% } %>
-
-            <% departmentSummaries.each { %>
-            <tr>
-                <td>${it.createdOn}</td>
-                <td >${it.patientIdentifier}</td>
-                <td>${it.patientNames}</td>
-                <td>${it.waiverAmount}</td>
-                <td>${it.totalAMount}</td>
-            </tr>
-            <% } %>
-            </tbody>
+            <tbody id="patientPharmacySummaryItems"></tbody>
         </table>
 
     </div>
