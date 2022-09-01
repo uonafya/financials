@@ -1,24 +1,23 @@
 <script type="text/javascript">
   jQuery(function() {
     var table = jQuery("#nhifDetails").DataTable({
-    dom: 'rtp',
-        buttons:
-    ['copy', 'csv', 'excel',
-      {
-        extend: 'print',
-        messageTop: 'Pharmacy revenue transactions.',
-        customize: function (win) {
-          jq(win.document.body)
-              .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
-        },
-        repeatingHead: {
-          logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
-          logoPosition: 'center',
-          logoStyle: ''
-        },
-        title: ''
-      }
-    ]
+    dom: 'Bfrtip',
+        buttons: ['copy', 'csv', 'excel',
+            {
+                extend: 'print',
+                messageTop: 'Pharmacy revenue transactions.',
+                customize: function (win) {
+                    jq(win.document.body)
+                        .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                },
+                repeatingHead: {
+                    logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                    logoPosition: 'center',
+                    logoStyle: ''
+                },
+                title: ''
+            }
+        ]
   });
     jQuery('#nhifDetails tbody').on( 'click', 'tr', function () {
       console.log( table.row( this ).data() );
