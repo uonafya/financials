@@ -98,10 +98,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <i class="icon-filter" style="font-size: 26px!important; color: #5b57a6"></i>
             <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
             <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-            <div class="col-4" style="margin-bottom: 10px">
-                <button id="filterPharmacy" type="button" class=" btn btn-primary right">${ui.message("Filter")}
-                </button>
-            </div>
+            <button id="filterPharmacy" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
         </div>
 
         <table id="dDetails">

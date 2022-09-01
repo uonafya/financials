@@ -65,16 +65,10 @@ table#details.dataTable tbody tr:hover > .sorting_1 {
                         <div class="row">
                             <div class="col-12">
                                 <div class="row">
-                                    <div class="col-4" style="margin-bottom: 10px">
-                                        <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regFromDate', id: 'regFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-                                    </div>
-                                    <div class="col-4" style="margin-bottom: 10px">
-                                        <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regToDate',    id: 'regToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-                                    </div>
-                                    <div class="col-4" style="margin-bottom: 10px">
-                                        <button id="filterRegistration" type="button" class=" btn btn-primary right">${ui.message("Filter")}
-                                        </button>
-                                    </div>
+                                    <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regFromDate', id: 'regFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                    <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regToDate',    id: 'regToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                    <button id="filterRegistration" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
+                                </div>
                                 </div>
                             </div>
                         </div>

@@ -87,6 +87,13 @@ public class FinancialsUtils {
 		return formatter.format(date);
 	}
 	
+	public static String formatDateInDDMMYYYY(Date date) {
+		
+		Format formatter = new SimpleDateFormat("dd/MM/yyyy");
+		
+		return formatter.format(date);
+	}
+	
 	public static List<Concept> registrationFeeConcepts() {
 		return Arrays.asList(getConcept("19e1f7a9-52b4-4975-804d-5c74445be316"),
 		    getConcept("caf177ab-8d96-45bb-8ab4-f66507f11b2b"), getConcept("cecc12d2-4308-4567-9bd1-92011b1648df"));
