@@ -13,19 +13,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class LaboratoryFragmentController {
+public class ProcedureFragmentController {
 	
 	public void controller(FragmentModel model) {
 	}
 	
-	public List<SimpleObject> fetchLaboratorySummariesByDateRange(
+	public List<SimpleObject> fetchProcedureSummariesByDateRange(
 	        @RequestParam(value = "fromDate", required = false) Date startDate,
 	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
 		
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
 		
 		List<PatientServiceBillItem> getBilledItemsPerDepartment = hospitalCoreService.getPatientServiceBillByDepartment(
-		    hospitalCoreService.getDepartmentByName("Laboratory"), startDate, endDate);
+		    hospitalCoreService.getDepartmentByName("Procedure"), startDate, endDate);
 		List<PatientBillSummary> allLaboratoryBills = new ArrayList<PatientBillSummary>();
 		
 		for (PatientServiceBillItem patientServiceBillItem : getBilledItemsPerDepartment) {

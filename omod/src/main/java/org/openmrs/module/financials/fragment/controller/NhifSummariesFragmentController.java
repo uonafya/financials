@@ -11,7 +11,6 @@ import org.openmrs.ui.framework.fragment.FragmentModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class NhifSummariesFragmentController {
@@ -44,9 +43,8 @@ public class NhifSummariesFragmentController {
 	}
 	
 	public List<SimpleObject> fetchNhifPatientsPerDateRange(
-	        @RequestParam(value = "fromDate", required = false) Date startDate,
-	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils uiUtils) {
-		System.out.println("The dates is " + startDate);
+	        @RequestParam(value = "fromDate", required = false) String startDate,
+	        @RequestParam(value = "toDate", required = false) String endDate, UiUtils uiUtils) {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
 		
 		List<PatientCategoryDetails> getAllPatientWhoHaveNhif = hospitalCoreService.getAllPatientCategoryDetails(
