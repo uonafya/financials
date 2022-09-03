@@ -1,7 +1,7 @@
 <script type="text/javascript">
     jQuery(function() {
-        var table =  jQuery("#dDetails").DataTable({
-            dom: 'rtp',
+        var table =  jQuery("#pDetails").DataTable({
+            dom: 'Bfrtip',
               "oLanguage": {
                 "oPaginate": {
                   "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
@@ -30,7 +30,7 @@
             }
 
         });
-        jQuery('#dDetails tbody').on( 'click', 'tr', function () {
+        jQuery('#pDetails tbody').on( 'click', 'tr', function () {
             console.log( table.row( this ).data() );
         } );
       updateTable();
@@ -82,11 +82,11 @@ body {
 
 
 
-table#dDetails.dataTable tbody tr:hover {
+table#pDetails.dataTable tbody tr:hover {
     background-color: #43fff8;
 }
 
-table#dDetails.dataTable tbody tr:hover > .sorting_1 {
+table#pDetails.dataTable tbody tr:hover > .sorting_1 {
     background-color: #43fff8;
 }
 </style>
@@ -101,7 +101,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <button id="filterPharmacy" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
         </div>
 
-        <table id="dDetails">
+        <table id="pDetails">
             <thead>
             <tr>
                 <td>Transaction date</td>
