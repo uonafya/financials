@@ -33,7 +33,7 @@
   }
 </script>
 <div class="ke-panel-frame">
-    <div class="ke-panel-heading">Facility Work Summary</div>
+    <div class="ke-panel-heading">Facility Workload Summary</div>
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
         <div class="row">
             <div class="col-12">
@@ -50,10 +50,12 @@
             <hr />
         </div>
     </div>
-    <div id="opd">
-        <p>Outpatient Clinic</p>
-        <div id="opdData"></div>
+    <div class="ke-panel-content">
+        <div id="opd">
+            <p>Outpatient Clinic</p>
+            <div id="opdData"></div>
+        </div>
+        <div id="ipd"></div>
+        <div id="spc"></div>
     </div>
-    <div id="ipd"></div>
-    <div id="spc"></div>
 </div>

@@ -82,7 +82,7 @@
         <thead>
         <tr>
             <th>Transaction Date</th>
-            <th>Lab test</th>
+            <th>Radiology test</th>
             <th>Patient Identifier</th>
             <th>Patient Names</th>
             <th>Category</th>
