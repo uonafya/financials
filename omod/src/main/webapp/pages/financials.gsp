@@ -32,6 +32,13 @@
                     icon: "buttons/dashboard.jpeg"
             ],
             [
+                    label: "Work Load",
+                    href: ui.pageLink("financials", "financials", [ section: "workLoad" ]),
+                    active: (selection == "section-workLoad"),
+                    iconProvider: "financials",
+                    icon: "buttons/247.png"
+            ],
+            [
                     label: "Registration",
                     href: ui.pageLink("financials", "financials", [ section: "registration" ]),
                     active: (selection == "section-registration"),
@@ -57,7 +64,7 @@
                     href: ui.pageLink("financials", "financials", [ section: "radiology" ]),
                     active: (selection == "section-radiology"),
                     iconProvider: "financials",
-                    icon: "buttons/radiology.png"
+                    icon: "buttons/radiology.jpg"
             ],
             [
                     label: "Patient Summaries",
@@ -101,6 +108,8 @@
 <div class="ke-page-content">
     <% if (section == "dashboard") { %>
     ${ ui.includeFragment("financials", "dashboard") }
+    <%} else if (section == "workLoad") { %>
+    ${ ui.includeFragment("financials", "workLoad") }
     <%} else if (section == "registration") { %>
     ${ ui.includeFragment("financials", "summary") }
     <% } else if (section == "patientFinanceSummaries") { %>
