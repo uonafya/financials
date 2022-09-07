@@ -46,6 +46,20 @@
                     icon: "buttons/lab.png"
             ],
             [
+                    label: "Procedures",
+                    href: ui.pageLink("financials", "financials", [ section: "procedure" ]),
+                    active: (selection == "section-procedure"),
+                    iconProvider: "financials",
+                    icon: "buttons/scissors.png"
+            ],
+            [
+                    label: "Radiology",
+                    href: ui.pageLink("financials", "financials", [ section: "radiology" ]),
+                    active: (selection == "section-radiology"),
+                    iconProvider: "financials",
+                    icon: "buttons/radiology.png"
+            ],
+            [
                     label: "Patient Summaries",
                     href: ui.pageLink("financials", "financials", [ section: "patientFinanceSummaries" ]),
                     active: (selection == "section-patientFinanceSummaries"),
@@ -99,5 +113,9 @@
     ${ui.includeFragment("financials","nhifSummaries")}
     <% } else if(section == "laboratory") { %>
     ${ui.includeFragment("financials","laboratory")}
+    <%} else if(section == "procedure") {%>
+    ${ui.includeFragment("financials","procedure")}
+    <%} else if(section == "radiology") {%>
+    ${ui.includeFragment("financials","radiology")}
     <%}%>
 </div>
