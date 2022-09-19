@@ -25,6 +25,12 @@
   }
   function populateWorkLoadSummary(data) {
     jQuery("#opdData").append(data.opd);
+    jQuery("#spc").append(data.spc);
+    jQuery("#ipd").append(data.ipd);
+    jQuery("#mopc").append(data.mopc);
+    jQuery("#lab").append(data.lab);
+    jQuery("#procedure").append(data.procedure);
+    jQuery("#radiology").append(data.radiology);
 
   }
   function populateWorkLoadDetailsParameters() {
@@ -51,11 +57,44 @@
         </div>
     </div>
     <div class="ke-panel-content">
-        <div id="opd">
-            <p>Outpatient Clinic</p>
-            <div id="opdData"></div>
-        </div>
-        <div id="ipd"></div>
-        <div id="spc"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Work Load</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OPD</td>
+                    <td id="opdData"></td>
+                </tr>
+                <tr>
+                    <td>IPD</td>
+                    <td id="ipd"></td>
+                </tr>
+                <tr>
+                    <td>Special Clinic</td>
+                    <td id="spc"></td>
+                </tr>
+                <tr>
+                    <td>MOPC</td>
+                    <td id="mopc"></td>
+                </tr>
+            <tr>
+                <td>Lab Investigation</td>
+                <td id="lab"></td>
+            </tr>
+            <tr>
+                <td>Procedures</td>
+                <td id="procedure"></td>
+            </tr>
+            <tr>
+                <td>Radiology</td>
+                <td id="radiology"></td>
+            </tr>
+            </tbody>
+
+        </table>
     </div>
 </div>

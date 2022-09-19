@@ -18,10 +18,20 @@ public class WorkLoadFragmentController {
 		
 		Integer opd = 0;
 		Integer specialClinic = 0;
+		Integer ipd = 0;
+		Integer mopc = 0;
+		Integer lab = 0;
+		Integer procedure = 0;
+		Integer radiology = 0;
 		
 		SimpleObject simpleObject = new SimpleObject();
 		simpleObject.put("opd", opd);
 		simpleObject.put("spc", specialClinic);
+		simpleObject.put("ipd", ipd);
+		simpleObject.put("mopc", mopc);
+		simpleObject.put("lab", lab);
+		simpleObject.put("procedure", procedure);
+		simpleObject.put("radiology", radiology);
 		
 		return simpleObject;
 		
