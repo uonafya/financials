@@ -1,6 +1,7 @@
 package org.openmrs.module.financials.utils;
 
 import org.openmrs.Concept;
+import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.PatientIdentifier;
 import org.openmrs.PersonName;
@@ -162,12 +163,13 @@ public class FinancialsUtils {
 		
 	}
 	
-	/*public static DataDefinition getObservation(List<Concept> questions) {
-		SqlDataDefinition obs = new SqlDataSetDefinition();
-		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
-		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
-		obs.setSqlQuery("");
-		return obs;
-
-	}*/
+	public static List<Obs> getObsList(Date startDate, Date endDate, Concept question) {
+		return Context.getObsService().getObservations(null, null, Arrays.asList(question), null, null, null, null, null,
+		    null, startDate, endDate, false);
+	}
+	
+	public static List<Obs> getObsList(Date startDate, Date endDate, Concept question, Concept answer) {
+		return Context.getObsService().getObservations(null, null, Arrays.asList(question), Arrays.asList(answer), null,
+		    null, null, null, null, startDate, endDate, false);
+	}
 }
