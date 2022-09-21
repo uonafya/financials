@@ -19,23 +19,33 @@
       },
       success: function (data) {
         toReturn = data;
+        console.log(data);
       }
     });
     return populateWorkLoadSummary(toReturn);
   }
   function populateWorkLoadSummary(data) {
-    jQuery("#opdData").append(data.opd);
-    jQuery("#spc").append(data.spc);
-    jQuery("#ipd").append(data.ipd);
-    jQuery("#mopc").append(data.mopc);
-    jQuery("#lab").append(data.lab);
-    jQuery("#procedure").append(data.procedure);
-    jQuery("#radiology").append(data.radiology);
+    jQuery("#opdData").empty().append(data.opd);
+    jQuery("#spc").empty().append(data.spc);
+    jQuery("#ipd").empty().append(data.ipd);
+    jQuery("#mopc").empty().append(data.mopc);
+    jQuery("#lab").empty().append(data.lab);
+    jQuery("#procedure").empty().append(data.procedure);
+    jQuery("#radiology").empty().append(data.radiology);
+    jQuery("#dental").empty().append(data.dental);
+    jQuery("#eye").empty().append(data.eye);
+    jQuery("#ent").empty().append(data.ent);
+    jQuery("#mchm").empty().append(data.mchm);
+    jQuery("#mchc").empty().append(data.mchc);
+    jQuery("#deliveries").empty().append(data.deliveries);
+    jQuery("#immunization").empty().append(data.immunization);
+    jQuery("#anc").empty().append(data.anc);
+    jQuery("#pnc").empty().append(data.pnc);
+    jQuery("#preventiveServices").empty().append(data.preventiveServices);
 
   }
   function populateWorkLoadDetailsParameters() {
     populateWorkLoadDetails(jQuery("#workLoadFromDate-field").val(), jQuery("#workLoadToDate-field").val());
-
   }
 </script>
 <div class="ke-panel-frame">
@@ -92,6 +102,46 @@
             <tr>
                 <td>Radiology</td>
                 <td id="radiology"></td>
+            </tr>
+
+            <tr>
+                <td>Dental Department</td>
+                <td id="dental"></td>
+            </tr><tr>
+                <td>Eye Department</td>
+                <td id="eye"></td>
+            </tr></tr>
+            <tr>
+                <td>ENT Department</td>
+                <td id="ent"></td>
+            </tr>
+            <tr>
+                <td>MCH Mothers</td>
+                <td id="mchm"></td>
+            </tr>
+            <tr>
+                <td>MCH Children</td>
+                <td id="mchc"></td>
+            </tr>
+            <tr>
+                <td>Deliveries</td>
+                <td id="deliveries"></td>
+            </tr>
+            <tr>
+                <td>Immunizations</td>
+                <td id="immunization"></td>
+            </tr>
+            <tr>
+                <td>ANC</td>
+                <td id="anc"></td>
+            </tr>
+            <tr>
+                <td>PNC</td>
+                <td id="pnc"></td>
+            </tr>
+            <tr>
+                <td>Mothers Preventive Services</td>
+                <td id="preventiveServices"></td>
             </tr>
             </tbody>
 

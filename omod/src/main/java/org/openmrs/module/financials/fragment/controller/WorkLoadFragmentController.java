@@ -26,7 +26,7 @@ public class WorkLoadFragmentController {
 	public SimpleObject fetchWorkLoadSummariesByDateRange(
 	        @RequestParam(value = "fromDate", required = false) Date startDate,
 	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
-		
+		System.out.println("The start date is >>" + startDate + " and end date is >>" + endDate);
 		Date startOfDay = FinancialsUtils.getStartOfDay(new Date());
 		Date endOfDay = FinancialsUtils.getEndOfDay(new Date());
 		if (startDate != null) {
@@ -193,7 +193,6 @@ public class WorkLoadFragmentController {
 		simpleObject.put("anc", anc);
 		simpleObject.put("pnc", pnc);
 		simpleObject.put("preventiveServices", preventiveServices);
-		
 		return simpleObject;
 		
 	}
