@@ -7,8 +7,8 @@
   });
   function populateRegistrationDetails() {
     const fromDate = jq('#regFromDate-field').val(),
-        toDate = jq('#regFromDate-field').val();
-    jq.getJSON('${ui.actionLink("financials", "Summary", "getPatientServiceBillByDepartmentTotals")}',
+        toDate = jq('#regToDate-field').val();
+    jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTotals")}',
         {
           "fromDate" : fromDate,
           "toDate" : toDate,
@@ -19,7 +19,7 @@
       jq('#specialFees').html(data.specialFees)
   });
     jq('#regDetails').DataTable().clear().destroy();
-    jq.getJSON('${ui.actionLink("financials", "Summary", "getPatientServiceBillByDepartmentTable")}',
+    jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTable")}',
         {
           "fromDate" : fromDate,
           "toDate" : toDate,
