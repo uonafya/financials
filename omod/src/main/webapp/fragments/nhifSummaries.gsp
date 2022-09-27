@@ -1,27 +1,5 @@
 <script type="text/javascript">
   jQuery(function() {
-    var table = jQuery("#nhifDetails").DataTable({
-    dom: 'Bfrtip',
-        buttons: ['copy', 'csv', 'excel',
-            {
-                extend: 'print',
-                messageTop: 'Pharmacy revenue transactions.',
-                customize: function (win) {
-                    jq(win.document.body)
-                        .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
-                },
-                repeatingHead: {
-                    logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
-                    logoPosition: 'center',
-                    logoStyle: ''
-                },
-                title: ''
-            }
-        ]
-  });
-    jQuery('#nhifDetails tbody').on( 'click', 'tr', function () {
-      console.log( table.row( this ).data() );
-    } );
     updateTable();
     jq("#filterNhif").click(function () {
       updateTable();
@@ -51,10 +29,35 @@
     return populateTableBodyForPatientNhifSummary(toReturn);
   }
   function populateTableBodyForPatientNhifSummary(data) {
-    jQuery("#nhifPatientSummaryItems").empty();
+    jQuery("#nhifDetails").DataTable().clear().destroy();
     data.map((item) => {
       jQuery("#nhifPatientSummaryItems").append("<tr><td>" + item.visitDate + "</td><td>" + item.identifierValue + "</td><td>" + item.names + "</td><td>" + item.visitType +"</td></tr>");
     });
+
+      var table = jQuery("#nhifDetails").DataTable({
+          dom: 'Bfrtip',
+          buttons: ['copy', 'csv', 'excel',
+              {
+                  extend: 'print',
+                  messageTop: 'Pharmacy revenue transactions.',
+                  customize: function (win) {
+                      jq(win.document.body)
+                          .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                  },
+                  repeatingHead: {
+                      logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                      logoPosition: 'center',
+                      logoStyle: ''
+                  },
+                  title: ''
+              }
+          ]
+      });
+
+      jQuery('#nhifDetails tbody').on( 'click', 'tr', function () {
+          console.log( table.row( this ).data() );
+      } );
+
   }
 </script>
 <style>
