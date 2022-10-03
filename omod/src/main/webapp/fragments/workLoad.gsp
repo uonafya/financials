@@ -43,6 +43,8 @@
     jQuery("#pnc").empty().append(data.pnc);
     jQuery("#preventiveServices").empty().append(data.preventiveServices);
 
+    jq("#workloadDetails").DataTable();
+
   }
   function populateWorkLoadDetailsParameters() {
     populateWorkLoadDetails(jQuery("#workLoadFromDate-field").val(), jQuery("#workLoadToDate-field").val());
@@ -67,7 +69,7 @@
         </div>
     </div>
     <div class="ke-panel-content">
-        <table>
+        <table border="0" cellpadding="0" cellspacing="0" id="workloadDetails" width="100%">
             <thead>
                 <tr>
                     <th>Department</th>
