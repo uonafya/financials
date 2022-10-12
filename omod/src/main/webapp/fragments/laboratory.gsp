@@ -1,29 +1,5 @@
 <script type="text/javascript">
   jQuery(function() {
-    jQuery("#laboratory").DataTable({
-      dom: 'Bfrtip',
-      "oLanguage": {
-        "oPaginate": {
-          "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
-          "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
-        }
-      },
-      buttons: ['copy', 'csv', 'excel',
-        {   extend: 'print',
-          messageTop: 'Laboratory revenue transactions.',
-          customize: function ( win ) {
-            jQuery(win.document.body)
-                .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
-          },
-          repeatingHead: {
-            logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
-            logoPosition: 'center',
-            logoStyle: ''
-          },
-          title: ''
-        }
-      ]
-    });
     populateLaboratoryDetails();
     jq("#filterLaboratory").click(function () {
       populateLaboratoryDetails();
@@ -33,29 +9,59 @@
     fetchLaboratorySummariesByDateRange(jQuery("#summaryFromDate-field").val(), jQuery("#summaryToDate-field").val());
 
   }
+
   function fetchLaboratorySummariesByDateRange(fromDate, toDate) {
-    var toReturn;
-    jQuery.ajax({
-      type: "GET",
-      url: '${ui.actionLink("financials", "laboratory", "fetchLaboratorySummariesByDateRange")}',
-      dataType: "json",
-      global: false,
-      async: false,
-      data: {
-        fromDate: fromDate,
-        toDate: toDate
-      },
-      success: function (data) {
-        toReturn = data;
-      }
-    });
-    return populateTableBodyForPatientPharmacySummary(toReturn);
+      var toReturn;
+      jQuery.ajax({
+          type: "GET",
+          url: '${ui.actionLink("financials", "laboratory", "fetchLaboratorySummariesByDateRange")}',
+          dataType: "json",
+          global: false,
+          async: false,
+          data: {
+              fromDate: fromDate,
+              toDate: toDate
+          },
+          success: function (data) {
+              toReturn = data;
+          }
+      });
+      return populateTableBodyForPatientPharmacySummary(toReturn);
   }
+
   function populateTableBodyForPatientPharmacySummary(data) {
-    jQuery("#labTbody").empty();
-    data.map((item) => {
-      jQuery("#labTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td><td>" + item.patient+ "</td><td>"+ item.category +"</td><td>"+ item.subCategory+"</td><td>"+item.actualAmount+"</td><td>"+item.paidAmount+"</td></tr>");
-    });
+      jQuery("#laboratory").DataTable().clear().destroy();
+      data.map((item) => {
+          jQuery("#labTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+      });
+      initDataTable();
+  }
+
+  function initDataTable() {
+      var table = jQuery("#laboratory").DataTable({
+          dom: 'Bfrtip',
+          "oLanguage": {
+              "oPaginate": {
+                  "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
+                  "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
+              }
+          },
+          buttons: ['copy', 'csv', 'excel',
+              {   extend: 'print',
+                  messageTop: 'Laboratory revenue transactions.',
+                  customize: function ( win ) {
+                      jQuery(win.document.body)
+                          .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                  },
+                  repeatingHead: {
+                      logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                      logoPosition: 'center',
+                      logoStyle: ''
+                  },
+                  title: ''
+              }
+          ]
+      });
   }
 </script>
 
@@ -91,7 +97,6 @@
                 <th>Paid Amount</th>
             </tr>
             </thead>
-            <tbody>
             <tbody id="labTbody">
             </tbody>
         </table>
