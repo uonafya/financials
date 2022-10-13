@@ -26,7 +26,6 @@
   }
   function populateWorkLoadSummary(data) {
     jQuery("#opdData").empty().append(data.opd);
-    jQuery("#spc").empty().append(data.spc);
     jQuery("#ipd").empty().append(data.ipd);
     jQuery("#mopc").empty().append(data.mopc);
     jQuery("#lab").empty().append(data.lab);
@@ -50,6 +49,11 @@
     populateWorkLoadDetails(jQuery("#workLoadFromDate-field").val(), jQuery("#workLoadToDate-field").val());
   }
 </script>
+<style type="text/css">
+table#pDetails.dataTable tbody tr:hover {
+  background-color: #43fff8;
+}
+</style>
 <div class="ke-panel-frame">
     <div class="ke-panel-heading">Facility Workload Summary</div>
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
@@ -84,10 +88,6 @@
                 <tr>
                     <td>IPD</td>
                     <td id="ipd"></td>
-                </tr>
-                <tr>
-                    <td>Special Clinic</td>
-                    <td id="spc"></td>
                 </tr>
                 <tr>
                     <td>MOPC</td>

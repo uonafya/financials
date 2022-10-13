@@ -6,6 +6,7 @@ import org.openmrs.Obs;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.IpdService;
+import org.openmrs.module.hospitalcore.PatientQueueService;
 import org.openmrs.module.hospitalcore.model.IpdPatientAdmitted;
 import org.openmrs.parameter.EncounterSearchCriteria;
 import org.openmrs.parameter.EncounterSearchCriteriaBuilder;
@@ -26,7 +27,7 @@ public class WorkLoadFragmentController {
 	public SimpleObject fetchWorkLoadSummariesByDateRange(
 	        @RequestParam(value = "fromDate", required = false) Date startDate,
 	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
-		System.out.println("The start date is >>" + startDate + " and end date is >>" + endDate);
+		PatientQueueService patientQueueService = Context.getService(PatientQueueService.class);
 		Date startOfDay = FinancialsUtils.getStartOfDay(new Date());
 		Date endOfDay = FinancialsUtils.getEndOfDay(new Date());
 		if (startDate != null) {
@@ -36,16 +37,10 @@ public class WorkLoadFragmentController {
 			endOfDay = FinancialsUtils.getEndOfDay(endDate);
 		}
 		
-		int opd = 0;
-		int specialClinic = 0;
 		int ipd = 0;
-		int mopc = 0;
 		int lab = 0;
 		int procedure = 0;
 		int radiology = 0;
-		int dental = 0;
-		int eye = 0;
-		int ent = 0;
 		int mchMothers = 0;
 		int mchChildren = 0;
 		int deliveries = 0;
@@ -53,9 +48,6 @@ public class WorkLoadFragmentController {
 		int anc = 0;
 		int pnc = 0;
 		int preventiveServices = 0;
-		
-		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "ba45c278-f290-11ea-9666-1b3e6e848887");
 		EncounterType labEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
 		    "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
 		EncounterType radiologyEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
@@ -78,23 +70,6 @@ public class WorkLoadFragmentController {
 		    "496c7cc3-0eea-4e84-a04c-2292949e2f7f");
 		EncounterType preventiveServicesEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
 		    "d3ea25c7-a3e8-4f57-a6a9-e802c3565a30");
-		
-		List<Encounter> getOpdEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(opdEncounterType)));
-		List<Obs> getAllSpecialClinicObs = FinancialsUtils.getObsList(startOfDay, endOfDay,
-		    FinancialsUtils.getConcept("b5e0cfd3-1009-4527-8e36-83b5e902b3ea"));
-		List<Obs> getAllMopcObs = FinancialsUtils.getObsList(startOfDay, endOfDay,
-		    FinancialsUtils.getConcept("03880388-07ce-4961-abe7-0e58f787dd23"),
-		    FinancialsUtils.getConcept("66710a6d-5894-4f7d-a874-b449df77314d"));
-		List<Obs> getAllSpecialClinicDentalObs = FinancialsUtils.getObsList(startOfDay, endOfDay,
-		    FinancialsUtils.getConcept("b5e0cfd3-1009-4527-8e36-83b5e902b3ea"),
-		    FinancialsUtils.getConcept("30aff715-92de-4662-aa33-fa6b6179fed0"));
-		List<Obs> getAllSpecialClinicEyeObs = FinancialsUtils.getObsList(startOfDay, endOfDay,
-		    FinancialsUtils.getConcept("b5e0cfd3-1009-4527-8e36-83b5e902b3ea"),
-		    FinancialsUtils.getConcept("36f7a4c9-a64b-4351-bd08-fe185c7470dc"));
-		List<Obs> getAllSpecialClinicENTObs = FinancialsUtils.getObsList(startOfDay, endOfDay,
-		    FinancialsUtils.getConcept("b5e0cfd3-1009-4527-8e36-83b5e902b3ea"),
-		    FinancialsUtils.getConcept("160455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
 		List<Encounter> getLabEncounters = Context.getEncounterService().getEncounters(
 		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(labEncounterType)));
 		List<Obs> getAllProceduresObs = FinancialsUtils.getObsList(startOfDay, endOfDay,
@@ -122,15 +97,6 @@ public class WorkLoadFragmentController {
 		List<IpdPatientAdmitted> getAllAdmittedPatients = Context.getService(IpdService.class)
 		        .getAdmittedPatientsByDateRange(startOfDay, endOfDay);
 		
-		if (!getOpdEncounters.isEmpty()) {
-			opd = getOpdEncounters.size();
-		}
-		if (!getAllSpecialClinicObs.isEmpty()) {
-			specialClinic = getAllSpecialClinicObs.size();
-		}
-		if (!getAllMopcObs.isEmpty()) {
-			mopc = getAllMopcObs.size();
-		}
 		if (!getLabEncounters.isEmpty()) {
 			lab = getLabEncounters.size();
 		}
@@ -139,15 +105,6 @@ public class WorkLoadFragmentController {
 		}
 		if (!getRadiologyEncounters.isEmpty()) {
 			radiology = getRadiologyEncounters.size();
-		}
-		if (!getAllSpecialClinicDentalObs.isEmpty()) {
-			dental = getAllSpecialClinicDentalObs.size();
-		}
-		if (!getAllSpecialClinicEyeObs.isEmpty()) {
-			eye = getAllSpecialClinicEyeObs.size();
-		}
-		if (!getAllSpecialClinicENTObs.isEmpty()) {
-			ent = getAllSpecialClinicENTObs.size();
 		}
 		if (!getMchMotherEncounters.isEmpty()) {
 			mchMothers = getMchMotherEncounters.size();
@@ -175,16 +132,27 @@ public class WorkLoadFragmentController {
 		}
 		
 		SimpleObject simpleObject = new SimpleObject();
-		simpleObject.put("opd", opd);
-		simpleObject.put("spc", specialClinic);
+		simpleObject.put("opd", patientQueueService.getPatientQueueLogCounts(startOfDay, endOfDay, null));
 		simpleObject.put("ipd", ipd);
-		simpleObject.put("mopc", mopc);
+		simpleObject.put(
+		    "mopc",
+		    patientQueueService.getPatientQueueLogCounts(startOfDay, endOfDay,
+		        FinancialsUtils.getConcept("66710a6d-5894-4f7d-a874-b449df77314d")));
 		simpleObject.put("lab", lab);
 		simpleObject.put("procedure", procedure);
 		simpleObject.put("radiology", radiology);
-		simpleObject.put("dental", dental);
-		simpleObject.put("eye", eye);
-		simpleObject.put("ent", ent);
+		simpleObject.put(
+		    "dental",
+		    patientQueueService.getPatientQueueLogCounts(startOfDay, endOfDay,
+		        FinancialsUtils.getConcept("30aff715-92de-4662-aa33-fa6b6179fed0")));
+		simpleObject.put(
+		    "eye",
+		    patientQueueService.getPatientQueueLogCounts(startOfDay, endOfDay,
+		        FinancialsUtils.getConcept("36f7a4c9-a64b-4351-bd08-fe185c7470dc")));
+		simpleObject.put(
+		    "ent",
+		    patientQueueService.getPatientQueueLogCounts(startOfDay, endOfDay,
+		        FinancialsUtils.getConcept("160455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")));
 		
 		simpleObject.put("mchm", mchMothers);
 		simpleObject.put("mchc", mchChildren);
