@@ -100,7 +100,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addSortCriteria("id", SortCriteria.SortDirection.ASC);
-		dsd.addRowFilter(getRowFilterRow(), "startDate=${startDate},endDate=${endDate+23h}");
+		dsd.addRowFilter(getRowFilterRow(), "startDate=${startDate},endDate=${endDate}");
 		
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
@@ -112,7 +112,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("identifier", identifierDef, "");
-		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate}",
 		    new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
@@ -124,26 +124,29 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		    new CalculationResultConverter());
 		dsd.addColumn("weight",
 		    getObservation(Context.getConceptService().getConceptByUuid("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		dsd.addColumn("height",
 		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("BMI", getBMI(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("FV", getFevers(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("DIAG",
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("DIAGF",
 		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new DrugListConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn("DIAGP",
+		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS)),
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn("DR", getDrugs(), "endDate=${endDate}", new DrugListConverter());
 		dsd.addColumn("OUT",
 		    getObservation(Context.getConceptService().getConceptByUuid("160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new OutcomeConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new OutcomeConverter());
 		dsd.addColumn("RFF",
 		    getObservation(Context.getConceptService().getConceptByUuid("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralFromConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralFromConverter());
 		dsd.addColumn("RFT",
 		    getObservation(Context.getConceptService().getConceptByUuid("477a7484-0f99-4026-b37c-261be587a70b")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralToConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralToConverter());
 		return dsd;
 		
 	}
