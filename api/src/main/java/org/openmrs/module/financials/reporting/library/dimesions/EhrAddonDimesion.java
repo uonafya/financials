@@ -216,18 +216,14 @@ public class EhrAddonDimesion {
 	}
 	
 	public CohortDefinitionDimension newOrRevisits() {
-		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
-		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
-		EncounterType revisitInitial = Context.getEncounterService().getEncounterTypeByUuid(
-		    "98d42234-f28f-11ea-b609-bbd062a0383b");
 		CohortDefinitionDimension dim = new CohortDefinitionDimension();
 		dim.setName("New or revisits patients");
 		dim.addParameter(new Parameter("startDate", "After date", Date.class));
 		dim.addParameter(new Parameter("endDate", "Before date", Date.class));
 		dim.addCohortDefinition("RVT",
-		    map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate+23h+59m}"));
+		    map(moh717CohortDefinition.getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
 		dim.addCohortDefinition("NEW",
-		    map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate+23h+59m}"));
+		    map(moh717CohortDefinition.getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
 		return dim;
 	}
 	

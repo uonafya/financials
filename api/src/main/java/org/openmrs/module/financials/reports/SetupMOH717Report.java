@@ -42,7 +42,7 @@ public class SetupMOH717Report extends AbstractReportBuilder {
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
 		reportDefinition.setBaseCohortDefinition(map(moh717CohortDefinition.getAllPatientsWithDiagnosis(),
-		    "startDate=${startDate},endDate=${endDate}"));
+		    "startDate=${startDate},endDate=${endDate+23h}"));
 		return Arrays.asList(map(moh717DatasetDefinition.constructMoh717Dataset(),
 		    "startDate=${startDate},endDate=${endDate+23h}"));
 	}

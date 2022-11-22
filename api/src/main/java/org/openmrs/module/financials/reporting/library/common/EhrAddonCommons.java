@@ -133,12 +133,11 @@ public class EhrAddonCommons {
 	
 	public CohortDefinition getPatientRevisitsBasedOnVisits() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
-		cd.setName("Has visits within a period of time REVISTS");
+		cd.setName("Has visits within a period of time REVISITS");
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.setQuery("SELECT tbl.patient_id FROM( "
 		        + " SELECT p.patient_id, COUNT(visit_id) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		        + " WHERE v.date_started BETWEEN DATE_ADD(:endDate, INTERVAL -12 MONTH) AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " WHERE v.date_started BETWEEN DATE_ADD(:endDate, INTERVAL -12 MONTH) AND :endDate "
 		        + " GROUP BY p.patient_id HAVING COUNT(visit_id) > 1) tbl ");
 		
 		return cd;
@@ -151,7 +150,7 @@ public class EhrAddonCommons {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.setQuery("SELECT tbl.patient_id FROM( "
 		        + " SELECT p.patient_id, COUNT(visit_id) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		        + " WHERE v.date_started BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " WHERE v.date_started BETWEEN :startDate AND  :endDate "
 		        + " GROUP BY p.patient_id HAVING COUNT(visit_id) <= 1) tbl ");
 		
 		return cd;
