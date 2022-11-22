@@ -275,7 +275,6 @@ public class Moh705CohortDefinition {
 		cd.setName("Get new patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatientsWithDiagnosis(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch(
 		    "NEW",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
@@ -283,14 +282,14 @@ public class Moh705CohortDefinition {
 		        "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("VISIT",
 		    map(commonLibrary.getPatientWithNewVisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("REVISIT", map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch("REVISIT", map(getRevisitPatients(), "endDate=${endDate}"));
 		
-		cd.setCompositionString("(ALL AND (NEW OR VISIT)) AND NOT REVISIT");
+		cd.setCompositionString("(NEW OR VISIT) AND NOT REVISIT");
 		return cd;
 		
 	}
 	
-	private CohortDefinition getAllPatientsWithDiagnosis() {
+	public CohortDefinition getAllPatientsWithDiagnosis() {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("All patients who have at least diagnosis recorded");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -309,15 +308,13 @@ public class Moh705CohortDefinition {
 		cd.setName("Get revisit patients");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("ALL", ReportUtils.map(getAllPatientsWithDiagnosis(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch(
 		    "RVT",
 		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
 		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
 		        "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("VISIT",
-		    map(commonLibrary.getPatientRevisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
-		cd.setCompositionString("ALL AND (RVT OR VISIT)");
+		cd.addSearch("VISIT", map(commonLibrary.getPatientRevisitsBasedOnVisits(), "endDate=${endDate}"));
+		cd.setCompositionString("RVT OR VISIT");
 		return cd;
 		
 	}
