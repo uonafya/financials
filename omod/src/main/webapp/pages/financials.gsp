@@ -99,6 +99,12 @@
                     active: (selection == "section-nhifSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/nhif.jpeg"
+            ],
+            [
+                    label: "Cashier Summaries",
+                    href: ui.pageLink("financials", "financials", [section: "cashierSummaries"]),
+                    iconProvider: "financials",
+                    icon: "buttons/Book.png"
             ]
     ]
 %>
