@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.calculation.EhrDiagnosisCalculation;
 import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
 import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
@@ -131,12 +132,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
-		dsd.addColumn("DIAGF",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
-		dsd.addColumn("DIAGP",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn("DIAG", getDiagnosis(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("DR", getDrugs(), "endDate=${endDate}", new DrugListConverter());
 		dsd.addColumn("OUT",
 		    getObservation(Context.getConceptService().getConceptByUuid("160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
@@ -221,5 +217,12 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		sqlEncounterQuery
 		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.voided=0 AND p.voided = 0 ");
 		return sqlEncounterQuery;
+	}
+	
+	private DataDefinition getDiagnosis() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("DIAG", new EhrDiagnosisCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+		
 	}
 }

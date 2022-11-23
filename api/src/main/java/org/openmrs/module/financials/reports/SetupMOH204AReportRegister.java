@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.calculation.EhrDiagnosisCalculation;
 import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
 import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
@@ -132,12 +133,7 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
-		dsd.addColumn("DIAGF",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
-		dsd.addColumn("DIAGP",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn("DIAG", getDiagnosis(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("DR", getDrugs(), "endDate=${endDate}", new DrugListConverter());
 		dsd.addColumn("OUT",
 		    getObservation(Context.getConceptService().getConceptByUuid("160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
@@ -220,6 +216,13 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 	
 	private DataDefinition getRevisit() {
 		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+		
+	}
+	
+	private DataDefinition getDiagnosis() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("DIAG", new EhrDiagnosisCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
 		
