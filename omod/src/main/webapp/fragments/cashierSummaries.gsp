@@ -11,8 +11,10 @@
                         <option value="${it.userId}">${it.username}</option>
                     <% } %>
                 </select>
-                <button id="filter" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
+                <label>&nbsp;&nbsp;&nbsp;</label<button id="filter" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
 
         </div>
-        </div>
+        <br />
+        <hr />
+     </div>
 </div>
