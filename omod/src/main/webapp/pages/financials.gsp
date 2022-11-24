@@ -103,6 +103,7 @@
             [
                     label: "Cashier Summaries",
                     href: ui.pageLink("financials", "financials", [section: "cashierSummaries"]),
+                    active: (selection == "section-cashierSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/Book.png"
             ]
@@ -132,5 +133,7 @@
     ${ui.includeFragment("financials","procedure")}
     <%} else if(section == "radiology") {%>
     ${ui.includeFragment("financials","radiology")}
+    <%} else if(section == "cashierSummaries") {%>
+    ${ui.includeFragment("financials","cashierSummaries")}
     <%}%>
 </div>
