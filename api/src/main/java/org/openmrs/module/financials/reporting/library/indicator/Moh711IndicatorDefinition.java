@@ -1,8 +1,10 @@
 package org.openmrs.module.financials.reporting.library.indicator;
 
 import org.openmrs.Concept;
+import org.openmrs.EncounterType;
 import org.openmrs.Program;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh711CohortDefinition;
+import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
 import org.openmrs.module.reporting.common.RangeComparator;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +18,14 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh711IndicatorDefinition {
 	
-	private Moh711CohortDefinition moh711CohortDefinition;
+	private final Moh711CohortDefinition moh711CohortDefinition;
+	
+	private final EhrAddonCommons ehrAddonCommons;
 	
 	@Autowired
-	public Moh711IndicatorDefinition(Moh711CohortDefinition moh711CohortDefinition) {
+	public Moh711IndicatorDefinition(Moh711CohortDefinition moh711CohortDefinition, EhrAddonCommons ehrAddonCommons) {
 		this.moh711CohortDefinition = moh711CohortDefinition;
+		this.ehrAddonCommons = ehrAddonCommons;
 	}
 	
 	public CohortIndicator getAllAncClients(Concept... entryPoints) {
@@ -39,7 +44,7 @@ public class Moh711IndicatorDefinition {
 	        RangeComparator rangeComparator) {
 		
 		return cohortIndicator(
-		    "Numeric values comapred to threshold",
+		    "Numeric values compared to threshold",
 		    map(moh711CohortDefinition.getAllClientsWithHbLessThanAthreshold(concept, threshold, rangeComparator),
 		        "onOrAfter=${startDate},onOrBefore=${endDate}"));
 	}
@@ -69,6 +74,11 @@ public class Moh711IndicatorDefinition {
 		
 		return cohortIndicator("Number of gender based violence reported",
 		    map(moh711CohortDefinition.getSgbvCases(), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getPatientsHavingEncountersFilled(EncounterType... types) {
+		return cohortIndicator("Number of patients having encounter over time period",
+		    map(ehrAddonCommons.hasEncounter(types), "onOrAfter=${startDate},onOrBefore=${endDate}"));
 	}
 	
 }
