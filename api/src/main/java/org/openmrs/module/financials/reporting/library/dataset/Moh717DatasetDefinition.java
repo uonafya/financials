@@ -1,6 +1,7 @@
 package org.openmrs.module.financials.reporting.library.dataset;
 
 import org.openmrs.EncounterType;
+import org.openmrs.Form;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.ColumnParameters;
 import org.openmrs.module.financials.EhrAddonsConstants;
@@ -152,34 +153,50 @@ public class Moh717DatasetDefinition {
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dental_stitching))), indParams), "");
 		
 		EncounterType mchChildFollowupEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "755b59e6-acbb-4853-abaf-be302039f902");
+		    "bcc6da85-72f2-4291-b206-789b8186a021");
 		EncounterType mchChildImmunizationEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "b4f3859e-861c-4a63-bdff-eb7392030d47");
-		EncounterType ancEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "e8f98494-af35-4bb8-9fc7-c409c8fed843");
-		EncounterType pncEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "72aa78e0-ee4b-47c3-9073-26f3b9ecc4a7");
+		    "82169b8d-c945-4c41-be62-433dfd9d6c86");
+		EncounterType CWC_Enrollment = Context.getEncounterService().getEncounterTypeByUuid(
+		    "415f5136-ca4a-49a8-8db3-f994187c3af6");
 		
-		dsd.addColumn("CWCNEW", "CWC Attendances - NEW", ReportUtils.map(moh711IndicatorDefinition
-		        .getPatientsHavingEncountersFilled(mchChildFollowupEncounterType, mchChildImmunizationEncounterType),
+		EncounterType consultationsEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "c6d09e05-1f25-4164-8860-9f32c5a02df0");
+		Form pncFollowupForm = Context.getFormService().getFormByUuid("72aa78e0-ee4b-47c3-9073-26f3b9ecc4a7");
+		Form ancForm = Context.getFormService().getFormByUuid("e8f98494-af35-4bb8-9fc7-c409c8fed843");
+		
+		dsd.addColumn("CWCNEW", "CWC Attendances - NEW",
+		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(Arrays.asList(
+		        mchChildFollowupEncounterType.getEncounterTypeId(), CWC_Enrollment.getEncounterTypeId(),
+		        mchChildImmunizationEncounterType.getEncounterTypeId())), indParams), "state=NEW");
+		
+		dsd.addColumn("CWCRVT", "CWC Attendances - RVT",
+		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(Arrays.asList(
+		        mchChildFollowupEncounterType.getEncounterTypeId(), CWC_Enrollment.getEncounterTypeId(),
+		        mchChildImmunizationEncounterType.getEncounterTypeId())), indParams), "state=RVT");
+		
+		dsd.addColumn("ANCNEW", "ANC Attendances - NEW", ReportUtils.map(
+		    moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		        Arrays.asList(consultationsEncounterType.getEncounterTypeId()), Arrays.asList(ancForm.getFormId())),
 		    indParams), "state=NEW");
-		dsd.addColumn("CWCRVT", "CWC Attendances - RVT", ReportUtils.map(moh711IndicatorDefinition
-		        .getPatientsHavingEncountersFilled(mchChildFollowupEncounterType, mchChildImmunizationEncounterType),
+		dsd.addColumn("ANCRVT", "ANC Attendances - RVT", ReportUtils.map(
+		    moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		        Arrays.asList(consultationsEncounterType.getEncounterTypeId()), Arrays.asList(ancForm.getFormId())),
 		    indParams), "state=RVT");
 		
-		dsd.addColumn("ANCNEW", "ANC Attendances - NEW",
-		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(ancEncounterType), indParams),
-		    "state=NEW");
-		dsd.addColumn("ANCRVT", "ANC Attendances - RVT",
-		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(ancEncounterType), indParams),
-		    "state=RVT");
-		
-		dsd.addColumn("PNCNEW", "PNC Attendances - NEW",
-		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(pncEncounterType), indParams),
-		    "state=NEW");
-		dsd.addColumn("PNCRVT", "PNC Attendances - RVT",
-		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(pncEncounterType), indParams),
-		    "state=RVT");
+		dsd.addColumn(
+		    "PNCNEW",
+		    "PNC Attendances - NEW",
+		    ReportUtils.map(
+		        moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		            Arrays.asList(consultationsEncounterType.getEncounterTypeId()),
+		            Arrays.asList(pncFollowupForm.getFormId())), indParams), "state=NEW");
+		dsd.addColumn(
+		    "PNCRVT",
+		    "PNC Attendances - RVT",
+		    ReportUtils.map(
+		        moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		            Arrays.asList(consultationsEncounterType.getEncounterTypeId()),
+		            Arrays.asList(pncFollowupForm.getFormId())), indParams), "state=RVT");
 		
 		return dsd;
 	}

@@ -12,13 +12,11 @@ import org.openmrs.module.reporting.data.person.definition.ObsForPersonDataDefin
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.util.OpenmrsUtil;
 
+import java.text.DateFormat;
 import java.text.Format;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class FinancialsUtils {
 	
@@ -93,6 +91,12 @@ public class FinancialsUtils {
 		Format formatter = new SimpleDateFormat("dd/MM/yyyy");
 		
 		return formatter.format(date);
+	}
+	
+	public static Date formatDateFromString(String dateString) throws ParseException {
+		
+		DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+		return format.parse(dateString);
 	}
 	
 	public static List<Concept> registrationFeeConcepts() {

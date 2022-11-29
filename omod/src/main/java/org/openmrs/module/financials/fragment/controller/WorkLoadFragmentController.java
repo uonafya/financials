@@ -2,6 +2,7 @@ package org.openmrs.module.financials.fragment.controller;
 
 import org.openmrs.Encounter;
 import org.openmrs.EncounterType;
+import org.openmrs.Form;
 import org.openmrs.Obs;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.utils.FinancialsUtils;
@@ -55,44 +56,52 @@ public class WorkLoadFragmentController {
 		EncounterType mchMotherEnrollmentEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
 		    "3ee036d8-7c13-4393-b5d6-036f2fe45126");
 		EncounterType mchChildEnrollmentEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "8553d869-bdc8-4287-8505-910c7c998aff");
+		    "415f5136-ca4a-49a8-8db3-f994187c3af6");
 		EncounterType mchMotherFollowupEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
 		    "c6d09e05-1f25-4164-8860-9f32c5a02df0");
 		EncounterType mchChildFollowupEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "755b59e6-acbb-4853-abaf-be302039f902");
+		    "bcc6da85-72f2-4291-b206-789b8186a021");
 		EncounterType mchChildImmunizationEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "b4f3859e-861c-4a63-bdff-eb7392030d47");
-		EncounterType ancEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "e8f98494-af35-4bb8-9fc7-c409c8fed843");
-		EncounterType pncEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "72aa78e0-ee4b-47c3-9073-26f3b9ecc4a7");
-		EncounterType deliveriesEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "496c7cc3-0eea-4e84-a04c-2292949e2f7f");
-		EncounterType preventiveServicesEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "d3ea25c7-a3e8-4f57-a6a9-e802c3565a30");
+		    "82169b8d-c945-4c41-be62-433dfd9d6c86");
+		
+		EncounterType consultationsEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "c6d09e05-1f25-4164-8860-9f32c5a02df0");
+		Form pncFollowupForm = Context.getFormService().getFormByUuid("72aa78e0-ee4b-47c3-9073-26f3b9ecc4a7");
+		Form deliveriesForm = Context.getFormService().getFormByUuid("496c7cc3-0eea-4e84-a04c-2292949e2f7f");
+		Form preventiveForm = Context.getFormService().getFormByUuid("d3ea25c7-a3e8-4f57-a6a9-e802c3565a30");
+		Form ancForm = Context.getFormService().getFormByUuid("e8f98494-af35-4bb8-9fc7-c409c8fed843");
+		
 		List<Encounter> getLabEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(labEncounterType)));
+		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(labEncounterType), null));
 		List<Obs> getAllProceduresObs = FinancialsUtils.getObsList(startOfDay, endOfDay,
 		    FinancialsUtils.getConcept("1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
 		List<Encounter> getRadiologyEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(radiologyEncounterType)));
+		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(radiologyEncounterType), null));
 		
 		List<Encounter> getMchMotherEncounters = Context.getEncounterService().getEncounters(
 		    formEncounterSearchCriteria(startOfDay, endOfDay,
-		        Arrays.asList(mchMotherEnrollmentEncounterType, mchMotherFollowupEncounterType)));
+		        Arrays.asList(mchMotherEnrollmentEncounterType, mchMotherFollowupEncounterType), null));
 		List<Encounter> getMchChildEncounters = Context.getEncounterService().getEncounters(
 		    formEncounterSearchCriteria(startOfDay, endOfDay,
-		        Arrays.asList(mchChildEnrollmentEncounterType, mchChildFollowupEncounterType)));
+		        Arrays.asList(mchChildEnrollmentEncounterType, mchChildFollowupEncounterType), null));
+		
 		List<Encounter> getDeliveriesEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(deliveriesEncounterType)));
+		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(consultationsEncounterType),
+		        Arrays.asList(deliveriesForm)));
 		List<Encounter> getImmunizationEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(mchChildImmunizationEncounterType)));
+		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(mchChildImmunizationEncounterType), null));
+		
 		List<Encounter> getAncEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(ancEncounterType)));
+		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(consultationsEncounterType),
+		        Arrays.asList(ancForm)));
+		
 		List<Encounter> getpncEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(pncEncounterType)));
+		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(consultationsEncounterType),
+		        Arrays.asList(pncFollowupForm)));
+		
 		List<Encounter> getPreventiveEncounters = Context.getEncounterService().getEncounters(
-		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(preventiveServicesEncounterType)));
+		    formEncounterSearchCriteria(startOfDay, endOfDay, Arrays.asList(consultationsEncounterType),
+		        Arrays.asList(preventiveForm)));
 		
 		List<IpdPatientAdmitted> getAllAdmittedPatients = Context.getService(IpdService.class)
 		        .getAdmittedPatientsByDateRange(startOfDay, endOfDay);
@@ -166,8 +175,8 @@ public class WorkLoadFragmentController {
 	}
 	
 	private EncounterSearchCriteria formEncounterSearchCriteria(Date startDate, Date endDate,
-	        List<EncounterType> encounterType) {
+	        List<EncounterType> encounterType, List<Form> formList) {
 		return new EncounterSearchCriteriaBuilder().setEncounterTypes(encounterType).setFromDate(startDate)
-		        .setToDate(endDate).setIncludeVoided(false).createEncounterSearchCriteria();
+		        .setToDate(endDate).setIncludeVoided(false).setEnteredViaForms(formList).createEncounterSearchCriteria();
 	}
 }

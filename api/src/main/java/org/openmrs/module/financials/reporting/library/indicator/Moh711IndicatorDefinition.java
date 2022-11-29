@@ -76,9 +76,14 @@ public class Moh711IndicatorDefinition {
 		    map(moh711CohortDefinition.getSgbvCases(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getPatientsHavingEncountersFilled(EncounterType... types) {
+	public CohortIndicator getPatientsHavingEncountersFilled(List<Integer> types) {
 		return cohortIndicator("Number of patients having encounter over time period",
-		    map(ehrAddonCommons.hasEncounter(types), "onOrAfter=${startDate},onOrBefore=${endDate}"));
+		    map(ehrAddonCommons.patientHasEncounter(types), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getPatientsHavingEncountersAndFormsFilled(List<Integer> types, List<Integer> formTypes) {
+		return cohortIndicator("Number of patients having encounter and forms filled over time period",
+		    map(ehrAddonCommons.patientHasEncounterAndForms(types, formTypes), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 }

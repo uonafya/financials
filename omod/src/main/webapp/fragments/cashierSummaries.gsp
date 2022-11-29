@@ -71,10 +71,11 @@
                 <label>Cashier</label>
                 <select name="cashier" id="cashier">
                     <% cashier.each {%>
+                        <option value="0">Please select a cashier</option>
                         <option value="${it.userId}">${it.username}</option>
                     <% } %>
                 </select>
-                <label>&nbsp;&nbsp;&nbsp;</label<button id="filterCashier" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
+                <label>&nbsp;&nbsp;&nbsp;</label><button id="filterCashier" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
         </div>
         <br />
         <hr />
