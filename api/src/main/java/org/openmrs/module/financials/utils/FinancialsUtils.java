@@ -96,7 +96,11 @@ public class FinancialsUtils {
 	public static Date formatDateFromString(String dateString) throws ParseException {
 		
 		DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-		return format.parse(dateString);
+		Date date = null;
+		if (!dateString.isEmpty()) {
+			date = format.parse(dateString);
+		}
+		return date;
 	}
 	
 	public static List<Concept> registrationFeeConcepts() {

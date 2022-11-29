@@ -28,8 +28,8 @@ public class CashierSummariesFragmentController {
 	}
 	
 	public List<SimpleObject> fetchPaymentSummariesByDateRangeAndUser(
-	        @RequestParam(value = "fromDate", required = false) String fromDate,
-	        @RequestParam(value = "toDate", required = false) String toDate,
+	        @RequestParam(value = "fromDate", required = false) Date fromDate,
+	        @RequestParam(value = "toDate", required = false) Date toDate,
 	        @RequestParam(value = "cashier", required = false) Integer cashierUser, UiUtils uiUtils) throws ParseException {
 		
 		UserService userService = Context.getUserService();
@@ -37,17 +37,11 @@ public class CashierSummariesFragmentController {
 		Date endDate = DateUtils.getEndOfDay(new Date());
 		Date startDate = DateUtils.getStartOfDay(new Date());
 		
-		if (fromDate != null) {
-			startDate = DateUtils.getStartOfDay(FinancialsUtils.formatDateFromString(fromDate));
-		}
-		
-		if (toDate != null) {
-			endDate = DateUtils.getEndOfDay(FinancialsUtils.formatDateFromString(toDate));
-		}
-		if (cashierUser != null && userService.getUser(cashierUser) != null) {
+		if (fromDate != null && toDate != null && cashierUser != null && userService.getUser(cashierUser) != null) {
+			startDate = DateUtils.getStartOfDay(fromDate);
+			endDate = DateUtils.getEndOfDay(toDate);
 			selectedUser = userService.getUser(cashierUser);
 		}
-		
 		List<CashierBillSummarySimplifier> patientServiceBillList = new ArrayList<CashierBillSummarySimplifier>(getAllBills(
 		    selectedUser, startDate, endDate));
 		

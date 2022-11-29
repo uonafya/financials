@@ -282,9 +282,8 @@ public class EhrAddonCommons {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
-		        + " INNER JOIN obs o ON e.encounter_id=o.encounter_id "
-		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 AND o.voided=0 "
-		        + " AND e.encounter_type IN(" + StringUtils.join(typesIds, ',') + ") " + " AND o.form_id IN("
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 "
+		        + " AND e.encounter_type IN(" + StringUtils.join(typesIds, ',') + ") " + " AND e.form_id IN("
 		        + StringUtils.join(formIds, ',') + ") ");
 		return cd;
 	}

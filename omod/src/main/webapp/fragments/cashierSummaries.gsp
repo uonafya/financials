@@ -7,7 +7,7 @@
 
   });
   function updateTable() {
-    fetchCashierSummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'), jq('#cashier').val());
+    fetchCashierSummariesByDateRange(jq("#summaryFromDate-field").val(),jq('#summaryToDate-field').val(), jq('#cashier').val());
   }
   function fetchCashierSummariesByDateRange(fromDate, toDate, cashierUser) {
     var toReturn;
@@ -70,8 +70,8 @@
                 <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                 <label>Cashier</label>
                 <select name="cashier" id="cashier">
+                <option value="0">Please select a cashier</option>
                     <% cashier.each {%>
-                        <option value="0">Please select a cashier</option>
                         <option value="${it.userId}">${it.username}</option>
                     <% } %>
                 </select>
