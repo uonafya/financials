@@ -22,9 +22,9 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Builds({ "financials.common.717" })
 public class SetupMOH717Report extends AbstractReportBuilder {
 	
-	private Moh717DatasetDefinition moh717DatasetDefinition;
+	private final Moh717DatasetDefinition moh717DatasetDefinition;
 	
-	private Moh717CohortDefinition moh717CohortDefinition;
+	private final Moh717CohortDefinition moh717CohortDefinition;
 	
 	@Autowired
 	public SetupMOH717Report(Moh717DatasetDefinition moh717DatasetDefinition, Moh717CohortDefinition moh717CohortDefinition) {

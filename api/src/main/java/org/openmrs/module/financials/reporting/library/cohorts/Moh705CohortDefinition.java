@@ -57,7 +57,7 @@ public class Moh705CohortDefinition {
 	 */
 	public CohortDefinition getPatientsWhoHaveDiagnosisOverral() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
-		cd.setName("Get children and adult patients who have diagnosis based on list of concepts overral");
+		cd.setName("Get children and adult patients who have diagnosis based on list of concepts overall");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setQuery(Moh705Queries.getPatientsWhoMatchAtLeastDiagnosisBasedOnConcepts(

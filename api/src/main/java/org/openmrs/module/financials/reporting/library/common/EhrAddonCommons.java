@@ -135,7 +135,7 @@ public class EhrAddonCommons {
 	
 	public CohortDefinition getPatientRevisitsBasedOnVisits() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
-		cd.setName("Has visits within a period of time REVISITS");
+		cd.setName("Has visits within a period of time REVISITS one year form the current end visit date");
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setQuery("SELECT tbl.patient_id FROM( "
 		        + " SELECT p.patient_id, COUNT(visit_id) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "

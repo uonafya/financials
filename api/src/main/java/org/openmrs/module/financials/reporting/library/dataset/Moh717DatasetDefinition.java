@@ -26,11 +26,11 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh717DatasetDefinition {
 	
-	private Moh717IndicatorDefinition moh717IndicatorDefinition;
+	private final Moh717IndicatorDefinition moh717IndicatorDefinition;
 	
-	private Moh711IndicatorDefinition moh711IndicatorDefinition;
+	private final Moh711IndicatorDefinition moh711IndicatorDefinition;
 	
-	private EhrAddonDimesion ehrAddonDimesion;
+	private final EhrAddonDimesion ehrAddonDimesion;
 	
 	@Autowired
 	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimesion ehrAddonDimesion,
