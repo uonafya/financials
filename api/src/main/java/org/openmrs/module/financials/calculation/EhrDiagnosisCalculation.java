@@ -23,7 +23,6 @@ public class EhrDiagnosisCalculation extends AbstractPatientCalculation {
 	public CalculationResultMap evaluate(Collection<Integer> cohort, Map<String, Object> map,
 	        PatientCalculationContext context) {
 		CalculationResultMap ret = new CalculationResultMap();
-		String diagnosis = "";
 		
 		CalculationResultMap finalDiagnosis = Calculations.allObs(
 		    MetadataUtils.existing(Concept.class, EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS), cohort, context);

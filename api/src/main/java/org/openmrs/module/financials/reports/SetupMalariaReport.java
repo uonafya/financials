@@ -94,10 +94,7 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addSortCriteria("Visit Date", SortCriteria.SortDirection.ASC);
-		
-		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,
-		    CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
-		DataConverter identifierFormatter = new ObjectFormatter("{identifier}");
+		dsd.addRowFilter(addRowFilterToMalaria());
 		
 		DataConverter formatter = new ObjectFormatter("{familyName}, {middleName} {givenName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), formatter);
@@ -147,5 +144,20 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		        .setSql("SELECT p.patient_id, MAX(v.date_started) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
 		                + " WHERE p.voided=0 AND v.voided=0 AND v.date_started BETWEEN :startDate AND :endDate GROUP BY p.patient_id");
 		return visitDataDefinition;
+	}
+	
+	protected Mapped<CohortDefinition> addRowFilterToMalaria() {
+		EncounterType labEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setName("Active Patients");
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		        + " INNER JOIN encounter_type et ON et.encounter_type_id=e.encounter_type "
+		        + " INNER JOIN obs o ON e.encounter_id=o.encounter_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND o.concept_id IN(32,1643) "
+		        + " AND o.value_coded IS NOT NULL " + " AND et.encounter_type_id=" + labEncounterType.getEncounterTypeId());
+		return ReportUtils.map((CohortDefinition) cd, "startDate=${startDate},endDate=${endDate}");
 	}
 }

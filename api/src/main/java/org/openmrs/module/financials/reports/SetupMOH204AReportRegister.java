@@ -5,10 +5,7 @@ import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.calculation.EhrDiagnosisCalculation;
-import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
-import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
-import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
-import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
+import org.openmrs.module.financials.reporting.calculation.*;
 import org.openmrs.module.financials.reporting.converter.DrugListConverter;
 import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
 import org.openmrs.module.financials.reporting.converter.OutcomeConverter;
@@ -107,13 +104,9 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		
-		PatientIdentifierType opdNumber = MetadataUtils.existing(PatientIdentifierType.class,
-		    CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
-		DataDefinition identifierDef = new ConvertedPatientDataDefinition("identifier", new PatientIdentifierDataDefinition(
-		        opdNumber.getName(), opdNumber), new IdentifierConverter());
-		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("identifier", identifierDef, "");
+		dsd.addColumn("Identifier", new CalculationDataDefinition("Identifier", new PatientIdentifierCalculation()), "",
+		    new CalculationResultConverter());
 		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate}",
 		    new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
