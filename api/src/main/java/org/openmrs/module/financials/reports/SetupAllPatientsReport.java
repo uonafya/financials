@@ -17,6 +17,7 @@ import org.openmrs.module.kenyaemr.reporting.data.converter.CalculationResultCon
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
+import org.openmrs.module.reporting.common.SortCriteria;
 import org.openmrs.module.reporting.common.TimeQualifier;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
@@ -92,12 +93,7 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		dsd.setName("all");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		
-		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,
-		    CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
-		DataConverter identifierFormatter = new ObjectFormatter("{identifier}");
-		DataDefinition identifierDef = new ConvertedPatientDataDefinition("identifier", new PatientIdentifierDataDefinition(
-		        upn.getName(), upn), identifierFormatter);
+		dsd.addSortCriteria("vDate", SortCriteria.SortDirection.ASC);
 		
 		DataConverter formatter = new ObjectFormatter("{familyName}, {givenName} {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), formatter);
