@@ -18,9 +18,9 @@ import java.util.stream.Collectors;
 
 @AppPage("financials.home")
 public class PatientInvoicePageController {
-
-  public void controller(PageModel pageModel, @RequestParam("patientId") Patient patient) {
-
-    pageModel.addAttribute("patient", patient);
-  }
+	
+	public void controller(PageModel pageModel, @RequestParam("patientId") Patient patient) {
+		
+		pageModel.addAttribute("patient", patient);
+	}
 }
