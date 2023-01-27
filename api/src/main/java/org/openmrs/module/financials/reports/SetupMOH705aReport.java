@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reports;
 
+import org.openmrs.module.financials.reporting.library.cohorts.Moh705CohortDefinition;
 import org.openmrs.module.financials.reporting.library.dataset.Moh705aDatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
@@ -18,14 +19,18 @@ import java.util.List;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 @Component
-@Builds({ "ehraddons.common.705a" })
+@Builds({ "financials.common.705a" })
 public class SetupMOH705aReport extends AbstractReportBuilder {
 	
-	private Moh705aDatasetDefinition moh705aDatasetDefinition;
+	private final Moh705aDatasetDefinition moh705aDatasetDefinition;
+	
+	private final Moh705CohortDefinition moh705CohortDefinition;
 	
 	@Autowired
-	public SetupMOH705aReport(Moh705aDatasetDefinition moh705aDatasetDefinition) {
+	public SetupMOH705aReport(Moh705aDatasetDefinition moh705aDatasetDefinition,
+	    Moh705CohortDefinition moh705CohortDefinition) {
 		this.moh705aDatasetDefinition = moh705aDatasetDefinition;
+		this.moh705CohortDefinition = moh705CohortDefinition;
 	}
 	
 	@Override
@@ -37,6 +42,8 @@ public class SetupMOH705aReport extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
+		reportDefinition.setBaseCohortDefinition(map(moh705CohortDefinition.getAllPatientsWithDiagnosis(),
+		    "startDate=${startDate},endDate=${endDate+23h}"));
 		return Arrays.asList(map(moh705aDatasetDefinition.getMoh705aDataset(),
 		    "startDate=${startDate},endDate=${endDate+23h}"));
 	}

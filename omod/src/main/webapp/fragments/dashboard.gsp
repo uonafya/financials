@@ -20,7 +20,6 @@
         jq('.stat-digit').eq(2).html(data.laboratory)
         jq('.stat-digit').eq(3).html(data.radiology)
         jq('.stat-digit').eq(4).html(data.procedure)
-        jq('.stat-digit').eq(5).html(data.nhif)
         jQuery("#graph-container").highcharts({
           credits: {
             enabled: false
@@ -76,11 +75,7 @@
             }, {
               name: 'Procedures',
               y: data.procedure,
-            },
-              {
-                name: 'NHIF',
-                y: data.nhif,
-              }]
+            }]
           }],
         });
       });
@@ -101,16 +96,10 @@ html, body, #graph-container {
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-4" style="margin-bottom: 10px">
                             <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-                        </div>
-                        <div class="col-4" style="margin-bottom: 10px">
                             <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-                        </div>
-                        <div class="col-4" style="margin-bottom: 10px">
-                            <button id="filter" type="button" class=" btn btn-primary right">${ui.message("Filter")}
-                            </button>
-                        </div>
+                            <button id="filter" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
+
                     </div>
                 </div>
             </div>
@@ -177,18 +166,6 @@ html, body, #graph-container {
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="stat-text">Procedures</div>
-                                            <div class="stat-digit"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4" style="margin-bottom: 10px;">
-                            <div class="card" style="height: 100%; background: #43fff8">
-                                <div class="stat-widget-one">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="stat-text">NHIF</div>
                                             <div class="stat-digit"></div>
                                         </div>
                                     </div>

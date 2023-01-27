@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.calculation.EhrDiagnosisCalculation;
 import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
 import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
@@ -60,7 +61,7 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.204A" })
+@Builds({ "financials.common.report.204A" })
 public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;
@@ -113,7 +114,7 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("identifier", identifierDef, "");
-		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate}",
 		    new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
@@ -128,23 +129,21 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
 		dsd.addColumn("height",
 		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("BMI", getBMI(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("FV", getFevers(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("DIAG",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new DrugListConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("DIAG", getDiagnosis(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("DR", getDrugs(), "endDate=${endDate}", new DrugListConverter());
 		dsd.addColumn("OUT",
 		    getObservation(Context.getConceptService().getConceptByUuid("160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new OutcomeConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new OutcomeConverter());
 		dsd.addColumn("RFF",
 		    getObservation(Context.getConceptService().getConceptByUuid("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralFromConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralFromConverter());
 		dsd.addColumn("RFT",
 		    getObservation(Context.getConceptService().getConceptByUuid("477a7484-0f99-4026-b37c-261be587a70b")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralToConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralToConverter());
 		
 		return dsd;
 		
@@ -217,6 +216,13 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 	
 	private DataDefinition getRevisit() {
 		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+		
+	}
+	
+	private DataDefinition getDiagnosis() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("DIAG", new EhrDiagnosisCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
 		

@@ -2,7 +2,6 @@ package org.openmrs.module.financials.reports;
 
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
-import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -43,7 +42,7 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.512" })
+@Builds({ "financials.common.report.512" })
 public class SetupFpRegisterReport extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;

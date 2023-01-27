@@ -29,8 +29,6 @@ import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
-import org.openmrs.module.reporting.query.encounter.definition.EncounterQuery;
-import org.openmrs.module.reporting.query.encounter.definition.SqlEncounterQuery;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
 import org.springframework.stereotype.Component;
 
@@ -43,7 +41,7 @@ import static org.openmrs.module.financials.reports.SetupANCRegisterReport.ENC_D
 import static org.openmrs.module.financials.utils.EhrReportingUtils.getEncounterLimitsByDate;
 
 @Component
-@Builds({ "ehraddons.common.report.non.paying.patients" })
+@Builds({ "financials.common.report.non.paying.patients" })
 public class SetupNonPayingClientsReport extends AbstractReportBuilder {
 	
 	@Override

@@ -58,4 +58,44 @@ public class PharmacyBillSummary {
 		        + ", formulationName='" + formulationName + '\'' + ", issueQuantity='" + issueQuantity + '\''
 		        + ", totalPrice='" + totalPrice + '\'' + '}';
 	}
+	
+	private String patientNames;
+	
+	public String getPatientNames() {
+		return patientNames;
+	}
+	
+	public void setPatientNames(String patientNames) {
+		this.patientNames = patientNames;
+	}
+	
+	public String getPatientIdentifier() {
+		return patientIdentifier;
+	}
+	
+	public void setPatientIdentifier(String patientIdentifier) {
+		this.patientIdentifier = patientIdentifier;
+	}
+	
+	public String getWaiverAmount() {
+		return waiverAmount;
+	}
+	
+	public void setWaiverAmount(String waiverAmount) {
+		this.waiverAmount = waiverAmount;
+	}
+	
+	public String getTotalAMount() {
+		return totalAMount;
+	}
+	
+	public void setTotalAMount(String totalAMount) {
+		this.totalAMount = totalAMount;
+	}
+	
+	private String patientIdentifier;
+	
+	private String waiverAmount;
+	
+	private String totalAMount;
 }

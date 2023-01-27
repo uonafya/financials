@@ -30,14 +30,13 @@ public class Moh705bDatasetDefinition {
 	}
 	
 	/**
-	 * Get moh 705 a dataset
+	 * Get moh 705 b dataset
 	 * 
 	 * @return @{@link DataSetDefinition}
 	 */
 	public DataSetDefinition getMoh705bDataset() {
 		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
 		String indParam = "startDate=${startDate},endDate=${endDate}";
-		//dsd.addDimension("days", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), "endDate=${endDate}"));
 		dsd.setName("MOH705B");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));

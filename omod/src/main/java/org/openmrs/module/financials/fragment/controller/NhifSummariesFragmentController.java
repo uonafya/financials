@@ -5,23 +5,17 @@ import org.openmrs.module.financials.model.NhifPatientSummarySimplifier;
 import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.PatientCategoryDetails;
+import org.openmrs.ui.framework.SimpleObject;
+import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.fragment.FragmentModel;
-import java.util.Date;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class NhifSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
-		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
-		Date today = new Date();
-		Date startOfDay = FinancialsUtils.getStartOfDay(today);
-		Date endOfDay = FinancialsUtils.getEndOfDay(today);
-		
-		List<PatientCategoryDetails> getAllPatientWhoHaveNhif = hospitalCoreService.getAllPatientCategoryDetails(
-		    "payingCategory", "NHIF patient", startOfDay, endOfDay);
-		
-		model.addAttribute("nhifPatients", getNhifObjects(getAllPatientWhoHaveNhif));
 		
 	}
 	
@@ -38,7 +32,7 @@ public class NhifSummariesFragmentController {
 				nhifPatientSummarySimplifier.setIdentifierValue(FinancialsUtils
 				        .formatPatientIdentifier(patientCategoryDetails.getPatient()));
 				nhifPatientSummarySimplifier.setNhifNumber(patientCategoryDetails.getNhifNumber());
-				nhifPatientSummarySimplifier.setVisitType(patientCategoryDetails.getVisitType());
+				nhifPatientSummarySimplifier.setVisitType(getVisitType(patientCategoryDetails.getVisitType()));
 				
 				//add to the list
 				nhifPatientSummarySimplifierList.add(nhifPatientSummarySimplifier);
@@ -46,5 +40,28 @@ public class NhifSummariesFragmentController {
 			}
 		}
 		return nhifPatientSummarySimplifierList;
+	}
+	
+	public List<SimpleObject> fetchNhifPatientsPerDateRange(
+	        @RequestParam(value = "fromDate", required = false) String startDate,
+	        @RequestParam(value = "toDate", required = false) String endDate, UiUtils uiUtils) {
+		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
+		
+		List<PatientCategoryDetails> getAllPatientWhoHaveNhif = hospitalCoreService.getAllPatientCategoryDetails(
+		    "payingCategory", "NHIF patient", startDate, endDate);
+		
+		return SimpleObject.fromCollection(getNhifObjects(getAllPatientWhoHaveNhif), uiUtils, "names", "identifierValue",
+		    "nhifNumber", "visitType", "visitDate");
+		
+	}
+	
+	private String getVisitType(String str) {
+		String value = "";
+		if (str.equals("1")) {
+			value = "New Patient";
+		} else if (str.equals("2")) {
+			value = "Revisit Patient";
+		}
+		return value;
 	}
 }

@@ -1,11 +1,8 @@
 package org.openmrs.module.financials.reports;
 
 import org.openmrs.PatientIdentifierType;
-import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
-import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
-import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyacore.report.data.patient.definition.CalculationDataDefinition;
@@ -14,7 +11,6 @@ import org.openmrs.module.kenyaemr.calculation.library.mchcs.ParentCalculation;
 import org.openmrs.module.kenyaemr.calculation.library.mchcs.PersonAddressCalculation;
 import org.openmrs.module.kenyaemr.calculation.library.mchcs.PersonAttributeCalculation;
 import org.openmrs.module.kenyaemr.metadata.MchMetadata;
-import org.openmrs.module.kenyaemr.reporting.calculation.converter.GenderConverter;
 import org.openmrs.module.kenyaemr.reporting.calculation.converter.ObsValueDatetimeConverter;
 import org.openmrs.module.kenyaemr.reporting.calculation.converter.RDQACalculationResultConverter;
 import org.openmrs.module.kenyaemr.reporting.cohort.definition.Moh510CohortDefinition;
@@ -22,8 +18,6 @@ import org.openmrs.module.kenyaemr.reporting.data.converter.cwc.DateOfFullImmuni
 import org.openmrs.module.kenyaemr.reporting.data.converter.cwc.DateOfVaccineDataDefinition;
 import org.openmrs.module.kenyaemr.reporting.data.converter.cwc.DateOfVitaminADataDefinition;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
-import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
-import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.common.TimeQualifier;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
@@ -41,21 +35,17 @@ import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinitio
 import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.EncounterDataSetDefinition;
-import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
-
 @Component
-@Builds({ "ehraddons.common.report.510" })
+@Builds({ "financials.common.report.510" })
 public class SetupMOH510RegisterReport extends AbstractReportBuilder {
 	
 	public static final String DATE_FORMAT = "dd/MM/yyyy";

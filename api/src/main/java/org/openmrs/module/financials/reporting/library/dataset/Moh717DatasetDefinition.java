@@ -1,5 +1,8 @@
 package org.openmrs.module.financials.reporting.library.dataset;
 
+import org.openmrs.EncounterType;
+import org.openmrs.Form;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.ColumnParameters;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
@@ -23,11 +26,11 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh717DatasetDefinition {
 	
-	private Moh717IndicatorDefinition moh717IndicatorDefinition;
+	private final Moh717IndicatorDefinition moh717IndicatorDefinition;
 	
-	private Moh711IndicatorDefinition moh711IndicatorDefinition;
+	private final Moh711IndicatorDefinition moh711IndicatorDefinition;
 	
-	private EhrAddonDimesion ehrAddonDimesion;
+	private final EhrAddonDimesion ehrAddonDimesion;
 	
 	@Autowired
 	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimesion ehrAddonDimesion,
@@ -92,33 +95,33 @@ public class Moh717DatasetDefinition {
 		    "state=RVT");
 		//additional indicators on 717 report
 		dsd.addColumn("DENTALFILLNEW", "Filling - NEW", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Temporary_Filling_Per_Tooth),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Amalgam_filling),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Composite_Filling),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Glass_Lonomer_Filling))), indParams), "state=NEW");
 		dsd.addColumn("DENTALFILLRVT", "Filling - RVT", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Temporary_Filling_Per_Tooth),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Amalgam_filling),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Composite_Filling),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Glass_Lonomer_Filling))), indParams), "state=RVT");
 		dsd.addColumn("DENTALEXTNEW", "Extraction - NEW", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Extra_Tooth_extraction),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Tooth_Extraction_simple),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Excision_of_Tooth))), indParams), "state=NEW");
 		dsd.addColumn("DENTALEXTRVT", "Extraction - RVT", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Extra_Tooth_extraction),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Tooth_Extraction_simple),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Excision_of_Tooth))), indParams), "state=RVT");
 		dsd.addColumn("MEDEXAM", "MEdical Examination", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.MEDICAL_EXAMINATION_ROUTINE),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Student_Medical_Assessment))), indParams), "");
 		dsd.addColumn("DRESSING", "Dressing", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.CLEAN_AND_DRESSING),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Suture_wound_with_dressing),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Wound_Dressing),
@@ -133,21 +136,67 @@ public class Moh717DatasetDefinition {
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Wound_Dressing_ENT),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dressing_Per_Session_Female_Medical_Ward))), indParams), "");
 		dsd.addColumn("REMSTI", "Removal of Stitches", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Removal_Of_Stitches),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Removal_Of_Corneal_Stitches))), indParams), "");
 		dsd.addColumn("INJEC", "Injection", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.INJECTION),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Sub_Conjuctiral_Sub_Tenon_Injections),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Intra_arterial_injection),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Intralesional_injection))), indParams), "");
 		dsd.addColumn("STITCH", "Stitching", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_not_performed), Arrays.asList(
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.STITCHING),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Stitching_Casualty),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Stitching_In_Minor_Theatre),
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dental_stitching))), indParams), "");
+		
+		EncounterType mchChildFollowupEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "bcc6da85-72f2-4291-b206-789b8186a021");
+		EncounterType mchChildImmunizationEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "82169b8d-c945-4c41-be62-433dfd9d6c86");
+		EncounterType CWC_Enrollment = Context.getEncounterService().getEncounterTypeByUuid(
+		    "415f5136-ca4a-49a8-8db3-f994187c3af6");
+		
+		EncounterType consultationsEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "c6d09e05-1f25-4164-8860-9f32c5a02df0");
+		Form pncFollowupForm = Context.getFormService().getFormByUuid("72aa78e0-ee4b-47c3-9073-26f3b9ecc4a7");
+		Form ancForm = Context.getFormService().getFormByUuid("e8f98494-af35-4bb8-9fc7-c409c8fed843");
+		
+		dsd.addColumn("CWCNEW", "CWC Attendances - NEW",
+		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(Arrays.asList(
+		        mchChildFollowupEncounterType.getEncounterTypeId(), CWC_Enrollment.getEncounterTypeId(),
+		        mchChildImmunizationEncounterType.getEncounterTypeId())), indParams), "state=NEW");
+		
+		dsd.addColumn("CWCRVT", "CWC Attendances - RVT",
+		    ReportUtils.map(moh711IndicatorDefinition.getPatientsHavingEncountersFilled(Arrays.asList(
+		        mchChildFollowupEncounterType.getEncounterTypeId(), CWC_Enrollment.getEncounterTypeId(),
+		        mchChildImmunizationEncounterType.getEncounterTypeId())), indParams), "state=RVT");
+		
+		dsd.addColumn("ANCNEW", "ANC Attendances - NEW", ReportUtils.map(
+		    moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		        Arrays.asList(consultationsEncounterType.getEncounterTypeId()), Arrays.asList(ancForm.getFormId())),
+		    indParams), "state=NEW");
+		dsd.addColumn("ANCRVT", "ANC Attendances - RVT", ReportUtils.map(
+		    moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		        Arrays.asList(consultationsEncounterType.getEncounterTypeId()), Arrays.asList(ancForm.getFormId())),
+		    indParams), "state=RVT");
+		
+		dsd.addColumn(
+		    "PNCNEW",
+		    "PNC Attendances - NEW",
+		    ReportUtils.map(
+		        moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		            Arrays.asList(consultationsEncounterType.getEncounterTypeId()),
+		            Arrays.asList(pncFollowupForm.getFormId())), indParams), "state=NEW");
+		dsd.addColumn(
+		    "PNCRVT",
+		    "PNC Attendances - RVT",
+		    ReportUtils.map(
+		        moh711IndicatorDefinition.getPatientsHavingEncountersAndFormsFilled(
+		            Arrays.asList(consultationsEncounterType.getEncounterTypeId()),
+		            Arrays.asList(pncFollowupForm.getFormId())), indParams), "state=RVT");
 		
 		return dsd;
 	}

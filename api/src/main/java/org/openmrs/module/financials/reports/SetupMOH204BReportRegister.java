@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.calculation.EhrDiagnosisCalculation;
 import org.openmrs.module.financials.reporting.calculation.CurrentDrugsCalculation;
 import org.openmrs.module.financials.reporting.calculation.FeversForPatientCalculation;
 import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
@@ -60,7 +61,7 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.204B" })
+@Builds({ "financials.common.report.204B" })
 public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;
@@ -100,7 +101,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addSortCriteria("id", SortCriteria.SortDirection.ASC);
-		dsd.addRowFilter(getRowFilterRow(), "startDate=${startDate},endDate=${endDate+23h}");
+		dsd.addRowFilter(getRowFilterRow(), "startDate=${startDate},endDate=${endDate}");
 		
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
@@ -112,7 +113,7 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("identifier", identifierDef, "");
-		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
+		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate}",
 		    new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
@@ -124,26 +125,24 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		    new CalculationResultConverter());
 		dsd.addColumn("weight",
 		    getObservation(Context.getConceptService().getConceptByUuid("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		dsd.addColumn("height",
 		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("BMI", getBMI(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("FV", getFevers(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("DIAG",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
-		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new DrugListConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("DIAG", getDiagnosis(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("DR", getDrugs(), "endDate=${endDate}", new DrugListConverter());
 		dsd.addColumn("OUT",
 		    getObservation(Context.getConceptService().getConceptByUuid("160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new OutcomeConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new OutcomeConverter());
 		dsd.addColumn("RFF",
 		    getObservation(Context.getConceptService().getConceptByUuid("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralFromConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralFromConverter());
 		dsd.addColumn("RFT",
 		    getObservation(Context.getConceptService().getConceptByUuid("477a7484-0f99-4026-b37c-261be587a70b")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ReferralToConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralToConverter());
 		return dsd;
 		
 	}
@@ -218,5 +217,12 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		sqlEncounterQuery
 		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.voided=0 AND p.voided = 0 ");
 		return sqlEncounterQuery;
+	}
+	
+	private DataDefinition getDiagnosis() {
+		CalculationDataDefinition cd = new CalculationDataDefinition("DIAG", new EhrDiagnosisCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		return cd;
+		
 	}
 }

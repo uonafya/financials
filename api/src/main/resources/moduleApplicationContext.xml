@@ -63,43 +63,44 @@
         <constructor-arg value="financials:apps/revenue.png"/>
         <constructor-arg value="3000"/>
     </bean>
-    <bean id="ehraddon.add.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
+    <bean id="financials.add.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
         <property name="targetUuid" value="7a822d3e-8d40-11eb-92cc-5f145f16bd2e" />
         <property name="eligibilityCalculation" value="org.openmrs.module.financials.calculation.EligibleForEhrAddonProgramCalculation" />
-        <property name="defaultEnrollmentForm" ref="ehraddons.form.enrollment" />
-        <property name="defaultCompletionForm" ref="ehraddons.form.enrollment" />
+        <property name="defaultEnrollmentForm" ref="financials.form.enrollment" />
+        <property name="defaultCompletionForm" ref="financials.form.enrollment" />
         <property name="reports">
             <set>
-                <ref bean="ehraddons.common.705a" />
-                <ref bean="ehraddons.common.705b" />
-                <ref bean="ehraddons.common.706" />
-                <ref bean="ehraddons.common.report.moh710" />
-                <ref bean="ehraddons.report.moh711" />
-                <ref bean="ehraddons.common.717" />
-                <ref bean="ehraddons.common.report.opthalimic" />
+                <ref bean="financials.common.705a" />
+                <ref bean="financials.common.705b" />
+                <ref bean="financials.common.706" />
+                <ref bean="financials.common.report.moh710" />
+                <ref bean="financials.report.moh711" />
+                <ref bean="financials.common.717" />
+                <ref bean="financials.common.report.opthalimic" />
 
-                <ref bean="ehraddons.common.report.labadults" />
-                <ref bean="ehraddons.common.report.labchildren" />
-                <ref bean="ehraddons.common.report.allPatients" />
-                <ref bean="ehraddons.common.report.malaria" />
-                <ref bean="ehraddons.common.report.turn.around.time" />
+                <ref bean="financials.common.report.labadults" />
+                <ref bean="financials.common.report.labchildren" />
+                <ref bean="financials.common.report.allPatients" />
+                <ref bean="financials.common.report.malaria" />
+                <ref bean="financials.common.report.turn.around.time" />
 
-                <ref bean="ehraddons.common.report.204A" />
-                <ref bean="ehraddons.common.report.204B" />
-                <ref bean="ehraddons.common.report.209" />
-                <ref bean="ehraddons.common.report.240" />
-                <ref bean="ehraddons.common.report.301" />
-                <ref bean="ehraddons.common.report.333" />
-                <ref bean="ehraddons.common.report.405" />
-                <ref bean="ehraddons.common.report.510" />
-                <ref bean="ehraddons.common.report.511" />
-                <ref bean="ehraddons.common.report.512" />
-                <ref bean="ehraddons.common.report.705.a.all" />
-                <ref bean="ehraddons.common.report.705.b.all" />
-                <ref bean="ehraddons.common.report.705.b.allDiagnosis" />
-                <ref bean="ehraddons.common.report.705.a.allDiagnosis" />
-                <ref bean="ehraddons.common.report.nhif.patients" />
-                <ref bean="ehraddons.common.report.non.paying.patients" />
+                <ref bean="financials.common.report.204A" />
+                <ref bean="financials.common.report.204B" />
+                <ref bean="financials.common.report.209" />
+                <ref bean="financials.common.report.240" />
+                <ref bean="financials.common.report.301" />
+                <ref bean="financials.common.report.333" />
+                <ref bean="financials.common.report.405" />
+                <ref bean="financials.common.report.510" />
+                <ref bean="financials.common.report.511" />
+                <ref bean="financials.common.report.512" />
+                <ref bean="financials.common.report.705.a.all" />
+                <ref bean="financials.common.report.705.b.all" />
+                <ref bean="financials.common.report.705.b.allDiagnosis" />
+                <ref bean="financials.common.report.705.a.allDiagnosis" />
+                <ref bean="financials.common.report.nhif.patients" />
+                <ref bean="financials.common.report.non.paying.patients" />
+                <ref bean="financials.common.report.222" />
             </set>
         </property>
         <property name="fragments">
@@ -111,7 +112,7 @@
         </property>
         <property name="order" value="1000" />
     </bean>
-    <bean id="ehraddons.common.705a" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+    <bean id="financials.common.705a" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="64033c7a-8330-11eb-8436-ffdeb21f9dd8" />
         <property name="name" value="MOH 705 A" />
         <property name="description" value="MOH 705 A Report" />
@@ -122,7 +123,7 @@
         <property name="template" value="financials:MOH_705a.xls" />
     </bean>
 
-    <bean id="ehraddons.common.705b" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+    <bean id="financials.common.705b" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="495ece88-8331-11eb-872a-270ce8ccc6b5" />
         <property name="name" value="MOH 705 B" />
         <property name="description" value="MOH 705 B Report" />
@@ -133,7 +134,7 @@
         <property name="template" value="financials:MOH_705b.xls" />
     </bean>
 
-    <bean id="ehraddons.common.717" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+    <bean id="financials.common.717" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="27b030f4-85c7-11eb-810d-4b0bf1a63105" />
         <property name="name" value="MOH 717" />
         <property name="description" value="MOH 717 Report" />
@@ -143,7 +144,7 @@
             </set></property>
         <property name="template" value="financials:MOH_717.xls" />
     </bean>
-    <bean id="ehraddons.common.report.labadults" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.labadults" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="f85b114a-86eb-11eb-9eda-eb0964963ce6" />
         <property name="name" value="Laboratory Results Report for adults" />
         <property name="description" value="Laboratory Results Report for adults" />
@@ -156,7 +157,7 @@
         <property name="repeatingSection" value="sheet:1,row:4,dataset:LA" />
     </bean>
 
-    <bean id="ehraddons.common.report.labchildren" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.labchildren" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="36f5d2c4-8d44-11eb-bc85-cbebdbabd35c" />
         <property name="name" value="Laboratory Results Listing Report for children" />
         <property name="description" value="Laboratory Results Report for children" />
@@ -169,7 +170,7 @@
         <property name="repeatingSection" value="sheet:1,row:4,dataset:LC" />
     </bean>
 
-    <bean id="ehraddons.form.enrollment" class="org.openmrs.module.kenyacore.form.FormDescriptor">
+    <bean id="financials.form.enrollment" class="org.openmrs.module.kenyacore.form.FormDescriptor">
         <property name="targetUuid" value="66c4664a-8d45-11eb-9ab1-3359b033ed37" />
         <property name="apps">
             <set>
@@ -180,7 +181,7 @@
         <property name="htmlform" value="financials:test.html" />
     </bean>
 
-    <bean id="ehraddons.common.report.allPatients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.allPatients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="7ee5f974-9532-11eb-a389-bffa872cf1d8" />
         <property name="name" value="All patients on visit" />
         <property name="description" value="Patients who visit a facility on a given date" />
@@ -193,7 +194,7 @@
         <property name="repeatingSection" value="sheet:1,row:7,dataset:all" />
     </bean>
 
-    <bean id="ehraddons.common.report.malaria" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.malaria" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="a36882d2-b5ba-11eb-aaee-ff5cd06f3f0d" />
         <property name="name" value="Malaria report" />
         <property name="description" value="Patients who have malaria on a given period" />
@@ -205,7 +206,7 @@
         <property name="template" value="financials:malaria.xls" />
         <property name="repeatingSection" value="sheet:1,row:6,dataset:mal" />
     </bean>
-    <bean id="ehraddons.common.report.turn.around.time" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.turn.around.time" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="45ab023e-ee25-11eb-81ec-43989aee26b9" />
         <property name="name" value="Turn around time report" />
         <property name="description" value="Get realtime patients turn around time on a given period" />
@@ -218,7 +219,7 @@
         <property name="repeatingSection" value="sheet:1,row:6,dataset:tat" />
     </bean>
 
-    <bean id="ehraddons.common.report.705.a.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.705.a.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="29713e2a-f38a-11eb-b3d4-1ba0e621f2bb" />
         <property name="name" value="All diagnosis for children row per patient" />
         <property name="description" value="Get all the diagnosis for children on a given period detailed per patient" />
@@ -231,7 +232,7 @@
         <property name="repeatingSection" value="sheet:1,row:6,dataset:aall1" />
     </bean>
 
-    <bean id="ehraddons.common.report.705.b.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.705.b.all" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="634ade6c-f38a-11eb-aaad-4f1e526b4d64" />
         <property name="name" value="All diagnosis for adults row per patient" />
         <property name="description" value="Get realtime patients turn around time on a given period detailed per patient" />
@@ -244,7 +245,7 @@
         <property name="repeatingSection" value="sheet:1,row:6,dataset:ball1" />
     </bean>
 
-    <bean id="ehraddons.common.report.705.a.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.705.a.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="64ea08c0-f3c5-11eb-b752-c79311863139" />
         <property name="name" value="All diagnosis for children - sumation for days 705 A" />
         <property name="description" value="Get all the diagnosis for children on a given period for 705A - Summation" />
@@ -257,7 +258,7 @@
         <property name="repeatingSection" value="sheet:1,row:6,dataset:aall" />
     </bean>
 
-    <bean id="ehraddons.common.report.705.b.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.705.b.allDiagnosis" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="92103aea-f3c5-11eb-a248-7f5870ee2b5d" />
         <property name="name" value="All diagnosis for adults - summation for days 705 B" />
         <property name="description" value="Get allpatients diagnosis on a given period - Summation 705 B" />
@@ -270,7 +271,7 @@
         <property name="repeatingSection" value="sheet:1,row:6,dataset:ball" />
     </bean>
 
-    <bean id="ehraddons.common.706" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+    <bean id="financials.common.706" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="c3e084ee-04c3-11ec-a7c4-9ff99a953d59" />
         <property name="name" value="MOH 706" />
         <property name="description" value="MOH 706 Report" />
@@ -280,7 +281,7 @@
             </set></property>
         <property name="template" value="financials:MOH706.xls" />
     </bean>
-    <bean id="ehraddons.common.report.301" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.301" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="67365ce0-056e-11ec-8c48-1bd1b510875e" />
         <property name="name" value="Inpatient Register - MOH 301" />
         <property name="description" value="The register is for all patients to be adimitted for treatment regardiless of age" />
@@ -292,7 +293,7 @@
         <property name="template" value="financials:MOH_301.xls" />
         <property name="repeatingSection" value="sheet:1,row:6,dataset:ipd" />
     </bean>
-    <bean id="ehraddons.common.report.511" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.511" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="7732b820-05c1-11ec-89c5-634583e66953" />
         <property name="name" value="Child Welfare Clinic Register - MOH 511" />
         <property name="description" value="Child Welfare Clinic Register - MOH 511 Report" />
@@ -305,7 +306,7 @@
         <property name="repeatingSection" value="sheet:1,row:3,dataset:cwcr" />
     </bean>
 
-    <bean id="ehraddons.common.report.510" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.510" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="24481c24-05c4-11ec-afa0-a33c15ffbabf" />
         <property name="name" value="MOH 510_Immunisation register - MOH 510" />
         <property name="description" value="MOH 510_Immunisation register - MOH 510 Report" />
@@ -318,7 +319,7 @@
         <property name="repeatingSection" value="sheet:1,row:4,dataset:imr" />
     </bean>
 
-    <bean id="ehraddons.common.report.240" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.240" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="4447b0e2-05cf-11ec-9325-9f6cc7c31b9c" />
         <property name="name" value="Laboratory Register - MOH 240" />
         <property name="description" value="Laboratory Register - MOH 240 Report" />
@@ -331,7 +332,7 @@
         <property name="repeatingSection" value="sheet:1,row:3,dataset:lrr" />
     </bean>
 
-    <bean id="ehraddons.common.report.333" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.333" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="9f6294f0-05d0-11ec-9ad4-af1ed7f55c18" />
         <property name="name" value="Maternity Register - MOH 333" />
         <property name="description" value="Maternity Register - MOH 333 Report" />
@@ -344,7 +345,7 @@
         <property name="repeatingSection" value="sheet:1,row:8,dataset:mr" />
     </bean>
 
-    <bean id="ehraddons.common.report.204A" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.204A" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="728ec2f0-05da-11ec-851a-c3e195616b4e" />
         <property name="name" value="Outpatient Register under 5yrs - MOH 204A" />
         <property name="description" value="Outpatient Register under 5yrs - MOH 204A Report" />
@@ -354,10 +355,10 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_204A.xls" />
-        <property name="repeatingSection" value="sheet:3,row:3,dataset:opru" />
+        <property name="repeatingSection" value="sheet:3,row:3-4,dataset:opru" />
     </bean>
 
-    <bean id="ehraddons.common.report.204B" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.204B" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="d1453810-05da-11ec-994d-a3605f14757f" />
         <property name="name" value="Outpatient Register over 5yrs - MOH 204B" />
         <property name="description" value="Outpatient Register over 5yrs - MOH 204B Report" />
@@ -367,10 +368,10 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_204B.xls" />
-        <property name="repeatingSection" value="sheet:3,row:3,dataset:opro" />
+        <property name="repeatingSection" value="sheet:3,row:3-4,dataset:opro" />
     </bean>
 
-    <bean id="ehraddons.common.report.209" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.209" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="927436e4-0626-11ec-bff8-e3c2f9321eb2" />
         <property name="name" value="Radiology(X-RAY) Register - MOH 209" />
         <property name="description" value="Radiology(X-RAY) Register - MOH 209 Report" />
@@ -383,7 +384,7 @@
         <property name="repeatingSection" value="sheet:1,row:6,dataset:rxr" />
     </bean>
 
-    <bean id="ehraddons.common.report.opthalimic" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+    <bean id="financials.common.report.opthalimic" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="0029faaa-0809-11ec-bcfe-d7e905f89da3" />
         <property name="name" value="Opthalmic Service Unit Summary" />
         <property name="description" value="Opthalmic Service Unit Summary" />
@@ -395,7 +396,7 @@
         <property name="template" value="financials:MOH_Opthalmic_ Services_ Unit_ Summary_ Form.xls" />
     </bean>
 
-    <bean id="ehraddons.common.report.512" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.512" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="2220baec-1ee1-11ec-aff2-0f10cbf8fc8d" />
         <property name="name" value="MOH 512_FP Register- MOH 512" />
         <property name="description" value="MOH 512_FP Register - MOH 512 Report" />
@@ -408,7 +409,7 @@
         <property name="repeatingSection" value="sheet:1,row:5,dataset:fpr" />
     </bean>
 
-    <bean id="ehraddons.common.report.405" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.405" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="0abe35f8-203c-11ec-bece-b7b4ba3ecd4c" />
         <property name="name" value="MOH 405 ANC Register" />
         <property name="description" value="MOH 405 Register for ANC Services" />
@@ -420,7 +421,7 @@
         <property name="repeatingSection" value="sheet:1,row:9,dataset:anc" />
     </bean>
 
-    <bean id="ehraddons.common.report.moh710" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+    <bean id="financials.common.report.moh710" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="1e710694-2045-11ec-b930-3fae95a8796c" />
         <property name="name" value="MOH 710" />
         <property name="description" value="MOH Immunization Report" />
@@ -428,7 +429,7 @@
         <property name="template" value="kenyaemr:moh710.xls" />
     </bean>
 
-    <bean id="ehraddons.report.moh711" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+    <bean id="financials.report.moh711" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="ddb6ac14-2849-11ec-9e50-0333f0e9356a" />
         <property name="name" value="MOH 711" />
         <property name="description" value="National Integrated Form for Reproductive Health, HIV/AIDS, Malaria, TB and Child Nutrition" />
@@ -436,7 +437,7 @@
         <property name="template" value="financials:MOH_711.xls" />
     </bean>
 
-    <bean id="ehraddons.common.report.nhif.patients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.nhif.patients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="8f7a2fa4-6efc-11ec-9ef0-ffc41a8a2a5b" />
         <property name="name" value="NHIF Clients" />
         <property name="description" value="NHIF patients in the facility" />
@@ -447,7 +448,7 @@
         <property name="template" value="financials:nhif.xls" />
         <property name="repeatingSection" value="sheet:1,row:5,dataset:nhif" />
     </bean>
-    <bean id="ehraddons.common.report.non.paying.patients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+    <bean id="financials.common.report.non.paying.patients" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
         <property name="targetUuid" value="ab7c2f42-6eff-11ec-9067-3f22c7466c00" />
         <property name="name" value="Non paying Clients" />
         <property name="description" value="Non paying patients in the facility" />
@@ -457,5 +458,13 @@
             </set></property>
         <property name="template" value="financials:nonPaying.xls" />
         <property name="repeatingSection" value="sheet:1,row:5,dataset:nonPaying" />
+    </bean>
+    <bean id="financials.common.report.222" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="6E163CE8-19FF-425B-A1C5-6B5856A7AD58" />
+        <property name="name" value="Daily Register DAR_MOH 222" />
+        <property name="description" value="Daily Activity Register - MOH 222" />
+        <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
+        <property name="template" value="financials:daily.xls" />
+        <property name="repeatingSection" value="sheet:3,row:9,dataset:daily" />
     </bean>
 </beans>

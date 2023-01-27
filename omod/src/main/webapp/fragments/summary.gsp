@@ -7,8 +7,8 @@
   });
   function populateRegistrationDetails() {
     const fromDate = jq('#regFromDate-field').val(),
-        toDate = jq('#regFromDate-field').val();
-    jq.getJSON('${ui.actionLink("financials", "Summary", "getPatientServiceBillByDepartmentTotals")}',
+        toDate = jq('#regToDate-field').val();
+    jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTotals")}',
         {
           "fromDate" : fromDate,
           "toDate" : toDate,
@@ -19,16 +19,16 @@
       jq('#specialFees').html(data.specialFees)
   });
     jq('#regDetails').DataTable().clear().destroy();
-    jq.getJSON('${ui.actionLink("financials", "Summary", "getPatientServiceBillByDepartmentTable")}',
+    jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTable")}',
         {
           "fromDate" : fromDate,
           "toDate" : toDate,
         }
     ).success(function(regData) {
-      jq("#regDetails").DataTable();
       regData.map((item) => {
         jq('#regTbody').append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td> <td>" + item.patient + "</td><td>" + item.category + "</td> <td>" + item.subCategory + "</td><td>" + item.waiver + "</td>><td>" + item.actualAmount + "</td>><td>" + item.paidAmount + "</td> </tr>");
       });
+        jq("#regDetails").DataTable();
     });
 
   }
@@ -65,16 +65,10 @@ table#details.dataTable tbody tr:hover > .sorting_1 {
                         <div class="row">
                             <div class="col-12">
                                 <div class="row">
-                                    <div class="col-4" style="margin-bottom: 10px">
-                                        <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regFromDate', id: 'regFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-                                    </div>
-                                    <div class="col-4" style="margin-bottom: 10px">
-                                        <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regToDate',    id: 'regToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-                                    </div>
-                                    <div class="col-4" style="margin-bottom: 10px">
-                                        <button id="filterRegistration" type="button" class=" btn btn-primary right">${ui.message("Filter")}
-                                        </button>
-                                    </div>
+                                    <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regFromDate', id: 'regFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                    <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regToDate',    id: 'regToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+                                    <button id="filterRegistration" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
+                                </div>
                                 </div>
                             </div>
                         </div>
