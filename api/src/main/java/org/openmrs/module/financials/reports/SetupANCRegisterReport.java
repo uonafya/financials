@@ -5,7 +5,6 @@ import org.openmrs.PersonAttributeType;
 import org.openmrs.module.financials.reporting.library.indicator.Moh405ANCIndicatorDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
-import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
 import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
@@ -57,7 +56,6 @@ import org.openmrs.module.kenyaemr.reporting.data.converter.definition.anc.ANCVi
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.anc.ANCWHOStageDataDefinition;
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.anc.ANCWeightDataDefinition;
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.anc.FirstANCVisitDataDefinition;
-import org.openmrs.module.kenyaemr.reporting.library.pmtct.ANCIndicatorLibrary;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.common.SortCriteria;
 import org.openmrs.module.reporting.data.DataDefinition;
@@ -89,7 +87,7 @@ import java.util.Date;
 import java.util.List;
 
 @Component
-@Builds({ "ehraddons.common.report.405" })
+@Builds({ "financials.common.report.405" })
 public class SetupANCRegisterReport extends AbstractReportBuilder {
 	
 	public static final String ENC_DATE_FORMAT = "yyyy/MM/dd";

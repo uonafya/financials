@@ -1688,7 +1688,7 @@ public class EhrAddonsConstants {
 		
 		public static final String Test_not_performed_due_to_lack_of_availability_of_test_materials = "160352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
-		public static final String Procedure_not_performed = "160414AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final String Procedure_performed = "1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//Poliomyelitis (AFP)
 		public static final String PLY1 = "5258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";

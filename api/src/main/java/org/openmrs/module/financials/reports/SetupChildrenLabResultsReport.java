@@ -22,7 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 @Component
-@Builds({ "ehraddons.common.report.labchildren" })
+@Builds({ "financials.common.report.labchildren" })
 public class SetupChildrenLabResultsReport extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;

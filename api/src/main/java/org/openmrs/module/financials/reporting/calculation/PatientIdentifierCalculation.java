@@ -31,17 +31,7 @@ public class PatientIdentifierCalculation extends AbstractPatientCalculation {
 					        CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER))) {
 						identifier = patientIdentifier.getIdentifier();
 						break;
-					} else if (patientIdentifier.getIdentifierType().equals(
-					    Context.getPatientService().getPatientIdentifierTypeByUuid(
-					        CommonMetadata._PatientIdentifierType.NATIONAL_UNIQUE_PATIENT_IDENTIFIER))) {
-						identifier = patientIdentifier.getIdentifier();
-					} else if (patientIdentifier.getIdentifierType().equals(
-					    Context.getPatientService().getPatientIdentifierTypeByUuid(
-					        CommonMetadata._PatientIdentifierType.NATIONAL_ID))) {
-						identifier = patientIdentifier.getIdentifier();
-					} else if (patientIdentifier.getIdentifierType().equals(
-					    Context.getPatientService().getPatientIdentifierTypeByUuid(
-					        CommonMetadata._PatientIdentifierType.OPENMRS_ID))) {
+					} else {
 						identifier = patientIdentifier.getIdentifier();
 					}
 				}

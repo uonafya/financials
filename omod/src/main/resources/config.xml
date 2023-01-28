@@ -35,6 +35,7 @@
 		<require_module version="${kenyaemrVersion}">org.openmrs.module.kenyaemr</require_module>
 		<require_module>org.openmrs.module.metadatadeploy</require_module>
 		<require_module>org.openmrs.module.hospitalcore</require_module>
+		<require_module>org.openmrs.module.initialpatientqueueapp</require_module>
 	</require_modules>
 	
 	<!-- Extensions -->

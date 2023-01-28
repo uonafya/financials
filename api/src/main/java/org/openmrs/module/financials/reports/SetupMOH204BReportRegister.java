@@ -4,6 +4,7 @@ import org.openmrs.Concept;
 import org.openmrs.EncounterType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
+import org.openmrs.module.financials.calculation.EhrDiagnosisCalculation;
 import org.openmrs.module.financials.reporting.calculation.*;
 import org.openmrs.module.financials.reporting.converter.DrugListConverter;
 import org.openmrs.module.financials.reporting.converter.OutcomeConverter;
@@ -45,7 +46,7 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.204B" })
+@Builds({ "financials.common.report.204B" })
 public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 	
 	private CommonDatasetDefinition commonDatasetDefinition;

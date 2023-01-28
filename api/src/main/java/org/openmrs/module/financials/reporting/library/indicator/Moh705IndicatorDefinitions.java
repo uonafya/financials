@@ -13,10 +13,7 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh705IndicatorDefinitions {
 	
-	private Moh705CohortDefinition moh705CohortDefinition;
-	
-	public Moh705IndicatorDefinitions() {
-	}
+	private final Moh705CohortDefinition moh705CohortDefinition;
 	
 	@Autowired
 	public Moh705IndicatorDefinitions(Moh705CohortDefinition moh705aCohortDefinition) {

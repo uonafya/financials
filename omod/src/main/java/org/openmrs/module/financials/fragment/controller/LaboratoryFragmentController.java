@@ -2,10 +2,12 @@ package org.openmrs.module.financials.fragment.controller;
 
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.PatientBillSummary;
-import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
+import org.openmrs.ui.framework.SimpleObject;
+import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.fragment.FragmentModel;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,17 +16,19 @@ import java.util.List;
 public class LaboratoryFragmentController {
 	
 	public void controller(FragmentModel model) {
+	}
+	
+	public List<SimpleObject> fetchLaboratorySummariesByDateRange(
+	        @RequestParam(value = "fromDate", required = false) Date startDate,
+	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
+		
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
-		Date startOfDay = FinancialsUtils.getStartOfDay(new Date());
-		Date endOfDay = FinancialsUtils.getEndOfDay(new Date());
 		
-		List<PatientServiceBillItem> getBilledItemsPerLaboratoryDepartment = hospitalCoreService
-		        .getPatientServiceBillByDepartment(hospitalCoreService.getDepartmentByName("laboratory"), startOfDay,
-		            endOfDay);
-		
+		List<PatientServiceBillItem> getBilledItemsPerDepartment = hospitalCoreService.getPatientServiceBillByDepartment(
+		    hospitalCoreService.getDepartmentByName("Laboratory"), startDate, endDate);
 		List<PatientBillSummary> allLaboratoryBills = new ArrayList<PatientBillSummary>();
 		
-		for (PatientServiceBillItem patientServiceBillItem : getBilledItemsPerLaboratoryDepartment) {
+		for (PatientServiceBillItem patientServiceBillItem : getBilledItemsPerDepartment) {
 			PatientBillSummary patientBillSummary = new PatientBillSummary();
 			patientBillSummary.setBillId(patientServiceBillItem.getPatientServiceBillItemId());
 			patientBillSummary.setPatient(patientServiceBillItem.getPatientServiceBill().getPatient().getPersonName()
@@ -43,6 +47,7 @@ public class LaboratoryFragmentController {
 			allLaboratoryBills.add(patientBillSummary);
 			
 		}
-		model.addAttribute("labBills", allLaboratoryBills);
+		return SimpleObject.fromCollection(allLaboratoryBills, ui, "transactionDate", "serviceOffered", "identifier",
+		    "patient", "category", "subCategory", "waiver", "actualAmount", "paidAmount");
 	}
 }

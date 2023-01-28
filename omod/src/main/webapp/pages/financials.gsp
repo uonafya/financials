@@ -32,6 +32,13 @@
                     icon: "buttons/dashboard.jpeg"
             ],
             [
+                    label: "Work Load",
+                    href: ui.pageLink("financials", "financials", [ section: "workLoad" ]),
+                    active: (selection == "section-workLoad"),
+                    iconProvider: "financials",
+                    icon: "buttons/247.png"
+            ],
+            [
                     label: "Registration",
                     href: ui.pageLink("financials", "financials", [ section: "registration" ]),
                     active: (selection == "section-registration"),
@@ -44,6 +51,20 @@
                     active: (selection == "section-laboratory"),
                     iconProvider: "financials",
                     icon: "buttons/lab.png"
+            ],
+            [
+                    label: "Procedures",
+                    href: ui.pageLink("financials", "financials", [ section: "procedure" ]),
+                    active: (selection == "section-procedure"),
+                    iconProvider: "financials",
+                    icon: "buttons/scissors.png"
+            ],
+            [
+                    label: "Radiology",
+                    href: ui.pageLink("financials", "financials", [ section: "radiology" ]),
+                    active: (selection == "section-radiology"),
+                    iconProvider: "financials",
+                    icon: "buttons/radiology.jpg"
             ],
             [
                     label: "Patient Summaries",
@@ -78,6 +99,13 @@
                     active: (selection == "section-nhifSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/nhif.jpeg"
+            ],
+            [
+                    label: "Cashier Summaries",
+                    href: ui.pageLink("financials", "financials", [section: "cashierSummaries"]),
+                    active: (selection == "section-cashierSummaries"),
+                    iconProvider: "financials",
+                    icon: "buttons/Book.png"
             ]
     ]
 %>
@@ -87,6 +115,8 @@
 <div class="ke-page-content">
     <% if (section == "dashboard") { %>
     ${ ui.includeFragment("financials", "dashboard") }
+    <%} else if (section == "workLoad") { %>
+    ${ ui.includeFragment("financials", "workLoad") }
     <%} else if (section == "registration") { %>
     ${ ui.includeFragment("financials", "summary") }
     <% } else if (section == "patientFinanceSummaries") { %>
@@ -99,5 +129,11 @@
     ${ui.includeFragment("financials","nhifSummaries")}
     <% } else if(section == "laboratory") { %>
     ${ui.includeFragment("financials","laboratory")}
+    <%} else if(section == "procedure") {%>
+    ${ui.includeFragment("financials","procedure")}
+    <%} else if(section == "radiology") {%>
+    ${ui.includeFragment("financials","radiology")}
+    <%} else if(section == "cashierSummaries") {%>
+    ${ui.includeFragment("financials","cashierSummaries")}
     <%}%>
 </div>

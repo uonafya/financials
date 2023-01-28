@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reporting.library.common;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openmrs.Concept;
 import org.openmrs.EncounterType;
 import org.openmrs.Program;
@@ -21,6 +22,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 @Component
 public class EhrAddonCommons {
@@ -133,12 +135,11 @@ public class EhrAddonCommons {
 	
 	public CohortDefinition getPatientRevisitsBasedOnVisits() {
 		SqlCohortDefinition cd = new SqlCohortDefinition();
-		cd.setName("Has visits within a period of time REVISTS");
+		cd.setName("Has visits within a period of time REVISITS one year form the current end visit date");
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.setQuery("SELECT tbl.patient_id FROM( "
 		        + " SELECT p.patient_id, COUNT(visit_id) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		        + " WHERE v.date_started BETWEEN DATE_ADD(:endDate, INTERVAL -12 MONTH) AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " WHERE v.date_started BETWEEN DATE_ADD(:endDate, INTERVAL -12 MONTH) AND :endDate "
 		        + " GROUP BY p.patient_id HAVING COUNT(visit_id) > 1) tbl ");
 		
 		return cd;
@@ -151,7 +152,7 @@ public class EhrAddonCommons {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.setQuery("SELECT tbl.patient_id FROM( "
 		        + " SELECT p.patient_id, COUNT(visit_id) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		        + " WHERE v.date_started BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " WHERE v.date_started BETWEEN :startDate AND  :endDate "
 		        + " GROUP BY p.patient_id HAVING COUNT(visit_id) <= 1) tbl ");
 		
 		return cd;
@@ -219,15 +220,13 @@ public class EhrAddonCommons {
 	 * @param types the encounter types
 	 * @return the cohort definition
 	 */
-	public CohortDefinition hasEncounter(EncounterType... types) {
+	public CohortDefinition hasEncounter(List<EncounterType> types) {
 		EncounterCohortDefinition cd = new EncounterCohortDefinition();
 		cd.setName("has encounter between dates");
 		cd.setTimeQualifier(TimeQualifier.ANY);
 		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
 		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
-		if (types.length > 0) {
-			cd.setEncounterTypeList(Arrays.asList(types));
-		}
+		cd.setEncounterTypeList(types);
 		return cd;
 	}
 	
@@ -263,6 +262,29 @@ public class EhrAddonCommons {
 		if (programs.length > 0) {
 			cd.setPrograms(Arrays.asList(programs));
 		}
+		return cd;
+	}
+	
+	public CohortDefinition patientHasEncounter(List<Integer> typesIds) {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("has encounter between dates with the given types");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 "
+		        + " AND e.encounter_type IN(" + StringUtils.join(typesIds, ',') + ")");
+		return cd;
+	}
+	
+	public CohortDefinition patientHasEncounterAndForms(List<Integer> typesIds, List<Integer> formIds) {
+		SqlCohortDefinition cd = new SqlCohortDefinition();
+		cd.setName("has encounter between dates with the given types with the given forms");
+		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 "
+		        + " AND e.encounter_type IN(" + StringUtils.join(typesIds, ',') + ") " + " AND e.form_id IN("
+		        + StringUtils.join(formIds, ',') + ") ");
 		return cd;
 	}
 }

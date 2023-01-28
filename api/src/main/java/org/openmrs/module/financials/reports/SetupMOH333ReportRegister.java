@@ -2,22 +2,15 @@ package org.openmrs.module.financials.reports;
 
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.PersonAttributeType;
-import org.openmrs.Program;
-import org.openmrs.api.context.Context;
-import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
-import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.financials.reporting.library.indicator.Moh333MaternityIndicatorDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.kenyacore.report.builder.AbstractHybridReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
-import org.openmrs.module.kenyacore.report.data.patient.definition.CalculationDataDefinition;
 import org.openmrs.module.kenyaemr.metadata.CommonMetadata;
 import org.openmrs.module.kenyaemr.metadata.HivMetadata;
-import org.openmrs.module.kenyaemr.reporting.calculation.converter.GenderConverter;
 import org.openmrs.module.kenyaemr.reporting.cohort.definition.MaternityRegisterCohortDefinition;
-import org.openmrs.module.kenyaemr.reporting.data.converter.CalculationResultConverter;
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.KenyaEMRMaritalStatusDataDefinition;
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.maternity.MaternityANCParityDataDefinition;
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.maternity.MaternityARVProphylaxisIssuedAtMaternityDataDefinition;
@@ -64,10 +57,8 @@ import org.openmrs.module.kenyaemr.reporting.data.converter.definition.maternity
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.maternity.MaternityTEOGivenAtBirthDataDefinition;
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.maternity.MaternityVDRLRPRResultsDataDefinition;
 import org.openmrs.module.kenyaemr.reporting.data.converter.definition.maternity.MaternityVitaminADataDefinition;
-import org.openmrs.module.kenyaemr.reporting.library.pmtct.MaternityIndicatorLibrary;
 import org.openmrs.module.metadatadeploy.MetadataUtils;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
-import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
 import org.openmrs.module.reporting.data.converter.DataConverter;
@@ -95,10 +86,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
-
 @Component
-@Builds({ "ehraddons.common.report.333" })
+@Builds({ "financials.common.report.333" })
 public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 	
 	public static final String DATE_FORMAT = "dd/MM/yyyy";

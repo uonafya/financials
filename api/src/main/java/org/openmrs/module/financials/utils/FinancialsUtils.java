@@ -1,19 +1,22 @@
 package org.openmrs.module.financials.utils;
 
 import org.openmrs.Concept;
+import org.openmrs.Obs;
 import org.openmrs.Patient;
 import org.openmrs.PatientIdentifier;
 import org.openmrs.PersonName;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.reporting.common.TimeQualifier;
+import org.openmrs.module.reporting.data.DataDefinition;
+import org.openmrs.module.reporting.data.person.definition.ObsForPersonDataDefinition;
+import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.util.OpenmrsUtil;
 
+import java.text.DateFormat;
 import java.text.Format;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class FinancialsUtils {
 	
@@ -83,6 +86,23 @@ public class FinancialsUtils {
 		return formatter.format(date);
 	}
 	
+	public static String formatDateInDDMMYYYY(Date date) {
+		
+		Format formatter = new SimpleDateFormat("dd/MM/yyyy");
+		
+		return formatter.format(date);
+	}
+	
+	public static Date formatDateFromString(String dateString) throws ParseException {
+		
+		DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+		Date date = null;
+		if (!dateString.isEmpty()) {
+			date = format.parse(dateString);
+		}
+		return date;
+	}
+	
 	public static List<Concept> registrationFeeConcepts() {
 		return Arrays.asList(getConcept("19e1f7a9-52b4-4975-804d-5c74445be316"),
 		    getConcept("caf177ab-8d96-45bb-8ab4-f66507f11b2b"), getConcept("cecc12d2-4308-4567-9bd1-92011b1648df"));
@@ -126,5 +146,38 @@ public class FinancialsUtils {
 			}
 		}
 		return c;
+	}
+	
+	public static DataDefinition getObservation(Concept question) {
+		ObsForPersonDataDefinition obs = new ObsForPersonDataDefinition();
+		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		obs.setWhich(TimeQualifier.LAST);
+		obs.setQuestion(question);
+		return obs;
+		
+	}
+	
+	public static DataDefinition getObservation(Concept question, List<Concept> answers) {
+		ObsForPersonDataDefinition obs = new ObsForPersonDataDefinition();
+		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
+		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
+		obs.setWhich(TimeQualifier.LAST);
+		obs.setQuestion(question);
+		if (answers.size() > 0) {
+			obs.setValueCodedList(answers);
+		}
+		return obs;
+		
+	}
+	
+	public static List<Obs> getObsList(Date startDate, Date endDate, Concept question) {
+		return Context.getObsService().getObservations(null, null, Arrays.asList(question), null, null, null, null, null,
+		    null, startDate, endDate, false);
+	}
+	
+	public static List<Obs> getObsList(Date startDate, Date endDate, Concept question, Concept answer) {
+		return Context.getObsService().getObservations(null, null, Arrays.asList(question), Arrays.asList(answer), null,
+		    null, null, null, null, startDate, endDate, false);
 	}
 }

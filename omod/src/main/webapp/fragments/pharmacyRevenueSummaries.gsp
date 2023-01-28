@@ -1,7 +1,13 @@
 <script type="text/javascript">
     jQuery(function() {
-        var table =  jQuery("#dDetails").DataTable({
+        var table =  jQuery("#pDetails").DataTable({
             dom: 'Bfrtip',
+              "oLanguage": {
+                "oPaginate": {
+                  "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
+                  "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
+                }
+              },
             buttons: ['copy', 'csv', 'excel',
                 {   extend: 'print',
                     messageTop: 'Pharmacy revenue transactions.',
@@ -24,43 +30,19 @@
             }
 
         });
-        jQuery('#dDetails tbody').on( 'click', 'tr', function () {
+        jQuery('#pDetails tbody').on( 'click', 'tr', function () {
             console.log( table.row( this ).data() );
         } );
+      updateTable();
+      jq("#filterPharmacy").click(function () {
+        updateTable();
+      });
     });
-``
-    var summaryData = fetchPharmacySummariesByDateRange();
-
-    function SummariesDataListView() {
-        var self = this;
-        self.departmentSummaries = ko.observableArray([]);
-        var mappedDepartmentSummaries = jQuery.map(summaryData, function (item) {
-            return item;
-        });
-        self.departmentSummaries(mappedDepartmentSummaries);
-    }
-
-    var list = new SummariesDataListView();
-    ko.applyBindings(list, jq("#dDetails")[0]);
 
     function updateTable() {
         summaryData=""
-        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('YYYY-MM-DD'), moment(jq('#summaryToDate-field').val()).format('YYYY-MM-DD'));
-        list.departmentSummaries(summaryData);
-        console.log(list.departmentSummaries);
-
+        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'));
     }
-
-    jq('#summaryFromDate').on('change',function(){
-        console.log("update table fromdate");
-        updateTable();
-    });
-
-    jq('#summaryToDate').on('change',function(){
-        console.log("update table toDate");
-        updateTable();
-    });
-
 
     function fetchPharmacySummariesByDateRange(fromDate, toDate) {
         var toReturn;
@@ -78,8 +60,13 @@
                 toReturn = data;
             }
         });
-        console.log("Return data",fromDate,toDate,"value###"+toReturn)
-        return toReturn;
+        return populateTableBodyForPatientPharmacySummary(toReturn);
+    }
+    function populateTableBodyForPatientPharmacySummary(data) {
+      jQuery("#patientPharmacySummaryItems").empty();
+      data.map((item) => {
+        jQuery("#patientPharmacySummaryItems").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
+      });
     }
 </script>
 <style type="text/css">
@@ -95,11 +82,11 @@ body {
 
 
 
-table#dDetails.dataTable tbody tr:hover {
+table#pDetails.dataTable tbody tr:hover {
     background-color: #43fff8;
 }
 
-table#dDetails.dataTable tbody tr:hover > .sorting_1 {
+table#pDetails.dataTable tbody tr:hover > .sorting_1 {
     background-color: #43fff8;
 }
 </style>
@@ -111,38 +98,20 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <i class="icon-filter" style="font-size: 26px!important; color: #5b57a6"></i>
             <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
             <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+            <button id="filterPharmacy" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
         </div>
 
-        <table id="dDetails">
+        <table id="pDetails">
             <thead>
             <tr>
                 <td>Transaction date</td>
-                <td>Drug Name</td>
-                <td>Formulation</td>
-                <td>Issued Quantity</td>
-                <td>Total Price</td>
+                <td>Identifier</td>
+                <td>Patient Names</td>
+                <td>Total Waiver Amount</td>
+                <td>Total Amount Charged</td>
             </tr>
-
             </thead>
-            <tbody>
-            <% if (departmentSummaries.empty) { %>
-            <tr>
-                <td colspan="3">
-                    No records found
-                </td>
-            </tr>
-            <% } %>
-
-            <% departmentSummaries.each { %>
-            <tr>
-                <td>${it.createdOn}</td>
-                <td >${it.drugName}</td>
-                <td>${it.formulationName}</td>
-                <td>${it.issueQuantity}</td>
-                <td>${it.totalPrice}</td>
-            </tr>
-            <% } %>
-            </tbody>
+            <tbody id="patientPharmacySummaryItems"></tbody>
         </table>
 
     </div>
