@@ -30,6 +30,7 @@ import org.openmrs.module.reporting.data.converter.DataConverter;
 import org.openmrs.module.reporting.data.converter.ObjectFormatter;
 import org.openmrs.module.reporting.data.converter.ObsValueConverter;
 import org.openmrs.module.reporting.data.patient.definition.EncountersForPatientDataDefinition;
+import org.openmrs.module.reporting.data.patient.definition.SqlPatientDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.*;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
@@ -95,8 +96,7 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("Identifier", new CalculationDataDefinition("Identifier", new PatientIdentifierCalculation()), "",
 		    new CalculationResultConverter());
-		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate}", new BirthdateConverter(
-		        DATE_FORMAT));
+		dsd.addColumn("Date", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
@@ -167,10 +167,12 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 	}
 	
 	private DataDefinition getEncounterDate() {
-		EncountersForPatientDataDefinition dsd = new EncountersForPatientDataDefinition();
-		dsd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
-		dsd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
-		dsd.setWhich(TimeQualifier.LAST);
+		SqlPatientDataDefinition dsd = new SqlPatientDataDefinition();
+		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsd.addParameter(new Parameter("endDate", "End  Date", Date.class));
+		dsd.setName("Encounter date");
+		dsd.setQuery("SELECT p.patient_id, MIN(e.encounter_datetime) FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 GROUP BY p.patient_id");
 		return dsd;
 	}
 	
