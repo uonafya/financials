@@ -355,7 +355,7 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_204A.xls" />
-        <property name="repeatingSection" value="sheet:3,row:3-4,dataset:opru" />
+        <property name="repeatingSection" value="sheet:3,row:3,dataset:opru" />
     </bean>
 
     <bean id="financials.common.report.204B" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
@@ -368,7 +368,7 @@
             </set>
         </property>
         <property name="template" value="financials:MOH_204B.xls" />
-        <property name="repeatingSection" value="sheet:3,row:3-4,dataset:opro" />
+        <property name="repeatingSection" value="sheet:3,row:3,dataset:opro" />
     </bean>
 
     <bean id="financials.common.report.209" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
