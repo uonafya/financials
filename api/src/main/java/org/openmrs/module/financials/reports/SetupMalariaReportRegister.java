@@ -29,6 +29,7 @@ import org.openmrs.module.reporting.data.converter.ObjectFormatter;
 import org.openmrs.module.reporting.data.converter.ObsValueConverter;
 import org.openmrs.module.reporting.data.patient.definition.ConvertedPatientDataDefinition;
 import org.openmrs.module.reporting.data.patient.definition.PatientIdentifierDataDefinition;
+import org.openmrs.module.reporting.data.patient.definition.SqlPatientDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.AgeDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.BirthdateDataDefinition;
 import org.openmrs.module.reporting.data.person.definition.ConvertedPersonDataDefinition;
@@ -52,15 +53,15 @@ import java.util.List;
 import static org.openmrs.module.financials.reports.SetupANCRegisterReport.ENC_DATE_FORMAT;
 
 @Component
-@Builds({ "ehraddons.common.report.malaria" })
-public class SetupMalariaReport extends AbstractHybridReportBuilder {
+@Builds({ "financials.common.report.malaria" })
+public class SetupMalariaReportRegister extends AbstractHybridReportBuilder {
 	
 	public static final String DATE_FORMAT = "dd/MM/yyyy";
 	
-	private CommonDatasetDefinition commonDatasetDefinition;
+	private final CommonDatasetDefinition commonDatasetDefinition;
 	
 	@Autowired
-	public SetupMalariaReport(CommonDatasetDefinition commonDatasetDefinition) {
+	public SetupMalariaReportRegister(CommonDatasetDefinition commonDatasetDefinition) {
 		this.commonDatasetDefinition = commonDatasetDefinition;
 	}
 	
@@ -93,17 +94,12 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		dsd.setName("mal");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.addSortCriteria("Visit Date", SortCriteria.SortDirection.ASC);
-		
-		PatientIdentifierType upn = MetadataUtils.existing(PatientIdentifierType.class,
-		    CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
-		DataConverter identifierFormatter = new ObjectFormatter("{identifier}");
+		dsd.addSortCriteria("vDate", SortCriteria.SortDirection.ASC);
 		
 		DataConverter formatter = new ObjectFormatter("{familyName}, {middleName} {givenName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), formatter);
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("Visit Date", getVisitDate(), "startDate=${startDate},endDate=${endDate}", new DateConverter(
-		        ENC_DATE_FORMAT));
+		dsd.addColumn("vDate", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Identifier", new CalculationDataDefinition("Identifier", new PatientIdentifierCalculation()), "",
 		    new CalculationResultConverter());
@@ -139,13 +135,13 @@ public class SetupMalariaReport extends AbstractHybridReportBuilder {
 		return cd;
 	}
 	
-	private DataDefinition getVisitDate() {
-		SqlVisitDataDefinition visitDataDefinition = new SqlVisitDataDefinition();
-		visitDataDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		visitDataDefinition.addParameter(new Parameter("endDate", "End Date", Date.class));
-		visitDataDefinition
-		        .setSql("SELECT p.patient_id, MAX(v.date_started) FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		                + " WHERE p.voided=0 AND v.voided=0 AND v.date_started BETWEEN :startDate AND :endDate GROUP BY p.patient_id");
-		return visitDataDefinition;
+	private DataDefinition getEncounterDate() {
+		SqlPatientDataDefinition dsd = new SqlPatientDataDefinition();
+		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsd.addParameter(new Parameter("endDate", "End  Date", Date.class));
+		dsd.setName("Encounter date");
+		dsd.setQuery("SELECT p.patient_id, MIN(e.encounter_datetime) FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
+		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 GROUP BY p.patient_id");
+		return dsd;
 	}
 }

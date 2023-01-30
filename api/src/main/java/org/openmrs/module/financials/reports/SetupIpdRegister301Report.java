@@ -31,7 +31,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import static org.openmrs.module.financials.reports.SetupMalariaReport.DATE_FORMAT;
+import static org.openmrs.module.financials.reports.SetupMalariaReportRegister.DATE_FORMAT;
 
 @Component
 @Builds({ "financials.common.report.301" })
