@@ -22,14 +22,11 @@ import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 @Component
 public class Moh705CohortDefinition {
 	
-	private EhrAddonCommons ehrAddonCommons;
-	
-	private EhrAddonCommons commonLibrary;
+	private final EhrAddonCommons ehrAddonCommons;
 	
 	@Autowired
-	public Moh705CohortDefinition(EhrAddonCommons ehrAddonCommons, EhrAddonCommons commonLibrary) {
+	public Moh705CohortDefinition(EhrAddonCommons ehrAddonCommons) {
 		this.ehrAddonCommons = ehrAddonCommons;
-		this.commonLibrary = commonLibrary;
 	}
 	
 	/**
@@ -202,9 +199,9 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
-	public CohortDefinition getNewAdultsrenPatients() {
+	public CohortDefinition getNewAdultsPatients() {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
-		cd.setName("Adults visiting for the first time");
+		cd.setName("Adults visiting for the first time - new patients in the facility");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("NEW", ReportUtils.map(getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
@@ -224,9 +221,9 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
-	public CohortDefinition getRevisitAdultsrenPatients() {
+	public CohortDefinition getRevisitAdultsPatients() {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
-		cd.setName("Adults with revisit");
+		cd.setName("Adults with revisit - those showing many visits within the year");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("RVT", ReportUtils.map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
@@ -266,6 +263,11 @@ public class Moh705CohortDefinition {
 		return cd;
 	}
 	
+	/**
+	 * Get new patients
+	 * 
+	 * @return
+	 */
 	private CohortDefinition getNewPatients() {
 		EncounterType registrationInitial = Context.getEncounterService().getEncounterTypeByUuid(
 		    "8efa1534-f28f-11ea-b25f-af56118cf21b");
@@ -277,14 +279,16 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch(
 		    "NEW",
-		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
+		    map(ehrAddonCommons.getPatientStates(
+		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.NEW_PATIENT).getConceptId(),
 		        registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
 		        "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("VISIT",
-		    map(commonLibrary.getPatientWithNewVisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
+		    map(ehrAddonCommons.getPatientWithNewVisitsBasedOnVisits(), "startDate=${startDate},endDate=${endDate}"));
 		cd.addSearch("REVISIT", map(getRevisitPatients(), "endDate=${endDate}"));
+		cd.addSearch("WITHIN", map(ehrAddonCommons.hasEncounter(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
 		
-		cd.setCompositionString("(NEW OR VISIT) AND NOT REVISIT");
+		cd.setCompositionString("(WITHIN AND (NEW OR VISIT)) AND NOT REVISIT");
 		return cd;
 		
 	}
@@ -310,11 +314,12 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch(
 		    "RVT",
-		    map(commonLibrary.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
+		    map(ehrAddonCommons.getPatientStates(getConcept(EhrAddonsConstants._EhrAddOnConcepts.REVISIT_PATIENT)
 		            .getConceptId(), registrationInitial.getEncounterTypeId(), revisitInitial.getEncounterTypeId()),
 		        "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("VISIT", map(commonLibrary.getPatientRevisitsBasedOnVisits(), "endDate=${endDate}"));
-		cd.setCompositionString("RVT OR VISIT");
+		cd.addSearch("VISIT", map(ehrAddonCommons.getPatientRevisitsBasedOnVisits(), "endDate=${endDate}"));
+		cd.addSearch("WITHIN", map(ehrAddonCommons.hasEncounter(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
+		cd.setCompositionString("WITHIN AND (RVT OR VISIT)");
 		return cd;
 		
 	}

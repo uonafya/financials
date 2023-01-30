@@ -2,7 +2,7 @@ package org.openmrs.module.financials.reporting.library.dataset;
 
 import org.openmrs.Concept;
 import org.openmrs.Program;
-import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh711IndicatorDefinition;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
 import org.openmrs.module.kenyacore.report.ReportUtils;
@@ -27,10 +27,10 @@ public class Moh711DatasetDefinition {
 	
 	private Moh711IndicatorDefinition moh711IndicatorDefinition;
 	
-	private EhrAddonDimesion ehrAddonDimesion;
+	private EhrAddonDimension ehrAddonDimesion;
 	
 	@Autowired
-	public Moh711DatasetDefinition(Moh711IndicatorDefinition moh711IndicatorDefinition, EhrAddonDimesion ehrAddonDimesion) {
+	public Moh711DatasetDefinition(Moh711IndicatorDefinition moh711IndicatorDefinition, EhrAddonDimension ehrAddonDimesion) {
 		this.moh711IndicatorDefinition = moh711IndicatorDefinition;
 		this.ehrAddonDimesion = ehrAddonDimesion;
 	}

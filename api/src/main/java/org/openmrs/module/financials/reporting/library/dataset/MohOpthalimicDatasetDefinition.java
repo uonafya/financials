@@ -1,6 +1,6 @@
 package org.openmrs.module.financials.reporting.library.dataset;
 
-import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.MohOpthlamicIndicatorDefinition;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -14,12 +14,12 @@ import java.util.Date;
 @Component
 public class MohOpthalimicDatasetDefinition {
 	
-	private EhrAddonDimesion ehrAddonDimesion;
+	private EhrAddonDimension ehrAddonDimesion;
 	
 	private MohOpthlamicIndicatorDefinition mohOpthalimicIndicatorDefinotion;
 	
 	@Autowired
-	MohOpthalimicDatasetDefinition(EhrAddonDimesion ehrAddonDimesion,
+	MohOpthalimicDatasetDefinition(EhrAddonDimension ehrAddonDimesion,
 	    MohOpthlamicIndicatorDefinition mohOpthalimicIndicatorDefinotion) {
 		this.ehrAddonDimesion = ehrAddonDimesion;
 		this.mohOpthalimicIndicatorDefinotion = mohOpthalimicIndicatorDefinotion;

@@ -96,15 +96,10 @@ public class EhrAddonCommons {
 		cd.setName("has obs between dates");
 		cd.addParameter(new Parameter("endDate", "Before Date", Date.class));
 		cd.addParameter(new Parameter("startDate", "After Date", Date.class));
-		String sql = " SELECT patient_id FROM( "
-		        + " SELECT max_enc.patient_id, max_enc.encounter_date FROM ( "
+		String sql = " SELECT patient_id FROM( " + " SELECT max_enc.patient_id, max_enc.encounter_date FROM ( "
 		        + " SELECT p.patient_id AS patient_id, MAX(e.encounter_datetime) AS encounter_date FROM patient p "
-		        + " INNER JOIN encounter e "
-		        + " ON p.patient_id=e.patient_id "
-		        + " WHERE "
-		        + " p.voided=0 "
-		        + " AND e.voided=0"
-		        + " AND e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
+		        + " INNER JOIN encounter e " + " ON p.patient_id=e.patient_id " + " WHERE " + " p.voided=0 "
+		        + " AND e.voided=0" + " AND e.encounter_datetime BETWEEN :startDate AND :endDate "
 		        + " AND e.encounter_type IN("
 		        + enc1
 		        + ","
@@ -125,8 +120,10 @@ public class EhrAddonCommons {
 		        + " AND ee.voided= 0  "
 		        + " AND pp.voided = 0 "
 		        + " AND o.voided=0 "
-		        + " AND ee.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
-		        + " AND o.value_coded =" + answer + " )max_obs ON max_enc.patient_id=max_obs.patient_id "
+		        + " AND ee.encounter_datetime BETWEEN :startDate AND :endDate "
+		        + " AND o.value_coded ="
+		        + answer
+		        + " )max_obs ON max_enc.patient_id=max_obs.patient_id "
 		        
 		        + " WHERE max_enc.encounter_date = max_obs.encounter_date) out_table ";
 		cd.setQuery(sql);
@@ -220,13 +217,15 @@ public class EhrAddonCommons {
 	 * @param types the encounter types
 	 * @return the cohort definition
 	 */
-	public CohortDefinition hasEncounter(List<EncounterType> types) {
+	public CohortDefinition hasEncounter(EncounterType... types) {
 		EncounterCohortDefinition cd = new EncounterCohortDefinition();
 		cd.setName("has encounter between dates");
 		cd.setTimeQualifier(TimeQualifier.ANY);
 		cd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
 		cd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
-		cd.setEncounterTypeList(types);
+		if (types.length > 0) {
+			cd.setEncounterTypeList(Arrays.asList(types));
+		}
 		return cd;
 	}
 	

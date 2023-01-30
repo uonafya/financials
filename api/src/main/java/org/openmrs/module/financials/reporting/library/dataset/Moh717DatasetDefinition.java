@@ -5,7 +5,7 @@ import org.openmrs.Form;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.ColumnParameters;
 import org.openmrs.module.financials.EhrAddonsConstants;
-import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh711IndicatorDefinition;
 import org.openmrs.module.financials.reporting.library.indicator.Moh717IndicatorDefinition;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
@@ -30,10 +30,10 @@ public class Moh717DatasetDefinition {
 	
 	private final Moh711IndicatorDefinition moh711IndicatorDefinition;
 	
-	private final EhrAddonDimesion ehrAddonDimesion;
+	private final EhrAddonDimension ehrAddonDimesion;
 	
 	@Autowired
-	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimesion ehrAddonDimesion,
+	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimension ehrAddonDimesion,
 	    Moh711IndicatorDefinition moh711IndicatorDefinition) {
 		this.moh717IndicatorDefinition = moh717IndicatorDefinition;
 		this.ehrAddonDimesion = ehrAddonDimesion;

@@ -1,6 +1,6 @@
 package org.openmrs.module.financials.reporting.library.dataset;
 
-import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh706IndicatorDefinitions;
 import org.openmrs.module.financials.reporting.utils.EhrAddonUtils;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
@@ -19,10 +19,10 @@ public class Moh706DatasetDefinition {
 	
 	private final Moh706IndicatorDefinitions moh706Indicator;
 	
-	private final EhrAddonDimesion ehrAddonDimesion;
+	private final EhrAddonDimension ehrAddonDimesion;
 	
 	@Autowired
-	public Moh706DatasetDefinition(Moh706IndicatorDefinitions moh706Indicator, EhrAddonDimesion ehrAddonDimesion) {
+	public Moh706DatasetDefinition(Moh706IndicatorDefinitions moh706Indicator, EhrAddonDimension ehrAddonDimesion) {
 		this.moh706Indicator = moh706Indicator;
 		this.ehrAddonDimesion = ehrAddonDimesion;
 	}

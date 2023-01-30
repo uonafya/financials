@@ -1,7 +1,5 @@
 package org.openmrs.module.financials.reporting.library.dimesions;
 
-import org.openmrs.EncounterType;
-import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh717CohortDefinition;
 import org.openmrs.module.financials.reporting.library.common.EhrAddonCommons;
@@ -18,14 +16,14 @@ import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 @Component
-public class EhrAddonDimesion {
+public class EhrAddonDimension {
 	
-	private EhrAddonCommons commonLibrary;
+	private final EhrAddonCommons commonLibrary;
 	
-	private Moh717CohortDefinition moh717CohortDefinition;
+	private final Moh717CohortDefinition moh717CohortDefinition;
 	
 	@Autowired
-	public EhrAddonDimesion(EhrAddonCommons commonLibrary, Moh717CohortDefinition moh717CohortDefinition) {
+	public EhrAddonDimension(EhrAddonCommons commonLibrary, Moh717CohortDefinition moh717CohortDefinition) {
 		this.commonLibrary = commonLibrary;
 		this.moh717CohortDefinition = moh717CohortDefinition;
 	}
@@ -138,66 +136,66 @@ public class EhrAddonDimesion {
 		dim.addCohortDefinition(
 		    "ENT",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ENT)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "EYE",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.EYE_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "TBL",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.TBL)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "STI",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.STI)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "CCC",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.CCC_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "PSY",
 		    map(moh717CohortDefinition
 		            .getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PSYCHIATRIC_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "ORT",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ORT)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "OCP",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OCP)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "PHYS",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PHYS)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "SC",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.SC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "PAED",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.PAED)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "OG",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.OG)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "NUC",
 		    map(moh717CohortDefinition
 		            .getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.NUTRITION_PROGRAM)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "ONC",
 		    map(moh717CohortDefinition
 		            .getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.ONCOLOGY_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		dim.addCohortDefinition(
 		    "RENAL",
 		    map(moh717CohortDefinition.getSpecialClinicVisits(getConcept(EhrAddonsConstants._EhrAddOnConcepts.RENAL_CLINIC)),
-		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore+23h}"));
+		        "onOrAfter=${onOrAfter},onOrBefore=${onOrBefore}"));
 		return dim;
 	}
 	
@@ -208,10 +206,8 @@ public class EhrAddonDimesion {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id"
 		        + " WHERE p.voided= 0 AND e.voided = 0 AND e.encounter_datetime BETWEEN DATE_ADD(:startDate, INTERVAL "
-		        + day
-		        + " DAY) AND DATE_ADD(DATE_ADD(DATE_ADD(:startDate, INTERVAL "
-		        + day
-		        + " DAY), INTERVAL 23 HOUR), INTERVAL 59 MINUTE) AND e.encounter_datetime <= DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR),INTERVAL 59 MINUTE)");
+		        + day + " DAY) AND DATE_ADD(DATE_ADD(DATE_ADD(:startDate, INTERVAL " + day
+		        + " DAY), INTERVAL 23 HOUR), INTERVAL 59 MINUTE) AND e.encounter_datetime <= :endDate");
 		return cd;
 	}
 	

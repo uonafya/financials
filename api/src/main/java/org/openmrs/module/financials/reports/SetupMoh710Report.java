@@ -3,7 +3,7 @@ package org.openmrs.module.financials.reports;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.PatientIdentifierType;
-import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh710IndicatorDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
@@ -40,10 +40,10 @@ public class SetupMoh710Report extends AbstractReportBuilder {
 	
 	private Moh710IndicatorDefinition moh710Indicators;
 	
-	private EhrAddonDimesion commonDimensions;
+	private EhrAddonDimension commonDimensions;
 	
 	@Autowired
-	public SetupMoh710Report(Moh710IndicatorDefinition moh710Indicators, EhrAddonDimesion commonDimensions) {
+	public SetupMoh710Report(Moh710IndicatorDefinition moh710Indicators, EhrAddonDimension commonDimensions) {
 		this.moh710Indicators = moh710Indicators;
 		this.commonDimensions = commonDimensions;
 	}

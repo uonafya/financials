@@ -29,7 +29,7 @@ public class SetupMOH705bReport extends AbstractReportBuilder {
 	
 	@Autowired
 	public SetupMOH705bReport(Moh705bDatasetDefinition moh705bDatasetDefinition,
-	    CommonDatasetDefinition commonDatasetDefinition, Moh705CohortDefinition moh705CohortDefinition) {
+	    Moh705CohortDefinition moh705CohortDefinition) {
 		this.moh705bDatasetDefinition = moh705bDatasetDefinition;
 		this.moh705CohortDefinition = moh705CohortDefinition;
 	}

@@ -1,7 +1,7 @@
 package org.openmrs.module.financials.reporting.library.dataset;
 
 import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
-import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimesion;
+import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh705IndicatorDefinitions;
 import org.openmrs.module.financials.reporting.utils.EhrAddonUtils;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
@@ -19,12 +19,12 @@ import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
 @Component
 public class Moh705bDatasetDefinition {
 	
-	private Moh705IndicatorDefinitions moh705aIndicator;
+	private final Moh705IndicatorDefinitions moh705aIndicator;
 	
-	private EhrAddonDimesion ehrAddonDimesion;
+	private final EhrAddonDimension ehrAddonDimesion;
 	
 	@Autowired
-	public Moh705bDatasetDefinition(Moh705IndicatorDefinitions moh705aIndicator, EhrAddonDimesion ehrAddonDimesion) {
+	public Moh705bDatasetDefinition(Moh705IndicatorDefinitions moh705aIndicator, EhrAddonDimension ehrAddonDimesion) {
 		this.moh705aIndicator = moh705aIndicator;
 		this.ehrAddonDimesion = ehrAddonDimesion;
 	}

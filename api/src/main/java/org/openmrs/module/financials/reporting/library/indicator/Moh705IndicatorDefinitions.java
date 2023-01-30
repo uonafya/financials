@@ -67,7 +67,7 @@ public class Moh705IndicatorDefinitions {
 	
 	public CohortIndicator getNewAdultsPatients() {
 		return cohortIndicator("New adults patients",
-		    map(moh705CohortDefinition.getNewAdultsrenPatients(), "startDate=${startDate},endDate=${endDate}"));
+		    map(moh705CohortDefinition.getNewAdultsPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	public CohortIndicator getRevisitsChildrenPatients() {
@@ -77,7 +77,7 @@ public class Moh705IndicatorDefinitions {
 	
 	public CohortIndicator getRevisitsAdultsPatients() {
 		return cohortIndicator("Revisit adults patients",
-		    map(moh705CohortDefinition.getRevisitAdultsrenPatients(), "startDate=${startDate},endDate=${endDate}"));
+		    map(moh705CohortDefinition.getRevisitAdultsPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	public CohortIndicator getAllChildrenPatientsReferrals(int question, int ans) {
