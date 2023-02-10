@@ -119,9 +119,7 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS)),
 		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		dsd.addColumn("DR", getDrugs(), "endDate=${endDate}", new DrugListConverter());
-		dsd.addColumn("OUT",
-		    getObservation(Context.getConceptService().getConceptByUuid("160433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new OutcomeConverter());
+		dsd.addColumn("OUT", getDeadPeople(), "", new OutcomeConverter());
 		dsd.addColumn("RFF",
 		    getObservation(Context.getConceptService().getConceptByUuid("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
 		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralFromConverter());
@@ -197,5 +195,13 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		return cd;
 		
+	}
+	
+	private DataDefinition getDeadPeople() {
+		SqlPatientDataDefinition dsd = new SqlPatientDataDefinition();
+		dsd.setName("Get dead people");
+		dsd.setQuery("SELECT p.patient_id,pe.death_date FROM patient p INNER JOIN person pe ON p.patient_id=pe.person_id "
+		        + " WHERE pe.death_date IS NOT NULL");
+		return dsd;
 	}
 }

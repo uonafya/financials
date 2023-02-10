@@ -1,8 +1,5 @@
 package org.openmrs.module.financials.reporting.converter;
 
-import org.openmrs.Concept;
-import org.openmrs.Obs;
-import org.openmrs.module.hospitalcore.model.OpdDrugOrder;
 import org.openmrs.module.reporting.data.converter.DataConverter;
 
 public class OutcomeConverter implements DataConverter {
@@ -13,16 +10,13 @@ public class OutcomeConverter implements DataConverter {
 	
 	public Object convert(Object obj) {
 		
-		Obs obs = (Obs) obj;
-		String results = "";
-		if (obs == null) {
-			return "";
-		}
-		Concept concept = obs.getValueCoded();
+		String data = (String) obj;
 		
-		if (concept == null) {
-			return "";
-		} else {
+		if (data == null) {
+			return "A";
+		}
+		
+		else {
 			return "D";
 		}
 	}
