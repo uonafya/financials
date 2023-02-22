@@ -5,10 +5,7 @@ import org.openmrs.EncounterType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.reporting.calculation.*;
-import org.openmrs.module.financials.reporting.converter.DrugListConverter;
-import org.openmrs.module.financials.reporting.converter.OutcomeConverter;
-import org.openmrs.module.financials.reporting.converter.ReferralFromConverter;
-import org.openmrs.module.financials.reporting.converter.ReferralToConverter;
+import org.openmrs.module.financials.reporting.converter.*;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -103,29 +100,59 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		    new CalculationResultConverter());
 		dsd.addColumn("telephone", new CalculationDataDefinition("telephone", new TelephoneNumberCalculation()), "",
 		    new CalculationResultConverter());
-		dsd.addColumn("weight",
-		    getObservation(Context.getConceptService().getConceptByUuid("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
-		dsd.addColumn("height",
-		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "weight",
+		    getObservation(Context.getConceptService().getConceptByUuid("5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "height",
+		    getObservation(Context.getConceptService().getConceptByUuid("5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "temp",
+		    getObservation(Context.getConceptService().getConceptByUuid("5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "bps",
+		    getObservation(Context.getConceptService().getConceptByUuid("5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "bpd",
+		    getObservation(Context.getConceptService().getConceptByUuid("5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "rr",
+		    getObservation(Context.getConceptService().getConceptByUuid("5242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "pr",
+		    getObservation(Context.getConceptService().getConceptByUuid("5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "os",
+		    getObservation(Context.getConceptService().getConceptByUuid("5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
-		dsd.addColumn("DIAGF",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
-		dsd.addColumn("DIAGP",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS)),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
+		    "DIAGF",
+		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS),
+		        TimeQualifier.ANY), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObservationListAnswersConverter());
+		dsd.addColumn(
+		    "DIAGP",
+		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.PROVISIONAL_DIAGNOSIS),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		dsd.addColumn("DR", getDrugs(), "endDate=${endDate}", new DrugListConverter());
 		dsd.addColumn("OUT", getDeadPeople(), "", new OutcomeConverter());
-		dsd.addColumn("RFF",
-		    getObservation(Context.getConceptService().getConceptByUuid("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralFromConverter());
-		dsd.addColumn("RFT",
-		    getObservation(Context.getConceptService().getConceptByUuid("477a7484-0f99-4026-b37c-261be587a70b")),
-		    "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralToConverter());
+		dsd.addColumn(
+		    "RFF",
+		    getObservation(Context.getConceptService().getConceptByUuid("160481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralFromConverter());
+		dsd.addColumn(
+		    "RFT",
+		    getObservation(Context.getConceptService().getConceptByUuid("477a7484-0f99-4026-b37c-261be587a70b"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ReferralToConverter());
 		
 		return dsd;
 		
@@ -138,11 +165,11 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		
 	}
 	
-	private DataDefinition getObservation(Concept question) {
+	private DataDefinition getObservation(Concept question, TimeQualifier timeQualifier) {
 		ObsForPersonDataDefinition obs = new ObsForPersonDataDefinition();
 		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
 		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
-		obs.setWhich(TimeQualifier.LAST);
+		obs.setWhich(timeQualifier);
 		obs.setQuestion(question);
 		return obs;
 		
