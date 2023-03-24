@@ -121,8 +121,7 @@ public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 		//allPatients.addRowFilter(buildCohort(descriptor));
 		DataSetDefinition allPatientsDSD = allPatients;
 		
-		return Arrays.asList(ReportUtils.map(allPatientsDSD, "startDate=${startDate},endDate=${endDate}"),
-		    ReportUtils.map(maternityDataSet(), ""));
+		return Arrays.asList(ReportUtils.map(allPatientsDSD, "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	@Override

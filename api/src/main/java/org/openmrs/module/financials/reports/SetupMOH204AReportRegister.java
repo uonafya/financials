@@ -89,7 +89,7 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("Identifier", new CalculationDataDefinition("Identifier", new PatientIdentifierCalculation()), "",
+		dsd.addColumn("identifier", new CalculationDataDefinition("Identifier", new PatientIdentifierCalculation()), "",
 		    new CalculationResultConverter());
 		dsd.addColumn("Date", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
 		dsd.addColumn("Name", nameDef, "");

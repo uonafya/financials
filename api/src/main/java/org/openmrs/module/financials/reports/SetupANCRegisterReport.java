@@ -110,8 +110,7 @@ public class SetupANCRegisterReport extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(ReportUtils.map(datasetColumns(), "startDate=${startDate},endDate=${endDate}"),
-		    ReportUtils.map(ancRegisterAggregateDataSet(), "startDate=${startDate},endDate=${endDate}"));
+		return Arrays.asList(ReportUtils.map(datasetColumns(), "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	protected DataSetDefinition datasetColumns() {
@@ -172,7 +171,7 @@ public class SetupANCRegisterReport extends AbstractReportBuilder {
 		dsd.addColumn("HIV Test Two", new ANCHIVTestTwoDataDefinition(), "");
 		dsd.addColumn("HIV Test Results", new ANCFinalTestResultsDataDefinition(), "");
 		dsd.addColumn("WHO Stage", new ANCWHOStageDataDefinition(), "");
-		dsd.addColumn("VL Test Results", new ANCVLTestResultsDataDefinition(), "");
+		//dsd.addColumn("VL Test Results", new ANCVLTestResultsDataDefinition(), "");
 		dsd.addColumn("Given HAART preANC", new ANCHAARTGivenBeforeFirstANCDataDefinition(), "");
 		dsd.addColumn("Given HAART at ANC", new ANCHAARTGivenAtANCDataDefinition(), "");
 		dsd.addColumn("Prophylaxis Given", new ANCProphylaxisGivenDataDefinition(), "");

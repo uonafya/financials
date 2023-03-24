@@ -79,7 +79,7 @@ public class LabResultsQueries {
 		String sql = "SELECT * FROM (" + "SELECT person_id, " + "       identifier," + "       given_name, "
 		        + "       family_name, " + "       birthdate, " + "       age, " + "       investigation, "
 		        + "       encounter_datetime, " + "       value_numeric, " + "       value_text, " + "       comments, "
-		        + "       name,  gender" + "       result_text " + " FROM   (SELECT * "
+		        + "       name,  gender," + "       result_text " + " FROM   (SELECT * "
 		        + "        FROM   (SELECT t1.given_name, " + "                       t1.person_id, "
 		        + "                       t1.encounter_id, " + "                       t1.family_name, "
 		        + "                       t1.identifier, " + "                       t1.birthdate, "
