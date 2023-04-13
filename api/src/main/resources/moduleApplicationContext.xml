@@ -474,4 +474,24 @@
         <property name="template" value="financials:daily.xls" />
         <property name="repeatingSection" value="sheet:3,row:9,dataset:daily" />
     </bean>
+
+    <bean id="financials.config.report" class="org.openmrs.module.financials.report.EhrReportConfiguration">
+        <property name="ehrCommonReports">
+            <set>
+                <ref bean="financials.common.report.facility.monthly.collection"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="financials.common.report.facility.monthly.collection" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+        <property name="targetUuid" value="8919222D-3976-4EE0-8B77-7E02FE73919E" />
+        <property name="name" value="Monthly Collection by Facility" />
+        <property name="description" value="Monthly Collection Summary by Facility" />
+        <property name="apps">
+            <set>
+                <ref bean="financials.revenue.ehr.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:MOH_Opthalmic_ Services_ Unit_ Summary_ Form.xls" />
+    </bean>
 </beans>

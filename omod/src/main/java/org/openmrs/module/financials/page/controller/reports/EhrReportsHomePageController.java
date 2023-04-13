@@ -34,7 +34,7 @@ public class EhrReportsHomePageController {
 		for (ReportDescriptor report : reportManager.getEhrCommonReports(currentApp)) {
 			common.add(ui.simplifyObject(report));
 		}
-		reportsByProgram.put("Common", common);
+		reportsByProgram.put("Facility Summaries", common);
 		
 		for (ProgramDescriptor programDescriptor : programManager.getAllProgramDescriptors()) {
 			Program program = programDescriptor.getTarget();
