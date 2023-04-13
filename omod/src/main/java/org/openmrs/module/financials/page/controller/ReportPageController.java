@@ -1,0 +1,137 @@
+/**
+ * This Source Code Form is subject to the terms of the Mozilla Public License,
+ * v. 2.0. If a copy of the MPL was not distributed with this file, You can
+ * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
+ * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
+ *
+ * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
+ * graphic logo is a trademark of OpenMRS Inc.
+ */
+package org.openmrs.module.financials.page.controller;
+
+import org.codehaus.jackson.node.ObjectNode;
+import org.openmrs.Role;
+import org.openmrs.User;
+import org.openmrs.api.AdministrationService;
+import org.openmrs.api.context.Context;
+import org.openmrs.module.financials.report.EhrReportManager;
+import org.openmrs.module.kenyacore.CoreUtils;
+import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
+import org.openmrs.module.kenyacore.report.IndicatorReportDescriptor;
+import org.openmrs.module.kenyacore.report.ReportDescriptor;
+import org.openmrs.module.kenyaemr.metadata.SecurityMetadata;
+import org.openmrs.module.kenyaemr.util.EmrUtils;
+import org.openmrs.module.kenyaui.KenyaUiUtils;
+import org.openmrs.module.kenyaui.annotation.SharedPage;
+import org.openmrs.module.reporting.common.DateUtil;
+import org.openmrs.module.reporting.report.ReportRequest;
+import org.openmrs.module.reporting.report.definition.ReportDefinition;
+import org.openmrs.module.reporting.report.definition.service.ReportDefinitionService;
+import org.openmrs.module.reporting.report.service.ReportService;
+import org.openmrs.ui.framework.SimpleObject;
+import org.openmrs.ui.framework.UiUtils;
+import org.openmrs.ui.framework.annotation.SpringBean;
+import org.openmrs.ui.framework.page.PageModel;
+import org.openmrs.ui.framework.page.PageRequest;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+/**
+ * Report overview page
+ */
+@SharedPage
+public class ReportPageController {
+	
+	private AdministrationService admService;
+	
+	public void get(@RequestParam("reportUuid") String reportUuid,
+	        @RequestParam(required = false, value = "startDate") Date startDate,
+	        @RequestParam("returnUrl") String returnUrl, PageRequest pageRequest, PageModel model, UiUtils ui,
+	        @SpringBean EhrReportManager reportManager, @SpringBean KenyaUiUtils kenyaUi,
+	        @SpringBean ReportService reportService, @SpringBean ReportDefinitionService definitionService) throws Exception {
+		
+		ReportDefinition definition = definitionService.getDefinitionByUuid(reportUuid);
+		ReportDescriptor ehrReport = reportManager.getEhrReportDescriptor(definition);
+		admService = Context.getAdministrationService();
+		CoreUtils.checkAccess(ehrReport, kenyaUi.getCurrentApp(pageRequest));
+		User loggedInUser = Context.getUserContext().getAuthenticatedUser();
+		Set<Role> userRoles = loggedInUser.getAllRoles();
+		boolean isSuperUser = loggedInUser.isSuperUser();
+		
+		boolean isIndicator = false;
+		if (ehrReport instanceof IndicatorReportDescriptor || ehrReport instanceof HybridReportDescriptor)
+			isIndicator = true;
+		
+		boolean excelRenderable = false;
+		if (ehrReport instanceof IndicatorReportDescriptor && isIndicator
+		        && ((IndicatorReportDescriptor) ehrReport).getTemplate() != null) {
+			excelRenderable = true;
+		} else if (ehrReport instanceof HybridReportDescriptor && isIndicator
+		        && ((HybridReportDescriptor) ehrReport).getTemplate() != null) {
+			excelRenderable = true;
+		}
+		
+		ObjectNode mappingDetails = null;
+		
+		model.addAttribute("report", ehrReport);
+		model.addAttribute("definition", definition);
+		model.addAttribute("isIndicator", isIndicator);
+		//model.addAttribute("adxConfigured", mappingDetails != null ? true : false);
+		model.addAttribute("excelRenderable", excelRenderable);
+		model.addAttribute("returnUrl", returnUrl);
+		model.addAttribute("period", definition.getName().replaceAll("[^0-9]", ""));
+		
+		if (isIndicator) {
+			Map<String, String> startDateOptions = new LinkedHashMap<String, String>();
+			SimpleDateFormat pretty = new SimpleDateFormat("MMMM yyyy");
+			Date d = DateUtil.getStartOfMonth(new Date());
+			for (int i = 0; i < 6; ++i) {
+				d = DateUtil.getStartOfMonth(d, -1);
+				startDateOptions.put(kenyaUi.formatDateParam(d), pretty.format(d));
+			}
+			
+			model.addAttribute("startDateOptions", startDateOptions);
+			model.addAttribute("startDateSelected", startDate != null ? kenyaUi.formatDateParam(startDate) : null);
+			model.addAttribute("startDate", startDate);
+		}
+		
+		SimpleDateFormat datePeriodForAll = new SimpleDateFormat("MMM-yyyy");
+		String date = "";
+		if (startDate != null) {
+			date = "_" + datePeriodForAll.format(startDate);
+		}
+		model.addAttribute("date", date);
+		
+		model.addAttribute("requests", getRequests(definition, ui, reportService));
+		
+		// Showing list of subcounties
+		List<String> subCountyList = new ArrayList<String>();
+		
+		String userRole = null;
+		for (Role role : userRoles) {
+			if (role.getName().equalsIgnoreCase(SecurityMetadata._Role.SYSTEM_ADMIN)) {
+				userRole = "System Administrator";
+				break;
+			}
+		}
+		if (isSuperUser || userRole != null) {
+			subCountyList = EmrUtils.getSubCountyList();
+		}
+		model.addAttribute("subCountyList", subCountyList.size() > 0 ? subCountyList : Collections.emptyList());
+	}
+	
+	/**
+	 * Gets the existing requests for the given report
+	 * 
+	 * @param definition the report definition
+	 * @param ui the UI utils
+	 * @param reportService the report service
+	 * @return the simplified requests
+	 */
+	public SimpleObject[] getRequests(ReportDefinition definition, UiUtils ui, ReportService reportService) {
+		List<ReportRequest> requests = reportService.getReportRequests(definition, null, null, null);
+		return ui.simplifyCollection(requests);
+	}
+}

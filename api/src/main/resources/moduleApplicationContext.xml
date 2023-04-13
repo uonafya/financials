@@ -63,6 +63,13 @@
         <constructor-arg value="financials:apps/revenue.png"/>
         <constructor-arg value="3000"/>
     </bean>
+    <bean id="financials.revenue.ehr.reports" factory-bean="kenyacore.appFactoryBean" factory-method="createInstance">
+        <constructor-arg value="financials.ehr.reports"/>
+        <constructor-arg value="EHR Reports"/>
+        <constructor-arg value="financials/reports/ehrReportsHome.page"/>
+        <constructor-arg value="financials:apps/reports.png"/>
+        <constructor-arg value="3100"/>
+    </bean>
     <bean id="financials.add.program" class="org.openmrs.module.kenyacore.program.ProgramDescriptor">
         <property name="targetUuid" value="7a822d3e-8d40-11eb-92cc-5f145f16bd2e" />
         <property name="eligibilityCalculation" value="org.openmrs.module.financials.calculation.EligibleForEhrAddonProgramCalculation" />
@@ -118,7 +125,7 @@
         <property name="description" value="MOH 705 A Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:MOH_705a.xls" />
     </bean>
@@ -129,7 +136,7 @@
         <property name="description" value="MOH 705 B Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:MOH_705b.xls" />
     </bean>
@@ -140,7 +147,7 @@
         <property name="description" value="MOH 717 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:MOH_717.xls" />
     </bean>
@@ -150,7 +157,7 @@
         <property name="description" value="Laboratory Results Report for adults" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:labadults.xls" />
@@ -163,7 +170,7 @@
         <property name="description" value="Laboratory Results Report for children" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:labchildren.xls" />
@@ -174,7 +181,7 @@
         <property name="targetUuid" value="66c4664a-8d45-11eb-9ab1-3359b033ed37" />
         <property name="apps">
             <set>
-                <ref bean="initialpatientqueueapp.app.initialpatientqueueapp.queue" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="icon" value="kenyaui:forms/generic.png" />
@@ -187,7 +194,7 @@
         <property name="description" value="Patients who visit a facility on a given date" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:all.xls" />
@@ -200,7 +207,7 @@
         <property name="description" value="Patients who have malaria on a given date period" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:malaria.xls" />
@@ -212,7 +219,7 @@
         <property name="description" value="Get realtime patients turn around time on a given period" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:turnAroundTime.xls" />
@@ -225,7 +232,7 @@
         <property name="description" value="Get all the diagnosis for children on a given period detailed per patient" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:all705a.xls" />
@@ -238,7 +245,7 @@
         <property name="description" value="Get realtime patients turn around time on a given period detailed per patient" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:all705b.xls" />
@@ -251,7 +258,7 @@
         <property name="description" value="Get all the diagnosis for children on a given period for 705A - Summation" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:all705all.xls" />
@@ -264,7 +271,7 @@
         <property name="description" value="Get allpatients diagnosis on a given period - Summation 705 B" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:all705ball.xls" />
@@ -277,7 +284,7 @@
         <property name="description" value="MOH 706 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:MOH706.xls" />
     </bean>
@@ -287,7 +294,7 @@
         <property name="description" value="The register is for all patients to be adimitted for treatment regardiless of age" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_301.xls" />
@@ -299,7 +306,7 @@
         <property name="description" value="Child Welfare Clinic Register - MOH 511 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_511.xls" />
@@ -312,7 +319,7 @@
         <property name="description" value="MOH 510_Immunisation register - MOH 510 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_510.xls" />
@@ -325,7 +332,7 @@
         <property name="description" value="Laboratory Register - MOH 240 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_240.xls" />
@@ -338,7 +345,7 @@
         <property name="description" value="Maternity Register - MOH 333 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_333.xls" />
@@ -351,7 +358,7 @@
         <property name="description" value="Outpatient Register under 5yrs - MOH 204A Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_204A.xls" />
@@ -364,7 +371,7 @@
         <property name="description" value="Outpatient Register over 5yrs - MOH 204B Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_204B.xls" />
@@ -377,7 +384,7 @@
         <property name="description" value="Radiology(X-RAY) Register - MOH 209 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_209.xls" />
@@ -390,7 +397,7 @@
         <property name="description" value="Opthalmic Service Unit Summary" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_Opthalmic_ Services_ Unit_ Summary_ Form.xls" />
@@ -402,7 +409,7 @@
         <property name="description" value="MOH 512_FP Register - MOH 512 Report" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set>
         </property>
         <property name="template" value="financials:MOH_512.xls" />
@@ -415,7 +422,7 @@
         <property name="description" value="MOH 405 Register for ANC Services" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:MOH405_ANC Register.xls" />
         <property name="repeatingSection" value="sheet:1,row:9,dataset:anc" />
@@ -425,7 +432,7 @@
         <property name="targetUuid" value="1e710694-2045-11ec-b930-3fae95a8796c" />
         <property name="name" value="MOH 710" />
         <property name="description" value="MOH Immunization Report" />
-        <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
+        <property name="apps"><set><ref bean="financials.revenue.ehr.reports" /></set></property>
         <property name="template" value="kenyaemr:moh710.xls" />
     </bean>
 
@@ -433,7 +440,7 @@
         <property name="targetUuid" value="ddb6ac14-2849-11ec-9e50-0333f0e9356a" />
         <property name="name" value="MOH 711" />
         <property name="description" value="National Integrated Form for Reproductive Health, HIV/AIDS, Malaria, TB and Child Nutrition" />
-        <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
+        <property name="apps"><set><ref bean="financials.revenue.ehr.reports" /></set></property>
         <property name="template" value="financials:MOH_711.xls" />
     </bean>
 
@@ -443,7 +450,7 @@
         <property name="description" value="NHIF patients in the facility" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:nhif.xls" />
         <property name="repeatingSection" value="sheet:1,row:5,dataset:nhif" />
@@ -454,7 +461,7 @@
         <property name="description" value="Non paying patients in the facility" />
         <property name="apps">
             <set>
-                <ref bean="kenyaemr.app.reports" />
+                <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:nonPaying.xls" />
         <property name="repeatingSection" value="sheet:1,row:5,dataset:nonPaying" />
@@ -463,7 +470,7 @@
         <property name="targetUuid" value="6E163CE8-19FF-425B-A1C5-6B5856A7AD58" />
         <property name="name" value="Daily Register DAR_MOH 222" />
         <property name="description" value="Daily Activity Register - MOH 222" />
-        <property name="apps"><set><ref bean="kenyaemr.app.reports" /></set></property>
+        <property name="apps"><set><ref bean="financials.revenue.ehr.reports" /></set></property>
         <property name="template" value="financials:daily.xls" />
         <property name="repeatingSection" value="sheet:3,row:9,dataset:daily" />
     </bean>

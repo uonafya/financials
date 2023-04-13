@@ -2,7 +2,6 @@ package org.openmrs.module.financials.reports;
 
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.PersonAttributeType;
-import org.openmrs.module.financials.reporting.library.indicator.Moh333MaternityIndicatorDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
@@ -91,13 +90,6 @@ import java.util.List;
 public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 	
 	public static final String DATE_FORMAT = "dd/MM/yyyy";
-	
-	private Moh333MaternityIndicatorDefinition maternityIndicatorLibrary;
-	
-	@Autowired
-	public SetupMOH333ReportRegister(Moh333MaternityIndicatorDefinition maternityIndicatorLibrary) {
-		this.maternityIndicatorLibrary = maternityIndicatorLibrary;
-	}
 	
 	@Override
 	protected Mapped<CohortDefinition> buildCohort(HybridReportDescriptor descriptor, PatientDataSetDefinition dsd) {
@@ -206,7 +198,7 @@ public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 		return dsd;
 	}
 	
-	protected DataSetDefinition maternityDataSet() {
+	/*protected DataSetDefinition maternityDataSet() {
 		CohortIndicatorDataSetDefinition cohortDsd = new CohortIndicatorDataSetDefinition();
 		cohortDsd.setName("cohortIndicator");
 		cohortDsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -259,5 +251,5 @@ public class SetupMOH333ReportRegister extends AbstractHybridReportBuilder {
 		    ReportUtils.map(maternityIndicatorLibrary.assistedVaginalDeliveries(), indParams), "");
 		
 		return cohortDsd;
-	}
+	}*/
 }

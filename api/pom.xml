@@ -14,32 +14,26 @@
 	<dependency>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>kenyaui-api</artifactId>
-		<version>${kenyauiVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>metadatadeploy-api</artifactId>
-		<version>${metadatadeployVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>kenyaemr-api</artifactId>
-		<version>${kenyaemrVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>kenyacore-api</artifactId>
-		<version>${kenyacoreVersion}</version>
 	</dependency>
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>calculation-api</artifactId>
-			<version>${calculationVersion}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>reporting-api</artifactId>
-			<version>${reportingVersion}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
@@ -48,6 +42,10 @@
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>ehrconfigs-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>appframework-api</artifactId>
 		</dependency>
 	</dependencies>
 	<build>

@@ -40,6 +40,12 @@
             </dependency>
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
+				<artifactId>appframework-api</artifactId>
+				<version>${appframeworkVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
 				<artifactId>hospitalcore-api</artifactId>
 				<version>${hospitalcoreVersion}</version>
 				<scope>provided</scope>
@@ -121,15 +127,16 @@
 
 	<properties>
 		<openmrsPlatformVersion>2.3.3</openmrsPlatformVersion>
-		<kenyacoreVersion>2.4.1</kenyacoreVersion>
+		<kenyacoreVersion>3.0.1</kenyacoreVersion>
 		<uiframeworkVersion>3.8</uiframeworkVersion>
-		<kenyauiVersion>2.1.1</kenyauiVersion>
+		<kenyauiVersion>3.0.0</kenyauiVersion>
 		<metadatadeployVersion>1.3</metadatadeployVersion>
-		<kenyaemrVersion>17.0.3</kenyaemrVersion>
+		<kenyaemrVersion>18.5.1</kenyaemrVersion>
 		<calculationVersion>1.2</calculationVersion>
 		<reportingVersion>1.22.0</reportingVersion>
 		<ehrconfigsVersion>2.0.1-SNAPSHOT</ehrconfigsVersion>
 		<hospitalcoreVersion>2.0.3-SNAPSHOT</hospitalcoreVersion>
 		<legacyUiVersion>1.5.0</legacyUiVersion>
+		<appframeworkVersion>2.13.0</appframeworkVersion>
 	</properties>
 </project>

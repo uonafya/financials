@@ -36,9 +36,6 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
-import static org.openmrs.module.financials.reports.SetupANCRegisterReport.DATE_FORMAT;
-import static org.openmrs.module.financials.reports.SetupANCRegisterReport.ENC_DATE_FORMAT;
 import static org.openmrs.module.financials.utils.EhrReportingUtils.getEncounterLimitsByDate;
 
 @Component
@@ -91,9 +88,9 @@ public class SetupNhifClientsRegisterReport extends AbstractReportBuilder {
 		dsd.addColumn("Identifier", identifierDef, null);
 		dsd.addColumn("NHIF Number", new PersonAttributeDataDefinition(nhifNumber), "");
 		
-		dsd.addColumn("Visit Date", new EncounterDatetimeDataDefinition(), "", new DateConverter(ENC_DATE_FORMAT));
+		dsd.addColumn("Visit Date", new EncounterDatetimeDataDefinition(), "", new DateConverter("dd-MM-yyyy"));
 		dsd.addColumn("Telephone No", new PersonAttributeDataDefinition(phoneNumber), "");
-		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
+		dsd.addColumn("Date of Birth", new BirthdateDataDefinition(), "", new BirthdateConverter("dd-MM-yyyy"));
 		
 		dsd.addRowFilter(getEncounterLimitsByDate(), paramMapping);
 		return dsd;
