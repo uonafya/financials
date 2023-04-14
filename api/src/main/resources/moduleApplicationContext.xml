@@ -493,6 +493,6 @@
             </set>
         </property>
         <property name="template" value="financials:mcbf.xls" />
-        <property name="repeatingSection" value="sheet:1,row:5,dataset:mcbf" />
+        <property name="repeatingSection" value="sheet:1,row:12,dataset:mcbf" />
     </bean>
 </beans>
