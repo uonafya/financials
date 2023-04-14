@@ -42,7 +42,7 @@ public class SetupMonthlyCollectionByFacilityReport extends AbstractHybridReport
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.setSqlQuery(MonthlyCollectionQueries.getMonthlySummaryQuery());
-		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"));
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 	
 }
