@@ -198,7 +198,7 @@
             </set>
         </property>
         <property name="template" value="financials:all.xls" />
-        <property name="repeatingSection" value="sheet:1,row:7,dataset:all" />
+        <property name="repeatingSection" value="sheet:1,row:8,dataset:all" />
     </bean>
 
     <bean id="financials.common.report.malaria" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">

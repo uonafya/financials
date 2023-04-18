@@ -19,7 +19,7 @@ public class CommonDatasetDefinition {
 		sqlDataSetDefinition
 		        .setSqlQuery("SELECT l.name AS name,la.value_reference AS mfl_code FROM location l "
 		                + " INNER JOIN location_attribute la ON l.location_id=la.location_id "
-		                + " WHERE l.location_id = (SELECT property_value FROM global_property WHERE property='kenyaemr.defaultLocation')");
+		                + " WHERE l.location_id = (SELECT property_value FROM global_property WHERE property='kenyaemr.defaultLocation') LIMIT 1");
 		return sqlDataSetDefinition;
 	}
 }

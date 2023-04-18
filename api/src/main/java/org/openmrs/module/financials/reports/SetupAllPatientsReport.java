@@ -11,6 +11,7 @@ import org.openmrs.module.kenyacore.report.data.patient.definition.CalculationDa
 import org.openmrs.module.kenyaemr.reporting.data.converter.CalculationResultConverter;
 import org.openmrs.module.reporting.cohort.definition.CohortDefinition;
 import org.openmrs.module.reporting.cohort.definition.SqlCohortDefinition;
+import org.openmrs.module.reporting.common.DateUtil;
 import org.openmrs.module.reporting.common.SortCriteria;
 import org.openmrs.module.reporting.data.DataDefinition;
 import org.openmrs.module.reporting.data.converter.BirthdateConverter;
@@ -23,6 +24,7 @@ import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
 import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.openmrs.module.reporting.report.definition.ReportDefinition;
+import org.openmrs.util.OpenmrsUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -61,12 +63,11 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 	
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
-		
 		PatientDataSetDefinition allVisits = allPatients();
 		allVisits.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		allVisits.addParameter(new Parameter("endDate", "End Date Date", Date.class));
 		report.setBaseCohortDefinition(ReportUtils.map(allPatientsCohort(), "startDate=${startDate},endDate=${endDate+23h}"));
-		
+		DateUtil.getEndOfDay(new Date());
 		return Arrays.asList(
 		    ReportUtils.map((DataSetDefinition) allVisits, "startDate=${startDate},endDate=${endDate+23h}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
@@ -97,7 +98,9 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("Active Patients");
-		cd.setQuery("SELECT p.patient_id FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0");
+		cd.setQuery("SELECT p.patient_id FROM patient p " + " INNER JOIN visit v ON p.patient_id=v.patient_id "
+		        + " INNER JOIN encounter e ON e.visit_id=v.visit_id "
+		        + " WHERE v.date_started BETWEEN :startDate AND :endDate AND p.voided=0 AND v.voided=0 AND e.voided=0");
 		return cd;
 	}
 	
@@ -106,8 +109,8 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End  Date", Date.class));
 		dsd.setName("Encounter date");
-		dsd.setQuery("SELECT p.patient_id, MIN(e.encounter_datetime) FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
-		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 GROUP BY p.patient_id");
+		dsd.setQuery("SELECT p.patient_id, v.date_started FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
+		        + " WHERE v.date_started BETWEEN :startDate AND :endDate AND p.voided=0 AND v.voided=0 ");
 		return dsd;
 	}
 }
