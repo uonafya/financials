@@ -1,6 +1,7 @@
 package org.openmrs.module.financials.reports;
 
 import org.openmrs.module.financials.reporting.calculation.PatientIdentifierCalculation;
+import org.openmrs.module.financials.reporting.converter.VisitDateDataConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -89,7 +90,7 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		dsd.addColumn("Age", new AgeDataDefinition(), "", null);
-		dsd.addColumn("vDate", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
+		dsd.addColumn("vDate", getEncounterDate(), "startDate=${startDate},endDate=${endDate}", new VisitDateDataConverter());
 		return dsd;
 	}
 	

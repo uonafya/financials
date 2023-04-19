@@ -93,14 +93,14 @@ public class FinancialsUtils {
 		return formatter.format(date);
 	}
 	
-	public static Date formatDateFromString(String dateString) throws ParseException {
+	public static String formatDateFromString(String dateString) throws ParseException {
 		
-		DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+		DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.ENGLISH);
 		Date date = null;
 		if (!dateString.isEmpty()) {
 			date = format.parse(dateString);
 		}
-		return date;
+		return formatDateWithTime(date);
 	}
 	
 	public static List<Concept> registrationFeeConcepts() {
