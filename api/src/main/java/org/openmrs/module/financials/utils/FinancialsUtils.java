@@ -95,7 +95,7 @@ public class FinancialsUtils {
 	
 	public static String formatDateFromString(String dateString) throws ParseException {
 		
-		DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.ENGLISH);
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);
 		Date date = null;
 		if (!dateString.isEmpty()) {
 			date = format.parse(dateString);
