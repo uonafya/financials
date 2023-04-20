@@ -1,26 +1,23 @@
 package org.openmrs.module.financials.reporting.converter;
 
-import org.apache.commons.lang3.StringUtils;
 import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.reporting.data.converter.DataConverter;
 
-import java.text.ParseException;
+import java.sql.Timestamp;
+import java.util.Date;
 
 public class VisitDateDataConverter implements DataConverter {
 	
 	@Override
 	public Object convert(Object obj) {
 		
-		String value = (String) obj;
-		if (StringUtils.isBlank(value)) {
+		Timestamp value = (Timestamp) obj;
+		if (value == null) {
 			return "";
 		}
-		try {
-			return FinancialsUtils.formatDateFromString((String) obj);
-		}
-		catch (ParseException e) {
-			throw new RuntimeException(e);
-		}
+		Date date = new Date();
+		date.setTime(value.getTime());
+		return FinancialsUtils.formatDateWithTime((date));
 	}
 	
 	@Override

@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reports;
 
+import org.openmrs.Location;
 import org.openmrs.module.financials.reporting.calculation.PatientIdentifierCalculation;
 import org.openmrs.module.financials.reporting.converter.VisitDateDataConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
@@ -67,10 +68,8 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		PatientDataSetDefinition allVisits = allPatients();
 		allVisits.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		allVisits.addParameter(new Parameter("endDate", "End Date Date", Date.class));
-		report.setBaseCohortDefinition(ReportUtils.map(allPatientsCohort(), "startDate=${startDate},endDate=${endDate+23h}"));
-		DateUtil.getEndOfDay(new Date());
-		return Arrays.asList(
-		    ReportUtils.map((DataSetDefinition) allVisits, "startDate=${startDate},endDate=${endDate+23h}"),
+		report.setBaseCohortDefinition(ReportUtils.map(allPatientsCohort(), "startDate=${startDate},endDate=${endDate}"));
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) allVisits, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
 	}
 	
@@ -99,9 +98,10 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.setName("Active Patients");
-		cd.setQuery("SELECT p.patient_id FROM patient p " + " INNER JOIN visit v ON p.patient_id=v.patient_id "
+		cd.setQuery("SELECT p.patient_id FROM patient p "
+		        + " INNER JOIN visit v ON p.patient_id=v.patient_id "
 		        + " INNER JOIN encounter e ON e.visit_id=v.visit_id "
-		        + " WHERE v.date_started BETWEEN :startDate AND :endDate AND p.voided=0 AND v.voided=0 AND e.voided=0");
+		        + " WHERE v.date_started BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) AND p.voided=0 AND v.voided=0 AND e.voided=0");
 		return cd;
 	}
 	
@@ -109,9 +109,9 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		SqlPatientDataDefinition dsd = new SqlPatientDataDefinition();
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End  Date", Date.class));
-		dsd.setName("Encounter date");
+		dsd.setName("Visit start date");
 		dsd.setQuery("SELECT p.patient_id, v.date_started FROM patient p INNER JOIN visit v ON p.patient_id=v.patient_id "
-		        + " WHERE v.date_started BETWEEN :startDate AND :endDate AND p.voided=0 AND v.voided=0 ");
+		        + " WHERE v.date_started BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) AND p.voided=0 AND v.voided=0 ");
 		return dsd;
 	}
 }

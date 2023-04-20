@@ -34,6 +34,28 @@
 		</createTable>
         <addForeignKeyConstraint constraintName="financials_item_owner_fk" baseTableName="financials_item" baseColumnNames="owner"  referencedTableName="users"
                                  referencedColumnNames="user_id" />
+                                 Medical Exams
+total_sales
+ip_cash
+maternity
+xray
+lab
+theatre
+mortuary
+op_treatment
+pharmacy
+medical_exam
+medical_reports_including_P3
+dental
+physio_therapy
+occupational_therapy
+medical_records_cards_and_files
+booking_fees
+rental_services
+ambulance
+public_health_services
+ent_and_other_clinics
+other
     </changeSet> -->
  
 </databaseChangeLog>
