@@ -17,10 +17,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.Program;
 import org.openmrs.api.context.Context;
-import org.openmrs.module.kenyacore.ContentManager;
 import org.openmrs.module.appframework.domain.AppDescriptor;
-import org.openmrs.module.kenyacore.program.ProgramManager;
+import org.openmrs.module.kenyacore.ContentManager;
 import org.openmrs.module.kenyacore.program.ProgramDescriptor;
+import org.openmrs.module.kenyacore.program.ProgramManager;
 import org.openmrs.module.kenyacore.report.CalculationReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.builder.Builds;
@@ -32,7 +32,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 @Component
 public class EhrReportManager implements ContentManager {
@@ -57,7 +64,7 @@ public class EhrReportManager implements ContentManager {
 	 */
 	@Override
 	public int getPriority() {
-		return 100;
+		return 1001;
 	}
 	
 	/**
@@ -69,13 +76,17 @@ public class EhrReportManager implements ContentManager {
 		
 		// Process ehr report descriptor components
 		for (ReportDescriptor descriptor : Context.getRegisteredComponents(ReportDescriptor.class)) {
-			if (ehrReports.containsKey(descriptor.getTargetUuid())) {
-				throw new RuntimeException("Report " + descriptor.getTargetUuid() + " already registered");
+			for (AppDescriptor appDescriptor : descriptor.getApps()) {
+				if (appDescriptor.getId().equals("financials.ehr.reports")) {
+					if (ehrReports.containsKey(descriptor.getTargetUuid())) {
+						throw new RuntimeException("Report " + descriptor.getTargetUuid() + " already registered");
+					}
+					
+					ehrReports.put(descriptor.getTargetUuid(), descriptor);
+					
+					log.debug("Registered report descriptor: " + descriptor.getId());
+				}
 			}
-			
-			ehrReports.put(descriptor.getTargetUuid(), descriptor);
-			
-			log.debug("Registered report descriptor: " + descriptor.getId());
 		}
 		
 		// Process form configuration beans
@@ -88,7 +99,6 @@ public class EhrReportManager implements ContentManager {
 			// Register additional program specific reports
 			if (configuration.getEhrProgramReports() != null) {
 				Map<ProgramDescriptor, Set<ReportDescriptor>> programReports = configuration.getEhrProgramReports();
-				
 				for (ProgramDescriptor programDescriptor : programReports.keySet()) {
 					for (ReportDescriptor report : programReports.get(programDescriptor)) {
 						programDescriptor.addReport(report);
@@ -102,7 +112,10 @@ public class EhrReportManager implements ContentManager {
 			Builds builds = builder.getClass().getAnnotation(Builds.class);
 			if (builds != null) {
 				for (String reportId : builds.value()) {
-					builders.put(reportId, builder);
+					String[] reportIdValueSplit = reportId.split("\\.");
+					if (reportIdValueSplit[0].equals("financials")) {
+						builders.put(reportId, builder);
+					}
 				}
 			}
 		}
@@ -110,13 +123,13 @@ public class EhrReportManager implements ContentManager {
 		// Build definitions if builder available
 		for (ReportDescriptor report : getAllEhrReportDescriptors()) {
 			// We don't use usual load mechanism because we don't want to de-serialise the definition
+			System.out.println("Report discriptors in the build>>" + report.getId());
 			ReportDefinition existingDefinition = getReportDefinitionStub(report.getTargetUuid());
 			
 			ReportBuilder builder = getEhrReportBuilder(report);
 			
 			if (builder != null) {
 				ReportDefinition definition = builder.build(report);
-				
 				// Steal id of existing definition
 				if (existingDefinition != null) {
 					definition.setId(existingDefinition.getId());
@@ -166,6 +179,7 @@ public class EhrReportManager implements ContentManager {
 	 */
 	public List<ReportDescriptor> getEhrProgramReports(AppDescriptor app, Program program) {
 		ProgramDescriptor programDescriptor = programManager.getProgramDescriptor(program);
+		System.out.println("The program discriptor is >>" + programDescriptor.getId());
 		if (programDescriptor.getReports() != null) {
 			return filterReports(programDescriptor.getReports(), app);
 		}
@@ -199,6 +213,7 @@ public class EhrReportManager implements ContentManager {
 	protected List<ReportDescriptor> filterReports(Collection<ReportDescriptor> descriptors, AppDescriptor app) {
 		List<ReportDescriptor> filtered = new ArrayList<ReportDescriptor>();
 		for (ReportDescriptor descriptor : descriptors) {
+			System.out.println("The report discriptors are as follows>>" + descriptor.getName());
 			
 			// Filter by app id
 			if (app != null && descriptor.getApps() != null && !descriptor.getApps().contains(app)) {

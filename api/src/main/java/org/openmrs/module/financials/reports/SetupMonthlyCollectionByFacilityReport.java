@@ -37,12 +37,20 @@ public class SetupMonthlyCollectionByFacilityReport extends AbstractHybridReport
 	
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
-		SqlDataSetDefinition dsd = new SqlDataSetDefinition();
-		dsd.setName("mcbf");
-		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
-		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.setSqlQuery(MonthlyCollectionQueries.getMonthlySummaryQuery());
-		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate+23h}"));
+		SqlDataSetDefinition dsdM1 = new SqlDataSetDefinition();
+		dsdM1.setName("M1");
+		dsdM1.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsdM1.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsdM1.setSqlQuery(MonthlyCollectionQueries.getMonthlySummaryQuery());
+		
+		SqlDataSetDefinition dsdM2 = new SqlDataSetDefinition();
+		dsdM2.setName("M2");
+		dsdM2.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsdM2.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsdM2.setSqlQuery(MonthlyCollectionQueries.getMonthlySummaryQuery());
+		
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsdM1, "startDate=${startDate},endDate=${endDate+23h}"),
+		    ReportUtils.map((DataSetDefinition) dsdM2, "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 	
 }
