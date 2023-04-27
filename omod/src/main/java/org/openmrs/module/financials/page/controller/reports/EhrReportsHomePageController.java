@@ -1,9 +1,8 @@
 package org.openmrs.module.financials.page.controller.reports;
 
 import org.openmrs.Program;
-import org.openmrs.module.financials.report.EhrReportManager;
-import org.openmrs.module.kenyacore.program.ProgramDescriptor;
 import org.openmrs.module.appframework.domain.AppDescriptor;
+import org.openmrs.module.kenyacore.program.ProgramDescriptor;
 import org.openmrs.module.kenyacore.program.ProgramManager;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportManager;
@@ -23,7 +22,7 @@ import java.util.Map;
 @AppPage("financials.ehr.reports")
 public class EhrReportsHomePageController {
 	
-	public void controller(PageModel model, UiUtils ui, @SpringBean EhrReportManager reportManager,
+	public void controller(PageModel model, UiUtils ui, @SpringBean ReportManager reportManager,
 	        @SpringBean ProgramManager programManager, @SpringBean KenyaUiUtils kenyaUi, PageRequest pageRequest) {
 		
 		AppDescriptor currentApp = kenyaUi.getCurrentApp(pageRequest);
@@ -31,14 +30,14 @@ public class EhrReportsHomePageController {
 		Map<String, List<SimpleObject>> reportsByProgram = new LinkedHashMap<String, List<SimpleObject>>();
 		
 		List<SimpleObject> common = new ArrayList<SimpleObject>();
-		for (ReportDescriptor report : reportManager.getEhrCommonReports(currentApp)) {
+		for (ReportDescriptor report : reportManager.getCommonReports(currentApp)) {
 			common.add(ui.simplifyObject(report));
 		}
 		reportsByProgram.put("Facility Summaries", common);
 		
 		for (ProgramDescriptor programDescriptor : programManager.getAllProgramDescriptors()) {
 			Program program = programDescriptor.getTarget();
-			List<ReportDescriptor> reports = reportManager.getEhrProgramReports(currentApp, program);
+			List<ReportDescriptor> reports = reportManager.getProgramReports(currentApp, program);
 			
 			if (reports.size() > 0) {
 				List<SimpleObject> forProgram = new ArrayList<SimpleObject>();

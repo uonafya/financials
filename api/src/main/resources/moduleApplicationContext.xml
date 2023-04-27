@@ -475,8 +475,8 @@
         <property name="repeatingSection" value="sheet:3,row:9,dataset:daily" />
     </bean>
 
-    <bean id="financials.config.report" class="org.openmrs.module.financials.report.EhrReportConfiguration">
-        <property name="ehrCommonReports">
+    <bean id="financials.config.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
+        <property name="commonReports">
             <set>
                 <ref bean="financials.common.report.facility.monthly.collection"/>
             </set>

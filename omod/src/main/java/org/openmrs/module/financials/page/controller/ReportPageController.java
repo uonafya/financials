@@ -14,11 +14,11 @@ import org.openmrs.Role;
 import org.openmrs.User;
 import org.openmrs.api.AdministrationService;
 import org.openmrs.api.context.Context;
-import org.openmrs.module.financials.report.EhrReportManager;
 import org.openmrs.module.kenyacore.CoreUtils;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.IndicatorReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
+import org.openmrs.module.kenyacore.report.ReportManager;
 import org.openmrs.module.kenyaemr.metadata.SecurityMetadata;
 import org.openmrs.module.kenyaemr.util.EmrUtils;
 import org.openmrs.module.kenyaui.KenyaUiUtils;
@@ -36,7 +36,13 @@ import org.openmrs.ui.framework.page.PageRequest;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Report overview page
@@ -49,11 +55,11 @@ public class ReportPageController {
 	public void get(@RequestParam("reportUuid") String reportUuid,
 	        @RequestParam(required = false, value = "startDate") Date startDate,
 	        @RequestParam("returnUrl") String returnUrl, PageRequest pageRequest, PageModel model, UiUtils ui,
-	        @SpringBean EhrReportManager reportManager, @SpringBean KenyaUiUtils kenyaUi,
+	        @SpringBean ReportManager reportManager, @SpringBean KenyaUiUtils kenyaUi,
 	        @SpringBean ReportService reportService, @SpringBean ReportDefinitionService definitionService) throws Exception {
 		
 		ReportDefinition definition = definitionService.getDefinitionByUuid(reportUuid);
-		ReportDescriptor ehrReport = reportManager.getEhrReportDescriptor(definition);
+		ReportDescriptor ehrReport = reportManager.getReportDescriptor(definition);
 		admService = Context.getAdministrationService();
 		CoreUtils.checkAccess(ehrReport, kenyaUi.getCurrentApp(pageRequest));
 		User loggedInUser = Context.getUserContext().getAuthenticatedUser();

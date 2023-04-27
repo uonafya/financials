@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-@Component
+//@Component
 public class EhrReportManager implements ContentManager {
 	
 	protected static final Log log = LogFactory.getLog(EhrReportManager.class);
