@@ -479,6 +479,7 @@
         <property name="commonReports">
             <set>
                 <ref bean="financials.common.report.facility.monthly.collection"/>
+                <ref bean="financials.common.report.facility.monthly.collection.other"/>
             </set>
         </property>
     </bean>
@@ -493,6 +494,18 @@
             </set>
         </property>
         <property name="template" value="financials:mcbf.xls" />
-        <property name="repeatingSection" value="sheet:1,row:12,dataset:M1 | sheet:2,row:3,dataset:M2" />
+        <property name="repeatingSection" value="sheet:1,row:12,dataset:M1" />
+    </bean>
+    <bean id="financials.common.report.facility.monthly.collection.other" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="E5FDEE44-A67E-4530-97D9-751BD2DC91D7" />
+        <property name="name" value="Monthly Collection by Facility Other income" />
+        <property name="description" value="Monthly Collection Summary by Facility other income - upto date for the last 24 hours" />
+        <property name="apps">
+            <set>
+                <ref bean="financials.revenue.ehr.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:mcbf1.xls" />
+        <property name="repeatingSection" value="sheet:1,row:3,dataset:M2" />
     </bean>
 </beans>
