@@ -478,8 +478,8 @@
     <bean id="financials.config.report" class="org.openmrs.module.kenyacore.report.ReportConfiguration">
         <property name="commonReports">
             <set>
-                <ref bean="financials.common.report.facility.monthly.collection"/>
-                <ref bean="financials.common.report.facility.monthly.collection.other"/>
+                <ref bean="financials.common.report.facility.monthly.collection" />
+                <ref bean="financials.common.report.facility.monthly.collection.other" />
             </set>
         </property>
     </bean>

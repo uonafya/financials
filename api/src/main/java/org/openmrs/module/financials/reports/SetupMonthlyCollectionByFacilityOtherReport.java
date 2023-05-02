@@ -22,29 +22,29 @@ import java.util.List;
 @Component
 @Builds({ "financials.common.report.facility.monthly.collection.other" })
 public class SetupMonthlyCollectionByFacilityOtherReport extends AbstractHybridReportBuilder {
-
-    @Override
-    protected Mapped<CohortDefinition> buildCohort(HybridReportDescriptor hybridReportDescriptor,
-                                                   PatientDataSetDefinition patientDataSetDefinition) {
-        return null;
-    }
-
-    @Override
-    protected List<Parameter> getParameters(ReportDescriptor reportDescriptor) {
-        return Arrays.asList(new Parameter("startDate", "Start Date", Date.class), new Parameter("endDate", "End Date",
-                Date.class), new Parameter("dateBasedReporting", "", String.class));
-    }
-
-    @Override
-    protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
-        SqlDataSetDefinition dsdM2 = new SqlDataSetDefinition();
-        dsdM2.setName("M2");
-        dsdM2.addParameter(new Parameter("startDate", "Start Date", Date.class));
-        dsdM2.addParameter(new Parameter("endDate", "End Date", Date.class));
-        dsdM2.setSqlQuery(MonthlyCollectionQueries.getMonthlySummaryQueryM2());
-
-        return Arrays.asList(ReportUtils.map((DataSetDefinition) dsdM2, "startDate=${startDate},endDate=${endDate+23h}"),
-                ReportUtils.map((DataSetDefinition) dsdM2, "startDate=${startDate},endDate=${endDate+23h}"));
-    }
-
+	
+	@Override
+	protected Mapped<CohortDefinition> buildCohort(HybridReportDescriptor hybridReportDescriptor,
+	        PatientDataSetDefinition patientDataSetDefinition) {
+		return null;
+	}
+	
+	@Override
+	protected List<Parameter> getParameters(ReportDescriptor reportDescriptor) {
+		return Arrays.asList(new Parameter("startDate", "Start Date", Date.class), new Parameter("endDate", "End Date",
+		        Date.class), new Parameter("dateBasedReporting", "", String.class));
+	}
+	
+	@Override
+	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor descriptor, ReportDefinition report) {
+		SqlDataSetDefinition dsdM2 = new SqlDataSetDefinition();
+		dsdM2.setName("M2");
+		dsdM2.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsdM2.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsdM2.setSqlQuery(MonthlyCollectionQueries.getMonthlySummaryQueryM2());
+		
+		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsdM2, "startDate=${startDate},endDate=${endDate+23h}"),
+		    ReportUtils.map((DataSetDefinition) dsdM2, "startDate=${startDate},endDate=${endDate+23h}"));
+	}
+	
 }
