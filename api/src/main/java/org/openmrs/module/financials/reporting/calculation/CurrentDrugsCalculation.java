@@ -22,7 +22,6 @@ public class CurrentDrugsCalculation extends AbstractPatientCalculation {
 	        PatientCalculationContext context) {
 		
 		CalculationResultMap ret = new CalculationResultMap();
-		
 		CalculationResultMap lastEncounter = Calculations.lastEncounter(Context.getEncounterService()
 		        .getEncounterTypeByUuid("ba45c278-f290-11ea-9666-1b3e6e848887"), cohort, context);
 		for (Integer pId : cohort) {
@@ -33,9 +32,12 @@ public class CurrentDrugsCalculation extends AbstractPatientCalculation {
 			List<OpdDrugOrder> opdDrugs = Context.getService(PatientDashboardService.class)
 			        .getOpdDrugOrder(lastOpdEncounter);
 			for (OpdDrugOrder opdDrugOrder : opdDrugs) {
-				drugs.append(opdDrugOrder.getInventoryDrug().getName() + " "
-				        + opdDrugOrder.getInventoryDrugFormulation().getName() + " " + opdDrugOrder.getDosage() + " "
-				        + opdDrugOrder.getFrequency().getName().getName() + "\n");
+				if (opdDrugOrder != null && opdDrugOrder.getInventoryDrug() != null) {
+					drugs.append(opdDrugOrder.getInventoryDrug().getName()).append(" ")
+					        .append(opdDrugOrder.getInventoryDrugFormulation().getName()).append(" ")
+					        .append(opdDrugOrder.getDosage()).append(" ")
+					        .append(opdDrugOrder.getFrequency().getName().getName()).append("\n");
+				}
 			}
 			ret.put(pId, new SimpleResult(drugs, this));
 		}
