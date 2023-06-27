@@ -58,7 +58,7 @@
 
     <bean id="financials.revenue" factory-bean="kenyacore.appFactoryBean" factory-method="createInstance">
         <constructor-arg value="financials.home"/>
-        <constructor-arg value="Revenue"/>
+        <constructor-arg value="Facility Summaries"/>
         <constructor-arg value="financials/financials.page"/>
         <constructor-arg value="financials:apps/revenue.png"/>
         <constructor-arg value="3000"/>

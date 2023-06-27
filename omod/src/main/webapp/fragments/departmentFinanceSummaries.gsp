@@ -1,12 +1,57 @@
 <script type="text/javascript">
     jQuery(function() {
-            var table =  jQuery("#dDetails").DataTable({
+            populateDepartmentDetails();
+            jQuery('#dDetails tbody').on( 'click', 'tr', function () {
+                console.log( table.row( this ).data() );
+            } );
+            jQuery('#dept').on('change', function() {
+                populateDepartmentDetails();
+            });
+    });
+    function populateDepartmentDetails() {
+        fetchDepartmentSummariesByDateRangeAndDepartment(jQuery("#summaryFromDate-field").val(), jQuery("#summaryToDate-field").val(), jQuery("#dept").val());
+
+      }
+      function fetchDepartmentSummariesByDateRangeAndDepartment(startDate, toDate, dept) {
+            var toReturn;
+            jQuery.ajax({
+                type: "GET",
+                url: '${ui.actionLink("financials", "departmentFinanceSummaries", "getDepartmentsSummaries")}',
+                dataType: "json",
+                global: false,
+                async: false,
+                data: {
+                    fromDate: fromDate,
+                    toDate: toDate,
+                    dept: dept
+                },
+                success: function (data) {
+                    toReturn = data;
+                }
+            });
+            return populateTableBodyDepartmentSummary(toReturn);
+        }
+        function populateTableBodyDepartmentSummary(data) {
+              jQuery("#departmentSummaryDetails").DataTable().clear().destroy();
+              data.map((item) => {
+                  jQuery("#labTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.department + "</td><td>" + item.servicePaidFor + "</td><td>" + item.totalAmount + "</td></tr>");
+              });
+              initDepartmentDataTable();
+          }
+      function initDepartmentDataTable() {
+            var table = jQuery("#laboratory").DataTable({
                 dom: 'Bfrtip',
+                "oLanguage": {
+                    "oPaginate": {
+                        "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
+                        "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
+                    }
+                },
                 buttons: ['copy', 'csv', 'excel',
                     {   extend: 'print',
-                        messageTop: 'Departmental transactions list.',
+                        messageTop: 'Laboratory revenue transactions.',
                         customize: function ( win ) {
-                            jq(win.document.body)
+                            jQuery(win.document.body)
                                 .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
                         },
                         repeatingHead: {
@@ -17,12 +62,8 @@
                         title: ''
                     }
                 ]
-
             });
-            jQuery('#dDetails tbody').on( 'click', 'tr', function () {
-                console.log( table.row( this ).data() );
-            } );
-    });
+        }
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
@@ -54,13 +95,13 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
             <label for="dept">Department</label>
             <select name="dept" id="dept" style="width: 200px;">
-                <option value="0">ALL</option>
+                <option value="0">All</option>
                 <% departments.each { dept -> %>
                 <option value="${dept.id}">${dept.name}</option>
                 <% } %>
             </select>
         </div>
-        <table id="dDetails">
+        <table id="departmentSummaryDetails">
             <thead>
             <tr>
                 <td>Transaction date</td>
@@ -69,23 +110,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
                 <td>Amount collected</td>
             </tr>
             </thead>
-            <tbody>
-            <% if (summaryAccounts.empty) { %>
-            <tr>
-                <td colspan="3">
-                    No records found
-                </td>
-            </tr>
-            <% } %>
-            <% summaryAccounts.each {%>
-            <tr>
-                <td>${it.transactionDate}</td>
-                <td>${it.department}</td>
-                <td>${it.servicePaidFor}</td>
-                <td>${it.totalAmount}</td>
-
-            </tr>
-            <% } %>
+            <tbody id="departmentTblBody">
             </tbody>
         </table>
 
