@@ -105,13 +105,15 @@ public class FinancialsUtils {
 	
 	public static List<Concept> registrationFeeConcepts() {
 		return Arrays.asList(getConcept("19e1f7a9-52b4-4975-804d-5c74445be316"),
-		    getConcept("caf177ab-8d96-45bb-8ab4-f66507f11b2b"), getConcept("cecc12d2-4308-4567-9bd1-92011b1648df"));
+		    getConcept("caf177ab-8d96-45bb-8ab4-f66507f11b2b"), getConcept("cecc12d2-4308-4567-9bd1-92011b1648df"),
+		    getConcept("b76cb176-b67b-45c5-b335-e439d4fb5530"), getConcept("0db22464-c64b-49e6-8e70-ddc49eb460d9"));
 	}
 	
 	public static List<Concept> revisitFeeConcepts() {
 		return Arrays.asList(getConcept("81f2e941-d724-4794-98bf-8764b593c838"),
 		    getConcept("509a7862-de5a-47e4-8837-4851024dbccf"), getConcept("81cfb05a-998d-46f6-b0b0-8d26e27840ae"),
-		    getConcept("a6deb3a8-e9a6-41fc-a221-469b8a364f9b"));
+		    getConcept("a6deb3a8-e9a6-41fc-a221-469b8a364f9b"), getConcept("8bedeb0c-21fb-4a60-a761-287085d9fc95"),
+		    getConcept("3b6d7b9f-9cbb-4fa2-9772-26d33b2452c0"));
 	}
 	
 	public static List<Concept> specialClinicFeeConcepts() {

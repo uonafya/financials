@@ -87,7 +87,7 @@
                     icon: "buttons/Zoom-in.png"
             ],
             [
-                    label: "Pharmacy Department Summaries",
+                    label: "Pharmacy Summaries",
                     href: ui.pageLink("financials", "financials", [section: "pharmacyRevenueSummaries"]),
                     active: (selection == "section-pharmacyRevenueSummaries"),
                     iconProvider: "financials",
