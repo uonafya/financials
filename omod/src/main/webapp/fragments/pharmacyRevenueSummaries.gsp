@@ -1,8 +1,5 @@
 <script type="text/javascript">
     jQuery(function() {
-        jQuery('#pharmacySummaryDetails tbody').on( 'click', 'tr', function () {
-            console.log( table.row( this ).data() );
-        } );
       updateTable();
       jq("#filterPharmacy").click(function () {
         updateTable();
@@ -32,7 +29,7 @@
         return populateTableBodyForPatientPharmacySummary(toReturn);
     }
     function populateTableBodyForPatientPharmacySummary(data) {
-      jQuery("#patientPharmacySummaryItems").DataTable().clear().destroy();
+      jQuery("#pharmacySummaryDetails").DataTable().clear().destroy();
       data.map((item) => {
         jQuery("#patientPharmacySummaryItemsTblBody").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
       });

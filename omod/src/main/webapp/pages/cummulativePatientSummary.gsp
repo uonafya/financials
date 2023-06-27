@@ -1,6 +1,5 @@
 <%
     ui.decorateWith("kenyaemr", "standardPage", [ layout: "sidebar" ])
-    ui.includeCss("ehrconfigs", "referenceapplication.css")
     def menuItems = [
             [ label: "Back to revenue summary",
               iconProvider: "kenyaui",

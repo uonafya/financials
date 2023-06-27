@@ -12,7 +12,7 @@
         fetchDepartmentSummariesByDateRangeAndDepartment(jQuery("#summaryFromDate-field").val(), jQuery("#summaryToDate-field").val(), jQuery("#dept").val());
 
       }
-      function fetchDepartmentSummariesByDateRangeAndDepartment(startDate, toDate, dept) {
+      function fetchDepartmentSummariesByDateRangeAndDepartment(fromDate, toDate, dept) {
             var toReturn;
             jQuery.ajax({
                 type: "GET",

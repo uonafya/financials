@@ -24,9 +24,18 @@ public class PharmacyRevenueSummariesFragmentController {
 	public List<SimpleObject> fetchPharmacySummariesByDateRange(
 	        @RequestParam(value = "fromDate", required = false) Date startDate,
 	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils uiUtils) {
-		String fromDate = FinancialsUtils.formatDateInDDMMYYYY(startDate);
-		String toDate = FinancialsUtils.formatDateInDDMMYYYY(endDate);
+		System.out.println("The start date is " + startDate);
+		System.out.println("The end date is " + startDate);
+		String fromDate = "";
+		if (startDate != null) {
+			FinancialsUtils.formatDateInDDMMYYYY(startDate);
+		}
+		String toDate = "";
+		if (endDate != null) {
+			FinancialsUtils.formatDateInDDMMYYYY(endDate);
+		}
 		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>(pullSummaries(fromDate, toDate));
+		System.out.println("The results is >>" + pharmacyTransactions.size());
 		
 		return SimpleObject.fromCollection(pharmacyTransactions, uiUtils, "createdOn", "patientNames", "patientIdentifier",
 		    "waiverAmount", "totalAMount");

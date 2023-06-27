@@ -8,7 +8,6 @@
     ui.includeJavascript("ehrconfigs", "bootstrap.min.js")
     ui.includeJavascript("financials", "jquery.dataTables.min.js")
     ui.includeJavascript("patientdashboardapp", "jq.print.js")
-    ui.includeCss("ehrconfigs", "referenceapplication.css")
 
 
 %>
@@ -66,15 +65,13 @@
 </script>
 <br />
 <div>
-    <table cellpadding="0" cellspacing="0" border="0" width=25% align="center">
+    <table cellpadding="0" cellspacing="0" border="0" align="center">
         <tr>
             <td>
                 <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-            </td>
-            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-            </td>
-            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <button id="filter" type="button"  onclick="getBills()"  class=" btn btn-primary right">${ui.message("Filter")}
                 </button>
             </td>
