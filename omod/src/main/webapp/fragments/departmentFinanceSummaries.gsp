@@ -34,12 +34,12 @@
         function populateTableBodyDepartmentSummary(data) {
               jQuery("#departmentSummaryDetails").DataTable().clear().destroy();
               data.map((item) => {
-                  jQuery("#labTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.department + "</td><td>" + item.servicePaidFor + "</td><td>" + item.totalAmount + "</td></tr>");
+                  jQuery("#departmentTblBody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.department + "</td><td>" + item.servicePaidFor + "</td><td>" + item.totalAmount + "</td></tr>");
               });
               initDepartmentDataTable();
           }
       function initDepartmentDataTable() {
-            var table = jQuery("#laboratory").DataTable({
+            var table = jQuery("#departmentSummaryDetails").DataTable({
                 dom: 'Bfrtip',
                 "oLanguage": {
                     "oPaginate": {
@@ -49,7 +49,7 @@
                 },
                 buttons: ['copy', 'csv', 'excel',
                     {   extend: 'print',
-                        messageTop: 'Laboratory revenue transactions.',
+                        messageTop: 'Departmental revenue transactions.',
                         customize: function ( win ) {
                             jQuery(win.document.body)
                                 .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);

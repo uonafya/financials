@@ -12,6 +12,7 @@ import org.openmrs.ui.framework.page.PageModel;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class PharmacyRevenueSummariesFragmentController {
@@ -21,10 +22,11 @@ public class PharmacyRevenueSummariesFragmentController {
 	}
 	
 	public List<SimpleObject> fetchPharmacySummariesByDateRange(
-	        @RequestParam(value = "fromDate", required = false) String startDate,
-	        @RequestParam(value = "toDate", required = false) String endDate, UiUtils uiUtils) {
-		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>(
-		        pullSummaries(startDate, endDate));
+	        @RequestParam(value = "fromDate", required = false) Date startDate,
+	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils uiUtils) {
+		String fromDate = FinancialsUtils.formatDateInDDMMYYYY(startDate);
+		String toDate = FinancialsUtils.formatDateInDDMMYYYY(endDate);
+		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>(pullSummaries(fromDate, toDate));
 		
 		return SimpleObject.fromCollection(pharmacyTransactions, uiUtils, "createdOn", "patientNames", "patientIdentifier",
 		    "waiverAmount", "totalAMount");

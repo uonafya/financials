@@ -1,36 +1,6 @@
 <script type="text/javascript">
     jQuery(function() {
-        var table =  jQuery("#pDetails").DataTable({
-            dom: 'Bfrtip',
-              "oLanguage": {
-                "oPaginate": {
-                  "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
-                  "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
-                }
-              },
-            buttons: ['copy', 'csv', 'excel',
-                {   extend: 'print',
-                    messageTop: 'Pharmacy revenue transactions.',
-                    customize: function ( win ) {
-                        jq(win.document.body)
-                            .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
-                    },
-                    repeatingHead: {
-                        logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
-                        logoPosition: 'center',
-                        logoStyle: ''
-                    },
-                    title: ''
-                }
-                ],
-            initComplete: function (){
-
-                jq(this.api().table().container()).find('input[type="search"]').parent().wrap('<form>').parent().attr('autocomplete','off').css('overflow','hidden').css('margin','auto');
-
-            }
-
-        });
-        jQuery('#pDetails tbody').on( 'click', 'tr', function () {
+        jQuery('#pharmacySummaryDetails tbody').on( 'click', 'tr', function () {
             console.log( table.row( this ).data() );
         } );
       updateTable();
@@ -40,8 +10,7 @@
     });
 
     function updateTable() {
-        summaryData=""
-        summaryData=fetchPharmacySummariesByDateRange(moment(jq("#summaryFromDate-field").val()).format('DD/MM/YYYY'), moment(jq('#summaryToDate-field').val()).format('DD/MM/YYYY'));
+        fetchPharmacySummariesByDateRange(jQuery("#summaryFromDate-field").val(), jQuery("#summaryToDate-field").val());
     }
 
     function fetchPharmacySummariesByDateRange(fromDate, toDate) {
@@ -63,11 +32,38 @@
         return populateTableBodyForPatientPharmacySummary(toReturn);
     }
     function populateTableBodyForPatientPharmacySummary(data) {
-      jQuery("#patientPharmacySummaryItems").empty();
+      jQuery("#patientPharmacySummaryItems").DataTable().clear().destroy();
       data.map((item) => {
-        jQuery("#patientPharmacySummaryItems").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
+        jQuery("#patientPharmacySummaryItemsTblBody").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
       });
+      initPharmacyDataTable();
     }
+    function initPharmacyDataTable() {
+                var table = jQuery("#pharmacySummaryDetails").DataTable({
+                    dom: 'Bfrtip',
+                    "oLanguage": {
+                        "oPaginate": {
+                            "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
+                            "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
+                        }
+                    },
+                    buttons: ['copy', 'csv', 'excel',
+                        {   extend: 'print',
+                            messageTop: 'Pharmacy revenue transactions.',
+                            customize: function ( win ) {
+                                jQuery(win.document.body)
+                                    .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                            },
+                            repeatingHead: {
+                                logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                                logoPosition: 'center',
+                                logoStyle: ''
+                            },
+                            title: ''
+                        }
+                    ]
+                });
+            }
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
@@ -101,7 +97,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             <button id="filterPharmacy" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
         </div>
 
-        <table id="pDetails">
+        <table id="pharmacySummaryDetails">
             <thead>
             <tr>
                 <td>Transaction date</td>
@@ -111,7 +107,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <td>Total Amount Charged</td>
             </tr>
             </thead>
-            <tbody id="patientPharmacySummaryItems"></tbody>
+            <tbody id="patientPharmacySummaryItemsTblBody"></tbody>
         </table>
 
     </div>
