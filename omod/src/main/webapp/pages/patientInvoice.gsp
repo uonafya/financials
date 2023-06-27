@@ -8,6 +8,7 @@
     ui.includeJavascript("ehrconfigs", "bootstrap.min.js")
     ui.includeJavascript("financials", "jquery.dataTables.min.js")
     ui.includeJavascript("patientdashboardapp", "jq.print.js")
+    ui.includeCss("ehrconfigs", "referenceapplication.css")
 
 
 %>
@@ -63,84 +64,84 @@
     }
 
 </script>
+<br />
+<div>
+    <table cellpadding="0" cellspacing="0" border="0" width=25% align="center">
+        <tr>
+            <td>
+                <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+            </td>
+            <td>
+                <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
+            </td>
+            <td>
+                <button id="filter" type="button"  onclick="getBills()"  class=" btn btn-primary right">${ui.message("Filter")}
+                </button>
+            </td>
+            <input id="patientId" value="${patient.getPatientId()}" style="display: none">
+        <tr>
+    </table>
+</div>
+<br/>
+<div id="invoice-detail">
+    <div id="person-detail">
+        <div style="text-align: center;">
+            ${ui.includeFragment("patientdashboardapp", "printHeader")}
+        </div>
 
-<div class="p-20">
-    <div class="row card">
-        <div class="col-4" style="margin-bottom: 10px">
-            <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-        </div>
-        <div class="col-4" style="margin-bottom: 10px">
-            <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
-        </div>
-        <div class="col-4" style="margin-bottom: 10px">
-            <button id="filter" type="button"  onclick="getBills()"  class=" btn btn-primary right">${ui.message("Filter")}
-            </button>
-        </div>
-        <input id="patientId" value="${patient.getPatientId()}" style="display: none">
+        <h3>PATIENT SUMMARY INFORMATION</h3>
+
+        <label>
+            <span class='status active'></span>
+            Identifier:
+        </label>
+        <span>${patient.getPatientIdentifier()}</span>
+        <br/>
+
+        <label>
+            <span class='status active'></span>
+            Full Names:
+        </label>
+        <span>${patient.givenName} ${patient.familyName} ${patient.middleName ? patient.middleName : ''}</span>
+        <br/>
+
+        <label>
+            <span class='status active'></span>
+            Age:
+        </label>
+        <span>${patient.age} (${ui.formatDatePretty(patient.birthdate)})</span>
+        <br/>
+
+        <label>
+            <span class='status active'></span>
+            Gender:
+        </label>
+        <span>${patient.gender}</span>
+        <br/>
     </div>
-    <br/>
-    <div id="invoice-detail">
-        <div id="person-detail">
-            <div style="text-align: center;">
-                <center>
-                    <img src="/openmrs/ms/uiframework/resource/ehrinventoryapp/images/kenya_logo.bmp" width="60" height="60" align="middle">
-                </center>
-                ${ui.includeFragment("patientdashboardapp", "printHeader")}
-            </div>
+    <table id="invoice-items" cellpadding="0" cellspacing="0" width=75%>
+        <thead>
+        <tr>
+            <th>Receipt ID</th>
+            <th>Transaction Date</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+            <th>Actual Amount</th>
+            <th>Waiver Amount</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
 
-            <h3>PATIENT SUMMARY INFORMATION</h3>
+        </tbody>
+    </table>
 
-            <label>
-                <span class='status active'></span>
-                Identifier:
-            </label>
-            <span>${patient.getPatientIdentifier()}</span>
-            <br/>
-
-            <label>
-                <span class='status active'></span>
-                Full Names:
-            </label>
-            <span>${patient.givenName} ${patient.familyName} ${patient.middleName ? patient.middleName : ''}</span>
-            <br/>
-
-            <label>
-                <span class='status active'></span>
-                Age:
-            </label>
-            <span>${patient.age} (${ui.formatDatePretty(patient.birthdate)})</span>
-            <br/>
-
-            <label>
-                <span class='status active'></span>
-                Gender:
-            </label>
-            <span>${patient.gender}</span>
-            <br/>
-        </div>
-        <table id="invoice-items">
-            <thead>
-            <tr>
-                <th>Receipt ID</th>
-                <th>Transaction Date</th>
-                <th>Name</th>
-                <th>Quantity</th>
-                <th>Unit price</th>
-                <th>Actual Amount</th>
-                <th>Waiver Amount</th>
-            </tr>
-            </thead>
-            <tbody id="tbody">
-
-            </tbody>
-        </table>
-
-    </div>
-    <div>
-        <button id="printInvoiceBtn"  onclick="printInvoice()" class="info" style="float: right; margin: 50px;">
-            <i class="btn-info"></i>
-            Print Invoice
-        </button>
-    </div>
+</div>
+<div>
+    <button id="printInvoiceBtn"  onclick="printInvoice()" class="info" style="float: right; margin: 50px;">
+        <i class="btn-info"></i>
+        Print Invoice
+    </button>
+</div>
 </div>
 

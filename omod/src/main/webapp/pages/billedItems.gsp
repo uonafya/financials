@@ -4,6 +4,7 @@
 
     ui.includeJavascript("financials", "jquery.dataTables.min.js")
     ui.includeCss("financials", "jquery.dataTables.min.css")
+    ui.includeCss("ehrconfigs", "referenceapplication.css")
 
     def menuItems = [
             [ label: "Back to home",
