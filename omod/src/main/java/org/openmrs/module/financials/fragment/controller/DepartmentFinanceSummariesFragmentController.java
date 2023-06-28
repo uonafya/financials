@@ -18,25 +18,6 @@ import java.util.List;
 public class DepartmentFinanceSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
-		
-		List<PatientServiceBillItem> patientServiceBillItems = Context.getService(HospitalCoreService.class)
-		        .getPatientServiceBillByDepartment(null, null, null);
-		GeneralRevenuePerUnit generalRevenuePerUnit;
-		List<GeneralRevenuePerUnit> summarizedResults = new ArrayList<GeneralRevenuePerUnit>();
-		
-		for (PatientServiceBillItem patientServiceBillItem : patientServiceBillItems) {
-			if (patientServiceBillItem != null && patientServiceBillItem.getDepartment() != null) {
-				generalRevenuePerUnit = new GeneralRevenuePerUnit();
-				generalRevenuePerUnit.setTransactionDate(FinancialsUtils.formatDateWithTime(patientServiceBillItem
-				        .getCreatedDate()));
-				generalRevenuePerUnit.setDepartment(patientServiceBillItem.getDepartment().getName());
-				generalRevenuePerUnit.setServicePaidFor(patientServiceBillItem.getService().getName());
-				generalRevenuePerUnit.setTotalAmount(patientServiceBillItem.getActualAmount());
-				
-				summarizedResults.add(generalRevenuePerUnit);
-			}
-		}
-		model.addAttribute("summaryAccounts", summarizedResults);
 		model.addAttribute("departments", Context.getService(HospitalCoreService.class).getAllDepartment());
 	}
 	
@@ -44,7 +25,7 @@ public class DepartmentFinanceSummariesFragmentController {
 	        @RequestParam(value = "toDate", required = false) Date toDate,
 	        @RequestParam(value = "dept", required = false) String dept, UiUtils ui) {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
-		EhrDepartment ehrDepartment = hospitalCoreService.getDepartmentByName(dept);
+		EhrDepartment ehrDepartment = hospitalCoreService.getDepartmentById(Integer.valueOf(dept));
 		List<PatientServiceBillItem> getBilledItemsPerDepartmentSummaries = new ArrayList<PatientServiceBillItem>(
 		        hospitalCoreService.getPatientServiceBillByDepartment(ehrDepartment, fromDate, toDate));
 		GeneralRevenuePerUnit generalRevenuePerUnit;
