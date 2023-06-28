@@ -103,7 +103,7 @@
         <div style="text-align: center;">
             ${ui.includeFragment("patientdashboardapp", "printHeader")}
         </div>
-        <div style="margin-left: 10%">
+        <div style="margin-left: 12%">
             <h3>PATIENT SUMMARY INFORMATION</h3>
 
             <label>
