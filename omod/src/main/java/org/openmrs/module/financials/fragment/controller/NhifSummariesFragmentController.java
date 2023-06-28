@@ -50,7 +50,7 @@ public class NhifSummariesFragmentController {
 		List<PatientCategoryDetails> getAllPatientWhoHaveNhif = hospitalCoreService.getAllPatientCategoryDetails(
 		    "payingCategory", "NHIF patient", startDate, endDate);
 		
-		return SimpleObject.fromCollection(getNhifObjects(getAllPatientWhoHaveNhif), uiUtils, "names", "identifierValue",
+		return SimpleObject.fromCollection(getNhifObjects(getAllPatientWhoHaveNhif), uiUtils, "patient","names", "identifierValue",
 		    "nhifNumber", "visitType", "visitDate");
 		
 	}

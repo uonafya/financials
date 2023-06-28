@@ -31,7 +31,7 @@
   function populateTableBodyForPatientNhifSummary(data) {
     jQuery("#nhifDetails").DataTable().clear().destroy();
     data.map((item) => {
-      jQuery("#nhifPatientSummaryItems").append("<tr><td>" + item.visitDate + "</td><td>" + item.identifierValue + "</td><td>" + item.names + "</td><td>" + item.visitType +"</td></tr>");
+      jQuery("#nhifPatientSummaryItems").append("<tr><td>" + item.patient.id + "</td><td>" + item.visitDate + "</td><td>" + item.identifierValue + "</td><td>" + item.names + "</td><td>" + item.visitType +"</td></tr>");
     });
 
       var table = jQuery("#nhifDetails").DataTable({
@@ -55,7 +55,10 @@
       });
 
       jQuery('#nhifDetails tbody').on( 'click', 'tr', function () {
-          console.log( table.row( this ).data() );
+          var table =  jq("#nhifDetails").DataTable();
+
+          var billId = table.row(this).data();
+          ui.navigate('financials', 'patientNhifSummary', {patientId: billId[0], whichDate:billId[1] });
       } );
 
   }
