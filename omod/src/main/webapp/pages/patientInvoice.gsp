@@ -13,6 +13,21 @@
 %>
 
 <script type="text/javascript">
+
+        calculateTotals();
+
+        function calculateTotals() {
+            var totalActualAmount = 0;
+
+            $("#tbody tr").each(function() {
+                var actualAmount = parseFloat($(this).find("td:nth-child(6)").text());
+
+                totalActualAmount += actualAmount;
+            });
+
+            $("#total-actual-amount").text(totalActualAmount.toFixed(2));
+        }
+
     var jq = jQuery;
 
     jq = jQuery
@@ -81,7 +96,7 @@
 </div>
 <br/>
 <div id="invoice-detail">
-    <div id="person-detail">
+    <div id="person-detail" style="margin-left: 20%">
         <div style="text-align: center;">
             ${ui.includeFragment("patientdashboardapp", "printHeader")}
         </div>
@@ -131,6 +146,17 @@
         <tbody id="tbody">
 
         </tbody>
+         <tfoot>
+            <tr>
+                <td colspan="5"></td>
+                <td colspan="5"></td>
+                <td colspan="5"></td>
+                <td colspan="5"></td>
+                <td colspan="5"></td>
+                <td id="total-actual-amount"></td>
+                <td id="total-waiver-amount"></td>
+            </tr>
+         </tfoot>
     </table>
 
 </div>

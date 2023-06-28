@@ -102,7 +102,7 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             </select>
         </div>
         <table id="departmentSummaryDetails">
-            <thead>
+            <thead>doctorsSummaries
             <tr>
                 <td>Transaction date</td>
                 <td>Department</td>
