@@ -33,6 +33,7 @@ public class NhifSummariesFragmentController {
 				        .formatPatientIdentifier(patientCategoryDetails.getPatient()));
 				nhifPatientSummarySimplifier.setNhifNumber(patientCategoryDetails.getNhifNumber());
 				nhifPatientSummarySimplifier.setVisitType(getVisitType(patientCategoryDetails.getVisitType()));
+				nhifPatientSummarySimplifier.setPatient(patientCategoryDetails.getPatient());
 				
 				//add to the list
 				nhifPatientSummarySimplifierList.add(nhifPatientSummarySimplifier);
@@ -50,8 +51,8 @@ public class NhifSummariesFragmentController {
 		List<PatientCategoryDetails> getAllPatientWhoHaveNhif = hospitalCoreService.getAllPatientCategoryDetails(
 		    "payingCategory", "NHIF patient", startDate, endDate);
 		
-		return SimpleObject.fromCollection(getNhifObjects(getAllPatientWhoHaveNhif), uiUtils, "patient","names", "identifierValue",
-		    "nhifNumber", "visitType", "visitDate");
+		return SimpleObject.fromCollection(getNhifObjects(getAllPatientWhoHaveNhif), uiUtils, "patient", "names",
+		    "identifierValue", "nhifNumber", "visitType", "visitDate");
 		
 	}
 	
