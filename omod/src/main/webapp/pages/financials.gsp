@@ -112,7 +112,7 @@
                     href: ui.pageLink("financials", "financials", [section: "doctorsSummaries"]),
                     active: (selection == "section-doctorsSummaries"),
                     iconProvider: "financials",
-                    icon: "buttons/Book.png"
+                    icon: "buttons/doctorssum.png"
             ]
     ]
 %>
