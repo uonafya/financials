@@ -14,26 +14,29 @@
 
 <script type="text/javascript">
 
-        calculateTotals();
-
-        function calculateTotals() {
-            var totalActualAmount = 0;
-
-            $("#tbody tr").each(function() {
-                var actualAmount = parseFloat($(this).find("td:nth-child(6)").text());
-
-                totalActualAmount += actualAmount;
-            });
-
-            $("#total-actual-amount").text(totalActualAmount.toFixed(2));
-        }
-
     var jq = jQuery;
 
     jq = jQuery
     jq(document).ready(function() {
         getBills();
+        calculateTotals();
     });
+
+    function calculateTotals() {
+        var totalActualAmount = 0;
+        var totalWaiverAmount = 0;
+
+        jq("#tbody tr").each(function() {
+            var actualAmount = parseFloat(jq(this).find("td:nth-child(6)").text());
+            var waiverAmount = parseFloat(jq(this).find("td:nth-child(7)").text());
+
+            totalActualAmount += actualAmount;
+            totalWaiverAmount += waiverAmount;
+        });
+
+        jq("#total-actual-amount").text(totalActualAmount.toFixed(2));
+        jq("#total-waiver-amount").text(totalWaiverAmount.toFixed(2));
+    }
 
     function getBills(){
         jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getItemizedPatientBillsByDateTimeRange") }', {
@@ -96,40 +99,41 @@
 </div>
 <br/>
 <div id="invoice-detail">
-    <div id="person-detail" style="margin-left: 20%">
+    <div id="person-detail">
         <div style="text-align: center;">
             ${ui.includeFragment("patientdashboardapp", "printHeader")}
         </div>
+        <div style="margin-left: 10%">
+            <h3>PATIENT SUMMARY INFORMATION</h3>
 
-        <h3>PATIENT SUMMARY INFORMATION</h3>
+            <label>
+                <span class='status active'></span>
+                Identifier:
+            </label>
+            <span>${patient.getPatientIdentifier()}</span>
+            <br/>
 
-        <label>
-            <span class='status active'></span>
-            Identifier:
-        </label>
-        <span>${patient.getPatientIdentifier()}</span>
-        <br/>
+            <label>
+                <span class='status active'></span>
+                Full Names:
+            </label>
+            <span>${patient.givenName} ${patient.familyName} ${patient.middleName ? patient.middleName : ''}</span>
+            <br/>
 
-        <label>
-            <span class='status active'></span>
-            Full Names:
-        </label>
-        <span>${patient.givenName} ${patient.familyName} ${patient.middleName ? patient.middleName : ''}</span>
-        <br/>
+            <label>
+                <span class='status active'></span>
+                Age:
+            </label>
+            <span>${patient.age} (${ui.formatDatePretty(patient.birthdate)})</span>
+            <br/>
 
-        <label>
-            <span class='status active'></span>
-            Age:
-        </label>
-        <span>${patient.age} (${ui.formatDatePretty(patient.birthdate)})</span>
-        <br/>
-
-        <label>
-            <span class='status active'></span>
-            Gender:
-        </label>
-        <span>${patient.gender}</span>
-        <br/>
+            <label>
+                <span class='status active'></span>
+                Gender:
+            </label>
+            <span>${patient.gender}</span>
+            <br/>
+        </div>
     </div>
     <table id="invoice-items" cellpadding="0" cellspacing="0" width=75%>
         <thead>
@@ -148,11 +152,11 @@
         </tbody>
          <tfoot>
             <tr>
-                <td colspan="5"></td>
-                <td colspan="5"></td>
-                <td colspan="5"></td>
-                <td colspan="5"></td>
-                <td colspan="5"></td>
+                <td><b>Totals</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td id="total-actual-amount"></td>
                 <td id="total-waiver-amount"></td>
             </tr>
