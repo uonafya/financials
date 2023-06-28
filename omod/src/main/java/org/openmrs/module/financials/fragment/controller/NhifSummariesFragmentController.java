@@ -33,6 +33,7 @@ public class NhifSummariesFragmentController {
 				        .formatPatientIdentifier(patientCategoryDetails.getPatient()));
 				nhifPatientSummarySimplifier.setNhifNumber(patientCategoryDetails.getNhifNumber());
 				nhifPatientSummarySimplifier.setVisitType(getVisitType(patientCategoryDetails.getVisitType()));
+				nhifPatientSummarySimplifier.setPatient(patientCategoryDetails.getPatient());
 				
 				//add to the list
 				nhifPatientSummarySimplifierList.add(nhifPatientSummarySimplifier);
