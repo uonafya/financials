@@ -4,6 +4,12 @@
       jq("#filterPharmacy").click(function () {
         updateTable();
       });
+      jQuery('#nhifDetails tbody').on( 'click', 'tr', function () {
+        var table =  jq("#pharmacySummaryDetails").DataTable();
+
+        var billId = table.row(this).data();
+        ui.navigate('financials', 'patientPharmacySummary', {patientId: billId[0], whichDate:billId[1] });
+    } );
     });
 
     function updateTable() {
@@ -31,7 +37,7 @@
     function populateTableBodyForPatientPharmacySummary(data) {
       jQuery("#pharmacySummaryDetails").DataTable().clear().destroy();
       data.map((item) => {
-        jQuery("#patientPharmacySummaryItemsTblBody").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
+        jQuery("#patientPharmacySummaryItemsTblBody").append("<tr><td>" + item.patient + "</td><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
       });
       initPharmacyDataTable();
     }
@@ -97,6 +103,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
         <table id="pharmacySummaryDetails">
             <thead>
             <tr>
+                <td>PatientID</td>
                 <td>Transaction date</td>
                 <td>Identifier</td>
                 <td>Patient Names</td>

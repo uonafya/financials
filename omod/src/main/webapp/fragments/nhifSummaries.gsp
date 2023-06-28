@@ -31,7 +31,7 @@
   function populateTableBodyForPatientNhifSummary(data) {
     jQuery("#nhifDetails").DataTable().clear().destroy();
     data.map((item) => {
-      jQuery("#nhifPatientSummaryItems").append("<tr><td>" + item.patient.id + "</td><td>" + item.visitDate + "</td><td>" + item.identifierValue + "</td><td>" + item.names + "</td><td>" + item.visitType +"</td></tr>");
+      jQuery("#nhifPatientSummaryItems").append("<tr><td>" + item.patient + "</td><td>" + item.visitDate + "</td><td>" + item.identifierValue + "</td><td>" + item.names + "</td><td>" + item.visitType +"</td></tr>");
     });
 
       var table = jQuery("#nhifDetails").DataTable({
@@ -80,6 +80,7 @@ table#nhifDetails.dataTable tbody tr:hover {
         <table border="0" cellpadding="0" cellspacing="0" id="nhifDetails" width="100%">
             <thead>
             <tr>
+                <th>PatientID</th>
                 <th>Visit Date</th>
                 <th>Patient Identifier</th>
                 <th>Patient Names</th>

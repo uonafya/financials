@@ -34,8 +34,8 @@ public class PharmacyRevenueSummariesFragmentController {
 		}
 		List<PharmacyBillSummary> pharmacyTransactions = new ArrayList<PharmacyBillSummary>(pullSummaries(fromDate, toDate));
 		
-		return SimpleObject.fromCollection(pharmacyTransactions, uiUtils, "createdOn", "patientNames", "patientIdentifier",
-		    "waiverAmount", "totalAMount");
+		return SimpleObject.fromCollection(pharmacyTransactions, uiUtils, "patient", "createdOn", "patientNames",
+		    "patientIdentifier", "waiverAmount", "totalAMount");
 	}
 	
 	private List<PharmacyBillSummary> pullSummaries(String startDate, String endDate) {
@@ -65,6 +65,7 @@ public class PharmacyRevenueSummariesFragmentController {
 					patientPharmacySummary.setPatientIdentifier(isdp.getIdentifier());
 					patientPharmacySummary.setWaiverAmount(isdp.getWaiverAmount().toString());
 					patientPharmacySummary.setTotalAMount(String.valueOf(cummulativeSumPerPatient));
+					patientPharmacySummary.setPatient(isdp.getPatient());
 					
 					pharmacyTransactionsList.add(patientPharmacySummary);
 				}
