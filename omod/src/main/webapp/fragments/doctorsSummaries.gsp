@@ -78,11 +78,11 @@ table#nhifDetails.dataTable tbody tr:hover {
             <label>&nbsp;&nbsp;Provider&nbsp;</label>
             <select id="doctorPatientProvider" name="doctorPatientProvider">
                 <option>Select a provider</option>
-                <% providers.each{ k,v ->
+                <% providers.each{ k,v -> %>
                     <option value="${k}">${v}</option>
                 <%}%>
             </select>
-            <label>&nbsp;&nbsp;From&nbsp;</label><button id="filterDoctorPatientSummaries" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
+            <label>&nbsp;&nbsp;&nbsp;</label><button id="filterDoctorPatientSummaries" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
         </div>
         <hr />
         <table border="0" cellpadding="0" cellspacing="0" id="doctorPatientDetailSummaries" width="100%">
