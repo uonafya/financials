@@ -57,7 +57,7 @@
           var table =  jq("#doctorPatientDetailSummaries").DataTable();
 
           var info = table.row(this).data();
-          console.log("The details to display", info);
+          ui.navigate('financials', 'patientVisitSummaries', {identifier: info[0]});
 
       } );
 
