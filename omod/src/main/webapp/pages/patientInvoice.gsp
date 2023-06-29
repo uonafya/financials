@@ -15,6 +15,7 @@
 <script type="text/javascript">
 
     var jq = jQuery;
+    var table;
 
     jq = jQuery
     jq(document).ready(function() {
@@ -23,19 +24,14 @@
     });
 
     function calculateTotals() {
-        var totalActualAmount = 0;
-        var totalWaiverAmount = 0;
+        table = jq('#invoice-items').DataTable({
+            "footerCallback": function(row, data, start, end, display) {
+                var api = this.api();
+                var totalActualAmount = api.column(5, { page: 'current' }).data().sum();
 
-        jq("#tbody tr").each(function() {
-            var actualAmount = parseFloat(jq(this).find("td:nth-child(6)").text());
-            var waiverAmount = parseFloat(jq(this).find("td:nth-child(7)").text());
-
-            totalActualAmount += actualAmount;
-            totalWaiverAmount += waiverAmount;
+                jq("#total-actual-amount").text(totalActualAmount.toFixed(2));
+            }
         });
-
-        jq("#total-actual-amount").text(totalActualAmount.toFixed(2));
-        jq("#total-waiver-amount").text(totalWaiverAmount.toFixed(2));
     }
 
     function getBills(){
@@ -103,7 +99,7 @@
         <div style="text-align: center;">
             ${ui.includeFragment("patientdashboardapp", "printHeader")}
         </div>
-        <div style="margin-left: 10%">
+        <div style="margin-left: 13%">
             <h3>PATIENT SUMMARY INFORMATION</h3>
 
             <label>
@@ -158,7 +154,7 @@
                 <td></td>
                 <td></td>
                 <td id="total-actual-amount"></td>
-                <td id="total-waiver-amount"></td>
+                <td></td>
             </tr>
          </tfoot>
     </table>
