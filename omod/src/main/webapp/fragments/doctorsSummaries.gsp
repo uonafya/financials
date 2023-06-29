@@ -30,7 +30,7 @@
   function populateTableBodyForDoctorPatientSummaryItems(data) {
     jQuery("#doctorPatientDetailSummaries").DataTable().clear().destroy();
     data.map((item) => {
-      jQuery("#doctorPatientSummaryItems").append("<tr><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.dob + "</td><td>" + item.age +"</td><td>" + item.sex +"</td><td>" + item.encounterDate +"</td></tr>");
+      jQuery("#doctorPatientSummaryItems").append("<tr><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.dob + "</td><td>" + item.age +"</td><td>" + item.sex +"</td><td>" + item.encounterDate +"</td><td>" + "<button class='button task'>VIEW</button>" +"</td></tr>");
     });
 
       var table = jQuery("#doctorPatientDetailSummaries").DataTable({
@@ -94,6 +94,7 @@ table#nhifDetails.dataTable tbody tr:hover {
                 <th>Age</th>
                 <th>Sex</th>
                 <th>Encounter Date</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody id="doctorPatientSummaryItems"></tbody>
