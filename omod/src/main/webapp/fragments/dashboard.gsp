@@ -26,7 +26,6 @@
           },
           chart: {
             type: 'column',
-             height: '400px'
           },
           title: {
             text: ''
@@ -113,12 +112,11 @@ html, body, #graph-container {
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                      </div>
                         <div class="col-4" style="margin-bottom: 10px;">
-                            <div class="card" style="height: 100%; background: #E0FFFF; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <div class="card" style="height: 100%; background: #E0FFFF">
                                 <div class="stat-widget-one">
                                     <div class="row">
-                                        <div class="col-12" style="padding-left: 5px;">
+                                        <div class="col-12">
                                             <div class="stat-text">REGISTRATION</div>
                                             <div class="stat-digit"></div>
                                         </div>
@@ -127,10 +125,10 @@ html, body, #graph-container {
                             </div>
                         </div>
                         <div class="col-4" style="margin-bottom: 10px;">
-                            <div class="card" style="height: 100%; background: #E6E6FA; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <div class="card" style="height: 100%; background: #E6E6FA">
                                 <div class="stat-widget-one">
                                     <div class="row">
-                                        <div class="col-12" style="padding-left: 5px;">
+                                        <div class="col-12">
                                             <div class="stat-text">PHARMACY</div>
                                             <div class="stat-digit"></div>
                                         </div>
@@ -139,10 +137,10 @@ html, body, #graph-container {
                             </div>
                         </div>
                         <div class="col-4" style="margin-bottom: 10px;">
-                            <div class="card" style="height: 100%; background: #FFA07A; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <div class="card" style="height: 100%; background: #FFA07A">
                                 <div class="stat-widget-one">
                                     <div class="row">
-                                        <div class="col-12" style="padding-left: 5px;">
+                                        <div class="col-12">
                                             <div class="stat-text">LABORATORY</div>
                                             <div class="stat-digit"></div>
                                         </div>
@@ -151,10 +149,10 @@ html, body, #graph-container {
                             </div>
                         </div>
                         <div class="col-4" style="margin-bottom: 10px;">
-                            <div class="card" style="height: 100%; background: #B0E0E6; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <div class="card" style="height: 100%; background: #B0E0E6">
                                 <div class="stat-widget-one">
                                     <div class="row">
-                                        <div class="col-12" style="padding-left: 5px;">
+                                        <div class="col-12">
                                             <div class="stat-text">RADIOLOGY</div>
                                             <div class="stat-digit"></div>
                                         </div>
@@ -163,10 +161,10 @@ html, body, #graph-container {
                             </div>
                         </div>
                         <div class="col-4" style="margin-bottom: 10px;">
-                            <div class="card" style="height: 100%; background: #DAF7A1; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            <div class="card" style="height: 100%; background: #DAF7A1">
                                 <div class="stat-widget-one">
                                     <div class="row">
-                                        <div class="col-12" style="padding-left: 5px;">
+                                        <div class="col-12">
                                             <div class="stat-text">PROCEDURES</div>
                                             <div class="stat-digit"></div>
                                         </div>
