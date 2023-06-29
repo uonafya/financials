@@ -10,7 +10,7 @@ public class PatientVisitSummariesPageController {
 	
 	public void controller(PageModel model, @RequestParam(value = "identifier", required = false) String identifier) {
 		
-		model.addAttribute("patientId", Context.getPatientService().getPatients(identifier).get(0));
+		model.addAttribute("patientId", Context.getPatientService().getPatients(identifier).get(0).getPatientId());
 		
 	}
 }
