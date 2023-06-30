@@ -1,5 +1,5 @@
 <%
-    ui.decorateWith("kenyaemr", "standardPage")
+    ui.decorateWith("kenyaemr", "standardPage", [ patient: currentPatient])
     ui.includeCss("financials", "jquery.dataTables.min.css")
     ui.includeCss("ehrconfigs", "referenceapplication.css")
 %>
