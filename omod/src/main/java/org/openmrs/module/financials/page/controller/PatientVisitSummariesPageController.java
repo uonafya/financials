@@ -35,11 +35,9 @@ public class PatientVisitSummariesPageController {
 		model.addAttribute("patientId", Context.getPatientService().getPatients(identifier).get(0).getPatientId());
 		model.addAttribute("currentPatient", Context.getPatientService().getPatients(identifier).get(0));
 		
-		Patient patient = Context.getPatientService().getPatient(patientId);
-		HospitalCoreService hcs = Context.getService(HospitalCoreService.class);
+		Patient patient = Context.getPatientService().getPatients(identifier).get(0);
 		PatientQueueService patientQueueService = Context.getService(PatientQueueService.class);
 		
-		Map<String, String> attributes = PatientUtils.getAttributes(patient);
 		Concept category = Context.getConceptService().getConceptByName("Patient Category");
 		List<ConceptAnswer> categoryList = (category != null ? new ArrayList<ConceptAnswer>(category.getAnswers()) : null);
 		if (CollectionUtils.isNotEmpty(categoryList)) {
@@ -55,7 +53,7 @@ public class PatientVisitSummariesPageController {
 		    "09cd268a-f0f5-11ea-99a8-b3467ddbf779");
 		PersonAttributeType paymentSubCategory = Context.getPersonService().getPersonAttributeTypeByUuid(
 		    "972a32aa-6159-11eb-bc2d-9785fed39154");
-		model.addAttribute("patientId", patientId);
+		model.addAttribute("patientId", patient.getPatientId());
 		model.addAttribute("opdId", opdId);
 		model.addAttribute("queueId", queueId);
 		model.addAttribute("opdLogId", opdLogId);
