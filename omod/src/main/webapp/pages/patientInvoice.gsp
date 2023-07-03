@@ -11,27 +11,33 @@
 
 
 %>
-
 <script type="text/javascript">
 
     var jq = jQuery;
-    var table;
 
     jq = jQuery
     jq(document).ready(function() {
         getBills();
-        calculateTotals();
     });
 
     function calculateTotals() {
-        table = jq('#invoice-items').DataTable({
-            "footerCallback": function(row, data, start, end, display) {
-                var api = this.api();
-                var totalActualAmount = api.column(5, { page: 'current' }).data().sum();
+        var table = document.getElementById("invoice-items");
+        var tbody = table.getElementsByTagName("tbody")[0];
+        var rows = tbody.getElementsByTagName("tr");
 
-                jq("#total-actual-amount").text(totalActualAmount.toFixed(2));
+        var totalActualAmount = 0;
+
+        for (var i = 0; i < rows.length; i++) {
+            var actualAmountCell = rows[i].querySelector("td[id='actual-amount']");
+            var actualAmount = parseFloat(actualAmountCell.textContent.trim());
+            
+            if (!isNaN(actualAmount)) {
+            totalActualAmount += actualAmount;
             }
-        });
+        }
+
+        var totalActualAmountCell = document.getElementById("total-actual-amount");
+        totalActualAmountCell.textContent = totalActualAmount.toFixed(2);
     }
 
     function getBills(){
@@ -41,9 +47,11 @@
             toDate: jq("#summaryToDate-field").val()
         }).success(function(data) {
             populateTable(data);
+            calculateTotals();
         });
 
     }
+
     function populateTable(data) {
         jq('#invoice-items').DataTable().clear().destroy();
         if (data) {
@@ -139,7 +147,7 @@
             <th>Name</th>
             <th>Quantity</th>
             <th>Unit price</th>
-            <th>Actual Amount</th>
+            <th id="actual-amount">Actual Amount</th>
             <th>Waiver Amount</th>
         </tr>
         </thead>
@@ -154,7 +162,7 @@
                 <td></td>
                 <td></td>
                 <td id="total-actual-amount"></td>
-                <td></td>
+                <td id="total-waiver-amount"></td>
             </tr>
          </tfoot>
     </table>
