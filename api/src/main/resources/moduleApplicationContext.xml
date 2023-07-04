@@ -108,6 +108,7 @@
                 <ref bean="financials.common.report.nhif.patients" />
                 <ref bean="financials.common.report.non.paying.patients" />
                 <ref bean="financials.common.report.222" />
+                <ref bean="financials.moh.505" />
             </set>
         </property>
         <property name="fragments">
@@ -507,5 +508,15 @@
         </property>
         <property name="template" value="financials:mcbf1.xls" />
         <property name="repeatingSection" value="sheet:1,row:3,dataset:M2" />
+    </bean>
+    <bean id="financials.moh.505" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
+        <property name="targetUuid" value="556d89b2-9545-43d4-88c0-79385bdd2702" />
+        <property name="name" value="MOH 505 IDSR" />
+        <property name="description" value="MOH 505 IDSR Report" />
+        <property name="apps">
+            <set>
+                <ref bean="financials.revenue.ehr.reports" />
+            </set></property>
+        <property name="template" value="financials:MOH_505.xls" />
     </bean>
 </beans>
