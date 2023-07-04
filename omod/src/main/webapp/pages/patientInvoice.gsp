@@ -14,6 +14,7 @@
 <script type="text/javascript">
 
     var jq = jQuery;
+    var table;
 
     jq = jQuery
     jq(document).ready(function() {
@@ -162,7 +163,7 @@
                 <td></td>
                 <td></td>
                 <td id="total-actual-amount"></td>
-                <td id="total-waiver-amount"></td>
+                <td></td>
             </tr>
          </tfoot>
     </table>

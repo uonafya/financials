@@ -1,5 +1,4 @@
-<div>
-<h2>Hello</h2><script type="text/javascript">
+<script type="text/javascript">
   jQuery(function() {
     updateTable();
     jq("#filterDoctorPatientSummaries").click(function () {
