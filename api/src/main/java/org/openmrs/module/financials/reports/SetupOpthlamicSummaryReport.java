@@ -18,7 +18,7 @@ import java.util.List;
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 //@Component
-@Builds({ "financials.common.report.opthalimic" })
+//@Builds({ "financials.common.report.opthalimic" })
 public class SetupOpthlamicSummaryReport extends AbstractReportBuilder {
 	
 	private MohOpthalimicDatasetDefinition mohOpthalimicDatasetDefinition;

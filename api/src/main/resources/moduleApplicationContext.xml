@@ -80,10 +80,10 @@
                 <ref bean="financials.common.705a" />
                 <ref bean="financials.common.705b" />
                 <ref bean="financials.common.706" />
-                <ref bean="financials.common.report.moh710" />
+                <!--<ref bean="financials.common.report.moh710" />-->
                 <ref bean="financials.report.moh711" />
                 <ref bean="financials.common.717" />
-                <ref bean="financials.common.report.opthalimic" />
+                <!--<ref bean="financials.common.report.opthalimic" />-->
 
                 <ref bean="financials.common.report.labadults" />
                 <ref bean="financials.common.report.labchildren" />
@@ -96,11 +96,11 @@
                 <ref bean="financials.common.report.209" />
                 <ref bean="financials.common.report.240" />
                 <ref bean="financials.common.report.301" />
-                <ref bean="financials.common.report.333" />
-                <ref bean="financials.common.report.405" />
-                <ref bean="financials.common.report.510" />
-                <ref bean="financials.common.report.511" />
-                <ref bean="financials.common.report.512" />
+                <!--<ref bean="financials.common.report.333" />-->
+                <!--<ref bean="financials.common.report.405" />-->
+                <!--<ref bean="financials.common.report.510" />-->
+                <!--<ref bean="financials.common.report.511" />-->
+                <!--<ref bean="financials.common.report.512" />-->
                 <ref bean="financials.common.report.705.a.all" />
                 <ref bean="financials.common.report.705.b.all" />
                 <ref bean="financials.common.report.705.b.allDiagnosis" />
