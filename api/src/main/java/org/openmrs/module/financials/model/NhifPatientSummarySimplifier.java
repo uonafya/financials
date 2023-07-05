@@ -1,5 +1,7 @@
 package org.openmrs.module.financials.model;
 
+import org.openmrs.Patient;
+
 public class NhifPatientSummarySimplifier {
 	
 	private String names;
@@ -61,4 +63,14 @@ public class NhifPatientSummarySimplifier {
 	}
 	
 	private String visitDate;
+	
+	public Patient getPatient() {
+		return patient;
+	}
+	
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
+	
+	private Patient patient;
 }

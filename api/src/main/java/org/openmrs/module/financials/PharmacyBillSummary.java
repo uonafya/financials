@@ -1,5 +1,7 @@
 package org.openmrs.module.financials;
 
+import org.openmrs.Patient;
+
 import java.math.BigDecimal;
 
 public class PharmacyBillSummary {
@@ -98,4 +100,14 @@ public class PharmacyBillSummary {
 	private String waiverAmount;
 	
 	private String totalAMount;
+	
+	public Patient getPatient() {
+		return patient;
+	}
+	
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
+	
+	private Patient patient;
 }

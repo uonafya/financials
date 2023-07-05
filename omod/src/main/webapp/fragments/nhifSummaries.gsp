@@ -31,7 +31,7 @@
   function populateTableBodyForPatientNhifSummary(data) {
     jQuery("#nhifDetails").DataTable().clear().destroy();
     data.map((item) => {
-      jQuery("#nhifPatientSummaryItems").append("<tr><td>" + item.patient.id + "</td><td>" + item.visitDate + "</td><td>" + item.identifierValue + "</td><td>" + item.names + "</td><td>" + item.visitType +"</td></tr>");
+      jQuery("#nhifPatientSummaryItems").append("<tr><td>" + item.visitDate + "</td><td>" + item.identifierValue + "</td><td>" + item.names + "</td><td>" + item.visitType +"</td><td>" + "<button class='button task'>VIEW</button>" +"</td></tr>");
     });
 
       var table = jQuery("#nhifDetails").DataTable({
@@ -39,7 +39,7 @@
           buttons: ['copy', 'csv', 'excel',
               {
                   extend: 'print',
-                  messageTop: 'Pharmacy revenue transactions.',
+                  messageTop: 'NHIF Patient Transactions',
                   customize: function (win) {
                       jq(win.document.body)
                           .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
@@ -58,7 +58,7 @@
           var table =  jq("#nhifDetails").DataTable();
 
           var billId = table.row(this).data();
-          ui.navigate('financials', 'patientNhifSummary', {patientId: billId[0], whichDate:billId[1] });
+          ui.navigate('financials', 'patientNhifSummary', {identifier: billId[1], whichDate:billId[0] });
       } );
 
   }
@@ -77,6 +77,7 @@ table#nhifDetails.dataTable tbody tr:hover {
             <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
             <button id="filterNhif" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
         </div>
+        <hr />
         <table border="0" cellpadding="0" cellspacing="0" id="nhifDetails" width="100%">
             <thead>
             <tr>
@@ -84,6 +85,7 @@ table#nhifDetails.dataTable tbody tr:hover {
                 <th>Patient Identifier</th>
                 <th>Patient Names</th>
                 <th>Visit type</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody id="nhifPatientSummaryItems"></tbody>

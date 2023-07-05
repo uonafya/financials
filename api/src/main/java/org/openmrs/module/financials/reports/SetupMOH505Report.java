@@ -1,6 +1,6 @@
 package org.openmrs.module.financials.reports;
 
-import org.openmrs.module.financials.reporting.library.dataset.MohOpthalimicDatasetDefinition;
+import org.openmrs.module.financials.reporting.library.dataset.Moh505DatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
 import org.openmrs.module.kenyacore.report.builder.Builds;
@@ -17,15 +17,15 @@ import java.util.List;
 
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
-//@Component
-//@Builds({ "financials.common.report.opthalimic" })
-public class SetupOpthlamicSummaryReport extends AbstractReportBuilder {
+@Component
+@Builds({ "financials.moh.505" })
+public class SetupMOH505Report extends AbstractReportBuilder {
 	
-	private MohOpthalimicDatasetDefinition mohOpthalimicDatasetDefinition;
+	private final Moh505DatasetDefinition moh505DatasetDefinition;
 	
 	@Autowired
-	public SetupOpthlamicSummaryReport(MohOpthalimicDatasetDefinition mohOpthalimicDatasetDefinition) {
-		this.mohOpthalimicDatasetDefinition = mohOpthalimicDatasetDefinition;
+	public SetupMOH505Report(Moh505DatasetDefinition moh505DatasetDefinition) {
+		this.moh505DatasetDefinition = moh505DatasetDefinition;
 	}
 	
 	@Override
@@ -37,7 +37,7 @@ public class SetupOpthlamicSummaryReport extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		return Arrays.asList(map(mohOpthalimicDatasetDefinition.getMohOpthlamicDataset(),
-		    "startDate=${startDate},endDate=${endDate}"));
+		return Arrays
+		        .asList(map(moh505DatasetDefinition.getMoh505Dataset(), "startDate=${startDate},endDate=${endDate+23h}"));
 	}
 }

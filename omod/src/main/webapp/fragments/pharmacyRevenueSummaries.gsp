@@ -4,6 +4,12 @@
       jq("#filterPharmacy").click(function () {
         updateTable();
       });
+      jQuery('#pharmacySummaryDetails tbody').on( 'click', 'tr', function () {
+        var table =  jq("#pharmacySummaryDetails").DataTable();
+
+        var billId = table.row(this).data();
+        ui.navigate('financials', 'patientPharmacySummary', {identifier: billId[1], whichDate:billId[0] });
+    } );
     });
 
     function updateTable() {

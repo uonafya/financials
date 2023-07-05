@@ -29,11 +29,24 @@
         }
 
     var jq = jQuery;
+    var table;
 
     jq = jQuery
     jq(document).ready(function() {
         getBills();
+        calculateTotals();
     });
+
+    function calculateTotals() {
+        table = jq('#invoice-items').DataTable({
+            "footerCallback": function(row, data, start, end, display) {
+                var api = this.api();
+                var totalActualAmount = api.column(5, { page: 'current' }).data().sum();
+
+                jq("#total-actual-amount").text(totalActualAmount.toFixed(2));
+            }
+        });
+    }
 
     function getBills(){
         jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getItemizedPatientBillsByDateTimeRange") }', {
@@ -100,36 +113,37 @@
         <div style="text-align: center;">
             ${ui.includeFragment("patientdashboardapp", "printHeader")}
         </div>
+        <div style="margin-left: 13%">
+            <h3>PATIENT SUMMARY INFORMATION</h3>
 
-        <h3>PATIENT SUMMARY INFORMATION</h3>
+            <label>
+                <span class='status active'></span>
+                Identifier:
+            </label>
+            <span>${patient.getPatientIdentifier()}</span>
+            <br/>
 
-        <label>
-            <span class='status active'></span>
-            Identifier:
-        </label>
-        <span>${patient.getPatientIdentifier()}</span>
-        <br/>
+            <label>
+                <span class='status active'></span>
+                Full Names:
+            </label>
+            <span>${patient.givenName} ${patient.familyName} ${patient.middleName ? patient.middleName : ''}</span>
+            <br/>
 
-        <label>
-            <span class='status active'></span>
-            Full Names:
-        </label>
-        <span>${patient.givenName} ${patient.familyName} ${patient.middleName ? patient.middleName : ''}</span>
-        <br/>
+            <label>
+                <span class='status active'></span>
+                Age:
+            </label>
+            <span>${patient.age} (${ui.formatDatePretty(patient.birthdate)})</span>
+            <br/>
 
-        <label>
-            <span class='status active'></span>
-            Age:
-        </label>
-        <span>${patient.age} (${ui.formatDatePretty(patient.birthdate)})</span>
-        <br/>
-
-        <label>
-            <span class='status active'></span>
-            Gender:
-        </label>
-        <span>${patient.gender}</span>
-        <br/>
+            <label>
+                <span class='status active'></span>
+                Gender:
+            </label>
+            <span>${patient.gender}</span>
+            <br/>
+        </div>
     </div>
     <table id="invoice-items" cellpadding="0" cellspacing="0" width=75%>
         <thead>

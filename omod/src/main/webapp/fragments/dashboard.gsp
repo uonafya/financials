@@ -25,7 +25,7 @@
             enabled: false
           },
           chart: {
-            type: 'column'
+            type: 'column',
           },
           title: {
             text: ''
@@ -153,7 +153,7 @@ html, body, #graph-container {
                                 <div class="stat-widget-one">
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="stat-text">Radiology</div>
+                                            <div class="stat-text">RADIOLOGY</div>
                                             <div class="stat-digit"></div>
                                         </div>
                                     </div>
@@ -165,7 +165,7 @@ html, body, #graph-container {
                                 <div class="stat-widget-one">
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="stat-text">Procedures</div>
+                                            <div class="stat-text">PROCEDURES</div>
                                             <div class="stat-digit"></div>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@ html, body, #graph-container {
                     </div>
                 </div>
             </div>
-            <div id="graph-container" style="min-width: 100%; height:100px; margin: 0; padding-bottom: 5px;">
+            <div id="graph-container" style="min-width: 100%; height:400px; margin: 0; padding-bottom: 5px;">
 
             </div>
         </div>
