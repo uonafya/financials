@@ -64,7 +64,8 @@
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
         <div class="row">
             <div class="col-12">
-                <div class="row">
+                <div style="margin-top: -1px " class="onerow">
+                    <i class="icon-filter" style="font-size: 26px!important; color: #5b57a6"></i>
                     <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                     <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'toDate',    id: 'summaryToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                     <button id="filterProcedure" type="button" class=" btn btn-primary right">${ui.message("Filter")}
