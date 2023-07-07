@@ -93,6 +93,13 @@ public class FinancialsUtils {
 		return formatter.format(date);
 	}
 	
+	public static String formatDateInAmericanFormat(Date date) {
+		
+		Format formatter = new SimpleDateFormat("yyyy-MM-dd");
+		
+		return formatter.format(date);
+	}
+	
 	public static String formatDateFromString(String dateString) throws ParseException {
 		
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH);

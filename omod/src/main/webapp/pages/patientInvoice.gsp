@@ -60,7 +60,7 @@
 
         // Create and append the "Totals" row to the table
         var totalsRow = "<tr><td><b>Totals</b></td><td></td><td></td><td></td><td></td><td>" + totalAmount.toFixed(2) + "</td><td></td></tr>";
-        jq('#invoice-items').append(totalsRow);
+        jq('#tbTotals').append(totalsRow);
     }
 
     function printInvoice() {
@@ -74,6 +74,8 @@
     }
 
 </script>
+<style type="text/css">
+</style>
 <br />
 <div>
     <table cellpadding="0" cellspacing="0" border="0" align="center">
@@ -143,6 +145,7 @@
         <tbody id="tbody">
 
         </tbody>
+        <tbody id="tbTotals"></tbody>
     </table>
 
 </div>

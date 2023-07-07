@@ -93,7 +93,7 @@ table#nhifDetails.dataTable tbody tr:hover {
                 <th>DOB</th>
                 <th>Age</th>
                 <th>Sex</th>
-                <th>Encounter Date</th>
+                <th>Visit Date</th>
                 <th>Action</th>
             </tr>
             </thead>

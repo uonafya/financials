@@ -24,6 +24,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.openmrs.module.financials.utils.FinancialsUtils.formatDateInAmericanFormat;
+
 public class DoctorsSummariesFragmentController {
 	
 	public void controller(FragmentModel model) {
@@ -53,18 +55,26 @@ public class DoctorsSummariesFragmentController {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
 		List<Visit> visitList = hospitalCoreService.getProviderEncounters(startDate, endDate, provider,
 		    Arrays.asList(Context.getEncounterService().getEncounterTypeByUuid("ba45c278-f290-11ea-9666-1b3e6e848887")));
+		Map<String, Visit> uniqueVisit = new HashMap<String, Visit>();
+		
 		List<SimpleObject> processPatientProviderList = null;
 		ProviderPatientSimplifier providerPatientSimplifier = null;
 		List<ProviderPatientSimplifier> providerPatientSimplifierList = new ArrayList<ProviderPatientSimplifier>();
 		for (Visit visit : visitList) {
+			uniqueVisit.put(formatDateInAmericanFormat(visit.getStartDatetime()), visit);
+		}
+		for (Map.Entry<String, Visit> visitEntry : uniqueVisit.entrySet()) {
+			
 			providerPatientSimplifier = new ProviderPatientSimplifier();
-			providerPatientSimplifier
-			        .setPatientIdentifier(EhrConfigsUtils.getPreferredPatientIdentifier(visit.getPatient()));
-			providerPatientSimplifier.setPatientNames(visit.getPatient().getPersonName().getFullName());
-			providerPatientSimplifier.setSex(visit.getPatient().getGender());
-			providerPatientSimplifier.setDob(FinancialsUtils.formatDateInDDMMYYYY(visit.getPatient().getBirthdate()));
-			providerPatientSimplifier.setAge(String.valueOf(visit.getPatient().getAge(new Date())));
-			providerPatientSimplifier.setEncounterDate(FinancialsUtils.formatDateWithTime(visit.getStartDatetime()));
+			providerPatientSimplifier.setPatientIdentifier(EhrConfigsUtils.getPreferredPatientIdentifier(visitEntry
+			        .getValue().getPatient()));
+			providerPatientSimplifier.setPatientNames(visitEntry.getValue().getPatient().getPersonName().getFullName());
+			providerPatientSimplifier.setSex(visitEntry.getValue().getPatient().getGender());
+			providerPatientSimplifier.setDob(FinancialsUtils.formatDateInDDMMYYYY(visitEntry.getValue().getPatient()
+			        .getBirthdate()));
+			providerPatientSimplifier.setAge(String.valueOf(visitEntry.getValue().getPatient().getAge(new Date())));
+			providerPatientSimplifier.setEncounterDate(FinancialsUtils.formatDateInAmericanFormat(visitEntry.getValue()
+			        .getStartDatetime()));
 			
 			providerPatientSimplifierList.add(providerPatientSimplifier);
 		}
