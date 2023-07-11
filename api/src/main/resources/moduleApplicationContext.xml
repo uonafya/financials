@@ -517,6 +517,6 @@
             <set>
                 <ref bean="financials.revenue.ehr.reports" />
             </set></property>
-        <property name="template" value="financials:MOH_505.xls" />
+        <property name="template" value="financials:MOH_505_IDSR.xls" />
     </bean>
 </beans>
