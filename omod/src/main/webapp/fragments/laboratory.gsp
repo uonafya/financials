@@ -31,9 +31,33 @@
 
   function populateTableBodyForPatientPharmacySummary(data) {
       jQuery("#laboratory").DataTable().clear().destroy();
+
+        var totalActualAmount = 0;
+        var totalPaidAmount = 0;
+
       data.map((item) => {
-          jQuery("#labTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+            jQuery("#labTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+            
+            var actualAmount = parseFloat(item.actualAmount);
+            var paidAmount = parseFloat(item.paidAmount);
+            
+            totalActualAmount += actualAmount;
+            totalPaidAmount += paidAmount;
       });
+
+        var footerRow = jQuery("<tr></tr>");
+
+        footerRow.append("<td></td>");
+        footerRow.append("<td></td>");
+        footerRow.append("<td></td>");
+        footerRow.append("<td></td>");
+        footerRow.append("<td></td>");
+        footerRow.append("<td></td>");
+        footerRow.append("<td>" + totalActualAmount.toFixed(2) + "</td>");
+        footerRow.append("<td>" + totalPaidAmount.toFixed(2) + "</td>");
+
+        jQuery("#laboratory tfoot").html(footerRow);
+
       initDataTable();
   }
 
@@ -100,6 +124,9 @@
             </thead>
             <tbody id="labTbody">
             </tbody>
+            <tfoot>
+                
+            </tfoot>
         </table>
     </div>
 </div>

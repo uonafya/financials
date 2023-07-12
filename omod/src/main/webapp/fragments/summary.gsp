@@ -5,33 +5,42 @@
       populateRegistrationDetails();
     });
   });
+  
   function populateRegistrationDetails() {
-    const fromDate = jq('#regFromDate-field').val(),
-        toDate = jq('#regToDate-field').val();
-    jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTotals")}',
-        {
-          "fromDate" : fromDate,
-          "toDate" : toDate,
-        }
-    ).success(function(data) {
-      jq('#regFees').html(data.regFees)
-      jq('#revFees').html(data.revFees)
-      jq('#specialFees').html(data.specialFees)
-  });
-    jq('#regDetails').DataTable().clear().destroy();
-    jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTable")}',
-        {
-          "fromDate" : fromDate,
-          "toDate" : toDate,
-        }
-    ).success(function(regData) {
-      regData.map((item) => {
-        jq('#regTbody').append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td> <td>" + item.patient + "</td><td>" + item.category + "</td> <td>" + item.subCategory + "</td><td>" + item.waiver + "</td>><td>" + item.actualAmount + "</td>><td>" + item.paidAmount + "</td> </tr>");
-      });
-        jq("#regDetails").DataTable();
-    });
+        const fromDate = jq('#regFromDate-field').val();
+        const toDate = jq('#regToDate-field').val();
 
-  }
+        jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTotals")}', {
+            "fromDate": fromDate,
+            "toDate": toDate,
+        }).success(function(data) {
+            jq('#regFees').html(data.regFees);
+            jq('#revFees').html(data.revFees);
+            jq('#specialFees').html(data.specialFees);
+        });
+
+        jq('#regDetails').DataTable().clear().destroy();
+        var totalAmount = 0;
+        var totalPaidAmount = 0;
+
+        jq.getJSON('${ui.actionLink("financials", "summary", "getPatientServiceBillByDepartmentTable")}', {
+            "fromDate": fromDate,
+            "toDate": toDate,
+        }).success(function(regData) {
+            regData.map((item) => {
+            jq('#regTbody').append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.waiver + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+
+            totalAmount += parseFloat(item.actualAmount);
+            totalPaidAmount += parseFloat(item.paidAmount);
+            });
+
+            jq('#totalActualAmount').html(totalAmount.toFixed(2));jq('#totalActualAmount').html(totalAmount.toFixed(2));
+            jq('#totalPaidAmount').html(totalPaidAmount.toFixed(2));
+            jq('#totalPaidAmount').html(totalPaidAmount.toFixed(2));
+
+            jq("#regDetails").DataTable();
+        });
+    }
 </script>
 <style type="text/css">
 .no-close .ui-dialog-titlebar-close {
@@ -64,7 +73,8 @@ table#details.dataTable tbody tr:hover > .sorting_1 {
                         <br />
                         <div class="row">
                             <div class="col-12">
-                                <div class="row">
+                                <div style="margin-top: -1px " class="onerow">
+                                    <i class="icon-filter" style="font-size: 26px!important; color: #5b57a6"></i>
                                     <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regFromDate', id: 'regFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                                     <label>&nbsp;&nbsp;To&nbsp;</label  >${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'regToDate',    id: 'regToDate',   label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
                                     <button id="filterRegistration" type="button" class=" btn btn-primary right">${ui.message("Filter")}</button>
@@ -130,7 +140,7 @@ table#details.dataTable tbody tr:hover > .sorting_1 {
                     <div class="ke-panel-content" style="background-color: #F3F9FF;">
                         <table border="0" cellpadding="0" cellspacing="0" id="regDetails" width="100%">
                             <thead>
-                            <tr>
+                                <tr>
                                 <th>Transaction Date</th>
                                 <th>Service Offered</th>
                                 <th>Patient Identifier</th>
@@ -140,10 +150,17 @@ table#details.dataTable tbody tr:hover > .sorting_1 {
                                 <th>Waiver Amount</th>
                                 <th>Actual Amount</th>
                                 <th>Paid Amount</th>
-                            </tr>
+                                </tr>
                             </thead>
                             <tbody id="regTbody">
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                <th colspan="7" style="text-align:right">Totals:</th>
+                                <th id="totalActualAmount"></th>
+                                <th id="totalPaidAmount"></th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>

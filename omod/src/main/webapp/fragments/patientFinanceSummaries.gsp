@@ -13,23 +13,41 @@
         });
 
     }
+
     function populateTable(data) {
         jq('#pDetails').DataTable().clear().destroy();
-        if(data) {
+
+        if (data) {
+            var actualAmountTotal = 0;
+            var paidAmountTotal = 0;
+
+            jq('#tbody').empty();
+
             data.map((item) => {
-                jq('#tbody').append("<tr><td>" + item.billId + "</td><td>" + item.patientId + "</td><td>" + item.transactionDate + "</td> <td>" + item.identifier + "</td><td>" + item.patient + "</td> <td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.waiver + "</td>><td>" + item.actualAmount + "</td>><td>" + item.paidAmount + "</td> </tr>");
+
+            jq('#tbody').append("<tr><td>" + item.billId + "</td><td>" + item.patientId + "</td><td>" + item.transactionDate + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.waiver + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+
+            var actualAmount = parseFloat(item.actualAmount);
+            var paidAmount = parseFloat(item.paidAmount);
+
+            actualAmountTotal += actualAmount;
+            paidAmountTotal += paidAmount;
+
             });
 
-            var table =  jq("#pDetails").DataTable();
-            jq('#pDetails tbody').on('click', 'tr', function () {
-                var billId = table.row(this).data();
-                ui.navigate('financials', 'billedItems', {billedId: billId[0], patientId: billId[1]});
-            });
+            // Update the total cells in the table footer
+            jq('#actualAmountTotal').text(actualAmountTotal);
+            jq('#paidAmountTotal').text(paidAmountTotal);
 
-        }else {
-            jq('#tbody').append("<tr><td colspan='10'>" +  "No records found for this patient" +  "</td></tr>");
+            var table = jq("#pDetails").DataTable();
+
+            jq('#pDetails tbody').on('click', 'tr', function() {
+            var billId = table.row(this).data();
+            ui.navigate('financials', 'billedItems', { billedId: billId[0], patientId: billId[1] });
+            });
+        } else {
+            jq('#tbody').append("<tr><td colspan='10'>No records found for this patient</td></tr>");
             jq("#pDetails").DataTable();
-
         }
     }
 </script>
@@ -96,6 +114,13 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             </thead>
             <tbody id="tbody">
             </tbody>
+             <tfoot>
+                <tr>
+                <td colspan="8">Totals:</td>
+                <td id="actualAmountTotal"></td>
+                <td id="paidAmountTotal"></td>
+                </tr>
+            </tfoot>
         </table>
         </div>
 </div>

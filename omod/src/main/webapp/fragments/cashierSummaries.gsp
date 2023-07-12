@@ -28,37 +28,47 @@
     });
     return populateTableBodyForCashierSummary(toReturn);
   }
+  
   function populateTableBodyForCashierSummary(data) {
-  console.log(data);
+    console.log(data);
     jQuery("#cashierDetails").DataTable().clear().destroy();
+
+    var totalAmountPaid = 0;
+
+    jQuery("#cashierPatientSummaryItems").empty();
+
     data.map((item) => {
-      jQuery("#cashierPatientSummaryItems").append("<tr><td>" + item.patientName + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.transactionDateTime +"</td><td>" + item.paymentMode +"</td><td>" + item.amount +"</td><td>" + item.receiptNumber +"</td></tr>");
+      totalAmountPaid += item.amount;
+
+      jQuery("#cashierPatientSummaryItems").append("<tr><td>" + item.patientName + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.transactionDateTime + "</td><td>" + item.paymentMode + "</td><td>" + item.amount + "</td><td>" + item.receiptNumber + "</td></tr>");
     });
 
-      var table = jQuery("#cashierDetails").DataTable({
-          dom: 'Bfrtip',
-          buttons: ['copy', 'csv', 'excel',
-              {
-                  extend: 'print',
-                  messageTop: 'Cashier revenue transactions.',
-                  customize: function (win) {
-                      jq(win.document.body)
-                          .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
-                  },
-                  repeatingHead: {
-                      logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
-                      logoPosition: 'center',
-                      logoStyle: ''
-                  },
-                  title: ''
-              }
-          ]
-      });
+    // Update the total amount paid in the table footer
+    jQuery("#totalAmountPaid").text(totalAmountPaid);
 
-      jQuery('#cashierDetails tbody').on( 'click', 'tr', function () {
-          console.log( table.row( this ).data() );
-      } );
+    var table = jQuery("#cashierDetails").DataTable({
+      dom: 'Bfrtip',
+      buttons: [
+        'copy', 'csv', 'excel',
+        {
+          extend: 'print',
+          messageTop: 'Cashier revenue transactions.',
+          customize: function (win) {
+            jq(win.document.body).prepend(`${ui.includeFragment("patientdashboardapp", "printHeader")}`);
+          },
+          repeatingHead: {
+            logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+            logoPosition: 'center',
+            logoStyle: ''
+          },
+          title: ''
+        }
+      ]
+    });
 
+    jQuery('#cashierDetails tbody').on('click', 'tr', function () {
+      console.log(table.row(this).data());
+    });
   }
 </script>
 <div class="ke-panel-frame">
@@ -92,6 +102,13 @@
                     </tr>
                     </thead>
                     <tbody id="cashierPatientSummaryItems"></tbody>
+                     <tfoot>
+                      <tr>
+                        <td colspan="5">Totals:</td>
+                        <td id="totalAmountPaid"></td>
+                        <td></td>
+                      </tr>
+                    </tfoot>
                 </table>
      </div>
 </div>
