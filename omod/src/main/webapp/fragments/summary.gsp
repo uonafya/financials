@@ -156,7 +156,7 @@ table#details.dataTable tbody tr:hover > .sorting_1 {
                             </tbody>
                             <tfoot>
                                 <tr>
-                                <th colspan="7" style="text-align:right">Total:</th>
+                                <th colspan="7" style="text-align:right">Totals:</th>
                                 <th id="totalActualAmount"></th>
                                 <th id="totalPaidAmount"></th>
                                 </tr>

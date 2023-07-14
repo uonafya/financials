@@ -51,12 +51,28 @@
     });
     return populateTableBodyForPatientRadiologySummary(toReturn);
   }
+
   function populateTableBodyForPatientRadiologySummary(data) {
-    jQuery("#radiologyTbody").empty();
-    data.map((item) => {
-      jQuery("#radiologyTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td><td>" + item.patient+ "</td><td>"+ item.category +"</td><td>"+ item.subCategory+"</td><td>"+item.actualAmount+"</td><td>"+item.paidAmount+"</td></tr>");
-    });
-  }
+  var actualAmountTotal = 0;
+  var paidAmountTotal = 0;
+
+  jQuery("#radiologyTbody").empty();
+
+  data.map((item) => {
+
+    jQuery("#radiologyTbody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.serviceOffered + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+
+     var actualAmount = parseFloat(item.actualAmount);
+     var paidAmount = parseFloat(item.paidAmount);
+
+    actualAmountTotal += actualAmount;
+    paidAmountTotal += paidAmount;
+  });
+
+  // Update the total cells in the table footer
+  jQuery("#actualAmountTotal").text(actualAmountTotal);
+  jQuery("#paidAmountTotal").text(paidAmountTotal);
+}
 </script>
 
 <div class="ke-panel-frame">
@@ -95,6 +111,13 @@
         <tbody>
         <tbody id="radiologyTbody">
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">Total:</td>
+            <td id="actualAmountTotal"></td>
+            <td id="paidAmountTotal"></td>
+          </tr>
+        </tfoot>
     </table>
 </div>
 </div>

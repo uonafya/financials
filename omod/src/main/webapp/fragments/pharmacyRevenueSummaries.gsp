@@ -34,13 +34,30 @@
         });
         return populateTableBodyForPatientPharmacySummary(toReturn);
     }
+
     function populateTableBodyForPatientPharmacySummary(data) {
-      jQuery("#pharmacySummaryDetails").DataTable().clear().destroy();
-      data.map((item) => {
-        jQuery("#patientPharmacySummaryItemsTblBody").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount+ "</td><td>"+ item.totalAMount+"</td></tr>");
-      });
-      initPharmacyDataTable();
+        jQuery("#pharmacySummaryDetails").DataTable().clear().destroy();
+
+        var totalAmountCollected = 0;
+
+        jQuery("#patientPharmacySummaryItemsTblBody").empty();
+
+        data.map((item) => {
+
+            jQuery("#patientPharmacySummaryItemsTblBody").append("<tr><td>" + item.createdOn + "</td><td>" + item.patientIdentifier + "</td><td>" + item.patientNames + "</td><td>" + item.waiverAmount + "</td><td>" + item.totalAMount + "</td></tr>");
+
+            var totalAMount = parseFloat(item.totalAMount);
+
+            totalAmountCollected += totalAMount;
+            
+        });
+
+        // Display the total amount collected in the table footer
+        jQuery("#totalAmountCollected").text(totalAmountCollected);
+
+        initPharmacyDataTable();
     }
+    
     function initPharmacyDataTable() {
                 var table = jQuery("#pharmacySummaryDetails").DataTable({
                     dom: 'Bfrtip',
@@ -111,6 +128,12 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             </tr>
             </thead>
             <tbody id="patientPharmacySummaryItemsTblBody"></tbody>
+            <tfoot>
+                <tr>
+                <td colspan="4">Total Amount Collected:</td>
+                <td id="totalAmountCollected"></td>
+                </tr>
+            </tfoot>
         </table>
 
     </div>

@@ -31,13 +31,26 @@
             });
             return populateTableBodyDepartmentSummary(toReturn);
         }
+        
         function populateTableBodyDepartmentSummary(data) {
-              jQuery("#departmentSummaryDetails").DataTable().clear().destroy();
-              data.map((item) => {
-                  jQuery("#departmentTblBody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.department + "</td><td>" + item.servicePaidFor + "</td><td>" + item.totalAmount + "</td></tr>");
-              });
-              initDepartmentDataTable();
-          }
+            jQuery("#departmentSummaryDetails").DataTable().clear().destroy();
+
+            var amountCollectedTotal = 0;
+
+            jQuery("#departmentTblBody").empty();
+
+            data.map((item) => {
+                amountCollectedTotal += item.totalAmount;
+
+                jQuery("#departmentTblBody").append("<tr><td>" + item.transactionDate + "</td><td>" + item.department + "</td><td>" + item.servicePaidFor + "</td><td>" + item.totalAmount + "</td></tr>");
+            });
+
+            // Update the total cell in the table footer
+            jQuery("#amountCollectedTotal").text(amountCollectedTotal);
+
+            initDepartmentDataTable();
+        }
+
       function initDepartmentDataTable() {
             var table = jQuery("#departmentSummaryDetails").DataTable({
                 dom: 'Bfrtip',
@@ -112,6 +125,12 @@ table#dDetails.dataTable tbody tr:hover > .sorting_1 {
             </thead>
             <tbody id="departmentTblBody">
             </tbody>
+            <tfoot>
+                <tr>
+                <td colspan="3">Totals:</td>
+                <td id="amountCollectedTotal"></td>
+                </tr>
+            </tfoot>
         </table>
 
     </div>
