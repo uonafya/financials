@@ -54,7 +54,7 @@ public class DoctorsSummariesFragmentController {
 		}
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
 		List<Visit> visitList = hospitalCoreService.getProviderEncounters(startDate, endDate, provider,
-			Arrays.asList(Context.getEncounterService().getEncounterTypeByUuid("ba45c278-f290-11ea-9666-1b3e6e848887")));
+		    Arrays.asList(Context.getEncounterService().getEncounterTypeByUuid("ba45c278-f290-11ea-9666-1b3e6e848887")));
 		Map<String, Visit> uniqueVisit = new HashMap<String, Visit>();
 		
 		List<SimpleObject> processPatientProviderList = null;
