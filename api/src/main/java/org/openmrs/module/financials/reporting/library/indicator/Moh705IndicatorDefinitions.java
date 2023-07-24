@@ -21,43 +21,47 @@ public class Moh705IndicatorDefinitions {
 	}
 	
 	//Diagnonosis 705A
-	public CohortIndicator getAllChildrenPatientsWithDiagnosis(List<Integer> list) {
+	public CohortIndicator getAllChildrenPatientsWithDiagnosis(List<Integer> list, int encounter) {
 		return cohortIndicator(
 		    "Diagnosis",
-		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705AWithAge(list),
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705AWithAge(list, encounter),
 		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getAllChildrenPatientsWithDiagnosisForMalaria(List<Integer> list, List<Integer> ans) {
-		return cohortIndicator("Diagnosis for malaria for 705 A",
-		    map(moh705CohortDefinition.getMalariaDiagnosis705A(list, ans), "startDate=${startDate},endDate=${endDate}"));
+	public CohortIndicator getAllChildrenPatientsWithDiagnosisForMalaria(List<Integer> list, List<Integer> ans, int encounter) {
+		return cohortIndicator(
+		    "Diagnosis for malaria for 705 A",
+		    map(moh705CohortDefinition.getMalariaDiagnosis705A(list, ans, encounter),
+		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	//Diagnonosis 705B
-	public CohortIndicator getAllAdultPatientsWithDiagnosis(List<Integer> list) {
+	public CohortIndicator getAllAdultPatientsWithDiagnosis(List<Integer> list, int encounter) {
 		return cohortIndicator(
 		    "Diagnosis",
-		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705BWithAge(list),
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705BWithAge(list, encounter),
 		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getAllAdultPatientsWithOtherDiagnosis(List<Integer> list) {
+	public CohortIndicator getAllAdultPatientsWithOtherDiagnosis(List<Integer> list, int encounter) {
 		return cohortIndicator(
 		    "Other Diagnosis for adults",
-		    map(moh705CohortDefinition.getExactOtherDiagnosisForPatientsMOH705B(list),
+		    map(moh705CohortDefinition.getExactOtherDiagnosisForPatientsMOH705B(list, encounter),
 		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getAllChildredPatientsWithOtherDiagnosis(List<Integer> list) {
+	public CohortIndicator getAllChildredPatientsWithOtherDiagnosis(List<Integer> list, int encounter) {
 		return cohortIndicator(
 		    "Other Diagnosis for Children",
-		    map(moh705CohortDefinition.getExactOtherDiagnosisForPatientsMOH705A(list),
+		    map(moh705CohortDefinition.getExactOtherDiagnosisForPatientsMOH705A(list, encounter),
 		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
-	public CohortIndicator getAllAdultPatientsWithDiagnosisForMalaria(List<Integer> list, List<Integer> ans) {
-		return cohortIndicator("Diagnosis for malaria for 705 B",
-		    map(moh705CohortDefinition.getMalariaDiagnosis705B(list, ans), "startDate=${startDate},endDate=${endDate}"));
+	public CohortIndicator getAllAdultPatientsWithDiagnosisForMalaria(List<Integer> list, List<Integer> ans, int encounter) {
+		return cohortIndicator(
+		    "Diagnosis for malaria for 705 B",
+		    map(moh705CohortDefinition.getMalariaDiagnosis705B(list, ans, encounter),
+		        "startDate=${startDate},endDate=${endDate}"));
 	}
 	
 	public CohortIndicator getNewChildrenPatients() {

@@ -47,6 +47,9 @@ public class Moh717DatasetDefinition {
 		dsd.addParameter(new Parameter("endDate", "end date", Date.class));
 		String indParams = "startDate=${startDate},endDate=${endDate}";
 		
+		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "ba45c278-f290-11ea-9666-1b3e6e848887");
+		
 		dsd.addDimension("age", map(ehrAddonDimesion.getAge(), "effectiveDate=${endDate}"));
 		dsd.addDimension("gender", map(ehrAddonDimesion.getGender(), ""));
 		dsd.addDimension("clinic",
@@ -83,16 +86,16 @@ public class Moh717DatasetDefinition {
 		    "Attendances (Excluding fillings and extractions) - NEW",
 		    ReportUtils.map(moh717IndicatorDefinition.getDentalVisits(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_OPD).getConceptId(),
-		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_SPECIAL_CLINIC).getConceptId()), indParams),
-		    "state=NEW");
+		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_SPECIAL_CLINIC).getConceptId(),
+		        opdEncounterType.getEncounterTypeId()), indParams), "state=NEW");
 		
 		dsd.addColumn(
 		    "DENTALRVT",
 		    "Attendances (Excluding fillings and extractions) - REVISIT",
 		    ReportUtils.map(moh717IndicatorDefinition.getDentalVisits(
 		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_OPD).getConceptId(),
-		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_SPECIAL_CLINIC).getConceptId()), indParams),
-		    "state=RVT");
+		        getConcept(EhrAddonsConstants._EhrAddOnConcepts.DENTAL_SPECIAL_CLINIC).getConceptId(),
+		        opdEncounterType.getEncounterTypeId()), indParams), "state=RVT");
 		//additional indicators on 717 report
 		dsd.addColumn("DENTALFILLNEW", "Filling - NEW", ReportUtils.map(moh711IndicatorDefinition.getPatientWithCodedObs(
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Procedure_performed), Arrays.asList(

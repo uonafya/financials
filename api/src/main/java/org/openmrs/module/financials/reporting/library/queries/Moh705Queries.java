@@ -9,26 +9,26 @@ public class Moh705Queries {
 	 * 
 	 * @return String of children
 	 */
-	public static String getPatientsWhoMatchDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis,
+	public static String getPatientsWhoMatchDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis, int encounter,
 	        List<Integer> listOptions) {
 		String str1 = String.valueOf(listOptions).replaceAll("\\[", "");
 		String list = str1.replaceAll("]", "");
 		String query = "SELECT pat.patient_id FROM patient pat " + " INNER JOIN encounter e ON pat.patient_id=e.patient_id "
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id " + " WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND ob.concept_id IN(%d, %d) "
-		        + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded IN(%s)";
-		return String.format(query, provisional, finalDiagnosis, list);
+		        + " AND e.encounter_type IN(%d) " + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded IN(%s)";
+		return String.format(query, provisional, encounter, finalDiagnosis, list);
 	}
 	
 	public static String getPatientsWhoMatchOtherDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis,
-	        List<Integer> listOptions) {
+	        int encounter, List<Integer> listOptions) {
 		String str1 = String.valueOf(listOptions).replaceAll("\\[", "");
 		String list = str1.replaceAll("]", "");
 		String query = "SELECT pat.patient_id FROM patient pat " + " INNER JOIN encounter e ON pat.patient_id=e.patient_id "
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id " + " WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND ob.concept_id IN(%d, %d) "
-		        + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded NOT IN(%s)";
-		return String.format(query, provisional, finalDiagnosis, list);
+		        + " AND e.encounter_type IN(%d) " + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded NOT IN(%s)";
+		return String.format(query, provisional, finalDiagnosis, encounter, list);
 	}
 	
 	public static String getPatientsWhoAreReferred(int question, int ans) {
@@ -44,7 +44,7 @@ public class Moh705Queries {
 	 * 
 	 * @return String
 	 */
-	public static String getMoh705aQuery(int classId) {
+	public static String getMoh705aQuery(int classId, int encounter) {
 		String sql = "SELECT "
 		        + " cn.name AS Diagnosis, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 1 THEN 1 ELSE 0 END) AS 1st, "
@@ -87,10 +87,11 @@ public class Moh705Queries {
 		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id "
 		        + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
-		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250, 1000483)"
-		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 " + "GROUP BY cn.name";
+		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(160249, 160250)" + " AND c.class_id IN(%d) "
+		        + " AND e.encounter_type IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 "
+		        + "GROUP BY cn.name";
 		
-		return String.format(sql, classId);
+		return String.format(sql, classId, encounter);
 	}
 	
 	/**
@@ -98,7 +99,7 @@ public class Moh705Queries {
 	 * 
 	 * @return String
 	 */
-	public static String getMoh705bQuery(int classId) {
+	public static String getMoh705bQuery(int classId, int encounter) {
 		String sql = "SELECT "
 		        + " cn.name AS Diagnosis, "
 		        + " SUM(CASE DAY(e.encounter_datetime) WHEN 1 THEN 1 ELSE 0 END) AS 1st, "
@@ -141,10 +142,11 @@ public class Moh705Queries {
 		        + "INNER JOIN concept c ON c.concept_id=cn.concept_id "
 		        + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
-		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(6042, 160249, 160250, 1000483)"
-		        + " AND c.class_id IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 " + "GROUP BY cn.name";
+		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(160249, 160250)" + " AND c.class_id IN(%d) "
+		        + " AND e.encounter_type IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 "
+		        + "GROUP BY cn.name";
 		
-		return String.format(sql, classId);
+		return String.format(sql, classId, encounter);
 	}
 	
 	/**
@@ -152,12 +154,13 @@ public class Moh705Queries {
 	 * 
 	 * @return String of children
 	 */
-	public static String getPatientsWhoMatchAtLeastDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis) {
+	public static String getPatientsWhoMatchAtLeastDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis,
+	        int encounter) {
 		String query = "SELECT pat.patient_id FROM patient pat " + " INNER JOIN encounter e ON pat.patient_id=e.patient_id "
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id " + " WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND ob.concept_id IN(%d, %d) "
-		        + " AND ob.value_coded IS NOT NULL ";
-		return String.format(query, provisional, finalDiagnosis);
+		        + " AND e.encounter_type IN(%d) " + " AND ob.value_coded IS NOT NULL ";
+		return String.format(query, provisional, finalDiagnosis, encounter);
 	}
 	
 }

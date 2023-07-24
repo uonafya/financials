@@ -52,8 +52,8 @@ public class Moh717IndicatorDefinition {
 		    ReportUtils.map(moh717CohortDefinition.getMopSpecialClinic(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
 	}
 	
-	public CohortIndicator getDentalVisits(int c1, int c2) {
+	public CohortIndicator getDentalVisits(int c1, int c2, int encounter) {
 		return cohortIndicator("Special clinic Dental", ReportUtils.map(
-		    moh717CohortDefinition.getDentalSpecialClinic(c1, c2), "startDate=${startDate},endDate=${endDate}"));
+		    moh717CohortDefinition.getDentalSpecialClinic(c1, c2, encounter), "startDate=${startDate},endDate=${endDate}"));
 	}
 }

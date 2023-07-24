@@ -1,5 +1,7 @@
 package org.openmrs.module.financials.reports;
 
+import org.openmrs.EncounterType;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh717CohortDefinition;
 import org.openmrs.module.financials.reporting.library.dataset.Moh717DatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -41,7 +43,10 @@ public class SetupMOH717Report extends AbstractReportBuilder {
 	@Override
 	protected List<Mapped<DataSetDefinition>> buildDataSets(ReportDescriptor reportDescriptor,
 	        ReportDefinition reportDefinition) {
-		reportDefinition.setBaseCohortDefinition(map(moh717CohortDefinition.getAllPatientsWithDiagnosis(),
+		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "ba45c278-f290-11ea-9666-1b3e6e848887");
+		reportDefinition.setBaseCohortDefinition(map(
+		    moh717CohortDefinition.getAllPatientsWithDiagnosis(opdEncounterType.getEncounterTypeId()),
 		    "startDate=${startDate},endDate=${endDate+23h}"));
 		return Arrays.asList(map(moh717DatasetDefinition.constructMoh717Dataset(),
 		    "startDate=${startDate},endDate=${endDate+23h}"));

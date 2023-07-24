@@ -37,13 +37,15 @@ public class Moh717CohortDefinition {
 		this.moh705CohortDefinition = moh705CohortDefinition;
 	}
 	
-	public CohortDefinition getAllPatientsWithDiagnosis() {
+	public CohortDefinition getAllPatientsWithDiagnosis(int encounter) {
 		CompositionCohortDefinition cd = new CompositionCohortDefinition();
 		cd.setName("All patients who have at least diagnosis recorded");
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addSearch("DIAGNOSIS",
-		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosisOverral(), "startDate=${startDate},endDate=${endDate}"));
+		cd.addSearch(
+		    "DIAGNOSIS",
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosisOverral(encounter),
+		        "startDate=${startDate},endDate=${endDate}"));
 		cd.setCompositionString("DIAGNOSIS");
 		return cd;
 	}
@@ -231,7 +233,7 @@ public class Moh717CohortDefinition {
 		return sqlCohortDefinition;
 	}
 	
-	public CohortDefinition getDentalSpecialClinic(int c1, int c2) {
+	public CohortDefinition getDentalSpecialClinic(int c1, int c2, int encounter) {
 		CompositionCohortDefinition compositionCohortDefinition = new CompositionCohortDefinition();
 		compositionCohortDefinition.setName("Include dental diagnosis");
 		compositionCohortDefinition.addParameter(new Parameter("startDate", "Start Date", Date.class));
@@ -249,7 +251,7 @@ public class Moh717CohortDefinition {
 		compositionCohortDefinition.addSearch("SPD", map(cd, "startDate=${startDate},endDate=${endDate}"));
 		compositionCohortDefinition.addSearch(
 		    "DIAGNOSIS",
-		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705(DiagnosisLists.getDentalDisordersList()),
+		    map(moh705CohortDefinition.getPatientsWhoHaveDiagnosis705(DiagnosisLists.getDentalDisordersList(), encounter),
 		        "startDate=${startDate},endDate=${endDate}"));
 		compositionCohortDefinition.setCompositionString("SPD OR DIAGNOSIS");
 		return compositionCohortDefinition;

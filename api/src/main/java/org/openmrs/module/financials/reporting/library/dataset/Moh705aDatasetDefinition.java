@@ -1,5 +1,7 @@
 package org.openmrs.module.financials.reporting.library.dataset;
 
+import org.openmrs.EncounterType;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
 import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh705IndicatorDefinitions;
@@ -42,216 +44,368 @@ public class Moh705aDatasetDefinition {
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), indParam));
 		
+		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "ba45c278-f290-11ea-9666-1b3e6e848887");
+		
 		dsd.addColumn("DIARRHEA", "DIARRHEA ALL", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList()), indParam), "");
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), "");
 		EhrReportingUtils.addRow(dsd, "DC", "Diarrhoea", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList()), indParam),
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "TC",
+		    "Tuberculosis",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getTuberculosisDiagnosisList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "TC", "Tuberculosis", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getTuberculosisDiagnosisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "DYC", "Dysentery", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDysenteryList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils
-		        .addRow(dsd, "CLC", "Cholera", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getCholeraList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "MCC", "Meningococcal Meningitis",
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DYC",
+		    "Dysentery",
 		    ReportUtils.map(
-		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMeningococcalMeningitisList()),
-		        indParam), EhrAddonUtils.getAdultChildrenColumns());
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDysenteryList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "CLC",
+		    "Cholera",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getCholeraList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "MCC",
+		    "Meningococcal Meningitis",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getMeningococcalMeningitisList(), opdEncounterType.getEncounterTypeId()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "OMC", "Other Menignitis", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherMenigitisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherMenigitisList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "NNC", "NeonatalTetanus", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getNeonatalTetanusList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getNeonatalTetanusList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "PMC", "Poliomyelitis", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getPoliomyelitisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "PMC",
+		    "Poliomyelitis",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getPoliomyelitisList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "CPC", "Chicken Pox", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getChickenPoxList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "CPC",
+		    "Chicken Pox",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getChickenPoxList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "MSC", "Measles", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMeaslesList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "MSC",
+		    "Measles",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMeaslesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "HPC", "Hepatitis", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getHepatitisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "HPC",
+		    "Hepatitis",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getHepatitisList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "MPC", "Mumps",
-		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMumpsList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "MPC",
+		    "Mumps",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMumpsList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "SMC", "Suspected Malaria", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
-		        DiagnosisLists.getSuspectedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		        DiagnosisLists.getSuspectedMalariaResults(), opdEncounterType.getEncounterTypeId()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "CMC", "Confirmed Malaria", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosisForMalaria(DiagnosisLists.getMalariaList(),
-		        DiagnosisLists.getConfirmedMalariaResults()), indParam), EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "UTC", "Urinary Tract Infection", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getUrinaryTractInfectionList()), indParam),
+		        DiagnosisLists.getConfirmedMalariaResults(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "TYC", "Typhoid Fever", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getTyphoidList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "BLC", "Bilharzia", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getBilharziaList()), indParam),
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "UTC",
+		    "Urinary Tract Infection",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getUrinaryTractInfectionList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "TYC",
+		    "Typhoid Fever",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getTyphoidList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "BLC",
+		    "Bilharzia",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getBilharziaList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "IWC", "Interstinal worms", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getInterstinalwormsList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getInterstinalwormsList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "MNC", "Malnutrition", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMalnutritionList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils
-		        .addRow(dsd, "ANC", "Anaemia", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAnaemiaList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "EC", "Eye Infections", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getEyeInfectionsList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "EIC", "Ear Infections Conditions",
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "MNC",
+		    "Malnutrition",
 		    ReportUtils.map(
-		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getEarInfectionsConditionsList()),
-		        indParam), EhrAddonUtils.getAdultChildrenColumns());
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMalnutritionList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "URC", "Upper Respiratory Tract Infections", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getUpperRespiratoryTractInfectionsList()),
-		    indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "ANC",
+		    "Anaemia",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAnaemiaList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "ASC", "Asthma",
-		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAsthmaList()), indParam),
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "EC",
+		    "Eye Infections",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getEyeInfectionsList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "EIC",
+		    "Ear Infections Conditions",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getEarInfectionsConditionsList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "TSC", "Tonsilities", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getTonsilitiesList()), indParam),
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "URC",
+		    "Upper Respiratory Tract Infections",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getUpperRespiratoryTractInfectionsList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "PNC", "Pneumonia", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getPneumoniaList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "ASC",
+		    "Asthma",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAsthmaList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "TSC",
+		    "Tonsilities",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getTonsilitiesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "PNC",
+		    "Pneumonia",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getPneumoniaList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "MDC", "Mental Disorders", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMentalDisordersList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getMentalDisordersList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "DDC", "DentalDisorders", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDentalDisordersList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDentalDisordersList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "JIC", "Jiggers Infestation", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getJiggersInfestationList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(dsd, "JIC", "Jiggers Infestation", ReportUtils.map(moh705aIndicator
+		        .getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getJiggersInfestationList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "DOC", "Disease Of The Skin", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiseaseOfTheSkinList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiseaseOfTheSkinList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "PC", "Poisoning", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getPoisoningList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils
-		        .addRow(dsd, "RTC", "Road TrafficI Injuries", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getRoadTrafficInjuriesList()),
-		            indParam), EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "OIC", "Other Injuries", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherInjuriesList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "SAC", "Sexual Asualt", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getSexualAssaultList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "BC", "Burns",
-		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getBurnsList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "SBC", "Snake Bites", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getSnakeBitesList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "DBC", "Dog BITES", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDogBitesList()), indParam), EhrAddonUtils
-		        .getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "OBC", "Other Bites", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherBitesList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "DTC", "Diabetes", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiabetesList()), indParam), EhrAddonUtils
-		        .getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "EPC", "Epilepsy", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getEpilepsyList()), indParam), EhrAddonUtils
-		        .getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "OCDC", "Other Convulsive Disorders",
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "PC",
+		    "Poisoning",
 		    ReportUtils.map(
-		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherConvulsiveDisordersList()),
-		        indParam), EhrAddonUtils.getAdultChildrenColumns());
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getPoisoningList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "BRC", "Brucellosis", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getBrucellosisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(dsd, "RTC", "Road TrafficI Injuries", ReportUtils.map(moh705aIndicator
+		        .getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getRoadTrafficInjuriesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "RKC", "Rickets", ReportUtils.map(
-		            moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getRicketsList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "VRC", "Violence related  injuries",
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "OIC",
+		    "Other Injuries",
 		    ReportUtils.map(
-		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getViolenceRelatedInjuriesList()),
-		        indParam), EhrAddonUtils.getAdultChildrenColumns());
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherInjuriesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "CRPC", "Cerebral Palsy", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getCerebralPalsyList()), indParam),
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "SAC",
+		    "Sexual Asualt",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getSexualAssaultList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "BC",
+		    "Burns",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getBurnsList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "SBC",
+		    "Snake Bites",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getSnakeBitesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DBC",
+		    "Dog BITES",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDogBitesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "OBC",
+		    "Other Bites",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOtherBitesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DTC",
+		    "Diabetes",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiabetesList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "EPC",
+		    "Epilepsy",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getEpilepsyList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "OCDC",
+		    "Other Convulsive Disorders",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getOtherConvulsiveDisordersList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "ATC", "Autism",
-		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAutismList()), indParam),
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "BRC",
+		    "Brucellosis",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getBrucellosisList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "RKC",
+		    "Rickets",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getRicketsList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "VRC",
+		    "Violence related  injuries",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getViolenceRelatedInjuriesList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "TRC", "Tryponomiasis", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getTryponomiasisList()), indParam),
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "CRPC",
+		    "Cerebral Palsy",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getCerebralPalsyList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "ATC",
+		    "Autism",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getAutismList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "TRC",
+		    "Tryponomiasis",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getTryponomiasisList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "KLC",
+		    "Kalazar leishmaniasis",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getKalazarLeishmaniasisList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "KLC", "Kalazar leishmaniasis", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getKalazarLeishmaniasisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "YFC",
+		    "Yellow Fever",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getYellowFeverList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "YFC", "Yellow Fever", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getYellowFeverList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
-		
-		EhrReportingUtils.addRow(dsd, "VHC", "Viral Haemorrhagic Fever", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getViralHaemorrhagicFeverList()), indParam),
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "VHC",
+		    "Viral Haemorrhagic Fever",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        DiagnosisLists.getViralHaemorrhagicFeverList(), opdEncounterType.getEncounterTypeId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(
@@ -263,13 +417,22 @@ public class Moh705aDatasetDefinition {
 		        getConcept("1603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA").getConceptId()), indParam),
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "OVC", "Overweight", ReportUtils.map(
-		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOvrerweightList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "OVC",
+		    "Overweight",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getOvrerweightList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "AODC", "All other diseases for children", ReportUtils.map(
-		    moh705aIndicator.getAllChildredPatientsWithOtherDiagnosis(DiagnosisLists.getAllOtherDiseasesListForChildren()),
-		    indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "AODC",
+		    "All other diseases for children",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildredPatientsWithOtherDiagnosis(
+		            DiagnosisLists.getAllOtherDiseasesListForChildren(), opdEncounterType.getEncounterTypeId()), indParam),
+		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "NFAC", "No of first attendances",
 		    ReportUtils.map(moh705aIndicator.getNewChildrenPatients(), indParam), EhrAddonUtils.getAdultChildrenColumns());
@@ -306,73 +469,125 @@ public class Moh705aDatasetDefinition {
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		//Dehydrated related diagnosis
-		EhrReportingUtils.addRow(dsd, "DWSOD", "Diarrhoea with some dehydration",
-		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.mildDehydration()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DWSOD",
+		    "Diarrhoea with some dehydration",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.mildDehydration(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "DWSED", "Diarrhoea with severe dehydration", ReportUtils.map(
-		            moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.severeDehydration()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DWSED",
+		    "Diarrhoea with severe dehydration",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.severeDehydration(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "GAS", "Gastroenteritis", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getGastroenteritisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "GAS",
+		    "Gastroenteritis",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getGastroenteritisList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "SP", "Severe pneumonia", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getSeverePneumoniaList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "SP",
+		    "Severe pneumonia",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getSeverePneumoniaList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(dsd, "LTI", "Lower Respiratory Tract Infections", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getSLowerTractInfectionList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getSLowerTractInfectionList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "NS", "Neonatal Sepsis", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getNeutalSepsisList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "NS",
+		    "Neonatal Sepsis",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getNeutalSepsisList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "AM", "AMOEBIASIS",
-		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAmoebiasis()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "AM",
+		    "AMOEBIASIS",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAmoebiasis(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "DS", "Down’s syndrome", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getDownSyndromeList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DS",
+		    "Down’s syndrome",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getDownSyndromeList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RF", "Rheumatic Fever", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getReumonicFeverList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "RF",
+		    "Rheumatic Fever",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getReumonicFeverList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "RVF", "Rift valley fever", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getRiftValleyFeverList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "RVF",
+		    "Rift valley fever",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getRiftValleyFeverList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "CKU", "Chikungunya fever", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getChikungunyaFeverList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "CKU",
+		    "Chikungunya fever",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getChikungunyaFeverList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "DENF", "Dengue fever", ReportUtils.map(
-		    moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getDengueFeverList()), indParam), EhrAddonUtils
-		        .getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DENF",
+		    "Dengue fever",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getDengueFeverList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "CL", "Cutaneous Leishmaniasis", ReportUtils.map(
-		            moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getCutaneousLeishmaniasisList()),
-		            indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(dsd, "CL", "Cutaneous Leishmaniasis", ReportUtils.map(moh705aIndicator
+		        .getAllAdultPatientsWithDiagnosis(DiagnosisLists.getCutaneousLeishmaniasisList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils.addRow(dsd, "ANT", "Suspected Anthrax",
-		    ReportUtils.map(moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAnthraxList()), indParam),
-		    EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "ANT",
+		    "Suspected Anthrax",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getAnthraxList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "HYPO", "Hypoxaemia (Spo2<90%)", ReportUtils.map(
-		            moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getHypoxaemiaList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "HYPO",
+		    "Hypoxaemia (Spo2<90%)",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getHypoxaemiaList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
-		EhrReportingUtils
-		        .addRow(dsd, "SCC", "Suspected Childhood Cancers", ReportUtils.map(
-		            moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getHypoxaemiaList()), indParam),
-		            EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "SCC",
+		    "Suspected Childhood Cancers",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.getHypoxaemiaList(),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		return dsd;
 		

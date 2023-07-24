@@ -1,6 +1,7 @@
 package org.openmrs.module.financials.reports;
 
 import org.openmrs.EncounterType;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.ehrconfigs.metadata.EhrCommonMetadata;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.financials.reporting.library.queries.Moh705Queries;
@@ -48,7 +49,9 @@ public class SetupAllDiagnosisChildrenReport extends AbstractHybridReportBuilder
 		dsd.setName("aall");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.setSqlQuery(Moh705Queries.getMoh705aQuery(4));
+		EncounterType opdEncounter = Context.getEncounterService().getEncounterTypeByUuid(
+		    "ba45c278-f290-11ea-9666-1b3e6e848887");
+		dsd.setSqlQuery(Moh705Queries.getMoh705aQuery(4, opdEncounter.getEncounterTypeId()));
 		
 		return Arrays.asList(ReportUtils.map((DataSetDefinition) dsd, "startDate=${startDate},endDate=${endDate}"),
 		    ReportUtils.map(commonDatasetDefinition.getFacilityMetadata(), ""));
