@@ -12,4 +12,8 @@ public class MonthlyCollectionQueries {
 		String sql = "SELECT m2.transaction_date,m2.medical_exam,m2.medical_reports_including_P3,m2.dental,m2.physio_therapy,m2.occupational_therapy,m2.medical_records_cards_and_files,m2.booking_fees,m2.rental_services,m2.ambulance,m2.public_health_services,m2.ent_and_other_clinics,m2.other FROM monthly_summary_report m2 WHERE m2.transaction_date BETWEEN :startDate AND :endDate";
 		return sql;
 	}
+	
+	public static String getDailySummaryPerDepartment() {
+		return "SELECT * FROM patient";
+	}
 }

@@ -10,9 +10,9 @@ public class OutcomeConverter implements DataConverter {
 	
 	public Object convert(Object obj) {
 		
-		String data = (String) obj;
+		//String data = (String) obj;
 		
-		if (data == null) {
+		if (obj == null) {
 			return "A";
 		}
 		

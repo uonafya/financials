@@ -88,7 +88,7 @@ public class Moh705Queries {
 		        + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
 		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(160249, 160250)" + " AND c.class_id IN(%d) "
-		        + " AND e.encounter_type IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) <= 5 "
+		        + " AND e.encounter_type IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) < 5 "
 		        + "GROUP BY cn.name";
 		
 		return String.format(sql, classId, encounter);
@@ -143,7 +143,7 @@ public class Moh705Queries {
 		        + "WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND DATE_ADD(DATE_ADD(:endDate, INTERVAL 23 HOUR), INTERVAL 59 MINUTE) "
 		        + " AND o.value_coded IS NOT NULL " + " AND o.concept_id IN(160249, 160250)" + " AND c.class_id IN(%d) "
-		        + " AND e.encounter_type IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) > 5 "
+		        + " AND e.encounter_type IN(%d) " + " AND TIMESTAMPDIFF(YEAR, pe.birthdate, :endDate) >= 5 "
 		        + "GROUP BY cn.name";
 		
 		return String.format(sql, classId, encounter);

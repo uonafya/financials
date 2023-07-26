@@ -1,7 +1,9 @@
 package org.openmrs.module.financials.page.controller.reports;
 
 import org.openmrs.Program;
+import org.openmrs.api.context.Context;
 import org.openmrs.module.appframework.domain.AppDescriptor;
+import org.openmrs.module.ehrconfigs.metadata.EhrCommonMetadata;
 import org.openmrs.module.kenyacore.program.ProgramDescriptor;
 import org.openmrs.module.kenyacore.program.ProgramManager;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -33,7 +35,9 @@ public class EhrReportsHomePageController {
 		for (ReportDescriptor report : reportManager.getCommonReports(currentApp)) {
 			common.add(ui.simplifyObject(report));
 		}
-		reportsByProgram.put("Facility Summaries", common);
+		if (Context.getAuthenticatedUser().hasRole(EhrCommonMetadata._Roles.EHR_ACCESS_FINANCE_REPORT_SECTION)) {
+			reportsByProgram.put("Facility Summaries", common);
+		}
 		
 		for (ProgramDescriptor programDescriptor : programManager.getAllProgramDescriptors()) {
 			Program program = programDescriptor.getTarget();
