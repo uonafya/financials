@@ -481,6 +481,7 @@
             <set>
                 <ref bean="financials.common.report.facility.monthly.collection" />
                 <ref bean="financials.common.report.facility.monthly.collection.other" />
+                <ref bean="financials.moh.financial.summaries.department" />
             </set>
         </property>
     </bean>
@@ -518,5 +519,18 @@
                 <ref bean="financials.revenue.ehr.reports" />
             </set></property>
         <property name="template" value="financials:MOH_505_IDSR.xls" />
+    </bean>
+
+    <bean id="financials.moh.financial.summaries.department" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="89409761-502a-40a0-b384-3c5565f7ceeb" />
+        <property name="name" value="Facility Summary" />
+        <property name="description" value="Facility Departmental Summary Report" />
+        <property name="apps">
+            <set>
+                <ref bean="financials.revenue.ehr.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:financialDepartmentalSummary.xls" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:FFSR" />
     </bean>
 </beans>

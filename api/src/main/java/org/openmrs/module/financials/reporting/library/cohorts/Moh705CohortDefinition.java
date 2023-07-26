@@ -81,7 +81,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705A",
 		    ReportUtils.map(getPatientsWhoHaveDiagnosis705(list, encounter), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 5), "effectiveDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
 		cd.setCompositionString("MOH705A AND CHILD");
 		return cd;
 	}
@@ -93,7 +93,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705A", ReportUtils.map(getPatientsWhoHaveOtherDiagnosis705(list, encounter),
 		    "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 5), "effectiveDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
 		cd.setCompositionString("MOH705A AND CHILD");
 		return cd;
 	}
@@ -118,7 +118,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705B",
 		    ReportUtils.map(getPatientsWhoHaveDiagnosis705(list, encounter), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(6, 200), "effectiveDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("MOH705B AND ADULT");
 		return cd;
 	}
@@ -130,7 +130,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("MOH705B", ReportUtils.map(getPatientsWhoHaveOtherDiagnosis705(list, encounter),
 		    "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(6, 200), "effectiveDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("MOH705B AND ADULT");
 		return cd;
 	}
@@ -190,7 +190,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("NEW", ReportUtils.map(getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 5), "effectiveDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
 		cd.setCompositionString("NEW AND CHILD");
 		return cd;
 	}
@@ -201,7 +201,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("NEW", ReportUtils.map(getNewPatients(), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(6, 200), "effectiveDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("NEW AND ADULT");
 		return cd;
 	}
@@ -212,7 +212,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("RVT", ReportUtils.map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 5), "effectiveDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
 		cd.setCompositionString("RVT AND CHILD");
 		return cd;
 	}
@@ -223,7 +223,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("RVT", ReportUtils.map(getRevisitPatients(), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(6, 200), "effectiveDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("RVT AND ADULT");
 		return cd;
 	}
@@ -234,7 +234,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("REF", ReportUtils.map(getReferrals(qn, ans), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 5), "effectiveDate=${endDate}"));
+		cd.addSearch("CHILD", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(0, 4), "effectiveDate=${endDate}"));
 		cd.setCompositionString("REF AND CHILD");
 		return cd;
 	}
@@ -245,7 +245,7 @@ public class Moh705CohortDefinition {
 		cd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		cd.addSearch("REF", ReportUtils.map(getReferrals(qn, ans), "startDate=${startDate},endDate=${endDate}"));
-		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(6, 200), "effectiveDate=${endDate}"));
+		cd.addSearch("ADULT", ReportUtils.map(ehrAddonCommons.createXtoYAgeCohort(5, 200), "effectiveDate=${endDate}"));
 		cd.setCompositionString("REF AND ADULT");
 		return cd;
 	}
