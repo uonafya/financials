@@ -25,7 +25,7 @@
 
             data.map((item) => {
 
-            jq('#tbody').append("<tr><td>" + item.billId + "</td><td>" + item.patientId + "</td><td>" + item.transactionDate + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.waiver + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+            jq('#tbody').append("<tr><td>" + item.billId + "</td><td>" + item.patientId + "</td><td>" + item.transactionDate + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.service + "</td><td>" + "</td><td>" + item.waiver + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
 
             var actualAmount = parseFloat(item.actualAmount);
             var paidAmount = parseFloat(item.paidAmount);
@@ -39,7 +39,30 @@
             jq('#actualAmountTotal').text(actualAmountTotal);
             jq('#paidAmountTotal').text(paidAmountTotal);
 
-            var table = jq("#pDetails").DataTable();
+            var table = jq("#pDetails").DataTable({
+                dom: 'Bfrtip',
+                "oLanguage": {
+                    "oPaginate": {
+                        "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
+                        "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
+                    }
+                },
+                buttons: ['copy', 'csv', 'excel',
+                    {   extend: 'print',
+                        messageTop: 'Departmental revenue transactions.',
+                        customize: function ( win ) {
+                            jQuery(win.document.body)
+                                .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                        },
+                        repeatingHead: {
+                            logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                            logoPosition: 'center',
+                            logoStyle: ''
+                        },
+                        title: ''
+                    }
+                ]
+            });
 
             jq('#pDetails tbody').on('click', 'tr', function() {
             var billId = table.row(this).data();
@@ -107,6 +130,7 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <th>Patient Names</th>
                 <th>Category</th>
                 <th>SubCategory</th>
+                <td>Service</td>
                 <th>Waiver Amount</th>
                 <th>Actual Amount</th>
                 <th>Paid Amount</th>
