@@ -20,7 +20,7 @@ public class FinancialSecurityMetadata extends AbstractMetadataBundle {
 		
 		public static final String APP_FINANCE_APP = "App: financials.home";
 		
-		public static final String APP_EHR_REPORTS_APP = "App: financials.revenue.ehr.reports";
+		public static final String APP_EHR_REPORTS_APP = "App: financials.ehr.reports";
 	}
 	
 	public static final class _Role {
