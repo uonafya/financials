@@ -1,7 +1,9 @@
 <script type="text/javascript">
     jq = jQuery
     jq(document).ready(function() {
+        jq("#ptabs").tabs();
         getBills();
+
     });
 
     function getBills(){
@@ -95,7 +97,12 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
     background-color: #43fff8;
 }
 </style>
-<div class="ke-panel-frame">
+<div id="ptabs">
+    <ul>
+        <li><a href="#bills">Patient Bills</a></li>
+        <li><a href="#billsItems">Bills Items</a></li>
+    </ul>
+<div class="ke-panel-frame" id="bills">
     <div class="ke-panel-heading">Patient Finance Summaries </div>
     <div class="ke-panel-content" style="background-color: #F3F9FF;">
         <br />
@@ -146,4 +153,8 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
             </tfoot>
         </table>
         </div>
+        <div id="billsItems">
+            <h1>Summaries will go here</h1>
+        </div>
+</div>
 </div>
