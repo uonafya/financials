@@ -7,6 +7,7 @@ import org.openmrs.api.PersonService;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.PatientBillSummary;
 import org.openmrs.module.hospitalcore.BillingService;
+import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.PatientServiceBill;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
 import org.openmrs.ui.framework.SimpleObject;
@@ -121,4 +122,13 @@ public class PatientFinanceSummariesFragmentController {
 
         return simpleObjectList;
     }
+	
+	public List<SimpleObject> getAllBillsItemsByDateRange(
+	        @RequestParam(value = "startDate", required = false) Date startDate,
+	        @RequestParam(value = "endDate", required = false) Date endDate, UiUtils ui) {
+		List<PatientServiceBillItem> patientServiceBills = Context.getService(HospitalCoreService.class)
+		        .getPatientServiceBillByDepartment(null, startDate, endDate);
+		return SimpleObject.fromCollection(patientServiceBills, ui, "createdDate", "name", "quantity", "unitPrice",
+		    "actualAmount", "patientServiceBill");
+	}
 }
