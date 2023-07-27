@@ -533,4 +533,16 @@
         <property name="template" value="financials:financialDepartmentalSummary.xls" />
         <property name="repeatingSection" value="sheet:1,row:4,dataset:FFSR" />
     </bean>
+    <bean id="financials.moh.financial.summaries.pharmacy" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
+        <property name="targetUuid" value="fcc21dea-2c80-11ee-86a8-873dc7106cdf" />
+        <property name="name" value="MOH 647" />
+        <property name="description" value="Facility Tracker Health Products and Technologies(HPT) Data Report Form(MOH 647)" />
+        <property name="apps">
+            <set>
+                <ref bean="financials.revenue.ehr.reports" />
+            </set>
+        </property>
+        <property name="template" value="financials:moh647.xls" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:hpt" />
+    </bean>
 </beans>
