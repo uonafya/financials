@@ -543,6 +543,6 @@
             </set>
         </property>
         <property name="template" value="financials:moh647.xls" />
-        <property name="repeatingSection" value="sheet:1,row:4,dataset:FFSR" />
+        <property name="repeatingSection" value="sheet:1,row:4,dataset:hpt" />
     </bean>
 </beans>

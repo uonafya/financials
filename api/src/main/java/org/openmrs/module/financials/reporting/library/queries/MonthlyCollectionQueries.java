@@ -16,4 +16,8 @@ public class MonthlyCollectionQueries {
 	public static String getDailySummaryPerDepartment() {
 		return "SELECT * FROM patient";
 	}
+	
+	public static String getHptSummary() {
+		return "SELECT * FROM inventory_drug";
+	}
 }
