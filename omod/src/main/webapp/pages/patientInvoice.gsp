@@ -25,7 +25,8 @@
         jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getItemizedPatientBillsByDateTimeRange") }', {
             patientId: jq("#patientId").val(),
             fromDate:jq("#summaryFromDate-field").val(),
-            toDate: jq("#summaryToDate-field").val()
+            toDate: jq("#summaryToDate-field").val(),
+            ifNhif:false
         }).success(function(data) {
             populateTable(data);
         });
