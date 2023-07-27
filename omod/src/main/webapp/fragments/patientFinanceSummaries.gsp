@@ -39,7 +39,30 @@
             jq('#actualAmountTotal').text(actualAmountTotal);
             jq('#paidAmountTotal').text(paidAmountTotal);
 
-            var table = jq("#pDetails").DataTable();
+            var table = jq("#pDetails").DataTable({
+                dom: 'Bfrtip',
+                "oLanguage": {
+                    "oPaginate": {
+                        "sNext": '<i class="fa fa-chevron-right py-1" ></i>',
+                        "sPrevious": '<i class="fa fa-chevron-left py-1" ></i>'
+                    }
+                },
+                buttons: ['copy', 'csv', 'excel',
+                    {   extend: 'print',
+                        messageTop: 'Departmental revenue transactions.',
+                        customize: function ( win ) {
+                            jQuery(win.document.body)
+                                .prepend(`${ ui.includeFragment("patientdashboardapp", "printHeader") }`);
+                        },
+                        repeatingHead: {
+                            logo: '${ui.resourceLink('ehrinventoryapp', 'images/kenya_logo.bmp')}',
+                            logoPosition: 'center',
+                            logoStyle: ''
+                        },
+                        title: ''
+                    }
+                ]
+            });
 
             jq('#pDetails tbody').on('click', 'tr', function() {
             var billId = table.row(this).data();
