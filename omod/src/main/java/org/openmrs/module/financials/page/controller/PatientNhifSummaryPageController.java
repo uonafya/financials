@@ -10,6 +10,6 @@ public class PatientNhifSummaryPageController {
 	
 	public void controller(PageModel model, @RequestParam("identifier") String identifier,
 	        @RequestParam("whichDate") String whichDate) {
-		model.addAttribute("currentPatient", Context.getPatientService().getPatients(identifier).get(0));
+		model.addAttribute("patient", Context.getPatientService().getPatients(identifier).get(0));
 	}
 }

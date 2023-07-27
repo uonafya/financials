@@ -97,14 +97,19 @@ public class PatientFinanceSummariesFragmentController {
 	public List<SimpleObject> getItemizedPatientBillsByDateTimeRange(
             @RequestParam(value = "patientId", required = false) Patient patient,
             @RequestParam(value = "fromDate", required = false) Date startDate,
+            @RequestParam(value = "ifNhif", required = false) Boolean isNhif,
             @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
         BillingService billingService = Context.getService(BillingService.class);
 
         List<SimpleObject> simpleObjectList = new ArrayList<>();
-
-        List<PatientServiceBill> bills = billingService.getPatientBillsPerDateRange(patient, startDate, endDate).stream().filter(bill ->
-                bill.getPatient() == patient).collect(Collectors.toList());
-
+        List<PatientServiceBill> bills = new ArrayList<>();
+        if (!isNhif) {
+            bills = billingService.getPatientBillsPerDateRange(patient, startDate, endDate).stream().filter(bill ->
+                    bill.getPatient() == patient).collect(Collectors.toList());
+        } else {
+            bills = billingService.getPatientBillsPerDateRange(patient, startDate, endDate).stream().filter(bill ->
+                    bill.getPatient() == patient && (bill.getPaymentMode().equalsIgnoreCase("NHIF") || bill.getPatientSubCategory().equalsIgnoreCase("NHIF patient"))).collect(Collectors.toList());
+        }
         List<PatientServiceBillItem> patientBills = new ArrayList<>();
         for (PatientServiceBill bill : bills) {
             patientBills.addAll(bill.getBillItems());
