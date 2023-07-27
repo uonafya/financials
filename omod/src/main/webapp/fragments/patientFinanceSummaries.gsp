@@ -25,7 +25,7 @@
 
             data.map((item) => {
 
-            jq('#tbody').append("<tr><td>" + item.billId + "</td><td>" + item.patientId + "</td><td>" + item.transactionDate + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.service + "</td><td>" + "</td><td>" + item.waiver + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
+            jq('#tbody').append("<tr><td>" + item.billId + "</td><td>" + item.patientId + "</td><td>" + item.transactionDate + "</td><td>" + item.identifier + "</td><td>" + item.patient + "</td><td>" + item.category + "</td><td>" + item.subCategory + "</td><td>" + item.waiver + "</td><td>" + item.actualAmount + "</td><td>" + item.paidAmount + "</td></tr>");
 
             var actualAmount = parseFloat(item.actualAmount);
             var paidAmount = parseFloat(item.paidAmount);
@@ -130,7 +130,6 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 <th>Patient Names</th>
                 <th>Category</th>
                 <th>SubCategory</th>
-                <td>Service</td>
                 <th>Waiver Amount</th>
                 <th>Actual Amount</th>
                 <th>Paid Amount</th>
