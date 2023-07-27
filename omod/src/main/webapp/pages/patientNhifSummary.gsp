@@ -102,7 +102,7 @@
             ${ui.includeFragment("patientdashboardapp", "printHeader")}
         </div>
         <div>
-            <h3 style="text-align: center;">PATIENT SUMMARY INFORMATION</h3>
+            <h3 style="margin-left: 8%">PATIENT INFORMATION</h3>
             <div style="margin-left: 13%">
             <label>
                 <span class='status active'></span>
@@ -134,7 +134,8 @@
         </div>
         </div>
     </div>
-    <table id="invoice-items" cellpadding="0" cellspacing="0" width=75%>
+    <h3 style="margin-left: 8%">NHIF CLAIM SUMMARY</h3>
+    <table id="invoice-items" cellpadding="0" cellspacing="0" width=75% STYLE=" margin-left: 8%";>
         <thead>
         <tr>
             <th>Receipt ID</th>
