@@ -82,8 +82,8 @@
     function getBillsItems() {
 
         jq.getJSON('${ ui.actionLink("financials", "patientFinanceSummaries", "getAllBillsItemsByDateRange") }', {
-            startDate: jq("#").val(),
-            endDate: jq("#").val()
+            fromDate: jq("#summaryFromDate-field").val(),
+            toDate: jq("#summaryToDate-field").val()
         }).success(function (data) {
             populateBillItemsTable(data);
         });
@@ -94,9 +94,8 @@
 
         if (data) {
             jq('#billsItemsTbl').DataTable().clear().destroy();
-
             data.map((item) => {
-                jq("#billsItemsTableBody").append("<tr><td>" + item.createdDate + "</td><td>" + item.name + "</td> <td>" + item.quantity + "</td><td>" + item.unitPrice + "</td> <td>" + item.actualAmount + "</td><td>" + item.patientServiceBill.waiverAmount + "</td><td>" + item.patientServiceBill.receipt.id + "</td> </tr>");
+                jq("#billsItemsTableBody").append("<tr><td>" + item.patientServiceBill.patient.id + "</td><td>" + item.patientServiceBill.patient.gender + "</td><td>" +  item.patientServiceBill.patient.age + "</td><td>"+ item.patientServiceBill.patientServiceBillId + "</td><td>" + "</td><td>"  + item.createdDate + "</td><td>" + item.name + "</td> <td>" + item.quantity + "</td><td>" + item.unitPrice + "</td> <td>" + item.amount + "</td><td>"+ "</td> <td>" + item.actualAmount + "</td><td>" + item.patientServiceBill.waiverAmount + "</td><td>" + item.patientServiceBill.receipt.id + "</td> </tr>");
             });
             var table = jq("#billsItemsTbl").DataTable({
                 dom: 'Bfrtip',
@@ -227,14 +226,20 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                         <table id="billsItemsTbl" width="100%">
                             <thead>
                             <tr>
+                                <th>Patient Identifier</th>
+                                <th>Sex</th>
+                                <th>Age</th>
+                                <th>Bill id</th>
                                 <th>Created Date</th>
-                                <th>Name</th>
+                                <th>Service</th>
                                 <th>Quantity</th>
                                 <th>Unit Price</th>
+                                <th>Amount</th>
                                 <th>Actual Amount</th>
                                 <th>Waiver Amount</th>
                                 <th>Receipt Number</th>
                             </tr>
+
                             </thead>
                             <tbody id="billsItemsTableBody">
 
