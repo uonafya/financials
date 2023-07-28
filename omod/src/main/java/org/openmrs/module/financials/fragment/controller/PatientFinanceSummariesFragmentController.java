@@ -124,8 +124,8 @@ public class PatientFinanceSummariesFragmentController {
     }
 	
 	public List<SimpleObject> getAllBillsItemsByDateRange(
-	        @RequestParam(value = "startDate", required = false) Date startDate,
-	        @RequestParam(value = "endDate", required = false) Date endDate, UiUtils ui) {
+	        @RequestParam(value = "fromDate", required = false) Date startDate,
+	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
 		List<PatientServiceBillItem> patientServiceBills = Context.getService(HospitalCoreService.class)
 		        .getPatientServiceBillByDepartment(null, startDate, endDate);
 		return SimpleObject.fromCollection(patientServiceBills, ui, "patientServiceBill.patientServiceBillId",

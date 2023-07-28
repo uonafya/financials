@@ -93,9 +93,11 @@
     function populateBillItemsTable(data) {
 
         if (data) {
+
             jq('#billsItemsTbl').DataTable().clear().destroy();
+            jq('#billsItemsTableBody').empty();
             data.map((item) => {
-                jq("#billsItemsTableBody").append("<tr><td>" + item.patientServiceBill.patient.id + "</td><td>" + item.patientServiceBill.patient.gender + "</td><td>" +  item.patientServiceBill.patient.age + "</td><td>"+ item.patientServiceBill.patientServiceBillId + "</td><td>" + "</td><td>"  + item.createdDate + "</td><td>" + item.name + "</td> <td>" + item.quantity + "</td><td>" + item.unitPrice + "</td> <td>" + item.amount + "</td><td>"+ "</td> <td>" + item.actualAmount + "</td><td>" + item.patientServiceBill.waiverAmount + "</td><td>" + item.patientServiceBill.receipt.id + "</td> </tr>");
+                jq("#billsItemsTableBody").append("<tr><td>" + item.patientServiceBill.patient.id + "</td><td>" + item.patientServiceBill.patient.gender + "</td><td>" + item.patientServiceBill.patient.age + "</td><td>" + item.patientServiceBill.patientServiceBillId + "</td><td>" + item.createdDate + "</td><td>" + item.name + "</td> <td>" + item.quantity + "</td><td>" + item.unitPrice + "</td> <td>" + item.amount + "</td><td>" + item.actualAmount + "</td><td>" + item.patientServiceBill.waiverAmount + "</td><td>" + item.patientServiceBill.receipt.id + "</td> </tr>");
             });
             var table = jq("#billsItemsTbl").DataTable({
                 dom: 'Bfrtip',
@@ -122,7 +124,7 @@
                     }
                 ]
             });
-        }else {
+        } else {
             jq('#billsItemsTableBody').append("<tr><td colspan='10'>No records found</td></tr>");
             jq("#billsItemsTbl").DataTable();
         }
@@ -215,39 +217,35 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                 </tfoot>
             </table>
         </div>
+    </div>
 
-        <div id="billsItems">
-            %{--itmemized bills summary--}%
-            <td width="90%">
-                <div class="ke-panel-frame">
-                    <div class="ke-panel-heading">Patient Bill's Items Summaries</div>
+    <div id="billsItems">
+        <div class="ke-panel-frame">
+            <div class="ke-panel-heading">Patient Bill's Items Summaries</div>
 
-                    <div class="ke-panel-content" style="background-color: #F3F9FF;">
-                        <table id="billsItemsTbl" width="100%">
-                            <thead>
-                            <tr>
-                                <th>Patient Identifier</th>
-                                <th>Sex</th>
-                                <th>Age</th>
-                                <th>Bill id</th>
-                                <th>Created Date</th>
-                                <th>Service</th>
-                                <th>Quantity</th>
-                                <th>Unit Price</th>
-                                <th>Amount</th>
-                                <th>Actual Amount</th>
-                                <th>Waiver Amount</th>
-                                <th>Receipt Number</th>
-                            </tr>
+            <div class="ke-panel-content" style="background-color: #F3F9FF;">
+                <table id="billsItemsTbl" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Patient Identifier</th>
+                        <th>Sex</th>
+                        <th>Age</th>
+                        <th>Bill id</th>
+                        <th>Created Date</th>
+                        <th>Service</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Amount</th>
+                        <th>Actual Amount</th>
+                        <th>Waiver Amount</th>
+                        <th>Receipt Number</th>
+                    </tr>
+                    </thead>
+                    <tbody id="billsItemsTableBody">
 
-                            </thead>
-                            <tbody id="billsItemsTableBody">
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </td>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
