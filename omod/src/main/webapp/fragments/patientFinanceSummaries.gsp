@@ -97,7 +97,8 @@
             jq('#billsItemsTbl').DataTable().clear().destroy();
             jq('#billsItemsTableBody').empty();
             data.map((item) => {
-                jq("#billsItemsTableBody").append("<tr><td>" + item.patientServiceBill.patient.id + "</td><td>" + item.patientServiceBill.patient.gender + "</td><td>" + item.patientServiceBill.patient.age + "</td><td>" + item.patientServiceBill.patientServiceBillId + "</td><td>" + item.createdDate + "</td><td>" + item.name + "</td> <td>" + item.quantity + "</td><td>" + item.unitPrice + "</td> <td>" + item.amount + "</td><td>" + item.actualAmount + "</td><td>" + item.patientServiceBill.waiverAmount + "</td><td>" + item.patientServiceBill.receipt.id + "</td> </tr>");
+                jq("#billsItemsTableBody").append("<tr><td>" + item.patientServiceBill.patient.id + "</td><td>" + item.patientServiceBill.patient.gender + "</td><td>" + item.patientServiceBill.patient.age + "</td><td>" + item.patientServiceBill.patientServiceBillId + "</td><td>" + item.createdDate + "</td><td>" + item.name + "</td> <td>" + item.quantity + "</td><td>" + item.unitPrice + "</td> <td>" + item.amount + "</td><td>" + item.actualAmount + "</td><td>" + item.patientServiceBill.waiverAmount + "</td><td>" + item.patientServiceBill.receipt.id + "</td><td>" + item.patientServiceBill.paymentMode + "</td><td>" + item.patientServiceBill.patientCategory + "</td><td>" + item.patientServiceBill.patientSubCategory + "</td><td>" +item.patientServiceBill.creator.username + "</td> </tr>");
+
             });
             var table = jq("#billsItemsTbl").DataTable({
                 dom: 'Bfrtip',
@@ -239,6 +240,10 @@ table#pDetails.dataTable tbody tr:hover > .sorting_1 {
                         <th>Actual Amount</th>
                         <th>Waiver Amount</th>
                         <th>Receipt Number</th>
+                        <th>Payment Mode</th>
+                        <th>Patient Category</th>
+                        <th>Patient SubCategory</th>
+                        <th>Patient Creator</th>
                     </tr>
                     </thead>
                     <tbody id="billsItemsTableBody">

@@ -131,6 +131,8 @@ public class PatientFinanceSummariesFragmentController {
 		return SimpleObject.fromCollection(patientServiceBills, ui, "patientServiceBill.patientServiceBillId",
 		    "patientServiceBill.patient.id", "patientServiceBill.patient", "patientServiceBill.patient.gender",
 		    "patientServiceBill.patient.age", "createdDate", "name", "quantity", "unitPrice", "amount", "actualAmount",
-		    "patientServiceBill.waiverAmount", "patientServiceBill.receipt.id");
+		    "patientServiceBill.waiverAmount", "patientServiceBill.receipt.id", "patientServiceBill.paymentMode",
+		    "patientServiceBill.patientCategory", "patientServiceBill.patientSubCategory",
+		    "patientServiceBill.creator.username", "patientServiceBill.creator");
 	}
 }
