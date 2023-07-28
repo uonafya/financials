@@ -482,6 +482,7 @@
                 <ref bean="financials.common.report.facility.monthly.collection" />
                 <ref bean="financials.common.report.facility.monthly.collection.other" />
                 <ref bean="financials.moh.financial.summaries.department" />
+                <ref bean="financials.moh.financial.summaries.pharmacy" />
             </set>
         </property>
     </bean>
