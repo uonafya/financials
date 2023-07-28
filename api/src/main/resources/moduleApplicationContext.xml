@@ -109,6 +109,7 @@
                 <ref bean="financials.common.report.non.paying.patients" />
                 <ref bean="financials.common.report.222" />
                 <ref bean="financials.moh.505" />
+                <ref bean="financials.moh.financial.summaries.pharmacy" />
             </set>
         </property>
         <property name="fragments">
