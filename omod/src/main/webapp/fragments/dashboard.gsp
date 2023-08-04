@@ -4,12 +4,12 @@
     jq("#filter").click(function () {
       populateDashboard();
     });
-  })
+  });
   function populateDashboard() {
       const summaryFromDate = jq('#summaryFromDate-field').val(),
           summaryToDate = jq('#summaryToDate-field').val();
 
-      jq.getJSON('${ui.actionLink("financials", "Dashboard", "getDepartmentTotalsOnDateRange")}',
+      jq.getJSON('${ui.actionLink("financials", "dashboard", "getDepartmentTotalsOnDateRange")}',
           {
             "fromDate" : summaryFromDate,
             "toDate" : summaryToDate,
@@ -20,6 +20,7 @@
         jq('.stat-digit').eq(2).html(data.laboratory)
         jq('.stat-digit').eq(3).html(data.radiology)
         jq('.stat-digit').eq(4).html(data.procedure)
+        jq('.stat-digit').eq(5).html(data.general)
         jQuery("#graph-container").highcharts({
           credits: {
             enabled: false
@@ -75,7 +76,12 @@
             }, {
               name: 'Procedures',
               y: data.procedure,
-            }]
+            },
+            {
+              name: 'General',
+              y: data.general,
+            }
+            ]
           }],
         });
       });
@@ -215,6 +221,13 @@ html, body, #graph-container {
                           <div class="card-counter primary">
                             <i class="fa fa-ticket"></i>
                             <span class="count-name stat-text">PROCEDURES</span>
+                            <span class="count-numbers stat-digit"></span>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card-counter primary">
+                            <i class="fa fa-ticket"></i>
+                            <span class="count-name stat-text">GENERAL</span>
                             <span class="count-numbers stat-digit"></span>
                           </div>
                         </div>

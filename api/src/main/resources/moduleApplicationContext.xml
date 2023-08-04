@@ -80,27 +80,18 @@
                 <ref bean="financials.common.705a" />
                 <ref bean="financials.common.705b" />
                 <ref bean="financials.common.706" />
-                <!--<ref bean="financials.common.report.moh710" />-->
                 <ref bean="financials.report.moh711" />
                 <ref bean="financials.common.717" />
-                <!--<ref bean="financials.common.report.opthalimic" />-->
-
                 <ref bean="financials.common.report.labadults" />
                 <ref bean="financials.common.report.labchildren" />
                 <ref bean="financials.common.report.allPatients" />
                 <ref bean="financials.common.report.malaria" />
                 <ref bean="financials.common.report.turn.around.time" />
-
                 <ref bean="financials.common.report.204A" />
                 <ref bean="financials.common.report.204B" />
                 <ref bean="financials.common.report.209" />
                 <ref bean="financials.common.report.240" />
                 <ref bean="financials.common.report.301" />
-                <!--<ref bean="financials.common.report.333" />-->
-                <!--<ref bean="financials.common.report.405" />-->
-                <!--<ref bean="financials.common.report.510" />-->
-                <!--<ref bean="financials.common.report.511" />-->
-                <!--<ref bean="financials.common.report.512" />-->
                 <ref bean="financials.common.report.705.a.all" />
                 <ref bean="financials.common.report.705.b.all" />
                 <ref bean="financials.common.report.705.b.allDiagnosis" />
@@ -392,44 +383,6 @@
         <property name="template" value="financials:MOH_209.xls" />
         <property name="repeatingSection" value="sheet:1,row:6,dataset:rxr" />
     </bean>
-
-    <bean id="financials.common.report.opthalimic" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
-        <property name="targetUuid" value="0029faaa-0809-11ec-bcfe-d7e905f89da3" />
-        <property name="name" value="Opthalmic Service Unit Summary" />
-        <property name="description" value="Opthalmic Service Unit Summary" />
-        <property name="apps">
-            <set>
-                <ref bean="financials.revenue.ehr.reports" />
-            </set>
-        </property>
-        <property name="template" value="financials:MOH_Opthalmic_ Services_ Unit_ Summary_ Form.xls" />
-    </bean>
-
-    <bean id="financials.common.report.512" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
-        <property name="targetUuid" value="2220baec-1ee1-11ec-aff2-0f10cbf8fc8d" />
-        <property name="name" value="MOH 512_FP Register- MOH 512" />
-        <property name="description" value="MOH 512_FP Register - MOH 512 Report" />
-        <property name="apps">
-            <set>
-                <ref bean="financials.revenue.ehr.reports" />
-            </set>
-        </property>
-        <property name="template" value="financials:MOH_512.xls" />
-        <property name="repeatingSection" value="sheet:1,row:5,dataset:fpr" />
-    </bean>
-
-    <bean id="financials.common.report.405" class="org.openmrs.module.kenyacore.report.HybridReportDescriptor">
-        <property name="targetUuid" value="0abe35f8-203c-11ec-bece-b7b4ba3ecd4c" />
-        <property name="name" value="MOH 405 ANC Register" />
-        <property name="description" value="MOH 405 Register for ANC Services" />
-        <property name="apps">
-            <set>
-                <ref bean="financials.revenue.ehr.reports" />
-            </set></property>
-        <property name="template" value="financials:MOH405_ANC Register.xls" />
-        <property name="repeatingSection" value="sheet:1,row:9,dataset:anc" />
-    </bean>
-
     <bean id="financials.common.report.moh710" class="org.openmrs.module.kenyacore.report.IndicatorReportDescriptor">
         <property name="targetUuid" value="1e710694-2045-11ec-b930-3fae95a8796c" />
         <property name="name" value="MOH 710" />

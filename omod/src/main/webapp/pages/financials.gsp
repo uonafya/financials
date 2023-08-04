@@ -113,6 +113,12 @@
                     active: (selection == "section-doctorsSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/doctorssum.png"
+            ],
+            [
+                    label: "Admin Summaries",
+                    href: ui.pageLink("financials", "adminSummaries"),
+                    iconProvider: "financials",
+                    icon: "buttons/Zoom-in.png"
             ]
     ]
 %>

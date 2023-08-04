@@ -61,6 +61,10 @@ public class DashboardFragmentController {
 		    "registration",
 		    getDepartmentTotalsOnDateRange(hospitalCoreService, startDate, endDate,
 		        hospitalCoreService.getDepartmentByName("Registration")));
+		simpleObject.put(
+		    "general",
+		    getDepartmentTotalsOnDateRange(hospitalCoreService, startDate, endDate,
+		        hospitalCoreService.getDepartmentByName("General")));
 		return simpleObject;
 	}
 	
@@ -109,5 +113,12 @@ public class DashboardFragmentController {
 			sumTotals += Double.parseDouble(pharmacyBillSummary.getTotalAMount());
 		}
 		return sumTotals;
+	}
+
+	public SimpleObject getAdminSummariesOnDateRange(@RequestParam(value = "fromDate", required = false) Date startDate,
+													 @RequestParam(value = "toDate", required = false) Date endDate) {
+		SimpleObject simpleObject = new SimpleObject();
+
+		return simpleObject;
 	}
 }
