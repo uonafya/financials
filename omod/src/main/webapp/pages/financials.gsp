@@ -67,6 +67,13 @@
                     icon: "buttons/radiology.jpg"
             ],
             [
+                    label: "General Payments",
+                    href: ui.pageLink("financials", "financials", [ section: "general" ]),
+                    active: (selection == "section-general"),
+                    iconProvider: "financials",
+                    icon: "buttons/scissors.png"
+            ],
+            [
                     label: "Patient Summaries",
                     href: ui.pageLink("financials", "financials", [ section: "patientFinanceSummaries" ]),
                     active: (selection == "section-patientFinanceSummaries"),
@@ -150,5 +157,7 @@
     ${ui.includeFragment("financials","cashierSummaries")}
     <%} else if(section == "doctorsSummaries") {%>
     ${ui.includeFragment("financials","doctorsSummaries")}
-    <%}%>
+    <%} else if(section == "doctorsSummaries") {%>
+    ${ui.includeFragment("financials","doctorsSummaries")}
+    <%}%>%>
 </div>

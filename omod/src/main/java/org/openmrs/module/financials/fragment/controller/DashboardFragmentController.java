@@ -1,5 +1,8 @@
 package org.openmrs.module.financials.fragment.controller;
 
+import org.openmrs.Encounter;
+import org.openmrs.Patient;
+import org.openmrs.Visit;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.PharmacyBillSummary;
 import org.openmrs.module.financials.utils.FinancialsUtils;
@@ -15,8 +18,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class DashboardFragmentController {
 	
@@ -114,11 +120,46 @@ public class DashboardFragmentController {
 		}
 		return sumTotals;
 	}
-
+	
 	public SimpleObject getAdminSummariesOnDateRange(@RequestParam(value = "fromDate", required = false) Date startDate,
-													 @RequestParam(value = "toDate", required = false) Date endDate) {
+	        @RequestParam(value = "toDate", required = false) Date endDate) {
+		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
 		SimpleObject simpleObject = new SimpleObject();
-
+		
+		simpleObject.put("opdVisits", getTotalOpdVisitsWithinDateRange(startDate, endDate, hospitalCoreService).size());
+		simpleObject.put("allVisits", getTotalVisitsWithinDateRange(startDate, endDate, hospitalCoreService).size());
+		simpleObject.put("allWalkIn", getTotalWalkInWithinDateRange(startDate, endDate, hospitalCoreService));
+		simpleObject.put("revisitPatients", getTotalOpdVisitsWithinDateRange(startDate, endDate, hospitalCoreService));
+		simpleObject.put("newPatients", getTotalOpdVisitsWithinDateRange(startDate, endDate, hospitalCoreService));
+		
 		return simpleObject;
+	}
+	
+	private Set<Patient> getTotalOpdVisitsWithinDateRange(Date startDate, Date endDate,
+	        HospitalCoreService hospitalCoreService) {
+		List<Encounter> encounterList = hospitalCoreService.getProviderEncounters(startDate, endDate, null,
+		    Arrays.asList(Context.getEncounterService().getEncounterTypeByUuid("ba45c278-f290-11ea-9666-1b3e6e848887")));
+		Set<Patient> patientSet = new HashSet<Patient>();
+		for (Encounter encounter : encounterList) {
+			patientSet.add(encounter.getPatient());
+		}
+		return patientSet;
+	}
+	
+	private Set<Patient> getTotalVisitsWithinDateRange(Date startDate, Date endDate, HospitalCoreService hospitalCoreService) {
+		List<Encounter> encounterList = hospitalCoreService.getProviderEncounters(startDate, endDate, null, null);
+		Set<Patient> patientSet = new HashSet<Patient>();
+		for (Encounter encounter : encounterList) {
+			patientSet.add(encounter.getPatient());
+		}
+		return patientSet;
+	}
+	
+	private Set<Patient> getTotalWalkInWithinDateRange(Date startDate, Date endDate, HospitalCoreService hospitalCoreService) {
+		
+		Set<Patient> patientSetTotalWalkIn = getTotalVisitsWithinDateRange(startDate, endDate, hospitalCoreService);
+		patientSetTotalWalkIn.retainAll(getTotalVisitsWithinDateRange(startDate, endDate, hospitalCoreService));
+		
+		return patientSetTotalWalkIn;
 	}
 }
