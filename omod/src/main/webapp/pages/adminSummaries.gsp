@@ -16,7 +16,7 @@
       <div class="ke-panel-heading">Administrator Facility Overview</div>
           <div class="ke-panel-content">
               <div class="row">
-                  <div class="col-12">
+                  <div class="col-9">
                       <div style="margin-top: -1px " class="onerow">
                           <i class="icon-filter" style="font-size: 26px!important; color: #5b57a6"></i>
                           <label>&nbsp;&nbsp;From&nbsp;</label>${ui.includeFragment("uicommons", "field/datetimepicker", [formFieldName: 'fromDate', id: 'summaryFromDate', label: '', useTime: false, defaultToday: false, class: ['newdtp']])}
