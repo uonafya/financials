@@ -128,9 +128,9 @@ public class DashboardFragmentController {
 		
 		simpleObject.put("opdVisits", getTotalOpdVisitsWithinDateRange(startDate, endDate, hospitalCoreService).size());
 		simpleObject.put("allVisits", getTotalVisitsWithinDateRange(startDate, endDate, hospitalCoreService).size());
-		simpleObject.put("allWalkIn", getTotalWalkInWithinDateRange(startDate, endDate, hospitalCoreService));
-		simpleObject.put("revisitPatients", getTotalRevisitWithinDateRange(startDate, endDate, hospitalCoreService));
-		simpleObject.put("newPatients", getTotalNewWithinDateRange(startDate, endDate, hospitalCoreService));
+		simpleObject.put("allWalkIn", getTotalWalkInWithinDateRange(startDate, endDate, hospitalCoreService).size());
+		simpleObject.put("revisitPatients", getTotalRevisitWithinDateRange(startDate, endDate, hospitalCoreService).size());
+		simpleObject.put("newPatients", getTotalNewWithinDateRange(startDate, endDate, hospitalCoreService).size());
 		
 		return simpleObject;
 	}

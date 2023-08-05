@@ -159,5 +159,7 @@
     ${ui.includeFragment("financials","doctorsSummaries")}
     <%} else if(section == "doctorsSummaries") {%>
     ${ui.includeFragment("financials","doctorsSummaries")}
-    <%}%>%>
+    <%} else if(section == "general") {%>
+    ${ui.includeFragment("financials","general")}
+    <%}%>
 </div>
