@@ -133,7 +133,8 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		
 		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
-		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("RVT", getNewOrRevisit("RVT"), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("NEW", getNewOrRevisit("NEW"), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn(
 		    "DIAGF",
@@ -164,9 +165,10 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		
 	}
 	
-	private DataDefinition getRevisit() {
+	private DataDefinition getNewOrRevisit(String flag) {
 		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addCalculationParameter("flag", flag);
 		return cd;
 		
 	}

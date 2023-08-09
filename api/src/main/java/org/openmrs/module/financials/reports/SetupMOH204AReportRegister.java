@@ -113,6 +113,10 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		    getObservation(Context.getConceptService().getConceptByUuid("5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
 		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		dsd.addColumn(
+		    "muac",
+		    getObservation(Context.getConceptService().getConceptByUuid("1343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
+		dsd.addColumn(
 		    "bps",
 		    getObservation(Context.getConceptService().getConceptByUuid("5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
 		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
@@ -133,7 +137,8 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		    getObservation(Context.getConceptService().getConceptByUuid("5092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"),
 		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
-		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("NEW", getNewOrRevisit("NEW"), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("RVT", getNewOrRevisit("RVT"), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn(
 		    "DIAGF",
@@ -217,9 +222,10 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		return cd;
 	}
 	
-	private DataDefinition getRevisit() {
+	private DataDefinition getNewOrRevisit(String flag) {
 		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addCalculationParameter("flag", flag);
 		return cd;
 		
 	}
