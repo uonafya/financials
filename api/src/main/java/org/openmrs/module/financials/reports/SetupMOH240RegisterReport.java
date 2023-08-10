@@ -114,10 +114,15 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		    new CalculationResultConverter());
 		dsd.addColumn("telephone", new CalculationDataDefinition("telephone", new TelephoneNumberCalculation()), "",
 		    new CalculationResultConverter());
-		dsd.addColumn("RVT", getRevisit(), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("DIAG",
-		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS)),
+		dsd.addColumn("RVT", getRevisit("RVT"), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("NEW", getRevisit("NEW"), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("INV",
+		    getObservation(EhrAddonsConstants.getConcept("0179f241-8c1d-47c1-8128-841f6508e251"), TimeQualifier.ANY),
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
+		dsd.addColumn(
+		    "DIAG",
+		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS),
+		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
 		dsd.addColumn("DR", getDrugs(), "endDate=${endDate+23h}", new DrugListConverter());
 		return dsd;
 		
@@ -133,29 +138,27 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 	private DataDefinition getEncounterDate() {
 		EncounterType labEncounter = Context.getEncounterService().getEncounterTypeByUuid(
 		    "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
-		EncounterType labResults = Context.getEncounterService().getEncounterTypeByUuid(
-		    "17a381d1-7e29-406a-b782-aa903b963c28");
-		
 		EncountersForPatientDataDefinition dsd = new EncountersForPatientDataDefinition();
 		dsd.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
 		dsd.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
-		dsd.setTypes(Arrays.asList(labEncounter, labResults));
+		dsd.setTypes(Arrays.asList(labEncounter));
 		dsd.setWhich(TimeQualifier.LAST);
 		return dsd;
 	}
 	
-	private DataDefinition getRevisit() {
+	private DataDefinition getRevisit(String flag) {
 		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addCalculationParameter("flag", flag);
 		return cd;
 		
 	}
 	
-	private DataDefinition getObservation(Concept question) {
+	private DataDefinition getObservation(Concept question, TimeQualifier timeQualifier) {
 		ObsForPersonDataDefinition obs = new ObsForPersonDataDefinition();
 		obs.addParameter(new Parameter("onOrAfter", "After Date", Date.class));
 		obs.addParameter(new Parameter("onOrBefore", "Before Date", Date.class));
-		obs.setWhich(TimeQualifier.LAST);
+		obs.setWhich(timeQualifier);
 		obs.setQuestion(question);
 		return obs;
 		
@@ -164,17 +167,14 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 	private CohortDefinition getLabOrderEncounter() {
 		EncounterType labEncounter = Context.getEncounterService().getEncounterTypeByUuid(
 		    "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
-		EncounterType labResults = Context.getEncounterService().getEncounterTypeByUuid(
-		    "17a381d1-7e29-406a-b782-aa903b963c28");
 		SqlCohortDefinition sqlEncounterQuery = new SqlCohortDefinition();
-		sqlEncounterQuery.setName("Get unique lab enounter types");
+		sqlEncounterQuery.setName("Get unique lab encounter types");
 		sqlEncounterQuery.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		sqlEncounterQuery.addParameter(new Parameter("endDate", "End Date", Date.class));
 		sqlEncounterQuery
 		        .setQuery("SELECT p.patient_id FROM patient p INNER JOIN  encounter e ON p.patient_id=e.patient_id "
 		                + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND e.voided=0 AND p.voided = 0 "
-		                + " AND e.encounter_type IN(" + labEncounter.getEncounterTypeId() + ","
-		                + labResults.getEncounterTypeId() + ")");
+		                + " AND e.encounter_type IN(" + labEncounter.getEncounterTypeId() + ")");
 		return sqlEncounterQuery;
 	}
 }
