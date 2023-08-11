@@ -1,5 +1,5 @@
 <div class="container">
-    <table>
+    <table border="0" cellspacing="5" cellpadding="5" width="100%">
         <tr>
           <td>
             <div class="card">
