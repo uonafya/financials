@@ -30,7 +30,6 @@
   }
   
   function populateTableBodyForCashierSummary(data) {
-    console.log(data);
     jQuery("#cashierDetails").DataTable().clear().destroy();
 
     var totalAmountPaid = 0;

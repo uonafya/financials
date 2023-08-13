@@ -1,17 +1,70 @@
 <%
     ui.decorateWith("kenyaemr", "standardPage")
-    ui.includeCss("financials", "bootstrap.min.css")
-    ui.includeCss("financials", "bootstrap-datetimepicker.min.css")
-    ui.includeJavascript("ehrconfigs", "jquery-1.12.4.min.js")
     ui.includeJavascript("ehrconfigs", "datetimepicker/bootstrap-datetimepicker.min.js")
     ui.includeJavascript("ehrconfigs", "bootstrap.min.js")
     ui.includeJavascript("ehrconfigs", "popper.min.js")
+    ui.includeCss("financials", "bootstrap.min.css")
+    ui.includeCss("financials", "bootstrap-datetimepicker.min.css")
     ui.includeCss("ehrconfigs", "referenceapplication.css")
 %>
 <script type="text/javascript">
     jq(document).ready(function () {
         jq("#summaryTabs").tabs();
+        populateTableBodyForClinicalDiagnosisSummary("8d4918b0-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
+        populateTableBodyForClinicalProceduresSummary("8d490bf4-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
+        populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
+        populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a");
+        jq("#lfilter").click(function () {
+          populateTableBodyForClinicalDiagnosisSummary("8d4918b0-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
+          populateTableBodyForClinicalProceduresSummary("8d490bf4-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
+          populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
+          populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a");
+        });
     });
+    function fetchClinicalSummariesByDateRange(uuid, encounterType) {
+        var toReturn;
+        jQuery.ajax({
+          type: "GET",
+          url: '${ui.actionLink("financials", "generalSummaries", "fetchClinicalSummariesByDateRange")}',
+          dataType: "json",
+          global: false,
+          async: false,
+          data: {
+            fromDate: jq("#summaryFromDate-field").val(),
+            toDate: jq('#summaryToDate-field').val(),
+            uuid: uuid,
+            enType: encounterType
+          },
+          success: function (data) {
+            toReturn = data;
+          }
+        });
+        return toReturn;
+      }
+      function populateTableBodyForClinicalDiagnosisSummary(uuid, enType) {
+          jQuery("#diagnosisTbody").empty();
+          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
+          jQuery("#diagnosisTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+        });
+      }
+      function populateTableBodyForClinicalProceduresSummary(uuid, enType) {
+          jQuery("#proceduresTbody").empty();
+          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
+          jQuery("#proceduresTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+        });
+      }
+      function populateTableBodyForClinicalLabTestsSummary(uuid, enType) {
+          jQuery("#laboratoryTbody").empty();
+          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
+          jQuery("#laboratoryTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+        });
+      }
+      function populateTableBodyForClinicalRadiologyOrdersSummary(uuid, enType) {
+          jQuery("#radiologyTbody").empty();
+          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
+          jQuery("#radiologyTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+        });
+      }
 </script>
 <div class="ke-page-content">
   <div class="ke-panel-frame">
