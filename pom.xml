@@ -98,6 +98,12 @@
 				<version>${reportingVersion}</version>
 				<scope>provided</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>ehrinventory-api</artifactId>
+				<version>${inventoryVersion}</version>
+				<scope>provided</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -138,5 +144,6 @@
 		<hospitalcoreVersion>2.0.3-SNAPSHOT</hospitalcoreVersion>
 		<legacyUiVersion>1.5.0</legacyUiVersion>
 		<appframeworkVersion>2.13.0</appframeworkVersion>
+		<inventoryVersion>2.0.1-SNAPSHOT</inventoryVersion>
 	</properties>
 </project>

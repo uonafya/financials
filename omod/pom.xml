@@ -32,12 +32,10 @@
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>uiframework-api</artifactId>
-			<scope>provided</scope>
 		</dependency>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>kenyaui-api</artifactId>
-            <scope>provided</scope>
         </dependency>
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
@@ -74,6 +72,10 @@
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>metadatadeploy-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>ehrinventory-api</artifactId>
 		</dependency>
     </dependencies>
 

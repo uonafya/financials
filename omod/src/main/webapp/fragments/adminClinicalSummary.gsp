@@ -1,15 +1,15 @@
-<div class="container">
-    <table border="0" cellspacing="5" cellpadding="5" width="100%">
+<div>
+    <table border="0" cellspacing="0" cellpadding="0" style="width=100%;">
         <tr>
           <td valign="top">
             <div class="card">
               <div class="card-header">Diagnosis List</div>
               <div class="card-body">
                 <div id="diagnosis">
-                  <ul id="diagnosisTbody"></ul>
+                  <ul id="diagnosisDetails"></ul>
                 </div>
               </div>
-              <div class="card-footer">more...</div>
+              <div class="card-footer"></div>
             </div>
          </td>
          <td valign="top">
@@ -20,7 +20,7 @@
                       <ul id="proceduresTbody"></ul>
                   </div>
               </div>
-              <div class="card-footer">more...</div>
+              <div class="card-footer"></div>
             </div>
          </td>
          <td valign="top">
@@ -31,7 +31,7 @@
                   <ul id="laboratoryTbody"></ul>
                 </div>
               </div>
-              <div class="card-footer">More..</div>
+              <div class="card-footer"></div>
             </div>
          </td>
          <td valign="top">
@@ -42,7 +42,7 @@
                   <ul id="radiologyTbody"></ul>
                 </div>
               </div>
-              <div class="card-footer">more..</div>
+              <div class="card-footer"></div>
             </div>
          </td>
          <td valign="top">
@@ -50,14 +50,10 @@
               <div class="card-header">Pharmacy Orders</div>
               <div class="card-body">
                 <div id="pharmacy">
-                  <table border="0" id="pharmTbl">
-                    <tr>
-                      <tbody id="pharmacyTbody"></tbody>
-                    </tr>
-                  </table>
+                  <ul id="pharmacyTbody"></ul>
                 </div>
               </div>
-              <div class="card-footer">more..</div>
+              <div class="card-footer"></div>
             </div>
          </td>
         </tr>

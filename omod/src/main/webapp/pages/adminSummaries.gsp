@@ -10,18 +10,20 @@
 <script type="text/javascript">
     jq(document).ready(function () {
         jq("#summaryTabs").tabs();
-        populateTableBodyForClinicalDiagnosisSummary("8d4918b0-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
-        populateTableBodyForClinicalProceduresSummary("8d490bf4-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
-        populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
-        populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a");
+        populateTableBodyForClinicalDiagnosisSummary("8d4918b0-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887", "yes");
+        populateTableBodyForClinicalProceduresSummary("8d490bf4-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887", "yes");
+        populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854","no");
+        populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a", "no");
+        populateTableBodyForPrescriptionSummary();
         jq("#lfilter").click(function () {
-          populateTableBodyForClinicalDiagnosisSummary("8d4918b0-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
-          populateTableBodyForClinicalProceduresSummary("8d490bf4-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887");
-          populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
-          populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a");
+          populateTableBodyForClinicalDiagnosisSummary("8d4918b0-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887", "yes");
+          populateTableBodyForClinicalProceduresSummary("8d490bf4-c2cc-11de-8d13-0010c6dffd0f", "ba45c278-f290-11ea-9666-1b3e6e848887", "yes");
+          populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854", "no");
+          populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a", "no");
+          populateTableBodyForPrescriptionSummary();
         });
     });
-    function fetchClinicalSummariesByDateRange(uuid, encounterType) {
+    function fetchClinicalSummariesByDateRange(uuid, encounterType, flag) {
         var toReturn;
         jQuery.ajax({
           type: "GET",
@@ -33,7 +35,8 @@
             fromDate: jq("#summaryFromDate-field").val(),
             toDate: jq('#summaryToDate-field').val(),
             uuid: uuid,
-            enType: encounterType
+            enType: encounterType,
+            flag: flag
           },
           success: function (data) {
             toReturn = data;
@@ -41,30 +44,53 @@
         });
         return toReturn;
       }
-      function populateTableBodyForClinicalDiagnosisSummary(uuid, enType) {
+      function populateTableBodyForClinicalDiagnosisSummary(uuid, enType, flag) {
           jQuery("#diagnosisTbody").empty();
-          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
-          jQuery("#diagnosisTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+          fetchClinicalSummariesByDateRange(uuid, enType, flag).map((item) => {
+          jQuery("#diagnosisDetails").append("<li>" + item.conceptName +"  "+"<span class='badge badge-info'>"+ item.listSize + "</span></li>");
         });
       }
-      function populateTableBodyForClinicalProceduresSummary(uuid, enType) {
+      function populateTableBodyForClinicalProceduresSummary(uuid, enType, flag) {
           jQuery("#proceduresTbody").empty();
-          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
-          jQuery("#proceduresTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+          fetchClinicalSummariesByDateRange(uuid, enType, flag).map((item) => {
+          jQuery("#proceduresTbody").append("<li>" + item.conceptName +"  "+"<span class='badge badge-info'>"+ item.listSize + "</span></li>");
         });
       }
-      function populateTableBodyForClinicalLabTestsSummary(uuid, enType) {
+      function populateTableBodyForClinicalLabTestsSummary(uuid, enType, flag) {
           jQuery("#laboratoryTbody").empty();
-          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
-          jQuery("#laboratoryTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+          fetchClinicalSummariesByDateRange(uuid, enType, flag).map((item) => {
+          jQuery("#laboratoryTbody").append("<li>" + item.conceptName +"  "+"<span class='badge badge-info'>"+ item.listSize + "</span></li>");
         });
       }
-      function populateTableBodyForClinicalRadiologyOrdersSummary(uuid, enType) {
+      function populateTableBodyForClinicalRadiologyOrdersSummary(uuid, enType, flag) {
           jQuery("#radiologyTbody").empty();
-          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
-          jQuery("#radiologyTbody").append("<li>" + item.conceptName +" "+ item.listSize + "</li>");
+          fetchClinicalSummariesByDateRange(uuid, enType, flag).map((item) => {
+          jQuery("#radiologyTbody").append("<li>" + item.conceptName +"  "+"<span class='badge badge-info'>"+ item.listSize + "</span></li>");
         });
       }
+      function fetchPrescriptionSummariesByDateRange() {
+              var toReturn;
+              jQuery.ajax({
+                type: "GET",
+                url: '${ui.actionLink("financials", "generalSummaries", "fetchPrescriptionSummariesByDateRange")}',
+                dataType: "json",
+                global: false,
+                async: false,
+                data: {
+                  fromDate: jq("#summaryFromDate-field").val(),
+                  toDate: jq('#summaryToDate-field').val()
+                },
+                success: function (data) {
+                  toReturn = data;
+                }
+              });
+              return toReturn;
+            }
+      function populateTableBodyForPrescriptionSummary() {
+                fetchPrescriptionSummariesByDateRange().map((item) => {
+                jQuery("#pharmacyTbody").append("<li>" + item.conceptName +"  "+"<span class='badge badge-info'>"+ item.listSize + "</span></li>");
+              });
+            }
 </script>
 <div class="ke-page-content">
   <div class="ke-panel-frame">
