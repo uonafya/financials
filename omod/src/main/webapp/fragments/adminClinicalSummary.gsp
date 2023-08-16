@@ -3,14 +3,25 @@
         <tr>
           <td valign="top">
             <div class="card">
-              <div class="card-header">Diagnosis List</div>
+              <div class="card-header">Final Diagnosis</div>
               <div class="card-body">
                 <div id="diagnosis">
-                  <ul id="diagnosisDetails"></ul>
+                  <ul id="fDiagnosisDetails"></ul>
                 </div>
               </div>
               <div class="card-footer"></div>
             </div>
+         </td>
+         <td valign="top">
+             <div class="card">
+               <div class="card-header">Provisional Diagnosis</div>
+               <div class="card-body">
+                 <div id="diagnosis">
+                   <ul id="pDiagnosisDetails"></ul>
+                 </div>
+               </div>
+               <div class="card-footer"></div>
+             </div>
          </td>
          <td valign="top">
             <div class="card">

@@ -122,7 +122,7 @@
                     icon: "buttons/doctorssum.png"
             ],
             [
-                    label: "Admin Summaries",
+                    label: "Clinical Summaries",
                     href: ui.pageLink("financials", "adminSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/Zoom-in.png"

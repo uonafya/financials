@@ -1,6 +1,7 @@
 package org.openmrs.module.financials.fragment.controller;
 
 import org.apache.commons.lang3.StringUtils;
+import org.openmrs.Concept;
 import org.openmrs.ConceptClass;
 import org.openmrs.EncounterType;
 import org.openmrs.Obs;
@@ -68,24 +69,24 @@ public class GeneralSummariesFragmentController {
 	public List<SimpleObject> fetchClinicalSummariesByDateRange(
 	        @RequestParam(value = "fromDate", required = false) Date startDate,
 	        @RequestParam(value = "toDate", required = false) Date endDate,
-	        @RequestParam(value = "uuid", required = false) String uuid,
+	        @RequestParam(value = "uuid", required = false) String conceptUuid,
 	        @RequestParam(value = "enType", required = false) String enType,
-			@RequestParam(value = "flag", required = false) String flag,
 			UiUtils ui) {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
-		ConceptClass conceptClass = Context.getConceptService().getConceptClassByUuid(uuid);
+		Concept concept = Context.getConceptService().getConceptByUuid(conceptUuid);
 		EncounterType encounterType = Context.getEncounterService().getEncounterTypeByUuid(enType);
 		ClinicalSummarySimplifier clinicalSummarySimplifier = null;
 		List<ClinicalSummarySimplifier> clinicalSummarySimplifiers = new ArrayList<ClinicalSummarySimplifier>();
-		if (conceptClass != null && encounterType != null) {
+		if (concept != null && encounterType != null) {
 			List<Obs> getAllObsForSummary = new ArrayList<Obs>(hospitalCoreService.getObsBasedOnClassAndDateRange(startDate,
-			    endDate, conceptClass, encounterType, flag));
+			    endDate, concept, encounterType));
 			//put the list in the map so that we get a key and size of the value.
 			HashMap<Integer, List<String>> hashMapCoded = new HashMap<Integer, List<String>>(
-			        EhrConfigsUtils.listMap(getAllObsForSummary, "yes"));
-			HashMap<Integer, List<String>> hashMapNonCoded = new HashMap<Integer, List<String>>(
-					EhrConfigsUtils.listMap(getAllObsForSummary, "no"));
-			hashMapCoded.putAll(hashMapNonCoded);
+			        EhrConfigsUtils.listMapDiagnosisAndProcedures(getAllObsForSummary));
+
+			HashMap<Integer, List<String>> hashMapForTestsAndRadiology = new HashMap<Integer, List<String>>(
+					EhrConfigsUtils.listTestsAndQuestionsConcepts(getAllObsForSummary));
+
 
 			for (Map.Entry<Integer, List<String>> listMap : hashMapCoded.entrySet()) {
 				clinicalSummarySimplifier = new ClinicalSummarySimplifier();
@@ -118,6 +119,39 @@ public class GeneralSummariesFragmentController {
 				clinicalSummarySimplifier = new ClinicalSummarySimplifier();
 				clinicalSummarySimplifier.setConceptId(listMap.getKey());
 				clinicalSummarySimplifier.setConceptName(StringUtils.capitalize(Context.getService(InventoryService.class).getDrugById(listMap.getKey()).getName()));
+				clinicalSummarySimplifier.setListSize(listMap.getValue().size());
+				clinicalSummarySimplifiers.add(clinicalSummarySimplifier);
+			}
+			Comparator<ClinicalSummarySimplifier> sizeComparator = (c1, c2) -> (int) (c1.getListSize() - c2.getListSize());
+			clinicalSummarySimplifiers.sort(Collections.reverseOrder(sizeComparator));
+		}
+		return SimpleObject.fromCollection(clinicalSummarySimplifiers, ui, "conceptId", "conceptName", "listSize");
+	}
+	
+	public List<SimpleObject> fetchClinicalSummariesForLabAndRadiologyByDateRange(
+			@RequestParam(value = "fromDate", required = false) Date startDate,
+			@RequestParam(value = "toDate", required = false) Date endDate,
+			@RequestParam(value = "uuid", required = false) String conceptClassUuid,
+			@RequestParam(value = "enType", required = false) String enType,
+			UiUtils ui) {
+		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
+		ConceptClass conceptClass = Context.getConceptService().getConceptClassByUuid(conceptClassUuid);
+		EncounterType encounterType = Context.getEncounterService().getEncounterTypeByUuid(enType);
+		ClinicalSummarySimplifier clinicalSummarySimplifier = null;
+		List<ClinicalSummarySimplifier> clinicalSummarySimplifiers = new ArrayList<ClinicalSummarySimplifier>();
+		if (conceptClass != null && encounterType != null) {
+			List<Obs> getAllObsForSummary = new ArrayList<Obs>(hospitalCoreService.getObsBasedOnClassAndDateRangeForTestsAndRadiology(startDate,
+					endDate, conceptClass, encounterType));
+
+			HashMap<Integer, List<String>> hashMapForTestsAndRadiology = new HashMap<Integer, List<String>>(
+					EhrConfigsUtils.listTestsAndQuestionsConcepts(getAllObsForSummary));
+
+
+			for (Map.Entry<Integer, List<String>> listMap : hashMapForTestsAndRadiology.entrySet()) {
+				clinicalSummarySimplifier = new ClinicalSummarySimplifier();
+				clinicalSummarySimplifier.setConceptId(listMap.getKey());
+				clinicalSummarySimplifier.setConceptName(StringUtils.capitalize(Context.getConceptService().getConcept(listMap.getKey())
+						.getDisplayString()));
 				clinicalSummarySimplifier.setListSize(listMap.getValue().size());
 				clinicalSummarySimplifiers.add(clinicalSummarySimplifier);
 			}
