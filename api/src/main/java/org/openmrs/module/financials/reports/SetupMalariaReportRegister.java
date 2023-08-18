@@ -2,7 +2,7 @@ package org.openmrs.module.financials.reports;
 
 import org.openmrs.EncounterType;
 import org.openmrs.api.context.Context;
-import org.openmrs.module.financials.reporting.calculation.PatientIdentifierCalculation;
+import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalculation;
 import org.openmrs.module.financials.reporting.converter.ObsCommentsConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
@@ -24,7 +24,13 @@ import org.openmrs.module.reporting.data.converter.DataConverter;
 import org.openmrs.module.reporting.data.converter.ObjectFormatter;
 import org.openmrs.module.reporting.data.converter.ObsValueConverter;
 import org.openmrs.module.reporting.data.patient.definition.SqlPatientDataDefinition;
-import org.openmrs.module.reporting.data.person.definition.*;
+import org.openmrs.module.reporting.data.person.definition.AgeDataDefinition;
+import org.openmrs.module.reporting.data.person.definition.BirthdateDataDefinition;
+import org.openmrs.module.reporting.data.person.definition.ConvertedPersonDataDefinition;
+import org.openmrs.module.reporting.data.person.definition.GenderDataDefinition;
+import org.openmrs.module.reporting.data.person.definition.ObsForPersonDataDefinition;
+import org.openmrs.module.reporting.data.person.definition.PersonIdDataDefinition;
+import org.openmrs.module.reporting.data.person.definition.PreferredNameDataDefinition;
 import org.openmrs.module.reporting.dataset.definition.DataSetDefinition;
 import org.openmrs.module.reporting.dataset.definition.PatientDataSetDefinition;
 import org.openmrs.module.reporting.evaluation.parameter.Mapped;
@@ -86,8 +92,7 @@ public class SetupMalariaReportRegister extends AbstractHybridReportBuilder {
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("vDate", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
 		dsd.addColumn("Name", nameDef, "");
-		dsd.addColumn("Identifier", new CalculationDataDefinition("Identifier", new PatientIdentifierCalculation()), "",
-		    new CalculationResultConverter());
+		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		dsd.addColumn("Age", new AgeDataDefinition(), "", null);
@@ -128,5 +133,13 @@ public class SetupMalariaReportRegister extends AbstractHybridReportBuilder {
 		dsd.setQuery("SELECT p.patient_id, MIN(e.encounter_datetime) FROM patient p INNER JOIN encounter e ON p.patient_id=e.patient_id "
 		        + " WHERE e.encounter_datetime BETWEEN :startDate AND :endDate AND p.voided=0 AND e.voided=0 GROUP BY p.patient_id");
 		return dsd;
+	}
+	
+	private DataDefinition getRevisit(String flag) {
+		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addCalculationParameter("flag", flag);
+		return cd;
+		
 	}
 }

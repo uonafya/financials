@@ -89,8 +89,8 @@ public class SetupMOH204AReportRegister extends AbstractHybridReportBuilder {
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("STS", getRevisit("ST"), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("STS", getRevisit("ST"), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("Date", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);

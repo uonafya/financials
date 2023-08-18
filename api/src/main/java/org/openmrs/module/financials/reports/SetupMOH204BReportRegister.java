@@ -88,8 +88,8 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("STS", getRevisit("ST"), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate}", new CalculationResultConverter());
+		dsd.addColumn("STS", getRevisit("ST"), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("Date", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
@@ -133,8 +133,6 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		        TimeQualifier.LAST), "onOrAfter=${startDate},onOrBefore=${endDate}", new ObsValueConverter());
 		
 		dsd.addColumn("BMI", getBMI(), "endDate=${endDate}", new CalculationResultConverter());
-		dsd.addColumn("RVT", getNewOrRevisit("RVT"), "endDate=${endDate}", new CalculationResultConverter());
-		dsd.addColumn("NEW", getNewOrRevisit("NEW"), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn("FV", getFevers(), "endDate=${endDate}", new CalculationResultConverter());
 		dsd.addColumn(
 		    "DIAGF",
@@ -161,14 +159,6 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 	private DataDefinition getBMI() {
 		CalculationDataDefinition cd = new CalculationDataDefinition("BMI", new BMIAtLastVisitCalculation());
 		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		return cd;
-		
-	}
-	
-	private DataDefinition getNewOrRevisit(String flag) {
-		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
-		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		cd.addCalculationParameter("flag", flag);
 		return cd;
 		
 	}
