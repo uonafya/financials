@@ -103,7 +103,7 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		        opdNumber.getName(), opdNumber), new IdentifierConverter());
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("identifier", identifierDef, "");
+		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate+23h}", new CalculationResultConverter());
 		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
 		    new EncounterDateConverter());
 		dsd.addColumn("Name", nameDef, "");
@@ -114,8 +114,8 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		    new CalculationResultConverter());
 		dsd.addColumn("telephone", new CalculationDataDefinition("telephone", new TelephoneNumberCalculation()), "",
 		    new CalculationResultConverter());
-		dsd.addColumn("RVT", getRevisit("RVT"), "endDate=${endDate+23h}", new CalculationResultConverter());
-		dsd.addColumn("NEW", getRevisit("NEW"), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("STS", getRevisit("ST"), "endDate=${endDate+23h}", new CalculationResultConverter());
+		//dsd.addColumn("NEW", getRevisit("NEW"), "endDate=${endDate+23h}", new CalculationResultConverter());
 		dsd.addColumn("INV",
 		    getObservation(EhrAddonsConstants.getConcept("0179f241-8c1d-47c1-8128-841f6508e251"), TimeQualifier.ANY),
 		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());

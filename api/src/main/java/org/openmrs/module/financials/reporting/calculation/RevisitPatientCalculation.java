@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reporting.calculation;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openmrs.Patient;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.Person;
@@ -52,25 +53,22 @@ public class RevisitPatientCalculation extends AbstractPatientCalculation {
 					visitsWithinAyear.add(visit);
 				}
 			}
-			if (visitsWithinAyear.size() > 1 && flag.equals("RVT")) {
-				if (Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2) != null) {
-					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2)
-					        .getIdentifier();
-				} else if (Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1) != null) {
-					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1)
-					        .getIdentifier();
+			if(flag.equals("ST")) {
+				if (visitsWithinAyear.size() > 1) {
+					opdNumnberValue = "R";
+				}
+				else {
+					opdNumnberValue = "N";
 				}
 			}
-			if (visitsWithinAyear.size() == 0 && flag.equals("NEW")) {
-				if (Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2) != null) {
-					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2)
-					        .getIdentifier();
-				} else if (Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1) != null) {
-					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1)
-					        .getIdentifier();
+			if(flag.equals("ID")) {
+				if(Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2) != null){
+					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2).getIdentifier();
+				}
+				if(StringUtils.isBlank(opdNumnberValue) && Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1) != null) {
+					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1).getIdentifier();
 				}
 			}
-			System.out.println("The OPD number for patient :::::" + ptid + " is >>" + opdNumnberValue);
 			ret.put(ptid, new SimpleResult(opdNumnberValue, this));
 		}
 		
