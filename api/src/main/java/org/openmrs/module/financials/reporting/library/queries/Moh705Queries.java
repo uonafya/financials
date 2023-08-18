@@ -17,7 +17,7 @@ public class Moh705Queries {
 		        + " INNER JOIN obs ob ON e.encounter_id=ob.encounter_id " + " WHERE "
 		        + " e.encounter_datetime BETWEEN :startDate AND :endDate " + " AND ob.concept_id IN(%d, %d) "
 		        + " AND e.encounter_type IN(%d) " + " AND ob.value_coded IS NOT NULL " + " AND ob.value_coded IN(%s)";
-		return String.format(query, provisional, encounter, finalDiagnosis, list);
+		return String.format(query, provisional, finalDiagnosis, encounter, list);
 	}
 	
 	public static String getPatientsWhoMatchOtherDiagnosisBasedOnConcepts(int provisional, int finalDiagnosis,
