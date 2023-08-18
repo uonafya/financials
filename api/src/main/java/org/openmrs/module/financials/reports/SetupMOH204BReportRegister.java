@@ -88,8 +88,8 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
-		dsd.addColumn("Identifier", new CalculationDataDefinition("Identifier", new PatientIdentifierCalculation()), "",
-		    new CalculationResultConverter());
+		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate+23h}", new CalculationResultConverter());
+		dsd.addColumn("STS", getRevisit("ST"), "endDate=${endDate+23h}", new CalculationResultConverter());
 		dsd.addColumn("Date", getEncounterDate(), "startDate=${startDate},endDate=${endDate}");
 		dsd.addColumn("Name", nameDef, "");
 		dsd.addColumn("Sex", new GenderDataDefinition(), "", null);
@@ -231,5 +231,13 @@ public class SetupMOH204BReportRegister extends AbstractHybridReportBuilder {
 		dsd.setQuery("SELECT p.patient_id,pe.death_date FROM patient p INNER JOIN person pe ON p.patient_id=pe.person_id "
 		        + " WHERE pe.death_date IS NOT NULL");
 		return dsd;
+	}
+	
+	private DataDefinition getRevisit(String flag) {
+		CalculationDataDefinition cd = new CalculationDataDefinition("RVT", new RevisitPatientCalculation());
+		cd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		cd.addCalculationParameter("flag", flag);
+		return cd;
+		
 	}
 }

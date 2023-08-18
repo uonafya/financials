@@ -10,6 +10,7 @@ import org.openmrs.module.financials.reporting.calculation.RevisitPatientCalcula
 import org.openmrs.module.financials.reporting.calculation.VillageAndLandmarkCalculation;
 import org.openmrs.module.financials.reporting.converter.DrugListConverter;
 import org.openmrs.module.financials.reporting.converter.EncounterDateConverter;
+import org.openmrs.module.financials.reporting.converter.ObsValueListConverter;
 import org.openmrs.module.financials.reporting.library.dataset.CommonDatasetDefinition;
 import org.openmrs.module.kenyacore.report.HybridReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
@@ -97,11 +98,6 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		DataConverter nameFormatter = new ObjectFormatter("{familyName}, {givenName}, {middleName}");
 		DataDefinition nameDef = new ConvertedPersonDataDefinition("name", new PreferredNameDataDefinition(), nameFormatter);
 		
-		PatientIdentifierType opdNumber = MetadataUtils.existing(PatientIdentifierType.class,
-		    CommonMetadata._PatientIdentifierType.PATIENT_CLINIC_NUMBER);
-		DataDefinition identifierDef = new ConvertedPatientDataDefinition("identifier", new PatientIdentifierDataDefinition(
-		        opdNumber.getName(), opdNumber), new IdentifierConverter());
-		
 		dsd.addColumn("id", new PersonIdDataDefinition(), "");
 		dsd.addColumn("identifier", getRevisit("ID"), "endDate=${endDate+23h}", new CalculationResultConverter());
 		dsd.addColumn("Date", getEncounterDate(), "onOrAfter=${startDate},onOrBefore=${endDate+23h}",
@@ -115,10 +111,9 @@ public class SetupMOH240RegisterReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("telephone", new CalculationDataDefinition("telephone", new TelephoneNumberCalculation()), "",
 		    new CalculationResultConverter());
 		dsd.addColumn("STS", getRevisit("ST"), "endDate=${endDate+23h}", new CalculationResultConverter());
-		//dsd.addColumn("NEW", getRevisit("NEW"), "endDate=${endDate+23h}", new CalculationResultConverter());
 		dsd.addColumn("INV",
 		    getObservation(EhrAddonsConstants.getConcept("0179f241-8c1d-47c1-8128-841f6508e251"), TimeQualifier.ANY),
-		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueConverter());
+		    "onOrAfter=${startDate},onOrBefore=${endDate+23h}", new ObsValueListConverter());
 		dsd.addColumn(
 		    "DIAG",
 		    getObservation(EhrAddonsConstants.getConcept(EhrAddonsConstants._EhrAddOnConcepts.FINA_DIAGNOSIS),

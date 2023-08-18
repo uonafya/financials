@@ -53,20 +53,22 @@ public class RevisitPatientCalculation extends AbstractPatientCalculation {
 					visitsWithinAyear.add(visit);
 				}
 			}
-			if(flag.equals("ST")) {
+			if (flag.equals("ST")) {
 				if (visitsWithinAyear.size() > 1) {
 					opdNumnberValue = "R";
-				}
-				else {
+				} else {
 					opdNumnberValue = "N";
 				}
 			}
-			if(flag.equals("ID")) {
-				if(Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2) != null){
-					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2).getIdentifier();
+			if (flag.equals("ID")) {
+				if (Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2) != null) {
+					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber2)
+					        .getIdentifier();
 				}
-				if(StringUtils.isBlank(opdNumnberValue) && Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1) != null) {
-					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1).getIdentifier();
+				if (StringUtils.isBlank(opdNumnberValue)
+				        && Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1) != null) {
+					opdNumnberValue = Context.getPatientService().getPatient(ptid).getPatientIdentifier(opdNumber1)
+					        .getIdentifier();
 				}
 			}
 			ret.put(ptid, new SimpleResult(opdNumnberValue, this));
