@@ -48,8 +48,6 @@ public class GeneralSummariesFragmentController {
 			patientBillSummary.setBillId(patientServiceBillItem.getPatientServiceBillItemId());
 			patientBillSummary.setPatient(patientServiceBillItem.getPatientServiceBill().getPatient().getPersonName()
 			        .getFullName());
-			//patientBillSummary.setCategory(patientServiceBillItem.getPatientServiceBill().getPatientCategory());
-			//patientBillSummary.setSubCategory(patientServiceBillItem.getPatientServiceBill().getPatientSubCategory());
 			patientBillSummary.setWaiver(String.valueOf(patientServiceBillItem.getPatientServiceBill().getWaiverAmount()));
 			patientBillSummary.setActualAmount(String.valueOf(patientServiceBillItem.getActualAmount()));
 			patientBillSummary.setPaidAmount(String.valueOf(patientServiceBillItem.getAmount()));

@@ -78,7 +78,7 @@
                     href: ui.pageLink("financials", "financials", [ section: "general" ]),
                     active: (selection == "section-general"),
                     iconProvider: "financials",
-                    icon: "buttons/general.png"
+                    icon: "buttons/genaral.png"
             ],
             [
                     label: "Patient Summaries",

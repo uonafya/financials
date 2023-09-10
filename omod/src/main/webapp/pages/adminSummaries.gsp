@@ -11,14 +11,12 @@
     jq(document).ready(function () {
         jq("#summaryTabs").tabs();
         populateTableBodyForClinicalFinalDiagnosisSummary("160249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "ba45c278-f290-11ea-9666-1b3e6e848887");
-        populateTableBodyForClinicalProvisionalDiagnosisSummary("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "ba45c278-f290-11ea-9666-1b3e6e848887");
         populateTableBodyForClinicalProceduresSummary("1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "ba45c278-f290-11ea-9666-1b3e6e848887");
         populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
         populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a");
         populateTableBodyForPrescriptionSummary();
         jq("#lfilter").click(function () {
           populateTableBodyForClinicalFinalDiagnosisSummary("160249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "ba45c278-f290-11ea-9666-1b3e6e848887");
-          populateTableBodyForClinicalProvisionalDiagnosisSummary("160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "ba45c278-f290-11ea-9666-1b3e6e848887");
           populateTableBodyForClinicalProceduresSummary("1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "ba45c278-f290-11ea-9666-1b3e6e848887");
           populateTableBodyForClinicalLabTestsSummary("8d4907b2-c2cc-11de-8d13-0010c6dffd0f", "11d3f37a-f282-11ea-a825-1b5b1ff1b854");
           populateTableBodyForClinicalRadiologyOrdersSummary("8caa332c-efe4-4025-8b18-3398328e1323", "012bb9f4-f282-11ea-a6d6-3b4fa4aefb5a");
@@ -70,12 +68,6 @@
           jQuery("#fDiagnosisDetails").empty();
           fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
           jQuery("#fDiagnosisDetails").append("<li>" + item.conceptName +"  "+"<span class='badge badge-info'>"+ item.listSize + "</span></li>");
-        });
-      }
-      function populateTableBodyForClinicalProvisionalDiagnosisSummary(uuid, enType) {
-          jQuery("#pDiagnosisDetails").empty();
-          fetchClinicalSummariesByDateRange(uuid, enType).map((item) => {
-          jQuery("#pDiagnosisDetails").append("<li>" + item.conceptName +"  "+"<span class='badge badge-info'>"+ item.listSize + "</span></li>");
         });
       }
       function populateTableBodyForClinicalProceduresSummary(uuid, enType) {
