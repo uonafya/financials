@@ -2,6 +2,7 @@ package org.openmrs.module.financials.fragment.controller;
 
 import org.openmrs.api.context.Context;
 import org.openmrs.module.financials.GeneralRevenuePerUnit;
+import org.openmrs.module.financials.PatientBillSummary;
 import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.EhrDepartment;
@@ -48,5 +49,38 @@ public class DepartmentFinanceSummariesFragmentController {
 		}
 		return SimpleObject.fromCollection(summarizedResults, ui, "transactionDate", "department", "servicePaidFor",
 		    "totalAmount");
+	}
+	
+	public List<SimpleObject> fetchDentalSummariesByDateRange(
+	        @RequestParam(value = "fromDate", required = false) Date startDate,
+	        @RequestParam(value = "toDate", required = false) Date endDate, UiUtils ui) {
+		
+		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
+		
+		List<PatientServiceBillItem> getBilledItemsPerDepartment = hospitalCoreService.getPatientServiceBillByDepartment(
+		    hospitalCoreService.getDepartmentByName("Dental"), startDate, endDate);
+		List<PatientBillSummary> allLaboratoryBills = new ArrayList<PatientBillSummary>();
+		
+		for (PatientServiceBillItem patientServiceBillItem : getBilledItemsPerDepartment) {
+			PatientBillSummary patientBillSummary = new PatientBillSummary();
+			patientBillSummary.setBillId(patientServiceBillItem.getPatientServiceBillItemId());
+			patientBillSummary.setPatient(patientServiceBillItem.getPatientServiceBill().getPatient().getPersonName()
+			        .getFullName());
+			patientBillSummary.setCategory(patientServiceBillItem.getPatientServiceBill().getPatientCategory());
+			patientBillSummary.setSubCategory(patientServiceBillItem.getPatientServiceBill().getPatientSubCategory());
+			patientBillSummary.setWaiver(String.valueOf(patientServiceBillItem.getPatientServiceBill().getWaiverAmount()));
+			patientBillSummary.setActualAmount(String.valueOf(patientServiceBillItem.getActualAmount()));
+			patientBillSummary.setPaidAmount(String.valueOf(patientServiceBillItem.getAmount()));
+			patientBillSummary.setRebate(String.valueOf(patientServiceBillItem.getPatientServiceBill().getRebateAmount()));
+			patientBillSummary.setTransactionDate(String.valueOf(patientServiceBillItem.getCreatedDate()));
+			patientBillSummary.setServiceOffered(patientServiceBillItem.getService().getName());
+			patientBillSummary.setIdentifier(patientServiceBillItem.getPatientServiceBill().getPatient()
+			        .getPatientIdentifier().getIdentifier());
+			//add this build object to the list
+			allLaboratoryBills.add(patientBillSummary);
+			
+		}
+		return SimpleObject.fromCollection(allLaboratoryBills, ui, "transactionDate", "serviceOffered", "identifier",
+		    "patient", "category", "subCategory", "waiver", "actualAmount", "paidAmount");
 	}
 }

@@ -4953,6 +4953,78 @@ public class EhrAddonsConstants {
 		
 		public static final String MENTALDIS_46 = "160518AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
+		public static final String F000_Dementia_in_Alzheimer_disease_with_early_onset = "152127AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F01_Vascular_dementia = "159269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F010_Vascular_dementia_of_acute_onset = "123322AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F011_Multi_infarct_dementia = "133779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F012_Subcortical_vascular_dementia = "125665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F013_Mixed_cortical_and_subcortical_vascular_dementia = "157803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F03_Unspecified_dementia = "119566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F20_Schizophrenia = "113155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F200_Paranoid_schizophrenia = "130851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F201_Hebephrenic_schizophrenia = "123682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F202_Catatonic_schizophrenia = "146090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F203_Undifferentiated_schizophrenia = "111683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F204_Post_schizophrenic_depression = "152297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F205_Residual_schizophrenia = "127651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F206_Simple_schizophrenia = "126462AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F208_Other_schizophrenia = "113156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F21_Schizotypal_disorder = "113139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F22_Persistent_delusional_disorders = "158297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F220_Delusional_disorder = "119570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		//public static final String F229_Persistent_delusional_disorder_unspecified = "158297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F23_Acute_and_transient_psychotic_disorders = "154937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F232_Acute_schizophrenia_like_psychotic_disorder = "151997AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F24_Induced_delusional_disorder = "128237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F25_Schizoaffective_disorders = "127132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F250_Schizoaffective_disorder_manic_type = "152338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F251_Schizoaffective_disorder_depressive_type = "127130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F252_Schizoaffective_disorder_mixed_type = "127129AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F30_Manic_episode = "134696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F300_Hypomania = "138045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F301_Mania_without_psychotic_symptoms = "162314AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F302_Mania_with_psychotic_symptoms = "162313AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F320_Mild_depressive_episode = "157791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F321_Moderate_depressive_episode = "157810AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F322_Severe_depressive_episode_without_psychotic_symptoms = "158802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F323_Severe_depressive_episode_with_psychotic_symptoms = "158801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
+		public static final String F340_Cyclothymia = "121757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		
 		//Dental disorders
 		public static final String DENTAL_1 = "151733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		

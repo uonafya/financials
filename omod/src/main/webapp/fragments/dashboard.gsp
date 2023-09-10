@@ -20,6 +20,7 @@
         jq('.stat-digit').eq(2).html(data.laboratory)
         jq('.stat-digit').eq(3).html(data.radiology)
         jq('.stat-digit').eq(4).html(data.procedure)
+        jq('.stat-digit').eq(4).html(data.dental)
         jq('.stat-digit').eq(5).html(data.general)
         jQuery("#graph-container").highcharts({
           credits: {
@@ -76,6 +77,10 @@
             }, {
               name: 'Procedures',
               y: data.procedure,
+            },
+           {
+              name: 'Dental',
+              y: data.dental,
             },
             {
               name: 'General',
@@ -227,6 +232,13 @@ html, body, #graph-container {
                         <div class="col-md-4">
                           <div class="card-counter primary">
                             <i class="fa fa-ticket"></i>
+                            <span class="count-name stat-text">DENTAL</span>
+                            <span class="count-numbers stat-digit"></span>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card-counter primary">
+                            <i class="fa fa-ticket"></i>
                             <span class="count-name stat-text">GENERAL</span>
                             <span class="count-numbers stat-digit"></span>
                           </div>
@@ -239,7 +251,3 @@ html, body, #graph-container {
             </div>
         </div>
 </div>
-
-<script type="text/javascript">
-
-</script>

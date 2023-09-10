@@ -105,14 +105,14 @@ html, body, #graph-container {
             <div class="col-md-4">
               <div class="card-counter danger">
                   <i class="fa fa-users"></i>
-                <span class="count-name stat-text">OPD VISITS</span>
+                <span class="count-name stat-text">ALL VISITS</span>
                 <span class="count-numbers stat-digit"></span>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card-counter danger">
                   <i class="fa fa-users"></i>
-                <span class="count-name stat-text">ALL VISITS</span>
+                <span class="count-name stat-text">OPD VISITS</span>
                 <span class="count-numbers stat-digit"></span>
               </div>
             </div>

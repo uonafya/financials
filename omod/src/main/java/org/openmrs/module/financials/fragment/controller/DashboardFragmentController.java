@@ -71,6 +71,11 @@ public class DashboardFragmentController {
 		    "general",
 		    getDepartmentTotalsOnDateRange(hospitalCoreService, startDate, endDate,
 		        hospitalCoreService.getDepartmentByName("General")));
+		
+		simpleObject.put(
+		    "dental",
+		    getDepartmentTotalsOnDateRange(hospitalCoreService, startDate, endDate,
+		        hospitalCoreService.getDepartmentByName("Dental")));
 		return simpleObject;
 	}
 	

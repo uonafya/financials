@@ -50,6 +50,7 @@ public class Moh705aDatasetDefinition {
 		dsd.addColumn("DIARRHEA", "DIARRHEA ALL", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList(),
 		        opdEncounterType.getEncounterTypeId()), indParam), "");
+		
 		EhrReportingUtils.addRow(dsd, "DC", "Diarrhoea", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList(),
 		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
@@ -469,21 +470,21 @@ public class Moh705aDatasetDefinition {
 		    EhrAddonUtils.getAdultChildrenColumns());
 		
 		//Dehydrated related diagnosis
-		EhrReportingUtils.addRow(
+		/*EhrReportingUtils.addRow(
 		    dsd,
 		    "DWSOD",
 		    "Diarrhoea with some dehydration",
 		    ReportUtils.map(
 		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.mildDehydration(),
-		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());*/
 		
-		EhrReportingUtils.addRow(
+		/*EhrReportingUtils.addRow(
 		    dsd,
 		    "DWSED",
 		    "Diarrhoea with severe dehydration",
 		    ReportUtils.map(
 		        moh705aIndicator.getAllAdultPatientsWithDiagnosis(DiagnosisLists.severeDehydration(),
-		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());*/
 		
 		EhrReportingUtils.addRow(
 		    dsd,

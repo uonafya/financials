@@ -57,7 +57,7 @@
                     href: ui.pageLink("financials", "financials", [ section: "procedure" ]),
                     active: (selection == "section-procedure"),
                     iconProvider: "financials",
-                    icon: "buttons/scissors.png"
+                    icon: "buttons/procedure.png"
             ],
             [
                     label: "Radiology",
@@ -67,11 +67,18 @@
                     icon: "buttons/radiology.jpg"
             ],
             [
+                    label: "Dental",
+                    href: ui.pageLink("financials", "financials", [ section: "dental" ]),
+                    active: (selection == "section-dental"),
+                    iconProvider: "financials",
+                    icon: "buttons/dental.png"
+            ],
+            [
                     label: "General Payments",
                     href: ui.pageLink("financials", "financials", [ section: "general" ]),
                     active: (selection == "section-general"),
                     iconProvider: "financials",
-                    icon: "buttons/scissors.png"
+                    icon: "buttons/general.png"
             ],
             [
                     label: "Patient Summaries",
@@ -91,7 +98,7 @@
                     label: "Patient Invoices",
                     href: ui.pageLink("financials", "cummulativePatientSummary"),
                     iconProvider: "financials",
-                    icon: "buttons/Zoom-in.png"
+                    icon: "buttons/inv.png"
             ],
             [
                     label: "Pharmacy Summaries",
@@ -125,7 +132,7 @@
                     label: "Clinical Summaries",
                     href: ui.pageLink("financials", "adminSummaries"),
                     iconProvider: "financials",
-                    icon: "buttons/Zoom-in.png"
+                    icon: "buttons/clinical.png"
             ]
     ]
 %>
@@ -161,5 +168,7 @@
     ${ui.includeFragment("financials","doctorsSummaries")}
     <%} else if(section == "general") {%>
     ${ui.includeFragment("financials","general")}
+    <%} else if(section == "dental") {%>
+    ${ui.includeFragment("financials","dental")}
     <%}%>
 </div>

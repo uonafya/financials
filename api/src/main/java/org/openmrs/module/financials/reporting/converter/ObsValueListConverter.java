@@ -11,15 +11,20 @@ import java.util.List;
 public class ObsValueListConverter implements DataConverter {
 	
 	public Object convert(Object original) {
+		if (original == null) {
+			return "";
+		}
 		List<Obs> o = new ArrayList<Obs>((Collection<? extends Obs>) original);
 		List<String> conceptNames = new ArrayList<String>();
 		if (o.isEmpty()) {
-			return null;
+			return "";
 		}
 		for (Obs obs : o) {
-			conceptNames.add(obs.getConcept().getDisplayString());
+			if (obs.getValueCoded() != null) {
+				conceptNames.add(obs.getValueCoded().getDisplayString());
+			}
 		}
-		return StringUtils.join(",", conceptNames);
+		return StringUtils.join(conceptNames, "|");
 	}
 	
 	@Override

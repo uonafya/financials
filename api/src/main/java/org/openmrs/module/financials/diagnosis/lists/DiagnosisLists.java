@@ -46,13 +46,11 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Secretory_Diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Raw_Milk_Associated_Diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Postcholecystectomy_Diarrhea).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Poisoning_by_Antidiarrheal_Drug).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Post_Vagotomy_Diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Diarrhea_for_more_2_weeks).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Diarrhea_for_2_weeks).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.postvagotomy_diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.nausea_vomiting_and_diarrhea).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.irritable_bowel_syndrome_without_diarrhoea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.diarrhea_due_to_drug).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Irritable_Bowel_Syndrome_with_Diarrhea).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.CHRONIC_DIARRHEA_1).getConceptId(),
@@ -2470,7 +2468,45 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MENTALDIS_43).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MENTALDIS_44).getConceptId(),
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MENTALDIS_45).getConceptId(),
-		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MENTALDIS_46).getConceptId()
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.MENTALDIS_46).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F000_Dementia_in_Alzheimer_disease_with_early_onset)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F01_Vascular_dementia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F03_Unspecified_dementia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F21_Schizotypal_disorder).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F010_Vascular_dementia_of_acute_onset).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F012_Subcortical_vascular_dementia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F013_Mixed_cortical_and_subcortical_vascular_dementia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F20_Schizophrenia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F22_Persistent_delusional_disorders).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F23_Acute_and_transient_psychotic_disorders).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F24_Induced_delusional_disorder).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F25_Schizoaffective_disorders).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F250_Schizoaffective_disorder_manic_type).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F251_Schizoaffective_disorder_depressive_type).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F252_Schizoaffective_disorder_mixed_type).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F30_Manic_episode).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F300_Hypomania).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F340_Cyclothymia).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F323_Severe_depressive_episode_with_psychotic_symptoms)
+		            .getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F322_Severe_depressive_episode_without_psychotic_symptoms)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F321_Moderate_depressive_episode)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F320_Mild_depressive_episode)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F302_Mania_with_psychotic_symptoms)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F301_Mania_without_psychotic_symptoms)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F011_Multi_infarct_dementia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F200_Paranoid_schizophrenia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F201_Hebephrenic_schizophrenia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F202_Catatonic_schizophrenia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F203_Undifferentiated_schizophrenia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F204_Post_schizophrenic_depression)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F205_Residual_schizophrenia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F206_Simple_schizophrenia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F208_Other_schizophrenia)
+		            .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.F220_Delusional_disorder)
+		            .getConceptId(),
+		    //getConcept(EhrAddonsConstants._EhrAddOnConcepts.F229_Persistent_delusional_disorder_unspecified).getConceptId(),
+		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.F232_Acute_schizophrenia_like_psychotic_disorder).getConceptId()
 		
 		);
 		
@@ -6591,10 +6627,6 @@ public class DiagnosisLists {
 		    getConcept(EhrAddonsConstants._EhrAddOnConcepts.Mild_dehydration).getConceptId());
 	}
 	
-	public static List<Integer> severeDehydration() {
-		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.severe_dehydration).getConceptId());
-	}
-	
 	public static List<Integer> getCutaneousLeishmaniasisList() {
 		return Arrays.asList(getConcept(EhrAddonsConstants._EhrAddOnConcepts.Dry_Form_of_Cutaneous_Leishmaniasis)
 		        .getConceptId(), getConcept(EhrAddonsConstants._EhrAddOnConcepts.Zoonotic_Form_of_Cutaneous_Leishmaniasis)
@@ -6768,8 +6800,6 @@ public class DiagnosisLists {
 		allListedDiagnosis.addAll(getYellowFeverList());
 		allListedDiagnosis.addAll(getViralHaemorrhagicFeverList());
 		allListedDiagnosis.addAll(getRiftValleyFeverList());
-		allListedDiagnosis.addAll(mildDehydration());
-		allListedDiagnosis.addAll(severeDehydration());
 		allListedDiagnosis.addAll(getGastroenteritisList());
 		
 		return allListedDiagnosis;
@@ -6883,9 +6913,7 @@ public class DiagnosisLists {
 	public static List<Integer> getAllOtherDiseasesListForChildren() {
 		List<Integer> allListedDiagnosisForChildren = new ArrayList<Integer>();
 		allListedDiagnosisForChildren.addAll(getDiarrheaDiagnosisList());
-		allListedDiagnosisForChildren.addAll(mildDehydration());
-		allListedDiagnosisForChildren.addAll(severeDehydration());
-		allListedDiagnosisForChildren.addAll(severeDehydration());
+		//allListedDiagnosisForChildren.addAll(mildDehydration());
 		allListedDiagnosisForChildren.addAll(getCholeraList());
 		allListedDiagnosisForChildren.addAll(getDysenteryList());
 		allListedDiagnosisForChildren.addAll(getGastroenteritisList());
