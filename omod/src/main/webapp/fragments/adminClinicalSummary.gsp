@@ -13,17 +13,6 @@
             </div>
          </td>
          <td valign="top">
-             <div class="card">
-               <div class="card-header">Provisional Diagnosis</div>
-               <div class="card-body">
-                 <div id="diagnosis">
-                   <ul id="pDiagnosisDetails"></ul>
-                 </div>
-               </div>
-               <div class="card-footer"></div>
-             </div>
-         </td>
-         <td valign="top">
             <div class="card">
               <div class="card-header">Procedures</div>
               <div class="card-body">

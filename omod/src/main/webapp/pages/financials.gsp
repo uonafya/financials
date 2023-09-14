@@ -32,6 +32,12 @@
                     icon: "buttons/dashboard.jpeg"
             ],
             [
+                    label: "Clinical Summaries",
+                    href: ui.pageLink("financials", "adminSummaries"),
+                    iconProvider: "financials",
+                    icon: "buttons/clinical.png"
+            ],
+            [
                     label: "Work Load",
                     href: ui.pageLink("financials", "financials", [ section: "workLoad" ]),
                     active: (selection == "section-workLoad"),
@@ -127,12 +133,6 @@
                     active: (selection == "section-doctorsSummaries"),
                     iconProvider: "financials",
                     icon: "buttons/doctorssum.png"
-            ],
-            [
-                    label: "Clinical Summaries",
-                    href: ui.pageLink("financials", "adminSummaries"),
-                    iconProvider: "financials",
-                    icon: "buttons/clinical.png"
             ]
     ]
 %>

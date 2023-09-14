@@ -14,8 +14,8 @@ function populateAdminDashboard() {
                   "toDate" : summaryToDate,
                 }
             ).success(function(data) {
-              jq('.stat-digit').eq(1).html(data.allVisits)
-              jq('.stat-digit').eq(0).html(data.opdVisits)
+              jq('.stat-digit').eq(0).html(data.allVisits)
+              jq('.stat-digit').eq(1).html(data.opdVisits)
               jq('.stat-digit').eq(2).html(data.allWalkIn)
               jq('.stat-digit').eq(3).html(data.revisitPatients)
               jq('.stat-digit').eq(4).html(data.newPatients)
