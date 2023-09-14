@@ -265,9 +265,7 @@ public class Moh717DatasetDefinition {
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
 		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), indParam));
-		
-		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
-		    "ba45c278-f290-11ea-9666-1b3e6e848887");
+		dsd.addDimension("gender", map(ehrAddonDimesion.getGender(), ""));
 		
 		EhrReportingUtils.addRow(dsd, "NFAC", "No of first attendances",
 		    ReportUtils.map(moh717IndicatorDefinition.getNewChildrenPatients(), indParam),
