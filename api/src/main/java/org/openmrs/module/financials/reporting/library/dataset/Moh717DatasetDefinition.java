@@ -8,6 +8,7 @@ import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh711IndicatorDefinition;
 import org.openmrs.module.financials.reporting.library.indicator.Moh717IndicatorDefinition;
+import org.openmrs.module.financials.reporting.utils.EhrAddonUtils;
 import org.openmrs.module.financials.utils.EhrReportingUtils;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.reporting.dataset.definition.CohortIndicatorDataSetDefinition;
@@ -255,5 +256,27 @@ public class Moh717DatasetDefinition {
 		return Arrays.asList(entClinic, eyeClinic, tbClinic, stiClinic, cccClinic, psychiatryClinic, orthopaedicClinic,
 		    occupationalTherapyClinic, physiotherapyClinic, surgicalClinic, paediatricsClinic, obstetricsGynaecologyClinic,
 		    nutritionClinic, oncologyClinic, renalClinic);
+	}
+	
+	public DataSetDefinition constructRevisitAndNewPatients() {
+		CohortIndicatorDataSetDefinition dsd = new CohortIndicatorDataSetDefinition();
+		String indParam = "startDate=${startDate},endDate=${endDate}";
+		dsd.setName("MOH717AB");
+		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
+		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
+		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), indParam));
+		
+		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
+		    "ba45c278-f290-11ea-9666-1b3e6e848887");
+		
+		EhrReportingUtils.addRow(dsd, "NFAC", "No of first attendances",
+		    ReportUtils.map(moh717IndicatorDefinition.getNewChildrenPatients(), indParam),
+		    EhrAddonUtils.getAdultChildrenWithGenderColumns());
+		
+		EhrReportingUtils.addRow(dsd, "RAC", "Re-attendances",
+		    ReportUtils.map(moh717IndicatorDefinition.getRevisitsChildrenPatients(), indParam),
+		    EhrAddonUtils.getAdultChildrenWithGenderColumns());
+		
+		return dsd;
 	}
 }

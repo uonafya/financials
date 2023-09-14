@@ -1,5 +1,6 @@
 package org.openmrs.module.financials.reporting.library.indicator;
 
+import org.openmrs.module.financials.reporting.library.cohorts.Moh705CohortDefinition;
 import org.openmrs.module.financials.reporting.library.cohorts.Moh717CohortDefinition;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.reporting.indicator.CohortIndicator;
@@ -7,15 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import static org.openmrs.module.financials.utils.EhrReportingUtils.cohortIndicator;
+import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
 @Component
 public class Moh717IndicatorDefinition {
 	
 	private Moh717CohortDefinition moh717CohortDefinition;
 	
+	private final Moh705CohortDefinition moh705CohortDefinition;
+	
 	@Autowired
-	public Moh717IndicatorDefinition(Moh717CohortDefinition moh717CohortDefinition) {
+	public Moh717IndicatorDefinition(Moh717CohortDefinition moh717CohortDefinition,
+	    Moh705CohortDefinition moh705CohortDefinition) {
 		this.moh717CohortDefinition = moh717CohortDefinition;
+		this.moh705CohortDefinition = moh705CohortDefinition;
 	}
 	
 	public CohortIndicator getAllNewPatients() {
@@ -55,5 +61,15 @@ public class Moh717IndicatorDefinition {
 	public CohortIndicator getDentalVisits(int c1, int c2, int encounter) {
 		return cohortIndicator("Special clinic Dental", ReportUtils.map(
 		    moh717CohortDefinition.getDentalSpecialClinic(c1, c2, encounter), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getNewChildrenPatients() {
+		return cohortIndicator("MOH 717 New children patients",
+		    map(moh705CohortDefinition.getNewChildrenPatients(), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getRevisitsChildrenPatients() {
+		return cohortIndicator("MOH 717 Revisit children patients",
+		    map(moh705CohortDefinition.getRevisitsChildrenPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
 }

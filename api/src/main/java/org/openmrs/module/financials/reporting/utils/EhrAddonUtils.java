@@ -150,4 +150,74 @@ public class EhrAddonUtils {
 		return Arrays.asList(malariaTotalUnder5, malariaTotalOver5);
 	}
 	
+	public static List<ColumnParameters> getAdultChildrenWithGenderColumns() {
+		ColumnParameters day1Male = new ColumnParameters("day1Male", "Day 1 Male", "day=1|gender=M", "01");
+		ColumnParameters day2Male = new ColumnParameters("day2Male", "Day 2 male", "day=2|gender=M", "02");
+		ColumnParameters day3Male = new ColumnParameters("day3Male", "Day 3 male", "day=3|gender=M", "03");
+		ColumnParameters day4Male = new ColumnParameters("day4Male", "Day 4 male", "day=4|gender=M", "04");
+		ColumnParameters day5Male = new ColumnParameters("day5Male", "Day 5 male", "day=5|gender=M", "05");
+		ColumnParameters day6Male = new ColumnParameters("day6Male", "Day 6 male", "day=6|gender=M", "06");
+		ColumnParameters day7Male = new ColumnParameters("day7Male", "Day 7 male", "day=7|gender=M", "07");
+		ColumnParameters day8Male = new ColumnParameters("day8Male", "Day 8 male", "day=8|gender=M", "08");
+		ColumnParameters day9Male = new ColumnParameters("day9Male", "Day 9 male", "day=9|gender=M", "09");
+		ColumnParameters day10Male = new ColumnParameters("day10Male", "Day 10 male", "day=10|gender=M", "10");
+		ColumnParameters day11Male = new ColumnParameters("day11Male", "Day 11 male", "day=11|gender=M", "11");
+		ColumnParameters day12Male = new ColumnParameters("day12Male", "Day 12 male", "day=12|gender=M", "12");
+		ColumnParameters day13Male = new ColumnParameters("day13Male", "Day 13 male", "day=13|gender=M", "13");
+		ColumnParameters day14Male = new ColumnParameters("day14Male", "Day 14 male", "day=14|gender=M", "14");
+		ColumnParameters day15Male = new ColumnParameters("day15Male", "Day 15 male", "day=15|gender=M", "15");
+		ColumnParameters day16Male = new ColumnParameters("day16Male", "Day 16 male", "day=16|gender=M", "16");
+		ColumnParameters day17Male = new ColumnParameters("day17Male", "Day 17 male", "day=17|gender=M", "17");
+		ColumnParameters day18Male = new ColumnParameters("day18Male", "Day 18 male", "day=18|gender=M", "18");
+		ColumnParameters day19Male = new ColumnParameters("day19Male", "Day 19 male", "day=19|gender=M", "19");
+		ColumnParameters day20Male = new ColumnParameters("day20Male", "Day 20 male", "day=20|gender=M", "20");
+		ColumnParameters day21Male = new ColumnParameters("day21Male", "Day 21 male", "day=21|gender=M", "21");
+		ColumnParameters day22Male = new ColumnParameters("day22Male", "Day 22 male", "day=22|gender=M", "22");
+		ColumnParameters day23Male = new ColumnParameters("day23Male", "Day 23 male", "day=23|gender=M", "23");
+		ColumnParameters day24Male = new ColumnParameters("day24Male", "Day 24 male", "day=24|gender=M", "24");
+		ColumnParameters day25Male = new ColumnParameters("day25Male", "Day 25 male", "day=25|gender=M", "25");
+		ColumnParameters day26Male = new ColumnParameters("day26Male", "Day 26 male", "day=26|gender=M", "26");
+		ColumnParameters day27Male = new ColumnParameters("day27Male", "Day 27 male", "day=27|gender=M", "27");
+		ColumnParameters day28Male = new ColumnParameters("day28Male", "Day 28 male", "day=28|gender=M", "28");
+		ColumnParameters day29Male = new ColumnParameters("day29Male", "Day 29 male", "day=29|gender=M", "29");
+		ColumnParameters day30Male = new ColumnParameters("day30Male", "Day 30 male", "day=30|gender=M", "30");
+		ColumnParameters day31Male = new ColumnParameters("day31Male", "Day 31 male", "day=31|gender=M", "31");
+		ColumnParameters dayTotalMale = new ColumnParameters("dayTotalMale", "Days total male", "gender=M", "32");
+		
+		ColumnParameters day1Female = new ColumnParameters("day1Female", "Day 1 Female", "day=1|gender=F", "33");
+		ColumnParameters day2Female = new ColumnParameters("day2Female", "Day 2 female", "day=2|gender=F", "34");
+		ColumnParameters day3Female = new ColumnParameters("day3Female", "Day 3 female", "day=3|gender=F", "35");
+		ColumnParameters day4Female = new ColumnParameters("day4Female", "Day 4 female", "day=4|gender=F", "36");
+		ColumnParameters day5Female = new ColumnParameters("day5Female", "Day 5 female", "day=5|gender=F", "37");
+		ColumnParameters day6Female = new ColumnParameters("day6Female", "Day 6 female", "day=6|gender=F", "38");
+		ColumnParameters day7Female = new ColumnParameters("day7Female", "Day 7 female", "day=7|gender=F", "39");
+		ColumnParameters day8Female = new ColumnParameters("day8Female", "Day 8 female", "day=8|gender=F", "40");
+		ColumnParameters day9Female = new ColumnParameters("day9Female", "Day 9 female", "day=9|gender=F", "41");
+		ColumnParameters day10Female = new ColumnParameters("day10Female", "Day 10 female", "day=10|gender=F", "42");
+		ColumnParameters day11Female = new ColumnParameters("day11Female", "Day 11 female", "day=11|gender=F", "43");
+		ColumnParameters day12Female = new ColumnParameters("day12Female", "Day 12 female", "day=12|gender=F", "44");
+		ColumnParameters day13Female = new ColumnParameters("day13Female", "Day 13 female", "day=13|gender=F", "45");
+		ColumnParameters day14Female = new ColumnParameters("day14Female", "Day 14 female", "day=14|gender=F", "46");
+		ColumnParameters day15Female = new ColumnParameters("day15Female", "Day 15 female", "day=15|gender=F", "47");
+		ColumnParameters day16Female = new ColumnParameters("day16Female", "Day 16 female", "day=16|gender=F", "48");
+		ColumnParameters day17Female = new ColumnParameters("day17Female", "Day 17 female", "day=17|gender=F", "49");
+		ColumnParameters day18Female = new ColumnParameters("day18Female", "Day 18 female", "day=18|gender=F", "50");
+		ColumnParameters day19Female = new ColumnParameters("day19Female", "Day 19 female", "day=19|gender=F", "51");
+		ColumnParameters day20Female = new ColumnParameters("day20Female", "Day 20 female", "day=20|gender=F", "52");
+		ColumnParameters day21Female = new ColumnParameters("day21Female", "Day 21 female", "day=21|gender=F", "53");
+		ColumnParameters day22Female = new ColumnParameters("day22Female", "Day 22 female", "day=22|gender=F", "54");
+		ColumnParameters day23Female = new ColumnParameters("day23Female", "Day 23 female", "day=23|gender=F", "55");
+		ColumnParameters day24Female = new ColumnParameters("day24Female", "Day 24 female", "day=24|gender=F", "56");
+		ColumnParameters day25Female = new ColumnParameters("day25Female", "Day 25 female", "day=25|gender=F", "57");
+		ColumnParameters day26Female = new ColumnParameters("day26Female", "Day 26 female", "day=26|gender=F", "58");
+		ColumnParameters day27Female = new ColumnParameters("day27Female", "Day 27 female", "day=27|gender=F", "59");
+		ColumnParameters day28Female = new ColumnParameters("day28Female", "Day 28 female", "day=28|gender=F", "60");
+		ColumnParameters day29Female = new ColumnParameters("day29Female", "Day 29 female", "day=29|gender=F", "61");
+		ColumnParameters day30Female = new ColumnParameters("day30Female", "Day 30 female", "day=30|gender=F", "62");
+		ColumnParameters day31Female = new ColumnParameters("day31Female", "Day 31 female", "day=31|gender=F", "63");
+		ColumnParameters dayTotalFemale = new ColumnParameters("dayTotalFemale", "Day total female", "gender=F", "64");
+		
+		return Arrays.asList(dayTotalMale, dayTotalFemale);
+	}
+	
 }
