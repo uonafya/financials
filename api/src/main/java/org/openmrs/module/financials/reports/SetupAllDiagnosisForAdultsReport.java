@@ -58,7 +58,7 @@ public class SetupAllDiagnosisForAdultsReport extends AbstractHybridReportBuilde
 		PatientDataSetDefinition allAdultsDiagnosis = allPatientsDiagnisChildre();
 		allAdultsDiagnosis.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		allAdultsDiagnosis.addParameter(new Parameter("endDate", "End Date", Date.class));
-		allAdultsDiagnosis.setName("All adults data set bulider");
+		//allAdultsDiagnosis.setName("All adults data set bulider");
 		allAdultsDiagnosis.addRowFilter(allAdultsDiagnosisPatientsCohort());
 		report.setBaseCohortDefinition(allAdultsDiagnosisPatientsCohort());
 		return Arrays.asList(

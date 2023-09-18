@@ -217,7 +217,14 @@ public class EhrAddonUtils {
 		ColumnParameters day31Female = new ColumnParameters("day31Female", "Day 31 female", "day=31|gender=F", "63");
 		ColumnParameters dayTotalFemale = new ColumnParameters("dayTotalFemale", "Day total female", "gender=F", "64");
 		
-		return Arrays.asList(dayTotalMale, dayTotalFemale);
+		return Arrays.asList(day1Male, day2Male, day3Male, day4Male, day5Male, day6Male, day7Male, day8Male, day9Male,
+		    day10Male, day11Male, day12Male, day13Male, day14Male, day15Male, day16Male, day17Male, day18Male, day19Male,
+		    day20Male, day21Male, day22Male, day22Male, day23Male, day24Male, day25Male, day26Male, day27Male, day28Male,
+		    day29Male, day30Male, day31Male, day1Female, day2Female, day3Female, day4Female, day5Female, day6Female,
+		    day7Female, day8Female, day9Female, day10Female, day11Female, day12Female, day13Female, day14Female,
+		    day15Female, day16Female, day17Female, day18Female, day19Female, day20Female, day21Female, day22Female,
+		    day23Female, day24Female, day25Female, day26Female, day27Female, day28Female, day29Female, day30Female,
+		    day31Female, dayTotalMale, dayTotalFemale);
 	}
 	
 }

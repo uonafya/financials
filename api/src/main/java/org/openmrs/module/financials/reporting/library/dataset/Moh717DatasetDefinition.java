@@ -31,13 +31,13 @@ public class Moh717DatasetDefinition {
 	
 	private final Moh711IndicatorDefinition moh711IndicatorDefinition;
 	
-	private final EhrAddonDimension ehrAddonDimesion;
+	private final EhrAddonDimension ehrAddonDimension;
 	
 	@Autowired
-	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimension ehrAddonDimesion,
+	public Moh717DatasetDefinition(Moh717IndicatorDefinition moh717IndicatorDefinition, EhrAddonDimension ehrAddonDimension,
 	    Moh711IndicatorDefinition moh711IndicatorDefinition) {
 		this.moh717IndicatorDefinition = moh717IndicatorDefinition;
-		this.ehrAddonDimesion = ehrAddonDimesion;
+		this.ehrAddonDimension = ehrAddonDimension;
 		this.moh711IndicatorDefinition = moh711IndicatorDefinition;
 	}
 	
@@ -51,11 +51,11 @@ public class Moh717DatasetDefinition {
 		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
 		    "ba45c278-f290-11ea-9666-1b3e6e848887");
 		
-		dsd.addDimension("age", map(ehrAddonDimesion.getAge(), "effectiveDate=${endDate}"));
-		dsd.addDimension("gender", map(ehrAddonDimesion.getGender(), ""));
+		dsd.addDimension("age", map(ehrAddonDimension.getAge(), "effectiveDate=${endDate}"));
+		dsd.addDimension("gender", map(ehrAddonDimension.getGender(), ""));
 		dsd.addDimension("clinic",
-		    map(ehrAddonDimesion.getSpecialClinicVisits(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
-		dsd.addDimension("state", map(ehrAddonDimesion.newOrRevisits(), "startDate=${startDate},endDate=${endDate}"));
+		    map(ehrAddonDimension.getSpecialClinicVisits(), "onOrAfter=${startDate},onOrBefore=${endDate}"));
+		dsd.addDimension("state", map(ehrAddonDimension.newOrRevisits(), "startDate=${startDate},endDate=${endDate}"));
 		
 		EhrReportingUtils.addRow(dsd, "OSN", "OUTPATIENT SERVICES NEW PATIENTS",
 		    ReportUtils.map(moh717IndicatorDefinition.getAllNewPatients(), indParams), getGeneralOutPatientFilters());
@@ -264,8 +264,8 @@ public class Moh717DatasetDefinition {
 		dsd.setName("MOH717AB");
 		dsd.addParameter(new Parameter("startDate", "Start Date", Date.class));
 		dsd.addParameter(new Parameter("endDate", "End Date", Date.class));
-		dsd.addDimension("day", ReportUtils.map(ehrAddonDimesion.encountersOfMonthPerDay(), indParam));
-		dsd.addDimension("gender", map(ehrAddonDimesion.getGender(), ""));
+		dsd.addDimension("day", ReportUtils.map(ehrAddonDimension.encountersOfMonthPerDay(), indParam));
+		dsd.addDimension("gender", map(ehrAddonDimension.getGender(), ""));
 		
 		EhrReportingUtils.addRow(dsd, "NFAC", "No of first attendances",
 		    ReportUtils.map(moh717IndicatorDefinition.getNewChildrenPatients(), indParam),
