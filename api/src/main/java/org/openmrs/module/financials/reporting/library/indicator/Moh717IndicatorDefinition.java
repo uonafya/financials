@@ -72,4 +72,14 @@ public class Moh717IndicatorDefinition {
 		return cohortIndicator("MOH 717 Revisit children patients",
 		    map(moh705CohortDefinition.getRevisitsChildrenPatients(), "startDate=${startDate},endDate=${endDate}"));
 	}
+	
+	public CohortIndicator getNewAdultsPatients() {
+		return cohortIndicator("New adults patients",
+		    map(moh705CohortDefinition.getNewAdultsPatients(), "startDate=${startDate},endDate=${endDate}"));
+	}
+	
+	public CohortIndicator getRevisitsAdultsPatients() {
+		return cohortIndicator("Revisit adults patients",
+		    map(moh705CohortDefinition.getRevisitAdultsPatients(), "startDate=${startDate},endDate=${endDate}"));
+	}
 }

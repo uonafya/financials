@@ -20,8 +20,8 @@
         jq('.stat-digit').eq(2).html(data.laboratory)
         jq('.stat-digit').eq(3).html(data.radiology)
         jq('.stat-digit').eq(4).html(data.procedure)
-        jq('.stat-digit').eq(4).html(data.dental)
-        jq('.stat-digit').eq(5).html(data.general)
+        jq('.stat-digit').eq(5).html(data.dental)
+        jq('.stat-digit').eq(6).html(data.general)
         jQuery("#graph-container").highcharts({
           credits: {
             enabled: false

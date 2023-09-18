@@ -275,6 +275,14 @@ public class Moh717DatasetDefinition {
 		    ReportUtils.map(moh717IndicatorDefinition.getRevisitsChildrenPatients(), indParam),
 		    EhrAddonUtils.getAdultChildrenWithGenderColumns());
 		
+		EhrReportingUtils.addRow(dsd, "NFAA", "No. Of First Attendances",
+		    ReportUtils.map(moh717IndicatorDefinition.getNewAdultsPatients(), indParam),
+		    EhrAddonUtils.getAdultChildrenWithGenderColumns());
+		
+		EhrReportingUtils.addRow(dsd, "RETA", "Re-Attendances",
+		    ReportUtils.map(moh717IndicatorDefinition.getRevisitsAdultsPatients(), indParam),
+		    EhrAddonUtils.getAdultChildrenWithGenderColumns());
+		
 		return dsd;
 	}
 }
