@@ -25,28 +25,28 @@
             <% } %>
         </div>
         <% reportsByProgram.each { programName, reports -> %>
-        <div class="ke-tab" data-tabid="${ programNameToSlug(programName) }">
-            <table cellspacing="0" cellpadding="0" width="100%">
-                <tr>
-                    <td style="width: 50%; vertical-align: top">
-                        <div class="ke-panel-frame">
-                            <div class="ke-panel-heading">MOH Summary Reports</div>
-                            <div class="ke-panel-content">
-                                ${ ui.includeFragment("kenyaemr", "widget/reportStack", [ reports: indicatorReports(reports), onReportClick: onReportClick ]) }
-                            </div>
-                        </div>
-                    </td>
-                    <td style="width: 50%; vertical-align: top; padding-left: 5px">
-                        <div class="ke-panel-frame">
-                            <div class="ke-panel-heading">MOH Facility Reports</div>
-                            <div class="ke-panel-content">
-                                ${ ui.includeFragment("kenyaemr", "widget/reportStack", [ reports: cohortReports(reports), onReportClick: onReportClick ]) }
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
+          <div class="ke-tab" data-tabid="${ programNameToSlug(programName) }">
+              <table cellspacing="0" cellpadding="0" width="100%">
+                  <tr>
+                      <td style="width: 50%; vertical-align: top; padding-left: 5px">
+                          <div class="ke-panel-frame">
+                              <div class="ke-panel-heading">MOH Facility Reports</div>
+                              <div class="ke-panel-content">
+                                  ${ ui.includeFragment("kenyaemr", "widget/reportStack", [ reports: cohortReports(reports), onReportClick: onReportClick ]) }
+                              </div>
+                          </div>
+                      </td>
+                      <td style="width: 50%; vertical-align: top">
+                          <div class="ke-panel-frame">
+                              <div class="ke-panel-heading">MOH Summary Reports</div>
+                              <div class="ke-panel-content">
+                                  ${ ui.includeFragment("kenyaemr", "widget/reportStack", [ reports: indicatorReports(reports), onReportClick: onReportClick ]) }
+                              </div>
+                          </div>
+                      </td>
+                  </tr>
+              </table>
+          </div>
         <% } %>
     </div>
 </div>
