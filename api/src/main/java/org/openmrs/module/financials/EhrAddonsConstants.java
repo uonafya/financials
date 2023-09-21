@@ -7,7 +7,7 @@ public class EhrAddonsConstants {
 	
 	public static final class _EhrAddOnConceptClasses {
 		
-		public static final String DIAGNOSIS_CLASS = "8d4918b0-c2cc-11de-8d13-0010c6dffd0f"; // 4
+		public static final String DIAGNOSIS_CLASS = "8dzasw24918b0-c2cc-11de-8d13-0010c6dffd0f"; // 4
 		
 		public static final String FINDING_CLASS = "8d491a9a-c2cc-11de-8d13-0010c6dffd0f"; // 5
 		
@@ -20,1503 +20,1503 @@ public class EhrAddonsConstants {
 	public static final class _EhrAddOnConcepts {
 		
 		// Central naval
-		public static final String CENTRAL_NAVAL1 = "990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL1 = 990;
 		
-		public static final String CENTRAL_NAVAL2 = "110484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL2 = 110484;
 		
-		public static final String CENTRAL_NAVAL3 = "112094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL3 = 112094;
 		
-		public static final String CENTRAL_NAVAL4 = "112101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL4 = 112101;
 		
-		public static final String CENTRAL_NAVAL5 = "114058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL5 = 114058;
 		
-		public static final String CENTRAL_NAVAL6 = "114059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL6 = 114059;
 		
-		public static final String CENTRAL_NAVAL7 = "115062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL7 = 115062;
 		
-		public static final String CENTRAL_NAVAL8 = "115213AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL8 = 115213;
 		
-		public static final String CENTRAL_NAVAL9 = "116984AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL9 = 116984;
 		
-		public static final String CENTRAL_NAVAL10 = "118597AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL10 = 118597;
 		
-		public static final String CENTRAL_NAVAL11 = "118994AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL11 = 118994;
 		
-		public static final String CENTRAL_NAVAL12 = "119564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL12 = 119564;
 		
-		public static final String CENTRAL_NAVAL13 = "119599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL13 = 119599;
 		
-		public static final String CENTRAL_NAVAL14 = "120831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL14 = 120831;
 		
-		public static final String CENTRAL_NAVAL15 = "120833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL15 = 120833;
 		
-		public static final String CENTRAL_NAVAL16 = "121765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL16 = 121765;
 		
-		public static final String CENTRAL_NAVAL17 = "122230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL17 = 122230;
 		
-		public static final String CENTRAL_NAVAL18 = "125108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL18 = 125108;
 		
-		public static final String CENTRAL_NAVAL19 = "126354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL19 = 126354;
 		
-		public static final String CENTRAL_NAVAL20 = "129158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL20 = 129158;
 		
-		public static final String CENTRAL_NAVAL21 = "129899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL21 = 129899;
 		
-		public static final String CENTRAL_NAVAL22 = "132604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL22 = 132604;
 		
-		public static final String CENTRAL_NAVAL23 = "132605AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL23 = 132605;
 		
-		public static final String CENTRAL_NAVAL24 = "136055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL24 = 136055;
 		
-		public static final String CENTRAL_NAVAL25 = "136489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL25 = 136489;
 		
-		public static final String CENTRAL_NAVAL26 = "140252AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL26 = 140252;
 		
-		public static final String CENTRAL_NAVAL27 = "140253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL27 = 140253;
 		
-		public static final String CENTRAL_NAVAL28 = "142107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL28 = 142107;
 		
-		public static final String CENTRAL_NAVAL29 = "143880AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL29 = 143880;
 		
-		public static final String CENTRAL_NAVAL30 = "145953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL30 = 145953;
 		
-		public static final String CENTRAL_NAVAL31 = "145954AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL31 = 145954;
 		
-		public static final String CENTRAL_NAVAL32 = "145955AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL32 = 145955;
 		
-		public static final String CENTRAL_NAVAL33 = "147831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL33 = 147831;
 		
-		public static final String CENTRAL_NAVAL34 = "149308AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL34 = 149308;
 		
-		public static final String CENTRAL_NAVAL35 = "150292AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL35 = 150292;
 		
-		public static final String CENTRAL_NAVAL36 = "150813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL36 = 150813;
 		
-		public static final String CENTRAL_NAVAL37 = "154234AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL37 = 154234;
 		
-		public static final String CENTRAL_NAVAL38 = "155270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL38 = 155270;
 		
-		public static final String CENTRAL_NAVAL39 = "155466AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL39 = 155466;
 		
-		public static final String CENTRAL_NAVAL40 = "155467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL40 = 155467;
 		
-		public static final String CENTRAL_NAVAL41 = "155468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL41 = 155468;
 		
-		public static final String CENTRAL_NAVAL42 = "155469AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL42 = 155469;
 		
-		public static final String CENTRAL_NAVAL43 = "155838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL43 = 155838;
 		
-		public static final String CENTRAL_NAVAL44 = "157611AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL44 = 157611;
 		
-		public static final String CENTRAL_NAVAL45 = "157675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL45 = 157675;
 		
-		public static final String CENTRAL_NAVAL46 = "157913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL46 = 157913;
 		
-		public static final String CENTRAL_NAVAL47 = "157921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL47 = 157921;
 		
-		public static final String CENTRAL_NAVAL48 = "158777AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL48 = 158777;
 		
-		public static final String CENTRAL_NAVAL49 = "160308AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL49 = 160308;
 		
-		public static final String CENTRAL_NAVAL50 = "161220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NAVAL50 = 161220;
 		
 		// Dysentery (Blood Bloody diarrhoea)
-		public static final String DYSENTERY = "152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 152
+		public static final Integer DYSENTERY = 152; // 152
 		
-		public static final String AMOEBIC_DYSENTERY = "149004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 149004
+		public static final Integer AMOEBIC_DYSENTERY = 149004; // 149004
 		
-		public static final String SHIGELLA_DYSENTERY = "117126AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 117126
+		public static final Integer SHIGELLA_DYSENTERY = 117126; // 117126
 		
-		public static final String BACILLARY_DYSENTERY = "148036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 148036
+		public static final Integer BACILLARY_DYSENTERY = 148036; // 148036
 		
-		public static final String Viral_Dysentery = "111485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Viral_Dysentery = 111485;
 		
-		public static final String Haemorrhagic_Dysentery = "138861AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Haemorrhagic_Dysentery = 138861;
 		
-		public static final String Catarrhal_Dysentery = "146099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Catarrhal_Dysentery = 146099;
 		
-		public static final String Acute_Amebic_Dysentery_without_Abscess = "149918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_Amebic_Dysentery_without_Abscess = 149918;
 		
-		public static final String Acute_Amebic_Dysentery = "149919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_Amebic_Dysentery = 149919;
 		
-		public static final String Joint_problem_following_dysentery = "157405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Joint_problem_following_dysentery = 157405;
 		
 		// Meningococcal
-		public static final String MENINGOCOCCAL_MENINGITIS = "134369AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 134369
+		public static final Integer MENINGOCOCCAL_MENINGITIS = 134369; // 134369
 		
 		// OTHER MENINGITIS
-		public static final String BACTERIAL_MENINGITIS = "121255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 121255
+		public static final Integer BACTERIAL_MENINGITIS = 121255; // 121255
 		
-		public static final String CRYPTOCOCCAL_MENINGITIS = "1294AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 1294
+		public static final Integer CRYPTOCOCCAL_MENINGITIS = 1294; // 1294
 		
-		public static final String VIRAL_MENINGITIS = "123103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 123103
+		public static final Integer VIRAL_MENINGITIS = 123103; // 123103
 		
-		public static final String OM1 = "997AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM1 = 997;
 		
-		public static final String OM2 = "5033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM2 = 5033;
 		
-		public static final String OM3 = "111967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM3 = 111967;
 		
-		public static final String OM4 = "112488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM4 = 112488;
 		
-		public static final String OM5 = "116183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM5 = 116183;
 		
-		public static final String OM6 = "121210AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM6 = 121210;
 		
-		public static final String OM7 = "121211AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM7 = 121211;
 		
-		public static final String OM8 = "121258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM8 = 121258;
 		
-		public static final String OM9 = "124076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM9 = 124076;
 		
-		public static final String OM10 = "125820AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM10 = 125820;
 		
-		public static final String OM11 = "125958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM11 = 125958;
 		
-		public static final String OM12 = "127200AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM12 = 127200;
 		
-		public static final String OM13 = "128274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM13 = 128274;
 		
-		public static final String OM14 = "128335AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM14 = 128335;
 		
-		public static final String OM15 = "130035AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM15 = 130035;
 		
-		public static final String OM16 = "130095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM16 = 130095;
 		
-		public static final String OM17 = "132819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM17 = 132819;
 		
-		public static final String OM18 = "133667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM18 = 133667;
 		
-		public static final String OM19 = "135234AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM19 = 135234;
 		
-		public static final String OM20 = "135731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM20 = 135731;
 		
-		public static final String OM21 = "135895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM21 = 135895;
 		
-		public static final String OM22 = "138586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM22 = 138586;
 		
-		public static final String OM23 = "138589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM23 = 138589;
 		
-		public static final String OM24 = "138594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM24 = 138594;
 		
-		public static final String OM25 = "138691AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM25 = 138691;
 		
-		public static final String OM26 = "138698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM26 = 138698;
 		
-		public static final String OM27 = "139159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM27 = 139159;
 		
-		public static final String OM28 = "139164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM28 = 139164;
 		
-		public static final String OM29 = "139195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM29 = 139195;
 		
-		public static final String OM30 = "139329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM30 = 139329;
 		
-		public static final String OM31 = "139736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM31 = 139736;
 		
-		public static final String OM32 = "141008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM32 = 141008;
 		
-		public static final String OM33 = "141169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM33 = 141169;
 		
-		public static final String OM34 = "141201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM34 = 141201;
 		
-		public static final String OM35 = "141541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM35 = 141541;
 		
-		public static final String OM36 = "143122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM36 = 143122;
 		
-		public static final String OM37 = "143245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM37 = 143245;
 		
-		public static final String OM38 = "143664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM38 = 143664;
 		
-		public static final String OM39 = "144646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM39 = 144646;
 		
-		public static final String OM40 = "145289AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM40 = 145289;
 		
-		public static final String OM41 = "145481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM41 = 145481;
 		
-		public static final String OM42 = "145722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM42 = 145722;
 		
-		public static final String OM43 = "146525AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM43 = 146525;
 		
-		public static final String OM44 = "148342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM44 = 148342;
 		
-		public static final String OM45 = "148343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM45 = 148343;
 		
-		public static final String OM46 = "149250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM46 = 149250;
 		
-		public static final String OM47 = "149421AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM47 = 149421;
 		
-		public static final String OM48 = "149498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM48 = 149498;
 		
-		public static final String OM49 = "149524AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM49 = 149524;
 		
-		public static final String OM50 = "149944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM50 = 149944;
 		
-		public static final String OM51 = "152206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM51 = 152206;
 		
-		public static final String OM52 = "152953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM52 = 152953;
 		
-		public static final String OM53 = "157565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM53 = 157565;
 		
-		public static final String OM54 = "160440AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM54 = 160440;
 		
-		public static final String OM55 = "160441AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OM55 = 160441;
 		
 		// Tetanus
-		public static final String TETANUS = "124957AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 124957
+		public static final Integer TETANUS = 124957; // 124957
 		
-		public static final String TETANUS_NEONATORUM = "124954AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 124954
+		public static final Integer TETANUS_NEONATORUM = 124954; // 124954
 		
-		public static final String OBSTETRICAL_TETANUS = "152276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OBSTETRICAL_TETANUS = 152276;
 		
 		// CHICKEN POX
-		public static final String CHICKEN_POX = "892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHICKEN_POX = 892;
 		
-		public static final String CP2 = "5029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CP2 = 5029;
 		
-		public static final String CP3 = "120744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CP3 = 120744;
 		
-		public static final String CP4 = "123357AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CP4 = 123357;
 		
-		public static final String CP5 = "145698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CP5 = 145698;
 		
-		public static final String CP6 = "162273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CP6 = 162273;
 		
 		// MEASLES
-		public static final String MEASLES = "134561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MEASLES = 134561;
 		
-		public static final String MSC1 = "115885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC1 = 115885;
 		
-		public static final String MSC2 = "115886AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC2 = 115886;
 		
-		public static final String MSC3 = "117161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC3 = 117161;
 		
-		public static final String MSC4 = "129467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC4 = 129467;
 		
-		public static final String MSC5 = "129468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC5 = 129468;
 		
-		public static final String MSC6 = "129469AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC6 = 129469;
 		
-		public static final String MSC7 = "129768AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC7 = 129768;
 		
-		public static final String MSC8 = "134558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC8 = 134558;
 		
-		public static final String MSC9 = "134559AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC9 = 134559;
 		
-		public static final String MSC10 = "134560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC10 = 134560;
 		
-		public static final String MSC12 = "149286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC12 = 149286;
 		
-		public static final String MSC13 = "152206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC13 = 152206;
 		
-		public static final String MSC14 = "152208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC14 = 152208;
 		
-		public static final String MSC15 = "152209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC15 = 152209;
 		
-		public static final String MSC16 = "154730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC16 = 154730;
 		
-		public static final String MSC17 = "157151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC17 = 157151;
 		
-		public static final String MSC18 = "157691AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC18 = 157691;
 		
-		public static final String MSC19 = "157692AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC19 = 157692;
 		
-		public static final String MSC20 = "163396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MSC20 = 163396;
 		
 		// HEPATITIS
-		public static final String HP1 = "28AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP1 = 28;
 		
-		public static final String HP2 = "110389AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP2 = 110389;
 		
-		public static final String HP3 = "110407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP3 = 110407;
 		
-		public static final String HP4 = "110409AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP4 = 110409;
 		
-		public static final String HP5 = "111064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP5 = 111064;
 		
-		public static final String HP6 = "111065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP6 = 111065;
 		
-		public static final String HP7 = "111467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP7 = 111467;
 		
-		public static final String HP8 = "111474AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP8 = 111474;
 		
-		public static final String HP9 = "111475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP9 = 111475;
 		
-		public static final String HP10 = "111477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP10 = 111477;
 		
-		public static final String HP11 = "111479AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP11 = 111479;
 		
-		public static final String HP12 = "111481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP12 = 111481;
 		
-		public static final String HP13 = "111759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP13 = 111759;
 		
-		public static final String HP14 = "113392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP14 = 113392;
 		
-		public static final String HP15 = "115215AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP15 = 115215;
 		
-		public static final String HP16 = "116986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP16 = 116986;
 		
-		public static final String HP17 = "117591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP17 = 117591;
 		
-		public static final String HP18 = "117592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP18 = 117592;
 		
-		public static final String HP19 = "117593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP19 = 117593;
 		
-		public static final String HP20 = "120548AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP20 = 120548;
 		
-		public static final String HP21 = "120557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP21 = 120557;
 		
-		public static final String HP22 = "120558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP22 = 120558;
 		
-		public static final String HP23 = "120637AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP23 = 120637;
 		
-		public static final String HP24 = "120682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP24 = 120682;
 		
-		public static final String HP25 = "120683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP25 = 120683;
 		
-		public static final String HP26 = "121812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP26 = 121812;
 		
-		public static final String HP27 = "121816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP27 = 121816;
 		
-		public static final String HP28 = "122027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP28 = 122027;
 		
-		public static final String HP29 = "122028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP29 = 122028;
 		
-		public static final String HP30 = "122029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP30 = 122029;
 		
-		public static final String HP31 = "122054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP31 = 122054;
 		
-		public static final String HP32 = "123106AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP32 = 123106;
 		
-		public static final String HP33 = "123107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP33 = 123107;
 		
-		public static final String HP34 = "123108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP34 = 123108;
 		
-		public static final String HP35 = "123109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP35 = 123109;
 		
-		public static final String HP36 = "123111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP36 = 123111;
 		
-		public static final String HP37 = "124412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP37 = 124412;
 		
-		public static final String HP38 = "124427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP38 = 124427;
 		
-		public static final String HP39 = "124443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP39 = 124443;
 		
-		public static final String HP40 = "125726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP40 = 125726;
 		
-		public static final String HP41 = "127725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP41 = 127725;
 		
-		public static final String HP42 = "127726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP42 = 127726;
 		
-		public static final String HP43 = "127727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP43 = 127727;
 		
-		public static final String HP44 = "127942AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP44 = 127942;
 		
-		public static final String HP45 = "130513AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP45 = 130513;
 		
-		public static final String HP46 = "130527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP46 = 130527;
 		
-		public static final String HP47 = "131704AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP47 = 131704;
 		
-		public static final String HP48 = "133403AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP48 = 133403;
 		
-		public static final String HP49 = "133668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP49 = 133668;
 		
-		public static final String HP50 = "135360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP50 = 135360;
 		
-		public static final String HP51 = "135508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP51 = 135508;
 		
-		public static final String HP52 = "137274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP52 = 137274;
 		
-		public static final String HP53 = "138816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP53 = 138816;
 		
-		public static final String HP54 = "138817AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP54 = 138817;
 		
-		public static final String HP55 = "138818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP55 = 138818;
 		
-		public static final String HP56 = "138819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP56 = 138819;
 		
-		public static final String HP57 = "138820AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP57 = 138820;
 		
-		public static final String HP58 = "138821AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP58 = 138821;
 		
-		public static final String HP59 = "139176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP59 = 139176;
 		
-		public static final String HP60 = "139327AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP60 = 139327;
 		
-		public static final String HP61 = "141090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP61 = 141090;
 		
-		public static final String HP62 = "141723AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP62 = 141723;
 		
-		public static final String HP63 = "142964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP63 = 142964;
 		
-		public static final String HP64 = "145131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP64 = 145131;
 		
-		public static final String HP65 = "145216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP65 = 145216;
 		
-		public static final String HP66 = "145217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP66 = 145217;
 		
-		public static final String HP67 = "145218AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP67 = 145218;
 		
-		public static final String HP68 = "145347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP68 = 145347;
 		
-		public static final String HP69 = "145500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP69 = 145500;
 		
-		public static final String HP70 = "145502AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP70 = 145502;
 		
-		public static final String HP71 = "145503AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP71 = 145503;
 		
-		public static final String HP72 = "145504AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP72 = 145504;
 		
-		public static final String HP73 = "145508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP73 = 145508;
 		
-		public static final String HP74 = "145509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP74 = 145509;
 		
-		public static final String HP75 = "145615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP75 = 145615;
 		
-		public static final String HP76 = "145663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP76 = 145663;
 		
-		public static final String HP77 = "148756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP77 = 148756;
 		
-		public static final String HP78 = "148757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP78 = 148757;
 		
-		public static final String HP79 = "148758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP79 = 148758;
 		
-		public static final String HP80 = "149003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP80 = 149003;
 		
-		public static final String HP81 = "149153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP81 = 149153;
 		
-		public static final String HP82 = "149471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP82 = 149471;
 		
-		public static final String HP83 = "149484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP83 = 149484;
 		
-		public static final String HP84 = "149625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP84 = 149625;
 		
-		public static final String HP85 = "149742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP85 = 149742;
 		
-		public static final String HP86 = "149743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP86 = 149743;
 		
-		public static final String HP87 = "149745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP87 = 149745;
 		
-		public static final String HP88 = "149799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP88 = 149799;
 		
-		public static final String HP89 = "149800AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP89 = 149800;
 		
-		public static final String HP90 = "152080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP90 = 152080;
 		
-		public static final String HP91 = "152275AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP91 = 152275;
 		
-		public static final String HP92 = "152350AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP92 = 152350;
 		
-		public static final String HP93 = "152408AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP93 = 152408;
 		
-		public static final String HP94 = "152410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP94 = 152410;
 		
-		public static final String HP95 = "152411AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP95 = 152411;
 		
-		public static final String HP96 = "152412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP96 = 152412;
 		
-		public static final String HP97 = "152441AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP97 = 152441;
 		
-		public static final String HP98 = "152453AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP98 = 152453;
 		
-		public static final String HP99 = "152665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP99 = 152665;
 		
-		public static final String HP100 = "152762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP100 = 152762;
 		
-		public static final String HP101 = "154951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP101 = 154951;
 		
-		public static final String HP102 = "156437AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP102 = 156437;
 		
-		public static final String HP103 = "156589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP103 = 156589;
 		
-		public static final String HP104 = "156590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP104 = 156590;
 		
-		public static final String HP105 = "156751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP105 = 156751;
 		
-		public static final String HP106 = "156752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP106 = 156752;
 		
-		public static final String HP107 = "158257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP107 = 158257;
 		
-		public static final String HP108 = "158927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP108 = 158927;
 		
-		public static final String HP109 = "159295AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP109 = 159295;
 		
-		public static final String HP110 = "160143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP110 = 160143;
 		
-		public static final String HP111 = "162269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP111 = 162269;
 		
-		public static final String HP112 = "162270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP112 = 162270;
 		
-		public static final String HP113 = "162271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP113 = 162271;
 		
-		public static final String HP114 = "163325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HP114 = 163325;
 		
 		//Mumps
-		public static final String MUMPS1 = "115486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS1 = 115486;
 		
-		public static final String MUMPS2 = "115487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS2 = 115487;
 		
-		public static final String MUMPS3 = "129750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS3 = 129750;
 		
-		public static final String MUMPS4 = "133658AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS4 = 133658;
 		
-		public static final String MUMPS5 = "133659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS5 = 133659;
 		
-		public static final String MUMPS6 = "133660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS6 = 133660;
 		
-		public static final String MUMPS7 = "133661AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS7 = 133661;
 		
-		public static final String MUMPS8 = "133662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS8 = 133662;
 		
-		public static final String MUMPS9 = "133663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS9 = 133663;
 		
-		public static final String MUMPS10 = "133664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS10 = 133664;
 		
-		public static final String MUMPS11 = "133665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS11 = 133665;
 		
-		public static final String MUMPS12 = "133666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS12 = 133666;
 		
-		public static final String MUMPS13 = "133667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS13 = 133667;
 		
-		public static final String MUMPS14 = "133668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS14 = 133668;
 		
-		public static final String MUMPS15 = "133669AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS15 = 133669;
 		
-		public static final String MUMPS16 = "133670AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS16 = 133670;
 		
-		public static final String MUMPS17 = "133671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS17 = 133671;
 		
-		public static final String MUMPS18 = "152238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS18 = 152238;
 		
-		public static final String MUMPS19 = "154763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS19 = 154763;
 		
-		public static final String MUMPS20 = "157186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS20 = 157186;
 		
-		public static final String MUMPS21 = "157870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS21 = 157870;
 		
-		public static final String MUMPS22 = "157871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MUMPS22 = 157871;
 		
 		// Diarrhoe
-		public static final String ACUTE_DIARRHEA = "149856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ACUTE_DIARRHEA = 149856;
 		
-		public static final String FUNCTIONAL_DIARRHOEA = "139753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FUNCTIONAL_DIARRHOEA = 139753;
 		
-		public static final String CHRONIC_DIARRHOEA = "5018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRONIC_DIARRHOEA = 5018;
 		
-		public static final String Hemorrhagic_Diarrhea = "138868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Hemorrhagic_Diarrhea = 138868;
 		
-		//public static final String Bacterial_Gastroenteritis = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final Integer Bacterial_Gastroenteritis = 148023;
 		
-		public static final String DIARRHEA_AMOEBIASIS = "14AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DIARRHEA_AMOEBIASIS = 14;
 		
-		public static final String DIARRHOEA = "16AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DIARRHOEA = 16;
 		
-		public static final String Diarrhea_for_less_than_one_month = "1467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_for_less_than_one_month = 1467;
 		
-		public static final String CHRONIC_DIARRHEA = "1468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRONIC_DIARRHEA = 1468;
 		
-		public static final String WHO_HIV_CRYPTOSPORIDIOSIS_WITH_DIARRHEA = "5342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer WHO_HIV_CRYPTOSPORIDIOSIS_WITH_DIARRHEA = 5342;
 		
-		public static final String Clostridium_Difficile_Diarrhea = "110032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Clostridium_Difficile_Diarrhea = 110032;
 		
-		public static final String Antibiotic_Associated_Diarrhea = "110529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Antibiotic_Associated_Diarrhea = 110529;
 		
-		public static final String Psychogenic_Diarrhea = "113549AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Psychogenic_Diarrhea = 113549;
 		
-		public static final String Protozoal_Diarrhoea = "113585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Protozoal_Diarrhoea = 113585;
 		
-		public static final String Diarrhea_of_Infectious_Origin = "117065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_of_Infectious_Origin = 117065;
 		
-		public static final String Infectious_Diarrhea = "117066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Infectious_Diarrhea = 117066;
 		
-		public static final String Diarrhea_Resulting_from_Infection_of_the_Bowel_Mucosa = "117068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_Resulting_from_Infection_of_the_Bowel_Mucosa = 117068;
 		
-		public static final String Campylobacter_Diarrhoea = "118609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Campylobacter_Diarrhoea = 118609;
 		
-		public static final String Dyspeptic_Diarrhea = "119429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dyspeptic_Diarrhea = 119429;
 		
-		public static final String Allergic_Diarrhea = "121697AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Allergic_Diarrhea = 121697;
 		
-		public static final String Traveler_Diarrhea = "124154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Traveler_Diarrhea = 124154;
 		
-		public static final String Toddler_Diarrhea = "124619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Toddler_Diarrhea = 124619;
 		
-		public static final String Severe_Diarrhea = "126626AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Severe_Diarrhea = 126626;
 		
-		public static final String Secretory_Diarrhea = "126841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Secretory_Diarrhea = 126841;
 		
-		public static final String Raw_Milk_Associated_Diarrhea = "127901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Raw_Milk_Associated_Diarrhea = 127901;
 		
-		public static final String Post_Vagotomy_Diarrhea = "129281AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Post_Vagotomy_Diarrhea = 129281;
 		
-		public static final String Postcholecystectomy_Diarrhea = "129454AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Postcholecystectomy_Diarrhea = 129454;
 		
-		public static final String Poisoning_by_Antidiarrheal_Drug = "129945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Poisoning_by_Antidiarrheal_Drug = 129945;
 		
-		public static final String Osmotic_Diarrhea = "131681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Osmotic_Diarrhea = 131681;
 		
-		public static final String Non_Infective_Diarrhea = "132853AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Non_Infective_Diarrhea = 132853;
 		
-		public static final String Nervous_Diarrhea = "133133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Nervous_Diarrhea = 133133;
 		
-		public static final String Neonatal_Diarrhea = "133408AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Neonatal_Diarrhea = 133408;
 		
-		public static final String Infective_Diarrhea = "137262AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Infective_Diarrhea = 137262;
 		
-		public static final String Diabetic_Diarrhea = "138458AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diabetic_Diarrhea = 138458;
 		
-		public static final String Hill_Diarrhea = "138639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Hill_Diarrhea = 138639;
 		
-		public static final String Hemorrhagic_diarrhea = "138868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Hemorrhagic_diarrhea = 138868;
 		
-		public static final String Bloody_diarrhea = "138868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Bloody_diarrhea = 138868;
 		
-		public static final String Functional_Diarrhea = "139753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Functional_Diarrhea = 139753;
 		
-		public static final String Epidemic_Diarrhea = "141158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Epidemic_Diarrhea = 141158;
 		
-		public static final String Dysenteric_Diarrhea = "141638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dysenteric_Diarrhea = 141638;
 		
-		public static final String Drug_and_Toxin_Induced_Diarrhea = "141759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Drug_and_Toxin_Induced_Diarrhea = 141759;
 		
-		public static final String Dietetic_Diarrhea = "142381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dietetic_Diarrhea = 142381;
 		
-		public static final String Diarrhea_of_presumed_infectious_origin = "142407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_of_presumed_infectious_origin = 142407;
 		
-		public static final String Diarrhea_in_Diabetes = "142408AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_in_Diabetes = 142408;
 		
-		public static final String Diarrhea_due_to_Staphylococcus = "142409AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_due_to_Staphylococcus = 142409;
 		
-		public static final String Diarrhea_due_to_Alcohol_Intake = "142410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_due_to_Alcohol_Intake = 142410;
 		
-		public static final String Diarrhea_After_Gastrointestinal_Tract_Surgery = "142411AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_After_Gastrointestinal_Tract_Surgery = 142411;
 		
-		public static final String Diarrhea_2 = "142412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_2 = 142412;
 		
-		public static final String Congenital_Secretory_Diarrhea_Sodium_Type = "143733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Congenital_Secretory_Diarrhea_Sodium_Type = 143733;
 		
-		public static final String Congenital_Secretory_Diarrhea_Chloride_Type = "143734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Congenital_Secretory_Diarrhea_Chloride_Type = 143734;
 		
-		public static final String Congenital_Secretory_Diarrhea = "143735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Congenital_Secretory_Diarrhea = 143735;
 		
-		public static final String Chronic_diarrhea_of_unknown_origin = "145443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Chronic_diarrhea_of_unknown_origin = 145443;
 		
-		public static final String Diarrhoea_chronic_1_month_unexplained = "145443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhoea_chronic_1_month_unexplained = 145443;
 		
-		public static final String Chronic_Diarrhea_of_Infants_and_Young_Children = "145444AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Chronic_Diarrhea_of_Infants_and_Young_Children = 145444;
 		
-		//public static final String diarrhea_bacterial = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final Integer diarrhea_bacterial = 148023;
 		
-		//public static final String Bacterial_diarrhea = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final Integer Bacterial_diarrhea = 148023;
 		
-		public static final String Adverse_Reaction_of_Antidiarrheal_Drug = "148588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Adverse_Reaction_of_Antidiarrheal_Drug = 148588;
 		
-		public static final String Acute_diarrhea_more_than_three_stools_in_24_hours = "149856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_diarrhea_more_than_three_stools_in_24_hours = 149856;
 		
-		public static final String CHRONIC_DIARRHEA_1 = "151680AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRONIC_DIARRHEA_1 = 151680;
 		
-		public static final String Irritable_Bowel_Syndrome_with_Diarrhea = "151981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Irritable_Bowel_Syndrome_with_Diarrhea = 151981;
 		
-		public static final String diarrhea_due_to_drug = "155920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer diarrhea_due_to_drug = 155920;
 		
-		public static final String irritable_bowel_syndrome_without_diarrhoea = "157376AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer irritable_bowel_syndrome_without_diarrhoea = 157376;
 		
-		public static final String nausea_vomiting_and_diarrhea = "157892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer nausea_vomiting_and_diarrhea = 157892;
 		
-		public static final String postvagotomy_diarrhea = "158462AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer postvagotomy_diarrhea = 158462;
 		
-		public static final String Diarrhea_for_2_weeks = "163465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_for_2_weeks = 163465;
 		
-		public static final String Diarrhea_for_more_2_weeks = "163713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diarrhea_for_more_2_weeks = 163713;
 		
 		// TUBERCULORSIS
-		public static final String TUBERCULOSIS = "112141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //
+		public static final Integer TUBERCULOSIS = 112141; //
 		
-		public static final String TUBERCULOSIS_OF_OTHER_ORGANS = "112058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //	1752
+		public static final Integer TUBERCULOSIS_OF_OTHER_ORGANS = 112058; //	1752
 		
-		public static final String TUBERCULOSIS_IN_PREGNANCY = "124065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 4592
+		public static final Integer TUBERCULOSIS_IN_PREGNANCY = 124065; // 4592
 		
-		public static final String TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM = "136054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 3860
+		public static final Integer TUBERCULOSIS_OF_THE_GENITOURINARY_SYSTEM = 136054; // 3860
 		
-		public static final String MILIARY_TUBERCULOSIS = "115753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 1708
+		public static final Integer MILIARY_TUBERCULOSIS = 115753; // 1708
 		
-		public static final String PULMONARY_TUBERCULOSIS = "42AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 1010
+		public static final Integer PULMONARY_TUBERCULOSIS = 42; // 1010
 		
-		public static final String RESPIRATORY_TUBERCULOSIS = "113303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 4298
+		public static final Integer RESPIRATORY_TUBERCULOSIS = 113303; // 4298
 		
-		public static final String EXTRAPULMONARY_TUBERCULOSIS = "156204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 1470
+		public static final Integer EXTRAPULMONARY_TUBERCULOSIS = 156204; // 1470
 		
-		public static final String ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED = "121986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 4148
+		public static final Integer ACUTE_MILIARY_TUBERCULOSIS_UNSPECIFIED = 121986; // 4148
 		
-		public static final String MULTI_DRUG_RESISTANT_TUBERCULOSIS = "159345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 1213
+		public static final Integer MULTI_DRUG_RESISTANT_TUBERCULOSIS = 159345; // 1213
 		
-		public static final String EPTB = "5042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPTB = 5042;
 		
-		public static final String HIV_STAGING_TUBERCULOSIS_WITHIN_YEAR = "5338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HIV_STAGING_TUBERCULOSIS_WITHIN_YEAR = 5338;
 		
-		public static final String Tuberculosis_Polyserositis = "111787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Tuberculosis_Polyserositis = 111787;
 		
-		public static final String Tuberculous_Pleurisy_in_Primary_Progressive_Tuberculosis = "111809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Tuberculous_Pleurisy_in_Primary_Progressive_Tuberculosis = 111809;
 		
-		public static final String Erythema_Nodosum_with_Hypersensitivity_Reaction_in_Tuberculosis = "111844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Erythema_Nodosum_with_Hypersensitivity_Reaction_in_Tuberculosis = 111844;
 		
-		public static final String Tuberculosis_of_Joint = "111866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Tuberculosis_of_Joint = 111866;
 		
-		public static final String Addisons_Disease_due_to_Tuberculosis = "111875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Addisons_Disease_due_to_Tuberculosis = 111875;
 		
-		public static final String Tuberculosis_of_Urinary_Organs = "111911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Tuberculosis_of_Urinary_Organs = 111911;
 		
-		public static final String Tuberculosis_of_Ureter = "111918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Tuberculosis_of_Ureter = 111918;
 		
-		public static final String Tuberculosis_of_Thyroid_Gland = "111925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Tuberculosis_of_Thyroid_Gland = 111925;
 		
-		public static final String Tuberculosis_of_Spleen = "111932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Tuberculosis_of_Spleen = 111932;
 		
-		public static final String TSS = "111933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TSS = 111933;
 		
-		public static final String TSS1 = "111934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TSS1 = 111934;
 		
-		public static final String TSS2 = "111935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TSS2 = 111935;
 		
-		public static final String TSS3 = "111937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TSS3 = 111937;
 		
-		public static final String TSS4 = "111939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TSS4 = 111939;
 		
-		public static final String TSS5 = "111946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TSS5 = 111946;
 		
-		public static final String TSS6 = "111953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TSS6 = 111953;
 		
-		public static final String TB1 = "111968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB1 = 111968;
 		
-		public static final String TB2 = "111969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB2 = 111969;
 		
-		public static final String TB3 = "111971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB3 = 111971;
 		
-		public static final String TB4 = "111973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB4 = 111973;
 		
-		public static final String TB5 = "111974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB5 = 111974;
 		
-		public static final String TB6 = "111981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB6 = 111981;
 		
-		public static final String TB7 = "111988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB7 = 111988;
 		
-		public static final String TB8 = "111995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB8 = 111995;
 		
-		public static final String TB9 = "112002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB9 = 112002;
 		
-		public static final String TB10 = "112009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB10 = 112009;
 		
-		public static final String TB11 = "112023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB11 = 112023;
 		
-		public static final String TB12 = "112030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB12 = 112030;
 		
-		public static final String TB13 = "112037AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB13 = 112037;
 		
-		public static final String TB14 = "112044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB14 = 112044;
 		
-		public static final String TB15 = "112051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB15 = 112051;
 		
-		public static final String TB16 = "112066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB16 = 112066;
 		
-		public static final String TB17 = "112073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB17 = 112073;
 		
-		public static final String TB18 = "112080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB18 = 112080;
 		
-		public static final String TB19 = "112087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB19 = 112087;
 		
-		public static final String TB20 = "112094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB20 = 112094;
 		
-		public static final String TB21 = "112101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB21 = 112101;
 		
-		public static final String TB22 = "112108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB22 = 112108;
 		
-		public static final String TB23 = "112115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB23 = 112115;
 		
-		public static final String TB24 = "112116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB24 = 112116;
 		
-		public static final String TB25 = "112130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB25 = 112130;
 		
-		public static final String TB26 = "112137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB26 = 112137;
 		
-		public static final String TB27 = "112139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB27 = 112139;
 		
-		public static final String TB28 = "113024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB28 = 113024;
 		
-		public static final String TB29 = "113025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB29 = 113025;
 		
-		public static final String TB30 = "113486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB30 = 113486;
 		
-		public static final String TB31 = "113487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB31 = 113487;
 		
-		public static final String TB32 = "113488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB32 = 113488;
 		
-		public static final String TB33 = "113489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB33 = 113489;
 		
-		public static final String TB34 = "113491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB34 = 113491;
 		
-		public static final String TB35 = "113663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB35 = 113663;
 		
-		public static final String TB36 = "115233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB36 = 115233;
 		
-		public static final String TB37 = "116592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB37 = 116592;
 		
-		public static final String TB38 = "117002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB38 = 117002;
 		
-		public static final String TB39 = "117825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB39 = 117825;
 		
-		public static final String TB40 = "118890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB40 = 118890;
 		
-		public static final String TB41 = "124020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB41 = 124020;
 		
-		public static final String TB42 = "124021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB42 = 124021;
 		
-		public static final String TB43 = "124022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB43 = 124022;
 		
-		public static final String TB44 = "124023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB44 = 124023;
 		
-		public static final String TB45 = "124024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB45 = 124024;
 		
-		public static final String TB46 = "124025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB46 = 124025;
 		
-		public static final String TB47 = "124026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB47 = 124026;
 		
-		public static final String TB48 = "124027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB48 = 124027;
 		
-		public static final String TB49 = "124028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB49 = 124028;
 		
-		public static final String TB50 = "124029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB50 = 124029;
 		
-		public static final String TB51 = "124030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB51 = 124030;
 		
-		public static final String TB52 = "124031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB52 = 124031;
 		
-		public static final String TB53 = "124032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB53 = 124032;
 		
-		public static final String TB54 = "124033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB54 = 124033;
 		
-		public static final String TB55 = "124039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB55 = 124039;
 		
-		public static final String TB56 = "124040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB56 = 124040;
 		
-		public static final String TB57 = "124041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB57 = 124041;
 		
-		public static final String TB58 = "124042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB58 = 124042;
 		
-		public static final String TB59 = "124043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB59 = 124043;
 		
-		public static final String TB60 = "124044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB60 = 124044;
 		
-		public static final String TB61 = "124045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB61 = 124045;
 		
-		public static final String TB62 = "124046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB62 = 124046;
 		
-		public static final String TB63 = "124049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB63 = 124049;
 		
-		public static final String TB64 = "124051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB64 = 124051;
 		
-		public static final String TB65 = "124054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB65 = 124054;
 		
-		public static final String TB66 = "124055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB66 = 124055;
 		
-		public static final String TB67 = "124056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB67 = 124056;
 		
-		public static final String TB68 = "124057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB68 = 124057;
 		
-		public static final String TB69 = "124058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB69 = 124058;
 		
-		public static final String TB70 = "124059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB70 = 124059;
 		
-		public static final String TB71 = "124060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB71 = 124060;
 		
-		public static final String TB72 = "124061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB72 = 124061;
 		
-		public static final String TB73 = "124062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB73 = 124062;
 		
-		public static final String TB74 = "124063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB74 = 124063;
 		
-		public static final String TB75 = "124066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB75 = 124066;
 		
-		public static final String TB76 = "124067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB76 = 124067;
 		
-		public static final String TB77 = "124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB77 = 124068;
 		
-		public static final String TB78 = "126497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB78 = 126497;
 		
-		public static final String TB79 = "127893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB79 = 127893;
 		
-		public static final String TB80 = "128255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB80 = 128255;
 		
-		public static final String TB81 = "130052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB81 = 130052;
 		
-		public static final String TB82 = "133604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB82 = 133604;
 		
-		public static final String TB83 = "134579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB83 = 134579;
 		
-		public static final String TB84 = "134580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB84 = 134580;
 		
-		public static final String TB85 = "134581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB85 = 134581;
 		
-		public static final String TB86 = "134582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB86 = 134582;
 		
-		public static final String TB87 = "136040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB87 = 136040;
 		
-		public static final String TB88 = "136044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB88 = 136044;
 		
-		public static final String TB89 = "136055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB89 = 136055;
 		
-		public static final String TB90 = "136465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB90 = 136465;
 		
-		public static final String TB91 = "136487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB91 = 136487;
 		
-		public static final String TB92 = "137675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB92 = 137675;
 		
-		public static final String TB93 = "139519AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB93 = 139519;
 		
-		public static final String TB94 = "141048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB94 = 141048;
 		
-		public static final String TB95 = "143645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB95 = 143645;
 		
-		public static final String TB96 = "145154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB96 = 145154;
 		
-		public static final String TB97 = "145286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB97 = 145286;
 		
-		public static final String TB98 = "145351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB98 = 145351;
 		
-		public static final String TB99 = "148068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB99 = 148068;
 		
-		public static final String TB100 = "149488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB100 = 149488;
 		
-		public static final String TB101 = "149855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB101 = 149855;
 		
-		public static final String TB102 = "151141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB102 = 151141;
 		
-		public static final String TB103 = "151363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB103 = 151363;
 		
-		public static final String TB104 = "151632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB104 = 151632;
 		
-		public static final String TB105 = "152012AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB105 = 152012;
 		
-		public static final String TB106 = "152293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB106 = 152293;
 		
-		public static final String TB107 = "152306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB107 = 152306;
 		
-		public static final String TB108 = "152424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB108 = 152424;
 		
-		public static final String TB109 = "152427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB109 = 152427;
 		
-		public static final String TB110 = "152460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB110 = 152460;
 		
-		public static final String TB111 = "153467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB111 = 153467;
 		
-		public static final String TB112 = "153471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB112 = 153471;
 		
-		public static final String TB113 = "153781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB113 = 153781;
 		
-		public static final String TB114 = "153782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB114 = 153782;
 		
-		public static final String TB115 = "153783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB115 = 153783;
 		
-		public static final String TB116 = "153784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB116 = 153784;
 		
-		public static final String TB117 = "154164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB117 = 154164;
 		
-		public static final String TB118 = "156080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB118 = 156080;
 		
-		public static final String TB119 = "159167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB119 = 159167;
 		
-		public static final String TB120 = "159168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB120 = 159168;
 		
-		public static final String TB121 = "159169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB121 = 159169;
 		
-		public static final String TB122 = "159170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB122 = 159170;
 		
-		public static final String TB123 = "159171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB123 = 159171;
 		
-		public static final String TB124 = "159172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB124 = 159172;
 		
-		public static final String TB125 = "159173AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB125 = 159173;
 		
-		public static final String TB126 = "159346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB126 = 159346;
 		
-		public static final String TB127 = "159788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB127 = 159788;
 		
-		public static final String TB128 = "159789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB128 = 159789;
 		
-		public static final String TB129 = "159790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB129 = 159790;
 		
-		public static final String TB130 = "159871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB130 = 159871;
 		
-		public static final String TB131 = "159874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB131 = 159874;
 		
-		public static final String TB132 = "159875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB132 = 159875;
 		
-		public static final String TB133 = "159876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB133 = 159876;
 		
-		public static final String TB134 = "159877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB134 = 159877;
 		
-		public static final String TB135 = "159878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB135 = 159878;
 		
-		public static final String TB136 = "160156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB136 = 160156;
 		
-		public static final String TB137 = "160247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB137 = 160247;
 		
-		public static final String TB138 = "160248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB138 = 160248;
 		
-		public static final String TB139 = "161355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB139 = 161355;
 		
-		public static final String TB140 = "163324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB140 = 163324;
 		
-		public static final String TB141 = "164366AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB141 = 164366;
 		
-		public static final String TB142 = "164367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB142 = 164367;
 		
-		public static final String TB143 = "5042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB143 = 5042;
 		
-		public static final String TB144 = "5338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB144 = 5338;
 		
-		public static final String TB145 = "111787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB145 = 111787;
 		
-		public static final String TB146 = "111809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB146 = 111809;
 		
-		public static final String TB147 = "111844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB147 = 111844;
 		
-		public static final String TB148 = "111866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB148 = 111866;
 		
-		public static final String TB149 = "111875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB149 = 111875;
 		
-		public static final String TB150 = "111911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB150 = 111911;
 		
-		public static final String TB151 = "111918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB151 = 111918;
 		
-		public static final String TB152 = "111925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB152 = 111925;
 		
-		public static final String TB153 = "111932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB153 = 111932;
 		
-		public static final String TB154 = "111933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB154 = 111933;
 		
-		public static final String TB155 = "111934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB155 = 111934;
 		
-		public static final String TB156 = "111935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB156 = 111935;
 		
-		public static final String TB157 = "111937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB157 = 111937;
 		
-		public static final String TB158 = "111939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB158 = 111939;
 		
-		public static final String TB159 = "111946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB159 = 111946;
 		
-		public static final String TB160 = "111953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB160 = 111953;
 		
-		public static final String TB161 = "111968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB161 = 111968;
 		
-		public static final String TB162 = "111969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB162 = 111969;
 		
-		public static final String TB163 = "111971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB163 = 111971;
 		
-		public static final String TB164 = "111973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB164 = 111973;
 		
-		public static final String TB165 = "111974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB165 = 111974;
 		
-		public static final String TB166 = "111981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB166 = 111981;
 		
-		public static final String TB167 = "111988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB167 = 111988;
 		
-		public static final String TB168 = "111995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB168 = 111995;
 		
-		public static final String TB169 = "112002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB169 = 112002;
 		
-		public static final String TB170 = "112009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB170 = 112009;
 		
-		public static final String TB171 = "112023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB171 = 112023;
 		
-		public static final String TB172 = "112030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB172 = 112030;
 		
-		public static final String TB173 = "112037AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB173 = 112037;
 		
-		public static final String TB174 = "112044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB174 = 112044;
 		
-		public static final String TB175 = "112051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB175 = 112051;
 		
-		public static final String TB176 = "112066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB176 = 112066;
 		
-		public static final String TB177 = "112073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB177 = 112073;
 		
-		public static final String TB178 = "112080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB178 = 112080;
 		
-		public static final String TB179 = "112087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB179 = 112087;
 		
-		public static final String TB180 = "112094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB180 = 112094;
 		
-		public static final String TB181 = "112101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB181 = 112101;
 		
-		public static final String TB182 = "112108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB182 = 112108;
 		
-		public static final String TB183 = "112115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB183 = 112115;
 		
-		public static final String TB184 = "112116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB184 = 112116;
 		
-		public static final String TB185 = "112130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB185 = 112130;
 		
-		public static final String TB186 = "112137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB186 = 112137;
 		
-		public static final String TB187 = "112139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB187 = 112139;
 		
-		public static final String TB188 = "113024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB188 = 113024;
 		
-		public static final String TB189 = "113025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB189 = 113025;
 		
-		public static final String TB190 = "113486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB190 = 113486;
 		
-		public static final String TB191 = "113487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB191 = 113487;
 		
-		public static final String TB192 = "113488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB192 = 113488;
 		
-		public static final String TB193 = "113489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB193 = 113489;
 		
-		public static final String TB194 = "113491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB194 = 113491;
 		
-		public static final String TB195 = "113663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB195 = 113663;
 		
-		public static final String TB196 = "115233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB196 = 115233;
 		
-		public static final String TB197 = "116592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB197 = 116592;
 		
-		public static final String TB198 = "117002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB198 = 117002;
 		
-		public static final String TB199 = "117825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB199 = 117825;
 		
-		public static final String TB200 = "118890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB200 = 118890;
 		
-		public static final String TB201 = "124020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB201 = 124020;
 		
-		public static final String TB202 = "124021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB202 = 124021;
 		
-		public static final String TB203 = "124022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB203 = 124022;
 		
-		public static final String TB204 = "124023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB204 = 124023;
 		
-		public static final String TB205 = "124024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB205 = 124024;
 		
-		public static final String TB206 = "124025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB206 = 124025;
 		
-		public static final String TB207 = "124026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB207 = 124026;
 		
-		public static final String TB208 = "124027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB208 = 124027;
 		
-		public static final String TB209 = "124028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB209 = 124028;
 		
-		public static final String TB210 = "124029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB210 = 124029;
 		
-		public static final String TB211 = "124030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB211 = 124030;
 		
-		public static final String TB212 = "124031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB212 = 124031;
 		
-		public static final String TB213 = "124032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB213 = 124032;
 		
-		public static final String TB214 = "124033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB214 = 124033;
 		
-		public static final String TB215 = "124039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB215 = 124039;
 		
-		public static final String TB216 = "124040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB216 = 124040;
 		
-		public static final String TB217 = "124041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB217 = 124041;
 		
-		public static final String TB218 = "124042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB218 = 124042;
 		
-		public static final String TB219 = "124043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB219 = 124043;
 		
-		public static final String TB220 = "124044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB220 = 124044;
 		
-		public static final String TB221 = "124045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB221 = 124045;
 		
-		public static final String TB222 = "124046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB222 = 124046;
 		
-		public static final String TB223 = "124049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB223 = 124049;
 		
-		public static final String TB224 = "124051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB224 = 124051;
 		
-		public static final String TB225 = "124054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB225 = 124054;
 		
-		public static final String TB226 = "124055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB226 = 124055;
 		
-		public static final String TB227 = "124056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB227 = 124056;
 		
-		public static final String TB228 = "124057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB228 = 124057;
 		
-		public static final String TB229 = "124058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB229 = 124058;
 		
-		public static final String TB230 = "124059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB230 = 124059;
 		
-		public static final String TB231 = "124060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB231 = 124060;
 		
-		public static final String TB232 = "124061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB232 = 124061;
 		
-		public static final String TB233 = "124062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB233 = 124062;
 		
-		public static final String TB234 = "124063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB234 = 124063;
 		
-		public static final String TB235 = "124066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB235 = 124066;
 		
-		public static final String TB236 = "124067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB236 = 124067;
 		
-		public static final String TB237 = "124068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB237 = 124068;
 		
-		public static final String TB238 = "126497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB238 = 126497;
 		
-		public static final String TB239 = "127893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB239 = 127893;
 		
-		public static final String TB240 = "128255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB240 = 128255;
 		
-		public static final String TB241 = "130052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB241 = 130052;
 		
-		public static final String TB242 = "133604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB242 = 133604;
 		
-		public static final String TB243 = "134579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB243 = 134579;
 		
-		public static final String TB244 = "134580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB244 = 134580;
 		
-		public static final String TB245 = "134581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB245 = 134581;
 		
-		public static final String TB246 = "134582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB246 = 134582;
 		
-		public static final String TB247 = "136040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB247 = 136040;
 		
-		public static final String TB248 = "136044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB248 = 136044;
 		
-		public static final String TB249 = "136055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB249 = 136055;
 		
-		public static final String TB250 = "136465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB250 = 136465;
 		
-		public static final String TB251 = "136487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB251 = 136487;
 		
-		public static final String TB252 = "137675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB252 = 137675;
 		
-		public static final String TB253 = "139519AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB253 = 139519;
 		
-		public static final String TB254 = "141048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB254 = 141048;
 		
-		public static final String TB255 = "143645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB255 = 143645;
 		
-		public static final String TB256 = "145154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB256 = 145154;
 		
-		public static final String TB257 = "145286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB257 = 145286;
 		
-		public static final String TB258 = "145351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB258 = 145351;
 		
-		public static final String TB259 = "148068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB259 = 148068;
 		
-		public static final String TB260 = "149488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB260 = 149488;
 		
-		public static final String TB261 = "149855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB261 = 149855;
 		
-		public static final String TB262 = "151141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB262 = 151141;
 		
-		public static final String TB263 = "151363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB263 = 151363;
 		
-		public static final String TB264 = "151632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB264 = 151632;
 		
-		public static final String TB265 = "152012AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB265 = 152012;
 		
-		public static final String TB266 = "152293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB266 = 152293;
 		
-		public static final String TB267 = "152306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB267 = 152306;
 		
-		public static final String TB268 = "152424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB268 = 152424;
 		
-		public static final String TB269 = "152427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB269 = 152427;
 		
-		public static final String TB270 = "152460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB270 = 152460;
 		
-		public static final String TB271 = "153467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB271 = 153467;
 		
-		public static final String TB272 = "153471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB272 = 153471;
 		
-		public static final String TB273 = "153781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB273 = 153781;
 		
-		public static final String TB274 = "153782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB274 = 153782;
 		
-		public static final String TB275 = "153783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB275 = 153783;
 		
-		public static final String TB276 = "153784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB276 = 153784;
 		
-		public static final String TB277 = "154164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB277 = 154164;
 		
-		public static final String TB278 = "156080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB278 = 156080;
 		
-		public static final String TB279 = "159167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB279 = 159167;
 		
-		public static final String TB280 = "159168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB280 = 159168;
 		
-		public static final String TB281 = "159169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB281 = 159169;
 		
-		public static final String TB282 = "159170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB282 = 159170;
 		
-		public static final String TB283 = "159171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB283 = 159171;
 		
-		public static final String TB284 = "159172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB284 = 159172;
 		
-		public static final String TB285 = "159173AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB285 = 159173;
 		
-		public static final String TB286 = "159346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB286 = 159346;
 		
-		public static final String TB287 = "159788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB287 = 159788;
 		
-		public static final String TB288 = "159789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB288 = 159789;
 		
-		public static final String TB289 = "159790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB289 = 159790;
 		
-		public static final String TB290 = "159871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB290 = 159871;
 		
-		public static final String TB291 = "159874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB291 = 159874;
 		
-		public static final String TB292 = "159875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB292 = 159875;
 		
-		public static final String TB293 = "159876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB293 = 159876;
 		
-		public static final String TB294 = "159877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB294 = 159877;
 		
-		public static final String TB295 = "159878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB295 = 159878;
 		
-		public static final String TB296 = "160156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB296 = 160156;
 		
-		public static final String TB297 = "160247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB297 = 160247;
 		
-		public static final String TB298 = "160248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB298 = 160248;
 		
-		public static final String TB299 = "161355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB299 = 161355;
 		
-		public static final String TB300 = "163324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB300 = 163324;
 		
-		public static final String TB301 = "164366AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB301 = 164366;
 		
-		public static final String TB302 = "164367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TB302 = 164367;
 		
 		//ViralHaemorrhagicFever
-		public static final String HAEMORRHAGICFEVER_1 = "123112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HAEMORRHAGICFEVER_1 = 123112;
 		
-		public static final String HAEMORRHAGICFEVER_2 = "148483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HAEMORRHAGICFEVER_2 = 148483;
 		
 		//end TB diagnosis
 		
-		public static final String FEVERS = "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVERS = 140238;
 		
-		public static final String YELLOW_FEVER = "122759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOW_FEVER = 122759;
 		
-		public static final String PUERPERAL_FEVER = "113511AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PUERPERAL_FEVER = 113511;
 		
-		public static final String URINARY_TRACT_INFECTION = "111633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer URINARY_TRACT_INFECTION = 111633;
 		
-		public static final String TYPHOID_FEVER = "1141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TYPHOID_FEVER = 1141;
 		
-		public static final String BILHARZIA_SCHISTOSOMIASIS = "117152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BILHARZIA_SCHISTOSOMIASIS = 117152;
 		
-		public static final String INTERSTINAL_WORMS = "116699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INTERSTINAL_WORMS = 116699;
 		
-		public static final String MALNUTRITION = "115122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALNUTRITION = 115122;
 		
-		public static final String ANAEMIA = "121629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANAEMIA = 121629;
 		
-		public static final String EYE_INFECTIONS = "140832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EYE_INFECTIONS = 140832;
 		
-		public static final String GONOCOCCAL_INFECTIONOFEYE = "117770AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer GONOCOCCAL_INFECTIONOFEYE = 117770;
 		
 		// Chronic Ear Infection
-		public static final String CHRONIC_EAR_INFECTION = "117087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRONIC_EAR_INFECTION = 117087;
 		
-		public static final String VIRAL_EAR_INFECTION = "123119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer VIRAL_EAR_INFECTION = 123119;
 		
-		public static final String CHRONIC_EXTERNAL_EAR_INFECTION = "110889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRONIC_EXTERNAL_EAR_INFECTION = 110889;
 		
 		//Respiratory Tract Infections
 		
-		public static final String ASTHMA = "121375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA = 121375;
 		
-		public static final String TONSILLITIS = "112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TONSILLITIS = 112;
 		
-		public static final String PNEUMONIA = "114100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA = 114100;
 		
-		public static final String CHRONIC_DISEASE_OF_RESPIRATORY_SYSTEM = "145437AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRONIC_DISEASE_OF_RESPIRATORY_SYSTEM = 145437;
 		
-		public static final String MENTAL_DISORDER = "134337AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTAL_DISORDER = 134337;
 		
-		public static final String DENTAL_DISORDERS = "151733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_DISORDERS = 151733;
 		
-		public static final String DISEASES_OF_THE_SKIN = "119022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DISEASES_OF_THE_SKIN = 119022;
 		
-		public static final String DISEASE_OF_RESPIRATORY_SYSTEM = "119051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DISEASE_OF_RESPIRATORY_SYSTEM = 119051;
 		
-		public static final String CHROMOSOMAL_ABNORMALITIES = "145521AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHROMOSOMAL_ABNORMALITIES = 145521;
 		
-		public static final String CONGENITAL_ANOMALIES = "144025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CONGENITAL_ANOMALIES = 144025;
 		
-		public static final String POISONING = "114088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; // 1026
+		public static final Integer POISONING = 114088; // 1026
 		
-		public static final String DEATHS_DUE_TO_ROAD_TRAFFIC_INJURIES = "86AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DEATHS_DUE_TO_ROAD_TRAFFIC_INJURIES = 86;
 		
-		public static final String OTHER_BITE = "116757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OTHER_BITE = 116757;
 		
-		public static final String DIABETES = "119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DIABETES = 119481;
 		
-		public static final String EPILEPSY = "155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY = 155;
 		
-		public static final String CONVULSIVE_DISORDERS = "116757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CONVULSIVE_DISORDERS = 116757;
 		
-		public static final String NEWLY_DIAGNOSED_HIV = "160170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer NEWLY_DIAGNOSED_HIV = 160170;
 		
-		public static final String BRUCELLOSIS = "121005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELLOSIS = 121005;
 		
-		public static final String RICKETS = "127394AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer RICKETS = 127394;
 		
-		public static final String CARDIOVASCULAR_CONDITIONS = "119270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_CONDITIONS = 119270;
 		
-		public static final String VIOLENCE_RELATED_INJURIES = "141814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer VIOLENCE_RELATED_INJURIES = 141814;
 		
-		public static final String CEREBRAL_PALSY = "152492AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CEREBRAL_PALSY = 152492;
 		
-		public static final String AUTISM = "121303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer AUTISM = 121303;
 		
-		public static final String CENTRAL_NERVOUS_SYSTEM_CONDITIONS = "155468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CENTRAL_NERVOUS_SYSTEM_CONDITIONS = 155468;
 		
-		public static final String TRYPONOSOMIASIS = "124078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPONOSOMIASIS = 124078;
 		
-		public static final String LEISHMANIASIS = "116350AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer LEISHMANIASIS = 116350;
 		
-		public static final String DRACUNCULOSIS = "116350AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DRACUNCULOSIS = 116350;
 		
-		//public static final String YELLOW_FEVER = "122759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-		public static final String HAEMORRHAGIC_FEVER = "123112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final Integer YELLOW_FEVER = 122759;
+		public static final Integer HAEMORRHAGIC_FEVER = 123112;
 		
-		public static final String PLAGUE = "114120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE = 114120;
 		
-		public static final String ROAD_TRAFIC_INJURIES = "86AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ROAD_TRAFIC_INJURIES = 86;
 		
-		public static final String MULTIPLE_MYELOMA_AND_IMMUNOPROLIFERATIVE_NEOPLASMS = "137768AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MULTIPLE_MYELOMA_AND_IMMUNOPROLIFERATIVE_NEOPLASMS = 137768;
 		
-		public static final String MALIGNANT_NEOPLASMS_OF_INDEPENDENT_PRIMARY_MULTIPLE_SITES = "152207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALIGNANT_NEOPLASMS_OF_INDEPENDENT_PRIMARY_MULTIPLE_SITES = 152207;
 		
-		public static final String IMMUNOPROLIFERATIVE_NEOPLASMS_IN_REMISSION = "117271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer IMMUNOPROLIFERATIVE_NEOPLASMS_IN_REMISSION = 117271;
 		
-		public static final String INTRADURAL_EXTRAMEDULLARY_SPINAL_CORD_NEOPLASMS = "117271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INTRADURAL_EXTRAMEDULLARY_SPINAL_CORD_NEOPLASMS = 117271;
 		
-		public static final String CHRONIC_PHYSICAL_DISABILITY = "164538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRONIC_PHYSICAL_DISABILITY = 164538;
 		
 		//special clinics
 		public static final String SPECIAL_CLINIC = "b5e0cfd3-1009-4527-8e36-83b5e902b3ea"; // 1000005
 		
 		public static final String EYE_CLINIC = "36f7a4c9-a64b-4351-bd08-fe185c7470dc"; // 	1000155
 		
-		public static final String PSYCHIATRIC_CLINIC = "160461AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //  160461
+		public static final Integer PSYCHIATRIC_CLINIC = 160461; //  160461
 		
-		public static final String CCC_CLINIC = "162050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //  162050
+		public static final Integer CCC_CLINIC = 162050; //  162050
 		
 		public static final String MCH_CLINIC = "1acb3707-9e03-40e3-b157-ce28451c3fd0"; //159937
 		
-		public static final String ENT = "160455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160455
+		public static final Integer ENT = 160455; //160455
 		
 		public static final String TBL = "d0ed935d-0c32-451f-b9f4-f5743e267bbe"; //1000044
 		
-		public static final String STI = "160546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160546
+		public static final Integer STI = 160546; //160546
 		
-		public static final String ORT = "160465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160465
+		public static final Integer ORT = 160465; //160465
 		
 		public static final String OCP = "c2f85aed-695f-49b1-973e-002c37cbdebf"; //1000209
 		
@@ -1524,660 +1524,660 @@ public class EhrAddonsConstants {
 		
 		public static final String SC = "db1ba5ed-1da0-430d-9744-4dcc006f98b0"; //1000047
 		
-		public static final String PAED = "160544AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160544
+		public static final Integer PAED = 160544; //160544
 		
-		public static final String OG = "160456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"; //160456
+		public static final Integer OG = 160456; //160456
 		
 		public static final String MOPC = "66710a6d-5894-4f7d-a874-b449df77314d"; //1000042
 		
 		//Cholera
-		public static final String DIARRHEA_CHOLERA = "15AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DIARRHEA_CHOLERA = 15;
 		
-		public static final String CHOLERA = "198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHOLERA = 198;
 		
-		public static final String Cholera_due_to_Vibrio_Cholerae = "122604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Cholera_due_to_Vibrio_Cholerae = 122604;
 		
-		public static final String Need_for_Vaccination_for_Cholera = "127665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Need_for_Vaccination_for_Cholera = 127665;
 		
-		public static final String Pseudopancreatic_Cholera_Syndrome = "128269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Pseudopancreatic_Cholera_Syndrome = 128269;
 		
-		public static final String Poisoning_by_Cholera_Vaccine = "129883AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Poisoning_by_Cholera_Vaccine = 129883;
 		
-		public static final String Hog_Cholera = "138460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Hog_Cholera = 138460;
 		
-		public static final String Cholera_due_to_Vibrio_Cholerae_El_Tor = "145620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Cholera_due_to_Vibrio_Cholerae_El_Tor = 145620;
 		
-		public static final String Cholera_Contact = "145621AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Cholera_Contact = 145621;
 		
-		public static final String Cholera_Carrier = "145622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Cholera_Carrier = 145622;
 		
-		public static final String CHOLERA_1 = "145623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHOLERA_1 = 145623;
 		
-		public static final String Adverse_Reaction_to_Cholera_Vaccine = "149307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Adverse_Reaction_to_Cholera_Vaccine = 149307;
 		
-		public static final String accidental_cholera_vaccine_poisoning = "154594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer accidental_cholera_vaccine_poisoning = 154594;
 		
-		public static final String cholera_due_to_vibrio_cholerae_01_biovar_cholerae = "155541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer cholera_due_to_vibrio_cholerae_01_biovar_cholerae = 155541;
 		
-		public static final String cholera_due_to_vibrio_cholerae_01_biovar_El_Tor = "155542AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer cholera_due_to_vibrio_cholerae_01_biovar_El_Tor = 155542;
 		
-		public static final String cholera_vaccine_adverse_reaction = "155543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer cholera_vaccine_adverse_reaction = 155543;
 		
-		public static final String cholera_vaccine_poisoning_of_undetermined_intent = "155544AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer cholera_vaccine_poisoning_of_undetermined_intent = 155544;
 		
-		public static final String intentional_cholera_vaccine_poisoning = "157004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer intentional_cholera_vaccine_poisoning = 157004;
 		
 		//Malaria
-		public static final String MALARIA_MILD = "33AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA_MILD = 33;
 		
-		public static final String MALARIA_SEVERE = "34AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA_SEVERE = 34;
 		
-		public static final String MALARIA_PRESUMED = "35AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA_PRESUMED = 35;
 		
-		public static final String MALARIA = "123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA = 123;
 		
-		public static final String MALARIA_RULE_OUT = "189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA_RULE_OUT = 189;
 		
-		public static final String MALARIA_R_O = "189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA_R_O = 189;
 		
-		public static final String MALARIA_CLINICAL = "364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA_CLINICAL = 364;
 		
-		public static final String CLINICAL_MALARIA = "397AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CLINICAL_MALARIA = 397;
 		
-		public static final String UNSPECIFIED_MALARIA = "906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UNSPECIFIED_MALARIA = 906;
 		
-		public static final String Maternal_Malaria_with_Delivery = "115898AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Maternal_Malaria_with_Delivery = 115898;
 		
-		public static final String Malarial_Fever = "116125AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malarial_Fever = 116125;
 		
-		public static final String Complicated_malaria = "116127AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Complicated_malaria = 116127;
 		
-		public static final String MALARIA_1 = "116128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALARIA_1 = 116128;
 		
-		public static final String Haemolytic_Anaemia_due_to_Malaria = "117627AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Haemolytic_Anaemia_due_to_Malaria = 117627;
 		
-		public static final String Falciparum_Malaria = "118353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Falciparum_Malaria = 118353;
 		
-		public static final String Vivax_Malaria = "123008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Vivax_Malaria = 123008;
 		
-		public static final String Therapeutically_Induced_Malaria = "124925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Therapeutically_Induced_Malaria = 124925;
 		
-		public static final String Simian_malaria = "126490AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Simian_malaria = 126490;
 		
-		public static final String Quartan_Malaria = "127971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Quartan_Malaria = 127971;
 		
-		public static final String Malariae_malaria = "127971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malariae_malaria = 127971;
 		
-		public static final String Poisoning_by_Antimalarial_Drug = "129936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Poisoning_by_Antimalarial_Drug = 129936;
 		
-		public static final String Ovale_Malaria = "131096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Ovale_Malaria = 131096;
 		
-		public static final String Other_malaria = "131377AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Other_malaria = 131377;
 		
-		public static final String Mixed_Malaria = "134041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Mixed_Malaria = 134041;
 		
-		public static final String Maternal_Malaria_with_Delivery_with_Current_Postpartum_Complication = "134592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Maternal_Malaria_with_Delivery_with_Current_Postpartum_Complication = 134592;
 		
-		public static final String Maternal_Malaria_During_Pregnancy_Baby_Not_Yet_Delivered = "134594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Maternal_Malaria_During_Pregnancy_Baby_Not_Yet_Delivered = 134594;
 		
-		public static final String Malaria_in_pregnancy = "134594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malaria_in_pregnancy = 134594;
 		
-		public static final String Malarial_Nephrosis = "135359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malarial_Nephrosis = 135359;
 		
-		public static final String Malarial_Hepatitis = "135360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malarial_Hepatitis = 135360;
 		
-		public static final String Malaria_in_Mother_Complicating_Pregnancy_Childbirth_and_or_Puerperium = "135361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malaria_in_Mother_Complicating_Pregnancy_Childbirth_and_or_Puerperium = 135361;
 		
-		public static final String Malaria_during_pregnancy = "135361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malaria_during_pregnancy = 135361;
 		
-		public static final String Induced_Malaria = "137565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Induced_Malaria = 137565;
 		
-		public static final String hyper_reactive_malarial_splenomegaly = "138283AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer hyper_reactive_malarial_splenomegaly = 138283;
 		
-		public static final String HO_Malaria = "139197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HO_Malaria = 139197;
 		
-		public static final String Congenital_Malaria = "143850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Congenital_Malaria = 143850;
 		
-		public static final String Cerebral_Malaria = "145851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Cerebral_Malaria = 145851;
 		
-		public static final String Algid_Malaria = "149132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Algid_Malaria = 149132;
 		
-		public static final String Plasmodium_Falciparum_Malaria_with_Cerebral_Complications = "152295AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Plasmodium_Falciparum_Malaria_with_Cerebral_Complications = 152295;
 		
-		public static final String Plasmodium_Malariae_Malaria_with_Nephropathy = "152296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Plasmodium_Malariae_Malaria_with_Nephropathy = 152296;
 		
-		public static final String congenital_falciparum_malaria = "155686AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer congenital_falciparum_malaria = 155686;
 		
-		public static final String Plasmodium_vivax_malaria_with_rupture_of_spleen = "158379AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Plasmodium_vivax_malaria_with_rupture_of_spleen = 158379;
 		
-		public static final String Uncomplicated_malaria = "159950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Uncomplicated_malaria = 159950;
 		
-		public static final String Malaria_uncomplicated = "159950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malaria_uncomplicated = 159950;
 		
-		public static final String Malaria_confirmed = "160148AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malaria_confirmed = 160148;
 		
-		public static final String Presumptive_malaria_with_minor_digestive_system = "160149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Presumptive_malaria_with_minor_digestive_system = 160149;
 		
-		public static final String Malaria_confirmed_with_minor_digestive_symptoms = "160150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Malaria_confirmed_with_minor_digestive_symptoms = 160150;
 		
-		public static final String Presumptive_malaria_with_pregnancy = "160151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Presumptive_malaria_with_pregnancy = 160151;
 		
-		public static final String Confirmed_malaria_with_pregnancy = "160152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Confirmed_malaria_with_pregnancy = 160152;
 		
-		public static final String Presumptive_malaria_with_minor_digestive_symptoms_pregnant = "160153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Presumptive_malaria_with_minor_digestive_symptoms_pregnant = 160153;
 		
-		public static final String Confirmed_malaria_with_minor_digestive_symptoms_pregnant = "160154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Confirmed_malaria_with_minor_digestive_symptoms_pregnant = 160154;
 		
-		public static final String Severe_malaria = "160155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Severe_malaria = 160155;
 		
-		public static final String Non_falciparum_malaria = "162754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Non_falciparum_malaria = 162754;
 		
 		//malaria confirmed
-		public static final String POSITIVE = "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POSITIVE = 703;
 		
-		public static final String Positive_for_Plasmodium_falciparum = "161246AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Positive_for_Plasmodium_falciparum = 161246;
 		
-		public static final String Positive_for_Plasmodium_vivax = "161247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Positive_for_Plasmodium_vivax = 161247;
 		
-		public static final String Positive_for_both_Plasmodium_falciparum_and_Plasmodium_vivax = "161248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Positive_for_both_Plasmodium_falciparum_and_Plasmodium_vivax = 161248;
 		
 		//Malaria suspected
-		public static final String NEGATIVE = "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer NEGATIVE = 664;
 		
-		public static final String INDETERMINATE = "1138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INDETERMINATE = 1138;
 		
-		public static final String Test_not_performed_due_to_lack_of_availability_of_test_materials = "160352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Test_not_performed_due_to_lack_of_availability_of_test_materials = 160352;
 		
-		public static final String Procedure_performed = "1651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Procedure_performed = 1651;
 		
 		//Poliomyelitis (AFP)
-		public static final String PLY1 = "5258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY1 = 5258;
 		
-		public static final String PLY2 = "114004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY2 = 114004;
 		
-		public static final String PLY3 = "114663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY3 = 114663;
 		
-		public static final String PLY4 = "114664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY4 = 114664;
 		
-		public static final String PLY5 = "121870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY5 = 121870;
 		
-		public static final String PLY6 = "121892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY6 = 121892;
 		
-		public static final String PLY7 = "121922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY7 = 121922;
 		
-		public static final String PLY8 = "121925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY8 = 121925;
 		
-		public static final String PLY9 = "121926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY9 = 121926;
 		
-		public static final String PLY10 = "127663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY10 = 127663;
 		
-		public static final String PLY11 = "129466AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY11 = 129466;
 		
-		public static final String PLY12 = "129578AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY12 = 129578;
 		
-		public static final String PLY13 = "129579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY13 = 129579;
 		
-		public static final String PLY14 = "129580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY14 = 129580;
 		
-		public static final String PLY15 = "129581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY15 = 129581;
 		
-		public static final String PLY16 = "129582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY16 = 129582;
 		
-		public static final String PLY17 = "129583AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY17 = 129583;
 		
-		public static final String PLY18 = "129584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY18 = 129584;
 		
-		public static final String PLY19 = "129585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY19 = 129585;
 		
-		public static final String PLY20 = "129586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY20 = 129586;
 		
-		public static final String PLY21 = "129692AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY21 = 129692;
 		
-		public static final String PLY22 = "136046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY22 = 136046;
 		
-		public static final String PLY23 = "139188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY23 = 139188;
 		
-		public static final String PLY24 = "141160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY24 = 141160;
 		
-		public static final String PLY25 = "148628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY25 = 148628;
 		
-		public static final String PLY26 = "149568AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY26 = 149568;
 		
-		public static final String PLY27 = "152009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY27 = 152009;
 		
-		public static final String PLY28 = "152010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY28 = 152010;
 		
-		public static final String PLY29 = "152011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY29 = 152011;
 		
-		public static final String PLY30 = "154938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY30 = 154938;
 		
-		public static final String PLY31 = "154970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY31 = 154970;
 		
-		public static final String PLY32 = "158143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY32 = 158143;
 		
-		public static final String PLY33 = "158786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY33 = 158786;
 		
-		public static final String PLY34 = "160195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLY34 = 160195;
 		
 		//fevers
-		public static final String FEVER1 = "130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER1 = 130;
 		
-		public static final String FEVER2 = "141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER2 = 141;
 		
-		public static final String FEVER3 = "1494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER3 = 1494;
 		
-		public static final String FEVER4 = "1870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER4 = 1870;
 		
-		public static final String FEVER5 = "1892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER5 = 1892;
 		
-		public static final String FEVER6 = "112372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER6 = 112372;
 		
-		public static final String FEVER7 = "112373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER7 = 112373;
 		
-		public static final String FEVER8 = "113213AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER8 = 113213;
 		
-		public static final String RIFT_VALLEY_FEVER = "113217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer RIFT_VALLEY_FEVER = 113217;
 		
-		public static final String FEVER10 = "113228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER10 = 113228;
 		
-		public static final String FEVER11 = "113229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER11 = 113229;
 		
-		public static final String FEVER12 = "113230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER12 = 113230;
 		
-		public static final String FEVER13 = "113511AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER13 = 113511;
 		
-		public static final String FEVER14 = "115681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER14 = 115681;
 		
-		public static final String FEVER15 = "115794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER15 = 115794;
 		
-		public static final String FEVER16 = "116125AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER16 = 116125;
 		
-		public static final String FEVER17 = "118491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER17 = 118491;
 		
-		public static final String FEVER18 = "119353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER18 = 119353;
 		
-		public static final String Chikungunya_Fever = "120742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Chikungunya_Fever = 120742;
 		
-		public static final String Chikungunya_Haemorrhagic_Fever = "120743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Chikungunya_Haemorrhagic_Fever = 120743;
 		
-		public static final String FEVER21 = "121005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER21 = 121005;
 		
-		public static final String FEVER22 = "121039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER22 = 121039;
 		
-		public static final String FEVER23 = "121040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER23 = 121040;
 		
-		public static final String FEVER24 = "121508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER24 = 121508;
 		
-		public static final String FEVER25 = "121690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER25 = 121690;
 		
-		public static final String FEVER26 = "121843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER26 = 121843;
 		
-		public static final String FEVER27 = "122759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER27 = 122759;
 		
-		public static final String FEVER28 = "122873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER28 = 122873;
 		
-		public static final String FEVER29 = "123112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER29 = 123112;
 		
-		public static final String FEVER30 = "123272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER30 = 123272;
 		
-		public static final String FEVER31 = "123557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER31 = 123557;
 		
-		public static final String FEVER32 = "123922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER32 = 123922;
 		
-		public static final String FEVER33 = "123936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER33 = 123936;
 		
-		public static final String FEVER34 = "124151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER34 = 124151;
 		
-		public static final String FEVER35 = "124291AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER35 = 124291;
 		
-		public static final String FEVER36 = "125053AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER36 = 125053;
 		
-		public static final String FEVER37 = "125220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER37 = 125220;
 		
-		public static final String FEVER38 = "125825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER38 = 125825;
 		
-		public static final String FEVER39 = "126057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER39 = 126057;
 		
-		public static final String FEVER40 = "126147AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER40 = 126147;
 		
-		public static final String FEVER41 = "126171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER41 = 126171;
 		
-		public static final String FEVER42 = "126223AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER42 = 126223;
 		
-		public static final String FEVER43 = "126272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER43 = 126272;
 		
-		public static final String FEVER44 = "126273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER44 = 126273;
 		
-		public static final String FEVER45 = "126455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER45 = 126455;
 		
-		public static final String FEVER46 = "126787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER46 = 126787;
 		
-		public static final String FEVER47 = "127144AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER47 = 127144;
 		
-		public static final String FEVER48 = "127189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER48 = 127189;
 		
-		public static final String FEVER49 = "127328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER49 = 127328;
 		
-		public static final String FEVER50 = "127345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER50 = 127345;
 		
-		public static final String FEVER51 = "127447AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER51 = 127447;
 		
-		public static final String FEVER52 = "127664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER52 = 127664;
 		
-		public static final String FEVER53 = "127719AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER53 = 127719;
 		
-		public static final String FEVER54 = "127730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER54 = 127730;
 		
-		public static final String FEVER55 = "127731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER55 = 127731;
 		
-		public static final String FEVER56 = "127732AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER56 = 127732;
 		
-		public static final String FEVER57 = "127733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER57 = 127733;
 		
-		public static final String FEVER58 = "127734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER58 = 127734;
 		
-		public static final String FEVER59 = "127735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER59 = 127735;
 		
-		public static final String FEVER60 = "127736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER60 = 127736;
 		
-		public static final String FEVER61 = "127737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER61 = 127737;
 		
-		public static final String FEVER62 = "127738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER62 = 127738;
 		
-		public static final String FEVER63 = "127739AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER63 = 127739;
 		
-		public static final String FEVER64 = "127740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER64 = 127740;
 		
-		public static final String FEVER65 = "127902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER65 = 127902;
 		
-		public static final String FEVER66 = "127972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER66 = 127972;
 		
-		public static final String FEVER67 = "127981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER67 = 127981;
 		
-		public static final String FEVER68 = "127990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER68 = 127990;
 		
-		public static final String FEVER69 = "128392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER69 = 128392;
 		
-		public static final String FEVER70 = "129324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER70 = 129324;
 		
-		public static final String FEVER71 = "129354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER71 = 129354;
 		
-		public static final String FEVER72 = "129554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER72 = 129554;
 		
-		public static final String FEVER73 = "129599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER73 = 129599;
 		
-		public static final String FEVER74 = "130008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER74 = 130008;
 		
-		public static final String FEVER75 = "130010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER75 = 130010;
 		
-		public static final String FEVER76 = "130147AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER76 = 130147;
 		
-		public static final String FEVER77 = "130558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER77 = 130558;
 		
-		public static final String FEVER78 = "130811AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER78 = 130811;
 		
-		public static final String FEVER79 = "130812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER79 = 130812;
 		
-		public static final String FEVER80 = "130813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER80 = 130813;
 		
-		public static final String FEVER81 = "130814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER81 = 130814;
 		
-		public static final String FEVER82 = "131690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER82 = 131690;
 		
-		public static final String FEVER83 = "132381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER83 = 132381;
 		
-		public static final String FEVER84 = "132400AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER84 = 132400;
 		
-		public static final String FEVER85 = "133472AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER85 = 133472;
 		
-		public static final String FEVER86 = "133830AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER86 = 133830;
 		
-		public static final String FEVER87 = "133937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER87 = 133937;
 		
-		public static final String FEVER88 = "134096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER88 = 134096;
 		
-		public static final String FEVER89 = "134124AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER89 = 134124;
 		
-		public static final String FEVER90 = "134372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER90 = 134372;
 		
-		public static final String FEVER91 = "134380AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER91 = 134380;
 		
-		public static final String FEVER92 = "134567AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER92 = 134567;
 		
-		public static final String FEVER93 = "135579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER93 = 135579;
 		
-		public static final String FEVER94 = "136116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER94 = 136116;
 		
-		public static final String FEVER95 = "136221AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER95 = 136221;
 		
-		public static final String FEVER96 = "136391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER96 = 136391;
 		
-		public static final String FEVER97 = "136451AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER97 = 136451;
 		
-		public static final String FEVER98 = "139094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER98 = 139094;
 		
-		public static final String FEVER99 = "139297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER99 = 139297;
 		
-		public static final String FEVER100 = "139917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER100 = 139917;
 		
-		public static final String FEVER101 = "140237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER101 = 140237;
 		
-		public static final String FEVER102 = "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER102 = 140238;
 		
-		public static final String FEVER103 = "140471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER103 = 140471;
 		
-		public static final String FEVER104 = "140562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER104 = 140562;
 		
-		public static final String FEVER105 = "141205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER105 = 141205;
 		
-		public static final String FEVER106 = "141564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER106 = 141564;
 		
-		public static final String Dengue_haemorrhagic_fever = "142591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dengue_haemorrhagic_fever = 142591;
 		
-		public static final String Dengue_fever = "142592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dengue_fever = 142592;
 		
-		public static final String FEVER109 = "142629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER109 = 142629;
 		
-		public static final String FEVER110 = "143384AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER110 = 143384;
 		
-		public static final String FEVER111 = "143621AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER111 = 143621;
 		
-		public static final String FEVER112 = "144579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER112 = 144579;
 		
-		public static final String FEVER113 = "145182AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER113 = 145182;
 		
-		public static final String FEVER114 = "146087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER114 = 146087;
 		
-		public static final String FEVER115 = "146943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER115 = 146943;
 		
-		public static final String FEVER116 = "146948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER116 = 146948;
 		
-		public static final String FEVER117 = "147043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER117 = 147043;
 		
-		public static final String FEVER118 = "147079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER118 = 147079;
 		
-		public static final String FEVER119 = "147260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER119 = 147260;
 		
-		public static final String FEVER120 = "147928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER120 = 147928;
 		
-		public static final String FEVER121 = "147950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER121 = 147950;
 		
-		public static final String FEVER122 = "148481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER122 = 148481;
 		
-		public static final String FEVER123 = "148483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER123 = 148483;
 		
-		public static final String FEVER124 = "148922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER124 = 148922;
 		
-		public static final String FEVER125 = "149253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER125 = 149253;
 		
-		public static final String FEVER126 = "149533AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER126 = 149533;
 		
-		public static final String FEVER127 = "149939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER127 = 149939;
 		
-		public static final String FEVER128 = "152161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER128 = 152161;
 		
-		public static final String FEVER129 = "152456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER129 = 152456;
 		
-		public static final String FEVER130 = "153869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER130 = 153869;
 		
-		public static final String FEVER131 = "154892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER131 = 154892;
 		
-		public static final String FEVER132 = "155879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER132 = 155879;
 		
-		public static final String FEVER133 = "156083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER133 = 156083;
 		
-		public static final String FEVER134 = "156659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER134 = 156659;
 		
-		public static final String FEVER135 = "157324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER135 = 157324;
 		
-		public static final String FEVER136 = "157827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER136 = 157827;
 		
-		public static final String FEVER137 = "158019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER137 = 158019;
 		
-		public static final String FEVER138 = "158615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER138 = 158615;
 		
-		public static final String FEVER139 = "158796AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER139 = 158796;
 		
-		public static final String FEVER140 = "158867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER140 = 158867;
 		
-		public static final String FEVER141 = "159336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FEVER141 = 159336;
 		
 		//UTIs
-		public static final String UTI1 = "111633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI1 = 111633;
 		
-		public static final String UTI2 = "123489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI2 = 123489;
 		
-		public static final String UTI3 = "123491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI3 = 123491;
 		
-		public static final String UTI4 = "123492AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI4 = 123492;
 		
-		public static final String UTI5 = "126076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI5 = 126076;
 		
-		public static final String UTI6 = "127783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI6 = 127783;
 		
-		public static final String UTI7 = "133367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI7 = 133367;
 		
-		public static final String UTI8 = "135918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI8 = 135918;
 		
-		public static final String UTI9 = "137795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI9 = 137795;
 		
-		public static final String UTI10 = "139498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI10 = 139498;
 		
-		public static final String UTI11 = "139499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI11 = 139499;
 		
-		public static final String UTI12 = "139500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI12 = 139500;
 		
-		public static final String UTI13 = "139501AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI13 = 139501;
 		
-		public static final String UTI14 = "139502AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI14 = 139502;
 		
-		public static final String UTI15 = "140736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI15 = 140736;
 		
-		public static final String UTI16 = "145137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI16 = 145137;
 		
-		public static final String UTI17 = "150740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI17 = 150740;
 		
-		public static final String UTI18 = "154960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI18 = 154960;
 		
-		public static final String UTI19 = "154988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI19 = 154988;
 		
-		public static final String UTI20 = "155191AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI20 = 155191;
 		
-		public static final String UTI21 = "155391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI21 = 155391;
 		
-		public static final String UTI22 = "156175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI22 = 156175;
 		
-		public static final String UTI23 = "158151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI23 = 158151;
 		
-		public static final String UTI24 = "158447AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI24 = 158447;
 		
-		public static final String UTI25 = "159255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UTI25 = 159255;
 		
 		//Typhoid fever
-		public static final String TF1 = "141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TF1 = 141;
 		
-		public static final String TF2 = "123936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TF2 = 123936;
 		
-		public static final String TF3 = "130008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TF3 = 130008;
 		
-		public static final String TF4 = "130811AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TF4 = 130811;
 		
-		public static final String TF5 = "134380AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TF5 = 134380;
 		
 		//bilhazia
-		public static final String BL1 = "117152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BL1 = 117152;
 		
-		public static final String BL2 = "119683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BL2 = 119683;
 		
-		public static final String BL3 = "119684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BL3 = 119684;
 		
 		//Worms
-		public static final String ISW1 = "199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ISW1 = 199;
 		
-		public static final String ISW2 = "116699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ISW2 = 116699;
 		
-		public static final String ISW3 = "122834AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ISW3 = 122834;
 		
 		//Malnutritions
-		public static final String MALN1 = "113960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN1 = 113960;
 		
-		public static final String MALN2 = "115122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN2 = 115122;
 		
-		public static final String MALN3 = "116304AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN3 = 116304;
 		
-		public static final String MALN4 = "116314AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN4 = 116314;
 		
-		public static final String MALN5 = "119614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN5 = 119614;
 		
-		public static final String MALN6 = "126358AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN6 = 126358;
 		
-		public static final String MALN7 = "126598AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN7 = 126598;
 		
-		public static final String MALN8 = "134721AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN8 = 134721;
 		
-		public static final String MALN9 = "134722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN9 = 134722;
 		
-		public static final String MALN10 = "134723AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN10 = 134723;
 		
-		public static final String MALN11 = "134724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN11 = 134724;
 		
-		public static final String MALN12 = "134725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN12 = 134725;
 		
-		public static final String MALN13 = "141591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN13 = 141591;
 		
-		public static final String MALN14 = "148471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN14 = 148471;
 		
-		public static final String MALN15 = "152022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN15 = 152022;
 		
-		public static final String MALN16 = "152346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN16 = 152346;
 		
-		public static final String MALN17 = "157648AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN17 = 157648;
 		
-		public static final String MALN18 = "157649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN18 = 157649;
 		
-		public static final String MALN19 = "157650AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN19 = 157650;
 		
-		public static final String MALN20 = "157651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN20 = 157651;
 		
-		public static final String MALN21 = "157652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN21 = 157652;
 		
-		public static final String MALN22 = "157653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN22 = 157653;
 		
-		public static final String MALN23 = "157793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN23 = 157793;
 		
-		public static final String MALN24 = "157812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN24 = 157812;
 		
-		public static final String MALN25 = "158480AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN25 = 158480;
 		
-		public static final String MALN26 = "160205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN26 = 160205;
 		
-		public static final String MALN27 = "162330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN27 = 162330;
 		
-		public static final String MALN28 = "162331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN28 = 162331;
 		
-		public static final String MALN29 = "163302AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN29 = 163302;
 		
-		public static final String MALN30 = "163303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MALN30 = 163303;
 		
 		//Diagnosis concepts
 		public static final String PROBLEM_ADDED = "6042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
@@ -2187,6557 +2187,6557 @@ public class EhrAddonsConstants {
 		public static final String FINA_DIAGNOSIS = "160250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 		
 		//eye infections
-		public static final String EI1 = "140832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EI1 = 140832;
 		
-		public static final String EI2 = "160517AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EI2 = 160517;
 		
 		//Anaemia
-		public static final String ANEMIA1 = "110128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA1 = 110128;
 		
-		public static final String ANEMIA2 = "110833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA2 = 110833;
 		
-		public static final String ANEMIA3 = "110835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA3 = 110835;
 		
-		public static final String ANEMIA4 = "113053AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA4 = 113053;
 		
-		public static final String ANEMIA5 = "113372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA5 = 113372;
 		
-		public static final String ANEMIA6 = "115128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA6 = 115128;
 		
-		public static final String ANEMIA7 = "115212AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA7 = 115212;
 		
-		public static final String ANEMIA8 = "115791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA8 = 115791;
 		
-		public static final String ANEMIA9 = "115849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA9 = 115849;
 		
-		public static final String ANEMIA10 = "115851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA10 = 115851;
 		
-		public static final String ANEMIA11 = "115852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA11 = 115852;
 		
-		public static final String ANEMIA12 = "117576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA12 = 117576;
 		
-		public static final String ANEMIA13 = "117627AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA13 = 117627;
 		
-		public static final String ANEMIA14 = "117628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA14 = 117628;
 		
-		public static final String ANEMIA15 = "119618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA15 = 119618;
 		
-		public static final String ANEMIA16 = "119909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA16 = 119909;
 		
-		public static final String ANEMIA17 = "121618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA17 = 121618;
 		
-		public static final String ANEMIA18 = "121624AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA18 = 121624;
 		
-		public static final String ANEMIA19 = "121627AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA19 = 121627;
 		
-		public static final String ANEMIA20 = "121629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA20 = 121629;
 		
-		public static final String ANEMIA21 = "122180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA21 = 122180;
 		
-		public static final String ANEMIA22 = "122819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA22 = 122819;
 		
-		public static final String ANEMIA23 = "122912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA23 = 122912;
 		
-		public static final String ANEMIA24 = "122978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA24 = 122978;
 		
-		public static final String ANEMIA25 = "123042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA25 = 123042;
 		
-		public static final String ANEMIA26 = "123043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA26 = 123043;
 		
-		public static final String ANEMIA27 = "123578AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA27 = 123578;
 		
-		public static final String ANEMIA28 = "124444AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA28 = 124444;
 		
-		public static final String ANEMIA29 = "124914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA29 = 124914;
 		
-		public static final String ANEMIA30 = "126058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA30 = 126058;
 		
-		public static final String ANEMIA31 = "126509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA31 = 126509;
 		
-		public static final String ANEMIA32 = "127011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA32 = 127011;
 		
-		public static final String ANEMIA33 = "127724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA33 = 127724;
 		
-		public static final String ANEMIA34 = "127753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA34 = 127753;
 		
-		public static final String ANEMIA35 = "127987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA35 = 127987;
 		
-		public static final String ANEMIA36 = "128344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA36 = 128344;
 		
-		public static final String ANEMIA37 = "130556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA37 = 130556;
 		
-		public static final String ANEMIA38 = "132673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA38 = 132673;
 		
-		public static final String ANEMIA39 = "132969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA39 = 132969;
 		
-		public static final String ANEMIA40 = "134206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA40 = 134206;
 		
-		public static final String ANEMIA41 = "134208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA41 = 134208;
 		
-		public static final String ANEMIA42 = "134429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA42 = 134429;
 		
-		public static final String ANEMIA43 = "134431AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA43 = 134431;
 		
-		public static final String ANEMIA44 = "134433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA44 = 134433;
 		
-		public static final String ANEMIA45 = "134434AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA45 = 134434;
 		
-		public static final String ANEMIA46 = "134438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA46 = 134438;
 		
-		public static final String ANEMIA47 = "134439AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA47 = 134439;
 		
-		public static final String ANEMIA48 = "134440AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA48 = 134440;
 		
-		public static final String ANEMIA49 = "134442AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA49 = 134442;
 		
-		public static final String ANEMIA50 = "134443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA50 = 134443;
 		
-		public static final String ANEMIA51 = "134444AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA51 = 134444;
 		
-		public static final String ANEMIA52 = "134445AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA52 = 134445;
 		
-		public static final String ANEMIA53 = "134449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA53 = 134449;
 		
-		public static final String ANEMIA54 = "134450AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA54 = 134450;
 		
-		public static final String ANEMIA55 = "134451AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA55 = 134451;
 		
-		public static final String ANEMIA56 = "135425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA56 = 135425;
 		
-		public static final String ANEMIA57 = "136114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA57 = 136114;
 		
-		public static final String ANEMIA58 = "138565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA58 = 138565;
 		
-		public static final String ANEMIA59 = "138736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA59 = 138736;
 		
-		public static final String ANEMIA60 = "138923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA60 = 138923;
 		
-		public static final String ANEMIA61 = "138924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA61 = 138924;
 		
-		public static final String ANEMIA62 = "138926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA62 = 138926;
 		
-		public static final String ANEMIA63 = "138927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA63 = 138927;
 		
-		public static final String ANEMIA64 = "138928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA64 = 138928;
 		
-		public static final String ANEMIA65 = "138929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA65 = 138929;
 		
-		public static final String ANEMIA66 = "138930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA66 = 138930;
 		
-		public static final String ANEMIA67 = "138931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA67 = 138931;
 		
-		public static final String ANEMIA68 = "138932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA68 = 138932;
 		
-		public static final String ANEMIA69 = "139109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA69 = 139109;
 		
-		public static final String ANEMIA70 = "139110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA70 = 139110;
 		
-		public static final String ANEMIA71 = "139679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA71 = 139679;
 		
-		public static final String ANEMIA72 = "139680AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA72 = 139680;
 		
-		public static final String ANEMIA73 = "139681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA73 = 139681;
 		
-		public static final String ANEMIA74 = "139682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA74 = 139682;
 		
-		public static final String ANEMIA75 = "139683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA75 = 139683;
 		
-		public static final String ANEMIA76 = "140561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA76 = 140561;
 		
-		public static final String ANEMIA77 = "141086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA77 = 141086;
 		
-		public static final String ANEMIA78 = "141726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA78 = 141726;
 		
-		public static final String ANEMIA79 = "141738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA79 = 141738;
 		
-		public static final String ANEMIA80 = "142277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA80 = 142277;
 		
-		public static final String ANEMIA81 = "143579AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA81 = 143579;
 		
-		public static final String ANEMIA82 = "143989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA82 = 143989;
 		
-		public static final String ANEMIA83 = "143990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA83 = 143990;
 		
-		public static final String ANEMIA84 = "144271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA84 = 144271;
 		
-		public static final String ANEMIA85 = "144571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA85 = 144571;
 		
-		public static final String ANEMIA86 = "145510AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA86 = 145510;
 		
-		public static final String ANEMIA87 = "146060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA87 = 146060;
 		
-		public static final String ANEMIA88 = "148078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA88 = 148078;
 		
-		public static final String ANEMIA89 = "148110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA89 = 148110;
 		
-		public static final String ANEMIA90 = "148111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA90 = 148111;
 		
-		public static final String ANEMIA91 = "148112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA91 = 148112;
 		
-		public static final String ANEMIA92 = "148113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA92 = 148113;
 		
-		public static final String ANEMIA93 = "148114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA93 = 148114;
 		
-		public static final String ANEMIA94 = "148115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA94 = 148115;
 		
-		public static final String ANEMIA95 = "148116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA95 = 148116;
 		
-		public static final String ANEMIA96 = "148524AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA96 = 148524;
 		
-		public static final String ANEMIA97 = "148525AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA97 = 148525;
 		
-		public static final String ANEMIA98 = "148832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA98 = 148832;
 		
-		public static final String ANEMIA99 = "148833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA99 = 148833;
 		
-		public static final String ANEMIA100 = "148835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA100 = 148835;
 		
-		public static final String ANEMIA101 = "148836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA101 = 148836;
 		
-		public static final String ANEMIA102 = "148837AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA102 = 148837;
 		
-		public static final String ANEMIA103 = "148838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA103 = 148838;
 		
-		public static final String ANEMIA104 = "148839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA104 = 148839;
 		
-		public static final String ANEMIA105 = "148840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA105 = 148840;
 		
-		public static final String ANEMIA106 = "148842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA106 = 148842;
 		
-		public static final String ANEMIA107 = "148843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA107 = 148843;
 		
-		public static final String ANEMIA108 = "148844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA108 = 148844;
 		
-		public static final String ANEMIA109 = "148845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA109 = 148845;
 		
-		public static final String ANEMIA110 = "148846AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA110 = 148846;
 		
-		public static final String ANEMIA111 = "148848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA111 = 148848;
 		
-		public static final String ANEMIA112 = "148849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA112 = 148849;
 		
-		public static final String ANEMIA113 = "148850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA113 = 148850;
 		
-		public static final String ANEMIA114 = "148851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA114 = 148851;
 		
-		public static final String ANEMIA115 = "148852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA115 = 148852;
 		
-		public static final String ANEMIA116 = "148854AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA116 = 148854;
 		
-		public static final String ANEMIA117 = "148855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA117 = 148855;
 		
-		public static final String ANEMIA118 = "148856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA118 = 148856;
 		
-		public static final String ANEMIA119 = "148857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA119 = 148857;
 		
-		public static final String ANEMIA120 = "148858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA120 = 148858;
 		
-		public static final String ANEMIA121 = "148859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA121 = 148859;
 		
-		public static final String ANEMIA122 = "148860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA122 = 148860;
 		
-		public static final String ANEMIA123 = "148861AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA123 = 148861;
 		
-		public static final String ANEMIA124 = "148862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA124 = 148862;
 		
-		public static final String ANEMIA125 = "148863AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA125 = 148863;
 		
-		public static final String ANEMIA126 = "148864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA126 = 148864;
 		
-		public static final String ANEMIA127 = "148865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA127 = 148865;
 		
-		public static final String ANEMIA128 = "148866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA128 = 148866;
 		
-		public static final String ANEMIA129 = "148867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA129 = 148867;
 		
-		public static final String ANEMIA130 = "148868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA130 = 148868;
 		
-		public static final String ANEMIA131 = "148869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA131 = 148869;
 		
-		public static final String ANEMIA132 = "148870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA132 = 148870;
 		
-		public static final String ANEMIA133 = "148871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA133 = 148871;
 		
-		public static final String ANEMIA134 = "148872AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA134 = 148872;
 		
-		public static final String ANEMIA135 = "148874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA135 = 148874;
 		
-		public static final String ANEMIA136 = "148875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA136 = 148875;
 		
-		public static final String ANEMIA137 = "148876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA137 = 148876;
 		
-		public static final String ANEMIA138 = "149566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA138 = 149566;
 		
-		public static final String ANEMIA139 = "149660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA139 = 149660;
 		
-		public static final String ANEMIA140 = "149661AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA140 = 149661;
 		
-		public static final String ANEMIA141 = "149662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA141 = 149662;
 		
-		public static final String ANEMIA142 = "149663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA142 = 149663;
 		
-		public static final String ANEMIA143 = "149664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA143 = 149664;
 		
-		public static final String ANEMIA144 = "150037AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA144 = 150037;
 		
-		public static final String ANEMIA145 = "150038AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA145 = 150038;
 		
-		public static final String ANEMIA146 = "151529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA146 = 151529;
 		
-		public static final String ANEMIA147 = "152029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA147 = 152029;
 		
-		public static final String ANEMIA148 = "152334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA148 = 152334;
 		
-		public static final String ANEMIA149 = "152335AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA149 = 152335;
 		
-		public static final String ANEMIA150 = "158812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA150 = 158812;
 		
-		public static final String ANEMIA151 = "162042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA151 = 162042;
 		
-		public static final String ANEMIA152 = "162043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA152 = 162043;
 		
-		public static final String ANEMIA153 = "162044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ANEMIA153 = 162044;
 		
 		//Other eye problems
-		public static final String OE1 = "110043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE1 = 110043;
 		
-		public static final String OE2 = "110330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE2 = 110330;
 		
-		public static final String OE3 = "110398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE3 = 110398;
 		
-		public static final String OE4 = "111049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE4 = 111049;
 		
-		public static final String OE5 = "111184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE5 = 111184;
 		
-		public static final String OE6 = "111217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE6 = 111217;
 		
-		public static final String OE7 = "111218AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE7 = 111218;
 		
-		public static final String OE8 = "111367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE8 = 111367;
 		
-		public static final String OE9 = "111368AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE9 = 111368;
 		
-		public static final String OE10 = "112066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE10 = 112066;
 		
-		public static final String OE11 = "112198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE11 = 112198;
 		
-		public static final String OE12 = "112570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE12 = 112570;
 		
-		public static final String OE13 = "113109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE13 = 113109;
 		
-		public static final String OE14 = "113242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE14 = 113242;
 		
-		public static final String OE15 = "113290AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE15 = 113290;
 		
-		public static final String OE16 = "113291AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE16 = 113291;
 		
-		public static final String OE17 = "113292AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE17 = 113292;
 		
-		public static final String OE18 = "113516AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE18 = 113516;
 		
-		public static final String OE19 = "113757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE19 = 113757;
 		
-		public static final String OE20 = "114265AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE20 = 114265;
 		
-		public static final String OE21 = "114266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE21 = 114266;
 		
-		public static final String OE41 = "114781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE41 = 114781;
 		
-		public static final String OE22 = "116072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE22 = 116072;
 		
-		public static final String OE23 = "116433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE23 = 116433;
 		
-		public static final String OE24 = "116572AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE24 = 116572;
 		
-		public static final String OE25 = "116653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE25 = 116653;
 		
-		public static final String OE26 = "116971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE26 = 116971;
 		
-		public static final String OE27 = "117173AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE27 = 117173;
 		
-		public static final String OE28 = "117253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE28 = 117253;
 		
-		public static final String OE29 = "117254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE29 = 117254;
 		
-		public static final String OE30 = "117256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE30 = 117256;
 		
-		public static final String OE31 = "117257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE31 = 117257;
 		
-		public static final String OE32 = "117258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE32 = 117258;
 		
-		public static final String OE33 = "117318AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE33 = 117318;
 		
-		public static final String OE34 = "117428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE34 = 117428;
 		
-		public static final String OE35 = "117770AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE35 = 117770;
 		
-		public static final String OE36 = "117954AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE36 = 117954;
 		
-		public static final String OE37 = "118074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE37 = 118074;
 		
-		public static final String OE38 = "118075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE38 = 118075;
 		
-		public static final String OE39 = "118393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE39 = 118393;
 		
-		public static final String OE40 = "118439AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE40 = 118439;
 		
-		public static final String OE42 = "119220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE42 = 119220;
 		
-		public static final String OE43 = "119222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE43 = 119222;
 		
-		public static final String OE44 = "119323AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE44 = 119323;
 		
-		public static final String OE45 = "119595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE45 = 119595;
 		
-		public static final String OE46 = "119596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE46 = 119596;
 		
-		public static final String OE47 = "119638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE47 = 119638;
 		
-		public static final String OE48 = "119852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE48 = 119852;
 		
-		public static final String OE49 = "119853AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE49 = 119853;
 		
-		public static final String OE50 = "120096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE50 = 120096;
 		
-		public static final String OE51 = "120097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE51 = 120097;
 		
-		public static final String OE52 = "120098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE52 = 120098;
 		
-		public static final String OE53 = "120099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE53 = 120099;
 		
-		public static final String OE54 = "120101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE54 = 120101;
 		
-		public static final String OE55 = "120983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE55 = 120983;
 		
-		public static final String OE56 = "120989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE56 = 120989;
 		
-		public static final String OE57 = "121099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE57 = 121099;
 		
-		public static final String OE58 = "121100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE58 = 121100;
 		
-		public static final String OE59 = "121101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE59 = 121101;
 		
-		public static final String OE60 = "121205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE60 = 121205;
 		
-		public static final String OE61 = "121206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE61 = 121206;
 		
-		public static final String OE62 = "122681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE62 = 122681;
 		
-		public static final String OE63 = "122803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE63 = 122803;
 		
-		public static final String OE64 = "122812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE64 = 122812;
 		
-		public static final String OE65 = "122813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE65 = 122813;
 		
-		public static final String OE66 = "123024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE66 = 123024;
 		
-		public static final String OE67 = "123064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE67 = 123064;
 		
-		public static final String OE68 = "123065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE68 = 123065;
 		
-		public static final String OE69 = "123328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE69 = 123328;
 		
-		public static final String OE70 = "123906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE70 = 123906;
 		
-		public static final String OE71 = "124200AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE71 = 124200;
 		
-		public static final String OE72 = "124717AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE72 = 124717;
 		
-		public static final String OE73 = "125211AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE73 = 125211;
 		
-		public static final String OE74 = "125319AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE74 = 125319;
 		
-		public static final String OE75 = "125391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE75 = 125391;
 		
-		public static final String OE76 = "125392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE76 = 125392;
 		
-		public static final String OE77 = "125503AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE77 = 125503;
 		
-		public static final String OE78 = "125989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE78 = 125989;
 		
-		public static final String OE79 = "126507AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE79 = 126507;
 		
-		public static final String OE80 = "126738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE80 = 126738;
 		
-		public static final String OE81 = "126744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE81 = 126744;
 		
-		public static final String OE82 = "127064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE82 = 127064;
 		
-		public static final String OE83 = "127147AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE83 = 127147;
 		
-		public static final String OE84 = "127276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE84 = 127276;
 		
-		public static final String OE85 = "127391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE85 = 127391;
 		
-		public static final String OE86 = "127513AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE86 = 127513;
 		
-		public static final String OE87 = "127596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE87 = 127596;
 		
-		public static final String OE88 = "127597AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE88 = 127597;
 		
-		public static final String OE89 = "127602AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE89 = 127602;
 		
-		public static final String OE90 = "127777AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE90 = 127777;
 		
-		public static final String OE91 = "128422AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE91 = 128422;
 		
-		public static final String OE92 = "128448AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE92 = 128448;
 		
-		public static final String OE93 = "128616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE93 = 128616;
 		
-		public static final String OE94 = "128752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE94 = 128752;
 		
-		public static final String OE95 = "129109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE95 = 129109;
 		
-		public static final String OE96 = "129832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE96 = 129832;
 		
-		public static final String OE97 = "130184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE97 = 130184;
 		
-		public static final String OE98 = "130410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE98 = 130410;
 		
-		public static final String OE99 = "130611AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE99 = 130611;
 		
-		public static final String OE100 = "130616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE100 = 130616;
 		
-		public static final String OE121 = "128422AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE121 = 128422;
 		
-		public static final String OE122 = "128448AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE122 = 128448;
 		
-		public static final String OE123 = "128616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE123 = 128616;
 		
-		public static final String OE124 = "128752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE124 = 128752;
 		
-		public static final String OE125 = "129109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE125 = 129109;
 		
-		public static final String OE126 = "129832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE126 = 129832;
 		
-		public static final String OE127 = "130184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE127 = 130184;
 		
-		public static final String OE128 = "130410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE128 = 130410;
 		
-		public static final String OE129 = "130611AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE129 = 130611;
 		
-		public static final String OE130 = "130616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE130 = 130616;
 		
-		public static final String OE101 = "130742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE101 = 130742;
 		
-		public static final String OE102 = "130831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE102 = 130831;
 		
-		public static final String OE103 = "131040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE103 = 131040;
 		
-		public static final String OE104 = "131047AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE104 = 131047;
 		
-		public static final String OE105 = "131995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE105 = 131995;
 		
-		public static final String OE106 = "131996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE106 = 131996;
 		
-		public static final String OE107 = "132396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE107 = 132396;
 		
-		public static final String OE108 = "132475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE108 = 132475;
 		
-		public static final String OE110 = "132633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE110 = 132633;
 		
-		public static final String OE111 = "132842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE111 = 132842;
 		
-		public static final String OE112 = "132862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE112 = 132862;
 		
-		public static final String OE113 = "134195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE113 = 134195;
 		
-		public static final String OE114 = "134517AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE114 = 134517;
 		
-		public static final String OE115 = "134644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE115 = 134644;
 		
-		public static final String OE116 = "134645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE116 = 134645;
 		
-		public static final String OE117 = "134733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE117 = 134733;
 		
-		public static final String OE118 = "135151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE118 = 135151;
 		
-		public static final String OE119 = "135270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE119 = 135270;
 		
-		public static final String OE120 = "135271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE120 = 135271;
 		
-		public static final String OE135 = "135564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE135 = 135564;
 		
-		public static final String OE136 = "135566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE136 = 135566;
 		
-		public static final String OE137 = "135784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE137 = 135784;
 		
-		public static final String OE138 = "135878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE138 = 135878;
 		
-		public static final String OE139 = "135879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE139 = 135879;
 		
-		public static final String OE140 = "135998AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE140 = 135998;
 		
-		public static final String OE141 = "136009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE141 = 136009;
 		
-		public static final String OE142 = "136107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE142 = 136107;
 		
-		public static final String OE143 = "136180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE143 = 136180;
 		
-		public static final String OE144 = "136186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE144 = 136186;
 		
-		public static final String OE145 = "136187AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE145 = 136187;
 		
-		public static final String OE146 = "136523AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE146 = 136523;
 		
-		public static final String OE147 = "136812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE147 = 136812;
 		
-		public static final String OE148 = "136813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE148 = 136813;
 		
-		public static final String OE149 = "137013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE149 = 137013;
 		
-		public static final String OE150 = "137027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE150 = 137027;
 		
-		public static final String OE151 = "137263AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE151 = 137263;
 		
-		public static final String OE152 = "137264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE152 = 137264;
 		
-		public static final String OE153 = "137707AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE153 = 137707;
 		
-		public static final String OE154 = "137708AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE154 = 137708;
 		
-		public static final String OE155 = "137709AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE155 = 137709;
 		
-		public static final String OE156 = "137710AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE156 = 137710;
 		
-		public static final String OE157 = "137711AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE157 = 137711;
 		
-		public static final String OE158 = "137712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE158 = 137712;
 		
-		public static final String OE159 = "137713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE159 = 137713;
 		
-		public static final String OE160 = "137714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE160 = 137714;
 		
-		public static final String OE131 = "135288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE131 = 135288;
 		
-		public static final String OE132 = "135390AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE132 = 135390;
 		
-		public static final String OE133 = "135402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE133 = 135402;
 		
-		public static final String OE134 = "135501AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE134 = 135501;
 		
-		public static final String OE161 = "137715AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE161 = 137715;
 		
-		public static final String OE162 = "137717AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE162 = 137717;
 		
-		public static final String OE163 = "137718AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE163 = 137718;
 		
-		public static final String OE164 = "137719AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE164 = 137719;
 		
-		public static final String OE165 = "137720AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE165 = 137720;
 		
-		public static final String OE166 = "137721AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE166 = 137721;
 		
-		public static final String OE167 = "137722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE167 = 137722;
 		
-		public static final String OE168 = "137723AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE168 = 137723;
 		
-		public static final String OE169 = "137724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE169 = 137724;
 		
-		public static final String OE170 = "137725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE170 = 137725;
 		
-		public static final String OE171 = "137726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE171 = 137726;
 		
-		public static final String OE172 = "137727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE172 = 137727;
 		
-		public static final String OE173 = "137728AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE173 = 137728;
 		
-		public static final String OE174 = "137729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE174 = 137729;
 		
-		public static final String OE175 = "137731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE175 = 137731;
 		
-		public static final String OE176 = "137733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE176 = 137733;
 		
-		public static final String OE177 = "137735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE177 = 137735;
 		
-		public static final String OE178 = "137736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE178 = 137736;
 		
-		public static final String OE179 = "137737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE179 = 137737;
 		
-		public static final String OE180 = "137738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE180 = 137738;
 		
-		public static final String OE184 = "137847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE184 = 137847;
 		
-		public static final String OE185 = "137974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE185 = 137974;
 		
-		public static final String OE186 = "137976AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE186 = 137976;
 		
-		public static final String OE187 = "138023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE187 = 138023;
 		
-		public static final String OE188 = "138028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE188 = 138028;
 		
-		public static final String OE189 = "138164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE189 = 138164;
 		
-		public static final String OE190 = "138297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE190 = 138297;
 		
-		public static final String OE191 = "138694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE191 = 138694;
 		
-		public static final String OE192 = "138703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE192 = 138703;
 		
-		public static final String OE193 = "138892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE193 = 138892;
 		
-		public static final String OE194 = "139098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE194 = 139098;
 		
-		public static final String OE195 = "139100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE195 = 139100;
 		
-		public static final String OE196 = "139417AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE196 = 139417;
 		
-		public static final String OE197 = "139771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE197 = 139771;
 		
-		public static final String OE198 = "139945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE198 = 139945;
 		
-		public static final String OE199 = "139977AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE199 = 139977;
 		
-		public static final String OE200 = "140053AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE200 = 140053;
 		
-		public static final String OE201 = "140068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE201 = 140068;
 		
-		public static final String OE202 = "140226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE202 = 140226;
 		
-		public static final String OE203 = "140827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE203 = 140827;
 		
-		public static final String OE204 = "140828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE204 = 140828;
 		
-		public static final String OE205 = "140831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE205 = 140831;
 		
-		public static final String OE206 = "140833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE206 = 140833;
 		
-		public static final String OE207 = "140949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE207 = 140949;
 		
-		public static final String OE208 = "140950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE208 = 140950;
 		
-		public static final String OE209 = "141191AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE209 = 141191;
 		
-		public static final String OE210 = "141398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE210 = 141398;
 		
-		public static final String OE181 = "137739AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE181 = 137739;
 		
-		public static final String OE182 = "137740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE182 = 137740;
 		
-		public static final String OE183 = "137742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE183 = 137742;
 		
-		public static final String OE211 = "141482AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE211 = 141482;
 		
-		public static final String OE212 = "141485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE212 = 141485;
 		
-		public static final String OE213 = "141606AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE213 = 141606;
 		
-		public static final String OE214 = "141695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE214 = 141695;
 		
-		public static final String OE215 = "142085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE215 = 142085;
 		
-		public static final String OE216 = "142239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE216 = 142239;
 		
-		public static final String OE217 = "142246AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE217 = 142246;
 		
-		public static final String OE218 = "142646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE218 = 142646;
 		
-		public static final String OE219 = "142668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE219 = 142668;
 		
-		public static final String OE220 = "142695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE220 = 142695;
 		
-		public static final String OE221 = "142850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE221 = 142850;
 		
-		public static final String OE222 = "142876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE222 = 142876;
 		
-		public static final String OE223 = "143019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE223 = 143019;
 		
-		public static final String OE224 = "143453AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE224 = 143453;
 		
-		public static final String OE225 = "143462AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE225 = 143462;
 		
-		public static final String OE226 = "143491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE226 = 143491;
 		
-		public static final String OE227 = "143505AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE227 = 143505;
 		
-		public static final String OE228 = "143508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE228 = 143508;
 		
-		public static final String OE229 = "143638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE229 = 143638;
 		
-		public static final String OE230 = "143756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE230 = 143756;
 		
-		public static final String OE231 = "143959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE231 = 143959;
 		
-		public static final String OE232 = "144056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE232 = 144056;
 		
-		public static final String OE233 = "144060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE233 = 144060;
 		
-		public static final String OE234 = "144199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE234 = 144199;
 		
-		public static final String OE235 = "144260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE235 = 144260;
 		
-		public static final String OE236 = "144263AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE236 = 144263;
 		
-		public static final String OE237 = "144348AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE237 = 144348;
 		
-		public static final String OE238 = "144588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE238 = 144588;
 		
-		public static final String OE239 = "145725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE239 = 145725;
 		
-		public static final String OE240 = "145726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE240 = 145726;
 		
-		public static final String OE241 = "145767AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE241 = 145767;
 		
-		public static final String OE242 = "146111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE242 = 146111;
 		
-		public static final String OE243 = "146321AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE243 = 146321;
 		
-		public static final String OE244 = "146322AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE244 = 146322;
 		
-		public static final String OE245 = "146371AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE245 = 146371;
 		
-		public static final String OE246 = "146632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE246 = 146632;
 		
-		public static final String OE247 = "146688AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE247 = 146688;
 		
-		public static final String OE248 = "146799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE248 = 146799;
 		
-		public static final String OE249 = "146829AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE249 = 146829;
 		
-		public static final String OE250 = "147116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE250 = 147116;
 		
-		public static final String OE251 = "147214AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE251 = 147214;
 		
-		public static final String OE252 = "147217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE252 = 147217;
 		
-		public static final String OE253 = "147219AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE253 = 147219;
 		
-		public static final String OE254 = "147394AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE254 = 147394;
 		
-		public static final String OE255 = "147395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE255 = 147395;
 		
-		public static final String OE256 = "147396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE256 = 147396;
 		
-		public static final String OE257 = "147397AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE257 = 147397;
 		
-		public static final String OE258 = "147398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE258 = 147398;
 		
-		public static final String OE259 = "147399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE259 = 147399;
 		
-		public static final String OE260 = "147400AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE260 = 147400;
 		
-		public static final String OE261 = "147401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE261 = 147401;
 		
-		public static final String OE262 = "147402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE262 = 147402;
 		
-		public static final String OE263 = "147403AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE263 = 147403;
 		
-		public static final String OE264 = "147404AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE264 = 147404;
 		
-		public static final String OE265 = "147405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE265 = 147405;
 		
-		public static final String OE266 = "147582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE266 = 147582;
 		
-		public static final String OE267 = "147652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE267 = 147652;
 		
-		public static final String OE268 = "147653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE268 = 147653;
 		
-		public static final String OE269 = "147802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE269 = 147802;
 		
-		public static final String OE270 = "147963AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE270 = 147963;
 		
-		public static final String OE271 = "148064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE271 = 148064;
 		
-		public static final String OE272 = "149176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE272 = 149176;
 		
-		public static final String OE273 = "150114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE273 = 150114;
 		
-		public static final String OE274 = "150478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE274 = 150478;
 		
-		public static final String OE275 = "150479AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE275 = 150479;
 		
-		public static final String OE276 = "150523AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE276 = 150523;
 		
-		public static final String OE277 = "150610AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE277 = 150610;
 		
-		public static final String OE278 = "150658AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE278 = 150658;
 		
-		public static final String OE279 = "150818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE279 = 150818;
 		
-		public static final String OE280 = "152481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE280 = 152481;
 		
-		public static final String OE281 = "152789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE281 = 152789;
 		
-		public static final String OE282 = "153557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE282 = 153557;
 		
-		public static final String OE283 = "153975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE283 = 153975;
 		
-		public static final String OE284 = "154250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE284 = 154250;
 		
-		public static final String OE285 = "155307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE285 = 155307;
 		
-		public static final String OE286 = "155308AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE286 = 155308;
 		
-		public static final String OE287 = "155355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE287 = 155355;
 		
-		public static final String OE288 = "155773AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE288 = 155773;
 		
-		public static final String OE289 = "155839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE289 = 155839;
 		
-		public static final String OE290 = "155899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE290 = 155899;
 		
-		public static final String OE291 = "156111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE291 = 156111;
 		
-		public static final String OE292 = "156208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE292 = 156208;
 		
-		public static final String OE293 = "156354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE293 = 156354;
 		
-		public static final String OE294 = "156504AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE294 = 156504;
 		
-		public static final String OE295 = "156505AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE295 = 156505;
 		
-		public static final String OE296 = "156506AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE296 = 156506;
 		
-		public static final String OE297 = "157482AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE297 = 157482;
 		
-		public static final String OE298 = "157617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE298 = 157617;
 		
-		public static final String OE299 = "157713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE299 = 157713;
 		
-		public static final String OE300 = "157718AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE300 = 157718;
 		
-		public static final String OE301 = "158183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE301 = 158183;
 		
-		public static final String OE302 = "158496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE302 = 158496;
 		
-		public static final String OE303 = "158778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE303 = 158778;
 		
-		public static final String OE304 = "158807AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE304 = 158807;
 		
-		public static final String OE305 = "159129AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE305 = 159129;
 		
-		public static final String OE306 = "159317AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE306 = 159317;
 		
-		public static final String OE307 = "160230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE307 = 160230;
 		
-		public static final String OE308 = "160923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE308 = 160923;
 		
-		public static final String OE309 = "162236AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE309 = 162236;
 		
-		public static final String OE310 = "162835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE310 = 162835;
 		
-		public static final String OE311 = "163032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OE311 = 163032;
 		
 		//Ear infections
-		public static final String ERA1 = "110189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ERA1 = 110189;
 		
-		public static final String ERA2 = "110889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ERA2 = 110889;
 		
-		public static final String ERA3 = "117086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ERA3 = 117086;
 		
-		public static final String ERA4 = "117087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ERA4 = 117087;
 		
-		public static final String ERA5 = "123119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ERA5 = 123119;
 		
-		public static final String ERA6 = "139740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ERA6 = 139740;
 		
-		public static final String ERA7 = "156628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ERA7 = 156628;
 		
 		//Atshima cases
 		
-		public static final String ASTHMA1 = "4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA1 = 4;
 		
-		public static final String ASTHMA2 = "110826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA2 = 110826;
 		
-		public static final String ASTHMA3 = "113017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA3 = 113017;
 		
-		public static final String ASTHMA4 = "113018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA4 = 113018;
 		
-		public static final String ASTHMA5 = "116632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA5 = 116632;
 		
-		public static final String ASTHMA6 = "116633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA6 = 116633;
 		
-		public static final String ASTHMA7 = "116634AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA7 = 116634;
 		
-		public static final String ASTHMA8 = "116635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA8 = 116635;
 		
-		public static final String ASTHMA9 = "118494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA9 = 118494;
 		
-		public static final String ASTHMA10 = "119500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA10 = 119500;
 		
-		public static final String ASTHMA11 = "120675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA11 = 120675;
 		
-		public static final String ASTHMA12 = "120676AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA12 = 120676;
 		
-		public static final String ASTHMA13 = "121366AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA13 = 121366;
 		
-		public static final String ASTHMA14 = "121367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA14 = 121367;
 		
-		public static final String ASTHMA15 = "121369AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA15 = 121369;
 		
-		public static final String ASTHMA16 = "121372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA16 = 121372;
 		
-		public static final String ASTHMA17 = "121373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA17 = 121373;
 		
-		public static final String ASTHMA18 = "121375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA18 = 121375;
 		
-		public static final String ASTHMA19 = "121699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA19 = 121699;
 		
-		public static final String ASTHMA20 = "122838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA20 = 122838;
 		
-		public static final String ASTHMA21 = "125023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA21 = 125023;
 		
-		public static final String ASTHMA22 = "128465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA22 = 128465;
 		
-		public static final String ASTHMA23 = "129952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA23 = 129952;
 		
-		public static final String ASTHMA24 = "130070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA24 = 130070;
 		
-		public static final String ASTHMA25 = "132491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA25 = 132491;
 		
-		public static final String ASTHMA26 = "134026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA26 = 134026;
 		
-		public static final String ASTHMA27 = "134121AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA27 = 134121;
 		
-		public static final String ASTHMA28 = "134161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA28 = 134161;
 		
-		public static final String ASTHMA29 = "134557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA29 = 134557;
 		
-		public static final String ASTHMA30 = "136032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA30 = 136032;
 		
-		public static final String ASTHMA31 = "136577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA31 = 136577;
 		
-		public static final String ASTHMA32 = "136578AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA32 = 136578;
 		
-		public static final String ASTHMA33 = "139094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA33 = 139094;
 		
-		public static final String ASTHMA34 = "139212AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA34 = 139212;
 		
-		public static final String ASTHMA35 = "140234AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA35 = 140234;
 		
-		public static final String ASTHMA36 = "140848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA36 = 140848;
 		
-		public static final String ASTHMA37 = "140849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA37 = 140849;
 		
-		public static final String ASTHMA38 = "140850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA38 = 140850;
 		
-		public static final String ASTHMA39 = "140926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA39 = 140926;
 		
-		public static final String ASTHMA40 = "143261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA40 = 143261;
 		
-		public static final String ASTHMA41 = "145683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA41 = 145683;
 		
-		public static final String ASTHMA42 = "145742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA42 = 145742;
 		
-		public static final String ASTHMA43 = "146186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA43 = 146186;
 		
-		public static final String ASTHMA44 = "147994AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA44 = 147994;
 		
-		public static final String ASTHMA45 = "148272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA45 = 148272;
 		
-		public static final String ASTHMA46 = "148273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA46 = 148273;
 		
-		public static final String ASTHMA47 = "148307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA47 = 148307;
 		
-		public static final String ASTHMA48 = "149075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA48 = 149075;
 		
-		public static final String ASTHMA49 = "149319AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA49 = 149319;
 		
-		public static final String ASTHMA50 = "149899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA50 = 149899;
 		
-		public static final String ASTHMA51 = "153753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA51 = 153753;
 		
-		public static final String ASTHMA52 = "153754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA52 = 153754;
 		
-		public static final String ASTHMA53 = "155022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA53 = 155022;
 		
-		public static final String ASTHMA54 = "155180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA54 = 155180;
 		
-		public static final String ASTHMA55 = "155181AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA55 = 155181;
 		
-		public static final String ASTHMA56 = "157788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA56 = 157788;
 		
-		public static final String ASTHMA57 = "157792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA57 = 157792;
 		
-		public static final String ASTHMA58 = "157802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ASTHMA58 = 157802;
 		
 		//Tonsililites
-		public static final String TONSILITIES = "112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TONSILITIES = 112;
 		
 		//Chromosomes abnomarlities
-		public static final String CHRAB1 = "116496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB1 = 116496;
 		
-		public static final String CHRAB2 = "116497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB2 = 116497;
 		
-		public static final String CHRAB3 = "116498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB3 = 116498;
 		
-		public static final String CHRAB4 = "120684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB4 = 120684;
 		
-		public static final String CHRAB5 = "120685AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB5 = 120685;
 		
-		public static final String CHRAB6 = "140250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB6 = 140250;
 		
-		public static final String CHRAB7 = "140251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB7 = 140251;
 		
-		public static final String CHRAB8 = "145521AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB8 = 145521;
 		
-		public static final String CHRAB9 = "154401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB9 = 154401;
 		
-		public static final String CHRAB10 = "157676AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CHRAB10 = 157676;
 		
 		//congenal anoamalies
-		public static final String COAN1 = "119927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN1 = 119927;
 		
-		public static final String COAN2 = "119946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN2 = 119946;
 		
-		public static final String COAN3 = "119947AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN3 = 119947;
 		
-		public static final String COAN4 = "119956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN4 = 119956;
 		
-		public static final String COAN5 = "120020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN5 = 120020;
 		
-		public static final String COAN7 = "120024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN7 = 120024;
 		
-		public static final String COAN8 = "120025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN8 = 120025;
 		
-		public static final String COAN9 = "120026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN9 = 120026;
 		
-		public static final String COAN10 = "120028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN10 = 120028;
 		
-		public static final String COAN11 = "120031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN11 = 120031;
 		
-		public static final String COAN12 = "120032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN12 = 120032;
 		
-		public static final String COAN13 = "120036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN13 = 120036;
 		
-		public static final String COAN14 = "120043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN14 = 120043;
 		
-		public static final String COAN15 = "120045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN15 = 120045;
 		
-		public static final String COAN16 = "120048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN16 = 120048;
 		
-		public static final String COAN17 = "120049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN17 = 120049;
 		
-		public static final String COAN18 = "120051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN18 = 120051;
 		
-		public static final String COAN19 = "120053AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN19 = 120053;
 		
-		public static final String COAN20 = "120055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN20 = 120055;
 		
-		public static final String COAN21 = "120058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN21 = 120058;
 		
-		public static final String COAN22 = "120060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN22 = 120060;
 		
-		public static final String COAN23 = "120064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN23 = 120064;
 		
-		public static final String COAN24 = "120066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN24 = 120066;
 		
-		public static final String COAN25 = "120067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN25 = 120067;
 		
-		public static final String COAN26 = "120070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN26 = 120070;
 		
-		public static final String COAN27 = "120071AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN27 = 120071;
 		
-		public static final String COAN28 = "120073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN28 = 120073;
 		
-		public static final String COAN29 = "120076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN29 = 120076;
 		
-		public static final String COAN30 = "120077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN30 = 120077;
 		
-		public static final String COAN31 = "120080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN31 = 120080;
 		
-		public static final String COAN32 = "120082AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN32 = 120082;
 		
-		public static final String COAN33 = "120085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN33 = 120085;
 		
-		public static final String COAN34 = "120088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN34 = 120088;
 		
-		public static final String COAN35 = "120090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN35 = 120090;
 		
-		public static final String COAN36 = "120091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN36 = 120091;
 		
-		public static final String COAN37 = "120094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN37 = 120094;
 		
-		public static final String COAN38 = "120095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN38 = 120095;
 		
-		public static final String COAN39 = "120096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN39 = 120096;
 		
-		public static final String COAN40 = "120099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN40 = 120099;
 		
-		public static final String COAN41 = "120101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN41 = 120101;
 		
-		public static final String COAN42 = "120102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN42 = 120102;
 		
-		public static final String COAN43 = "120105AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN43 = 120105;
 		
-		public static final String COAN44 = "120107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN44 = 120107;
 		
-		public static final String COAN45 = "120108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN45 = 120108;
 		
-		public static final String COAN46 = "120111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN46 = 120111;
 		
-		public static final String COAN47 = "120113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN47 = 120113;
 		
-		public static final String COAN48 = "120115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN48 = 120115;
 		
-		public static final String COAN49 = "120117AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN49 = 120117;
 		
-		public static final String COAN50 = "120119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN50 = 120119;
 		
-		public static final String COAN51 = "120122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN51 = 120122;
 		
-		public static final String COAN52 = "120125AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN52 = 120125;
 		
-		public static final String COAN53 = "120126AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN53 = 120126;
 		
-		public static final String COAN54 = "120141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN54 = 120141;
 		
-		public static final String COAN55 = "120143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN55 = 120143;
 		
-		public static final String COAN56 = "120144AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN56 = 120144;
 		
-		public static final String COAN57 = "120765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN57 = 120765;
 		
-		public static final String COAN58 = "120766AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN58 = 120766;
 		
-		public static final String COAN59 = "121595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN59 = 121595;
 		
-		public static final String COAN60 = "140449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN60 = 140449;
 		
-		public static final String COAN61 = "140450AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN61 = 140450;
 		
-		public static final String COAN62 = "140453AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN62 = 140453;
 		
-		public static final String COAN63 = "140456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN63 = 140456;
 		
-		public static final String COAN64 = "144159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN64 = 144159;
 		
-		public static final String COAN65 = "144160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN65 = 144160;
 		
-		public static final String COAN66 = "144161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN66 = 144161;
 		
-		public static final String COAN67 = "144162AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN67 = 144162;
 		
-		public static final String COAN68 = "144163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN68 = 144163;
 		
-		public static final String COAN69 = "144164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN69 = 144164;
 		
-		public static final String COAN70 = "144165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN70 = 144165;
 		
-		public static final String COAN71 = "144166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN71 = 144166;
 		
-		public static final String COAN72 = "144167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN72 = 144167;
 		
-		public static final String COAN73 = "144168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN73 = 144168;
 		
-		public static final String COAN74 = "144169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN74 = 144169;
 		
-		public static final String COAN75 = "144171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN75 = 144171;
 		
-		public static final String COAN76 = "144172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN76 = 144172;
 		
-		public static final String COAN77 = "144173AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN77 = 144173;
 		
-		public static final String COAN78 = "144174AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN78 = 144174;
 		
-		public static final String COAN79 = "144177AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN79 = 144177;
 		
-		public static final String COAN80 = "144178AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN80 = 144178;
 		
-		public static final String COAN81 = "144179AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN81 = 144179;
 		
-		public static final String COAN82 = "144180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN82 = 144180;
 		
-		public static final String COAN83 = "144181AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN83 = 144181;
 		
-		public static final String COAN84 = "144182AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN84 = 144182;
 		
-		public static final String COAN85 = "144183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN85 = 144183;
 		
-		public static final String COAN86 = "144184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN86 = 144184;
 		
-		public static final String COAN87 = "144185AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN87 = 144185;
 		
-		public static final String COAN88 = "144187AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN88 = 144187;
 		
-		public static final String COAN89 = "144188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN89 = 144188;
 		
-		public static final String COAN90 = "144189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN90 = 144189;
 		
-		public static final String COAN91 = "144191AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN91 = 144191;
 		
-		public static final String COAN92 = "144192AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN92 = 144192;
 		
-		public static final String COAN93 = "144193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN93 = 144193;
 		
-		public static final String COAN94 = "144194AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN94 = 144194;
 		
-		public static final String COAN95 = "144195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN95 = 144195;
 		
-		public static final String COAN96 = "144196AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN96 = 144196;
 		
-		public static final String COAN97 = "144197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN97 = 144197;
 		
-		public static final String COAN98 = "144198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN98 = 144198;
 		
-		public static final String COAN99 = "144199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN99 = 144199;
 		
-		public static final String COAN100 = "144200AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN100 = 144200;
 		
-		public static final String COAN101 = "144202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN101 = 144202;
 		
-		public static final String COAN120 = "144222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN120 = 144222;
 		
-		public static final String COAN121 = "144223AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN121 = 144223;
 		
-		public static final String COAN122 = "144224AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN122 = 144224;
 		
-		public static final String COAN123 = "144225AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN123 = 144225;
 		
-		public static final String COAN124 = "144226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN124 = 144226;
 		
-		public static final String COAN125 = "144227AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN125 = 144227;
 		
-		public static final String COAN126 = "144228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN126 = 144228;
 		
-		public static final String COAN127 = "144230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN127 = 144230;
 		
-		public static final String COAN128 = "144231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN128 = 144231;
 		
-		public static final String COAN129 = "144232AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN129 = 144232;
 		
-		public static final String COAN130 = "144233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN130 = 144233;
 		
-		public static final String COAN131 = "144237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN131 = 144237;
 		
-		public static final String COAN132 = "144238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN132 = 144238;
 		
-		public static final String COAN133 = "144239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN133 = 144239;
 		
-		public static final String COAN134 = "144240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN134 = 144240;
 		
-		public static final String COAN135 = "144242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN135 = 144242;
 		
-		public static final String COAN136 = "144243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN136 = 144243;
 		
-		public static final String COAN137 = "144244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN137 = 144244;
 		
-		public static final String COAN138 = "144245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN138 = 144245;
 		
-		public static final String COAN139 = "144246AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN139 = 144246;
 		
-		public static final String COAN140 = "144247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN140 = 144247;
 		
-		public static final String COAN141 = "144248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN141 = 144248;
 		
-		public static final String COAN142 = "144249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN142 = 144249;
 		
-		public static final String COAN143 = "144250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN143 = 144250;
 		
-		public static final String COAN144 = "144251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN144 = 144251;
 		
-		public static final String COAN145 = "144252AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN145 = 144252;
 		
-		public static final String COAN146 = "144253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN146 = 144253;
 		
-		public static final String COAN147 = "144254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN147 = 144254;
 		
-		public static final String COAN148 = "144255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN148 = 144255;
 		
-		public static final String COAN149 = "144256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN149 = 144256;
 		
-		public static final String COAN150 = "144257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN150 = 144257;
 		
-		public static final String COAN151 = "144258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN151 = 144258;
 		
-		public static final String COAN152 = "144259AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN152 = 144259;
 		
-		public static final String COAN153 = "144260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN153 = 144260;
 		
-		public static final String COAN154 = "144261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN154 = 144261;
 		
-		public static final String COAN155 = "151524AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN155 = 151524;
 		
-		public static final String COAN156 = "151686AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN156 = 151686;
 		
-		public static final String COAN157 = "152443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN157 = 152443;
 		
-		public static final String COAN158 = "155681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN158 = 155681;
 		
-		public static final String COAN159 = "155682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN159 = 155682;
 		
-		public static final String COAN160 = "155683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN160 = 155683;
 		
-		public static final String COAN161 = "163390AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COAN161 = 163390;
 		
 		//pneumonia
-		public static final String PNEUMONIA_1 = "42AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_1 = 42;
 		
-		public static final String PNEUMONIA_2 = "482AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_2 = 482;
 		
-		public static final String PNEUMONIA_3 = "882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_3 = 882;
 		
-		public static final String PNEUMONIA_4 = "1215AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_4 = 1215;
 		
-		public static final String PNEUMONIA_6 = "5024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_6 = 5024;
 		
-		public static final String PNEUMONIA_7 = "110131AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_7 = 110131;
 		
-		public static final String PNEUMONIA_8 = "110290AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_8 = 110290;
 		
-		public static final String PNEUMONIA_9 = "110839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_9 = 110839;
 		
-		public static final String PNEUMONIA_11 = "111802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_11 = 111802;
 		
-		public static final String PNEUMONIA_12 = "112744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_12 = 112744;
 		
-		public static final String PNEUMONIA_13 = "113020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_13 = 113020;
 		
-		public static final String PNEUMONIA_14 = "113809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_14 = 113809;
 		
-		public static final String PNEUMONIA_15 = "114096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_15 = 114096;
 		
-		public static final String PNEUMONIA_16 = "114099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_16 = 114099;
 		
-		public static final String PNEUMONIA_17 = "114100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_17 = 114100;
 		
-		public static final String PNEUMONIA_18 = "114105AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_18 = 114105;
 		
-		public static final String PNEUMONIA_19 = "114106AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_19 = 114106;
 		
-		public static final String PNEUMONIA_20 = "115379AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_20 = 115379;
 		
-		public static final String PNEUMONIA_21 = "115447AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_21 = 115447;
 		
-		public static final String PNEUMONIA_23 = "116709AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_23 = 116709;
 		
-		public static final String PNEUMONIA_24 = "119679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_24 = 119679;
 		
-		public static final String PNEUMONIA_25 = "119680AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_25 = 119680;
 		
-		public static final String PNEUMONIA_26 = "120724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_26 = 120724;
 		
-		public static final String PNEUMONIA_27 = "120725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_27 = 120725;
 		
-		public static final String PNEUMONIA_28 = "121252AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_28 = 121252;
 		
-		public static final String PNEUMONIA_29 = "121254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_29 = 121254;
 		
-		public static final String PNEUMONIA_30 = "121268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_30 = 121268;
 		
-		public static final String PNEUMONIA_31 = "121269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_31 = 121269;
 		
-		public static final String PNEUMONIA_32 = "121392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_32 = 121392;
 		
-		public static final String PNEUMONIA_33 = "123098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_33 = 123098;
 		
-		public static final String PNEUMONIA_34 = "123742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_34 = 123742;
 		
-		public static final String PNEUMONIA_35 = "123743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_35 = 123743;
 		
-		public static final String PNEUMONIA_36 = "124979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_36 = 124979;
 		
-		public static final String PNEUMONIA_37 = "127199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_37 = 127199;
 		
-		public static final String PNEUMONIA_38 = "127429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_38 = 127429;
 		
-		public static final String PNEUMONIA_39 = "128334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_39 = 128334;
 		
-		public static final String PNEUMONIA_40 = "128429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_40 = 128429;
 		
-		public static final String PNEUMONIA_41 = "129467AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_41 = 129467;
 		
-		public static final String PNEUMONIA_42 = "130007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_42 = 130007;
 		
-		public static final String PNEUMONIA_43 = "130008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_43 = 130008;
 		
-		public static final String PNEUMONIA_44 = "130009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_44 = 130009;
 		
-		public static final String PNEUMONIA_45 = "130010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_45 = 130010;
 		
-		public static final String PNEUMONIA_46 = "130011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_46 = 130011;
 		
-		public static final String PNEUMONIA_47 = "130012AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_47 = 130012;
 		
-		public static final String PNEUMONIA_48 = "130013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_48 = 130013;
 		
-		public static final String PNEUMONIA_49 = "130014AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_49 = 130014;
 		
-		public static final String PNEUMONIA_50 = "130015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_50 = 130015;
 		
-		public static final String PNEUMONIA_51 = "130018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_51 = 130018;
 		
-		public static final String PNEUMONIA_52 = "130019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_52 = 130019;
 		
-		public static final String PNEUMONIA_53 = "130020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_53 = 130020;
 		
-		public static final String PNEUMONIA_55 = "130021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_55 = 130021;
 		
-		public static final String PNEUMONIA_56 = "130036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_56 = 130036;
 		
-		public static final String PNEUMONIA_57 = "130050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_57 = 130050;
 		
-		public static final String PNEUMONIA_58 = "130164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_58 = 130164;
 		
-		public static final String PNEUMONIA_59 = "130880AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_59 = 130880;
 		
-		public static final String PNEUMONIA_60 = "130885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_60 = 130885;
 		
-		public static final String PNEUMONIA_61 = "131697AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_61 = 131697;
 		
-		public static final String PNEUMONIA_62 = "131709AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_62 = 131709;
 		
-		public static final String PNEUMONIA_63 = "135458AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_63 = 135458;
 		
-		public static final String PNEUMONIA_64 = "135695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_64 = 135695;
 		
-		public static final String PNEUMONIA_65 = "135701AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_65 = 135701;
 		
-		public static final String PNEUMONIA_66 = "137164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_66 = 137164;
 		
-		public static final String PNEUMONIA_67 = "137166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_67 = 137166;
 		
-		public static final String PNEUMONIA_68 = "137167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_68 = 137167;
 		
-		public static final String PNEUMONIA_69 = "137255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_69 = 137255;
 		
-		public static final String PNEUMONIA_70 = "137256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_70 = 137256;
 		
-		public static final String PNEUMONIA_71 = "138005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_71 = 138005;
 		
-		public static final String PNEUMONIA_72 = "138006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_72 = 138006;
 		
-		public static final String PNEUMONIA_73 = "138584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_73 = 138584;
 		
-		public static final String PNEUMONIA_74 = "138592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_74 = 138592;
 		
-		public static final String PNEUMONIA_75 = "138876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_75 = 138876;
 		
-		public static final String PNEUMONIA_76 = "139077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_76 = 139077;
 		
-		public static final String PNEUMONIA_77 = "139160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_77 = 139160;
 		
-		public static final String PNEUMONIA_78 = "139243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_78 = 139243;
 		
-		public static final String PNEUMONIA_79 = "139468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_79 = 139468;
 		
-		public static final String PNEUMONIA_80 = "139639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_80 = 139639;
 		
-		public static final String PNEUMONIA_81 = "139933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_81 = 139933;
 		
-		public static final String PNEUMONIA_82 = "141182AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_82 = 141182;
 		
-		public static final String PNEUMONIA_83 = "141278AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_83 = 141278;
 		
-		public static final String PNEUMONIA_84 = "142515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_84 = 142515;
 		
-		public static final String PNEUMONIA_85 = "143772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_85 = 143772;
 		
-		public static final String PNEUMONIA_86 = "144541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_86 = 144541;
 		
-		public static final String PNEUMONIA_87 = "144625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_87 = 144625;
 		
-		public static final String PNEUMONIA_88 = "145698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_88 = 145698;
 		
-		public static final String PNEUMONIA_89 = "146885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_89 = 146885;
 		
-		public static final String PNEUMONIA_90 = "147378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_90 = 147378;
 		
-		public static final String PNEUMONIA_91 = "148309AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_91 = 148309;
 		
-		public static final String PNEUMONIA_92 = "148310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_92 = 148310;
 		
-		public static final String PNEUMONIA_93 = "148311AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_93 = 148311;
 		
-		public static final String PNEUMONIA_94 = "148312AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_94 = 148312;
 		
-		public static final String PNEUMONIA_95 = "148313AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_95 = 148313;
 		
-		public static final String PNEUMONIA_96 = "148314AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_96 = 148314;
 		
-		public static final String PNEUMONIA_97 = "148601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_97 = 148601;
 		
-		public static final String PNEUMONIA_98 = "148986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_98 = 148986;
 		
-		public static final String PNEUMONIA_99 = "149089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_99 = 149089;
 		
-		public static final String PNEUMONIA_100 = "149417AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_100 = 149417;
 		
-		public static final String PNEUMONIA_101 = "149425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_101 = 149425;
 		
-		public static final String PNEUMONIA_102 = "150155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_102 = 150155;
 		
-		public static final String PNEUMONIA_103 = "150584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_103 = 150584;
 		
-		public static final String PNEUMONIA_107 = "155714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_107 = 155714;
 		
-		public static final String PNEUMONIA_108 = "155715AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_108 = 155715;
 		
-		public static final String PNEUMONIA_109 = "155716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_109 = 155716;
 		
-		public static final String PNEUMONIA_110 = "155717AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_110 = 155717;
 		
-		public static final String PNEUMONIA_111 = "155718AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_111 = 155718;
 		
-		public static final String PNEUMONIA_112 = "155719AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_112 = 155719;
 		
-		public static final String PNEUMONIA_113 = "156818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_113 = 156818;
 		
-		public static final String PNEUMONIA_114 = "157468AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_114 = 157468;
 		
-		public static final String PNEUMONIA_115 = "157470AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_115 = 157470;
 		
-		public static final String PNEUMONIA_117 = "158384AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_117 = 158384;
 		
-		public static final String PNEUMONIA_118 = "158444AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_118 = 158444;
 		
-		public static final String PNEUMONIA_119 = "158647AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_119 = 158647;
 		
-		public static final String PNEUMONIA_120 = "158700AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_120 = 158700;
 		
-		public static final String PNEUMONIA_121 = "158702AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_121 = 158702;
 		
-		public static final String PNEUMONIA_122 = "159277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PNEUMONIA_122 = 159277;
 		
 		//respiratory disorders
-		public static final String OTHER_REP_1 = "148393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OTHER_REP_1 = 148393;
 		
-		public static final String OTHER_REP_2 = "158451AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OTHER_REP_2 = 158451;
 		
 		//Arbotion
-		public static final String ABORTION_1 = "50AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_1 = 50;
 		
-		public static final String ABORTION_2 = "112415AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_2 = 112415;
 		
-		public static final String ABORTION_3 = "112416AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_3 = 112416;
 		
-		public static final String ABORTION_4 = "112789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_4 = 112789;
 		
-		public static final String ABORTION_5 = "112791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_5 = 112791;
 		
-		public static final String ABORTION_6 = "112792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_6 = 112792;
 		
-		public static final String ABORTION_7 = "112793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_7 = 112793;
 		
-		public static final String ABORTION_8 = "112794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_8 = 112794;
 		
-		public static final String ABORTION_9 = "112795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_9 = 112795;
 		
-		public static final String ABORTION_10 = "112796AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_10 = 112796;
 		
-		public static final String ABORTION_11 = "112797AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_11 = 112797;
 		
-		public static final String ABORTION_12 = "116352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_12 = 116352;
 		
-		public static final String ABORTION_13 = "116353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_13 = 116353;
 		
-		public static final String ABORTION_14 = "116354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_14 = 116354;
 		
-		public static final String ABORTION_15 = "116357AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_15 = 116357;
 		
-		public static final String ABORTION_16 = "116359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_16 = 116359;
 		
-		public static final String ABORTION_17 = "116360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_17 = 116360;
 		
-		public static final String ABORTION_18 = "116361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_18 = 116361;
 		
-		public static final String ABORTION_19 = "117189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_19 = 117189;
 		
-		public static final String ABORTION_20 = "117212AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_20 = 117212;
 		
-		public static final String ABORTION_21 = "117213AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_21 = 117213;
 		
-		public static final String ABORTION_22 = "117214AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_22 = 117214;
 		
-		public static final String ABORTION_23 = "117215AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_23 = 117215;
 		
-		public static final String ABORTION_24 = "117216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_24 = 117216;
 		
-		public static final String ABORTION_25 = "117217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_25 = 117217;
 		
-		public static final String ABORTION_26 = "117218AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_26 = 117218;
 		
-		public static final String ABORTION_27 = "117221AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_27 = 117221;
 		
-		public static final String ABORTION_28 = "117222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_28 = 117222;
 		
-		public static final String ABORTION_29 = "117223AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_29 = 117223;
 		
-		public static final String ABORTION_30 = "117224AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_30 = 117224;
 		
-		public static final String ABORTION_31 = "117226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_31 = 117226;
 		
-		public static final String ABORTION_32 = "117228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_32 = 117228;
 		
-		public static final String ABORTION_33 = "117233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_33 = 117233;
 		
-		public static final String ABORTION_34 = "117237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_34 = 117237;
 		
-		public static final String ABORTION_35 = "117238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_35 = 117238;
 		
-		public static final String ABORTION_36 = "117241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_36 = 117241;
 		
-		public static final String ABORTION_37 = "117242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_37 = 117242;
 		
-		public static final String ABORTION_38 = "117243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_38 = 117243;
 		
-		public static final String ABORTION_39 = "117280AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_39 = 117280;
 		
-		public static final String ABORTION_40 = "117281AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_40 = 117281;
 		
-		public static final String ABORTION_41 = "117282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_41 = 117282;
 		
-		public static final String ABORTION_42 = "117283AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_42 = 117283;
 		
-		public static final String ABORTION_43 = "117285AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_43 = 117285;
 		
-		public static final String ABORTION_44 = "117287AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_44 = 117287;
 		
-		public static final String ABORTION_45 = "117289AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_45 = 117289;
 		
-		public static final String ABORTION_46 = "117290AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_46 = 117290;
 		
-		public static final String ABORTION_47 = "118370AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_47 = 118370;
 		
-		public static final String ABORTION_48 = "118371AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_48 = 118371;
 		
-		public static final String ABORTION_49 = "119671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_49 = 119671;
 		
-		public static final String ABORTION_50 = "120238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_50 = 120238;
 		
-		public static final String ABORTION_51 = "120260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_51 = 120260;
 		
-		public static final String ABORTION_52 = "120261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_52 = 120261;
 		
-		public static final String ABORTION_53 = "120262AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_53 = 120262;
 		
-		public static final String ABORTION_54 = "120263AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_54 = 120263;
 		
-		public static final String ABORTION_55 = "120268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_55 = 120268;
 		
-		public static final String ABORTION_56 = "120270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_56 = 120270;
 		
-		public static final String ABORTION_57 = "120271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_57 = 120271;
 		
-		public static final String ABORTION_58 = "120272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_58 = 120272;
 		
-		public static final String ABORTION_59 = "120274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_59 = 120274;
 		
-		public static final String ABORTION_60 = "120276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_60 = 120276;
 		
-		public static final String ABORTION_61 = "120282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_61 = 120282;
 		
-		public static final String ABORTION_62 = "120294AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_62 = 120294;
 		
-		public static final String ABORTION_63 = "120295AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_63 = 120295;
 		
-		public static final String ABORTION_64 = "122298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_64 = 122298;
 		
-		public static final String ABORTION_65 = "122299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_65 = 122299;
 		
-		public static final String ABORTION_66 = "122302AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_66 = 122302;
 		
-		public static final String ABORTION_67 = "122304AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_67 = 122304;
 		
-		public static final String ABORTION_68 = "122306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_68 = 122306;
 		
-		public static final String ABORTION_69 = "122308AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_69 = 122308;
 		
-		public static final String ABORTION_70 = "122310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_70 = 122310;
 		
-		public static final String ABORTION_71 = "123673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_71 = 123673;
 		
-		public static final String ABORTION_72 = "123674AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_72 = 123674;
 		
-		public static final String ABORTION_73 = "123677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_73 = 123677;
 		
-		public static final String ABORTION_74 = "123735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_74 = 123735;
 		
-		public static final String ABORTION_75 = "123736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_75 = 123736;
 		
-		public static final String ABORTION_76 = "124072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_76 = 124072;
 		
-		public static final String ABORTION_77 = "124819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_77 = 124819;
 		
-		public static final String ABORTION_78 = "124820AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_78 = 124820;
 		
-		public static final String ABORTION_79 = "124821AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_79 = 124821;
 		
-		public static final String ABORTION_80 = "124927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_80 = 124927;
 		
-		public static final String ABORTION_81 = "124956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_81 = 124956;
 		
-		public static final String ABORTION_82 = "126076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_82 = 126076;
 		
-		public static final String ABORTION_83 = "126077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_83 = 126077;
 		
-		public static final String ABORTION_84 = "126078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_84 = 126078;
 		
-		public static final String ABORTION_85 = "126079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_85 = 126079;
 		
-		public static final String ABORTION_86 = "126080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_86 = 126080;
 		
-		public static final String ABORTION_87 = "126081AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_87 = 126081;
 		
-		public static final String ABORTION_88 = "126082AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_88 = 126082;
 		
-		public static final String ABORTION_89 = "126083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_89 = 126083;
 		
-		public static final String ABORTION_90 = "126084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_90 = 126084;
 		
-		public static final String ABORTION_91 = "126085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_91 = 126085;
 		
-		public static final String ABORTION_92 = "126086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_92 = 126086;
 		
-		public static final String ABORTION_93 = "126087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_93 = 126087;
 		
-		public static final String ABORTION_94 = "126088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_94 = 126088;
 		
-		public static final String ABORTION_95 = "126089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_95 = 126089;
 		
-		public static final String ABORTION_96 = "126090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_96 = 126090;
 		
-		public static final String ABORTION_97 = "126091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_97 = 126091;
 		
-		public static final String ABORTION_98 = "126092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_98 = 126092;
 		
-		public static final String ABORTION_99 = "126093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_99 = 126093;
 		
-		public static final String ABORTION_100 = "126094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_100 = 126094;
 		
-		public static final String ABORTION_101 = "126095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_101 = 126095;
 		
-		public static final String ABORTION_102 = "126096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_102 = 126096;
 		
-		public static final String ABORTION_103 = "126097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_103 = 126097;
 		
-		public static final String ABORTION_104 = "126098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_104 = 126098;
 		
-		public static final String ABORTION_105 = "126099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_105 = 126099;
 		
-		public static final String ABORTION_106 = "126100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_106 = 126100;
 		
-		public static final String ABORTION_107 = "126101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_107 = 126101;
 		
-		public static final String ABORTION_108 = "126102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_108 = 126102;
 		
-		public static final String ABORTION_109 = "126103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_109 = 126103;
 		
-		public static final String ABORTION_110 = "126104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_110 = 126104;
 		
-		public static final String ABORTION_111 = "126105AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_111 = 126105;
 		
-		public static final String ABORTION_112 = "126106AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_112 = 126106;
 		
-		public static final String ABORTION_113 = "126107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_113 = 126107;
 		
-		public static final String ABORTION_114 = "126108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_114 = 126108;
 		
-		public static final String ABORTION_115 = "126109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_115 = 126109;
 		
-		public static final String ABORTION_116 = "126110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_116 = 126110;
 		
-		public static final String ABORTION_117 = "126111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_117 = 126111;
 		
-		public static final String ABORTION_118 = "126112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_118 = 126112;
 		
-		public static final String ABORTION_119 = "126113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_119 = 126113;
 		
-		public static final String ABORTION_120 = "126114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_120 = 126114;
 		
-		public static final String ABORTION_121 = "126115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_121 = 126115;
 		
-		public static final String ABORTION_122 = "126116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_122 = 126116;
 		
-		public static final String ABORTION_123 = "126117AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_123 = 126117;
 		
-		public static final String ABORTION_124 = "126118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_124 = 126118;
 		
-		public static final String ABORTION_125 = "126119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_125 = 126119;
 		
-		public static final String ABORTION_126 = "126120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_126 = 126120;
 		
-		public static final String ABORTION_127 = "126121AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_127 = 126121;
 		
-		public static final String ABORTION_128 = "126122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_128 = 126122;
 		
-		public static final String ABORTION_129 = "126123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_129 = 126123;
 		
-		public static final String ABORTION_130 = "126124AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_130 = 126124;
 		
-		public static final String ABORTION_131 = "126125AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_131 = 126125;
 		
-		public static final String ABORTION_132 = "126126AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_132 = 126126;
 		
-		public static final String ABORTION_133 = "126127AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_133 = 126127;
 		
-		public static final String ABORTION_134 = "126802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_134 = 126802;
 		
-		public static final String ABORTION_135 = "127586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_135 = 127586;
 		
-		public static final String ABORTION_136 = "127587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_136 = 127587;
 		
-		public static final String ABORTION_137 = "134100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_137 = 134100;
 		
-		public static final String ABORTION_138 = "135918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_138 = 135918;
 		
-		public static final String ABORTION_139 = "135919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_139 = 135919;
 		
-		public static final String ABORTION_140 = "135920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_140 = 135920;
 		
-		public static final String ABORTION_141 = "135921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_141 = 135921;
 		
-		public static final String ABORTION_142 = "135922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_142 = 135922;
 		
-		public static final String ABORTION_143 = "135923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_143 = 135923;
 		
-		public static final String ABORTION_144 = "135924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_144 = 135924;
 		
-		public static final String ABORTION_145 = "135925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_145 = 135925;
 		
-		public static final String ABORTION_146 = "135926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_146 = 135926;
 		
-		public static final String ABORTION_147 = "135927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_147 = 135927;
 		
-		public static final String ABORTION_148 = "135928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_148 = 135928;
 		
-		public static final String ABORTION_149 = "135929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_149 = 135929;
 		
-		public static final String ABORTION_150 = "135930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_150 = 135930;
 		
-		public static final String ABORTION_151 = "135931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_151 = 135931;
 		
-		public static final String ABORTION_152 = "135932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_152 = 135932;
 		
-		public static final String ABORTION_153 = "135933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_153 = 135933;
 		
-		public static final String ABORTION_154 = "135934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_154 = 135934;
 		
-		public static final String ABORTION_155 = "135935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_155 = 135935;
 		
-		public static final String ABORTION_156 = "135936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_156 = 135936;
 		
-		public static final String ABORTION_157 = "135937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_157 = 135937;
 		
-		public static final String ABORTION_158 = "135938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_158 = 135938;
 		
-		public static final String ABORTION_159 = "135939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_159 = 135939;
 		
-		public static final String ABORTION_160 = "135940AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_160 = 135940;
 		
-		public static final String ABORTION_161 = "135941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_161 = 135941;
 		
-		public static final String ABORTION_176 = "135942AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_176 = 135942;
 		
-		public static final String ABORTION_177 = "135943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_177 = 135943;
 		
-		public static final String ABORTION_162 = "135944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_162 = 135944;
 		
-		public static final String ABORTION_163 = "135945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_163 = 135945;
 		
-		public static final String ABORTION_164 = "135946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_164 = 135946;
 		
-		public static final String ABORTION_165 = "135947AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_165 = 135947;
 		
-		public static final String ABORTION_166 = "135948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_166 = 135948;
 		
-		public static final String ABORTION_167 = "135949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_167 = 135949;
 		
-		public static final String ABORTION_168 = "135950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_168 = 135950;
 		
-		public static final String ABORTION_169 = "135951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_169 = 135951;
 		
-		public static final String ABORTION_170 = "135952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_170 = 135952;
 		
-		public static final String ABORTION_171 = "135953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_171 = 135953;
 		
-		public static final String ABORTION_172 = "135954AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_172 = 135954;
 		
-		public static final String ABORTION_173 = "135955AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_173 = 135955;
 		
-		public static final String ABORTION_174 = "135956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_174 = 135956;
 		
-		public static final String ABORTION_175 = "135957AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_175 = 135957;
 		
-		public static final String ABORTION_178 = "135958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_178 = 135958;
 		
-		public static final String ABORTION_179 = "135959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_179 = 135959;
 		
-		public static final String ABORTION_180 = "135960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_180 = 135960;
 		
-		public static final String ABORTION_181 = "135961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_181 = 135961;
 		
-		public static final String ABORTION_182 = "135962AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_182 = 135962;
 		
-		public static final String ABORTION_183 = "135963AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_183 = 135963;
 		
-		public static final String ABORTION_185 = "135964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_185 = 135964;
 		
-		public static final String ABORTION_186 = "135965AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_186 = 135965;
 		
-		public static final String ABORTION_187 = "137611AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_187 = 137611;
 		
-		public static final String ABORTION_188 = "137612AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_188 = 137612;
 		
-		public static final String ABORTION_189 = "137614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_189 = 137614;
 		
-		public static final String ABORTION_190 = "137615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_190 = 137615;
 		
-		public static final String ABORTION_191 = "137616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_191 = 137616;
 		
-		public static final String ABORTION_192 = "137618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_192 = 137618;
 		
-		public static final String ABORTION_193 = "137625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_193 = 137625;
 		
-		public static final String ABORTION_194 = "137628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_194 = 137628;
 		
-		public static final String ABORTION_195 = "137629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_195 = 137629;
 		
-		public static final String ABORTION_196 = "137630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_196 = 137630;
 		
-		public static final String ABORTION_197 = "137631AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_197 = 137631;
 		
-		public static final String ABORTION_198 = "137632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_198 = 137632;
 		
-		public static final String ABORTION_199 = "137633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_199 = 137633;
 		
-		public static final String ABORTION_200 = "137795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_200 = 137795;
 		
-		public static final String ABORTION_201 = "137796AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_201 = 137796;
 		
-		public static final String ABORTION_202 = "137797AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_202 = 137797;
 		
-		public static final String ABORTION_203 = "137798AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_203 = 137798;
 		
-		public static final String ABORTION_204 = "137799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_204 = 137799;
 		
-		public static final String ABORTION_205 = "137800AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_205 = 137800;
 		
-		public static final String ABORTION_206 = "137801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_206 = 137801;
 		
-		public static final String ABORTION_207 = "137802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_207 = 137802;
 		
-		public static final String ABORTION_208 = "137803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_208 = 137803;
 		
-		public static final String ABORTION_209 = "137804AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_209 = 137804;
 		
-		public static final String ABORTION_210 = "137805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_210 = 137805;
 		
-		public static final String ABORTION_211 = "137806AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_211 = 137806;
 		
-		public static final String ABORTION_212 = "137807AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_212 = 137807;
 		
-		public static final String ABORTION_213 = "137808AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_213 = 137808;
 		
-		public static final String ABORTION_214 = "137809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_214 = 137809;
 		
-		public static final String ABORTION_215 = "137810AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_215 = 137810;
 		
-		public static final String ABORTION_216 = "137811AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_216 = 137811;
 		
-		public static final String ABORTION_217 = "137812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_217 = 137812;
 		
-		public static final String ABORTION_218 = "137813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_218 = 137813;
 		
-		public static final String ABORTION_219 = "137814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_219 = 137814;
 		
-		public static final String ABORTION_220 = "137815AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_220 = 137815;
 		
-		public static final String ABORTION_221 = "137816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_221 = 137816;
 		
-		public static final String ABORTION_222 = "137817AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_222 = 137817;
 		
-		public static final String ABORTION_223 = "137818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_223 = 137818;
 		
-		public static final String ABORTION_224 = "137819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_224 = 137819;
 		
-		public static final String ABORTION_225 = "137820AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_225 = 137820;
 		
-		public static final String ABORTION_226 = "137821AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_226 = 137821;
 		
-		public static final String ABORTION_227 = "137822AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_227 = 137822;
 		
-		public static final String ABORTION_228 = "137823AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_228 = 137823;
 		
-		public static final String ABORTION_229 = "137824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_229 = 137824;
 		
-		public static final String ABORTION_230 = "137825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_230 = 137825;
 		
-		public static final String ABORTION_231 = "137826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_231 = 137826;
 		
-		public static final String ABORTION_232 = "137827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_232 = 137827;
 		
-		public static final String ABORTION_233 = "137828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_233 = 137828;
 		
-		public static final String ABORTION_234 = "137829AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_234 = 137829;
 		
-		public static final String ABORTION_235 = "137830AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_235 = 137830;
 		
-		public static final String ABORTION_236 = "137831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_236 = 137831;
 		
-		public static final String ABORTION_237 = "137832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_237 = 137832;
 		
-		public static final String ABORTION_238 = "137833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_238 = 137833;
 		
-		public static final String ABORTION_239 = "137834AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_239 = 137834;
 		
-		public static final String ABORTION_240 = "137835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_240 = 137835;
 		
-		public static final String ABORTION_241 = "137836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_241 = 137836;
 		
-		public static final String ABORTION_242 = "137837AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_242 = 137837;
 		
-		public static final String ABORTION_243 = "137838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_243 = 137838;
 		
-		public static final String ABORTION_244 = "137839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_244 = 137839;
 		
-		public static final String ABORTION_245 = "137840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_245 = 137840;
 		
-		public static final String ABORTION_246 = "137841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_246 = 137841;
 		
-		public static final String ABORTION_247 = "137842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_247 = 137842;
 		
-		public static final String ABORTION_248 = "137843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_248 = 137843;
 		
-		public static final String ABORTION_250 = "140264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_250 = 140264;
 		
-		public static final String ABORTION_251 = "140735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_251 = 140735;
 		
-		public static final String ABORTION_252 = "140736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_252 = 140736;
 		
-		public static final String ABORTION_253 = "140737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_253 = 140737;
 		
-		public static final String ABORTION_254 = "140738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_254 = 140738;
 		
-		public static final String ABORTION_255 = "140739AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_255 = 140739;
 		
-		public static final String ABORTION_256 = "140740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_256 = 140740;
 		
-		public static final String ABORTION_257 = "140741AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_257 = 140741;
 		
-		public static final String ABORTION_258 = "140742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_258 = 140742;
 		
-		public static final String ABORTION_259 = "140743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_259 = 140743;
 		
-		public static final String ABORTION_260 = "140744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_260 = 140744;
 		
-		public static final String ABORTION_261 = "140745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_261 = 140745;
 		
-		public static final String ABORTION_262 = "140746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_262 = 140746;
 		
-		public static final String ABORTION_263 = "140747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_263 = 140747;
 		
-		public static final String ABORTION_264 = "140748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_264 = 140748;
 		
-		public static final String ABORTION_265 = "140749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_265 = 140749;
 		
-		public static final String ABORTION_266 = "140750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_266 = 140750;
 		
-		public static final String ABORTION_267 = "140751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_267 = 140751;
 		
-		public static final String ABORTION_268 = "140752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_268 = 140752;
 		
-		public static final String ABORTION_269 = "140753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_269 = 140753;
 		
-		public static final String ABORTION_270 = "140754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_270 = 140754;
 		
-		public static final String ABORTION_271 = "140755AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_271 = 140755;
 		
-		public static final String ABORTION_272 = "140756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_272 = 140756;
 		
-		public static final String ABORTION_273 = "140757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_273 = 140757;
 		
-		public static final String ABORTION_274 = "140759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_274 = 140759;
 		
-		public static final String ABORTION_275 = "140760AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_275 = 140760;
 		
-		public static final String ABORTION_276 = "140761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_276 = 140761;
 		
-		public static final String ABORTION_277 = "140762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_277 = 140762;
 		
-		public static final String ABORTION_278 = "140763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_278 = 140763;
 		
-		public static final String ABORTION_279 = "140764AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_279 = 140764;
 		
-		public static final String ABORTION_280 = "140765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_280 = 140765;
 		
-		public static final String ABORTION_281 = "140766AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_281 = 140766;
 		
-		public static final String ABORTION_282 = "140767AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_282 = 140767;
 		
-		public static final String ABORTION_283 = "140769AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_283 = 140769;
 		
-		public static final String ABORTION_284 = "140770AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_284 = 140770;
 		
-		public static final String ABORTION_285 = "140771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_285 = 140771;
 		
-		public static final String ABORTION_286 = "140772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_286 = 140772;
 		
-		public static final String ABORTION_287 = "140773AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_287 = 140773;
 		
-		public static final String ABORTION_288 = "140774AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_288 = 140774;
 		
-		public static final String ABORTION_289 = "140775AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_289 = 140775;
 		
-		public static final String ABORTION_290 = "140776AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_290 = 140776;
 		
-		public static final String ABORTION_291 = "140777AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_291 = 140777;
 		
-		public static final String ABORTION_292 = "140778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_292 = 140778;
 		
-		public static final String ABORTION_293 = "140779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_293 = 140779;
 		
-		public static final String ABORTION_294 = "140780AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_294 = 140780;
 		
-		public static final String ABORTION_295 = "140781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_295 = 140781;
 		
-		public static final String ABORTION_296 = "140782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_296 = 140782;
 		
-		public static final String ABORTION_297 = "140783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_297 = 140783;
 		
-		public static final String ABORTION_298 = "140784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_298 = 140784;
 		
-		public static final String ABORTION_299 = "140785AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_299 = 140785;
 		
-		public static final String ABORTION_300 = "140786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_300 = 140786;
 		
-		public static final String ABORTION_301 = "140787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_301 = 140787;
 		
-		public static final String ABORTION_302 = "140788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_302 = 140788;
 		
-		public static final String ABORTION_303 = "140789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_303 = 140789;
 		
-		public static final String ABORTION_304 = "140790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_304 = 140790;
 		
-		public static final String ABORTION_305 = "140791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_305 = 140791;
 		
-		public static final String ABORTION_306 = "141409AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_306 = 141409;
 		
-		public static final String ABORTION_307 = "142615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_307 = 142615;
 		
-		public static final String ABORTION_308 = "144490AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_308 = 144490;
 		
-		public static final String ABORTION_309 = "144491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_309 = 144491;
 		
-		public static final String ABORTION_310 = "144492AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_310 = 144492;
 		
-		public static final String ABORTION_311 = "144493AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_311 = 144493;
 		
-		public static final String ABORTION_312 = "144494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_312 = 144494;
 		
-		public static final String ABORTION_313 = "144495AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_313 = 144495;
 		
-		public static final String ABORTION_314 = "144496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_314 = 144496;
 		
-		public static final String ABORTION_315 = "144507AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_315 = 144507;
 		
-		public static final String ABORTION_316 = "144508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_316 = 144508;
 		
-		public static final String ABORTION_317 = "144509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_317 = 144509;
 		
-		public static final String ABORTION_318 = "144510AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_318 = 144510;
 		
-		public static final String ABORTION_319 = "144511AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_319 = 144511;
 		
-		public static final String ABORTION_320 = "144512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_320 = 144512;
 		
-		public static final String ABORTION_321 = "144513AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_321 = 144513;
 		
-		public static final String ABORTION_322 = "144514AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_322 = 144514;
 		
-		public static final String ABORTION_323 = "150740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_323 = 150740;
 		
-		public static final String ABORTION_324 = "150741AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_324 = 150741;
 		
-		public static final String ABORTION_325 = "150742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_325 = 150742;
 		
-		public static final String ABORTION_326 = "150743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_326 = 150743;
 		
-		public static final String ABORTION_327 = "150744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_327 = 150744;
 		
-		public static final String ABORTION_328 = "150745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_328 = 150745;
 		
-		public static final String ABORTION_329 = "150746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_329 = 150746;
 		
-		public static final String ABORTION_330 = "150747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_330 = 150747;
 		
-		public static final String ABORTION_331 = "150748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_331 = 150748;
 		
-		public static final String ABORTION_332 = "150749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_332 = 150749;
 		
-		public static final String ABORTION_333 = "150750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_333 = 150750;
 		
-		public static final String ABORTION_334 = "150751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_334 = 150751;
 		
-		public static final String ABORTION_335 = "150752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_335 = 150752;
 		
-		public static final String ABORTION_336 = "150753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_336 = 150753;
 		
-		public static final String ABORTION_337 = "150754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_337 = 150754;
 		
-		public static final String ABORTION_338 = "150755AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_338 = 150755;
 		
-		public static final String ABORTION_339 = "150756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_339 = 150756;
 		
-		public static final String ABORTION_340 = "150757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_340 = 150757;
 		
-		public static final String ABORTION_341 = "150758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_341 = 150758;
 		
-		public static final String ABORTION_342 = "150759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_342 = 150759;
 		
-		public static final String ABORTION_343 = "150760AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_343 = 150760;
 		
-		public static final String ABORTION_344 = "150761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_344 = 150761;
 		
-		public static final String ABORTION_345 = "150762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_345 = 150762;
 		
-		public static final String ABORTION_346 = "150763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_346 = 150763;
 		
-		public static final String ABORTION_347 = "150764AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_347 = 150764;
 		
-		public static final String ABORTION_348 = "150765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_348 = 150765;
 		
-		public static final String ABORTION_349 = "150766AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_349 = 150766;
 		
-		public static final String ABORTION_350 = "150767AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_350 = 150767;
 		
-		public static final String ABORTION_351 = "150768AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_351 = 150768;
 		
-		public static final String ABORTION_352 = "150769AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_352 = 150769;
 		
-		public static final String ABORTION_353 = "150770AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_353 = 150770;
 		
-		public static final String ABORTION_354 = "150771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_354 = 150771;
 		
-		public static final String ABORTION_355 = "150772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_355 = 150772;
 		
-		public static final String ABORTION_356 = "150773AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_356 = 150773;
 		
-		public static final String ABORTION_357 = "150774AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_357 = 150774;
 		
-		public static final String ABORTION_358 = "150775AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_358 = 150775;
 		
-		public static final String ABORTION_359 = "150776AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_359 = 150776;
 		
-		public static final String ABORTION_360 = "150777AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_360 = 150777;
 		
-		public static final String ABORTION_361 = "150778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_361 = 150778;
 		
-		public static final String ABORTION_362 = "150779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_362 = 150779;
 		
-		public static final String ABORTION_363 = "150780AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_363 = 150780;
 		
-		public static final String ABORTION_364 = "150781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_364 = 150781;
 		
-		public static final String ABORTION_365 = "150782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_365 = 150782;
 		
-		public static final String ABORTION_366 = "150783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_366 = 150783;
 		
-		public static final String ABORTION_367 = "150784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_367 = 150784;
 		
-		public static final String ABORTION_368 = "150785AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_368 = 150785;
 		
-		public static final String ABORTION_369 = "151743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_369 = 151743;
 		
-		public static final String ABORTION_370 = "155740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_370 = 155740;
 		
-		public static final String ABORTION_371 = "156218AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_371 = 156218;
 		
-		public static final String ABORTION_372 = "156219AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_372 = 156219;
 		
-		public static final String ABORTION_373 = "156220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_373 = 156220;
 		
-		public static final String ABORTION_374 = "156312AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_374 = 156312;
 		
-		public static final String ABORTION_375 = "158148AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_375 = 158148;
 		
-		public static final String ABORTION_376 = "158149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_376 = 158149;
 		
-		public static final String ABORTION_377 = "158150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_377 = 158150;
 		
-		public static final String ABORTION_378 = "158735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_378 = 158735;
 		
-		public static final String ABORTION_379 = "159066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_379 = 159066;
 		
-		public static final String ABORTION_380 = "159220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_380 = 159220;
 		
-		public static final String ABORTION_381 = "162206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ABORTION_381 = 162206;
 		
 		//DisOfPuerperiumChildbath
-		public static final String DPCB1 = "117058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB1 = 117058;
 		
-		public static final String DPCB2 = "118739AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB2 = 118739;
 		
-		public static final String DPCB3 = "123448AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB3 = 123448;
 		
-		public static final String DPCB4 = "127686AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB4 = 127686;
 		
-		public static final String DPCB5 = "127687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB5 = 127687;
 		
-		public static final String DPCB6 = "127688AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB6 = 127688;
 		
-		public static final String DPCB7 = "127689AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB7 = 127689;
 		
-		public static final String DPCB8 = "129240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB8 = 129240;
 		
-		public static final String DPCB9 = "130617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB9 = 130617;
 		
-		public static final String DPCB10 = "130637AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB10 = 130637;
 		
-		public static final String DPCB11 = "130638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB11 = 130638;
 		
-		public static final String DPCB12 = "130834AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB12 = 130834;
 		
-		public static final String DPCB13 = "134581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB13 = 134581;
 		
-		public static final String DPCB14 = "135361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB14 = 135361;
 		
-		public static final String DPCB15 = "139317AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB15 = 139317;
 		
-		public static final String DPCB16 = "141346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB16 = 141346;
 		
-		public static final String DPCB17 = "144098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB17 = 144098;
 		
-		public static final String DPCB18 = "144101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB18 = 144101;
 		
-		public static final String DPCB19 = "147075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB19 = 147075;
 		
-		public static final String DPCB20 = "147076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB20 = 147076;
 		
-		public static final String DPCB21 = "147077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB21 = 147077;
 		
-		public static final String DPCB22 = "147895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB22 = 147895;
 		
-		public static final String DPCB23 = "147896AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB23 = 147896;
 		
-		public static final String DPCB24 = "147897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB24 = 147897;
 		
-		public static final String DPCB25 = "147898AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB25 = 147898;
 		
-		public static final String DPCB26 = "147899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB26 = 147899;
 		
-		public static final String DPCB27 = "155979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB27 = 155979;
 		
-		public static final String DPCB28 = "155980AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB28 = 155980;
 		
-		public static final String DPCB29 = "155981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB29 = 155981;
 		
-		public static final String DPCB30 = "156132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB30 = 156132;
 		
-		public static final String DPCB31 = "156561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB31 = 156561;
 		
-		public static final String DPCB32 = "158475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB32 = 158475;
 		
-		public static final String DPCB33 = "158476AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB33 = 158476;
 		
-		public static final String DPCB34 = "158477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB34 = 158477;
 		
-		public static final String DPCB35 = "158478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB35 = 158478;
 		
-		public static final String DPCB36 = "158479AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB36 = 158479;
 		
-		public static final String DPCB37 = "158481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB37 = 158481;
 		
-		public static final String DPCB38 = "158969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB38 = 158969;
 		
-		public static final String DPCB39 = "159242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB39 = 159242;
 		
-		public static final String DPCB40 = "159243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB40 = 159243;
 		
-		public static final String DPCB41 = "159244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB41 = 159244;
 		
-		public static final String DPCB42 = "159295AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DPCB42 = 159295;
 		
 		//Hypertension
-		public static final String HYPERTENSION_1 = "47AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_1 = 47;
 		
-		public static final String HYPERTENSION_2 = "110405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_2 = 110405;
 		
-		public static final String HYPERTENSION_3 = "111543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_3 = 111543;
 		
-		public static final String HYPERTENSION_4 = "112275AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_4 = 112275;
 		
-		public static final String HYPERTENSION_5 = "113087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_5 = 113087;
 		
-		public static final String HYPERTENSION_6 = "113324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_6 = 113324;
 		
-		public static final String HYPERTENSION_7 = "113858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_7 = 113858;
 		
-		public static final String HYPERTENSION_8 = "113859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_8 = 113859;
 		
-		public static final String HYPERTENSION_9 = "113875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_9 = 113875;
 		
-		public static final String HYPERTENSION_10 = "116115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_10 = 116115;
 		
-		public static final String HYPERTENSION_11 = "116116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_11 = 116116;
 		
-		public static final String HYPERTENSION_12 = "117383AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_12 = 117383;
 		
-		public static final String HYPERTENSION_13 = "117398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_13 = 117398;
 		
-		public static final String HYPERTENSION_14 = "117399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_14 = 117399;
 		
-		public static final String HYPERTENSION_15 = "118504AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_15 = 118504;
 		
-		public static final String HYPERTENSION_16 = "121060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_16 = 121060;
 		
-		public static final String HYPERTENSION_17 = "124310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_17 = 124310;
 		
-		public static final String HYPERTENSION_18 = "124311AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_18 = 124311;
 		
-		public static final String HYPERTENSION_19 = "124312AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_19 = 124312;
 		
-		public static final String HYPERTENSION_20 = "124313AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_20 = 124313;
 		
-		public static final String HYPERTENSION_21 = "124314AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_21 = 124314;
 		
-		public static final String HYPERTENSION_22 = "125073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_22 = 125073;
 		
-		public static final String HYPERTENSION_23 = "125230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_23 = 125230;
 		
-		public static final String HYPERTENSION_24 = "126876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_24 = 126876;
 		
-		public static final String HYPERTENSION_25 = "126984AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_25 = 126984;
 		
-		public static final String HYPERTENSION_26 = "127677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_26 = 127677;
 		
-		public static final String HYPERTENSION_27 = "127686AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_27 = 127686;
 		
-		public static final String HYPERTENSION_28 = "127687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_28 = 127687;
 		
-		public static final String HYPERTENSION_29 = "127688AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_29 = 127688;
 		
-		public static final String HYPERTENSION_30 = "127689AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_30 = 127689;
 		
-		public static final String HYPERTENSION_31 = "127691AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_31 = 127691;
 		
-		public static final String HYPERTENSION_32 = "127705AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_32 = 127705;
 		
-		public static final String HYPERTENSION_33 = "127713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_33 = 127713;
 		
-		public static final String HYPERTENSION_34 = "127869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_34 = 127869;
 		
-		public static final String HYPERTENSION_35 = "128125AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_35 = 128125;
 		
-		public static final String HYPERTENSION_36 = "128428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_36 = 128428;
 		
-		public static final String HYPERTENSION_37 = "128489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_37 = 128489;
 		
-		public static final String HYPERTENSION_38 = "129240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_38 = 129240;
 		
-		public static final String HYPERTENSION_39 = "129241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_39 = 129241;
 		
-		public static final String HYPERTENSION_40 = "129242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_40 = 129242;
 		
-		public static final String HYPERTENSION_41 = "129243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_41 = 129243;
 		
-		public static final String HYPERTENSION_42 = "129245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_42 = 129245;
 		
-		public static final String HYPERTENSION_43 = "129246AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_43 = 129246;
 		
-		public static final String HYPERTENSION_44 = "129247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_44 = 129247;
 		
-		public static final String HYPERTENSION_45 = "129248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_45 = 129248;
 		
-		public static final String HYPERTENSION_46 = "129249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_46 = 129249;
 		
-		public static final String HYPERTENSION_47 = "129250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_47 = 129250;
 		
-		public static final String HYPERTENSION_48 = "129484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_48 = 129484;
 		
-		public static final String HYPERTENSION_49 = "130342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_49 = 130342;
 		
-		public static final String HYPERTENSION_50 = "130784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_50 = 130784;
 		
-		public static final String HYPERTENSION_51 = "130806AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_51 = 130806;
 		
-		public static final String HYPERTENSION_52 = "132472AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_52 = 132472;
 		
-		public static final String HYPERTENSION_53 = "132823AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_53 = 132823;
 		
-		public static final String HYPERTENSION_54 = "134601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_54 = 134601;
 		
-		public static final String HYPERTENSION_55 = "134908AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_55 = 134908;
 		
-		public static final String HYPERTENSION_56 = "134909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_56 = 134909;
 		
-		public static final String HYPERTENSION_57 = "135319AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_57 = 135319;
 		
-		public static final String HYPERTENSION_58 = "135320AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_58 = 135320;
 		
-		public static final String HYPERTENSION_59 = "135321AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_59 = 135321;
 		
-		public static final String HYPERTENSION_60 = "135322AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_60 = 135322;
 		
-		public static final String HYPERTENSION_61 = "135340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_61 = 135340;
 		
-		public static final String HYPERTENSION_62 = "135550AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_62 = 135550;
 		
-		public static final String HYPERTENSION_63 = "136205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_63 = 136205;
 		
-		public static final String HYPERTENSION_64 = "136207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_64 = 136207;
 		
-		public static final String HYPERTENSION_65 = "138198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_65 = 138198;
 		
-		public static final String HYPERTENSION_66 = "138199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_66 = 138199;
 		
-		public static final String HYPERTENSION_67 = "138200AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_67 = 138200;
 		
-		public static final String HYPERTENSION_68 = "138201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_68 = 138201;
 		
-		public static final String HYPERTENSION_69 = "138202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_69 = 138202;
 		
-		public static final String HYPERTENSION_70 = "138640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_70 = 138640;
 		
-		public static final String HYPERTENSION_71 = "139349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_71 = 139349;
 		
-		public static final String HYPERTENSION_72 = "139481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_72 = 139481;
 		
-		public static final String HYPERTENSION_73 = "140984AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_73 = 140984;
 		
-		public static final String HYPERTENSION_74 = "140985AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_74 = 140985;
 		
-		public static final String HYPERTENSION_75 = "140986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_75 = 140986;
 		
-		public static final String HYPERTENSION_76 = "140987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_76 = 140987;
 		
-		public static final String HYPERTENSION_77 = "141103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_77 = 141103;
 		
-		public static final String HYPERTENSION_78 = "141283AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_78 = 141283;
 		
-		public static final String HYPERTENSION_79 = "141397AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_79 = 141397;
 		
-		public static final String HYPERTENSION_80 = "141539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_80 = 141539;
 		
-		public static final String HYPERTENSION_81 = "142402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_81 = 142402;
 		
-		public static final String HYPERTENSION_82 = "145341AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_82 = 145341;
 		
-		public static final String HYPERTENSION_83 = "145342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_83 = 145342;
 		
-		public static final String HYPERTENSION_84 = "145343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_84 = 145343;
 		
-		public static final String HYPERTENSION_85 = "145344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_85 = 145344;
 		
-		public static final String HYPERTENSION_86 = "147453AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_86 = 147453;
 		
-		public static final String HYPERTENSION_87 = "147454AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_87 = 147454;
 		
-		public static final String HYPERTENSION_88 = "147883AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_88 = 147883;
 		
-		public static final String HYPERTENSION_89 = "147888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_89 = 147888;
 		
-		public static final String HYPERTENSION_90 = "147894AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_90 = 147894;
 		
-		public static final String HYPERTENSION_91 = "147895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_91 = 147895;
 		
-		public static final String HYPERTENSION_92 = "147896AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_92 = 147896;
 		
-		public static final String HYPERTENSION_93 = "147897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_93 = 147897;
 		
-		public static final String HYPERTENSION_94 = "147898AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_94 = 147898;
 		
-		public static final String HYPERTENSION_95 = "147899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_95 = 147899;
 		
-		public static final String HYPERTENSION_96 = "147900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_96 = 147900;
 		
-		public static final String HYPERTENSION_97 = "147901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_97 = 147901;
 		
-		public static final String HYPERTENSION_98 = "147902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_98 = 147902;
 		
-		public static final String HYPERTENSION_99 = "147903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_99 = 147903;
 		
-		public static final String HYPERTENSION_100 = "149169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_100 = 149169;
 		
-		public static final String HYPERTENSION_101 = "151927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_101 = 151927;
 		
-		public static final String HYPERTENSION_102 = "152264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_102 = 152264;
 		
-		public static final String HYPERTENSION_103 = "156639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_103 = 156639;
 		
-		public static final String HYPERTENSION_104 = "156710AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_104 = 156710;
 		
-		public static final String HYPERTENSION_105 = "158049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_105 = 158049;
 		
-		public static final String HYPERTENSION_106 = "158423AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_106 = 158423;
 		
-		public static final String HYPERTENSION_107 = "158475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_107 = 158475;
 		
-		public static final String HYPERTENSION_108 = "158481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_108 = 158481;
 		
-		public static final String HYPERTENSION_109 = "158595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_109 = 158595;
 		
-		public static final String HYPERTENSION_110 = "159240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_110 = 159240;
 		
-		public static final String HYPERTENSION_111 = "159241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer HYPERTENSION_111 = 159241;
 		
 		//mental dosorder
-		public static final String MENTALDIS_1 = "112851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_1 = 112851;
 		
-		public static final String MENTALDIS_2 = "113550AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_2 = 113550;
 		
-		public static final String MENTALDIS_3 = "113551AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_3 = 113551;
 		
-		public static final String MENTALDIS_4 = "114187AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_4 = 114187;
 		
-		public static final String MENTALDIS_5 = "114723AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_5 = 114723;
 		
-		public static final String MENTALDIS_6 = "114724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_6 = 114724;
 		
-		public static final String MENTALDIS_7 = "114725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_7 = 114725;
 		
-		public static final String MENTALDIS_8 = "114742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_8 = 114742;
 		
-		public static final String MENTALDIS_9 = "115251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_9 = 115251;
 		
-		public static final String MENTALDIS_10 = "115259AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_10 = 115259;
 		
-		public static final String MENTALDIS_11 = "115811AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_11 = 115811;
 		
-		public static final String MENTALDIS_12 = "115812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_12 = 115812;
 		
-		public static final String MENTALDIS_13 = "115813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_13 = 115813;
 		
-		public static final String MENTALDIS_14 = "121643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_14 = 121643;
 		
-		public static final String MENTALDIS_15 = "121716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_15 = 121716;
 		
-		public static final String MENTALDIS_16 = "121717AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_16 = 121717;
 		
-		public static final String MENTALDIS_17 = "129228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_17 = 129228;
 		
-		public static final String MENTALDIS_18 = "131715AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_18 = 131715;
 		
-		public static final String MENTALDIS_19 = "134329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_19 = 134329;
 		
-		public static final String MENTALDIS_20 = "134330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_20 = 134330;
 		
-		public static final String MENTALDIS_21 = "134331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_21 = 134331;
 		
-		public static final String MENTALDIS_22 = "134332AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_22 = 134332;
 		
-		public static final String MENTALDIS_23 = "134333AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_23 = 134333;
 		
-		public static final String MENTALDIS_24 = "134334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_24 = 134334;
 		
-		public static final String MENTALDIS_25 = "134335AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_25 = 134335;
 		
-		public static final String MENTALDIS_26 = "134336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_26 = 134336;
 		
-		public static final String MENTALDIS_27 = "134337AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_27 = 134337;
 		
-		public static final String MENTALDIS_28 = "136792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_28 = 136792;
 		
-		public static final String MENTALDIS_30 = "137147AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_30 = 137147;
 		
-		public static final String MENTALDIS_31 = "138092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_31 = 138092;
 		
-		public static final String MENTALDIS_32 = "138207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_32 = 138207;
 		
-		public static final String MENTALDIS_33 = "139133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_33 = 139133;
 		
-		public static final String MENTALDIS_34 = "140526AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_34 = 140526;
 		
-		public static final String MENTALDIS_35 = "142502AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_35 = 142502;
 		
-		public static final String MENTALDIS_36 = "144651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_36 = 144651;
 		
-		public static final String MENTALDIS_37 = "146492AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_37 = 146492;
 		
-		public static final String MENTALDIS_38 = "146593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_38 = 146593;
 		
-		public static final String MENTALDIS_39 = "148356AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_39 = 148356;
 		
-		public static final String MENTALDIS_40 = "148556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_40 = 148556;
 		
-		public static final String MENTALDIS_41 = "151277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_41 = 151277;
 		
-		public static final String MENTALDIS_42 = "151282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_42 = 151282;
 		
-		public static final String MENTALDIS_43 = "151569AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_43 = 151569;
 		
-		public static final String MENTALDIS_44 = "155571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_44 = 155571;
 		
-		public static final String MENTALDIS_45 = "158848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_45 = 158848;
 		
-		public static final String MENTALDIS_46 = "160518AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MENTALDIS_46 = 160518;
 		
-		public static final String F000_Dementia_in_Alzheimer_disease_with_early_onset = "152127AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F000_Dementia_in_Alzheimer_disease_with_early_onset = 152127;
 		
-		public static final String F01_Vascular_dementia = "159269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F01_Vascular_dementia = 159269;
 		
-		public static final String F010_Vascular_dementia_of_acute_onset = "123322AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F010_Vascular_dementia_of_acute_onset = 123322;
 		
-		public static final String F011_Multi_infarct_dementia = "133779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F011_Multi_infarct_dementia = 133779;
 		
-		public static final String F012_Subcortical_vascular_dementia = "125665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F012_Subcortical_vascular_dementia = 125665;
 		
-		public static final String F013_Mixed_cortical_and_subcortical_vascular_dementia = "157803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F013_Mixed_cortical_and_subcortical_vascular_dementia = 157803;
 		
-		public static final String F03_Unspecified_dementia = "119566AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F03_Unspecified_dementia = 119566;
 		
-		public static final String F20_Schizophrenia = "113155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F20_Schizophrenia = 113155;
 		
-		public static final String F200_Paranoid_schizophrenia = "130851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F200_Paranoid_schizophrenia = 130851;
 		
-		public static final String F201_Hebephrenic_schizophrenia = "123682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F201_Hebephrenic_schizophrenia = 123682;
 		
-		public static final String F202_Catatonic_schizophrenia = "146090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F202_Catatonic_schizophrenia = 146090;
 		
-		public static final String F203_Undifferentiated_schizophrenia = "111683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F203_Undifferentiated_schizophrenia = 111683;
 		
-		public static final String F204_Post_schizophrenic_depression = "152297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F204_Post_schizophrenic_depression = 152297;
 		
-		public static final String F205_Residual_schizophrenia = "127651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F205_Residual_schizophrenia = 127651;
 		
-		public static final String F206_Simple_schizophrenia = "126462AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F206_Simple_schizophrenia = 126462;
 		
-		public static final String F208_Other_schizophrenia = "113156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F208_Other_schizophrenia = 113156;
 		
-		public static final String F21_Schizotypal_disorder = "113139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F21_Schizotypal_disorder = 113139;
 		
-		public static final String F22_Persistent_delusional_disorders = "158297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F22_Persistent_delusional_disorders = 158297;
 		
-		public static final String F220_Delusional_disorder = "119570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F220_Delusional_disorder = 119570;
 		
-		//public static final String F229_Persistent_delusional_disorder_unspecified = "158297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		//public static final Integer F229_Persistent_delusional_disorder_unspecified = 158297;
 		
-		public static final String F23_Acute_and_transient_psychotic_disorders = "154937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F23_Acute_and_transient_psychotic_disorders = 154937;
 		
-		public static final String F232_Acute_schizophrenia_like_psychotic_disorder = "151997AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F232_Acute_schizophrenia_like_psychotic_disorder = 151997;
 		
-		public static final String F24_Induced_delusional_disorder = "128237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F24_Induced_delusional_disorder = 128237;
 		
-		public static final String F25_Schizoaffective_disorders = "127132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F25_Schizoaffective_disorders = 127132;
 		
-		public static final String F250_Schizoaffective_disorder_manic_type = "152338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F250_Schizoaffective_disorder_manic_type = 152338;
 		
-		public static final String F251_Schizoaffective_disorder_depressive_type = "127130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F251_Schizoaffective_disorder_depressive_type = 127130;
 		
-		public static final String F252_Schizoaffective_disorder_mixed_type = "127129AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F252_Schizoaffective_disorder_mixed_type = 127129;
 		
-		public static final String F30_Manic_episode = "134696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F30_Manic_episode = 134696;
 		
-		public static final String F300_Hypomania = "138045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F300_Hypomania = 138045;
 		
-		public static final String F301_Mania_without_psychotic_symptoms = "162314AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F301_Mania_without_psychotic_symptoms = 162314;
 		
-		public static final String F302_Mania_with_psychotic_symptoms = "162313AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F302_Mania_with_psychotic_symptoms = 162313;
 		
-		public static final String F320_Mild_depressive_episode = "157791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F320_Mild_depressive_episode = 157791;
 		
-		public static final String F321_Moderate_depressive_episode = "157810AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F321_Moderate_depressive_episode = 157810;
 		
-		public static final String F322_Severe_depressive_episode_without_psychotic_symptoms = "158802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F322_Severe_depressive_episode_without_psychotic_symptoms = 158802;
 		
-		public static final String F323_Severe_depressive_episode_with_psychotic_symptoms = "158801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F323_Severe_depressive_episode_with_psychotic_symptoms = 158801;
 		
-		public static final String F340_Cyclothymia = "121757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer F340_Cyclothymia = 121757;
 		
 		//Dental disorders
-		public static final String DENTAL_1 = "151733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_1 = 151733;
 		
-		public static final String DENTAL_2 = "142587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_2 = 142587;
 		
-		public static final String DENTAL_3 = "142586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_3 = 142586;
 		
-		public static final String DENTAL_4 = "119558AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_4 = 119558;
 		
-		public static final String DENTAL_5 = "120169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_5 = 120169;
 		
-		public static final String DENTAL_6 = "120254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_6 = 120254;
 		
-		public static final String DENTAL_7 = "118661AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_7 = 118661;
 		
-		public static final String DENTAL_8 = "120844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_8 = 120844;
 		
-		public static final String DENTAL_9 = "129138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_9 = 129138;
 		
-		public static final String DENTAL_10 = "161903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_10 = 161903;
 		
-		public static final String DENTAL_11 = "161904AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_11 = 161904;
 		
-		public static final String DENTAL_12 = "161905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_12 = 161905;
 		
-		public static final String DENTAL_13 = "161906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_13 = 161906;
 		
-		public static final String DENTAL_14 = "161907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_14 = 161907;
 		
-		public static final String DENTAL_15 = "142584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_15 = 142584;
 		
-		public static final String DENTAL_16 = "118138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_16 = 118138;
 		
-		public static final String DENTAL_17 = "155892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_17 = 155892;
 		
-		public static final String DENTAL_18 = "124601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_18 = 124601;
 		
-		public static final String DENTAL_19 = "142583AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_19 = 142583;
 		
-		public static final String DENTAL_20 = "142582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_20 = 142582;
 		
-		public static final String DENTAL_21 = "142581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_21 = 142581;
 		
-		public static final String DENTAL_22 = "142580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_22 = 142580;
 		
-		public static final String DENTAL_23 = "160228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_23 = 160228;
 		
-		public static final String DENTAL_24 = "110979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_24 = 110979;
 		
-		public static final String DENTAL_25 = "118659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_25 = 118659;
 		
-		public static final String DENTAL_26 = "120168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_26 = 120168;
 		
-		public static final String DENTAL_27 = "120253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_27 = 120253;
 		
-		public static final String DENTAL_28 = "145416AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_28 = 145416;
 		
-		public static final String DENTAL_29 = "145448AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_29 = 145448;
 		
-		public static final String DENTAL_30 = "148472AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_30 = 148472;
 		
-		public static final String DENTAL_31 = "149831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_31 = 149831;
 		
-		public static final String DENTAL_32 = "110720AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_32 = 110720;
 		
-		public static final String DENTAL_33 = "110721AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_33 = 110721;
 		
-		public static final String DENTAL_34 = "110722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_34 = 110722;
 		
-		public static final String DENTAL_35 = "110725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_35 = 110725;
 		
-		public static final String DENTAL_36 = "110726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_36 = 110726;
 		
-		public static final String DENTAL_37 = "110736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_37 = 110736;
 		
-		public static final String DENTAL_38 = "111032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_38 = 111032;
 		
-		public static final String DENTAL_39 = "112345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_39 = 112345;
 		
-		public static final String DENTAL_40 = "112347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_40 = 112347;
 		
-		public static final String DENTAL_41 = "112348AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_41 = 112348;
 		
-		public static final String DENTAL_42 = "112350AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_42 = 112350;
 		
-		public static final String DENTAL_43 = "112351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_43 = 112351;
 		
-		public static final String DENTAL_44 = "114734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_44 = 114734;
 		
-		public static final String DENTAL_45 = "116719AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_45 = 116719;
 		
-		public static final String DENTAL_46 = "117245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_46 = 117245;
 		
-		public static final String DENTAL_47 = "120292AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_47 = 120292;
 		
-		public static final String DENTAL_48 = "120293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_48 = 120293;
 		
-		public static final String DENTAL_49 = "121583AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_49 = 121583;
 		
-		public static final String DENTAL_50 = "124601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_50 = 124601;
 		
-		public static final String DENTAL_51 = "124602AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_51 = 124602;
 		
-		public static final String DENTAL_52 = "125290AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_52 = 125290;
 		
-		public static final String DENTAL_53 = "125967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_53 = 125967;
 		
-		public static final String DENTAL_54 = "127326AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_54 = 127326;
 		
-		public static final String DENTAL_55 = "129207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_55 = 129207;
 		
-		public static final String DENTAL_56 = "129208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_56 = 129208;
 		
-		public static final String DENTAL_57 = "129244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_57 = 129244;
 		
-		public static final String DENTAL_58 = "129415AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_58 = 129415;
 		
-		public static final String DENTAL_59 = "129416AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_59 = 129416;
 		
-		public static final String DENTAL_60 = "129417AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_60 = 129417;
 		
-		public static final String DENTAL_61 = "129418AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_61 = 129418;
 		
-		public static final String DENTAL_62 = "129420AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_62 = 129420;
 		
-		public static final String DENTAL_63 = "132536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_63 = 132536;
 		
-		public static final String DENTAL_64 = "133369AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_64 = 133369;
 		
-		public static final String DENTAL_65 = "133482AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_65 = 133482;
 		
-		public static final String DENTAL_66 = "134029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_66 = 134029;
 		
-		public static final String DENTAL_67 = "135600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_67 = 135600;
 		
-		public static final String DENTAL_68 = "136024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_68 = 136024;
 		
-		public static final String DENTAL_69 = "136520AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_69 = 136520;
 		
-		public static final String DENTAL_70 = "136727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_70 = 136727;
 		
-		public static final String DENTAL_71 = "137757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_71 = 137757;
 		
-		public static final String DENTAL_72 = "138041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_72 = 138041;
 		
-		public static final String DENTAL_73 = "139835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_73 = 139835;
 		
-		public static final String DENTAL_74 = "140721AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_74 = 140721;
 		
-		public static final String DENTAL_75 = "140845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_75 = 140845;
 		
-		public static final String DENTAL_76 = "140886AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_76 = 140886;
 		
-		public static final String DENTAL_77 = "141387AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_77 = 141387;
 		
-		public static final String DENTAL_78 = "141497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_78 = 141497;
 		
-		public static final String DENTAL_79 = "141859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_79 = 141859;
 		
-		public static final String DENTAL_80 = "141925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_80 = 141925;
 		
-		public static final String DENTAL_81 = "142009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_81 = 142009;
 		
-		public static final String DENTAL_82 = "142021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_82 = 142021;
 		
-		public static final String DENTAL_83 = "142142AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_83 = 142142;
 		
-		public static final String DENTAL_84 = "142323AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_84 = 142323;
 		
-		public static final String DENTAL_85 = "142508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_85 = 142508;
 		
-		public static final String DENTAL_86 = "145750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_86 = 145750;
 		
-		public static final String DENTAL_87 = "145751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_87 = 145751;
 		
-		public static final String DENTAL_88 = "145752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_88 = 145752;
 		
-		public static final String DENTAL_89 = "145753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_89 = 145753;
 		
-		public static final String DENTAL_90 = "145754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_90 = 145754;
 		
-		public static final String DENTAL_91 = "146901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_91 = 146901;
 		
-		public static final String DENTAL_92 = "146902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_92 = 146902;
 		
-		public static final String DENTAL_93 = "146903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_93 = 146903;
 		
-		public static final String DENTAL_94 = "148501AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_94 = 148501;
 		
-		public static final String DENTAL_95 = "148708AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_95 = 148708;
 		
-		public static final String DENTAL_96 = "152843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_96 = 152843;
 		
-		public static final String DENTAL_97 = "156013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_97 = 156013;
 		
-		public static final String DENTAL_99 = "156203AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_99 = 156203;
 		
-		public static final String DENTAL_100 = "156758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_100 = 156758;
 		
-		public static final String DENTAL_101 = "112884AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_101 = 112884;
 		
-		public static final String DENTAL_102 = "113938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_102 = 113938;
 		
-		public static final String DENTAL_103 = "114239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_103 = 114239;
 		
-		public static final String DENTAL_104 = "114307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_104 = 114307;
 		
-		public static final String DENTAL_105 = "115025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_105 = 115025;
 		
-		public static final String DENTAL_106 = "115684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_106 = 115684;
 		
-		public static final String DENTAL_107 = "116226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_107 = 116226;
 		
-		public static final String DENTAL_108 = "117244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_108 = 117244;
 		
-		public static final String DENTAL_109 = "117479AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_109 = 117479;
 		
-		public static final String DENTAL_110 = "118490AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_110 = 118490;
 		
-		public static final String DENTAL_111 = "118548AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_111 = 118548;
 		
-		public static final String DENTAL_112 = "119183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_112 = 119183;
 		
-		public static final String DENTAL_113 = "119427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_113 = 119427;
 		
-		public static final String DENTAL_114 = "119549AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_114 = 119549;
 		
-		public static final String DENTAL_115 = "119758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_115 = 119758;
 		
-		public static final String DENTAL_116 = "119759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_116 = 119759;
 		
-		public static final String DENTAL_117 = "120043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_117 = 120043;
 		
-		public static final String DENTAL_118 = "121515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_118 = 121515;
 		
-		public static final String DENTAL_119 = "121582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_119 = 121582;
 		
-		public static final String DENTAL_120 = "122609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_120 = 122609;
 		
-		public static final String DENTAL_121 = "122893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_121 = 122893;
 		
-		public static final String DENTAL_122 = "124385AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_122 = 124385;
 		
-		public static final String DENTAL_123 = "124580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_123 = 124580;
 		
-		public static final String DENTAL_124 = "124604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_124 = 124604;
 		
-		public static final String DENTAL_125 = "124622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_125 = 124622;
 		
-		public static final String DENTAL_126 = "125015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_126 = 125015;
 		
-		public static final String DENTAL_127 = "125016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_127 = 125016;
 		
-		public static final String DENTAL_128 = "125017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_128 = 125017;
 		
-		public static final String DENTAL_129 = "125018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_129 = 125018;
 		
-		public static final String DENTAL_130 = "126299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_130 = 126299;
 		
-		public static final String DENTAL_131 = "126565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_131 = 126565;
 		
-		public static final String DENTAL_132 = "127344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_132 = 127344;
 		
-		public static final String DENTAL_133 = "127472AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_133 = 127472;
 		
-		public static final String DENTAL_134 = "129419AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_134 = 129419;
 		
-		public static final String DENTAL_135 = "130658AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_135 = 130658;
 		
-		public static final String DENTAL_136 = "130765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_136 = 130765;
 		
-		public static final String DENTAL_137 = "131639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_137 = 131639;
 		
-		public static final String DENTAL_138 = "132487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_138 = 132487;
 		
-		public static final String DENTAL_139 = "132493AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_139 = 132493;
 		
-		public static final String DENTAL_140 = "132890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_140 = 132890;
 		
-		public static final String DENTAL_141 = "133838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_141 = 133838;
 		
-		public static final String DENTAL_142 = "134291AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_142 = 134291;
 		
-		public static final String DENTAL_143 = "135586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_143 = 135586;
 		
-		public static final String DENTAL_144 = "135587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_144 = 135587;
 		
-		public static final String DENTAL_145 = "137758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_145 = 137758;
 		
-		public static final String DENTAL_146 = "137909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_146 = 137909;
 		
-		public static final String DENTAL_147 = "138428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_147 = 138428;
 		
-		public static final String DENTAL_148 = "139171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_148 = 139171;
 		
-		public static final String DENTAL_149 = "139562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_149 = 139562;
 		
-		public static final String DENTAL_150 = "139687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_150 = 139687;
 		
-		public static final String DENTAL_151 = "140924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_151 = 140924;
 		
-		public static final String DENTAL_152 = "141077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_152 = 141077;
 		
-		public static final String DENTAL_153 = "141078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_153 = 141078;
 		
-		public static final String DENTAL_154 = "141388AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_154 = 141388;
 		
-		public static final String DENTAL_155 = "141872AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_155 = 141872;
 		
-		public static final String DENTAL_156 = "142577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_156 = 142577;
 		
-		public static final String DENTAL_157 = "144412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_157 = 144412;
 		
-		public static final String DENTAL_158 = "146859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_158 = 146859;
 		
-		public static final String DENTAL_159 = "147406AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_159 = 147406;
 		
-		public static final String DENTAL_160 = "147999AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_160 = 147999;
 		
-		public static final String DENTAL_167 = "150120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_167 = 150120;
 		
-		public static final String DENTAL_161 = "150186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_161 = 150186;
 		
-		public static final String DENTAL_162 = "150652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_162 = 150652;
 		
-		public static final String DENTAL_163 = "150827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_163 = 150827;
 		
-		public static final String DENTAL_164 = "154911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_164 = 154911;
 		
-		public static final String DENTAL_165 = "160141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_165 = 160141;
 		
-		public static final String DENTAL_166 = "160142AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DENTAL_166 = 160142;
 		
 		//Skin disease
-		public static final String SKIN_1 = "119022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SKIN_1 = 119022;
 		
-		public static final String SKIN_2 = "125954AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SKIN_2 = 125954;
 		
-		public static final String SKIN_3 = "128208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SKIN_3 = 128208;
 		
-		public static final String SKIN_4 = "142634AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SKIN_4 = 142634;
 		
-		public static final String SKIN_5 = "160229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SKIN_5 = 160229;
 		
 		//Joint pains
-		public static final String JOINT_PAIN_1 = "116557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_1 = 116557;
 		
-		public static final String JOINT_PAIN_2 = "122827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_2 = 122827;
 		
-		public static final String JOINT_PAIN_3 = "125897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_3 = 125897;
 		
-		public static final String JOINT_PAIN_4 = "126536AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_4 = 126536;
 		
-		public static final String JOINT_PAIN_5 = "127216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_5 = 127216;
 		
-		public static final String JOINT_PAIN_6 = "134261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_6 = 134261;
 		
-		public static final String JOINT_PAIN_7 = "139117AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_7 = 139117;
 		
-		public static final String JOINT_PAIN_8 = "139986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_8 = 139986;
 		
-		public static final String JOINT_PAIN_9 = "141413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_9 = 141413;
 		
-		public static final String JOINT_PAIN_10 = "148729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_10 = 148729;
 		
-		public static final String JOINT_PAIN_11 = "149956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_11 = 149956;
 		
-		public static final String JOINT_PAIN_12 = "156619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_12 = 156619;
 		
-		public static final String JOINT_PAIN_13 = "117045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer JOINT_PAIN_13 = 117045;
 		
 		//poisoning list
-		public static final String POISONING_1 = "368AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_1 = 368;
 		
-		public static final String POISONING_2 = "156346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_2 = 156346;
 		
-		public static final String POISONING_3 = "118107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_3 = 118107;
 		
-		public static final String POISONING_4 = "139992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_4 = 139992;
 		
-		public static final String POISONING_5 = "139991AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_5 = 139991;
 		
-		public static final String POISONING_6 = "139990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_6 = 139990;
 		
-		public static final String POISONING_7 = "139989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_7 = 139989;
 		
-		public static final String POISONING_8 = "156347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_8 = 156347;
 		
-		public static final String POISONING_9 = "102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_9 = 102;
 		
-		public static final String POISONING_10 = "113058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_10 = 113058;
 		
-		public static final String POISONING_11 = "124599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_11 = 124599;
 		
-		public static final String POISONING_12 = "135735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_12 = 135735;
 		
-		public static final String POISONING_13 = "139551AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_13 = 139551;
 		
-		public static final String POISONING_14 = "146481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_14 = 146481;
 		
-		public static final String POISONING_15 = "148569AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_15 = 148569;
 		
-		public static final String POISONING_16 = "154531AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_16 = 154531;
 		
-		public static final String POISONING_17 = "368AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_17 = 368;
 		
-		public static final String POISONING_18 = "118107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_18 = 118107;
 		
-		public static final String POISONING_19 = "121272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_19 = 121272;
 		
-		public static final String POISONING_20 = "125952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_20 = 125952;
 		
-		public static final String POISONING_21 = "127202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_21 = 127202;
 		
-		public static final String POISONING_22 = "139988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_22 = 139988;
 		
-		public static final String POISONING_23 = "139989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_23 = 139989;
 		
-		public static final String POISONING_24 = "139990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_24 = 139990;
 		
-		public static final String POISONING_25 = "139991AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_25 = 139991;
 		
-		public static final String POISONING_26 = "139992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_26 = 139992;
 		
-		public static final String POISONING_27 = "156346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_27 = 156346;
 		
-		public static final String POISONING_28 = "156347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_28 = 156347;
 		
-		public static final String POISONING_29 = "156805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_29 = 156805;
 		
-		public static final String POISONING_30 = "114088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_30 = 114088;
 		
-		public static final String POISONING_31 = "118445AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_31 = 118445;
 		
-		public static final String POISONING_32 = "118446AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_32 = 118446;
 		
-		public static final String POISONING_33 = "130089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_33 = 130089;
 		
-		public static final String POISONING_34 = "129979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_34 = 129979;
 		
-		public static final String POISONING_35 = "129978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_35 = 129978;
 		
-		public static final String POISONING_36 = "129977AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_36 = 129977;
 		
-		public static final String POISONING_37 = "129976AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_37 = 129976;
 		
-		public static final String POISONING_38 = "129975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_38 = 129975;
 		
-		public static final String POISONING_39 = "129974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_39 = 129974;
 		
-		public static final String POISONING_40 = "129973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_40 = 129973;
 		
-		public static final String POISONING_41 = "129972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_41 = 129972;
 		
-		public static final String POISONING_42 = "114086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_42 = 114086;
 		
-		public static final String POISONING_43 = "114024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_43 = 114024;
 		
-		public static final String POISONING_44 = "114044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_44 = 114044;
 		
-		public static final String POISONING_45 = "114025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_45 = 114025;
 		
-		public static final String POISONING_46 = "122226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_46 = 122226;
 		
-		public static final String POISONING_47 = "129971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_47 = 129971;
 		
-		public static final String POISONING_48 = "129970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_48 = 129970;
 		
-		public static final String POISONING_49 = "129969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_49 = 129969;
 		
-		public static final String POISONING_50 = "129968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer POISONING_50 = 129968;
 		
 		//New and revisit clients
-		public static final String NEW_PATIENT = "164144AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer NEW_PATIENT = 164144;
 		
 		public static final String REVISIT_PATIENT = "d5ea1533-7346-4e0b-8626-9bff6cd183b2";
 		
 		//Additional special clinic concepts
-		public static final String NUTRITION_PROGRAM = "160552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer NUTRITION_PROGRAM = 160552;
 		
-		public static final String RENAL_CLINIC = "160475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer RENAL_CLINIC = 160475;
 		
-		public static final String ONCOLOGY_CLINIC = "116030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer ONCOLOGY_CLINIC = 116030;
 		
 		//Injuries
-		public static final String INJURY1 = "163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1 = 163;
 		
-		public static final String INJURY2 = "1490AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY2 = 1490;
 		
-		public static final String INJURY3 = "110738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY3 = 110738;
 		
-		public static final String INJURY4 = "110802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY4 = 110802;
 		
-		public static final String INJURY5 = "110959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY5 = 110959;
 		
-		public static final String INJURY6 = "111455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY6 = 111455;
 		
-		public static final String INJURY7 = "112209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY7 = 112209;
 		
-		public static final String INJURY8 = "112234AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY8 = 112234;
 		
-		public static final String INJURY9 = "112237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY9 = 112237;
 		
-		public static final String INJURY10 = "112260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY10 = 112260;
 		
-		public static final String INJURY11 = "112261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY11 = 112261;
 		
-		public static final String INJURY12 = "112554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY12 = 112554;
 		
-		public static final String INJURY13 = "112555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY13 = 112555;
 		
-		public static final String INJURY14 = "112559AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY14 = 112559;
 		
-		public static final String INJURY15 = "112561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY15 = 112561;
 		
-		public static final String INJURY16 = "112564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY16 = 112564;
 		
-		public static final String INJURY17 = "112565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY17 = 112565;
 		
-		public static final String INJURY18 = "112568AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY18 = 112568;
 		
-		public static final String INJURY19 = "112570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY19 = 112570;
 		
-		public static final String INJURY20 = "112585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY20 = 112585;
 		
-		public static final String INJURY21 = "112586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY21 = 112586;
 		
-		public static final String INJURY22 = "112592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY22 = 112592;
 		
-		public static final String INJURY23 = "112593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY23 = 112593;
 		
-		public static final String INJURY24 = "112594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY24 = 112594;
 		
-		public static final String INJURY25 = "112631AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY25 = 112631;
 		
-		public static final String INJURY26 = "112633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY26 = 112633;
 		
-		public static final String INJURY27 = "112635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY27 = 112635;
 		
-		public static final String INJURY28 = "112636AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY28 = 112636;
 		
-		public static final String INJURY29 = "112637AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY29 = 112637;
 		
-		public static final String INJURY30 = "112638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY30 = 112638;
 		
-		public static final String INJURY31 = "112639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY31 = 112639;
 		
-		public static final String INJURY32 = "112641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY32 = 112641;
 		
-		public static final String INJURY33 = "112643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY33 = 112643;
 		
-		public static final String INJURY34 = "112646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY34 = 112646;
 		
-		public static final String INJURY35 = "112662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY35 = 112662;
 		
-		public static final String INJURY36 = "112664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY36 = 112664;
 		
-		public static final String INJURY37 = "112666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY37 = 112666;
 		
-		public static final String INJURY38 = "112667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY38 = 112667;
 		
-		public static final String INJURY39 = "112670AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY39 = 112670;
 		
-		public static final String INJURY40 = "112671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY40 = 112671;
 		
-		public static final String INJURY41 = "112672AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY41 = 112672;
 		
-		public static final String INJURY42 = "112673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY42 = 112673;
 		
-		public static final String INJURY43 = "112825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY43 = 112825;
 		
-		public static final String INJURY44 = "112826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY44 = 112826;
 		
-		public static final String INJURY45 = "112827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY45 = 112827;
 		
-		public static final String INJURY46 = "112905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY46 = 112905;
 		
-		public static final String INJURY47 = "112906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY47 = 112906;
 		
-		public static final String INJURY48 = "112969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY48 = 112969;
 		
-		public static final String INJURY49 = "113250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY49 = 113250;
 		
-		public static final String INJURY50 = "113346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY50 = 113346;
 		
-		public static final String INJURY51 = "113347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY51 = 113347;
 		
-		public static final String INJURY52 = "113401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY52 = 113401;
 		
-		public static final String INJURY53 = "113402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY53 = 113402;
 		
-		public static final String INJURY54 = "114010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY54 = 114010;
 		
-		public static final String INJURY55 = "114273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY55 = 114273;
 		
-		public static final String INJURY56 = "114274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY56 = 114274;
 		
-		public static final String INJURY57 = "114275AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY57 = 114275;
 		
-		public static final String INJURY58 = "114277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY58 = 114277;
 		
-		public static final String INJURY59 = "114280AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY59 = 114280;
 		
-		public static final String INJURY60 = "114281AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY60 = 114281;
 		
-		public static final String INJURY61 = "114385AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY61 = 114385;
 		
-		public static final String INJURY62 = "114819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY62 = 114819;
 		
-		public static final String INJURY63 = "114839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY63 = 114839;
 		
-		public static final String INJURY64 = "114860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY64 = 114860;
 		
-		public static final String INJURY65 = "114861AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY65 = 114861;
 		
-		public static final String INJURY66 = "114862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY66 = 114862;
 		
-		public static final String INJURY67 = "114886AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY67 = 114886;
 		
-		public static final String INJURY68 = "114888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY68 = 114888;
 		
-		public static final String INJURY69 = "114900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY69 = 114900;
 		
-		public static final String INJURY70 = "114902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY70 = 114902;
 		
-		public static final String INJURY71 = "114938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY71 = 114938;
 		
-		public static final String INJURY72 = "114940AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY72 = 114940;
 		
-		public static final String INJURY73 = "114952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY73 = 114952;
 		
-		public static final String INJURY74 = "114953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY74 = 114953;
 		
-		public static final String INJURY75 = "115297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY75 = 115297;
 		
-		public static final String INJURY76 = "115311AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY76 = 115311;
 		
-		public static final String INJURY77 = "115537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY77 = 115537;
 		
-		public static final String INJURY78 = "115648AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY78 = 115648;
 		
-		public static final String INJURY79 = "116380AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY79 = 116380;
 		
-		public static final String INJURY80 = "116421AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY80 = 116421;
 		
-		public static final String INJURY81 = "116659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY81 = 116659;
 		
-		public static final String INJURY82 = "116661AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY82 = 116661;
 		
-		public static final String INJURY83 = "116662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY83 = 116662;
 		
-		public static final String INJURY84 = "116663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY84 = 116663;
 		
-		public static final String INJURY85 = "116665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY85 = 116665;
 		
-		public static final String INJURY86 = "116666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY86 = 116666;
 		
-		public static final String INJURY87 = "116667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY87 = 116667;
 		
-		public static final String INJURY88 = "116668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY88 = 116668;
 		
-		public static final String INJURY89 = "116673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY89 = 116673;
 		
-		public static final String INJURY90 = "116722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY90 = 116722;
 		
-		public static final String INJURY91 = "116723AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY91 = 116723;
 		
-		public static final String INJURY92 = "116725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY92 = 116725;
 		
-		public static final String INJURY93 = "116727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY93 = 116727;
 		
-		public static final String INJURY94 = "116762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY94 = 116762;
 		
-		public static final String INJURY95 = "116764AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY95 = 116764;
 		
-		public static final String INJURY96 = "116765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY96 = 116765;
 		
-		public static final String INJURY97 = "116767AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY97 = 116767;
 		
-		public static final String INJURY98 = "116769AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY98 = 116769;
 		
-		public static final String INJURY99 = "116772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY99 = 116772;
 		
-		public static final String INJURY100 = "116774AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY100 = 116774;
 		
-		public static final String INJURY101 = "116775AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY101 = 116775;
 		
-		public static final String INJURY102 = "116781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY102 = 116781;
 		
-		public static final String INJURY103 = "116782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY103 = 116782;
 		
-		public static final String INJURY104 = "116786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY104 = 116786;
 		
-		public static final String INJURY105 = "116788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY105 = 116788;
 		
-		public static final String INJURY106 = "116789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY106 = 116789;
 		
-		public static final String INJURY107 = "116793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY107 = 116793;
 		
-		public static final String INJURY108 = "116795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY108 = 116795;
 		
-		public static final String INJURY109 = "116796AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY109 = 116796;
 		
-		public static final String INJURY110 = "116800AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY110 = 116800;
 		
-		public static final String INJURY111 = "116802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY111 = 116802;
 		
-		public static final String INJURY112 = "116804AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY112 = 116804;
 		
-		public static final String INJURY113 = "116806AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY113 = 116806;
 		
-		public static final String INJURY114 = "116810AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY114 = 116810;
 		
-		public static final String INJURY115 = "116812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY115 = 116812;
 		
-		public static final String INJURY116 = "116813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY116 = 116813;
 		
-		public static final String INJURY117 = "116814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY117 = 116814;
 		
-		public static final String INJURY118 = "116815AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY118 = 116815;
 		
-		public static final String INJURY119 = "116816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY119 = 116816;
 		
-		public static final String INJURY120 = "116817AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY120 = 116817;
 		
-		public static final String INJURY121 = "116820AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY121 = 116820;
 		
-		public static final String INJURY122 = "116825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY122 = 116825;
 		
-		public static final String INJURY123 = "116828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY123 = 116828;
 		
-		public static final String INJURY124 = "116832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY124 = 116832;
 		
-		public static final String INJURY125 = "116833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY125 = 116833;
 		
-		public static final String INJURY126 = "116835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY126 = 116835;
 		
-		public static final String INJURY127 = "116837AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY127 = 116837;
 		
-		public static final String INJURY128 = "116838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY128 = 116838;
 		
-		public static final String INJURY129 = "116848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY129 = 116848;
 		
-		public static final String INJURY130 = "116850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY130 = 116850;
 		
-		public static final String INJURY131 = "116852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY131 = 116852;
 		
-		public static final String INJURY132 = "116854AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY132 = 116854;
 		
-		public static final String INJURY133 = "116858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY133 = 116858;
 		
-		public static final String INJURY134 = "116859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY134 = 116859;
 		
-		public static final String INJURY135 = "116860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY135 = 116860;
 		
-		public static final String INJURY136 = "116862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY136 = 116862;
 		
-		public static final String INJURY137 = "116864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY137 = 116864;
 		
-		public static final String INJURY138 = "116866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY138 = 116866;
 		
-		public static final String INJURY139 = "116867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY139 = 116867;
 		
-		public static final String INJURY140 = "116869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY140 = 116869;
 		
-		public static final String INJURY141 = "116870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY141 = 116870;
 		
-		public static final String INJURY142 = "116871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY142 = 116871;
 		
-		public static final String INJURY143 = "116873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY143 = 116873;
 		
-		public static final String INJURY144 = "116874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY144 = 116874;
 		
-		public static final String INJURY145 = "116878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY145 = 116878;
 		
-		public static final String INJURY146 = "116879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY146 = 116879;
 		
-		public static final String INJURY147 = "116883AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY147 = 116883;
 		
-		public static final String INJURY148 = "116885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY148 = 116885;
 		
-		public static final String INJURY149 = "116887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY149 = 116887;
 		
-		public static final String INJURY150 = "116888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY150 = 116888;
 		
-		public static final String INJURY151 = "116889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY151 = 116889;
 		
-		public static final String INJURY152 = "116890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY152 = 116890;
 		
-		public static final String INJURY153 = "116891AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY153 = 116891;
 		
-		public static final String INJURY154 = "116894AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY154 = 116894;
 		
-		public static final String INJURY155 = "116895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY155 = 116895;
 		
-		public static final String INJURY156 = "116896AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY156 = 116896;
 		
-		public static final String INJURY157 = "116898AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY157 = 116898;
 		
-		public static final String INJURY158 = "116899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY158 = 116899;
 		
-		public static final String INJURY159 = "116901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY159 = 116901;
 		
-		public static final String INJURY160 = "116904AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY160 = 116904;
 		
-		public static final String INJURY161 = "116906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY161 = 116906;
 		
-		public static final String INJURY162 = "116907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY162 = 116907;
 		
-		public static final String INJURY163 = "116910AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY163 = 116910;
 		
-		public static final String INJURY164 = "116913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY164 = 116913;
 		
-		public static final String INJURY165 = "116915AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY165 = 116915;
 		
-		public static final String INJURY166 = "116918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY166 = 116918;
 		
-		public static final String INJURY167 = "116919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY167 = 116919;
 		
-		public static final String INJURY168 = "116920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY168 = 116920;
 		
-		public static final String INJURY169 = "116921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY169 = 116921;
 		
-		public static final String INJURY170 = "116922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY170 = 116922;
 		
-		public static final String INJURY171 = "116923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY171 = 116923;
 		
-		public static final String INJURY172 = "116924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY172 = 116924;
 		
-		public static final String INJURY173 = "116925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY173 = 116925;
 		
-		public static final String INJURY174 = "116927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY174 = 116927;
 		
-		public static final String INJURY175 = "117293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY175 = 117293;
 		
-		public static final String INJURY176 = "117309AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY176 = 117309;
 		
-		public static final String INJURY177 = "117882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY177 = 117882;
 		
-		public static final String INJURY178 = "118092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY178 = 118092;
 		
-		public static final String INJURY179 = "118102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY179 = 118102;
 		
-		public static final String INJURY180 = "118149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY180 = 118149;
 		
-		public static final String INJURY181 = "118354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY181 = 118354;
 		
-		public static final String INJURY182 = "118412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY182 = 118412;
 		
-		public static final String INJURY183 = "118413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY183 = 118413;
 		
-		public static final String INJURY184 = "118414AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY184 = 118414;
 		
-		public static final String INJURY185 = "118415AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY185 = 118415;
 		
-		public static final String INJURY186 = "118416AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY186 = 118416;
 		
-		public static final String INJURY187 = "118418AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY187 = 118418;
 		
-		public static final String INJURY188 = "118422AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY188 = 118422;
 		
-		public static final String INJURY189 = "118424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY189 = 118424;
 		
-		public static final String INJURY190 = "118426AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY190 = 118426;
 		
-		public static final String INJURY191 = "118429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY191 = 118429;
 		
-		public static final String INJURY192 = "118433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY192 = 118433;
 		
-		public static final String INJURY193 = "118676AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY193 = 118676;
 		
-		public static final String INJURY194 = "118700AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY194 = 118700;
 		
-		public static final String INJURY195 = "118806AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY195 = 118806;
 		
-		public static final String INJURY196 = "118807AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY196 = 118807;
 		
-		public static final String INJURY197 = "119418AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY197 = 119418;
 		
-		public static final String INJURY198 = "119502AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY198 = 119502;
 		
-		public static final String INJURY199 = "119503AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY199 = 119503;
 		
-		public static final String INJURY200 = "119751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY200 = 119751;
 		
-		public static final String INJURY201 = "119753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY201 = 119753;
 		
-		public static final String INJURY202 = "119754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY202 = 119754;
 		
-		public static final String INJURY203 = "120160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY203 = 120160;
 		
-		public static final String INJURY204 = "120166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY204 = 120166;
 		
-		public static final String INJURY205 = "120315AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY205 = 120315;
 		
-		public static final String INJURY206 = "120363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY206 = 120363;
 		
-		public static final String INJURY207 = "120387AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY207 = 120387;
 		
-		public static final String INJURY208 = "120388AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY208 = 120388;
 		
-		public static final String INJURY209 = "120402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY209 = 120402;
 		
-		public static final String INJURY210 = "120413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY210 = 120413;
 		
-		public static final String INJURY211 = "120415AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY211 = 120415;
 		
-		public static final String INJURY212 = "120435AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY212 = 120435;
 		
-		public static final String INJURY213 = "120437AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY213 = 120437;
 		
-		public static final String INJURY214 = "120453AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY214 = 120453;
 		
-		public static final String INJURY215 = "120454AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY215 = 120454;
 		
-		public static final String INJURY216 = "120455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY216 = 120455;
 		
-		public static final String INJURY217 = "120475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY217 = 120475;
 		
-		public static final String INJURY218 = "120477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY218 = 120477;
 		
-		public static final String INJURY219 = "120493AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY219 = 120493;
 		
-		public static final String INJURY220 = "120495AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY220 = 120495;
 		
-		public static final String INJURY221 = "120750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY221 = 120750;
 		
-		public static final String INJURY222 = "120751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY222 = 120751;
 		
-		public static final String INJURY223 = "120773AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY223 = 120773;
 		
-		public static final String INJURY224 = "121021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY224 = 121021;
 		
-		public static final String INJURY225 = "121022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY225 = 121022;
 		
-		public static final String INJURY226 = "121023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY226 = 121023;
 		
-		public static final String INJURY227 = "121026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY227 = 121026;
 		
-		public static final String INJURY228 = "121027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY228 = 121027;
 		
-		public static final String INJURY229 = "121029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY229 = 121029;
 		
-		public static final String INJURY230 = "121516AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY230 = 121516;
 		
-		public static final String INJURY231 = "121517AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY231 = 121517;
 		
-		public static final String INJURY232 = "122278AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY232 = 122278;
 		
-		public static final String INJURY233 = "122279AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY233 = 122279;
 		
-		public static final String INJURY234 = "122862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY234 = 122862;
 		
-		public static final String INJURY235 = "122916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY235 = 122916;
 		
-		public static final String INJURY236 = "122917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY236 = 122917;
 		
-		public static final String INJURY237 = "122920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY237 = 122920;
 		
-		public static final String INJURY238 = "122921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY238 = 122921;
 		
-		public static final String INJURY239 = "122923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY239 = 122923;
 		
-		public static final String INJURY240 = "122924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY240 = 122924;
 		
-		public static final String INJURY241 = "122926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY241 = 122926;
 		
-		public static final String INJURY242 = "122929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY242 = 122929;
 		
-		public static final String INJURY243 = "122930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY243 = 122930;
 		
-		public static final String INJURY244 = "122931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY244 = 122931;
 		
-		public static final String INJURY245 = "122932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY245 = 122932;
 		
-		public static final String INJURY246 = "122993AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY246 = 122993;
 		
-		public static final String INJURY247 = "123076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY247 = 123076;
 		
-		public static final String INJURY248 = "123153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY248 = 123153;
 		
-		public static final String INJURY249 = "123533AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY249 = 123533;
 		
-		public static final String INJURY250 = "123545AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY250 = 123545;
 		
-		public static final String INJURY251 = "123856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY251 = 123856;
 		
-		public static final String INJURY252 = "124183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY252 = 124183;
 		
-		public static final String INJURY253 = "124188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY253 = 124188;
 		
-		public static final String INJURY254 = "124189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY254 = 124189;
 		
-		public static final String INJURY255 = "124190AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY255 = 124190;
 		
-		public static final String INJURY256 = "124191AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY256 = 124191;
 		
-		public static final String INJURY257 = "124192AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY257 = 124192;
 		
-		public static final String INJURY258 = "124193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY258 = 124193;
 		
-		public static final String INJURY259 = "124198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY259 = 124198;
 		
-		public static final String INJURY260 = "124205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY260 = 124205;
 		
-		public static final String INJURY261 = "124208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY261 = 124208;
 		
-		public static final String INJURY262 = "124209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY262 = 124209;
 		
-		public static final String INJURY263 = "124729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY263 = 124729;
 		
-		public static final String INJURY264 = "124731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY264 = 124731;
 		
-		public static final String INJURY265 = "124844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY265 = 124844;
 		
-		public static final String INJURY266 = "125189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY266 = 125189;
 		
-		public static final String INJURY267 = "125278AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY267 = 125278;
 		
-		public static final String INJURY268 = "125279AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY268 = 125279;
 		
-		public static final String INJURY269 = "125280AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY269 = 125280;
 		
-		public static final String INJURY270 = "125281AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY270 = 125281;
 		
-		public static final String INJURY271 = "125282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY271 = 125282;
 		
-		public static final String INJURY272 = "125283AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY272 = 125283;
 		
-		public static final String INJURY273 = "125284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY273 = 125284;
 		
-		public static final String INJURY274 = "125285AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY274 = 125285;
 		
-		public static final String INJURY275 = "125286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY275 = 125286;
 		
-		public static final String INJURY276 = "125299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY276 = 125299;
 		
-		public static final String INJURY277 = "125319AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY277 = 125319;
 		
-		public static final String INJURY278 = "125320AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY278 = 125320;
 		
-		public static final String INJURY279 = "125321AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY279 = 125321;
 		
-		public static final String INJURY280 = "125322AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY280 = 125322;
 		
-		public static final String INJURY281 = "125323AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY281 = 125323;
 		
-		public static final String INJURY282 = "125324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY282 = 125324;
 		
-		public static final String INJURY283 = "125325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY283 = 125325;
 		
-		public static final String INJURY284 = "125326AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY284 = 125326;
 		
-		public static final String INJURY285 = "125327AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY285 = 125327;
 		
-		public static final String INJURY286 = "125328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY286 = 125328;
 		
-		public static final String INJURY287 = "125329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY287 = 125329;
 		
-		public static final String INJURY288 = "125331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY288 = 125331;
 		
-		public static final String INJURY289 = "125332AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY289 = 125332;
 		
-		public static final String INJURY290 = "125333AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY290 = 125333;
 		
-		public static final String INJURY291 = "125334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY291 = 125334;
 		
-		public static final String INJURY292 = "125335AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY292 = 125335;
 		
-		public static final String INJURY293 = "125336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY293 = 125336;
 		
-		public static final String INJURY294 = "125337AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY294 = 125337;
 		
-		public static final String INJURY295 = "125338AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY295 = 125338;
 		
-		public static final String INJURY296 = "125339AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY296 = 125339;
 		
-		public static final String INJURY297 = "125343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY297 = 125343;
 		
-		public static final String INJURY298 = "125344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY298 = 125344;
 		
-		public static final String INJURY299 = "125345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY299 = 125345;
 		
-		public static final String INJURY300 = "125346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY300 = 125346;
 		
-		public static final String INJURY301 = "125347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY301 = 125347;
 		
-		public static final String INJURY302 = "125348AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY302 = 125348;
 		
-		public static final String INJURY303 = "125349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY303 = 125349;
 		
-		public static final String INJURY304 = "125350AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY304 = 125350;
 		
-		public static final String INJURY305 = "125351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY305 = 125351;
 		
-		public static final String INJURY306 = "125352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY306 = 125352;
 		
-		public static final String INJURY307 = "125353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY307 = 125353;
 		
-		public static final String INJURY308 = "125354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY308 = 125354;
 		
-		public static final String INJURY309 = "125355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY309 = 125355;
 		
-		public static final String INJURY310 = "125356AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY310 = 125356;
 		
-		public static final String INJURY311 = "125357AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY311 = 125357;
 		
-		public static final String INJURY312 = "125358AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY312 = 125358;
 		
-		public static final String INJURY313 = "125361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY313 = 125361;
 		
-		public static final String INJURY314 = "125362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY314 = 125362;
 		
-		public static final String INJURY315 = "125363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY315 = 125363;
 		
-		public static final String INJURY316 = "125364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY316 = 125364;
 		
-		public static final String INJURY317 = "125365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY317 = 125365;
 		
-		public static final String INJURY318 = "125366AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY318 = 125366;
 		
-		public static final String INJURY319 = "125367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY319 = 125367;
 		
-		public static final String INJURY320 = "125368AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY320 = 125368;
 		
-		public static final String INJURY321 = "125370AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY321 = 125370;
 		
-		public static final String INJURY322 = "125372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY322 = 125372;
 		
-		public static final String INJURY323 = "125373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY323 = 125373;
 		
-		public static final String INJURY324 = "125374AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY324 = 125374;
 		
-		public static final String INJURY325 = "125375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY325 = 125375;
 		
-		public static final String INJURY326 = "125376AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY326 = 125376;
 		
-		public static final String INJURY327 = "125377AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY327 = 125377;
 		
-		public static final String INJURY328 = "125378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY328 = 125378;
 		
-		public static final String INJURY329 = "125379AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY329 = 125379;
 		
-		public static final String INJURY330 = "125380AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY330 = 125380;
 		
-		public static final String INJURY331 = "125381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY331 = 125381;
 		
-		public static final String INJURY332 = "125382AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY332 = 125382;
 		
-		public static final String INJURY333 = "125383AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY333 = 125383;
 		
-		public static final String INJURY334 = "125384AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY334 = 125384;
 		
-		public static final String INJURY335 = "125387AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY335 = 125387;
 		
-		public static final String INJURY336 = "125389AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY336 = 125389;
 		
-		public static final String INJURY337 = "125390AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY337 = 125390;
 		
-		public static final String INJURY338 = "125391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY338 = 125391;
 		
-		public static final String INJURY339 = "125392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY339 = 125392;
 		
-		public static final String INJURY340 = "125393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY340 = 125393;
 		
-		public static final String INJURY341 = "125394AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY341 = 125394;
 		
-		public static final String INJURY342 = "125395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY342 = 125395;
 		
-		public static final String INJURY343 = "125396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY343 = 125396;
 		
-		public static final String INJURY344 = "125397AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY344 = 125397;
 		
-		public static final String INJURY345 = "125398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY345 = 125398;
 		
-		public static final String INJURY346 = "125399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY346 = 125399;
 		
-		public static final String INJURY347 = "125400AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY347 = 125400;
 		
-		public static final String INJURY348 = "125401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY348 = 125401;
 		
-		public static final String INJURY349 = "125402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY349 = 125402;
 		
-		public static final String INJURY350 = "125403AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY350 = 125403;
 		
-		public static final String INJURY351 = "125404AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY351 = 125404;
 		
-		public static final String INJURY352 = "125405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY352 = 125405;
 		
-		public static final String INJURY353 = "125406AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY353 = 125406;
 		
-		public static final String INJURY354 = "125407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY354 = 125407;
 		
-		public static final String INJURY355 = "125408AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY355 = 125408;
 		
-		public static final String INJURY356 = "125409AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY356 = 125409;
 		
-		public static final String INJURY357 = "125410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY357 = 125410;
 		
-		public static final String INJURY358 = "125411AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY358 = 125411;
 		
-		public static final String INJURY359 = "125412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY359 = 125412;
 		
-		public static final String INJURY360 = "125413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY360 = 125413;
 		
-		public static final String INJURY361 = "125414AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY361 = 125414;
 		
-		public static final String INJURY362 = "125415AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY362 = 125415;
 		
-		public static final String INJURY363 = "125416AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY363 = 125416;
 		
-		public static final String INJURY364 = "125417AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY364 = 125417;
 		
-		public static final String INJURY365 = "125418AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY365 = 125418;
 		
-		public static final String INJURY366 = "125522AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY366 = 125522;
 		
-		public static final String INJURY367 = "125523AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY367 = 125523;
 		
-		public static final String INJURY368 = "125524AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY368 = 125524;
 		
-		public static final String INJURY369 = "125525AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY369 = 125525;
 		
-		public static final String INJURY370 = "125526AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY370 = 125526;
 		
-		public static final String INJURY371 = "125527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY371 = 125527;
 		
-		public static final String INJURY372 = "125528AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY372 = 125528;
 		
-		public static final String INJURY373 = "125529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY373 = 125529;
 		
-		public static final String INJURY374 = "125530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY374 = 125530;
 		
-		public static final String INJURY375 = "125531AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY375 = 125531;
 		
-		public static final String INJURY376 = "125532AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY376 = 125532;
 		
-		public static final String INJURY377 = "125533AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY377 = 125533;
 		
-		public static final String INJURY378 = "125534AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY378 = 125534;
 		
-		public static final String INJURY379 = "125552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY379 = 125552;
 		
-		public static final String INJURY380 = "125554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY380 = 125554;
 		
-		public static final String INJURY381 = "125555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY381 = 125555;
 		
-		public static final String INJURY382 = "125556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY382 = 125556;
 		
-		public static final String INJURY383 = "125557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY383 = 125557;
 		
-		public static final String INJURY384 = "125609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY384 = 125609;
 		
-		public static final String INJURY385 = "125610AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY385 = 125610;
 		
-		public static final String INJURY386 = "125632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY386 = 125632;
 		
-		public static final String INJURY387 = "125641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY387 = 125641;
 		
-		public static final String INJURY388 = "125642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY388 = 125642;
 		
-		public static final String INJURY389 = "125643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY389 = 125643;
 		
-		public static final String INJURY390 = "125645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY390 = 125645;
 		
-		public static final String INJURY391 = "125646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY391 = 125646;
 		
-		public static final String INJURY392 = "125647AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY392 = 125647;
 		
-		public static final String INJURY393 = "125698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY393 = 125698;
 		
-		public static final String INJURY394 = "125700AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY394 = 125700;
 		
-		public static final String INJURY395 = "125701AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY395 = 125701;
 		
-		public static final String INJURY396 = "125702AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY396 = 125702;
 		
-		public static final String INJURY397 = "125703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY397 = 125703;
 		
-		public static final String INJURY398 = "125705AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY398 = 125705;
 		
-		public static final String INJURY399 = "125706AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY399 = 125706;
 		
-		public static final String INJURY400 = "125707AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY400 = 125707;
 		
-		public static final String INJURY401 = "125709AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY401 = 125709;
 		
-		public static final String INJURY402 = "125863AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY402 = 125863;
 		
-		public static final String INJURY403 = "125901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY403 = 125901;
 		
-		public static final String INJURY404 = "126050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY404 = 126050;
 		
-		public static final String INJURY405 = "126167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY405 = 126167;
 		
-		public static final String INJURY406 = "126168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY406 = 126168;
 		
-		public static final String INJURY407 = "126186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY407 = 126186;
 		
-		public static final String INJURY408 = "126194AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY408 = 126194;
 		
-		public static final String INJURY409 = "126195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY409 = 126195;
 		
-		public static final String INJURY410 = "126196AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY410 = 126196;
 		
-		public static final String INJURY411 = "126248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY411 = 126248;
 		
-		public static final String INJURY412 = "126249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY412 = 126249;
 		
-		public static final String INJURY413 = "126250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY413 = 126250;
 		
-		public static final String INJURY414 = "126410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY414 = 126410;
 		
-		public static final String INJURY415 = "126538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY415 = 126538;
 		
-		public static final String INJURY416 = "126631AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY416 = 126631;
 		
-		public static final String INJURY417 = "126632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY417 = 126632;
 		
-		public static final String INJURY418 = "126808AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY418 = 126808;
 		
-		public static final String INJURY419 = "127155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY419 = 127155;
 		
-		public static final String INJURY420 = "127156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY420 = 127156;
 		
-		public static final String INJURY421 = "127220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY421 = 127220;
 		
-		public static final String INJURY422 = "127667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY422 = 127667;
 		
-		public static final String INJURY423 = "127940AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY423 = 127940;
 		
-		public static final String INJURY424 = "127941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY424 = 127941;
 		
-		public static final String INJURY425 = "128138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY425 = 128138;
 		
-		public static final String INJURY426 = "128142AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY426 = 128142;
 		
-		public static final String INJURY427 = "129457AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY427 = 129457;
 		
-		public static final String INJURY428 = "130376AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY428 = 130376;
 		
-		public static final String INJURY429 = "130387AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY429 = 130387;
 		
-		public static final String INJURY430 = "130420AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY430 = 130420;
 		
-		public static final String INJURY431 = "130421AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY431 = 130421;
 		
-		public static final String INJURY432 = "130647AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY432 = 130647;
 		
-		public static final String INJURY433 = "130672AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY433 = 130672;
 		
-		public static final String INJURY434 = "130673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY434 = 130673;
 		
-		public static final String INJURY435 = "130674AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY435 = 130674;
 		
-		public static final String INJURY436 = "130979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY436 = 130979;
 		
-		public static final String INJURY437 = "130981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY437 = 130981;
 		
-		public static final String INJURY438 = "131398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY438 = 131398;
 		
-		public static final String INJURY439 = "131757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY439 = 131757;
 		
-		public static final String INJURY440 = "131992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY440 = 131992;
 		
-		public static final String INJURY441 = "132101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY441 = 132101;
 		
-		public static final String INJURY442 = "132102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY442 = 132102;
 		
-		public static final String INJURY443 = "132103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY443 = 132103;
 		
-		public static final String INJURY444 = "132108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY444 = 132108;
 		
-		public static final String INJURY445 = "132114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY445 = 132114;
 		
-		public static final String INJURY446 = "132115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY446 = 132115;
 		
-		public static final String INJURY447 = "132122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY447 = 132122;
 		
-		public static final String INJURY448 = "132123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY448 = 132123;
 		
-		public static final String INJURY449 = "132126AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY449 = 132126;
 		
-		public static final String INJURY450 = "132142AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY450 = 132142;
 		
-		public static final String INJURY451 = "132143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY451 = 132143;
 		
-		public static final String INJURY452 = "132145AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY452 = 132145;
 		
-		public static final String INJURY453 = "132171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY453 = 132171;
 		
-		public static final String INJURY454 = "132184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY454 = 132184;
 		
-		public static final String INJURY455 = "132188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY455 = 132188;
 		
-		public static final String INJURY456 = "132198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY456 = 132198;
 		
-		public static final String INJURY457 = "132202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY457 = 132202;
 		
-		public static final String INJURY458 = "132244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY458 = 132244;
 		
-		public static final String INJURY459 = "132245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY459 = 132245;
 		
-		public static final String INJURY460 = "132265AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY460 = 132265;
 		
-		public static final String INJURY461 = "132272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY461 = 132272;
 		
-		public static final String INJURY462 = "132274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY462 = 132274;
 		
-		public static final String INJURY463 = "132292AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY463 = 132292;
 		
-		public static final String INJURY464 = "132294AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY464 = 132294;
 		
-		public static final String INJURY465 = "132316AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY465 = 132316;
 		
-		public static final String INJURY466 = "132317AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY466 = 132317;
 		
-		public static final String INJURY467 = "132321AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY467 = 132321;
 		
-		public static final String INJURY468 = "132804AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY468 = 132804;
 		
-		public static final String INJURY469 = "133136AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY469 = 133136;
 		
-		public static final String INJURY470 = "133137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY470 = 133137;
 		
-		public static final String INJURY471 = "133439AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY471 = 133439;
 		
-		public static final String INJURY472 = "133685AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY472 = 133685;
 		
-		public static final String INJURY473 = "133707AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY473 = 133707;
 		
-		public static final String INJURY474 = "133724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY474 = 133724;
 		
-		public static final String INJURY475 = "133727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY475 = 133727;
 		
-		public static final String INJURY476 = "133728AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY476 = 133728;
 		
-		public static final String INJURY477 = "133729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY477 = 133729;
 		
-		public static final String INJURY478 = "133730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY478 = 133730;
 		
-		public static final String INJURY479 = "133731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY479 = 133731;
 		
-		public static final String INJURY480 = "133740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY480 = 133740;
 		
-		public static final String INJURY481 = "133741AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY481 = 133741;
 		
-		public static final String INJURY482 = "133856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY482 = 133856;
 		
-		public static final String INJURY483 = "133857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY483 = 133857;
 		
-		public static final String INJURY484 = "133858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY484 = 133858;
 		
-		public static final String INJURY485 = "133859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY485 = 133859;
 		
-		public static final String INJURY486 = "133862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY486 = 133862;
 		
-		public static final String INJURY487 = "133863AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY487 = 133863;
 		
-		public static final String INJURY488 = "133870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY488 = 133870;
 		
-		public static final String INJURY489 = "133894AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY489 = 133894;
 		
-		public static final String INJURY490 = "133914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY490 = 133914;
 		
-		public static final String INJURY491 = "133917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY491 = 133917;
 		
-		public static final String INJURY492 = "133918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY492 = 133918;
 		
-		public static final String INJURY493 = "133920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY493 = 133920;
 		
-		public static final String INJURY494 = "134110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY494 = 134110;
 		
-		public static final String INJURY495 = "134173AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY495 = 134173;
 		
-		public static final String INJURY496 = "135543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY496 = 135543;
 		
-		public static final String INJURY497 = "136042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY497 = 136042;
 		
-		public static final String INJURY498 = "136051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY498 = 136051;
 		
-		public static final String INJURY499 = "136052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY499 = 136052;
 		
-		public static final String INJURY500 = "136063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY500 = 136063;
 		
-		public static final String INJURY501 = "136064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY501 = 136064;
 		
-		public static final String INJURY502 = "136065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY502 = 136065;
 		
-		public static final String INJURY503 = "136066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY503 = 136066;
 		
-		public static final String INJURY504 = "136073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY504 = 136073;
 		
-		public static final String INJURY505 = "136074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY505 = 136074;
 		
-		public static final String INJURY506 = "136075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY506 = 136075;
 		
-		public static final String INJURY507 = "136077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY507 = 136077;
 		
-		public static final String INJURY508 = "136079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY508 = 136079;
 		
-		public static final String INJURY509 = "136080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY509 = 136080;
 		
-		public static final String INJURY510 = "136082AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY510 = 136082;
 		
-		public static final String INJURY511 = "136083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY511 = 136083;
 		
-		public static final String INJURY512 = "136084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY512 = 136084;
 		
-		public static final String INJURY513 = "136085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY513 = 136085;
 		
-		public static final String INJURY514 = "136086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY514 = 136086;
 		
-		public static final String INJURY515 = "136087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY515 = 136087;
 		
-		public static final String INJURY516 = "136088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY516 = 136088;
 		
-		public static final String INJURY517 = "136089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY517 = 136089;
 		
-		public static final String INJURY518 = "136090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY518 = 136090;
 		
-		public static final String INJURY519 = "136091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY519 = 136091;
 		
-		public static final String INJURY520 = "136092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY520 = 136092;
 		
-		public static final String INJURY521 = "136102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY521 = 136102;
 		
-		public static final String INJURY522 = "136268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY522 = 136268;
 		
-		public static final String INJURY523 = "136412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY523 = 136412;
 		
-		public static final String INJURY524 = "136627AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY524 = 136627;
 		
-		public static final String INJURY525 = "136628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY525 = 136628;
 		
-		public static final String INJURY526 = "136629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY526 = 136629;
 		
-		public static final String INJURY527 = "136630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY527 = 136630;
 		
-		public static final String INJURY528 = "136643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY528 = 136643;
 		
-		public static final String INJURY529 = "136644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY529 = 136644;
 		
-		public static final String INJURY530 = "136645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY530 = 136645;
 		
-		public static final String INJURY531 = "136647AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY531 = 136647;
 		
-		public static final String INJURY532 = "136648AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY532 = 136648;
 		
-		public static final String INJURY533 = "136649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY533 = 136649;
 		
-		public static final String INJURY534 = "136650AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY534 = 136650;
 		
-		public static final String INJURY535 = "136651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY535 = 136651;
 		
-		public static final String INJURY536 = "136652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY536 = 136652;
 		
-		public static final String INJURY537 = "136653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY537 = 136653;
 		
-		public static final String INJURY538 = "136654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY538 = 136654;
 		
-		public static final String INJURY539 = "136656AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY539 = 136656;
 		
-		public static final String INJURY540 = "136658AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY540 = 136658;
 		
-		public static final String INJURY541 = "136728AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY541 = 136728;
 		
-		public static final String INJURY542 = "136729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY542 = 136729;
 		
-		public static final String INJURY543 = "136834AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY543 = 136834;
 		
-		public static final String INJURY544 = "136835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY544 = 136835;
 		
-		public static final String INJURY545 = "136836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY545 = 136836;
 		
-		public static final String INJURY546 = "136837AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY546 = 136837;
 		
-		public static final String INJURY547 = "136838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY547 = 136838;
 		
-		public static final String INJURY548 = "136839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY548 = 136839;
 		
-		public static final String INJURY549 = "136840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY549 = 136840;
 		
-		public static final String INJURY550 = "136841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY550 = 136841;
 		
-		public static final String INJURY551 = "136843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY551 = 136843;
 		
-		public static final String INJURY552 = "136844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY552 = 136844;
 		
-		public static final String INJURY553 = "136845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY553 = 136845;
 		
-		public static final String INJURY554 = "136846AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY554 = 136846;
 		
-		public static final String INJURY555 = "136847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY555 = 136847;
 		
-		public static final String INJURY556 = "136848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY556 = 136848;
 		
-		public static final String INJURY557 = "136850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY557 = 136850;
 		
-		public static final String INJURY558 = "136851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY558 = 136851;
 		
-		public static final String INJURY559 = "136852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY559 = 136852;
 		
-		public static final String INJURY560 = "136853AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY560 = 136853;
 		
-		public static final String INJURY561 = "136855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY561 = 136855;
 		
-		public static final String INJURY562 = "136857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY562 = 136857;
 		
-		public static final String INJURY563 = "136858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY563 = 136858;
 		
-		public static final String INJURY564 = "136859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY564 = 136859;
 		
-		public static final String INJURY565 = "136860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY565 = 136860;
 		
-		public static final String INJURY566 = "136861AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY566 = 136861;
 		
-		public static final String INJURY567 = "136862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY567 = 136862;
 		
-		public static final String INJURY568 = "136863AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY568 = 136863;
 		
-		public static final String INJURY569 = "136864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY569 = 136864;
 		
-		public static final String INJURY570 = "136865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY570 = 136865;
 		
-		public static final String INJURY571 = "136866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY571 = 136866;
 		
-		public static final String INJURY572 = "136867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY572 = 136867;
 		
-		public static final String INJURY573 = "136868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY573 = 136868;
 		
-		public static final String INJURY574 = "136869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY574 = 136869;
 		
-		public static final String INJURY575 = "136870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY575 = 136870;
 		
-		public static final String INJURY576 = "136871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY576 = 136871;
 		
-		public static final String INJURY577 = "136872AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY577 = 136872;
 		
-		public static final String INJURY578 = "136873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY578 = 136873;
 		
-		public static final String INJURY579 = "136874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY579 = 136874;
 		
-		public static final String INJURY580 = "136875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY580 = 136875;
 		
-		public static final String INJURY581 = "136876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY581 = 136876;
 		
-		public static final String INJURY582 = "136877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY582 = 136877;
 		
-		public static final String INJURY583 = "136878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY583 = 136878;
 		
-		public static final String INJURY584 = "136879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY584 = 136879;
 		
-		public static final String INJURY585 = "136880AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY585 = 136880;
 		
-		public static final String INJURY586 = "136881AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY586 = 136881;
 		
-		public static final String INJURY587 = "136882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY587 = 136882;
 		
-		public static final String INJURY588 = "136883AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY588 = 136883;
 		
-		public static final String INJURY589 = "136884AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY589 = 136884;
 		
-		public static final String INJURY590 = "136887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY590 = 136887;
 		
-		public static final String INJURY591 = "136888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY591 = 136888;
 		
-		public static final String INJURY592 = "136889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY592 = 136889;
 		
-		public static final String INJURY593 = "136890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY593 = 136890;
 		
-		public static final String INJURY594 = "136892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY594 = 136892;
 		
-		public static final String INJURY595 = "136893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY595 = 136893;
 		
-		public static final String INJURY596 = "136894AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY596 = 136894;
 		
-		public static final String INJURY597 = "136895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY597 = 136895;
 		
-		public static final String INJURY598 = "136896AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY598 = 136896;
 		
-		public static final String INJURY599 = "136897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY599 = 136897;
 		
-		public static final String INJURY600 = "136898AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY600 = 136898;
 		
-		public static final String INJURY601 = "136899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY601 = 136899;
 		
-		public static final String INJURY602 = "136900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY602 = 136900;
 		
-		public static final String INJURY603 = "136902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY603 = 136902;
 		
-		public static final String INJURY604 = "136903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY604 = 136903;
 		
-		public static final String INJURY605 = "136904AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY605 = 136904;
 		
-		public static final String INJURY606 = "136905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY606 = 136905;
 		
-		public static final String INJURY607 = "136906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY607 = 136906;
 		
-		public static final String INJURY608 = "136907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY608 = 136907;
 		
-		public static final String INJURY609 = "136908AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY609 = 136908;
 		
-		public static final String INJURY610 = "136909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY610 = 136909;
 		
-		public static final String INJURY611 = "136910AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY611 = 136910;
 		
-		public static final String INJURY612 = "136911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY612 = 136911;
 		
-		public static final String INJURY613 = "136912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY613 = 136912;
 		
-		public static final String INJURY614 = "136913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY614 = 136913;
 		
-		public static final String INJURY615 = "136914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY615 = 136914;
 		
-		public static final String INJURY616 = "136916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY616 = 136916;
 		
-		public static final String INJURY617 = "136917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY617 = 136917;
 		
-		public static final String INJURY618 = "136918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY618 = 136918;
 		
-		public static final String INJURY619 = "136919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY619 = 136919;
 		
-		public static final String INJURY620 = "136920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY620 = 136920;
 		
-		public static final String INJURY621 = "136921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY621 = 136921;
 		
-		public static final String INJURY622 = "136922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY622 = 136922;
 		
-		public static final String INJURY623 = "136923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY623 = 136923;
 		
-		public static final String INJURY624 = "136924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY624 = 136924;
 		
-		public static final String INJURY625 = "136925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY625 = 136925;
 		
-		public static final String INJURY626 = "136926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY626 = 136926;
 		
-		public static final String INJURY627 = "136927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY627 = 136927;
 		
-		public static final String INJURY628 = "136928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY628 = 136928;
 		
-		public static final String INJURY629 = "136929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY629 = 136929;
 		
-		public static final String INJURY630 = "136930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY630 = 136930;
 		
-		public static final String INJURY631 = "136931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY631 = 136931;
 		
-		public static final String INJURY632 = "136932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY632 = 136932;
 		
-		public static final String INJURY633 = "136933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY633 = 136933;
 		
-		public static final String INJURY634 = "136934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY634 = 136934;
 		
-		public static final String INJURY635 = "136935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY635 = 136935;
 		
-		public static final String INJURY636 = "136936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY636 = 136936;
 		
-		public static final String INJURY637 = "136938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY637 = 136938;
 		
-		public static final String INJURY638 = "136940AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY638 = 136940;
 		
-		public static final String INJURY639 = "136941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY639 = 136941;
 		
-		public static final String INJURY640 = "136942AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY640 = 136942;
 		
-		public static final String INJURY641 = "136943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY641 = 136943;
 		
-		public static final String INJURY642 = "136944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY642 = 136944;
 		
-		public static final String INJURY643 = "136945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY643 = 136945;
 		
-		public static final String INJURY644 = "136946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY644 = 136946;
 		
-		public static final String INJURY645 = "136947AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY645 = 136947;
 		
-		public static final String INJURY646 = "136948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY646 = 136948;
 		
-		public static final String INJURY647 = "136949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY647 = 136949;
 		
-		public static final String INJURY648 = "136950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY648 = 136950;
 		
-		public static final String INJURY649 = "136951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY649 = 136951;
 		
-		public static final String INJURY650 = "136953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY650 = 136953;
 		
-		public static final String INJURY651 = "136954AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY651 = 136954;
 		
-		public static final String INJURY652 = "136955AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY652 = 136955;
 		
-		public static final String INJURY653 = "136956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY653 = 136956;
 		
-		public static final String INJURY654 = "136957AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY654 = 136957;
 		
-		public static final String INJURY655 = "136959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY655 = 136959;
 		
-		public static final String INJURY656 = "136960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY656 = 136960;
 		
-		public static final String INJURY657 = "136961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY657 = 136961;
 		
-		public static final String INJURY658 = "136964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY658 = 136964;
 		
-		public static final String INJURY659 = "136965AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY659 = 136965;
 		
-		public static final String INJURY660 = "136967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY660 = 136967;
 		
-		public static final String INJURY661 = "136968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY661 = 136968;
 		
-		public static final String INJURY662 = "136969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY662 = 136969;
 		
-		public static final String INJURY663 = "136970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY663 = 136970;
 		
-		public static final String INJURY664 = "136971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY664 = 136971;
 		
-		public static final String INJURY665 = "136972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY665 = 136972;
 		
-		public static final String INJURY666 = "136973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY666 = 136973;
 		
-		public static final String INJURY667 = "136974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY667 = 136974;
 		
-		public static final String INJURY668 = "136975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY668 = 136975;
 		
-		public static final String INJURY669 = "136976AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY669 = 136976;
 		
-		public static final String INJURY670 = "136977AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY670 = 136977;
 		
-		public static final String INJURY671 = "136978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY671 = 136978;
 		
-		public static final String INJURY672 = "136979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY672 = 136979;
 		
-		public static final String INJURY673 = "136980AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY673 = 136980;
 		
-		public static final String INJURY674 = "136981AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY674 = 136981;
 		
-		public static final String INJURY675 = "136982AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY675 = 136982;
 		
-		public static final String INJURY676 = "136983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY676 = 136983;
 		
-		public static final String INJURY677 = "136984AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY677 = 136984;
 		
-		public static final String INJURY678 = "136985AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY678 = 136985;
 		
-		public static final String INJURY679 = "136986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY679 = 136986;
 		
-		public static final String INJURY680 = "136987AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY680 = 136987;
 		
-		public static final String INJURY681 = "136988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY681 = 136988;
 		
-		public static final String INJURY682 = "136989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY682 = 136989;
 		
-		public static final String INJURY683 = "136990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY683 = 136990;
 		
-		public static final String INJURY684 = "136991AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY684 = 136991;
 		
-		public static final String INJURY685 = "136992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY685 = 136992;
 		
-		public static final String INJURY686 = "136993AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY686 = 136993;
 		
-		public static final String INJURY687 = "136994AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY687 = 136994;
 		
-		public static final String INJURY688 = "136995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY688 = 136995;
 		
-		public static final String INJURY689 = "136996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY689 = 136996;
 		
-		public static final String INJURY690 = "136997AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY690 = 136997;
 		
-		public static final String INJURY691 = "136998AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY691 = 136998;
 		
-		public static final String INJURY692 = "136999AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY692 = 136999;
 		
-		public static final String INJURY693 = "137000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY693 = 137000;
 		
-		public static final String INJURY694 = "137001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY694 = 137001;
 		
-		public static final String INJURY695 = "137002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY695 = 137002;
 		
-		public static final String INJURY696 = "137003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY696 = 137003;
 		
-		public static final String INJURY697 = "137004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY697 = 137004;
 		
-		public static final String INJURY698 = "137005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY698 = 137005;
 		
-		public static final String INJURY699 = "137006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY699 = 137006;
 		
-		public static final String INJURY700 = "137007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY700 = 137007;
 		
-		public static final String INJURY701 = "137008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY701 = 137008;
 		
-		public static final String INJURY702 = "137009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY702 = 137009;
 		
-		public static final String INJURY703 = "137010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY703 = 137010;
 		
-		public static final String INJURY704 = "137012AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY704 = 137012;
 		
-		public static final String INJURY705 = "137013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY705 = 137013;
 		
-		public static final String INJURY706 = "137014AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY706 = 137014;
 		
-		public static final String INJURY707 = "137015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY707 = 137015;
 		
-		public static final String INJURY708 = "137016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY708 = 137016;
 		
-		public static final String INJURY709 = "137017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY709 = 137017;
 		
-		public static final String INJURY710 = "137018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY710 = 137018;
 		
-		public static final String INJURY711 = "137019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY711 = 137019;
 		
-		public static final String INJURY712 = "137020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY712 = 137020;
 		
-		public static final String INJURY713 = "137021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY713 = 137021;
 		
-		public static final String INJURY714 = "137022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY714 = 137022;
 		
-		public static final String INJURY715 = "137023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY715 = 137023;
 		
-		public static final String INJURY716 = "137024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY716 = 137024;
 		
-		public static final String INJURY717 = "137025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY717 = 137025;
 		
-		public static final String INJURY718 = "137026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY718 = 137026;
 		
-		public static final String INJURY719 = "137027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY719 = 137027;
 		
-		public static final String INJURY720 = "137028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY720 = 137028;
 		
-		public static final String INJURY721 = "137029AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY721 = 137029;
 		
-		public static final String INJURY722 = "137030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY722 = 137030;
 		
-		public static final String INJURY723 = "137031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY723 = 137031;
 		
-		public static final String INJURY724 = "137032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY724 = 137032;
 		
-		public static final String INJURY725 = "137033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY725 = 137033;
 		
-		public static final String INJURY726 = "137034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY726 = 137034;
 		
-		public static final String INJURY727 = "137036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY727 = 137036;
 		
-		public static final String INJURY728 = "137038AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY728 = 137038;
 		
-		public static final String INJURY729 = "137039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY729 = 137039;
 		
-		public static final String INJURY730 = "137040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY730 = 137040;
 		
-		public static final String INJURY731 = "137041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY731 = 137041;
 		
-		public static final String INJURY732 = "137042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY732 = 137042;
 		
-		public static final String INJURY733 = "137043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY733 = 137043;
 		
-		public static final String INJURY734 = "137044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY734 = 137044;
 		
-		public static final String INJURY735 = "137045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY735 = 137045;
 		
-		public static final String INJURY736 = "137046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY736 = 137046;
 		
-		public static final String INJURY737 = "137047AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY737 = 137047;
 		
-		public static final String INJURY738 = "137049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY738 = 137049;
 		
-		public static final String INJURY739 = "137050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY739 = 137050;
 		
-		public static final String INJURY740 = "137051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY740 = 137051;
 		
-		public static final String INJURY741 = "137052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY741 = 137052;
 		
-		public static final String INJURY742 = "137053AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY742 = 137053;
 		
-		public static final String INJURY743 = "137054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY743 = 137054;
 		
-		public static final String INJURY744 = "137055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY744 = 137055;
 		
-		public static final String INJURY745 = "137056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY745 = 137056;
 		
-		public static final String INJURY746 = "137057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY746 = 137057;
 		
-		public static final String INJURY747 = "137058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY747 = 137058;
 		
-		public static final String INJURY748 = "137059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY748 = 137059;
 		
-		public static final String INJURY749 = "137060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY749 = 137060;
 		
-		public static final String INJURY750 = "137062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY750 = 137062;
 		
-		public static final String INJURY751 = "137063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY751 = 137063;
 		
-		public static final String INJURY752 = "137065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY752 = 137065;
 		
-		public static final String INJURY753 = "137066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY753 = 137066;
 		
-		public static final String INJURY754 = "137067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY754 = 137067;
 		
-		public static final String INJURY755 = "137068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY755 = 137068;
 		
-		public static final String INJURY756 = "137069AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY756 = 137069;
 		
-		public static final String INJURY757 = "137070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY757 = 137070;
 		
-		public static final String INJURY758 = "137071AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY758 = 137071;
 		
-		public static final String INJURY759 = "137072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY759 = 137072;
 		
-		public static final String INJURY760 = "137073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY760 = 137073;
 		
-		public static final String INJURY761 = "137074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY761 = 137074;
 		
-		public static final String INJURY762 = "137075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY762 = 137075;
 		
-		public static final String INJURY763 = "137079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY763 = 137079;
 		
-		public static final String INJURY764 = "137080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY764 = 137080;
 		
-		public static final String INJURY765 = "137081AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY765 = 137081;
 		
-		public static final String INJURY766 = "137082AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY766 = 137082;
 		
-		public static final String INJURY767 = "137084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY767 = 137084;
 		
-		public static final String INJURY768 = "137085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY768 = 137085;
 		
-		public static final String INJURY769 = "137086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY769 = 137086;
 		
-		public static final String INJURY770 = "137087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY770 = 137087;
 		
-		public static final String INJURY771 = "137089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY771 = 137089;
 		
-		public static final String INJURY772 = "137093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY772 = 137093;
 		
-		public static final String INJURY773 = "137096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY773 = 137096;
 		
-		public static final String INJURY774 = "137097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY774 = 137097;
 		
-		public static final String INJURY775 = "137098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY775 = 137098;
 		
-		public static final String INJURY776 = "137099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY776 = 137099;
 		
-		public static final String INJURY777 = "137100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY777 = 137100;
 		
-		public static final String INJURY778 = "137101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY778 = 137101;
 		
-		public static final String INJURY779 = "137103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY779 = 137103;
 		
-		public static final String INJURY780 = "137104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY780 = 137104;
 		
-		public static final String INJURY781 = "137106AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY781 = 137106;
 		
-		public static final String INJURY782 = "137107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY782 = 137107;
 		
-		public static final String INJURY783 = "137108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY783 = 137108;
 		
-		public static final String INJURY784 = "137109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY784 = 137109;
 		
-		public static final String INJURY785 = "137110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY785 = 137110;
 		
-		public static final String INJURY786 = "137111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY786 = 137111;
 		
-		public static final String INJURY787 = "137112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY787 = 137112;
 		
-		public static final String INJURY788 = "137113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY788 = 137113;
 		
-		public static final String INJURY789 = "137114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY789 = 137114;
 		
-		public static final String INJURY790 = "137115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY790 = 137115;
 		
-		public static final String INJURY791 = "137116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY791 = 137116;
 		
-		public static final String INJURY792 = "137117AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY792 = 137117;
 		
-		public static final String INJURY793 = "137118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY793 = 137118;
 		
-		public static final String INJURY794 = "137119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY794 = 137119;
 		
-		public static final String INJURY795 = "137120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY795 = 137120;
 		
-		public static final String INJURY796 = "137121AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY796 = 137121;
 		
-		public static final String INJURY797 = "137619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY797 = 137619;
 		
-		public static final String INJURY798 = "137620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY798 = 137620;
 		
-		public static final String INJURY799 = "137621AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY799 = 137621;
 		
-		public static final String INJURY800 = "137622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY800 = 137622;
 		
-		public static final String INJURY801 = "138907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY801 = 138907;
 		
-		public static final String INJURY802 = "139067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY802 = 139067;
 		
-		public static final String INJURY803 = "139091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY803 = 139091;
 		
-		public static final String INJURY804 = "139120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY804 = 139120;
 		
-		public static final String INJURY805 = "139424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY805 = 139424;
 		
-		public static final String INJURY806 = "139665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY806 = 139665;
 		
-		public static final String INJURY807 = "139666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY807 = 139666;
 		
-		public static final String INJURY808 = "139826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY808 = 139826;
 		
-		public static final String INJURY809 = "139827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY809 = 139827;
 		
-		public static final String INJURY810 = "140036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY810 = 140036;
 		
-		public static final String INJURY811 = "140291AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY811 = 140291;
 		
-		public static final String INJURY812 = "140615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY812 = 140615;
 		
-		public static final String INJURY813 = "140616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY813 = 140616;
 		
-		public static final String INJURY814 = "140641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY814 = 140641;
 		
-		public static final String INJURY815 = "140673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY815 = 140673;
 		
-		public static final String INJURY816 = "140675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY816 = 140675;
 		
-		public static final String INJURY817 = "140677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY817 = 140677;
 		
-		public static final String INJURY818 = "140697AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY818 = 140697;
 		
-		public static final String INJURY819 = "140698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY819 = 140698;
 		
-		public static final String INJURY820 = "140818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY820 = 140818;
 		
-		public static final String INJURY821 = "140869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY821 = 140869;
 		
-		public static final String INJURY822 = "140870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY822 = 140870;
 		
-		public static final String INJURY823 = "140874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY823 = 140874;
 		
-		public static final String INJURY824 = "140879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY824 = 140879;
 		
-		public static final String INJURY825 = "140880AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY825 = 140880;
 		
-		public static final String INJURY826 = "140881AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY826 = 140881;
 		
-		public static final String INJURY827 = "140882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY827 = 140882;
 		
-		public static final String INJURY828 = "140883AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY828 = 140883;
 		
-		public static final String INJURY829 = "140907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY829 = 140907;
 		
-		public static final String INJURY830 = "141000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY830 = 141000;
 		
-		public static final String INJURY831 = "142330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY831 = 142330;
 		
-		public static final String INJURY832 = "143133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY832 = 143133;
 		
-		public static final String INJURY833 = "143134AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY833 = 143134;
 		
-		public static final String INJURY834 = "143135AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY834 = 143135;
 		
-		public static final String INJURY835 = "143136AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY835 = 143136;
 		
-		public static final String INJURY836 = "143137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY836 = 143137;
 		
-		public static final String INJURY837 = "143138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY837 = 143138;
 		
-		public static final String INJURY838 = "143139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY838 = 143139;
 		
-		public static final String INJURY839 = "143140AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY839 = 143140;
 		
-		public static final String INJURY840 = "143141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY840 = 143141;
 		
-		public static final String INJURY841 = "143142AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY841 = 143142;
 		
-		public static final String INJURY842 = "143143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY842 = 143143;
 		
-		public static final String INJURY843 = "143144AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY843 = 143144;
 		
-		public static final String INJURY844 = "143145AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY844 = 143145;
 		
-		public static final String INJURY845 = "143146AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY845 = 143146;
 		
-		public static final String INJURY846 = "143147AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY846 = 143147;
 		
-		public static final String INJURY847 = "143148AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY847 = 143148;
 		
-		public static final String INJURY848 = "143149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY848 = 143149;
 		
-		public static final String INJURY849 = "143150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY849 = 143150;
 		
-		public static final String INJURY850 = "143151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY850 = 143151;
 		
-		public static final String INJURY851 = "143152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY851 = 143152;
 		
-		public static final String INJURY852 = "143153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY852 = 143153;
 		
-		public static final String INJURY853 = "143154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY853 = 143154;
 		
-		public static final String INJURY854 = "143155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY854 = 143155;
 		
-		public static final String INJURY855 = "143156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY855 = 143156;
 		
-		public static final String INJURY856 = "143157AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY856 = 143157;
 		
-		public static final String INJURY857 = "143158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY857 = 143158;
 		
-		public static final String INJURY858 = "143159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY858 = 143159;
 		
-		public static final String INJURY859 = "143160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY859 = 143160;
 		
-		public static final String INJURY860 = "143161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY860 = 143161;
 		
-		public static final String INJURY861 = "143162AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY861 = 143162;
 		
-		public static final String INJURY862 = "143163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY862 = 143163;
 		
-		public static final String INJURY863 = "143164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY863 = 143164;
 		
-		public static final String INJURY864 = "143165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY864 = 143165;
 		
-		public static final String INJURY865 = "143166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY865 = 143166;
 		
-		public static final String INJURY866 = "143167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY866 = 143167;
 		
-		public static final String INJURY867 = "143168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY867 = 143168;
 		
-		public static final String INJURY868 = "143169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY868 = 143169;
 		
-		public static final String INJURY869 = "143170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY869 = 143170;
 		
-		public static final String INJURY870 = "143171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY870 = 143171;
 		
-		public static final String INJURY871 = "143176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY871 = 143176;
 		
-		public static final String INJURY872 = "143178AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY872 = 143178;
 		
-		public static final String INJURY873 = "143179AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY873 = 143179;
 		
-		public static final String INJURY874 = "143180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY874 = 143180;
 		
-		public static final String INJURY875 = "143183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY875 = 143183;
 		
-		public static final String INJURY876 = "143184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY876 = 143184;
 		
-		public static final String INJURY877 = "143185AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY877 = 143185;
 		
-		public static final String INJURY878 = "143187AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY878 = 143187;
 		
-		public static final String INJURY879 = "143189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY879 = 143189;
 		
-		public static final String INJURY880 = "143236AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY880 = 143236;
 		
-		public static final String INJURY881 = "144585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY881 = 144585;
 		
-		public static final String INJURY882 = "144595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY882 = 144595;
 		
-		public static final String INJURY883 = "144596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY883 = 144596;
 		
-		public static final String INJURY884 = "144597AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY884 = 144597;
 		
-		public static final String INJURY885 = "144598AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY885 = 144598;
 		
-		public static final String INJURY886 = "144616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY886 = 144616;
 		
-		public static final String INJURY887 = "144617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY887 = 144617;
 		
-		public static final String INJURY888 = "144703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY888 = 144703;
 		
-		public static final String INJURY889 = "144730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY889 = 144730;
 		
-		public static final String INJURY890 = "144731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY890 = 144731;
 		
-		public static final String INJURY891 = "144732AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY891 = 144732;
 		
-		public static final String INJURY892 = "144733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY892 = 144733;
 		
-		public static final String INJURY893 = "144734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY893 = 144734;
 		
-		public static final String INJURY894 = "144735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY894 = 144735;
 		
-		public static final String INJURY895 = "144736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY895 = 144736;
 		
-		public static final String INJURY896 = "144742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY896 = 144742;
 		
-		public static final String INJURY897 = "144751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY897 = 144751;
 		
-		public static final String INJURY898 = "144752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY898 = 144752;
 		
-		public static final String INJURY899 = "144756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY899 = 144756;
 		
-		public static final String INJURY900 = "144757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY900 = 144757;
 		
-		public static final String INJURY901 = "144759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY901 = 144759;
 		
-		public static final String INJURY902 = "144761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY902 = 144761;
 		
-		public static final String INJURY903 = "144783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY903 = 144783;
 		
-		public static final String INJURY904 = "144784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY904 = 144784;
 		
-		public static final String INJURY905 = "144786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY905 = 144786;
 		
-		public static final String INJURY906 = "144825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY906 = 144825;
 		
-		public static final String INJURY907 = "144840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY907 = 144840;
 		
-		public static final String INJURY908 = "144841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY908 = 144841;
 		
-		public static final String INJURY909 = "144885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY909 = 144885;
 		
-		public static final String INJURY910 = "144886AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY910 = 144886;
 		
-		public static final String INJURY911 = "144913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY911 = 144913;
 		
-		public static final String INJURY912 = "144918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY912 = 144918;
 		
-		public static final String INJURY913 = "144920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY913 = 144920;
 		
-		public static final String INJURY914 = "144944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY914 = 144944;
 		
-		public static final String INJURY915 = "144946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY915 = 144946;
 		
-		public static final String INJURY916 = "144967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY916 = 144967;
 		
-		public static final String INJURY917 = "144969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY917 = 144969;
 		
-		public static final String INJURY918 = "144971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY918 = 144971;
 		
-		public static final String INJURY919 = "144972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY919 = 144972;
 		
-		public static final String INJURY920 = "144973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY920 = 144973;
 		
-		public static final String INJURY921 = "145743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY921 = 145743;
 		
-		public static final String INJURY922 = "145792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY922 = 145792;
 		
-		public static final String INJURY923 = "145796AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY923 = 145796;
 		
-		public static final String INJURY924 = "145874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY924 = 145874;
 		
-		public static final String INJURY925 = "146076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY925 = 146076;
 		
-		public static final String INJURY926 = "146077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY926 = 146077;
 		
-		public static final String INJURY927 = "146083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY927 = 146083;
 		
-		public static final String INJURY928 = "146998AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY928 = 146998;
 		
-		public static final String INJURY929 = "147000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY929 = 147000;
 		
-		public static final String INJURY930 = "147001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY930 = 147001;
 		
-		public static final String INJURY931 = "147002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY931 = 147002;
 		
-		public static final String INJURY932 = "147003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY932 = 147003;
 		
-		public static final String INJURY933 = "147004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY933 = 147004;
 		
-		public static final String INJURY934 = "147005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY934 = 147005;
 		
-		public static final String INJURY935 = "147006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY935 = 147006;
 		
-		public static final String INJURY936 = "147008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY936 = 147008;
 		
-		public static final String INJURY937 = "147244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY937 = 147244;
 		
-		public static final String INJURY938 = "147257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY938 = 147257;
 		
-		public static final String INJURY939 = "147279AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY939 = 147279;
 		
-		public static final String INJURY940 = "147333AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY940 = 147333;
 		
-		public static final String INJURY941 = "148059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY941 = 148059;
 		
-		public static final String INJURY942 = "148318AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY942 = 148318;
 		
-		public static final String INJURY943 = "148351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY943 = 148351;
 		
-		public static final String INJURY944 = "148749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY944 = 148749;
 		
-		public static final String INJURY945 = "149359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY945 = 149359;
 		
-		public static final String INJURY946 = "149705AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY946 = 149705;
 		
-		public static final String INJURY947 = "150359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY947 = 150359;
 		
-		public static final String INJURY948 = "150420AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY948 = 150420;
 		
-		public static final String INJURY949 = "151290AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY949 = 151290;
 		
-		public static final String INJURY950 = "151794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY950 = 151794;
 		
-		public static final String INJURY951 = "151825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY951 = 151825;
 		
-		public static final String INJURY952 = "151957AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY952 = 151957;
 		
-		public static final String INJURY953 = "151958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY953 = 151958;
 		
-		public static final String INJURY954 = "151959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY954 = 151959;
 		
-		public static final String INJURY955 = "151960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY955 = 151960;
 		
-		public static final String INJURY956 = "151961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY956 = 151961;
 		
-		public static final String INJURY957 = "151962AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY957 = 151962;
 		
-		public static final String INJURY958 = "151963AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY958 = 151963;
 		
-		public static final String INJURY959 = "151964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY959 = 151964;
 		
-		public static final String INJURY960 = "151965AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY960 = 151965;
 		
-		public static final String INJURY961 = "151966AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY961 = 151966;
 		
-		public static final String INJURY962 = "151967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY962 = 151967;
 		
-		public static final String INJURY963 = "151968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY963 = 151968;
 		
-		public static final String INJURY964 = "151969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY964 = 151969;
 		
-		public static final String INJURY965 = "151970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY965 = 151970;
 		
-		public static final String INJURY966 = "151971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY966 = 151971;
 		
-		public static final String INJURY967 = "151973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY967 = 151973;
 		
-		public static final String INJURY968 = "151974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY968 = 151974;
 		
-		public static final String INJURY969 = "152048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY969 = 152048;
 		
-		public static final String INJURY970 = "152119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY970 = 152119;
 		
-		public static final String INJURY971 = "152120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY971 = 152120;
 		
-		public static final String INJURY972 = "152235AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY972 = 152235;
 		
-		public static final String INJURY973 = "152236AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY973 = 152236;
 		
-		public static final String INJURY974 = "152237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY974 = 152237;
 		
-		public static final String INJURY975 = "152239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY975 = 152239;
 		
-		public static final String INJURY976 = "152240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY976 = 152240;
 		
-		public static final String INJURY977 = "152242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY977 = 152242;
 		
-		public static final String INJURY978 = "152243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY978 = 152243;
 		
-		public static final String INJURY979 = "152244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY979 = 152244;
 		
-		public static final String INJURY980 = "152248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY980 = 152248;
 		
-		public static final String INJURY981 = "152249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY981 = 152249;
 		
-		public static final String INJURY982 = "152250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY982 = 152250;
 		
-		public static final String INJURY983 = "152251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY983 = 152251;
 		
-		public static final String INJURY984 = "152252AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY984 = 152252;
 		
-		public static final String INJURY985 = "152348AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY985 = 152348;
 		
-		public static final String INJURY986 = "152349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY986 = 152349;
 		
-		public static final String INJURY987 = "152358AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY987 = 152358;
 		
-		public static final String INJURY988 = "152359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY988 = 152359;
 		
-		public static final String INJURY989 = "152362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY989 = 152362;
 		
-		public static final String INJURY990 = "152363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY990 = 152363;
 		
-		public static final String INJURY991 = "152372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY991 = 152372;
 		
-		public static final String INJURY992 = "152380AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY992 = 152380;
 		
-		public static final String INJURY993 = "152381AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY993 = 152381;
 		
-		public static final String INJURY994 = "152392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY994 = 152392;
 		
-		public static final String INJURY995 = "152393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY995 = 152393;
 		
-		public static final String INJURY996 = "152496AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY996 = 152496;
 		
-		public static final String INJURY997 = "153574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY997 = 153574;
 		
-		public static final String INJURY998 = "153608AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY998 = 153608;
 		
-		public static final String INJURY999 = "155220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY999 = 155220;
 		
-		public static final String INJURY1000 = "155237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1000 = 155237;
 		
-		public static final String INJURY1001 = "155303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1001 = 155303;
 		
-		public static final String INJURY1002 = "155475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1002 = 155475;
 		
-		public static final String INJURY1003 = "155478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1003 = 155478;
 		
-		public static final String INJURY1004 = "155501AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1004 = 155501;
 		
-		public static final String INJURY1005 = "155632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1005 = 155632;
 		
-		public static final String INJURY1006 = "155634AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1006 = 155634;
 		
-		public static final String INJURY1007 = "155648AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1007 = 155648;
 		
-		public static final String INJURY1008 = "155801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1008 = 155801;
 		
-		public static final String INJURY1009 = "155802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1009 = 155802;
 		
-		public static final String INJURY1010 = "155803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1010 = 155803;
 		
-		public static final String INJURY1011 = "155804AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1011 = 155804;
 		
-		public static final String INJURY1012 = "155805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1012 = 155805;
 		
-		public static final String INJURY1013 = "155877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1013 = 155877;
 		
-		public static final String INJURY1014 = "155878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1014 = 155878;
 		
-		public static final String INJURY1015 = "155897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1015 = 155897;
 		
-		public static final String INJURY1016 = "155970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1016 = 155970;
 		
-		public static final String INJURY1017 = "156210AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1017 = 156210;
 		
-		public static final String INJURY1018 = "156230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1018 = 156230;
 		
-		public static final String INJURY1019 = "156232AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1019 = 156232;
 		
-		public static final String INJURY1020 = "156234AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1020 = 156234;
 		
-		public static final String INJURY1021 = "156236AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1021 = 156236;
 		
-		public static final String INJURY1022 = "156238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1022 = 156238;
 		
-		public static final String INJURY1023 = "156240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1023 = 156240;
 		
-		public static final String INJURY1024 = "156508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1024 = 156508;
 		
-		public static final String INJURY1025 = "156819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1025 = 156819;
 		
-		public static final String INJURY1026 = "156822AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1026 = 156822;
 		
-		public static final String INJURY1027 = "156823AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1027 = 156823;
 		
-		public static final String INJURY1028 = "156824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1028 = 156824;
 		
-		public static final String INJURY1029 = "156825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1029 = 156825;
 		
-		public static final String INJURY1030 = "156826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1030 = 156826;
 		
-		public static final String INJURY1031 = "156827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1031 = 156827;
 		
-		public static final String INJURY1032 = "156828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1032 = 156828;
 		
-		public static final String INJURY1033 = "156829AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1033 = 156829;
 		
-		public static final String INJURY1034 = "156830AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1034 = 156830;
 		
-		public static final String INJURY1035 = "156831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1035 = 156831;
 		
-		public static final String INJURY1036 = "156832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1036 = 156832;
 		
-		public static final String INJURY1037 = "156833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1037 = 156833;
 		
-		public static final String INJURY1038 = "156834AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1038 = 156834;
 		
-		public static final String INJURY1039 = "156835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1039 = 156835;
 		
-		public static final String INJURY1040 = "156836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1040 = 156836;
 		
-		public static final String INJURY1041 = "156837AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1041 = 156837;
 		
-		public static final String INJURY1042 = "156838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1042 = 156838;
 		
-		public static final String INJURY1043 = "156839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1043 = 156839;
 		
-		public static final String INJURY1044 = "156840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1044 = 156840;
 		
-		public static final String INJURY1045 = "156841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1045 = 156841;
 		
-		public static final String INJURY1046 = "156842AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1046 = 156842;
 		
-		public static final String INJURY1047 = "156843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1047 = 156843;
 		
-		public static final String INJURY1048 = "156844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1048 = 156844;
 		
-		public static final String INJURY1049 = "156845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1049 = 156845;
 		
-		public static final String INJURY1050 = "156846AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1050 = 156846;
 		
-		public static final String INJURY1051 = "156847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1051 = 156847;
 		
-		public static final String INJURY1052 = "156848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1052 = 156848;
 		
-		public static final String INJURY1053 = "156849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1053 = 156849;
 		
-		public static final String INJURY1054 = "156850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1054 = 156850;
 		
-		public static final String INJURY1055 = "156851AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1055 = 156851;
 		
-		public static final String INJURY1056 = "156852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1056 = 156852;
 		
-		public static final String INJURY1057 = "156853AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1057 = 156853;
 		
-		public static final String INJURY1058 = "156854AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1058 = 156854;
 		
-		public static final String INJURY1059 = "156855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1059 = 156855;
 		
-		public static final String INJURY1060 = "156856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1060 = 156856;
 		
-		public static final String INJURY1061 = "156857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1061 = 156857;
 		
-		public static final String INJURY1062 = "156858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1062 = 156858;
 		
-		public static final String INJURY1063 = "156859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1063 = 156859;
 		
-		public static final String INJURY1064 = "156860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1064 = 156860;
 		
-		public static final String INJURY1065 = "156861AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1065 = 156861;
 		
-		public static final String INJURY1066 = "156862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1066 = 156862;
 		
-		public static final String INJURY1067 = "156863AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1067 = 156863;
 		
-		public static final String INJURY1068 = "156864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1068 = 156864;
 		
-		public static final String INJURY1069 = "156865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1069 = 156865;
 		
-		public static final String INJURY1070 = "156866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1070 = 156866;
 		
-		public static final String INJURY1071 = "156867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1071 = 156867;
 		
-		public static final String INJURY1072 = "156868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1072 = 156868;
 		
-		public static final String INJURY1073 = "156869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1073 = 156869;
 		
-		public static final String INJURY1074 = "156870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1074 = 156870;
 		
-		public static final String INJURY1075 = "156871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1075 = 156871;
 		
-		public static final String INJURY1076 = "156872AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1076 = 156872;
 		
-		public static final String INJURY1077 = "156873AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1077 = 156873;
 		
-		public static final String INJURY1078 = "156874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1078 = 156874;
 		
-		public static final String INJURY1079 = "156875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1079 = 156875;
 		
-		public static final String INJURY1080 = "156876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1080 = 156876;
 		
-		public static final String INJURY1081 = "156877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1081 = 156877;
 		
-		public static final String INJURY1082 = "156878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1082 = 156878;
 		
-		public static final String INJURY1083 = "156879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1083 = 156879;
 		
-		public static final String INJURY1084 = "156880AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1084 = 156880;
 		
-		public static final String INJURY1085 = "156881AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1085 = 156881;
 		
-		public static final String INJURY1086 = "156882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1086 = 156882;
 		
-		public static final String INJURY1087 = "156883AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1087 = 156883;
 		
-		public static final String INJURY1088 = "156884AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1088 = 156884;
 		
-		public static final String INJURY1089 = "156885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1089 = 156885;
 		
-		public static final String INJURY1090 = "156886AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1090 = 156886;
 		
-		public static final String INJURY1091 = "156887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1091 = 156887;
 		
-		public static final String INJURY1092 = "156888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1092 = 156888;
 		
-		public static final String INJURY1093 = "156889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1093 = 156889;
 		
-		public static final String INJURY1094 = "156890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1094 = 156890;
 		
-		public static final String INJURY1095 = "156891AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1095 = 156891;
 		
-		public static final String INJURY1096 = "156892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1096 = 156892;
 		
-		public static final String INJURY1097 = "156893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1097 = 156893;
 		
-		public static final String INJURY1098 = "156894AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1098 = 156894;
 		
-		public static final String INJURY1099 = "156895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1099 = 156895;
 		
-		public static final String INJURY1100 = "156896AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1100 = 156896;
 		
-		public static final String INJURY1101 = "156897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1101 = 156897;
 		
-		public static final String INJURY1102 = "156898AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1102 = 156898;
 		
-		public static final String INJURY1103 = "156899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1103 = 156899;
 		
-		public static final String INJURY1104 = "156900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1104 = 156900;
 		
-		public static final String INJURY1105 = "156901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1105 = 156901;
 		
-		public static final String INJURY1106 = "156902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1106 = 156902;
 		
-		public static final String INJURY1107 = "156903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1107 = 156903;
 		
-		public static final String INJURY1108 = "156904AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1108 = 156904;
 		
-		public static final String INJURY1109 = "156905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1109 = 156905;
 		
-		public static final String INJURY1110 = "156906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1110 = 156906;
 		
-		public static final String INJURY1111 = "156907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1111 = 156907;
 		
-		public static final String INJURY1112 = "156908AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1112 = 156908;
 		
-		public static final String INJURY1113 = "156909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1113 = 156909;
 		
-		public static final String INJURY1114 = "156910AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1114 = 156910;
 		
-		public static final String INJURY1115 = "156911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1115 = 156911;
 		
-		public static final String INJURY1116 = "156912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1116 = 156912;
 		
-		public static final String INJURY1117 = "157355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1117 = 157355;
 		
-		public static final String INJURY1118 = "157459AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1118 = 157459;
 		
-		public static final String INJURY1119 = "157814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1119 = 157814;
 		
-		public static final String INJURY1120 = "157821AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1120 = 157821;
 		
-		public static final String INJURY1121 = "157822AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1121 = 157822;
 		
-		public static final String INJURY1122 = "157832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1122 = 157832;
 		
-		public static final String INJURY1123 = "158089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1123 = 158089;
 		
-		public static final String INJURY1124 = "158152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1124 = 158152;
 		
-		public static final String INJURY1125 = "158153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1125 = 158153;
 		
-		public static final String INJURY1126 = "158154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1126 = 158154;
 		
-		public static final String INJURY1127 = "158155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1127 = 158155;
 		
-		public static final String INJURY1128 = "158237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1128 = 158237;
 		
-		public static final String INJURY1129 = "158268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1129 = 158268;
 		
-		public static final String INJURY1130 = "158269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1130 = 158269;
 		
-		public static final String INJURY1131 = "158298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1131 = 158298;
 		
-		public static final String INJURY1132 = "158299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1132 = 158299;
 		
-		public static final String INJURY1133 = "158300AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1133 = 158300;
 		
-		public static final String INJURY1134 = "158301AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1134 = 158301;
 		
-		public static final String INJURY1135 = "158778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1135 = 158778;
 		
-		public static final String INJURY1136 = "158779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1136 = 158779;
 		
-		public static final String INJURY1137 = "158789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1137 = 158789;
 		
-		public static final String INJURY1138 = "158790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1138 = 158790;
 		
-		public static final String INJURY1139 = "158791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1139 = 158791;
 		
-		public static final String INJURY1140 = "158792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1140 = 158792;
 		
-		public static final String INJURY1141 = "158866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1141 = 158866;
 		
-		public static final String INJURY1142 = "158952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1142 = 158952;
 		
-		public static final String INJURY1143 = "158992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1143 = 158992;
 		
-		public static final String INJURY1144 = "158993AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1144 = 158993;
 		
-		public static final String INJURY1145 = "158994AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1145 = 158994;
 		
-		public static final String INJURY1146 = "158995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1146 = 158995;
 		
-		public static final String INJURY1147 = "158996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1147 = 158996;
 		
-		public static final String INJURY1148 = "158997AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1148 = 158997;
 		
-		public static final String INJURY1149 = "159031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1149 = 159031;
 		
-		public static final String INJURY1150 = "159121AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1150 = 159121;
 		
-		public static final String INJURY1151 = "159224AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1151 = 159224;
 		
-		public static final String INJURY1152 = "159225AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1152 = 159225;
 		
-		public static final String INJURY1153 = "159239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1153 = 159239;
 		
-		public static final String INJURY1154 = "159311AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1154 = 159311;
 		
-		public static final String INJURY1155 = "159312AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1155 = 159312;
 		
-		public static final String INJURY1156 = "159929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1156 = 159929;
 		
-		public static final String INJURY1157 = "160183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1157 = 160183;
 		
-		public static final String INJURY1158 = "160184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1158 = 160184;
 		
-		public static final String INJURY1159 = "160185AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1159 = 160185;
 		
-		public static final String INJURY1160 = "160186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1160 = 160186;
 		
-		public static final String INJURY1161 = "160187AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1161 = 160187;
 		
-		public static final String INJURY1162 = "160188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1162 = 160188;
 		
-		public static final String INJURY1163 = "160191AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1163 = 160191;
 		
-		public static final String INJURY1164 = "160192AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1164 = 160192;
 		
-		public static final String INJURY1165 = "160230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1165 = 160230;
 		
-		public static final String INJURY1166 = "161575AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1166 = 161575;
 		
-		public static final String INJURY1167 = "162482AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1167 = 162482;
 		
-		public static final String INJURY1168 = "162495AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1168 = 162495;
 		
-		public static final String INJURY1169 = "162527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1169 = 162527;
 		
-		public static final String INJURY1170 = "162528AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1170 = 162528;
 		
-		public static final String INJURY1171 = "162529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1171 = 162529;
 		
-		public static final String INJURY1172 = "162530AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1172 = 162530;
 		
-		public static final String INJURY1173 = "162534AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1173 = 162534;
 		
-		public static final String INJURY1174 = "162783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1174 = 162783;
 		
-		public static final String INJURY1175 = "162784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1175 = 162784;
 		
-		public static final String INJURY1176 = "162786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1176 = 162786;
 		
-		public static final String INJURY1177 = "162787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1177 = 162787;
 		
-		public static final String INJURY1178 = "162788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1178 = 162788;
 		
-		public static final String INJURY1179 = "163487AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1179 = 163487;
 		
-		public static final String INJURY1180 = "163864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer INJURY1180 = 163864;
 		
 		//Victims of violences
-		public static final String VIOLENCE1 = "123160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer VIOLENCE1 = 123160;
 		
-		public static final String VIOLENCE2 = "124824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer VIOLENCE2 = 124824;
 		
-		public static final String VIOLENCE3 = "141814AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer VIOLENCE3 = 141814;
 		
-		public static final String VIOLENCE4 = "158358AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer VIOLENCE4 = 158358;
 		
 		//Dog bites
-		public static final String DOGBITE_1 = "166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_1 = 166;
 		
-		public static final String DOGBITE_2 = "135667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_2 = 135667;
 		
-		public static final String DOGBITE_3 = "141821AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_3 = 141821;
 		
-		public static final String DOGBITE_4 = "141822AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_4 = 141822;
 		
-		public static final String DOGBITE_5 = "141823AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_5 = 141823;
 		
-		public static final String DOGBITE_6 = "156048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_6 = 156048;
 		
-		public static final String DOGBITE_7 = "156049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_7 = 156049;
 		
-		public static final String DOGBITE_8 = "156050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_8 = 156050;
 		
-		public static final String DOGBITE_9 = "156051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_9 = 156051;
 		
-		public static final String DOGBITE_10 = "156052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOGBITE_10 = 156052;
 		
 		//burns
-		public static final String BURN1 = "124859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN1 = 124859;
 		
-		public static final String BURN2 = "125534AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN2 = 125534;
 		
-		public static final String BURN3 = "127018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN3 = 127018;
 		
-		public static final String BURN4 = "133761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN4 = 133761;
 		
-		public static final String BURN5 = "136071AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN5 = 136071;
 		
-		public static final String BURN6 = "136867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN6 = 136867;
 		
-		public static final String BURN7 = "139089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN7 = 139089;
 		
-		public static final String BURN8 = "140826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN8 = 140826;
 		
-		public static final String BURN9 = "142743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN9 = 142743;
 		
-		public static final String BURN10 = "142744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN10 = 142744;
 		
-		public static final String BURN11 = "146622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN11 = 146622;
 		
-		public static final String BURN12 = "146623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN12 = 146623;
 		
-		public static final String BURN13 = "151679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN13 = 151679;
 		
-		public static final String BURN14 = "155357AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN14 = 155357;
 		
-		public static final String BURN15 = "155358AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN15 = 155358;
 		
-		public static final String BURN16 = "155359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN16 = 155359;
 		
-		public static final String BURN17 = "155360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN17 = 155360;
 		
-		public static final String BURN18 = "155361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN18 = 155361;
 		
-		public static final String BURN19 = "155362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN19 = 155362;
 		
-		public static final String BURN20 = "155363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN20 = 155363;
 		
-		public static final String BURN21 = "155364AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN21 = 155364;
 		
-		public static final String BURN22 = "155365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN22 = 155365;
 		
-		public static final String BURN23 = "155378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BURN23 = 155378;
 		
 		//snake bites
-		public static final String SNAKEBITE1 = "111555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SNAKEBITE1 = 111555;
 		
-		public static final String SNAKEBITE2 = "126323AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SNAKEBITE2 = 126323;
 		
-		public static final String SNAKEBITE3 = "132684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SNAKEBITE3 = 132684;
 		
-		public static final String SNAKEBITE4 = "158628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SNAKEBITE4 = 158628;
 		
 		//sexual assault
-		public static final String SEXUAL1 = "123160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SEXUAL1 = 123160;
 		
-		public static final String SEXUAL2 = "126582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SEXUAL2 = 126582;
 		
-		public static final String SEXUAL3 = "158805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer SEXUAL3 = 158805;
 		
 		//Diabetics
 		
 		//fistula
-		public static final String FISTULA1 = "49AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA1 = 49;
 		
-		public static final String FISTULA2 = "110168AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA2 = 110168;
 		
-		public static final String FISTULA3 = "110267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA3 = 110267;
 		
-		public static final String FISTULA4 = "110268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA4 = 110268;
 		
-		public static final String FISTULA5 = "111645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA5 = 111645;
 		
-		public static final String FISTULA6 = "113876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA6 = 113876;
 		
-		public static final String FISTULA7 = "113877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA7 = 113877;
 		
-		public static final String FISTULA8 = "114601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA8 = 114601;
 		
-		public static final String FISTULA9 = "117885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA9 = 117885;
 		
-		public static final String FISTULA10 = "118145AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA10 = 118145;
 		
-		public static final String FISTULA11 = "118808AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA11 = 118808;
 		
-		public static final String FISTULA12 = "118809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA12 = 118809;
 		
-		public static final String FISTULA13 = "123201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA13 = 123201;
 		
-		public static final String FISTULA14 = "123202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA14 = 123202;
 		
-		public static final String FISTULA15 = "123203AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA15 = 123203;
 		
-		public static final String FISTULA16 = "123204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA16 = 123204;
 		
-		public static final String FISTULA17 = "123205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA17 = 123205;
 		
-		public static final String FISTULA18 = "123289AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA18 = 123289;
 		
-		public static final String FISTULA19 = "123310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA19 = 123310;
 		
-		public static final String FISTULA20 = "123377AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA20 = 123377;
 		
-		public static final String FISTULA21 = "123423AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA21 = 123423;
 		
-		public static final String FISTULA22 = "123439AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA22 = 123439;
 		
-		public static final String FISTULA23 = "123442AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA23 = 123442;
 		
-		public static final String FISTULA24 = "123443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA24 = 123443;
 		
-		public static final String FISTULA25 = "123497AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA25 = 123497;
 		
-		public static final String FISTULA26 = "123509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA26 = 123509;
 		
-		public static final String FISTULA27 = "123510AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA27 = 123510;
 		
-		public static final String FISTULA28 = "123511AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA28 = 123511;
 		
-		public static final String FISTULA29 = "123513AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA29 = 123513;
 		
-		public static final String FISTULA30 = "123514AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA30 = 123514;
 		
-		public static final String FISTULA31 = "123535AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA31 = 123535;
 		
-		public static final String FISTULA32 = "123541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA32 = 123541;
 		
-		public static final String FISTULA33 = "123659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA33 = 123659;
 		
-		public static final String FISTULA34 = "124267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA34 = 124267;
 		
-		public static final String FISTULA35 = "124402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA35 = 124402;
 		
-		public static final String FISTULA36 = "124403AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA36 = 124403;
 		
-		public static final String FISTULA37 = "125865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA37 = 125865;
 		
-		public static final String FISTULA38 = "126503AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA38 = 126503;
 		
-		public static final String FISTULA39 = "126794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA39 = 126794;
 		
-		public static final String FISTULA40 = "127319AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA40 = 127319;
 		
-		public static final String FISTULA41 = "127844AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA41 = 127844;
 		
-		public static final String FISTULA42 = "127846AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA42 = 127846;
 		
-		public static final String FISTULA43 = "127847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA43 = 127847;
 		
-		public static final String FISTULA44 = "127855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA44 = 127855;
 		
-		public static final String FISTULA45 = "129265AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA45 = 129265;
 		
-		public static final String FISTULA46 = "129460AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA46 = 129460;
 		
-		public static final String FISTULA47 = "130056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA47 = 130056;
 		
-		public static final String FISTULA48 = "130345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA48 = 130345;
 		
-		public static final String FISTULA49 = "130573AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA49 = 130573;
 		
-		public static final String FISTULA50 = "130974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA50 = 130974;
 		
-		public static final String FISTULA51 = "131097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA51 = 131097;
 		
-		public static final String FISTULA52 = "131696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA52 = 131696;
 		
-		public static final String FISTULA53 = "131748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA53 = 131748;
 		
-		public static final String FISTULA54 = "132475AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA54 = 132475;
 		
-		public static final String FISTULA55 = "134295AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA55 = 134295;
 		
-		public static final String FISTULA56 = "134306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA56 = 134306;
 		
-		public static final String FISTULA57 = "134540AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA57 = 134540;
 		
-		public static final String FISTULA58 = "134541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA58 = 134541;
 		
-		public static final String FISTULA59 = "134705AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA59 = 134705;
 		
-		public static final String FISTULA60 = "135494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA60 = 135494;
 		
-		public static final String FISTULA61 = "135551AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA61 = 135551;
 		
-		public static final String FISTULA62 = "136170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA62 = 136170;
 		
-		public static final String FISTULA63 = "136196AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA63 = 136196;
 		
-		public static final String FISTULA64 = "136197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA64 = 136197;
 		
-		public static final String FISTULA65 = "136492AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA65 = 136492;
 		
-		public static final String FISTULA66 = "136671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA66 = 136671;
 		
-		public static final String FISTULA67 = "136672AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA67 = 136672;
 		
-		public static final String FISTULA68 = "136673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA68 = 136673;
 		
-		public static final String FISTULA69 = "136731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA69 = 136731;
 		
-		public static final String FISTULA70 = "136732AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA70 = 136732;
 		
-		public static final String FISTULA71 = "137857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA71 = 137857;
 		
-		public static final String FISTULA72 = "138413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA72 = 138413;
 		
-		public static final String FISTULA73 = "138642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA73 = 138642;
 		
-		public static final String FISTULA74 = "139570AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA74 = 139570;
 		
-		public static final String FISTULA75 = "139592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA75 = 139592;
 		
-		public static final String FISTULA76 = "139595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA76 = 139595;
 		
-		public static final String FISTULA77 = "139615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA77 = 139615;
 		
-		public static final String FISTULA78 = "140083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA78 = 140083;
 		
-		public static final String FISTULA79 = "140084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA79 = 140084;
 		
-		public static final String FISTULA80 = "140085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA80 = 140085;
 		
-		public static final String FISTULA81 = "140086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA81 = 140086;
 		
-		public static final String FISTULA82 = "140087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA82 = 140087;
 		
-		public static final String FISTULA83 = "140088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA83 = 140088;
 		
-		public static final String FISTULA84 = "140089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA84 = 140089;
 		
-		public static final String FISTULA85 = "140090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA85 = 140090;
 		
-		public static final String FISTULA86 = "140091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA86 = 140091;
 		
-		public static final String FISTULA87 = "140092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA87 = 140092;
 		
-		public static final String FISTULA88 = "140093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA88 = 140093;
 		
-		public static final String FISTULA89 = "140094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA89 = 140094;
 		
-		public static final String FISTULA90 = "140095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA90 = 140095;
 		
-		public static final String FISTULA91 = "140096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA91 = 140096;
 		
-		public static final String FISTULA92 = "140097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA92 = 140097;
 		
-		public static final String FISTULA93 = "140098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA93 = 140098;
 		
-		public static final String FISTULA94 = "140099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA94 = 140099;
 		
-		public static final String FISTULA95 = "140100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA95 = 140100;
 		
-		public static final String FISTULA96 = "140102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA96 = 140102;
 		
-		public static final String FISTULA97 = "140428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA97 = 140428;
 		
-		public static final String FISTULA98 = "140464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA98 = 140464;
 		
-		public static final String FISTULA99 = "140465AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA99 = 140465;
 		
-		public static final String FISTULA100 = "140889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA100 = 140889;
 		
-		public static final String FISTULA101 = "140892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA101 = 140892;
 		
-		public static final String FISTULA102 = "140996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA102 = 140996;
 		
-		public static final String FISTULA103 = "141001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA103 = 141001;
 		
-		public static final String FISTULA104 = "141006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA104 = 141006;
 		
-		public static final String FISTULA105 = "141214AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA105 = 141214;
 		
-		public static final String FISTULA106 = "141215AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA106 = 141215;
 		
-		public static final String FISTULA107 = "141327AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA107 = 141327;
 		
-		public static final String FISTULA108 = "141328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA108 = 141328;
 		
-		public static final String FISTULA109 = "141329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA109 = 141329;
 		
-		public static final String FISTULA110 = "141330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA110 = 141330;
 		
-		public static final String FISTULA111 = "141331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA111 = 141331;
 		
-		public static final String FISTULA112 = "141662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA112 = 141662;
 		
-		public static final String FISTULA113 = "141663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA113 = 141663;
 		
-		public static final String FISTULA114 = "141677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA114 = 141677;
 		
-		public static final String FISTULA115 = "143642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA115 = 143642;
 		
-		public static final String FISTULA116 = "143737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA116 = 143737;
 		
-		public static final String FISTULA117 = "143743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA117 = 143743;
 		
-		public static final String FISTULA118 = "143744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA118 = 143744;
 		
-		public static final String FISTULA119 = "143745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA119 = 143745;
 		
-		public static final String FISTULA120 = "143746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA120 = 143746;
 		
-		public static final String FISTULA121 = "143747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA121 = 143747;
 		
-		public static final String FISTULA122 = "143960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA122 = 143960;
 		
-		public static final String FISTULA123 = "143961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA123 = 143961;
 		
-		public static final String FISTULA124 = "143970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA124 = 143970;
 		
-		public static final String FISTULA125 = "143971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA125 = 143971;
 		
-		public static final String FISTULA126 = "144070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA126 = 144070;
 		
-		public static final String FISTULA127 = "144090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA127 = 144090;
 		
-		public static final String FISTULA128 = "144156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA128 = 144156;
 		
-		public static final String FISTULA129 = "144157AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA129 = 144157;
 		
-		public static final String FISTULA130 = "145626AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA130 = 145626;
 		
-		public static final String FISTULA131 = "145628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA131 = 145628;
 		
-		public static final String FISTULA132 = "145629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA132 = 145629;
 		
-		public static final String FISTULA133 = "145778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA133 = 145778;
 		
-		public static final String FISTULA134 = "145783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA134 = 145783;
 		
-		public static final String FISTULA135 = "146144AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA135 = 146144;
 		
-		public static final String FISTULA136 = "146875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA136 = 146875;
 		
-		public static final String FISTULA137 = "146879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA137 = 146879;
 		
-		public static final String FISTULA138 = "146880AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA138 = 146880;
 		
-		public static final String FISTULA139 = "146890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA139 = 146890;
 		
-		public static final String FISTULA140 = "146950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA140 = 146950;
 		
-		public static final String FISTULA141 = "147251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA141 = 147251;
 		
-		public static final String FISTULA142 = "148441AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA142 = 148441;
 		
-		public static final String FISTULA143 = "148454AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA143 = 148454;
 		
-		public static final String FISTULA144 = "148505AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA144 = 148505;
 		
-		public static final String FISTULA145 = "148541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA145 = 148541;
 		
-		public static final String FISTULA146 = "148543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA146 = 148543;
 		
-		public static final String FISTULA147 = "148544AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA147 = 148544;
 		
-		public static final String FISTULA148 = "148652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA148 = 148652;
 		
-		public static final String FISTULA149 = "148903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA149 = 148903;
 		
-		public static final String FISTULA150 = "150103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA150 = 150103;
 		
-		public static final String FISTULA151 = "150104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA151 = 150104;
 		
-		public static final String FISTULA152 = "150111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA152 = 150111;
 		
-		public static final String FISTULA153 = "150112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA153 = 150112;
 		
-		public static final String FISTULA154 = "150899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA154 = 150899;
 		
-		public static final String FISTULA155 = "151765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA155 = 151765;
 		
-		public static final String FISTULA156 = "152085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA156 = 152085;
 		
-		public static final String FISTULA157 = "152086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA157 = 152086;
 		
-		public static final String FISTULA158 = "152300AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA158 = 152300;
 		
-		public static final String FISTULA159 = "152671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA159 = 152671;
 		
-		public static final String FISTULA160 = "155120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA160 = 155120;
 		
-		public static final String FISTULA161 = "155197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA161 = 155197;
 		
-		public static final String FISTULA162 = "155684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA162 = 155684;
 		
-		public static final String FISTULA163 = "155761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA163 = 155761;
 		
-		public static final String FISTULA164 = "156140AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA164 = 156140;
 		
-		public static final String FISTULA165 = "156313AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA165 = 156313;
 		
-		public static final String FISTULA166 = "156315AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA166 = 156315;
 		
-		public static final String FISTULA167 = "156316AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA167 = 156316;
 		
-		public static final String FISTULA168 = "156463AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA168 = 156463;
 		
-		public static final String FISTULA169 = "156616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA169 = 156616;
 		
-		public static final String FISTULA170 = "157329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA170 = 157329;
 		
-		public static final String FISTULA171 = "157402AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA171 = 157402;
 		
-		public static final String FISTULA172 = "157974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA172 = 157974;
 		
-		public static final String FISTULA173 = "157980AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA173 = 157980;
 		
-		public static final String FISTULA174 = "158603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA174 = 158603;
 		
-		public static final String FISTULA175 = "158635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA175 = 158635;
 		
-		public static final String FISTULA176 = "159919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA176 = 159919;
 		
-		public static final String FISTULA177 = "163848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA177 = 163848;
 		
-		public static final String FISTULA178 = "163870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA178 = 163870;
 		
-		public static final String FISTULA179 = "163871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA179 = 163871;
 		
-		public static final String FISTULA180 = "163872AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer FISTULA180 = 163872;
 		
 		// start EPILEPSY const
-		public static final String EPILEPSY_1 = "155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_1 = 155;
 		
-		public static final String EPILEPSY_2 = "1625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_2 = 1625;
 		
-		public static final String EPILEPSY_3 = "110876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_3 = 110876;
 		
-		public static final String EPILEPSY_4 = "111656AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_4 = 111656;
 		
-		public static final String EPILEPSY_5 = "112355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_5 = 112355;
 		
-		public static final String EPILEPSY_6 = "112455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_6 = 112455;
 		
-		public static final String EPILEPSY_7 = "112515AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_7 = 112515;
 		
-		public static final String EPILEPSY_8 = "112516AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_8 = 112516;
 		
-		public static final String EPILEPSY_9 = "113375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_9 = 113375;
 		
-		public static final String EPILEPSY_10 = "113539AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_10 = 113539;
 		
-		public static final String EPILEPSY_11 = "113541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_11 = 113541;
 		
-		public static final String EPILEPSY_12 = "114320AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_12 = 114320;
 		
-		public static final String EPILEPSY_13 = "114325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_13 = 114325;
 		
-		public static final String EPILEPSY_14 = "115425AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_14 = 115425;
 		
-		public static final String EPILEPSY_15 = "116266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_15 = 116266;
 		
-		public static final String EPILEPSY_16 = "116410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_16 = 116410;
 		
-		public static final String EPILEPSY_17 = "116552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_17 = 116552;
 		
-		public static final String EPILEPSY_18 = "117849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_18 = 117849;
 		
-		public static final String EPILEPSY_19 = "117855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_19 = 117855;
 		
-		public static final String EPILEPSY_20 = "117858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_20 = 117858;
 		
-		public static final String EPILEPSY_21 = "118560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_21 = 118560;
 		
-		public static final String EPILEPSY_22 = "118561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_22 = 118561;
 		
-		public static final String EPILEPSY_23 = "120251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_23 = 120251;
 		
-		public static final String EPILEPSY_24 = "120738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_24 = 120738;
 		
-		public static final String EPILEPSY_25 = "120740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_25 = 120740;
 		
-		public static final String EPILEPSY_26 = "121208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_26 = 121208;
 		
-		public static final String EPILEPSY_27 = "121209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_27 = 121209;
 		
-		public static final String EPILEPSY_28 = "122824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_28 = 122824;
 		
-		public static final String EPILEPSY_29 = "123062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_29 = 123062;
 		
-		public static final String EPILEPSY_30 = "123073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_30 = 123073;
 		
-		public static final String EPILEPSY_31 = "123087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_31 = 123087;
 		
-		public static final String EPILEPSY_32 = "125059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_32 = 125059;
 		
-		public static final String EPILEPSY_33 = "125177AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_33 = 125177;
 		
-		public static final String EPILEPSY_34 = "126281AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_34 = 126281;
 		
-		public static final String EPILEPSY_35 = "126605AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_35 = 126605;
 		
-		public static final String EPILEPSY_36 = "126874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_36 = 126874;
 		
-		public static final String EPILEPSY_37 = "127407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_37 = 127407;
 		
-		public static final String EPILEPSY_38 = "128191AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_38 = 128191;
 		
-		public static final String EPILEPSY_39 = "128433AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_39 = 128433;
 		
-		public static final String EPILEPSY_40 = "129292AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_40 = 129292;
 		
-		public static final String EPILEPSY_41 = "130240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_41 = 130240;
 		
-		public static final String EPILEPSY_42 = "130745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_42 = 130745;
 		
-		public static final String EPILEPSY_43 = "132503AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_43 = 132503;
 		
-		public static final String EPILEPSY_44 = "133553AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_44 = 133553;
 		
-		public static final String EPILEPSY_45 = "133555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_45 = 133555;
 		
-		public static final String EPILEPSY_46 = "133556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_46 = 133556;
 		
-		public static final String EPILEPSY_47 = "133928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_47 = 133928;
 		
-		public static final String EPILEPSY_48 = "133929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_48 = 133929;
 		
-		public static final String EPILEPSY_49 = "134293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_49 = 134293;
 		
-		public static final String EPILEPSY_50 = "136005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_50 = 136005;
 		
-		public static final String EPILEPSY_51 = "136389AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_51 = 136389;
 		
-		public static final String EPILEPSY_52 = "137891AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_52 = 137891;
 		
-		public static final String EPILEPSY_53 = "137906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_53 = 137906;
 		
-		public static final String EPILEPSY_54 = "138960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_54 = 138960;
 		
-		public static final String EPILEPSY_55 = "140859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_55 = 140859;
 		
-		public static final String EPILEPSY_56 = "141120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_56 = 141120;
 		
-		public static final String EPILEPSY_57 = "141122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_57 = 141122;
 		
-		public static final String EPILEPSY_58 = "141123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_58 = 141123;
 		
-		public static final String EPILEPSY_59 = "141565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_59 = 141565;
 		
-		public static final String EPILEPSY_60 = "142913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_60 = 142913;
 		
-		public static final String EPILEPSY_61 = "143094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_61 = 143094;
 		
-		public static final String EPILEPSY_62 = "143116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_62 = 143116;
 		
-		public static final String EPILEPSY_63 = "143117AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_63 = 143117;
 		
-		public static final String EPILEPSY_64 = "145678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_64 = 145678;
 		
-		public static final String EPILEPSY_65 = "145944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_65 = 145944;
 		
-		public static final String EPILEPSY_66 = "147455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_66 = 147455;
 		
-		public static final String EPILEPSY_67 = "147458AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_67 = 147458;
 		
-		public static final String EPILEPSY_68 = "147890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_68 = 147890;
 		
-		public static final String EPILEPSY_69 = "148493AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_69 = 148493;
 		
-		public static final String EPILEPSY_70 = "148926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_70 = 148926;
 		
-		public static final String EPILEPSY_71 = "152450AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_71 = 152450;
 		
-		public static final String EPILEPSY_72 = "155255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_72 = 155255;
 		
-		public static final String EPILEPSY_73 = "155806AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_73 = 155806;
 		
-		public static final String EPILEPSY_74 = "156153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_74 = 156153;
 		
-		public static final String EPILEPSY_75 = "156154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_75 = 156154;
 		
-		public static final String EPILEPSY_76 = "156155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_76 = 156155;
 		
-		public static final String EPILEPSY_77 = "156734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_77 = 156734;
 		
-		public static final String EPILEPSY_78 = "157343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_78 = 157343;
 		
-		public static final String EPILEPSY_79 = "157438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_79 = 157438;
 		
-		public static final String EPILEPSY_80 = "157523AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_80 = 157523;
 		
-		public static final String EPILEPSY_81 = "158764AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_81 = 158764;
 		
-		public static final String EPILEPSY_82 = "159014AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_82 = 159014;
 		
-		public static final String EPILEPSY_83 = "159512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_83 = 159512;
 		
-		public static final String EPILEPSY_84 = "159546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_84 = 159546;
 		
-		public static final String EPILEPSY_85 = "160928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_85 = 160928;
 		
-		public static final String EPILEPSY_86 = "161039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_86 = 161039;
 		
-		public static final String EPILEPSY_87 = "161040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_87 = 161040;
 		
-		public static final String EPILEPSY_88 = "161041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_88 = 161041;
 		
-		public static final String EPILEPSY_89 = "161042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_89 = 161042;
 		
-		public static final String EPILEPSY_90 = "161043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_90 = 161043;
 		
-		public static final String EPILEPSY_91 = "161044AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_91 = 161044;
 		
-		public static final String EPILEPSY_92 = "161045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_92 = 161045;
 		
-		public static final String EPILEPSY_93 = "161046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_93 = 161046;
 		
-		public static final String EPILEPSY_94 = "161047AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_94 = 161047;
 		
-		public static final String EPILEPSY_95 = "161089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_95 = 161089;
 		
-		public static final String EPILEPSY_96 = "161090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_96 = 161090;
 		
-		public static final String EPILEPSY_97 = "161091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_97 = 161091;
 		
-		public static final String EPILEPSY_98 = "161093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_98 = 161093;
 		
-		public static final String EPILEPSY_99 = "161098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_99 = 161098;
 		
-		public static final String EPILEPSY_100 = "161099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_100 = 161099;
 		
-		public static final String EPILEPSY_101 = "161100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_101 = 161100;
 		
-		public static final String EPILEPSY_102 = "161383AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_102 = 161383;
 		
-		public static final String EPILEPSY_103 = "161384AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_103 = 161384;
 		
-		public static final String EPILEPSY_104 = "161385AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_104 = 161385;
 		
-		public static final String EPILEPSY_105 = "161386AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_105 = 161386;
 		
-		public static final String EPILEPSY_106 = "161391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_106 = 161391;
 		
-		public static final String EPILEPSY_107 = "161392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_107 = 161392;
 		
-		public static final String EPILEPSY_108 = "161394AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_108 = 161394;
 		
-		public static final String EPILEPSY_109 = "161396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EPILEPSY_109 = 161396;
 		
 		// end EPILEPSY
 		// start CARDIOVASCULAR Consts
-		public static final String CARDIOVASCULAR_1 = "110462AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_1 = 110462;
 		
-		public static final String CARDIOVASCULAR_2 = "117397AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_2 = 117397;
 		
-		public static final String CARDIOVASCULAR_3 = "119270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_3 = 119270;
 		
-		public static final String CARDIOVASCULAR_4 = "120001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_4 = 120001;
 		
-		public static final String CARDIOVASCULAR_5 = "120002AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_5 = 120002;
 		
-		public static final String CARDIOVASCULAR_6 = "120003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_6 = 120003;
 		
-		public static final String CARDIOVASCULAR_7 = "120004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_7 = 120004;
 		
-		public static final String CARDIOVASCULAR_8 = "120005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_8 = 120005;
 		
-		public static final String CARDIOVASCULAR_9 = "120115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_9 = 120115;
 		
-		public static final String CARDIOVASCULAR_10 = "120874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_10 = 120874;
 		
-		public static final String CARDIOVASCULAR_11 = "120875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_11 = 120875;
 		
-		public static final String CARDIOVASCULAR_12 = "121486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_12 = 121486;
 		
-		public static final String CARDIOVASCULAR_13 = "122227AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_13 = 122227;
 		
-		public static final String CARDIOVASCULAR_14 = "122432AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_14 = 122432;
 		
-		public static final String CARDIOVASCULAR_15 = "122727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_15 = 122727;
 		
-		public static final String CARDIOVASCULAR_16 = "129903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_16 = 129903;
 		
-		public static final String CARDIOVASCULAR_17 = "140231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_17 = 140231;
 		
-		public static final String CARDIOVASCULAR_18 = "141036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_18 = 141036;
 		
-		public static final String CARDIOVASCULAR_19 = "141752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_19 = 141752;
 		
-		public static final String CARDIOVASCULAR_20 = "144098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_20 = 144098;
 		
-		public static final String CARDIOVASCULAR_21 = "144099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_21 = 144099;
 		
-		public static final String CARDIOVASCULAR_22 = "144100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_22 = 144100;
 		
-		public static final String CARDIOVASCULAR_23 = "144101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_23 = 144101;
 		
-		public static final String CARDIOVASCULAR_24 = "146153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_24 = 146153;
 		
-		public static final String CARDIOVASCULAR_25 = "146154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_25 = 146154;
 		
-		public static final String CARDIOVASCULAR_26 = "146155AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_26 = 146155;
 		
-		public static final String CARDIOVASCULAR_27 = "150812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_27 = 150812;
 		
-		public static final String CARDIOVASCULAR_28 = "155434AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_28 = 155434;
 		
-		public static final String CARDIOVASCULAR_29 = "155687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CARDIOVASCULAR_29 = 155687;
 		
 		//Overweight
-		public static final String OVERWEIGHT1 = "114413AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OVERWEIGHT1 = 114413;
 		
-		public static final String OVERWEIGHT2 = "158204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer OVERWEIGHT2 = 158204;
 		
 		//Yellow Fever
-		public static final String YELLOWFEVER_1 = "123557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_1 = 123557;
 		
-		public static final String YELLOWFEVER_2 = "127664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_2 = 127664;
 		
-		public static final String YELLOWFEVER_3 = "129599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_3 = 129599;
 		
-		public static final String YELLOWFEVER_4 = "136391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_4 = 136391;
 		
-		public static final String YELLOWFEVER_5 = "149253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_5 = 149253;
 		
-		public static final String YELLOWFEVER_6 = "154892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_6 = 154892;
 		
-		public static final String YELLOWFEVER_7 = "157324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_7 = 157324;
 		
-		public static final String YELLOWFEVER_8 = "159336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_8 = 159336;
 		
-		public static final String YELLOWFEVER_9 = "122759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer YELLOWFEVER_9 = 122759;
 		
 		//Brucelosis
-		public static final String BRUCELOSIS1 = "121005AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELOSIS1 = 121005;
 		
-		public static final String BRUCELOSIS2 = "121042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELOSIS2 = 121042;
 		
-		public static final String BRUCELOSIS3 = "129500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELOSIS3 = 129500;
 		
-		public static final String BRUCELOSIS4 = "138391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELOSIS4 = 138391;
 		
-		public static final String BRUCELOSIS5 = "146480AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELOSIS5 = 146480;
 		
-		public static final String BRUCELOSIS6 = "146866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELOSIS6 = 146866;
 		
-		public static final String BRUCELOSIS7 = "155336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer BRUCELOSIS7 = 155336;
 		
-		public static final String EAR_INFECTION_0 = "110189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_0 = 110189;
 		
-		public static final String EAR_INFECTION_1 = "110889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_1 = 110889;
 		
-		public static final String EAR_INFECTION_2 = "117086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_2 = 117086;
 		
-		public static final String EAR_INFECTION_3 = "117086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_3 = 117086;
 		
-		public static final String EAR_INFECTION_4 = "117087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_4 = 117087;
 		
-		public static final String EAR_INFECTION_5 = "123119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_5 = 123119;
 		
-		public static final String EAR_INFECTION_6 = "139740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_6 = 139740;
 		
-		public static final String EAR_INFECTION_7 = "156628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer EAR_INFECTION_7 = 156628;
 		
 		//Physical Disability
-		public static final String PHYSICAL_DISABILITY1 = "110104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PHYSICAL_DISABILITY1 = 110104;
 		
-		public static final String PHYSICAL_DISABILITY2 = "119485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PHYSICAL_DISABILITY2 = 119485;
 		
-		public static final String PHYSICAL_DISABILITY3 = "122936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PHYSICAL_DISABILITY3 = 122936;
 		
-		public static final String PHYSICAL_DISABILITY4 = "152464AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PHYSICAL_DISABILITY4 = 152464;
 		
-		public static final String PHYSICAL_DISABILITY5 = "153343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PHYSICAL_DISABILITY5 = 153343;
 		
-		public static final String PHYSICAL_DISABILITY6 = "156923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PHYSICAL_DISABILITY6 = 156923;
 		
-		public static final String PHYSICAL_DISABILITY7 = "164538AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PHYSICAL_DISABILITY7 = 164538;
 		
 		//Trypanosomiasis
-		public static final String TRYPANOSOMIASIS1 = "124076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS1 = 124076;
 		
-		public static final String TRYPANOSOMIASIS2 = "124077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS2 = 124077;
 		
-		public static final String TRYPANOSOMIASIS3 = "124078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS3 = 124078;
 		
-		public static final String TRYPANOSOMIASIS4 = "124079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS4 = 124079;
 		
-		public static final String TRYPANOSOMIASIS5 = "137342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS5 = 137342;
 		
-		public static final String TRYPANOSOMIASIS6 = "137343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS6 = 137343;
 		
-		public static final String TRYPANOSOMIASIS7 = "137344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS7 = 137344;
 		
-		public static final String TRYPANOSOMIASIS8 = "149241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer TRYPANOSOMIASIS8 = 149241;
 		
 		//Kalazar
-		public static final String KALAZAR = "129386AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer KALAZAR = 129386;
 		
 		//Plague
-		public static final String PLAGUE1 = "114093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE1 = 114093;
 		
-		public static final String PLAGUE2 = "114120AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE2 = 114120;
 		
-		public static final String PLAGUE3 = "126687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE3 = 126687;
 		
-		public static final String PLAGUE4 = "126882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE4 = 126882;
 		
-		public static final String PLAGUE5 = "128493AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE5 = 128493;
 		
-		public static final String PLAGUE6 = "129694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE6 = 129694;
 		
-		public static final String PLAGUE7 = "130003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE7 = 130003;
 		
-		public static final String PLAGUE8 = "130095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE8 = 130095;
 		
-		public static final String PLAGUE9 = "130096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE9 = 130096;
 		
-		public static final String PLAGUE10 = "145971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE10 = 145971;
 		
-		public static final String PLAGUE11 = "146858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE11 = 146858;
 		
-		public static final String PLAGUE12 = "149270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE12 = 149270;
 		
-		public static final String PLAGUE13 = "150738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE13 = 150738;
 		
-		public static final String PLAGUE14 = "154809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE14 = 154809;
 		
-		public static final String PLAGUE15 = "157238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE15 = 157238;
 		
-		public static final String PLAGUE16 = "158375AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE16 = 158375;
 		
-		public static final String PLAGUE17 = "158376AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer PLAGUE17 = 158376;
 		
 		//STI
-		public static final String STI1 = "112992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer STI1 = 112992;
 		
-		public static final String STI2 = "156660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer STI2 = 156660;
 		
-		public static final String STI3 = "160202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer STI3 = 160202;
 		
-		public static final String STI4 = "163771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer STI4 = 163771;
 		
 		public static final String MOPC_TRAIGE = "98f596cc-5ad1-4c58-91e8-d1ea0329c89d";
 		
@@ -8746,443 +8746,443 @@ public class EhrAddonsConstants {
 		public static final String DENTAL_SPECIAL_CLINIC = "30aff715-92de-4662-aa33-fa6b6179fed0";
 		
 		//Dangue fever
-		public static final String Dengue_Shock_Syndrome = "142590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dengue_Shock_Syndrome = 142590;
 		
-		public static final String Dry_Form_of_Cutaneous_Leishmaniasis = "118825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dry_Form_of_Cutaneous_Leishmaniasis = 118825;
 		
-		public static final String Zoonotic_Form_of_Cutaneous_Leishmaniasis = "122736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Zoonotic_Form_of_Cutaneous_Leishmaniasis = 122736;
 		
-		public static final String Wet_Form_of_Cutaneous_Leishmaniasis = "122866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Wet_Form_of_Cutaneous_Leishmaniasis = 122866;
 		
-		public static final String Ulcerating_Cutaneous_Leishmaniasis = "123882AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Ulcerating_Cutaneous_Leishmaniasis = 123882;
 		
-		public static final String Recurrent_Cutaneous_Leishmaniasis = "127835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Recurrent_Cutaneous_Leishmaniasis = 127835;
 		
-		public static final String Late_Cutaneous_Leishmaniasis = "136110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Late_Cutaneous_Leishmaniasis = 136110;
 		
-		public static final String Disseminated_Mucocutaneous_Leishmaniasis = "141897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Disseminated_Mucocutaneous_Leishmaniasis = 141897;
 		
-		public static final String Diffuse_Cutaneous_Leishmaniasis = "142362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Diffuse_Cutaneous_Leishmaniasis = 142362;
 		
-		public static final String Cutaneous_Leishmaniasis = "143074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Cutaneous_Leishmaniasis = 143074;
 		
-		public static final String Asian_Desert_Cutaneous_Leishmaniasis = "148329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Asian_Desert_Cutaneous_Leishmaniasis = 148329;
 		
-		public static final String American_Cutaneous_Mucocutaneous_Leishmaniasis = "148988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer American_Cutaneous_Mucocutaneous_Leishmaniasis = 148988;
 		
-		public static final String Acute_Necrotising_Cutaneous_Leishmaniasis = "149635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_Necrotising_Cutaneous_Leishmaniasis = 149635;
 		
 		//Anthrax
-		public static final String Pulmonary_Anthrax = "116937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Pulmonary_Anthrax = 116937;
 		
-		public static final String Contact_with_or_Exposure_to_Anthrax = "121554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Contact_with_or_Exposure_to_Anthrax = 121554;
 		
-		public static final String Anthrax = "121555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Anthrax = 121555;
 		
-		public static final String Gastrointestinal_Anthrax = "139588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastrointestinal_Anthrax = 139588;
 		
-		public static final String Cutaneous_Anthrax = "143086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Cutaneous_Anthrax = 143086;
 		
-		public static final String Anthrax_Septicaemia = "148600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Anthrax_Septicaemia = 148600;
 		
-		public static final String Anthrax_Pneumonia = "148601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Anthrax_Pneumonia = 148601;
 		
 		//Dehydration
-		public static final String DEHYDRATION = "991AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DEHYDRATION = 991;
 		
-		public static final String Neonatal_dehydration = "133410AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Neonatal_dehydration = 133410;
 		
-		public static final String Dehydration = "142630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dehydration = 142630;
 		
-		public static final String severe_dehydration = "154015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer severe_dehydration = 154015;
 		
-		public static final String Moderate_dehydration = "154016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Moderate_dehydration = 154016;
 		
-		public static final String Mild_dehydration = "154017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Mild_dehydration = 154017;
 		
 		//Gastroenteritis
-		public static final String Gastroenteritis_1 = "197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_1 = 197;
 		
-		public static final String Gastroenteritis_2 = "428AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_2 = 428;
 		
-		public static final String Gastroenteritis_3 = "900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_3 = 900;
 		
-		public static final String Gastroenteritis_4 = "112749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_4 = 112749;
 		
-		public static final String Gastroenteritis_5 = "113172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_5 = 113172;
 		
-		public static final String Gastroenteritis_6 = "117050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_6 = 117050;
 		
-		public static final String Gastroenteritis_7 = "117889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_7 = 117889;
 		
-		public static final String Gastroenteritis_8 = "118586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_8 = 118586;
 		
-		public static final String Gastroenteritis_9 = "123113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_9 = 123113;
 		
-		public static final String Gastroenteritis_10 = "123114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_10 = 123114;
 		
-		public static final String Gastroenteritis_11 = "124445AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_11 = 124445;
 		
-		public static final String Gastroenteritis_13 = "127943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_13 = 127943;
 		
-		public static final String Gastroenteritis_14 = "132860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_14 = 132860;
 		
-		public static final String Gastroenteritis_15 = "132941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_15 = 132941;
 		
-		public static final String Gastroenteritis_16 = "137284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_16 = 137284;
 		
-		public static final String Gastroenteritis_17 = "139591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_17 = 139591;
 		
-		public static final String Gastroenteritis_18 = "142379AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_18 = 142379;
 		
-		public static final String Gastroenteritis_19 = "148023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_19 = 148023;
 		
-		public static final String Gastroenteritis_20 = "149097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_20 = 149097;
 		
-		public static final String Gastroenteritis_21 = "149098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_21 = 149098;
 		
-		public static final String Gastroenteritis_22 = "149725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_22 = 149725;
 		
-		public static final String Gastroenteritis_23 = "149727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_23 = 149727;
 		
-		public static final String Gastroenteritis_24 = "149779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_24 = 149779;
 		
-		public static final String Gastroenteritis_25 = "151875AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_25 = 151875;
 		
-		public static final String Gastroenteritis_26 = "151876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_26 = 151876;
 		
-		public static final String Gastroenteritis_27 = "151877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Gastroenteritis_27 = 151877;
 		
 		//severe pneumonia
-		public static final String acute_bacterial_pneumonia = "1463AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer acute_bacterial_pneumonia = 1463;
 		
-		public static final String Acute_Interstitial_Pneumonia = "111028AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_Interstitial_Pneumonia = 111028;
 		
-		public static final String Chronic_Interstitial_Pneumonia = "116708AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Chronic_Interstitial_Pneumonia = 116708;
 		
-		public static final String acute_bronchitis_due_to_Mycoplasma_pneumoniae = "154944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer acute_bronchitis_due_to_Mycoplasma_pneumoniae = 154944;
 		
-		public static final String acute_mucous_pneumonia = "154964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer acute_mucous_pneumonia = 154964;
 		
-		public static final String bilateral_pneumonia = "155296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer bilateral_pneumonia = 155296;
 		
-		public static final String neonatal_pneumonia = "157907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer neonatal_pneumonia = 157907;
 		
-		public static final String Acute_bacterial_pneumonia_presumed = "160437AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_bacterial_pneumonia_presumed = 160437;
 		
-		public static final String Sub_acute_pneumonia_presumed_PCP = "160438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Sub_acute_pneumonia_presumed_PCP = 160438;
 		
 		//lower tract infection
-		public static final String Lower_Respiratory_Tract_Infection = "135556AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Lower_Respiratory_Tract_Infection = 135556;
 		
-		public static final String Chronic_Obstructive_Pulmonary_Disease_with_Acute_Lower_Respiratory_Infection = "152062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Chronic_Obstructive_Pulmonary_Disease_with_Acute_Lower_Respiratory_Infection = 152062;
 		
-		public static final String unspecified_acute_lower_respiratory_infection = "159222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer unspecified_acute_lower_respiratory_infection = 159222;
 		
-		public static final String RESPIRATORY_TRACT_INFECTION_LOWER = "998AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer RESPIRATORY_TRACT_INFECTION_LOWER = 998;
 		
-		public static final String RESPIRATORY_TRACT_COVID = "165868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer RESPIRATORY_TRACT_COVID = 165868;
 		
 		//upeer tract infection
-		public static final String UPPER_RESPIRATORY_TRACT_INFECTION = "895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer UPPER_RESPIRATORY_TRACT_INFECTION = 895;
 		
-		public static final String WHO_HIV_RECURRENT_UPPER_RESPIRATORY_INFECTIONS = "5331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer WHO_HIV_RECURRENT_UPPER_RESPIRATORY_INFECTIONS = 5331;
 		
-		public static final String Congenital_Anomaly_of_Upper_Respiratory_System = "120022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Congenital_Anomaly_of_Upper_Respiratory_System = 120022;
 		
-		public static final String Congenital_Abnormality_of_Upper_Respiratory_Tract = "120023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Congenital_Abnormality_of_Upper_Respiratory_Tract = 120023;
 		
-		public static final String Benign_Neoplasm_of_Upper_Respiratory_Tract = "121172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Benign_Neoplasm_of_Upper_Respiratory_Tract = 121172;
 		
-		public static final String Viral_Upper_Respiratory_Tract_Infection = "123093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Viral_Upper_Respiratory_Tract_Infection = 123093;
 		
-		public static final String Upper_Respiratory_Tract_Obstruction = "123561AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Upper_Respiratory_Tract_Obstruction = 123561;
 		
-		public static final String Upper_Respiratory_Tract_Hypersensitivity_Reaction = "123562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Upper_Respiratory_Tract_Hypersensitivity_Reaction = 123562;
 		
-		public static final String Upper_Respiratory_Inflammation_due_to_Fumes_and_or_Vapors = "123563AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Upper_Respiratory_Inflammation_due_to_Fumes_and_or_Vapors = 123563;
 		
-		public static final String Upper_Respiratory_Inflammation_due_to_Chemical_Fumes = "123564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Upper_Respiratory_Inflammation_due_to_Chemical_Fumes = 123564;
 		
-		public static final String Upper_Respiratory_Infection = "123565AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Upper_Respiratory_Infection = 123565;
 		
-		public static final String Recurrent_Upper_Respiratory_Tract_Infection = "127784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Recurrent_Upper_Respiratory_Tract_Infection = 127784;
 		
-		public static final String Influenzal_Acute_Upper_Respiratory_Infection = "137165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Influenzal_Acute_Upper_Respiratory_Infection = 137165;
 		
-		public static final String Disorder_of_Upper_Respiratory_System = "141964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Disorder_of_Upper_Respiratory_System = 141964;
 		
-		public static final String Acute_Upper_Respiratory_Infection_of_Multiple_Sites = "149477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_Upper_Respiratory_Infection_of_Multiple_Sites = 149477;
 		
-		public static final String Acute_Upper_Respiratory_Infection = "149478AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Acute_Upper_Respiratory_Infection = 149478;
 		
-		public static final String COVID = "165633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer COVID = 165633;
 		
 		//Neutal Sepsis
-		public static final String NEUTAL_SEPISIS = "226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer NEUTAL_SEPISIS = 226;
 		
 		//Down's syndrome
-		public static final String DOWN_SYNDROME = "144481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer DOWN_SYNDROME = 144481;
 		
 		//Reumonic fever
-		public static final String REUMONIC_FEVER_1 = "1870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_1 = 1870;
 		
-		public static final String REUMONIC_FEVER_2 = "113228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_2 = 113228;
 		
-		public static final String REUMONIC_FEVER_3 = "113229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_3 = 113229;
 		
-		public static final String REUMONIC_FEVER_4 = "113230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_4 = 113230;
 		
-		public static final String REUMONIC_FEVER_5 = "121843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_5 = 121843;
 		
-		public static final String REUMONIC_FEVER_6 = "127447AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_6 = 127447;
 		
-		public static final String REUMONIC_FEVER_7 = "145182AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_7 = 145182;
 		
-		public static final String REUMONIC_FEVER_8 = "149533AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_8 = 149533;
 		
-		public static final String REUMONIC_FEVER_9 = "149939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_9 = 149939;
 		
-		public static final String REUMONIC_FEVER_10 = "152161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_10 = 152161;
 		
-		public static final String REUMONIC_FEVER_11 = "152456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_11 = 152456;
 		
-		public static final String REUMONIC_FEVER_12 = "156659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer REUMONIC_FEVER_12 = 156659;
 		
 		//
-		public static final String Hypoxaemia = "117312AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Hypoxaemia = 117312;
 		
 		//cHILDHOOD CANCERS
-		public static final String CCANCER_1 = "216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_1 = 216;
 		
-		public static final String CCANCER_2 = "217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_2 = 217;
 		
-		public static final String CCANCER_3 = "112679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_3 = 112679;
 		
-		public static final String CCANCER_4 = "112683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_4 = 112683;
 		
-		public static final String CCANCER_5 = "112685AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_5 = 112685;
 		
-		public static final String CCANCER_6 = "115436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_6 = 115436;
 		
-		public static final String CCANCER_7 = "115438AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_7 = 115438;
 		
-		public static final String CCANCER_8 = "115714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_8 = 115714;
 		
-		public static final String CCANCER_9 = "116170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_9 = 116170;
 		
-		public static final String CCANCER_10 = "116174AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_10 = 116174;
 		
-		public static final String CCANCER_11 = "116327AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_11 = 116327;
 		
-		public static final String CCANCER_12 = "116328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_12 = 116328;
 		
-		public static final String CCANCER_13 = "116329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_13 = 116329;
 		
-		public static final String CCANCER_14 = "116331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_14 = 116331;
 		
-		public static final String CCANCER_15 = "116332AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_15 = 116332;
 		
-		public static final String CCANCER_16 = "121711AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_16 = 121711;
 		
-		public static final String CCANCER_17 = "121964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_17 = 121964;
 		
-		public static final String CCANCER_18 = "121966AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_18 = 121966;
 		
-		public static final String CCANCER_19 = "121975AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_19 = 121975;
 		
-		public static final String CCANCER_20 = "121977AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_20 = 121977;
 		
-		public static final String CCANCER_21 = "121979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_21 = 121979;
 		
-		public static final String CCANCER_22 = "121994AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_22 = 121994;
 		
-		public static final String CCANCER_23 = "121996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_23 = 121996;
 		
-		public static final String CCANCER_24 = "122004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_24 = 122004;
 		
-		public static final String CCANCER_25 = "125024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_25 = 125024;
 		
-		public static final String CCANCER_26 = "125025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_26 = 125025;
 		
-		public static final String CCANCER_27 = "125732AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_27 = 125732;
 		
-		public static final String CCANCER_28 = "130085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_28 = 130085;
 		
-		public static final String CCANCER_29 = "134453AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_29 = 134453;
 		
-		public static final String CCANCER_30 = "136139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_30 = 136139;
 		
-		public static final String CCANCER_31 = "141018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_31 = 141018;
 		
-		public static final String CCANCER_32 = "145280AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_32 = 145280;
 		
-		public static final String CCANCER_33 = "145284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_33 = 145284;
 		
-		public static final String CCANCER_34 = "145294AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_34 = 145294;
 		
-		public static final String CCANCER_35 = "145299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_35 = 145299;
 		
-		public static final String CCANCER_36 = "147952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_36 = 147952;
 		
-		public static final String CCANCER_37 = "148134AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_37 = 148134;
 		
-		public static final String CCANCER_38 = "149330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_38 = 149330;
 		
-		public static final String CCANCER_39 = "149564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_39 = 149564;
 		
-		public static final String CCANCER_40 = "149649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_40 = 149649;
 		
-		public static final String CCANCER_41 = "149654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_41 = 149654;
 		
-		public static final String CCANCER_42 = "149665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_42 = 149665;
 		
-		public static final String CCANCER_43 = "149828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_43 = 149828;
 		
-		public static final String CCANCER_44 = "151838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_44 = 151838;
 		
-		public static final String CCANCER_45 = "152915AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_45 = 152915;
 		
-		public static final String CCANCER_46 = "153563AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_46 = 153563;
 		
-		public static final String CCANCER_47 = "153788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_47 = 153788;
 		
-		public static final String CCANCER_48 = "155225AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_48 = 155225;
 		
-		public static final String CCANCER_49 = "155559AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_49 = 155559;
 		
-		public static final String CCANCER_50 = "155576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_50 = 155576;
 		
-		public static final String CCANCER_51 = "156169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_51 = 156169;
 		
-		public static final String CCANCER_52 = "157708AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_52 = 157708;
 		
-		public static final String CCANCER_53 = "158377AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_53 = 158377;
 		
-		public static final String CCANCER_54 = "161077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_54 = 161077;
 		
-		public static final String CCANCER_55 = "161220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_55 = 161220;
 		
-		public static final String CCANCER_56 = "115835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_56 = 115835;
 		
-		public static final String CCANCER_57 = "115836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_57 = 115836;
 		
-		public static final String CCANCER_58 = "126949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_58 = 126949;
 		
-		public static final String CCANCER_59 = "133288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_59 = 133288;
 		
-		public static final String CCANCER_60 = "134951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_60 = 134951;
 		
-		public static final String CCANCER_61 = "157349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_61 = 157349;
 		
-		public static final String CCANCER_62 = "158317AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_62 = 158317;
 		
-		public static final String CCANCER_63 = "133154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_63 = 133154;
 		
-		public static final String CCANCER_64 = "116088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_64 = 116088;
 		
-		public static final String CCANCER_65 = "116090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_65 = 116090;
 		
-		public static final String CCANCER_66 = "116092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_66 = 116092;
 		
-		public static final String CCANCER_67 = "116094AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_67 = 116094;
 		
-		public static final String CCANCER_68 = "116096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_68 = 116096;
 		
-		public static final String CCANCER_69 = "116098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_69 = 116098;
 		
-		public static final String CCANCER_70 = "116100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_70 = 116100;
 		
-		public static final String CCANCER_71 = "116102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_71 = 116102;
 		
-		public static final String CCANCER_72 = "135457AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_72 = 135457;
 		
-		public static final String CCANCER_73 = "113240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_73 = 113240;
 		
-		public static final String CCANCER_74 = "127466AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_74 = 127466;
 		
-		public static final String CCANCER_75 = "130064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_75 = 130064;
 		
-		public static final String CCANCER_76 = "147050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_76 = 147050;
 		
-		public static final String CCANCER_77 = "149025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_77 = 149025;
 		
-		public static final String CCANCER_78 = "127527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_78 = 127527;
 		
-		public static final String CCANCER_79 = "157588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_79 = 157588;
 		
-		public static final String CCANCER_80 = "159349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CCANCER_80 = 159349;
 		
 		//filling concepts ids
-		public static final String Temporary_Filling_Per_Tooth = "492c1b4c-dc68-479e-8700-8a9160211db6";
+		public static final Integer Temporary_Filling_Per_Tooth = 1000342;
 		
-		public static final String Amalgam_filling = "088cf47e-9c72-42c3-8ae3-23e3440a55ce";
+		public static final Integer Amalgam_filling = 1000300;
 		
-		public static final String Composite_Filling = "5673cd1b-e2e9-4504-8e62-1da76193e989";
+		public static final Integer Composite_Filling = 1000306;
 		
-		public static final String Glass_Lonomer_Filling = "a0d71bb5-bd1e-4212-b788-cfcab4effa27";
+		public static final Integer Glass_Lonomer_Filling = 1000317;
 		
 		//extraction concept ids
-		public static final String Extra_Tooth_extraction = "91ab29ba-bcaa-4873-86fb-4317fcc0c8bd";
+		public static final Integer Extra_Tooth_extraction = 1000315;
 		
-		public static final String Tooth_Extraction_simple = "0ba0f575-ec75-4a51-86c4-97b6ce467684";
+		public static final Integer Tooth_Extraction_simple = 1000344;
 		
-		public static final String Excision_of_Tooth = "d8c2d969-bd65-4d39-9434-ebbb6195852d";
+		public static final Integer Excision_of_Tooth = 1000314;
 		
 		//Medical examination
-		public static final String MEDICAL_EXAMINATION_ROUTINE = "432AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer MEDICAL_EXAMINATION_ROUTINE = 432;
 		
-		public static final String Student_Medical_Assessment = "367a3526-4a8b-4704-a686-a746e74032f3";
+		public static final Integer Student_Medical_Assessment = 1000446;
 		
 		//Dressing
-		public static final String CLEAN_AND_DRESSING = "441AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer CLEAN_AND_DRESSING = 441;
 		
-		public static final String Suture_wound_with_dressing = "1934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Suture_wound_with_dressing = 1934;
 		
-		public static final String Wound_Dressing = "1935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Wound_Dressing = 1935;
 		
-		public static final String Change_of_Dressing = "151596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Change_of_Dressing = 151596;
 		
-		public static final String Burn_dressing = "161668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Burn_dressing = 161668;
 		
-		public static final String Dressing_change_under_anesthesia = "161945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dressing_change_under_anesthesia = 161945;
 		
-		public static final String Dressing_change_for_open_wound_of_breast = "162210AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Dressing_change_for_open_wound_of_breast = 162210;
 		
-		public static final String Cleaning_and_Dressing = "5bc4313c-b70c-4c1a-ab30-6cacb0220160";
+		public static final Integer Cleaning_and_Dressing = 1000242;
 		
-		public static final String Casualty_Dressing = "de9cb59a-cabc-4587-af0d-ef6a81622237";
+		public static final Integer Casualty_Dressing = 1000245;
 		
-		public static final String ENT_Dressing = "25e5ea00-0efd-4b3d-a610-d3f81de3c9b5";
+		public static final Integer ENT_Dressing = 1000356;
 		
-		public static final String Removal_Of_Ear_Dressing = "21032bc9-64e4-43f5-9afb-294c37affe3b";
+		public static final Integer Removal_Of_Ear_Dressing = 1000363;
 		
-		public static final String Wound_Dressing_ENT = "63ace222-6715-4c09-bf2b-a102766a8077";
+		public static final Integer Wound_Dressing_ENT = 1000368;
 		
-		public static final String Dressing_Per_Session_Female_Medical_Ward = "50b00c63-5f99-4dc2-b0ae-616ab6b225fe";
+		public static final Integer Dressing_Per_Session_Female_Medical_Ward = 1000424;
 		
 		//Removal of stitches
-		public static final String Removal_Of_Stitches = "5cf63618-0279-4f2c-a174-144f127a5281";
+		public static final Integer Removal_Of_Stitches = 1000365;
 		
-		public static final String Removal_Of_Corneal_Stitches = "a769ccf8-f28d-405f-9941-a3c2fbc56c29";
+		public static final Integer Removal_Of_Corneal_Stitches = 1000397;
 		
 		//injection
-		public static final String INJECTION = "0aeb848d-aaa3-49d7-a1a1-f24b6a163611";
+		public static final Integer INJECTION = 1000251;
 		
-		public static final String Sub_Conjuctiral_Sub_Tenon_Injections = "28dc3e2e-fc22-4b9c-b814-4bdb26f5eb86";
+		public static final Integer Sub_Conjuctiral_Sub_Tenon_Injections = 1000399;
 		
-		public static final String Intra_arterial_injection = "164677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Intra_arterial_injection = 164677;
 		
-		public static final String Intralesional_injection = "164000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+		public static final Integer Intralesional_injection = 164000;
 		
 		//Stitching
-		public static final String STITCHING = "0aeb848d-aaa3-49d7-a1a1-f24b6a163611";
+		public static final Integer STITCHING = 1000251;
 		
-		public static final String Stitching_Casualty = "92862b02-36ff-4b92-b08a-2383d8802399";
+		public static final Integer Stitching_Casualty = 1000260;
 		
-		public static final String Stitching_In_Minor_Theatre = "8e425311-0572-4ce0-8bf5-ab424fca1b78";
+		public static final Integer Stitching_In_Minor_Theatre = 1000261;
 		
-		public static final String Dental_stitching = "18f3951d-6b4d-4472-803d-0ef8cb8f8abf";
+		public static final Integer Dental_stitching = 1000340;
 		
 	}
 	
@@ -9213,5 +9213,10 @@ public class EhrAddonsConstants {
 			}
 		}
 		return c;
+	}
+	
+	public static Concept getConcept(Integer lookup) {
+		
+		return Context.getConceptService().getConcept(lookup);
 	}
 }

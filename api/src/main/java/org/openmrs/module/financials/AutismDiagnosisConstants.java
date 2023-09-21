@@ -2,16 +2,16 @@ package org.openmrs.module.financials;
 
 public class AutismDiagnosisConstants {
 	
-	public static final String AUTISM_1 = "121303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer AUTISM_1 = 121303;
 	
-	public static final String AUTISM_2 = "127653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer AUTISM_2 = 127653;
 	
-	public static final String AUTISM_3 = "137557AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer AUTISM_3 = 137557;
 	
-	public static final String AUTISM_4 = "149941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer AUTISM_4 = 149941;
 	
-	public static final String AUTISM_5 = "152042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer AUTISM_5 = 152042;
 	
-	public static final String AUTISM_6 = "155013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer AUTISM_6 = 155013;
 	
 }

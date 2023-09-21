@@ -3,45 +3,45 @@ package org.openmrs.module.financials;
 public class RicketsDiagnosisConstants {
 	
 	//Rickets
-	public static final String RICKETS1 = "111461AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS1 = 111461;
 	
-	public static final String RICKETS2 = "112370AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS2 = 112370;
 	
-	public static final String RICKETS3 = "119383AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS3 = 119383;
 	
-	public static final String RICKETS4 = "119384AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS4 = 119384;
 	
-	public static final String RICKETS5 = "123035AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS5 = 123035;
 	
-	public static final String RICKETS6 = "123036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS6 = 123036;
 	
-	public static final String RICKETS7 = "127393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS7 = 127393;
 	
-	public static final String RICKETS8 = "127394AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS8 = 127394;
 	
-	public static final String RICKETS9 = "129607AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS9 = 129607;
 	
-	public static final String RICKETS10 = "129753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS10 = 129753;
 	
-	public static final String RICKETS11 = "130243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS11 = 130243;
 	
-	public static final String RICKETS12 = "133378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS12 = 133378;
 	
-	public static final String RICKETS13 = "136043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS13 = 136043;
 	
-	public static final String RICKETS14 = "136068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS14 = 136068;
 	
-	public static final String RICKETS15 = "139392AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS15 = 139392;
 	
-	public static final String RICKETS16 = "142188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS16 = 142188;
 	
-	public static final String RICKETS17 = "146062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS17 = 146062;
 	
-	public static final String RICKETS18 = "146568AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS18 = 146568;
 	
-	public static final String RICKETS19 = "148083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS19 = 148083;
 	
-	public static final String RICKETS20 = "149282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS20 = 149282;
 	
-	public static final String RICKETS21 = "158867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer RICKETS21 = 158867;
 }

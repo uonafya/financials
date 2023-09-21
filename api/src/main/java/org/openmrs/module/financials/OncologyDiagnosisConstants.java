@@ -2,2442 +2,2442 @@ package org.openmrs.module.financials;
 
 public class OncologyDiagnosisConstants {
 	
-	public static final String CANCER_1 = "110513AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1 = 110513;
 	
-	public static final String CANCER_2 = "110590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_2 = 110590;
 	
-	public static final String CANCER_3 = "110913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_3 = 110913;
 	
-	public static final String CANCER_4 = "110914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_4 = 110914;
 	
-	public static final String CANCER_5 = "111089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_5 = 111089;
 	
-	public static final String CANCER_6 = "111188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_6 = 111188;
 	
-	public static final String CANCER_7 = "111189AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_7 = 111189;
 	
-	public static final String CANCER_8 = "111190AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_8 = 111190;
 	
-	public static final String CANCER_9 = "111195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_9 = 111195;
 	
-	public static final String CANCER_10 = "111196AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_10 = 111196;
 	
-	public static final String CANCER_11 = "111197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_11 = 111197;
 	
-	public static final String CANCER_12 = "111198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_12 = 111198;
 	
-	public static final String CANCER_13 = "111225AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_13 = 111225;
 	
-	public static final String CANCER_14 = "111226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_14 = 111226;
 	
-	public static final String CANCER_15 = "111227AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_15 = 111227;
 	
-	public static final String CANCER_16 = "111228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_16 = 111228;
 	
-	public static final String CANCER_17 = "111229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_17 = 111229;
 	
-	public static final String CANCER_18 = "111230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_18 = 111230;
 	
-	public static final String CANCER_19 = "111231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_19 = 111231;
 	
-	public static final String CANCER_20 = "111232AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_20 = 111232;
 	
-	public static final String CANCER_21 = "111233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_21 = 111233;
 	
-	public static final String CANCER_22 = "111234AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_22 = 111234;
 	
-	public static final String CANCER_23 = "111235AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_23 = 111235;
 	
-	public static final String CANCER_24 = "111236AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_24 = 111236;
 	
-	public static final String CANCER_25 = "111237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_25 = 111237;
 	
-	public static final String CANCER_26 = "111238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_26 = 111238;
 	
-	public static final String CANCER_27 = "111239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_27 = 111239;
 	
-	public static final String CANCER_28 = "111240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_28 = 111240;
 	
-	public static final String CANCER_29 = "111241AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_29 = 111241;
 	
-	public static final String CANCER_30 = "111242AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_30 = 111242;
 	
-	public static final String CANCER_31 = "111243AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_31 = 111243;
 	
-	public static final String CANCER_32 = "111244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_32 = 111244;
 	
-	public static final String CANCER_33 = "111245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_33 = 111245;
 	
-	public static final String CANCER_34 = "111246AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_34 = 111246;
 	
-	public static final String CANCER_35 = "111247AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_35 = 111247;
 	
-	public static final String CANCER_36 = "111248AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_36 = 111248;
 	
-	public static final String CANCER_37 = "111249AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_37 = 111249;
 	
-	public static final String CANCER_38 = "111250AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_38 = 111250;
 	
-	public static final String CANCER_39 = "111251AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_39 = 111251;
 	
-	public static final String CANCER_40 = "111252AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_40 = 111252;
 	
-	public static final String CANCER_41 = "111253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_41 = 111253;
 	
-	public static final String CANCER_42 = "111254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_42 = 111254;
 	
-	public static final String CANCER_43 = "111255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_43 = 111255;
 	
-	public static final String CANCER_44 = "111256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_44 = 111256;
 	
-	public static final String CANCER_45 = "111257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_45 = 111257;
 	
-	public static final String CANCER_46 = "111258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_46 = 111258;
 	
-	public static final String CANCER_47 = "111259AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_47 = 111259;
 	
-	public static final String CANCER_48 = "111260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_48 = 111260;
 	
-	public static final String CANCER_49 = "111261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_49 = 111261;
 	
-	public static final String CANCER_50 = "111262AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_50 = 111262;
 	
-	public static final String CANCER_51 = "111263AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_51 = 111263;
 	
-	public static final String CANCER_52 = "111264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_52 = 111264;
 	
-	public static final String CANCER_53 = "111265AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_53 = 111265;
 	
-	public static final String CANCER_54 = "111266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_54 = 111266;
 	
-	public static final String CANCER_55 = "111267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_55 = 111267;
 	
-	public static final String CANCER_56 = "111269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_56 = 111269;
 	
-	public static final String CANCER_57 = "111271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_57 = 111271;
 	
-	public static final String CANCER_58 = "111272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_58 = 111272;
 	
-	public static final String CANCER_59 = "111273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_59 = 111273;
 	
-	public static final String CANCER_60 = "111274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_60 = 111274;
 	
-	public static final String CANCER_61 = "111276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_61 = 111276;
 	
-	public static final String CANCER_62 = "111277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_62 = 111277;
 	
-	public static final String CANCER_63 = "111278AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_63 = 111278;
 	
-	public static final String CANCER_64 = "111279AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_64 = 111279;
 	
-	public static final String CANCER_65 = "111280AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_65 = 111280;
 	
-	public static final String CANCER_66 = "111281AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_66 = 111281;
 	
-	public static final String CANCER_67 = "111282AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_67 = 111282;
 	
-	public static final String CANCER_68 = "111283AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_68 = 111283;
 	
-	public static final String CANCER_69 = "111285AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_69 = 111285;
 	
-	public static final String CANCER_70 = "111286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_70 = 111286;
 	
-	public static final String CANCER_71 = "111287AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_71 = 111287;
 	
-	public static final String CANCER_72 = "111288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_72 = 111288;
 	
-	public static final String CANCER_73 = "111289AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_73 = 111289;
 	
-	public static final String CANCER_74 = "111302AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_74 = 111302;
 	
-	public static final String CANCER_75 = "111303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_75 = 111303;
 	
-	public static final String CANCER_76 = "111304AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_76 = 111304;
 	
-	public static final String CANCER_77 = "111305AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_77 = 111305;
 	
-	public static final String CANCER_78 = "111306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_78 = 111306;
 	
-	public static final String CANCER_79 = "111307AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_79 = 111307;
 	
-	public static final String CANCER_80 = "111309AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_80 = 111309;
 	
-	public static final String CANCER_81 = "111310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_81 = 111310;
 	
-	public static final String CANCER_82 = "111314AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_82 = 111314;
 	
-	public static final String CANCER_83 = "111323AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_83 = 111323;
 	
-	public static final String CANCER_84 = "111325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_84 = 111325;
 	
-	public static final String CANCER_85 = "111342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_85 = 111342;
 	
-	public static final String CANCER_86 = "111343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_86 = 111343;
 	
-	public static final String CANCER_87 = "111344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_87 = 111344;
 	
-	public static final String CANCER_88 = "111345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_88 = 111345;
 	
-	public static final String CANCER_89 = "111346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_89 = 111346;
 	
-	public static final String CANCER_90 = "111347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_90 = 111347;
 	
-	public static final String CANCER_91 = "111348AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_91 = 111348;
 	
-	public static final String CANCER_92 = "111349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_92 = 111349;
 	
-	public static final String CANCER_93 = "111382AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_93 = 111382;
 	
-	public static final String CANCER_94 = "111386AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_94 = 111386;
 	
-	public static final String CANCER_95 = "111387AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_95 = 111387;
 	
-	public static final String CANCER_96 = "111388AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_96 = 111388;
 	
-	public static final String CANCER_97 = "111389AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_97 = 111389;
 	
-	public static final String CANCER_98 = "111390AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_98 = 111390;
 	
-	public static final String CANCER_99 = "111391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_99 = 111391;
 	
-	public static final String CANCER_100 = "111393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_100 = 111393;
 	
-	public static final String CANCER_101 = "113076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_101 = 113076;
 	
-	public static final String CANCER_102 = "113079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_102 = 113079;
 	
-	public static final String CANCER_103 = "113084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_103 = 113084;
 	
-	public static final String CANCER_104 = "113668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_104 = 113668;
 	
-	public static final String CANCER_105 = "113670AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_105 = 113670;
 	
-	public static final String CANCER_106 = "113674AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_106 = 113674;
 	
-	public static final String CANCER_107 = "113676AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_107 = 113676;
 	
-	public static final String CANCER_108 = "113680AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_108 = 113680;
 	
-	public static final String CANCER_109 = "113681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_109 = 113681;
 	
-	public static final String CANCER_110 = "113684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_110 = 113684;
 	
-	public static final String CANCER_111 = "113686AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_111 = 113686;
 	
-	public static final String CANCER_112 = "113689AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_112 = 113689;
 	
-	public static final String CANCER_113 = "113690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_113 = 113690;
 	
-	public static final String CANCER_114 = "113694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_114 = 113694;
 	
-	public static final String CANCER_115 = "113696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_115 = 113696;
 	
-	public static final String CANCER_116 = "113698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_116 = 113698;
 	
-	public static final String CANCER_117 = "113700AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_117 = 113700;
 	
-	public static final String CANCER_118 = "113701AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_118 = 113701;
 	
-	public static final String CANCER_119 = "113704AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_119 = 113704;
 	
-	public static final String CANCER_120 = "113705AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_120 = 113705;
 	
-	public static final String CANCER_121 = "113709AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_121 = 113709;
 	
-	public static final String CANCER_122 = "113711AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_122 = 113711;
 	
-	public static final String CANCER_123 = "113712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_123 = 113712;
 	
-	public static final String CANCER_124 = "113713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_124 = 113713;
 	
-	public static final String CANCER_125 = "113715AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_125 = 113715;
 	
-	public static final String CANCER_126 = "113716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_126 = 113716;
 	
-	public static final String CANCER_127 = "113717AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_127 = 113717;
 	
-	public static final String CANCER_128 = "113718AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_128 = 113718;
 	
-	public static final String CANCER_129 = "113721AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_129 = 113721;
 	
-	public static final String CANCER_130 = "113723AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_130 = 113723;
 	
-	public static final String CANCER_131 = "113729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_131 = 113729;
 	
-	public static final String CANCER_132 = "113732AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_132 = 113732;
 	
-	public static final String CANCER_133 = "113735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_133 = 113735;
 	
-	public static final String CANCER_134 = "113740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_134 = 113740;
 	
-	public static final String CANCER_135 = "113742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_135 = 113742;
 	
-	public static final String CANCER_136 = "113743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_136 = 113743;
 	
-	public static final String CANCER_137 = "113744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_137 = 113744;
 	
-	public static final String CANCER_138 = "113746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_138 = 113746;
 	
-	public static final String CANCER_139 = "113748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_139 = 113748;
 	
-	public static final String CANCER_140 = "113751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_140 = 113751;
 	
-	public static final String CANCER_141 = "113753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_141 = 113753;
 	
-	public static final String CANCER_142 = "113754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_142 = 113754;
 	
-	public static final String CANCER_143 = "113757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_143 = 113757;
 	
-	public static final String CANCER_144 = "113761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_144 = 113761;
 	
-	public static final String CANCER_145 = "113762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_145 = 113762;
 	
-	public static final String CANCER_146 = "113763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_146 = 113763;
 	
-	public static final String CANCER_147 = "113778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_147 = 113778;
 	
-	public static final String CANCER_148 = "113782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_148 = 113782;
 	
-	public static final String CANCER_149 = "113784AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_149 = 113784;
 	
-	public static final String CANCER_150 = "115324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_150 = 115324;
 	
-	public static final String CANCER_151 = "115327AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_151 = 115327;
 	
-	public static final String CANCER_152 = "115335AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_152 = 115335;
 	
-	public static final String CANCER_153 = "115340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_153 = 115340;
 	
-	public static final String CANCER_154 = "115341AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_154 = 115341;
 	
-	public static final String CANCER_155 = "115344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_155 = 115344;
 	
-	public static final String CANCER_156 = "115346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_156 = 115346;
 	
-	public static final String CANCER_157 = "115349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_157 = 115349;
 	
-	public static final String CANCER_158 = "115354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_158 = 115354;
 	
-	public static final String CANCER_159 = "115355AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_159 = 115355;
 	
-	public static final String CANCER_160 = "115356AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_160 = 115356;
 	
-	public static final String CANCER_161 = "115357AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_161 = 115357;
 	
-	public static final String CANCER_162 = "115359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_162 = 115359;
 	
-	public static final String CANCER_163 = "115362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_163 = 115362;
 	
-	public static final String CANCER_164 = "115363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_164 = 115363;
 	
-	public static final String CANCER_165 = "115365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_165 = 115365;
 	
-	public static final String CANCER_166 = "115720AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_166 = 115720;
 	
-	public static final String CANCER_167 = "115958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_167 = 115958;
 	
-	public static final String CANCER_168 = "115959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_168 = 115959;
 	
-	public static final String CANCER_169 = "115960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_169 = 115960;
 	
-	public static final String CANCER_170 = "115961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_170 = 115961;
 	
-	public static final String CANCER_171 = "115963AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_171 = 115963;
 	
-	public static final String CANCER_172 = "115965AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_172 = 115965;
 	
-	public static final String CANCER_173 = "115966AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_173 = 115966;
 	
-	public static final String CANCER_174 = "115968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_174 = 115968;
 	
-	public static final String CANCER_175 = "115973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_175 = 115973;
 	
-	public static final String CANCER_176 = "115976AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_176 = 115976;
 	
-	public static final String CANCER_177 = "115980AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_177 = 115980;
 	
-	public static final String CANCER_178 = "115983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_178 = 115983;
 	
-	public static final String CANCER_179 = "115984AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_179 = 115984;
 	
-	public static final String CANCER_180 = "115985AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_180 = 115985;
 	
-	public static final String CANCER_181 = "115986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_181 = 115986;
 	
-	public static final String CANCER_182 = "115992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_182 = 115992;
 	
-	public static final String CANCER_183 = "116000AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_183 = 116000;
 	
-	public static final String CANCER_184 = "116004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_184 = 116004;
 	
-	public static final String CANCER_185 = "116010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_185 = 116010;
 	
-	public static final String CANCER_186 = "116013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_186 = 116013;
 	
-	public static final String CANCER_187 = "116016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_187 = 116016;
 	
-	public static final String CANCER_188 = "116017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_188 = 116017;
 	
-	public static final String CANCER_189 = "116021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_189 = 116021;
 	
-	public static final String CANCER_190 = "116023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_190 = 116023;
 	
-	public static final String CANCER_191 = "116024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_191 = 116024;
 	
-	public static final String CANCER_192 = "116026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_192 = 116026;
 	
-	public static final String CANCER_193 = "116030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_193 = 116030;
 	
-	public static final String CANCER_194 = "116031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_194 = 116031;
 	
-	public static final String CANCER_195 = "116033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_195 = 116033;
 	
-	public static final String CANCER_196 = "116040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_196 = 116040;
 	
-	public static final String CANCER_197 = "116041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_197 = 116041;
 	
-	public static final String CANCER_198 = "116046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_198 = 116046;
 	
-	public static final String CANCER_199 = "116049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_199 = 116049;
 	
-	public static final String CANCER_200 = "116055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_200 = 116055;
 	
-	public static final String CANCER_201 = "116057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_201 = 116057;
 	
-	public static final String CANCER_202 = "116058AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_202 = 116058;
 	
-	public static final String CANCER_203 = "116059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_203 = 116059;
 	
-	public static final String CANCER_204 = "116060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_204 = 116060;
 	
-	public static final String CANCER_205 = "116061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_205 = 116061;
 	
-	public static final String CANCER_206 = "116065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_206 = 116065;
 	
-	public static final String CANCER_207 = "116066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_207 = 116066;
 	
-	public static final String CANCER_208 = "116067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_208 = 116067;
 	
-	public static final String CANCER_209 = "116068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_209 = 116068;
 	
-	public static final String CANCER_210 = "116072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_210 = 116072;
 	
-	public static final String CANCER_211 = "116074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_211 = 116074;
 	
-	public static final String CANCER_212 = "116075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_212 = 116075;
 	
-	public static final String CANCER_213 = "116076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_213 = 116076;
 	
-	public static final String CANCER_214 = "116077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_214 = 116077;
 	
-	public static final String CANCER_215 = "116079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_215 = 116079;
 	
-	public static final String CANCER_216 = "117271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_216 = 117271;
 	
-	public static final String CANCER_217 = "117272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_217 = 117272;
 	
-	public static final String CANCER_218 = "117504AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_218 = 117504;
 	
-	public static final String CANCER_219 = "117508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_219 = 117508;
 	
-	public static final String CANCER_220 = "117743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_220 = 117743;
 	
-	public static final String CANCER_221 = "117918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_221 = 117918;
 	
-	public static final String CANCER_222 = "118192AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_222 = 118192;
 	
-	public static final String CANCER_223 = "118193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_223 = 118193;
 	
-	public static final String CANCER_224 = "120781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_224 = 120781;
 	
-	public static final String CANCER_225 = "121153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_225 = 121153;
 	
-	public static final String CANCER_226 = "121165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_226 = 121165;
 	
-	public static final String CANCER_227 = "121166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_227 = 121166;
 	
-	public static final String CANCER_228 = "121167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_228 = 121167;
 	
-	public static final String CANCER_229 = "121171AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_229 = 121171;
 	
-	public static final String CANCER_230 = "121172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_230 = 121172;
 	
-	public static final String CANCER_231 = "121175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_231 = 121175;
 	
-	public static final String CANCER_232 = "121176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_232 = 121176;
 	
-	public static final String CANCER_233 = "121184AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_233 = 121184;
 	
-	public static final String CANCER_234 = "121186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_234 = 121186;
 	
-	public static final String CANCER_235 = "121188AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_235 = 121188;
 	
-	public static final String CANCER_236 = "121190AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_236 = 121190;
 	
-	public static final String CANCER_237 = "121192AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_237 = 121192;
 	
-	public static final String CANCER_238 = "121194AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_238 = 121194;
 	
-	public static final String CANCER_239 = "121199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_239 = 121199;
 	
-	public static final String CANCER_240 = "121202AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_240 = 121202;
 	
-	public static final String CANCER_241 = "121203AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_241 = 121203;
 	
-	public static final String CANCER_242 = "121204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_242 = 121204;
 	
-	public static final String CANCER_243 = "121205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_243 = 121205;
 	
-	public static final String CANCER_244 = "121206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_244 = 121206;
 	
-	public static final String CANCER_245 = "121207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_245 = 121207;
 	
-	public static final String CANCER_246 = "122424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_246 = 122424;
 	
-	public static final String CANCER_247 = "122508AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_247 = 122508;
 	
-	public static final String CANCER_248 = "122509AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_248 = 122509;
 	
-	public static final String CANCER_249 = "122512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_249 = 122512;
 	
-	public static final String CANCER_250 = "122574AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_250 = 122574;
 	
-	public static final String CANCER_251 = "122575AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_251 = 122575;
 	
-	public static final String CANCER_252 = "122577AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_252 = 122577;
 	
-	public static final String CANCER_253 = "122580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_253 = 122580;
 	
-	public static final String CANCER_254 = "122603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_254 = 122603;
 	
-	public static final String CANCER_255 = "122654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_255 = 122654;
 	
-	public static final String CANCER_256 = "122655AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_256 = 122655;
 	
-	public static final String CANCER_257 = "122707AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_257 = 122707;
 	
-	public static final String CANCER_258 = "123078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_258 = 123078;
 	
-	public static final String CANCER_259 = "123973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_259 = 123973;
 	
-	public static final String CANCER_260 = "126899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_260 = 126899;
 	
-	public static final String CANCER_261 = "126900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_261 = 126900;
 	
-	public static final String CANCER_262 = "126901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_262 = 126901;
 	
-	public static final String CANCER_263 = "126902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_263 = 126902;
 	
-	public static final String CANCER_264 = "126903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_264 = 126903;
 	
-	public static final String CANCER_265 = "126904AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_265 = 126904;
 	
-	public static final String CANCER_266 = "126905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_266 = 126905;
 	
-	public static final String CANCER_267 = "126906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_267 = 126906;
 	
-	public static final String CANCER_268 = "126907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_268 = 126907;
 	
-	public static final String CANCER_269 = "126908AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_269 = 126908;
 	
-	public static final String CANCER_270 = "126909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_270 = 126909;
 	
-	public static final String CANCER_271 = "126910AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_271 = 126910;
 	
-	public static final String CANCER_272 = "126911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_272 = 126911;
 	
-	public static final String CANCER_273 = "126912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_273 = 126912;
 	
-	public static final String CANCER_274 = "126913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_274 = 126913;
 	
-	public static final String CANCER_275 = "126914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_275 = 126914;
 	
-	public static final String CANCER_276 = "126915AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_276 = 126915;
 	
-	public static final String CANCER_277 = "126916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_277 = 126916;
 	
-	public static final String CANCER_278 = "126917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_278 = 126917;
 	
-	public static final String CANCER_279 = "126919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_279 = 126919;
 	
-	public static final String CANCER_280 = "126920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_280 = 126920;
 	
-	public static final String CANCER_281 = "126921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_281 = 126921;
 	
-	public static final String CANCER_282 = "126923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_282 = 126923;
 	
-	public static final String CANCER_283 = "126924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_283 = 126924;
 	
-	public static final String CANCER_284 = "126925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_284 = 126925;
 	
-	public static final String CANCER_285 = "126926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_285 = 126926;
 	
-	public static final String CANCER_286 = "126927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_286 = 126927;
 	
-	public static final String CANCER_287 = "126928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_287 = 126928;
 	
-	public static final String CANCER_288 = "126929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_288 = 126929;
 	
-	public static final String CANCER_289 = "126930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_289 = 126930;
 	
-	public static final String CANCER_290 = "126931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_290 = 126931;
 	
-	public static final String CANCER_291 = "126932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_291 = 126932;
 	
-	public static final String CANCER_292 = "126933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_292 = 126933;
 	
-	public static final String CANCER_293 = "126936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_293 = 126936;
 	
-	public static final String CANCER_294 = "126937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_294 = 126937;
 	
-	public static final String CANCER_295 = "126938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_295 = 126938;
 	
-	public static final String CANCER_296 = "126939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_296 = 126939;
 	
-	public static final String CANCER_297 = "126940AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_297 = 126940;
 	
-	public static final String CANCER_298 = "126941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_298 = 126941;
 	
-	public static final String CANCER_299 = "126942AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_299 = 126942;
 	
-	public static final String CANCER_300 = "126943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_300 = 126943;
 	
-	public static final String CANCER_301 = "126944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_301 = 126944;
 	
-	public static final String CANCER_302 = "126945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_302 = 126945;
 	
-	public static final String CANCER_303 = "126946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_303 = 126946;
 	
-	public static final String CANCER_304 = "126947AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_304 = 126947;
 	
-	public static final String CANCER_305 = "126948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_305 = 126948;
 	
-	public static final String CANCER_306 = "126949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_306 = 126949;
 	
-	public static final String CANCER_307 = "126950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_307 = 126950;
 	
-	public static final String CANCER_308 = "126951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_308 = 126951;
 	
-	public static final String CANCER_309 = "126952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_309 = 126952;
 	
-	public static final String CANCER_310 = "126953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_310 = 126953;
 	
-	public static final String CANCER_311 = "128614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_311 = 128614;
 	
-	public static final String CANCER_312 = "128616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_312 = 128616;
 	
-	public static final String CANCER_313 = "128618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_313 = 128618;
 	
-	public static final String CANCER_314 = "128619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_314 = 128619;
 	
-	public static final String CANCER_315 = "128620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_315 = 128620;
 	
-	public static final String CANCER_316 = "128622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_316 = 128622;
 	
-	public static final String CANCER_317 = "128625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_317 = 128625;
 	
-	public static final String CANCER_318 = "128628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_318 = 128628;
 	
-	public static final String CANCER_319 = "128629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_319 = 128629;
 	
-	public static final String CANCER_320 = "128630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_320 = 128630;
 	
-	public static final String CANCER_321 = "128631AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_321 = 128631;
 	
-	public static final String CANCER_322 = "128632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_322 = 128632;
 	
-	public static final String CANCER_323 = "128633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_323 = 128633;
 	
-	public static final String CANCER_324 = "128635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_324 = 128635;
 	
-	public static final String CANCER_325 = "128641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_325 = 128641;
 	
-	public static final String CANCER_326 = "128642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_326 = 128642;
 	
-	public static final String CANCER_327 = "128644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_327 = 128644;
 	
-	public static final String CANCER_328 = "128645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_328 = 128645;
 	
-	public static final String CANCER_329 = "128649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_329 = 128649;
 	
-	public static final String CANCER_330 = "128651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_330 = 128651;
 	
-	public static final String CANCER_331 = "128652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_331 = 128652;
 	
-	public static final String CANCER_332 = "128653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_332 = 128653;
 	
-	public static final String CANCER_333 = "128655AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_333 = 128655;
 	
-	public static final String CANCER_334 = "128656AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_334 = 128656;
 	
-	public static final String CANCER_335 = "128658AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_335 = 128658;
 	
-	public static final String CANCER_336 = "128661AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_336 = 128661;
 	
-	public static final String CANCER_337 = "128663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_337 = 128663;
 	
-	public static final String CANCER_338 = "128664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_338 = 128664;
 	
-	public static final String CANCER_339 = "128667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_339 = 128667;
 	
-	public static final String CANCER_340 = "128675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_340 = 128675;
 	
-	public static final String CANCER_341 = "128678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_341 = 128678;
 	
-	public static final String CANCER_342 = "128679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_342 = 128679;
 	
-	public static final String CANCER_343 = "128682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_343 = 128682;
 	
-	public static final String CANCER_344 = "128685AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_344 = 128685;
 	
-	public static final String CANCER_345 = "128688AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_345 = 128688;
 	
-	public static final String CANCER_346 = "128690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_346 = 128690;
 	
-	public static final String CANCER_347 = "128692AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_347 = 128692;
 	
-	public static final String CANCER_348 = "128693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_348 = 128693;
 	
-	public static final String CANCER_349 = "128694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_349 = 128694;
 	
-	public static final String CANCER_350 = "128695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_350 = 128695;
 	
-	public static final String CANCER_351 = "128697AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_351 = 128697;
 	
-	public static final String CANCER_352 = "128699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_352 = 128699;
 	
-	public static final String CANCER_353 = "128700AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_353 = 128700;
 	
-	public static final String CANCER_354 = "128701AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_354 = 128701;
 	
-	public static final String CANCER_355 = "128702AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_355 = 128702;
 	
-	public static final String CANCER_356 = "128706AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_356 = 128706;
 	
-	public static final String CANCER_357 = "128707AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_357 = 128707;
 	
-	public static final String CANCER_358 = "128710AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_358 = 128710;
 	
-	public static final String CANCER_359 = "128711AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_359 = 128711;
 	
-	public static final String CANCER_360 = "128714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_360 = 128714;
 	
-	public static final String CANCER_361 = "128716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_361 = 128716;
 	
-	public static final String CANCER_362 = "128731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_362 = 128731;
 	
-	public static final String CANCER_363 = "128732AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_363 = 128732;
 	
-	public static final String CANCER_364 = "128733AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_364 = 128733;
 	
-	public static final String CANCER_365 = "128735AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_365 = 128735;
 	
-	public static final String CANCER_366 = "128736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_366 = 128736;
 	
-	public static final String CANCER_367 = "128737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_367 = 128737;
 	
-	public static final String CANCER_368 = "128747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_368 = 128747;
 	
-	public static final String CANCER_369 = "128749AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_369 = 128749;
 	
-	public static final String CANCER_370 = "128752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_370 = 128752;
 	
-	public static final String CANCER_371 = "128754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_371 = 128754;
 	
-	public static final String CANCER_372 = "128755AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_372 = 128755;
 	
-	public static final String CANCER_373 = "128756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_373 = 128756;
 	
-	public static final String CANCER_374 = "128757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_374 = 128757;
 	
-	public static final String CANCER_375 = "128759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_375 = 128759;
 	
-	public static final String CANCER_376 = "128761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_376 = 128761;
 	
-	public static final String CANCER_377 = "128763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_377 = 128763;
 	
-	public static final String CANCER_378 = "128765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_378 = 128765;
 	
-	public static final String CANCER_379 = "128770AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_379 = 128770;
 	
-	public static final String CANCER_380 = "128771AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_380 = 128771;
 	
-	public static final String CANCER_381 = "128773AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_381 = 128773;
 	
-	public static final String CANCER_382 = "128778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_382 = 128778;
 	
-	public static final String CANCER_383 = "128779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_383 = 128779;
 	
-	public static final String CANCER_384 = "128781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_384 = 128781;
 	
-	public static final String CANCER_385 = "128782AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_385 = 128782;
 	
-	public static final String CANCER_386 = "128783AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_386 = 128783;
 	
-	public static final String CANCER_387 = "128785AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_387 = 128785;
 	
-	public static final String CANCER_388 = "128786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_388 = 128786;
 	
-	public static final String CANCER_389 = "128788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_389 = 128788;
 	
-	public static final String CANCER_390 = "128789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_390 = 128789;
 	
-	public static final String CANCER_391 = "128790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_391 = 128790;
 	
-	public static final String CANCER_392 = "128791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_392 = 128791;
 	
-	public static final String CANCER_393 = "128792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_393 = 128792;
 	
-	public static final String CANCER_394 = "128794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_394 = 128794;
 	
-	public static final String CANCER_395 = "128795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_395 = 128795;
 	
-	public static final String CANCER_396 = "128797AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_396 = 128797;
 	
-	public static final String CANCER_397 = "128798AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_397 = 128798;
 	
-	public static final String CANCER_398 = "128799AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_398 = 128799;
 	
-	public static final String CANCER_399 = "128801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_399 = 128801;
 	
-	public static final String CANCER_400 = "128802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_400 = 128802;
 	
-	public static final String CANCER_401 = "128803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_401 = 128803;
 	
-	public static final String CANCER_402 = "128804AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_402 = 128804;
 	
-	public static final String CANCER_403 = "128805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_403 = 128805;
 	
-	public static final String CANCER_404 = "128808AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_404 = 128808;
 	
-	public static final String CANCER_405 = "128809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_405 = 128809;
 	
-	public static final String CANCER_406 = "128810AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_406 = 128810;
 	
-	public static final String CANCER_407 = "128813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_407 = 128813;
 	
-	public static final String CANCER_408 = "128816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_408 = 128816;
 	
-	public static final String CANCER_409 = "128818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_409 = 128818;
 	
-	public static final String CANCER_410 = "128819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_410 = 128819;
 	
-	public static final String CANCER_411 = "128822AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_411 = 128822;
 	
-	public static final String CANCER_412 = "128823AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_412 = 128823;
 	
-	public static final String CANCER_413 = "128824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_413 = 128824;
 	
-	public static final String CANCER_414 = "128825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_414 = 128825;
 	
-	public static final String CANCER_415 = "128826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_415 = 128826;
 	
-	public static final String CANCER_416 = "128828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_416 = 128828;
 	
-	public static final String CANCER_417 = "128830AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_417 = 128830;
 	
-	public static final String CANCER_418 = "128832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_418 = 128832;
 	
-	public static final String CANCER_419 = "128833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_419 = 128833;
 	
-	public static final String CANCER_420 = "128834AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_420 = 128834;
 	
-	public static final String CANCER_421 = "128835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_421 = 128835;
 	
-	public static final String CANCER_422 = "128836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_422 = 128836;
 	
-	public static final String CANCER_423 = "128838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_423 = 128838;
 	
-	public static final String CANCER_424 = "128840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_424 = 128840;
 	
-	public static final String CANCER_425 = "128845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_425 = 128845;
 	
-	public static final String CANCER_426 = "128848AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_426 = 128848;
 	
-	public static final String CANCER_427 = "128850AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_427 = 128850;
 	
-	public static final String CANCER_428 = "128852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_428 = 128852;
 	
-	public static final String CANCER_429 = "128854AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_429 = 128854;
 	
-	public static final String CANCER_430 = "128856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_430 = 128856;
 	
-	public static final String CANCER_431 = "128857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_431 = 128857;
 	
-	public static final String CANCER_432 = "128858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_432 = 128858;
 	
-	public static final String CANCER_433 = "128859AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_433 = 128859;
 	
-	public static final String CANCER_434 = "128862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_434 = 128862;
 	
-	public static final String CANCER_435 = "128863AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_435 = 128863;
 	
-	public static final String CANCER_436 = "128864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_436 = 128864;
 	
-	public static final String CANCER_437 = "128865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_437 = 128865;
 	
-	public static final String CANCER_438 = "128869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_438 = 128869;
 	
-	public static final String CANCER_439 = "128871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_439 = 128871;
 	
-	public static final String CANCER_440 = "128872AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_440 = 128872;
 	
-	public static final String CANCER_441 = "128877AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_441 = 128877;
 	
-	public static final String CANCER_442 = "128879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_442 = 128879;
 	
-	public static final String CANCER_443 = "128881AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_443 = 128881;
 	
-	public static final String CANCER_444 = "128884AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_444 = 128884;
 	
-	public static final String CANCER_445 = "128885AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_445 = 128885;
 	
-	public static final String CANCER_446 = "128888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_446 = 128888;
 	
-	public static final String CANCER_447 = "128889AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_447 = 128889;
 	
-	public static final String CANCER_448 = "128891AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_448 = 128891;
 	
-	public static final String CANCER_449 = "128894AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_449 = 128894;
 	
-	public static final String CANCER_450 = "128895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_450 = 128895;
 	
-	public static final String CANCER_451 = "128896AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_451 = 128896;
 	
-	public static final String CANCER_452 = "128897AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_452 = 128897;
 	
-	public static final String CANCER_453 = "128898AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_453 = 128898;
 	
-	public static final String CANCER_454 = "128899AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_454 = 128899;
 	
-	public static final String CANCER_455 = "128902AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_455 = 128902;
 	
-	public static final String CANCER_456 = "128903AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_456 = 128903;
 	
-	public static final String CANCER_457 = "128904AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_457 = 128904;
 	
-	public static final String CANCER_458 = "128905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_458 = 128905;
 	
-	public static final String CANCER_459 = "128906AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_459 = 128906;
 	
-	public static final String CANCER_460 = "128907AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_460 = 128907;
 	
-	public static final String CANCER_461 = "128912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_461 = 128912;
 	
-	public static final String CANCER_462 = "128913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_462 = 128913;
 	
-	public static final String CANCER_463 = "128915AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_463 = 128915;
 	
-	public static final String CANCER_464 = "128917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_464 = 128917;
 	
-	public static final String CANCER_465 = "128918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_465 = 128918;
 	
-	public static final String CANCER_466 = "128920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_466 = 128920;
 	
-	public static final String CANCER_467 = "128921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_467 = 128921;
 	
-	public static final String CANCER_468 = "128922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_468 = 128922;
 	
-	public static final String CANCER_469 = "128926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_469 = 128926;
 	
-	public static final String CANCER_470 = "128928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_470 = 128928;
 	
-	public static final String CANCER_471 = "128930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_471 = 128930;
 	
-	public static final String CANCER_472 = "128931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_472 = 128931;
 	
-	public static final String CANCER_473 = "128932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_473 = 128932;
 	
-	public static final String CANCER_474 = "128934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_474 = 128934;
 	
-	public static final String CANCER_475 = "128936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_475 = 128936;
 	
-	public static final String CANCER_476 = "128937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_476 = 128937;
 	
-	public static final String CANCER_477 = "128938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_477 = 128938;
 	
-	public static final String CANCER_478 = "128941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_478 = 128941;
 	
-	public static final String CANCER_479 = "128943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_479 = 128943;
 	
-	public static final String CANCER_480 = "128944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_480 = 128944;
 	
-	public static final String CANCER_481 = "128946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_481 = 128946;
 	
-	public static final String CANCER_482 = "128947AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_482 = 128947;
 	
-	public static final String CANCER_483 = "128949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_483 = 128949;
 	
-	public static final String CANCER_484 = "128955AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_484 = 128955;
 	
-	public static final String CANCER_485 = "128958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_485 = 128958;
 	
-	public static final String CANCER_486 = "128960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_486 = 128960;
 	
-	public static final String CANCER_487 = "128962AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_487 = 128962;
 	
-	public static final String CANCER_488 = "128964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_488 = 128964;
 	
-	public static final String CANCER_489 = "128966AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_489 = 128966;
 	
-	public static final String CANCER_490 = "128967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_490 = 128967;
 	
-	public static final String CANCER_491 = "128968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_491 = 128968;
 	
-	public static final String CANCER_492 = "128970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_492 = 128970;
 	
-	public static final String CANCER_493 = "128972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_493 = 128972;
 	
-	public static final String CANCER_494 = "128974AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_494 = 128974;
 	
-	public static final String CANCER_495 = "128976AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_495 = 128976;
 	
-	public static final String CANCER_496 = "128979AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_496 = 128979;
 	
-	public static final String CANCER_497 = "128980AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_497 = 128980;
 	
-	public static final String CANCER_498 = "128983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_498 = 128983;
 	
-	public static final String CANCER_499 = "128985AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_499 = 128985;
 	
-	public static final String CANCER_500 = "128986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_500 = 128986;
 	
-	public static final String CANCER_501 = "128988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_501 = 128988;
 	
-	public static final String CANCER_502 = "128989AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_502 = 128989;
 	
-	public static final String CANCER_503 = "128991AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_503 = 128991;
 	
-	public static final String CANCER_504 = "128992AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_504 = 128992;
 	
-	public static final String CANCER_505 = "128993AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_505 = 128993;
 	
-	public static final String CANCER_506 = "128995AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_506 = 128995;
 	
-	public static final String CANCER_507 = "128996AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_507 = 128996;
 	
-	public static final String CANCER_508 = "128999AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_508 = 128999;
 	
-	public static final String CANCER_509 = "129001AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_509 = 129001;
 	
-	public static final String CANCER_510 = "129003AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_510 = 129003;
 	
-	public static final String CANCER_511 = "129004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_511 = 129004;
 	
-	public static final String CANCER_512 = "129007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_512 = 129007;
 	
-	public static final String CANCER_513 = "129008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_513 = 129008;
 	
-	public static final String CANCER_514 = "129011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_514 = 129011;
 	
-	public static final String CANCER_515 = "129013AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_515 = 129013;
 	
-	public static final String CANCER_516 = "129014AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_516 = 129014;
 	
-	public static final String CANCER_517 = "129015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_517 = 129015;
 	
-	public static final String CANCER_518 = "129016AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_518 = 129016;
 	
-	public static final String CANCER_519 = "129018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_519 = 129018;
 	
-	public static final String CANCER_520 = "129020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_520 = 129020;
 	
-	public static final String CANCER_521 = "129022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_521 = 129022;
 	
-	public static final String CANCER_522 = "129024AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_522 = 129024;
 	
-	public static final String CANCER_523 = "129025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_523 = 129025;
 	
-	public static final String CANCER_524 = "129033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_524 = 129033;
 	
-	public static final String CANCER_525 = "129035AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_525 = 129035;
 	
-	public static final String CANCER_526 = "129039AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_526 = 129039;
 	
-	public static final String CANCER_527 = "129040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_527 = 129040;
 	
-	public static final String CANCER_528 = "129041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_528 = 129041;
 	
-	public static final String CANCER_529 = "129042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_529 = 129042;
 	
-	public static final String CANCER_530 = "129045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_530 = 129045;
 	
-	public static final String CANCER_531 = "129047AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_531 = 129047;
 	
-	public static final String CANCER_532 = "129050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_532 = 129050;
 	
-	public static final String CANCER_533 = "129054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_533 = 129054;
 	
-	public static final String CANCER_534 = "129055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_534 = 129055;
 	
-	public static final String CANCER_535 = "129056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_535 = 129056;
 	
-	public static final String CANCER_536 = "129061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_536 = 129061;
 	
-	public static final String CANCER_537 = "129063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_537 = 129063;
 	
-	public static final String CANCER_538 = "129066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_538 = 129066;
 	
-	public static final String CANCER_539 = "129067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_539 = 129067;
 	
-	public static final String CANCER_540 = "129068AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_540 = 129068;
 	
-	public static final String CANCER_541 = "129069AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_541 = 129069;
 	
-	public static final String CANCER_542 = "129070AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_542 = 129070;
 	
-	public static final String CANCER_543 = "129072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_543 = 129072;
 	
-	public static final String CANCER_544 = "129074AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_544 = 129074;
 	
-	public static final String CANCER_545 = "129075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_545 = 129075;
 	
-	public static final String CANCER_546 = "129077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_546 = 129077;
 	
-	public static final String CANCER_547 = "129079AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_547 = 129079;
 	
-	public static final String CANCER_548 = "129080AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_548 = 129080;
 	
-	public static final String CANCER_549 = "129082AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_549 = 129082;
 	
-	public static final String CANCER_550 = "129088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_550 = 129088;
 	
-	public static final String CANCER_551 = "129090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_551 = 129090;
 	
-	public static final String CANCER_552 = "130083AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_552 = 130083;
 	
-	public static final String CANCER_553 = "131071AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_553 = 131071;
 	
-	public static final String CANCER_554 = "131073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_554 = 131073;
 	
-	public static final String CANCER_555 = "133204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_555 = 133204;
 	
-	public static final String CANCER_556 = "133205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_556 = 133205;
 	
-	public static final String CANCER_557 = "133206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_557 = 133206;
 	
-	public static final String CANCER_558 = "133207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_558 = 133207;
 	
-	public static final String CANCER_559 = "133208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_559 = 133208;
 	
-	public static final String CANCER_560 = "133209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_560 = 133209;
 	
-	public static final String CANCER_561 = "133221AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_561 = 133221;
 	
-	public static final String CANCER_562 = "133224AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_562 = 133224;
 	
-	public static final String CANCER_563 = "133226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_563 = 133226;
 	
-	public static final String CANCER_564 = "133227AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_564 = 133227;
 	
-	public static final String CANCER_565 = "133228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_565 = 133228;
 	
-	public static final String CANCER_566 = "133231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_566 = 133231;
 	
-	public static final String CANCER_567 = "133232AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_567 = 133232;
 	
-	public static final String CANCER_568 = "133233AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_568 = 133233;
 	
-	public static final String CANCER_569 = "133235AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_569 = 133235;
 	
-	public static final String CANCER_570 = "133238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_570 = 133238;
 	
-	public static final String CANCER_571 = "133239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_571 = 133239;
 	
-	public static final String CANCER_572 = "133240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_572 = 133240;
 	
-	public static final String CANCER_573 = "133246AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_573 = 133246;
 	
-	public static final String CANCER_574 = "133253AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_574 = 133253;
 	
-	public static final String CANCER_575 = "133256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_575 = 133256;
 	
-	public static final String CANCER_576 = "133257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_576 = 133257;
 	
-	public static final String CANCER_577 = "133258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_577 = 133258;
 	
-	public static final String CANCER_578 = "133261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_578 = 133261;
 	
-	public static final String CANCER_579 = "133262AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_579 = 133262;
 	
-	public static final String CANCER_580 = "133263AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_580 = 133263;
 	
-	public static final String CANCER_581 = "133264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_581 = 133264;
 	
-	public static final String CANCER_582 = "133265AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_582 = 133265;
 	
-	public static final String CANCER_583 = "133266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_583 = 133266;
 	
-	public static final String CANCER_584 = "133267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_584 = 133267;
 	
-	public static final String CANCER_585 = "133268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_585 = 133268;
 	
-	public static final String CANCER_586 = "133269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_586 = 133269;
 	
-	public static final String CANCER_587 = "133270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_587 = 133270;
 	
-	public static final String CANCER_588 = "133271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_588 = 133271;
 	
-	public static final String CANCER_589 = "133272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_589 = 133272;
 	
-	public static final String CANCER_590 = "133274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_590 = 133274;
 	
-	public static final String CANCER_591 = "133275AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_591 = 133275;
 	
-	public static final String CANCER_592 = "133276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_592 = 133276;
 	
-	public static final String CANCER_593 = "133277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_593 = 133277;
 	
-	public static final String CANCER_594 = "133278AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_594 = 133278;
 	
-	public static final String CANCER_595 = "133287AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_595 = 133287;
 	
-	public static final String CANCER_596 = "133288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_596 = 133288;
 	
-	public static final String CANCER_597 = "133293AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_597 = 133293;
 	
-	public static final String CANCER_598 = "133298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_598 = 133298;
 	
-	public static final String CANCER_599 = "133299AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_599 = 133299;
 	
-	public static final String CANCER_600 = "133300AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_600 = 133300;
 	
-	public static final String CANCER_601 = "133301AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_601 = 133301;
 	
-	public static final String CANCER_602 = "133302AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_602 = 133302;
 	
-	public static final String CANCER_603 = "133303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_603 = 133303;
 	
-	public static final String CANCER_604 = "133304AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_604 = 133304;
 	
-	public static final String CANCER_605 = "133305AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_605 = 133305;
 	
-	public static final String CANCER_606 = "133306AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_606 = 133306;
 	
-	public static final String CANCER_607 = "133308AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_607 = 133308;
 	
-	public static final String CANCER_608 = "133310AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_608 = 133310;
 	
-	public static final String CANCER_609 = "133311AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_609 = 133311;
 	
-	public static final String CANCER_610 = "133312AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_610 = 133312;
 	
-	public static final String CANCER_611 = "133313AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_611 = 133313;
 	
-	public static final String CANCER_612 = "133314AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_612 = 133314;
 	
-	public static final String CANCER_613 = "133315AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_613 = 133315;
 	
-	public static final String CANCER_614 = "133316AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_614 = 133316;
 	
-	public static final String CANCER_615 = "133317AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_615 = 133317;
 	
-	public static final String CANCER_616 = "133318AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_616 = 133318;
 	
-	public static final String CANCER_617 = "133319AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_617 = 133319;
 	
-	public static final String CANCER_618 = "133320AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_618 = 133320;
 	
-	public static final String CANCER_619 = "133321AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_619 = 133321;
 	
-	public static final String CANCER_620 = "133322AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_620 = 133322;
 	
-	public static final String CANCER_621 = "133324AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_621 = 133324;
 	
-	public static final String CANCER_622 = "133325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_622 = 133325;
 	
-	public static final String CANCER_623 = "133328AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_623 = 133328;
 	
-	public static final String CANCER_624 = "133329AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_624 = 133329;
 	
-	public static final String CANCER_625 = "133330AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_625 = 133330;
 	
-	public static final String CANCER_626 = "133332AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_626 = 133332;
 	
-	public static final String CANCER_627 = "133334AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_627 = 133334;
 	
-	public static final String CANCER_628 = "133335AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_628 = 133335;
 	
-	public static final String CANCER_629 = "133336AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_629 = 133336;
 	
-	public static final String CANCER_630 = "133339AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_630 = 133339;
 	
-	public static final String CANCER_631 = "133340AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_631 = 133340;
 	
-	public static final String CANCER_632 = "133341AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_632 = 133341;
 	
-	public static final String CANCER_633 = "133342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_633 = 133342;
 	
-	public static final String CANCER_634 = "133343AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_634 = 133343;
 	
-	public static final String CANCER_635 = "133344AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_635 = 133344;
 	
-	public static final String CANCER_636 = "133345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_636 = 133345;
 	
-	public static final String CANCER_637 = "133346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_637 = 133346;
 	
-	public static final String CANCER_638 = "133347AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_638 = 133347;
 	
-	public static final String CANCER_639 = "133349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_639 = 133349;
 	
-	public static final String CANCER_640 = "133350AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_640 = 133350;
 	
-	public static final String CANCER_641 = "133351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_641 = 133351;
 	
-	public static final String CANCER_642 = "133352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_642 = 133352;
 	
-	public static final String CANCER_643 = "133353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_643 = 133353;
 	
-	public static final String CANCER_644 = "133354AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_644 = 133354;
 	
-	public static final String CANCER_645 = "133356AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_645 = 133356;
 	
-	public static final String CANCER_646 = "133357AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_646 = 133357;
 	
-	public static final String CANCER_647 = "133359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_647 = 133359;
 	
-	public static final String CANCER_648 = "133360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_648 = 133360;
 	
-	public static final String CANCER_649 = "133361AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_649 = 133361;
 	
-	public static final String CANCER_650 = "133362AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_650 = 133362;
 	
-	public static final String CANCER_651 = "133363AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_651 = 133363;
 	
-	public static final String CANCER_652 = "133365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_652 = 133365;
 	
-	public static final String CANCER_653 = "134244AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_653 = 134244;
 	
-	public static final String CANCER_654 = "134756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_654 = 134756;
 	
-	public static final String CANCER_655 = "134828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_655 = 134828;
 	
-	public static final String CANCER_656 = "134841AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_656 = 134841;
 	
-	public static final String CANCER_657 = "134890AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_657 = 134890;
 	
-	public static final String CANCER_658 = "134892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_658 = 134892;
 	
-	public static final String CANCER_659 = "135011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_659 = 135011;
 	
-	public static final String CANCER_660 = "135012AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_660 = 135012;
 	
-	public static final String CANCER_661 = "135014AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_661 = 135014;
 	
-	public static final String CANCER_662 = "135015AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_662 = 135015;
 	
-	public static final String CANCER_663 = "135017AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_663 = 135017;
 	
-	public static final String CANCER_664 = "135018AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_664 = 135018;
 	
-	public static final String CANCER_665 = "135019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_665 = 135019;
 	
-	public static final String CANCER_666 = "135020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_666 = 135020;
 	
-	public static final String CANCER_667 = "135021AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_667 = 135021;
 	
-	public static final String CANCER_668 = "135023AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_668 = 135023;
 	
-	public static final String CANCER_669 = "135025AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_669 = 135025;
 	
-	public static final String CANCER_670 = "135026AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_670 = 135026;
 	
-	public static final String CANCER_671 = "135027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_671 = 135027;
 	
-	public static final String CANCER_672 = "135031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_672 = 135031;
 	
-	public static final String CANCER_673 = "135034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_673 = 135034;
 	
-	public static final String CANCER_674 = "135035AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_674 = 135035;
 	
-	public static final String CANCER_675 = "135036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_675 = 135036;
 	
-	public static final String CANCER_676 = "135037AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_676 = 135037;
 	
-	public static final String CANCER_677 = "135043AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_677 = 135043;
 	
-	public static final String CANCER_678 = "135045AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_678 = 135045;
 	
-	public static final String CANCER_679 = "135046AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_679 = 135046;
 	
-	public static final String CANCER_680 = "135047AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_680 = 135047;
 	
-	public static final String CANCER_681 = "135048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_681 = 135048;
 	
-	public static final String CANCER_682 = "135049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_682 = 135049;
 	
-	public static final String CANCER_683 = "135050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_683 = 135050;
 	
-	public static final String CANCER_684 = "135051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_684 = 135051;
 	
-	public static final String CANCER_685 = "135052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_685 = 135052;
 	
-	public static final String CANCER_686 = "135054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_686 = 135054;
 	
-	public static final String CANCER_687 = "135055AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_687 = 135055;
 	
-	public static final String CANCER_688 = "135056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_688 = 135056;
 	
-	public static final String CANCER_689 = "135057AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_689 = 135057;
 	
-	public static final String CANCER_690 = "135059AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_690 = 135059;
 	
-	public static final String CANCER_691 = "135061AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_691 = 135061;
 	
-	public static final String CANCER_692 = "135062AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_692 = 135062;
 	
-	public static final String CANCER_693 = "135063AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_693 = 135063;
 	
-	public static final String CANCER_694 = "135064AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_694 = 135064;
 	
-	public static final String CANCER_695 = "135066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_695 = 135066;
 	
-	public static final String CANCER_696 = "135067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_696 = 135067;
 	
-	public static final String CANCER_697 = "135087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_697 = 135087;
 	
-	public static final String CANCER_698 = "135089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_698 = 135089;
 	
-	public static final String CANCER_699 = "135090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_699 = 135090;
 	
-	public static final String CANCER_700 = "135091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_700 = 135091;
 	
-	public static final String CANCER_701 = "135092AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_701 = 135092;
 	
-	public static final String CANCER_702 = "135093AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_702 = 135093;
 	
-	public static final String CANCER_703 = "135095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_703 = 135095;
 	
-	public static final String CANCER_704 = "135096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_704 = 135096;
 	
-	public static final String CANCER_705 = "135097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_705 = 135097;
 	
-	public static final String CANCER_706 = "135098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_706 = 135098;
 	
-	public static final String CANCER_707 = "135099AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_707 = 135099;
 	
-	public static final String CANCER_708 = "135100AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_708 = 135100;
 	
-	public static final String CANCER_709 = "135102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_709 = 135102;
 	
-	public static final String CANCER_710 = "135103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_710 = 135103;
 	
-	public static final String CANCER_711 = "135104AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_711 = 135104;
 	
-	public static final String CANCER_712 = "135105AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_712 = 135105;
 	
-	public static final String CANCER_713 = "135106AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_713 = 135106;
 	
-	public static final String CANCER_714 = "135108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_714 = 135108;
 	
-	public static final String CANCER_715 = "135109AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_715 = 135109;
 	
-	public static final String CANCER_716 = "135110AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_716 = 135110;
 	
-	public static final String CANCER_717 = "135112AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_717 = 135112;
 	
-	public static final String CANCER_718 = "135113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_718 = 135113;
 	
-	public static final String CANCER_719 = "135114AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_719 = 135114;
 	
-	public static final String CANCER_720 = "135115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_720 = 135115;
 	
-	public static final String CANCER_721 = "135116AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_721 = 135116;
 	
-	public static final String CANCER_722 = "135117AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_722 = 135117;
 	
-	public static final String CANCER_723 = "135118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_723 = 135118;
 	
-	public static final String CANCER_724 = "135122AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_724 = 135122;
 	
-	public static final String CANCER_725 = "135125AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_725 = 135125;
 	
-	public static final String CANCER_726 = "135126AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_726 = 135126;
 	
-	public static final String CANCER_727 = "135127AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_727 = 135127;
 	
-	public static final String CANCER_728 = "135129AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_728 = 135129;
 	
-	public static final String CANCER_729 = "135130AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_729 = 135130;
 	
-	public static final String CANCER_730 = "135132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_730 = 135132;
 	
-	public static final String CANCER_731 = "135134AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_731 = 135134;
 	
-	public static final String CANCER_732 = "135136AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_732 = 135136;
 	
-	public static final String CANCER_733 = "135137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_733 = 135137;
 	
-	public static final String CANCER_734 = "135139AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_734 = 135139;
 	
-	public static final String CANCER_735 = "135140AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_735 = 135140;
 	
-	public static final String CANCER_736 = "135141AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_736 = 135141;
 	
-	public static final String CANCER_737 = "135144AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_737 = 135144;
 	
-	public static final String CANCER_738 = "135145AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_738 = 135145;
 	
-	public static final String CANCER_739 = "135146AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_739 = 135146;
 	
-	public static final String CANCER_740 = "135151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_740 = 135151;
 	
-	public static final String CANCER_741 = "135153AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_741 = 135153;
 	
-	public static final String CANCER_742 = "135156AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_742 = 135156;
 	
-	public static final String CANCER_743 = "135157AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_743 = 135157;
 	
-	public static final String CANCER_744 = "135158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_744 = 135158;
 	
-	public static final String CANCER_745 = "135159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_745 = 135159;
 	
-	public static final String CANCER_746 = "135160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_746 = 135160;
 	
-	public static final String CANCER_747 = "135161AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_747 = 135161;
 	
-	public static final String CANCER_748 = "135163AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_748 = 135163;
 	
-	public static final String CANCER_749 = "135164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_749 = 135164;
 	
-	public static final String CANCER_750 = "135165AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_750 = 135165;
 	
-	public static final String CANCER_751 = "135166AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_751 = 135166;
 	
-	public static final String CANCER_752 = "135167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_752 = 135167;
 	
-	public static final String CANCER_753 = "135170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_753 = 135170;
 	
-	public static final String CANCER_754 = "135172AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_754 = 135172;
 	
-	public static final String CANCER_755 = "135173AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_755 = 135173;
 	
-	public static final String CANCER_756 = "135174AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_756 = 135174;
 	
-	public static final String CANCER_757 = "135175AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_757 = 135175;
 	
-	public static final String CANCER_758 = "135176AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_758 = 135176;
 	
-	public static final String CANCER_759 = "135179AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_759 = 135179;
 	
-	public static final String CANCER_760 = "135181AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_760 = 135181;
 	
-	public static final String CANCER_761 = "135183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_761 = 135183;
 	
-	public static final String CANCER_762 = "135186AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_762 = 135186;
 	
-	public static final String CANCER_763 = "135187AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_763 = 135187;
 	
-	public static final String CANCER_764 = "135194AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_764 = 135194;
 	
-	public static final String CANCER_765 = "135196AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_765 = 135196;
 	
-	public static final String CANCER_766 = "135197AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_766 = 135197;
 	
-	public static final String CANCER_767 = "135198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_767 = 135198;
 	
-	public static final String CANCER_768 = "135199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_768 = 135199;
 	
-	public static final String CANCER_769 = "135201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_769 = 135201;
 	
-	public static final String CANCER_770 = "135204AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_770 = 135204;
 	
-	public static final String CANCER_771 = "135206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_771 = 135206;
 	
-	public static final String CANCER_772 = "135207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_772 = 135207;
 	
-	public static final String CANCER_773 = "135208AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_773 = 135208;
 	
-	public static final String CANCER_774 = "135209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_774 = 135209;
 	
-	public static final String CANCER_775 = "135210AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_775 = 135210;
 	
-	public static final String CANCER_776 = "135211AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_776 = 135211;
 	
-	public static final String CANCER_777 = "135212AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_777 = 135212;
 	
-	public static final String CANCER_778 = "135213AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_778 = 135213;
 	
-	public static final String CANCER_779 = "135214AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_779 = 135214;
 	
-	public static final String CANCER_780 = "135215AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_780 = 135215;
 	
-	public static final String CANCER_781 = "135216AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_781 = 135216;
 	
-	public static final String CANCER_782 = "135217AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_782 = 135217;
 	
-	public static final String CANCER_783 = "135218AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_783 = 135218;
 	
-	public static final String CANCER_784 = "135219AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_784 = 135219;
 	
-	public static final String CANCER_785 = "135220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_785 = 135220;
 	
-	public static final String CANCER_786 = "135222AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_786 = 135222;
 	
-	public static final String CANCER_787 = "135223AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_787 = 135223;
 	
-	public static final String CANCER_788 = "135224AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_788 = 135224;
 	
-	public static final String CANCER_789 = "135225AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_789 = 135225;
 	
-	public static final String CANCER_790 = "135226AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_790 = 135226;
 	
-	public static final String CANCER_791 = "135228AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_791 = 135228;
 	
-	public static final String CANCER_792 = "135229AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_792 = 135229;
 	
-	public static final String CANCER_793 = "135230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_793 = 135230;
 	
-	public static final String CANCER_794 = "135231AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_794 = 135231;
 	
-	public static final String CANCER_795 = "137768AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_795 = 137768;
 	
-	public static final String CANCER_796 = "138309AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_796 = 138309;
 	
-	public static final String CANCER_797 = "138576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_797 = 138576;
 	
-	public static final String CANCER_798 = "138924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_798 = 138924;
 	
-	public static final String CANCER_799 = "139194AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_799 = 139194;
 	
-	public static final String CANCER_800 = "139477AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_800 = 139477;
 	
-	public static final String CANCER_801 = "140220AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_801 = 140220;
 	
-	public static final String CANCER_802 = "140235AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_802 = 140235;
 	
-	public static final String CANCER_803 = "140532AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_803 = 140532;
 	
-	public static final String CANCER_804 = "141953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_804 = 141953;
 	
-	public static final String CANCER_805 = "141957AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_805 = 141957;
 	
-	public static final String CANCER_806 = "142031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_806 = 142031;
 	
-	public static final String CANCER_807 = "142032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_807 = 142032;
 	
-	public static final String CANCER_808 = "147435AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_808 = 147435;
 	
-	public static final String CANCER_809 = "147443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_809 = 147443;
 	
-	public static final String CANCER_810 = "147450AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_810 = 147450;
 	
-	public static final String CANCER_811 = "147582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_811 = 147582;
 	
-	public static final String CANCER_812 = "147583AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_812 = 147583;
 	
-	public static final String CANCER_813 = "147584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_813 = 147584;
 	
-	public static final String CANCER_814 = "147585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_814 = 147585;
 	
-	public static final String CANCER_815 = "147586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_815 = 147586;
 	
-	public static final String CANCER_816 = "147587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_816 = 147587;
 	
-	public static final String CANCER_817 = "147588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_817 = 147588;
 	
-	public static final String CANCER_818 = "147589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_818 = 147589;
 	
-	public static final String CANCER_819 = "147593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_819 = 147593;
 	
-	public static final String CANCER_820 = "147594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_820 = 147594;
 	
-	public static final String CANCER_821 = "147595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_821 = 147595;
 	
-	public static final String CANCER_822 = "147598AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_822 = 147598;
 	
-	public static final String CANCER_823 = "147599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_823 = 147599;
 	
-	public static final String CANCER_824 = "147600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_824 = 147600;
 	
-	public static final String CANCER_825 = "147601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_825 = 147601;
 	
-	public static final String CANCER_826 = "147603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_826 = 147603;
 	
-	public static final String CANCER_827 = "147604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_827 = 147604;
 	
-	public static final String CANCER_828 = "147606AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_828 = 147606;
 	
-	public static final String CANCER_829 = "147607AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_829 = 147607;
 	
-	public static final String CANCER_830 = "147608AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_830 = 147608;
 	
-	public static final String CANCER_831 = "147613AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_831 = 147613;
 	
-	public static final String CANCER_832 = "147614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_832 = 147614;
 	
-	public static final String CANCER_833 = "147615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_833 = 147615;
 	
-	public static final String CANCER_834 = "147619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_834 = 147619;
 	
-	public static final String CANCER_835 = "147620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_835 = 147620;
 	
-	public static final String CANCER_836 = "147621AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_836 = 147621;
 	
-	public static final String CANCER_837 = "147622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_837 = 147622;
 	
-	public static final String CANCER_838 = "147623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_838 = 147623;
 	
-	public static final String CANCER_839 = "147624AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_839 = 147624;
 	
-	public static final String CANCER_840 = "147625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_840 = 147625;
 	
-	public static final String CANCER_841 = "147626AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_841 = 147626;
 	
-	public static final String CANCER_842 = "147627AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_842 = 147627;
 	
-	public static final String CANCER_843 = "147629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_843 = 147629;
 	
-	public static final String CANCER_844 = "147630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_844 = 147630;
 	
-	public static final String CANCER_845 = "147631AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_845 = 147631;
 	
-	public static final String CANCER_846 = "147632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_846 = 147632;
 	
-	public static final String CANCER_847 = "147633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_847 = 147633;
 	
-	public static final String CANCER_848 = "147639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_848 = 147639;
 	
-	public static final String CANCER_849 = "147640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_849 = 147640;
 	
-	public static final String CANCER_850 = "147641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_850 = 147641;
 	
-	public static final String CANCER_851 = "147642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_851 = 147642;
 	
-	public static final String CANCER_852 = "147643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_852 = 147643;
 	
-	public static final String CANCER_853 = "147644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_853 = 147644;
 	
-	public static final String CANCER_854 = "147646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_854 = 147646;
 	
-	public static final String CANCER_855 = "147647AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_855 = 147647;
 	
-	public static final String CANCER_856 = "147648AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_856 = 147648;
 	
-	public static final String CANCER_857 = "147649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_857 = 147649;
 	
-	public static final String CANCER_858 = "147650AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_858 = 147650;
 	
-	public static final String CANCER_859 = "147651AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_859 = 147651;
 	
-	public static final String CANCER_860 = "147652AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_860 = 147652;
 	
-	public static final String CANCER_861 = "147653AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_861 = 147653;
 	
-	public static final String CANCER_862 = "147654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_862 = 147654;
 	
-	public static final String CANCER_863 = "147655AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_863 = 147655;
 	
-	public static final String CANCER_864 = "147656AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_864 = 147656;
 	
-	public static final String CANCER_865 = "147657AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_865 = 147657;
 	
-	public static final String CANCER_866 = "147658AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_866 = 147658;
 	
-	public static final String CANCER_867 = "147659AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_867 = 147659;
 	
-	public static final String CANCER_868 = "147660AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_868 = 147660;
 	
-	public static final String CANCER_869 = "147661AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_869 = 147661;
 	
-	public static final String CANCER_870 = "147662AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_870 = 147662;
 	
-	public static final String CANCER_871 = "147663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_871 = 147663;
 	
-	public static final String CANCER_872 = "147664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_872 = 147664;
 	
-	public static final String CANCER_873 = "147665AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_873 = 147665;
 	
-	public static final String CANCER_874 = "147666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_874 = 147666;
 	
-	public static final String CANCER_875 = "147667AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_875 = 147667;
 	
-	public static final String CANCER_876 = "147668AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_876 = 147668;
 	
-	public static final String CANCER_877 = "147669AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_877 = 147669;
 	
-	public static final String CANCER_878 = "147670AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_878 = 147670;
 	
-	public static final String CANCER_879 = "147671AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_879 = 147671;
 	
-	public static final String CANCER_880 = "147672AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_880 = 147672;
 	
-	public static final String CANCER_881 = "147673AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_881 = 147673;
 	
-	public static final String CANCER_882 = "147674AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_882 = 147674;
 	
-	public static final String CANCER_883 = "147675AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_883 = 147675;
 	
-	public static final String CANCER_884 = "147676AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_884 = 147676;
 	
-	public static final String CANCER_885 = "147677AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_885 = 147677;
 	
-	public static final String CANCER_886 = "147678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_886 = 147678;
 	
-	public static final String CANCER_887 = "147679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_887 = 147679;
 	
-	public static final String CANCER_888 = "147680AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_888 = 147680;
 	
-	public static final String CANCER_889 = "147681AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_889 = 147681;
 	
-	public static final String CANCER_890 = "147682AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_890 = 147682;
 	
-	public static final String CANCER_891 = "147683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_891 = 147683;
 	
-	public static final String CANCER_892 = "147684AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_892 = 147684;
 	
-	public static final String CANCER_893 = "147685AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_893 = 147685;
 	
-	public static final String CANCER_894 = "147686AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_894 = 147686;
 	
-	public static final String CANCER_895 = "147687AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_895 = 147687;
 	
-	public static final String CANCER_896 = "147688AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_896 = 147688;
 	
-	public static final String CANCER_897 = "147689AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_897 = 147689;
 	
-	public static final String CANCER_898 = "147690AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_898 = 147690;
 	
-	public static final String CANCER_899 = "147691AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_899 = 147691;
 	
-	public static final String CANCER_900 = "147692AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_900 = 147692;
 	
-	public static final String CANCER_901 = "147693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_901 = 147693;
 	
-	public static final String CANCER_902 = "147694AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_902 = 147694;
 	
-	public static final String CANCER_903 = "147695AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_903 = 147695;
 	
-	public static final String CANCER_904 = "147696AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_904 = 147696;
 	
-	public static final String CANCER_905 = "147698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_905 = 147698;
 	
-	public static final String CANCER_906 = "147699AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_906 = 147699;
 	
-	public static final String CANCER_907 = "147700AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_907 = 147700;
 	
-	public static final String CANCER_908 = "147708AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_908 = 147708;
 	
-	public static final String CANCER_909 = "147716AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_909 = 147716;
 	
-	public static final String CANCER_910 = "147717AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_910 = 147717;
 	
-	public static final String CANCER_911 = "147718AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_911 = 147718;
 	
-	public static final String CANCER_912 = "147720AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_912 = 147720;
 	
-	public static final String CANCER_913 = "147725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_913 = 147725;
 	
-	public static final String CANCER_914 = "147726AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_914 = 147726;
 	
-	public static final String CANCER_915 = "147728AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_915 = 147728;
 	
-	public static final String CANCER_916 = "147729AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_916 = 147729;
 	
-	public static final String CANCER_917 = "147730AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_917 = 147730;
 	
-	public static final String CANCER_918 = "147742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_918 = 147742;
 	
-	public static final String CANCER_919 = "147743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_919 = 147743;
 	
-	public static final String CANCER_920 = "147746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_920 = 147746;
 	
-	public static final String CANCER_921 = "147748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_921 = 147748;
 	
-	public static final String CANCER_922 = "147750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_922 = 147750;
 	
-	public static final String CANCER_923 = "147751AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_923 = 147751;
 	
-	public static final String CANCER_924 = "147752AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_924 = 147752;
 	
-	public static final String CANCER_925 = "147753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_925 = 147753;
 	
-	public static final String CANCER_926 = "147757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_926 = 147757;
 	
-	public static final String CANCER_927 = "147758AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_927 = 147758;
 	
-	public static final String CANCER_928 = "147759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_928 = 147759;
 	
-	public static final String CANCER_929 = "147760AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_929 = 147760;
 	
-	public static final String CANCER_930 = "147761AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_930 = 147761;
 	
-	public static final String CANCER_931 = "147762AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_931 = 147762;
 	
-	public static final String CANCER_932 = "147763AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_932 = 147763;
 	
-	public static final String CANCER_933 = "147764AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_933 = 147764;
 	
-	public static final String CANCER_934 = "147765AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_934 = 147765;
 	
-	public static final String CANCER_935 = "147766AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_935 = 147766;
 	
-	public static final String CANCER_936 = "147775AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_936 = 147775;
 	
-	public static final String CANCER_937 = "147776AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_937 = 147776;
 	
-	public static final String CANCER_938 = "147777AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_938 = 147777;
 	
-	public static final String CANCER_939 = "147778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_939 = 147778;
 	
-	public static final String CANCER_940 = "147779AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_940 = 147779;
 	
-	public static final String CANCER_941 = "147780AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_941 = 147780;
 	
-	public static final String CANCER_942 = "147781AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_942 = 147781;
 	
-	public static final String CANCER_943 = "147786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_943 = 147786;
 	
-	public static final String CANCER_944 = "147787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_944 = 147787;
 	
-	public static final String CANCER_945 = "147788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_945 = 147788;
 	
-	public static final String CANCER_946 = "147789AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_946 = 147789;
 	
-	public static final String CANCER_947 = "147790AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_947 = 147790;
 	
-	public static final String CANCER_948 = "147791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_948 = 147791;
 	
-	public static final String CANCER_949 = "147792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_949 = 147792;
 	
-	public static final String CANCER_950 = "147793AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_950 = 147793;
 	
-	public static final String CANCER_951 = "147794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_951 = 147794;
 	
-	public static final String CANCER_952 = "147795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_952 = 147795;
 	
-	public static final String CANCER_953 = "147796AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_953 = 147796;
 	
-	public static final String CANCER_954 = "147797AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_954 = 147797;
 	
-	public static final String CANCER_955 = "147798AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_955 = 147798;
 	
-	public static final String CANCER_956 = "147800AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_956 = 147800;
 	
-	public static final String CANCER_957 = "147801AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_957 = 147801;
 	
-	public static final String CANCER_958 = "147802AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_958 = 147802;
 	
-	public static final String CANCER_959 = "147803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_959 = 147803;
 	
-	public static final String CANCER_960 = "147804AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_960 = 147804;
 	
-	public static final String CANCER_961 = "147805AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_961 = 147805;
 	
-	public static final String CANCER_962 = "147807AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_962 = 147807;
 	
-	public static final String CANCER_963 = "147808AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_963 = 147808;
 	
-	public static final String CANCER_964 = "147809AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_964 = 147809;
 	
-	public static final String CANCER_965 = "147810AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_965 = 147810;
 	
-	public static final String CANCER_966 = "147811AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_966 = 147811;
 	
-	public static final String CANCER_967 = "147812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_967 = 147812;
 	
-	public static final String CANCER_968 = "147813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_968 = 147813;
 	
-	public static final String CANCER_969 = "147818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_969 = 147818;
 	
-	public static final String CANCER_970 = "147822AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_970 = 147822;
 	
-	public static final String CANCER_971 = "147823AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_971 = 147823;
 	
-	public static final String CANCER_972 = "147824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_972 = 147824;
 	
-	public static final String CANCER_973 = "147825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_973 = 147825;
 	
-	public static final String CANCER_974 = "147826AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_974 = 147826;
 	
-	public static final String CANCER_975 = "147827AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_975 = 147827;
 	
-	public static final String CANCER_976 = "147828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_976 = 147828;
 	
-	public static final String CANCER_977 = "147829AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_977 = 147829;
 	
-	public static final String CANCER_978 = "147830AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_978 = 147830;
 	
-	public static final String CANCER_979 = "147831AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_979 = 147831;
 	
-	public static final String CANCER_980 = "147832AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_980 = 147832;
 	
-	public static final String CANCER_981 = "147833AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_981 = 147833;
 	
-	public static final String CANCER_982 = "147834AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_982 = 147834;
 	
-	public static final String CANCER_983 = "147835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_983 = 147835;
 	
-	public static final String CANCER_984 = "147836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_984 = 147836;
 	
-	public static final String CANCER_985 = "147838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_985 = 147838;
 	
-	public static final String CANCER_986 = "147840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_986 = 147840;
 	
-	public static final String CANCER_987 = "147845AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_987 = 147845;
 	
-	public static final String CANCER_988 = "147846AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_988 = 147846;
 	
-	public static final String CANCER_989 = "147847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_989 = 147847;
 	
-	public static final String CANCER_990 = "147852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_990 = 147852;
 	
-	public static final String CANCER_991 = "147853AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_991 = 147853;
 	
-	public static final String CANCER_992 = "147854AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_992 = 147854;
 	
-	public static final String CANCER_993 = "147855AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_993 = 147855;
 	
-	public static final String CANCER_994 = "147856AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_994 = 147856;
 	
-	public static final String CANCER_995 = "147857AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_995 = 147857;
 	
-	public static final String CANCER_996 = "147858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_996 = 147858;
 	
-	public static final String CANCER_997 = "147860AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_997 = 147860;
 	
-	public static final String CANCER_998 = "147862AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_998 = 147862;
 	
-	public static final String CANCER_999 = "147864AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_999 = 147864;
 	
-	public static final String CANCER_1000 = "147865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1000 = 147865;
 	
-	public static final String CANCER_1001 = "147866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1001 = 147866;
 	
-	public static final String CANCER_1002 = "147867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1002 = 147867;
 	
-	public static final String CANCER_1003 = "147870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1003 = 147870;
 	
-	public static final String CANCER_1004 = "147871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1004 = 147871;
 	
-	public static final String CANCER_1005 = "147905AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1005 = 147905;
 	
-	public static final String CANCER_1006 = "149138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1006 = 149138;
 	
-	public static final String CANCER_1007 = "151185AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1007 = 151185;
 	
-	public static final String CANCER_1008 = "151284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1008 = 151284;
 	
-	public static final String CANCER_1009 = "151285AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1009 = 151285;
 	
-	public static final String CANCER_1010 = "151286AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1010 = 151286;
 	
-	public static final String CANCER_1011 = "151519AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1011 = 151519;
 	
-	public static final String CANCER_1012 = "151520AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1012 = 151520;
 	
-	public static final String CANCER_1013 = "151521AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1013 = 151521;
 	
-	public static final String CANCER_1014 = "151828AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1014 = 151828;
 	
-	public static final String CANCER_1015 = "152199AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1015 = 152199;
 	
-	public static final String CANCER_1016 = "152200AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1016 = 152200;
 	
-	public static final String CANCER_1017 = "152201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1017 = 152201;
 	
-	public static final String CANCER_1018 = "152205AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1018 = 152205;
 	
-	public static final String CANCER_1019 = "152207AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1019 = 152207;
 	
-	public static final String CANCER_1020 = "152274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1020 = 152274;
 	
-	public static final String CANCER_1021 = "152445AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1021 = 152445;
 	
-	public static final String CANCER_1022 = "152449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1022 = 152449;
 	
-	public static final String CANCER_1023 = "152458AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1023 = 152458;
 	
-	public static final String CANCER_1024 = "152491AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1024 = 152491;
 	
-	public static final String CANCER_1025 = "152506AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1025 = 152506;
 	
-	public static final String CANCER_1026 = "152838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1026 = 152838;
 	
-	public static final String CANCER_1027 = "152986AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1027 = 152986;
 	
-	public static final String CANCER_1028 = "153245AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1028 = 153245;
 	
-	public static final String CANCER_1029 = "153387AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1029 = 153387;
 	
-	public static final String CANCER_1030 = "153616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1030 = 153616;
 	
-	public static final String CANCER_1031 = "154235AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1031 = 154235;
 	
-	public static final String CANCER_1032 = "155259AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1032 = 155259;
 	
-	public static final String CANCER_1033 = "155261AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1033 = 155261;
 	
-	public static final String CANCER_1034 = "155262AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1034 = 155262;
 	
-	public static final String CANCER_1035 = "155263AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1035 = 155263;
 	
-	public static final String CANCER_1036 = "155264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1036 = 155264;
 	
-	public static final String CANCER_1037 = "155265AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1037 = 155265;
 	
-	public static final String CANCER_1038 = "155266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1038 = 155266;
 	
-	public static final String CANCER_1039 = "155267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1039 = 155267;
 	
-	public static final String CANCER_1040 = "155268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1040 = 155268;
 	
-	public static final String CANCER_1041 = "155269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1041 = 155269;
 	
-	public static final String CANCER_1042 = "155270AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1042 = 155270;
 	
-	public static final String CANCER_1043 = "155271AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1043 = 155271;
 	
-	public static final String CANCER_1044 = "155272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1044 = 155272;
 	
-	public static final String CANCER_1045 = "155273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1045 = 155273;
 	
-	public static final String CANCER_1046 = "155274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1046 = 155274;
 	
-	public static final String CANCER_1047 = "155275AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1047 = 155275;
 	
-	public static final String CANCER_1048 = "155276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1048 = 155276;
 	
-	public static final String CANCER_1049 = "155325AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1049 = 155325;
 	
-	public static final String CANCER_1050 = "156273AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1050 = 156273;
 	
-	public static final String CANCER_1051 = "156274AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1051 = 156274;
 	
-	public static final String CANCER_1052 = "156300AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1052 = 156300;
 	
-	public static final String CANCER_1053 = "156645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1053 = 156645;
 	
-	public static final String CANCER_1054 = "156646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1054 = 156646;
 	
-	public static final String CANCER_1055 = "156672AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1055 = 156672;
 	
-	public static final String CANCER_1056 = "157564AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1056 = 157564;
 	
-	public static final String CANCER_1057 = "157584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1057 = 157584;
 	
-	public static final String CANCER_1058 = "157585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1058 = 157585;
 	
-	public static final String CANCER_1059 = "157586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1059 = 157586;
 	
-	public static final String CANCER_1060 = "157587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1060 = 157587;
 	
-	public static final String CANCER_1061 = "157588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1061 = 157588;
 	
-	public static final String CANCER_1062 = "157589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1062 = 157589;
 	
-	public static final String CANCER_1063 = "157590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1063 = 157590;
 	
-	public static final String CANCER_1064 = "157591AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1064 = 157591;
 	
-	public static final String CANCER_1065 = "157592AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1065 = 157592;
 	
-	public static final String CANCER_1066 = "157593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1066 = 157593;
 	
-	public static final String CANCER_1067 = "157594AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1067 = 157594;
 	
-	public static final String CANCER_1068 = "157595AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1068 = 157595;
 	
-	public static final String CANCER_1069 = "157596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1069 = 157596;
 	
-	public static final String CANCER_1070 = "157597AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1070 = 157597;
 	
-	public static final String CANCER_1071 = "157598AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1071 = 157598;
 	
-	public static final String CANCER_1072 = "157599AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1072 = 157599;
 	
-	public static final String CANCER_1073 = "157600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1073 = 157600;
 	
-	public static final String CANCER_1074 = "157601AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1074 = 157601;
 	
-	public static final String CANCER_1075 = "157602AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1075 = 157602;
 	
-	public static final String CANCER_1076 = "157603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1076 = 157603;
 	
-	public static final String CANCER_1077 = "157604AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1077 = 157604;
 	
-	public static final String CANCER_1078 = "157605AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1078 = 157605;
 	
-	public static final String CANCER_1079 = "157606AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1079 = 157606;
 	
-	public static final String CANCER_1080 = "157607AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1080 = 157607;
 	
-	public static final String CANCER_1081 = "157608AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1081 = 157608;
 	
-	public static final String CANCER_1082 = "157609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1082 = 157609;
 	
-	public static final String CANCER_1083 = "157610AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1083 = 157610;
 	
-	public static final String CANCER_1084 = "157611AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1084 = 157611;
 	
-	public static final String CANCER_1085 = "157612AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1085 = 157612;
 	
-	public static final String CANCER_1086 = "157613AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1086 = 157613;
 	
-	public static final String CANCER_1087 = "157614AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1087 = 157614;
 	
-	public static final String CANCER_1088 = "157615AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1088 = 157615;
 	
-	public static final String CANCER_1089 = "157616AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1089 = 157616;
 	
-	public static final String CANCER_1090 = "157617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1090 = 157617;
 	
-	public static final String CANCER_1091 = "157618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1091 = 157618;
 	
-	public static final String CANCER_1092 = "157619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1092 = 157619;
 	
-	public static final String CANCER_1093 = "157620AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1093 = 157620;
 	
-	public static final String CANCER_1094 = "157621AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1094 = 157621;
 	
-	public static final String CANCER_1095 = "157622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1095 = 157622;
 	
-	public static final String CANCER_1096 = "157623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1096 = 157623;
 	
-	public static final String CANCER_1097 = "157624AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1097 = 157624;
 	
-	public static final String CANCER_1098 = "157625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1098 = 157625;
 	
-	public static final String CANCER_1099 = "157626AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1099 = 157626;
 	
-	public static final String CANCER_1100 = "157627AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1100 = 157627;
 	
-	public static final String CANCER_1101 = "157628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1101 = 157628;
 	
-	public static final String CANCER_1102 = "157629AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1102 = 157629;
 	
-	public static final String CANCER_1103 = "157630AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1103 = 157630;
 	
-	public static final String CANCER_1104 = "157631AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1104 = 157631;
 	
-	public static final String CANCER_1105 = "157632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1105 = 157632;
 	
-	public static final String CANCER_1106 = "157633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1106 = 157633;
 	
-	public static final String CANCER_1107 = "157634AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1107 = 157634;
 	
-	public static final String CANCER_1108 = "157635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1108 = 157635;
 	
-	public static final String CANCER_1109 = "157636AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1109 = 157636;
 	
-	public static final String CANCER_1110 = "157637AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1110 = 157637;
 	
-	public static final String CANCER_1111 = "157638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1111 = 157638;
 	
-	public static final String CANCER_1112 = "157639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1112 = 157639;
 	
-	public static final String CANCER_1113 = "157640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1113 = 157640;
 	
-	public static final String CANCER_1114 = "157641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1114 = 157641;
 	
-	public static final String CANCER_1115 = "157642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1115 = 157642;
 	
-	public static final String CANCER_1116 = "157643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1116 = 157643;
 	
-	public static final String CANCER_1117 = "157644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1117 = 157644;
 	
-	public static final String CANCER_1118 = "157645AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1118 = 157645;
 	
-	public static final String CANCER_1119 = "157646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1119 = 157646;
 	
-	public static final String CANCER_1120 = "157838AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1120 = 157838;
 	
-	public static final String CANCER_1121 = "157909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1121 = 157909;
 	
-	public static final String CANCER_1122 = "157910AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1122 = 157910;
 	
-	public static final String CANCER_1123 = "157911AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1123 = 157911;
 	
-	public static final String CANCER_1124 = "157912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1124 = 157912;
 	
-	public static final String CANCER_1125 = "157913AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1125 = 157913;
 	
-	public static final String CANCER_1126 = "157914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1126 = 157914;
 	
-	public static final String CANCER_1127 = "157915AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1127 = 157915;
 	
-	public static final String CANCER_1128 = "157916AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1128 = 157916;
 	
-	public static final String CANCER_1129 = "157917AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1129 = 157917;
 	
-	public static final String CANCER_1130 = "157918AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1130 = 157918;
 	
-	public static final String CANCER_1131 = "157919AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1131 = 157919;
 	
-	public static final String CANCER_1132 = "157920AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1132 = 157920;
 	
-	public static final String CANCER_1133 = "157921AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1133 = 157921;
 	
-	public static final String CANCER_1134 = "157922AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1134 = 157922;
 	
-	public static final String CANCER_1135 = "157923AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1135 = 157923;
 	
-	public static final String CANCER_1136 = "157924AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1136 = 157924;
 	
-	public static final String CANCER_1137 = "157925AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1137 = 157925;
 	
-	public static final String CANCER_1138 = "157926AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1138 = 157926;
 	
-	public static final String CANCER_1139 = "157927AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1139 = 157927;
 	
-	public static final String CANCER_1140 = "157928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1140 = 157928;
 	
-	public static final String CANCER_1141 = "157929AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1141 = 157929;
 	
-	public static final String CANCER_1142 = "157930AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1142 = 157930;
 	
-	public static final String CANCER_1143 = "157931AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1143 = 157931;
 	
-	public static final String CANCER_1144 = "157932AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1144 = 157932;
 	
-	public static final String CANCER_1145 = "157933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1145 = 157933;
 	
-	public static final String CANCER_1146 = "157934AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1146 = 157934;
 	
-	public static final String CANCER_1147 = "157935AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1147 = 157935;
 	
-	public static final String CANCER_1148 = "157936AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1148 = 157936;
 	
-	public static final String CANCER_1149 = "157937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1149 = 157937;
 	
-	public static final String CANCER_1150 = "157938AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1150 = 157938;
 	
-	public static final String CANCER_1151 = "157939AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1151 = 157939;
 	
-	public static final String CANCER_1152 = "157940AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1152 = 157940;
 	
-	public static final String CANCER_1153 = "157941AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1153 = 157941;
 	
-	public static final String CANCER_1154 = "157942AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1154 = 157942;
 	
-	public static final String CANCER_1155 = "157943AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1155 = 157943;
 	
-	public static final String CANCER_1156 = "157944AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1156 = 157944;
 	
-	public static final String CANCER_1157 = "157945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1157 = 157945;
 	
-	public static final String CANCER_1158 = "157946AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1158 = 157946;
 	
-	public static final String CANCER_1159 = "157947AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1159 = 157947;
 	
-	public static final String CANCER_1160 = "157948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1160 = 157948;
 	
-	public static final String CANCER_1161 = "157949AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1161 = 157949;
 	
-	public static final String CANCER_1162 = "157950AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1162 = 157950;
 	
-	public static final String CANCER_1163 = "157951AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1163 = 157951;
 	
-	public static final String CANCER_1164 = "157952AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1164 = 157952;
 	
-	public static final String CANCER_1165 = "157953AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1165 = 157953;
 	
-	public static final String CANCER_1166 = "157954AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1166 = 157954;
 	
-	public static final String CANCER_1167 = "157955AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1167 = 157955;
 	
-	public static final String CANCER_1168 = "157956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1168 = 157956;
 	
-	public static final String CANCER_1169 = "157957AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1169 = 157957;
 	
-	public static final String CANCER_1170 = "157958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1170 = 157958;
 	
-	public static final String CANCER_1171 = "157959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1171 = 157959;
 	
-	public static final String CANCER_1172 = "157960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1172 = 157960;
 	
-	public static final String CANCER_1173 = "157961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1173 = 157961;
 	
-	public static final String CANCER_1174 = "157962AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1174 = 157962;
 	
-	public static final String CANCER_1175 = "157963AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1175 = 157963;
 	
-	public static final String CANCER_1176 = "157964AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1176 = 157964;
 	
-	public static final String CANCER_1177 = "157965AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1177 = 157965;
 	
-	public static final String CANCER_1178 = "157966AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1178 = 157966;
 	
-	public static final String CANCER_1179 = "157967AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1179 = 157967;
 	
-	public static final String CANCER_1180 = "157968AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1180 = 157968;
 	
-	public static final String CANCER_1181 = "157969AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1181 = 157969;
 	
-	public static final String CANCER_1182 = "157970AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1182 = 157970;
 	
-	public static final String CANCER_1183 = "157971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1183 = 157971;
 	
-	public static final String CANCER_1184 = "158158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1184 = 158158;
 	
-	public static final String CANCER_1185 = "158255AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1185 = 158255;
 	
-	public static final String CANCER_1186 = "158316AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1186 = 158316;
 	
-	public static final String CANCER_1187 = "158373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1187 = 158373;
 	
-	public static final String CANCER_1188 = "158524AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1188 = 158524;
 	
-	public static final String CANCER_1189 = "158525AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1189 = 158525;
 	
-	public static final String CANCER_1190 = "158526AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1190 = 158526;
 	
-	public static final String CANCER_1191 = "158527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1191 = 158527;
 	
-	public static final String CANCER_1192 = "158528AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1192 = 158528;
 	
-	public static final String CANCER_1193 = "158529AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1193 = 158529;
 	
-	public static final String CANCER_1194 = "158531AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1194 = 158531;
 	
-	public static final String CANCER_1195 = "158532AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1195 = 158532;
 	
-	public static final String CANCER_1196 = "158533AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1196 = 158533;
 	
-	public static final String CANCER_1197 = "158738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1197 = 158738;
 	
-	public static final String CANCER_1198 = "158739AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1198 = 158739;
 	
-	public static final String CANCER_1199 = "158740AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1199 = 158740;
 	
-	public static final String CANCER_1200 = "158741AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1200 = 158741;
 	
-	public static final String CANCER_1201 = "158742AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1201 = 158742;
 	
-	public static final String CANCER_1202 = "158743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1202 = 158743;
 	
-	public static final String CANCER_1203 = "158744AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1203 = 158744;
 	
-	public static final String CANCER_1204 = "158745AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1204 = 158745;
 	
-	public static final String CANCER_1205 = "158746AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1205 = 158746;
 	
-	public static final String CANCER_1206 = "158747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1206 = 158747;
 	
-	public static final String CANCER_1207 = "159349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1207 = 159349;
 	
-	public static final String CANCER_1208 = "159351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1208 = 159351;
 	
-	public static final String CANCER_1209 = "159988AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1209 = 159988;
 	
-	public static final String CANCER_1210 = "160209AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1210 = 160209;
 	
-	public static final String CANCER_1211 = "161892AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1211 = 161892;
 	
-	public static final String CANCER_1212 = "161893AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1212 = 161893;
 	
-	public static final String CANCER_1213 = "161894AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1213 = 161894;
 	
-	public static final String CANCER_1214 = "161895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1214 = 161895;
 	
-	public static final String CANCER_1215 = "162236AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1215 = 162236;
 	
-	public static final String CANCER_1216 = "163865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1216 = 163865;
 	
-	public static final String CANCER_1217 = "163880AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1217 = 163880;
 	
-	public static final String CANCER_1218 = "164664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1218 = 164664;
 	
-	public static final String CANCER_1219 = "164666AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CANCER_1219 = 164666;
 	
 }

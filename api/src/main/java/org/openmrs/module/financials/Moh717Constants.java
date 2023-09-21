@@ -28,18 +28,4 @@ public class Moh717Constants {
 	
 	public static final String CWC_Program = "645d7e4c-fbdb-11ea-911a-5fe00fc87a47"; //Maternal and Child Welfare Center
 	
-	// Concepts
-	//  public static final String ENT_CLINIC = "";
-	//  public static final String TB_LEPROSY_CLINIC = "";
-	//    public static final String ORTHOPAEDIC_CLINIC = ""; //
-	//    Occupational Therapy Clinic
-	//    Physiotherapy Clinic
-	//    Medical Clinics
-	//    public static final String SURGICAL_CLINIC = ""; // 5707
-	//    public static final String POPC_PAEDIATRICS_CLINIC = "";
-	//    Nutrition Clinic
-	//    Oncology Clinic
-	//    Renal Clinic
-	//    public static final String DENTAL_CLINIC = "";
-	
 }

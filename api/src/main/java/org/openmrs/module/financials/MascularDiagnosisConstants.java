@@ -3,107 +3,107 @@ package org.openmrs.module.financials;
 public class MascularDiagnosisConstants {
 	
 	// Muscular
-	public static final String Muscular1 = "112824AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular1 = 112824;
 	
-	public static final String Muscular2 = "113158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular2 = 113158;
 	
-	public static final String Muscular3 = "113159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular3 = 113159;
 	
-	public static final String Muscular4 = "113623AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular4 = 113623;
 	
-	public static final String Muscular5 = "115004AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular5 = 115004;
 	
-	public static final String Muscular6 = "115010AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular6 = 115010;
 	
-	public static final String Muscular7 = "115481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular7 = 115481;
 	
-	public static final String Muscular8 = "115483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular8 = 115483;
 	
-	public static final String Muscular9 = "116302AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular9 = 116302;
 	
-	public static final String Muscular10 = "116303AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular10 = 116303;
 	
-	public static final String Muscular11 = "116476AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular11 = 116476;
 	
-	public static final String Muscular12 = "116603AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular12 = 116603;
 	
-	public static final String Muscular13 = "118870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular13 = 118870;
 	
-	public static final String Muscular14 = "119562AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular14 = 119562;
 	
-	public static final String Muscular15 = "120756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular15 = 120756;
 	
-	public static final String Muscular16 = "121230AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular16 = 121230;
 	
-	public static final String Muscular17 = "125852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular17 = 125852;
 	
-	public static final String Muscular18 = "126183AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular18 = 126183;
 	
-	public static final String Muscular19 = "132456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular19 = 132456;
 	
-	public static final String Muscular20 = "133088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular20 = 133088;
 	
-	public static final String Muscular21 = "133617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular21 = 133617;
 	
-	public static final String Muscular22 = "133618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular22 = 133618;
 	
-	public static final String Muscular23 = "133619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular23 = 133619;
 	
-	public static final String Muscular24 = "133621AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular24 = 133621;
 	
-	public static final String Muscular25 = "133622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular25 = 133622;
 	
-	public static final String Muscular26 = "133624AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular26 = 133624;
 	
-	public static final String Muscular27 = "133713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular27 = 133713;
 	
-	public static final String Muscular28 = "136736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular28 = 136736;
 	
-	public static final String Muscular29 = "138160AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular29 = 138160;
 	
-	public static final String Muscular30 = "138743AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular30 = 138743;
 	
-	public static final String Muscular31 = "139365AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular31 = 139365;
 	
-	public static final String Muscular32 = "139527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular32 = 139527;
 	
-	public static final String Muscular33 = "140195AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular33 = 140195;
 	
-	public static final String Muscular34 = "140812AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular34 = 140812;
 	
-	public static final String Muscular35 = "141084AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular35 = 141084;
 	
-	public static final String Muscular36 = "141349AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular36 = 141349;
 	
-	public static final String Muscular37 = "141683AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular37 = 141683;
 	
-	public static final String Muscular38 = "141876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular38 = 141876;
 	
-	public static final String Muscular39 = "141879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular39 = 141879;
 	
-	public static final String Muscular40 = "142036AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular40 = 142036;
 	
-	public static final String Muscular41 = "142296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular41 = 142296;
 	
-	public static final String Muscular42 = "142298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular42 = 142298;
 	
-	public static final String Muscular43 = "143813AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular43 = 143813;
 	
-	public static final String Muscular44 = "143819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular44 = 143819;
 	
-	public static final String Muscular45 = "143933AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular45 = 143933;
 	
-	public static final String Muscular46 = "148596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular46 = 148596;
 	
-	public static final String Muscular47 = "149331AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular47 = 149331;
 	
-	public static final String Muscular48 = "151876AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular48 = 151876;
 	
-	public static final String Muscular49 = "152035AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular49 = 152035;
 	
-	public static final String Muscular50 = "152486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular50 = 152486;
 	
-	public static final String Muscular51 = "152997AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular51 = 152997;
 	
-	public static final String Muscular52 = "153309AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer Muscular52 = 153309;
 }

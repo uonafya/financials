@@ -2,59 +2,59 @@ package org.openmrs.module.financials;
 
 public class ConvulsiveDiagnosisConstants {
 	
-	public static final String CONVULSIVE1 = "206AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE1 = 206;
 	
-	public static final String CONVULSIVE2 = "110191AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE2 = 110191;
 	
-	public static final String CONVULSIVE3 = "110664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE3 = 110664;
 	
-	public static final String CONVULSIVE4 = "110815AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE4 = 110815;
 	
-	public static final String CONVULSIVE5 = "110818AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE5 = 110818;
 	
-	public static final String CONVULSIVE6 = "112353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE6 = 112353;
 	
-	public static final String CONVULSIVE7 = "113054AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE7 = 113054;
 	
-	public static final String CONVULSIVE8 = "114180AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE8 = 114180;
 	
-	public static final String CONVULSIVE9 = "117849AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE9 = 117849;
 	
-	public static final String CONVULSIVE10 = "117858AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE10 = 117858;
 	
-	public static final String CONVULSIVE11 = "118580AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE11 = 118580;
 	
-	public static final String CONVULSIVE12 = "123550AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE12 = 123550;
 	
-	public static final String CONVULSIVE13 = "124958AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE13 = 124958;
 	
-	public static final String CONVULSIVE14 = "126474AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE14 = 126474;
 	
-	public static final String CONVULSIVE15 = "129948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE15 = 129948;
 	
-	public static final String CONVULSIVE16 = "138960AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE16 = 138960;
 	
-	public static final String CONVULSIVE17 = "140339AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE17 = 140339;
 	
-	public static final String CONVULSIVE18 = "140485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE18 = 140485;
 	
-	public static final String CONVULSIVE19 = "143388AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE19 = 143388;
 	
-	public static final String CONVULSIVE20 = "144471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE20 = 144471;
 	
-	public static final String CONVULSIVE21 = "147874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE21 = 147874;
 	
-	public static final String CONVULSIVE22 = "148590AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE22 = 148590;
 	
-	public static final String CONVULSIVE23 = "150308AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE23 = 150308;
 	
-	public static final String CONVULSIVE24 = "151678AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE24 = 151678;
 	
-	public static final String CONVULSIVE25 = "155756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE25 = 155756;
 	
-	public static final String CONVULSIVE26 = "156027AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE26 = 156027;
 	
-	public static final String CONVULSIVE27 = "156119AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE27 = 156119;
 	
-	public static final String CONVULSIVE28 = "161101AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer CONVULSIVE28 = 161101;
 }

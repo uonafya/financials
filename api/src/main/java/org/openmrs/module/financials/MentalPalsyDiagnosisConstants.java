@@ -3,101 +3,101 @@ package org.openmrs.module.financials;
 public class MentalPalsyDiagnosisConstants {
 	
 	//mental Palsy
-	public static final String PALSY1 = "112436AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY1 = 112436;
 	
-	public static final String PALSY2 = "113136AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY2 = 113136;
 	
-	public static final String PALSY3 = "113454AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY3 = 113454;
 	
-	public static final String PALSY4 = "114388AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY4 = 114388;
 	
-	public static final String PALSY5 = "115693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY5 = 115693;
 	
-	public static final String PALSY6 = "119395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY6 = 119395;
 	
-	public static final String PALSY7 = "119396AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY7 = 119396;
 	
-	public static final String PALSY8 = "119750AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY8 = 119750;
 	
-	public static final String PALSY9 = "121353AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY9 = 121353;
 	
-	public static final String PALSY10 = "123006AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY10 = 123006;
 	
-	public static final String PALSY11 = "124569AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY11 = 124569;
 	
-	public static final String PALSY12 = "124572AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY12 = 124572;
 	
-	public static final String PALSY13 = "124679AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY13 = 124679;
 	
-	public static final String PALSY14 = "125035AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY14 = 125035;
 	
-	public static final String PALSY15 = "126258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY15 = 126258;
 	
-	public static final String PALSY16 = "126839AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY16 = 126839;
 	
-	public static final String PALSY17 = "128305AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY17 = 128305;
 	
-	public static final String PALSY18 = "128442AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY18 = 128442;
 	
-	public static final String PALSY19 = "128443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY19 = 128443;
 	
-	public static final String PALSY20 = "130738AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY20 = 130738;
 	
-	public static final String PALSY21 = "130753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY21 = 130753;
 	
-	public static final String PALSY22 = "133748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY22 = 133748;
 	
-	public static final String PALSY23 = "137554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY23 = 137554;
 	
-	public static final String PALSY24 = "137978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY24 = 137978;
 	
-	public static final String PALSY25 = "138069AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY25 = 138069;
 	
-	public static final String PALSY26 = "138959AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY26 = 138959;
 	
-	public static final String PALSY27 = "139910AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY27 = 139910;
 	
-	public static final String PALSY28 = "140815AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY28 = 140815;
 	
-	public static final String PALSY29 = "140816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY29 = 140816;
 	
-	public static final String PALSY30 = "141085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY30 = 141085;
 	
-	public static final String PALSY31 = "141593AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY31 = 141593;
 	
-	public static final String PALSY32 = "141625AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY32 = 141625;
 	
-	public static final String PALSY33 = "143393AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY33 = 143393;
 	
-	public static final String PALSY34 = "143633AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY34 = 143633;
 	
-	public static final String PALSY35 = "143725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY35 = 143725;
 	
-	public static final String PALSY36 = "144091AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY36 = 144091;
 	
-	public static final String PALSY37 = "145847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY37 = 145847;
 	
-	public static final String PALSY38 = "147031AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY38 = 147031;
 	
-	public static final String PALSY39 = "147912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY39 = 147912;
 	
-	public static final String PALSY40 = "149550AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY40 = 149550;
 	
-	public static final String PALSY41 = "149972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY41 = 149972;
 	
-	public static final String PALSY42 = "150895AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY42 = 150895;
 	
-	public static final String PALSY43 = "152034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY43 = 152034;
 	
-	public static final String PALSY44 = "152484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY44 = 152484;
 	
-	public static final String PALSY45 = "152492AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY45 = 152492;
 	
-	public static final String PALSY46 = "155483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY46 = 155483;
 	
-	public static final String PALSY47 = "155698AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY47 = 155698;
 	
-	public static final String PALSY48 = "156626AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY48 = 156626;
 	
-	public static final String PALSY49 = "158847AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	public static final Integer PALSY49 = 158847;
 }

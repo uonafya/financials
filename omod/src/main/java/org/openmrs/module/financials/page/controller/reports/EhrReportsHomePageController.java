@@ -35,9 +35,6 @@ public class EhrReportsHomePageController {
 		for (ReportDescriptor report : reportManager.getCommonReports(currentApp)) {
 			common.add(ui.simplifyObject(report));
 		}
-		if (Context.getAuthenticatedUser().hasRole(EhrCommonMetadata._Roles.EHR_ACCESS_FINANCE_REPORT_SECTION)) {
-			reportsByProgram.put("Facility Summaries", common);
-		}
 		
 		for (ProgramDescriptor programDescriptor : programManager.getAllProgramDescriptors()) {
 			Program program = programDescriptor.getTarget();
@@ -53,6 +50,9 @@ public class EhrReportsHomePageController {
 				
 				reportsByProgram.put(program.getName(), forProgram);
 			}
+		}
+		if (Context.getAuthenticatedUser().hasRole(EhrCommonMetadata._Roles.EHR_ACCESS_FINANCE_REPORT_SECTION)) {
+			reportsByProgram.put("Facility Summaries", common);
 		}
 		
 		model.addAttribute("reportsByProgram", reportsByProgram);
