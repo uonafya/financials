@@ -9184,7 +9184,19 @@ public class EhrAddonsConstants {
 		
 		public static final Integer Dental_stitching = 1000340;
 		
+		public static final String Diarrhoea_with_no_dehydration = "c63f5448-e065-4a5c-8940-4292c021c72a";
+		
+		public static final String Diarrhoea_with_some_dehydration = "de630880-500f-490c-9b55-1dc86b7bf944";
+		
+		public static final String Diarrhoea_with_severe_dehydration = "b1fd9ae5-e5e8-445e-aab7-9e5ab4d89c15";
+		
 	}
+	
+	public static final Concept Diarrhoea_with_no_dehydration_concept = getConcept(_EhrAddOnConcepts.Diarrhoea_with_no_dehydration);
+	
+	public static final Concept Diarrhoea_with_some_dehydration_concept = getConcept(_EhrAddOnConcepts.Diarrhoea_with_some_dehydration);
+	
+	public static final Concept Diarrhoea_with_severe_dehydration_concept = getConcept(_EhrAddOnConcepts.Diarrhoea_with_severe_dehydration);
 	
 	/**
 	 * @return the Concept that matches the passed uuid, name, source:code mapping, or primary key

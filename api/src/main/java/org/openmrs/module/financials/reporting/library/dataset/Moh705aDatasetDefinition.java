@@ -2,6 +2,7 @@ package org.openmrs.module.financials.reporting.library.dataset;
 
 import org.openmrs.EncounterType;
 import org.openmrs.api.context.Context;
+import org.openmrs.module.financials.EhrAddonsConstants;
 import org.openmrs.module.financials.diagnosis.lists.DiagnosisLists;
 import org.openmrs.module.financials.reporting.library.dimesions.EhrAddonDimension;
 import org.openmrs.module.financials.reporting.library.indicator.Moh705IndicatorDefinitions;
@@ -14,6 +15,7 @@ import org.openmrs.module.reporting.evaluation.parameter.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Date;
 
 import static org.openmrs.module.financials.EhrAddonsConstants.getConcept;
@@ -53,6 +55,29 @@ public class Moh705aDatasetDefinition {
 		
 		EhrReportingUtils.addRow(dsd, "DC", "Diarrhoea", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList(),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DWND",
+		    "Diarrhoea with no dehydration",
+		    ReportUtils.map(
+		        moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		            Arrays.asList(EhrAddonsConstants.Diarrhoea_with_no_dehydration_concept.getConceptId()),
+		            opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DWSOD",
+		    "Diarrhoea with some dehydration",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        Arrays.asList(EhrAddonsConstants.Diarrhoea_with_some_dehydration_concept.getConceptId()),
+		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
+		EhrReportingUtils.addRow(
+		    dsd,
+		    "DWSED",
+		    "Diarrhoea with severe dehydration",
+		    ReportUtils.map(moh705aIndicator.getAllChildrenPatientsWithDiagnosis(
+		        Arrays.asList(EhrAddonsConstants.Diarrhoea_with_severe_dehydration_concept.getConceptId()),
 		        opdEncounterType.getEncounterTypeId()), indParam), EhrAddonUtils.getAdultChildrenColumns());
 		
 		EhrReportingUtils.addRow(
