@@ -49,9 +49,9 @@ public class Moh705aDatasetDefinition {
 		EncounterType opdEncounterType = Context.getEncounterService().getEncounterTypeByUuid(
 		    "ba45c278-f290-11ea-9666-1b3e6e848887");
 		
-		dsd.addColumn("DIARRHEA", "DIARRHEA ALL", ReportUtils.map(
+		/*dsd.addColumn("DIARRHEA", "DIARRHEA ALL", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList(),
-		        opdEncounterType.getEncounterTypeId()), indParam), "");
+		        opdEncounterType.getEncounterTypeId()), indParam), "");*/
 		
 		EhrReportingUtils.addRow(dsd, "DC", "Diarrhoea", ReportUtils.map(
 		    moh705aIndicator.getAllChildrenPatientsWithDiagnosis(DiagnosisLists.getDiarrheaDiagnosisList(),

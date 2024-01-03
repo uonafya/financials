@@ -2,7 +2,6 @@ package org.openmrs.module.financials.reports;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openmrs.module.financials.reporting.library.dataset.Moh711DatasetDefinition;
 import org.openmrs.module.kenyacore.report.ReportDescriptor;
 import org.openmrs.module.kenyacore.report.ReportUtils;
 import org.openmrs.module.kenyacore.report.builder.AbstractReportBuilder;
@@ -25,8 +24,8 @@ import java.util.List;
 
 import static org.openmrs.module.kenyacore.report.ReportUtils.map;
 
-@Component
-@Builds({ "financials.report.moh711" })
+//@Component
+//@Builds({ "financials.report.moh711" })
 public class SetupMoh711Report extends AbstractReportBuilder {
 	
 	protected static final Log log = LogFactory.getLog(SetupMoh711Report.class);
@@ -196,12 +195,12 @@ public class SetupMoh711Report extends AbstractReportBuilder {
 		EmrReportingUtils.addRow(dsd, "ANC_CACX", "No.of Client receiving VIA /VILI /HPV VILI / HPV",
 		    ReportUtils.map(moh711Indicators.cacxScreened(), indParams), cacxScreeningAgeDisaggregations,
 		    Arrays.asList("01", "02", "03"));
-		EmrReportingUtils.addRow(dsd, "CACX_Pap_Smear", "No.Screened for Pap smear",
+		/*EmrReportingUtils.addRow(dsd, "CACX_Pap_Smear", "No.Screened for Pap smear",
 		    ReportUtils.map(moh711Indicators.cacxScreenedWithMethod("Pap Smear", 885), indParams),
 		    cacxScreeningAgeDisaggregations, Arrays.asList("01", "02", "03"));
 		EmrReportingUtils.addRow(dsd, "CACX_HPV", "No.Screened for HPV test",
 		    ReportUtils.map(moh711Indicators.cacxScreenedWithMethod("HPV Test", 159895), indParams),
-		    cacxScreeningAgeDisaggregations, Arrays.asList("01", "02", "03"));
+		    cacxScreeningAgeDisaggregations, Arrays.asList("01", "02", "03"));*/
 		EmrReportingUtils.addRow(dsd, "VIA_VILI", "Number of clients with Positive VIA/VILI result",
 		    ReportUtils.map(moh711Indicators.viaViliPositive(), indParams), cacxScreeningAgeDisaggregations,
 		    Arrays.asList("01", "02", "03"));

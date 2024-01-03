@@ -55,9 +55,9 @@ public class RevisitPatientCalculation extends AbstractPatientCalculation {
 			}
 			if (flag.equals("ST")) {
 				if (visitsWithinAyear.size() > 1) {
-					opdNumnberValue = "R";
+					opdNumnberValue = "Revisit Patient";
 				} else {
-					opdNumnberValue = "N";
+					opdNumnberValue = "New Patient";
 				}
 			}
 			if (flag.equals("ID")) {

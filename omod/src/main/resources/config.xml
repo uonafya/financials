@@ -65,18 +65,14 @@
 	 /Required Privileges -->
 
 
-	<!-- Required Global Properties 
+	<!-- Required Global Properties -->
 	<globalProperty>
-		<property>@MODULE_ID@.someProperty</property>
-		<defaultValue></defaultValue>
+		<property>interop.referralNoteConcept</property>
+		<defaultValue>159395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</defaultValue>
 		<description>
-			A description of the global property goes here.  The description
-			should explain enough for administrators to understand the purpose
-			and possible values for the global property.
+			Referral Note Concept
 		</description>
 	</globalProperty>
-	/Required Global Properties -->
-	
 	<!--
 	<dwr>
 		<allow>

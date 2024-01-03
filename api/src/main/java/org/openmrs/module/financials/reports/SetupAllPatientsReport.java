@@ -91,6 +91,7 @@ public class SetupAllPatientsReport extends AbstractHybridReportBuilder {
 		dsd.addColumn("DOB", new BirthdateDataDefinition(), "", new BirthdateConverter(DATE_FORMAT));
 		dsd.addColumn("Age", new AgeDataDefinition(), "", null);
 		dsd.addColumn("vDate", getEncounterDate(), "startDate=${startDate},endDate=${endDate}", new VisitDateDataConverter());
+		dsd.addColumn("vType", getRevisit("ST"), "endDate=${endDate+23h}", new CalculationResultConverter());
 		return dsd;
 	}
 	
