@@ -35,7 +35,8 @@
             fromDate: jq("#summaryFromDate-field").val(),
             toDate: jq('#summaryToDate-field').val(),
             uuid: uuid,
-            enType: encounterType
+            enType: encounterType,
+            provider: "no"
           },
           success: function (data) {
             toReturn = data;
@@ -56,7 +57,8 @@
                   fromDate: jq("#summaryFromDate-field").val(),
                   toDate: jq('#summaryToDate-field').val(),
                   uuid: uuid,
-                  enType: encounterType
+                  enType: encounterType,
+                  provider: "no"
                 },
                 success: function (data) {
                   toReturn = data;
@@ -98,7 +100,8 @@
                 async: false,
                 data: {
                   fromDate: jq("#summaryFromDate-field").val(),
-                  toDate: jq('#summaryToDate-field').val()
+                  toDate: jq('#summaryToDate-field').val(),
+                  user: "no"
                 },
                 success: function (data) {
                   toReturn = data;

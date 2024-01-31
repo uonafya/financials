@@ -5,6 +5,8 @@ import org.openmrs.Concept;
 import org.openmrs.ConceptClass;
 import org.openmrs.EncounterType;
 import org.openmrs.Obs;
+import org.openmrs.Provider;
+import org.openmrs.User;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.ehrconfigs.utils.EhrConfigsUtils;
 import org.openmrs.module.ehrinventory.InventoryService;
@@ -15,6 +17,7 @@ import org.openmrs.module.hospitalcore.InventoryCommonService;
 import org.openmrs.module.hospitalcore.PatientDashboardService;
 import org.openmrs.module.hospitalcore.model.OpdDrugOrder;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
+import org.openmrs.module.hospitalcore.util.HospitalCoreUtils;
 import org.openmrs.ui.framework.SimpleObject;
 import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.fragment.FragmentModel;
@@ -69,15 +72,22 @@ public class GeneralSummariesFragmentController {
 	        @RequestParam(value = "toDate", required = false) Date endDate,
 	        @RequestParam(value = "uuid", required = false) String conceptUuid,
 	        @RequestParam(value = "enType", required = false) String enType,
+			@RequestParam(value = "provider", required = false) String provider,
 			UiUtils ui) {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
 		Concept concept = Context.getConceptService().getConceptByUuid(conceptUuid);
 		EncounterType encounterType = Context.getEncounterService().getEncounterTypeByUuid(enType);
 		ClinicalSummarySimplifier clinicalSummarySimplifier = null;
 		List<ClinicalSummarySimplifier> clinicalSummarySimplifiers = new ArrayList<ClinicalSummarySimplifier>();
+		Provider currentProvider = null;
+		if(StringUtils.isNotBlank(provider)) {
+			if(provider.equals("yes")) {
+				currentProvider = HospitalCoreUtils.getProvider(Context.getAuthenticatedUser().getPerson());
+			}
+		}
 		if (concept != null && encounterType != null) {
 			List<Obs> getAllObsForSummary = new ArrayList<Obs>(hospitalCoreService.getObsBasedOnClassAndDateRange(startDate,
-			    endDate, concept, encounterType));
+			    endDate, concept, encounterType, currentProvider));
 			//put the list in the map so that we get a key and size of the value.
 			HashMap<Integer, List<String>> hashMapCoded = new HashMap<Integer, List<String>>(
 			        EhrConfigsUtils.listMapDiagnosisAndProcedures(getAllObsForSummary));
@@ -103,8 +113,15 @@ public class GeneralSummariesFragmentController {
 	public List<SimpleObject> fetchPrescriptionSummariesByDateRange(
 			@RequestParam(value = "fromDate", required = false) Date startDate,
 			@RequestParam(value = "toDate", required = false) Date endDate,
+			@RequestParam(value = "user", required = false) String user,
 			UiUtils ui) {
-		List<OpdDrugOrder> drugOrders = Context.getService(PatientDashboardService.class).getOpdDrugOrderByDateRange( startDate, endDate, 1);
+		User currentUser = null;
+		if(StringUtils.isNotBlank(user)) {
+			if(user.equals("yes")) {
+				currentUser = Context.getAuthenticatedUser();
+			}
+		}
+		List<OpdDrugOrder> drugOrders = Context.getService(PatientDashboardService.class).getOpdDrugOrderByDateRange( startDate, endDate, 1, currentUser);
 		ClinicalSummarySimplifier clinicalSummarySimplifier = null;
 		List<ClinicalSummarySimplifier> clinicalSummarySimplifiers = new ArrayList<ClinicalSummarySimplifier>();
 		if (!drugOrders.isEmpty()) {
@@ -131,15 +148,22 @@ public class GeneralSummariesFragmentController {
 			@RequestParam(value = "toDate", required = false) Date endDate,
 			@RequestParam(value = "uuid", required = false) String conceptClassUuid,
 			@RequestParam(value = "enType", required = false) String enType,
+			@RequestParam(value = "provider", required = false) String provider,
 			UiUtils ui) {
 		HospitalCoreService hospitalCoreService = Context.getService(HospitalCoreService.class);
 		ConceptClass conceptClass = Context.getConceptService().getConceptClassByUuid(conceptClassUuid);
 		EncounterType encounterType = Context.getEncounterService().getEncounterTypeByUuid(enType);
 		ClinicalSummarySimplifier clinicalSummarySimplifier = null;
 		List<ClinicalSummarySimplifier> clinicalSummarySimplifiers = new ArrayList<ClinicalSummarySimplifier>();
+		Provider currentProvider = null;
+		if(StringUtils.isNotBlank(provider)) {
+			if(provider.equals("yes")) {
+				currentProvider = HospitalCoreUtils.getProvider(Context.getAuthenticatedUser().getPerson());
+			}
+		}
 		if (conceptClass != null && encounterType != null) {
 			List<Obs> getAllObsForSummary = new ArrayList<Obs>(hospitalCoreService.getObsBasedOnClassAndDateRangeForTestsAndRadiology(startDate,
-					endDate, conceptClass, encounterType));
+					endDate, conceptClass, encounterType, currentProvider));
 
 			HashMap<Integer, List<String>> hashMapForTestsAndRadiology = new HashMap<Integer, List<String>>(
 					EhrConfigsUtils.listTestsAndQuestionsConcepts(getAllObsForSummary));
