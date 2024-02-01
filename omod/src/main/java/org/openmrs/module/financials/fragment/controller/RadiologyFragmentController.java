@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class RadiologyFragmentController {
 	
@@ -26,7 +28,9 @@ public class RadiologyFragmentController {
 		
 		List<PatientServiceBillItem> getBilledItemsPerDepartment = hospitalCoreService.getPatientServiceBillByDepartment(
 		    hospitalCoreService.getDepartmentByName("Radiology"), startDate, endDate);
-		List<PatientBillSummary> allLaboratoryBills = new ArrayList<PatientBillSummary>();
+		List<PatientBillSummary> allRadiologyBills = new ArrayList<PatientBillSummary>();
+		Set<PatientBillSummary> allFilteredRadiologyBillsSet = new HashSet<PatientBillSummary>();
+		List<PatientBillSummary> allRadiologySetToList = new ArrayList<PatientBillSummary>();
 		
 		for (PatientServiceBillItem patientServiceBillItem : getBilledItemsPerDepartment) {
 			PatientBillSummary patientBillSummary = new PatientBillSummary();
@@ -44,10 +48,20 @@ public class RadiologyFragmentController {
 			patientBillSummary.setIdentifier(patientServiceBillItem.getPatientServiceBill().getPatient()
 			        .getPatientIdentifier().getIdentifier());
 			//add this build object to the list
-			allLaboratoryBills.add(patientBillSummary);
+			allRadiologyBills.add(patientBillSummary);
 			
 		}
-		return SimpleObject.fromCollection(allLaboratoryBills, ui, "transactionDate", "serviceOffered", "identifier",
-		    "patient", "category", "subCategory", "waiver", "actualAmount", "paidAmount");
+		if(!allRadiologyBills.isEmpty()) {
+			allFilteredRadiologyBillsSet.addAll(allRadiologyBills);
+		}
+		List<SimpleObject> simpleObjectList = new ArrayList<>();
+		if(!allFilteredRadiologyBillsSet.isEmpty()) {
+			allRadiologySetToList.addAll(allFilteredRadiologyBillsSet);
+		}
+		if (!(allRadiologySetToList.isEmpty())) {
+			simpleObjectList = SimpleObject.fromCollection(allRadiologySetToList, ui, "transactionDate", "serviceOffered", "identifier",
+					"patient", "category", "subCategory", "waiver", "actualAmount", "paidAmount");
+		}
+		return simpleObjectList;
 	}
 }

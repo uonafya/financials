@@ -6,6 +6,8 @@ import org.openmrs.module.financials.PatientBillSummary;
 import org.openmrs.module.financials.utils.FinancialsUtils;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.model.PatientServiceBillItem;
+import org.openmrs.module.hospitalcore.util.DateUtils;
+import org.openmrs.module.hospitalcore.util.HospitalCoreUtils;
 import org.openmrs.ui.framework.SimpleObject;
 import org.openmrs.ui.framework.UiUtils;
 import org.openmrs.ui.framework.fragment.FragmentModel;
@@ -13,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class SummaryFragmentController {
 	
@@ -29,6 +33,8 @@ public class SummaryFragmentController {
 						hospitalCoreService.getDepartmentByName("Registration"), startDate, endDate);
 
 		List<PatientBillSummary> allRegistrationBills = new ArrayList<PatientBillSummary>();
+		List<PatientBillSummary> allRegistrationSetToList = new ArrayList<PatientBillSummary>();
+		Set<PatientBillSummary> allFilteredRegistrationBillsSet = new HashSet<PatientBillSummary>();
 		for (PatientServiceBillItem patientServiceBillItem : getBilledItemsPerDepartment) {
 
 			PatientBillSummary patientBillSummary = new PatientBillSummary();
@@ -41,18 +47,24 @@ public class SummaryFragmentController {
 			patientBillSummary.setActualAmount(String.valueOf(patientServiceBillItem.getActualAmount()));
 			patientBillSummary.setPaidAmount(String.valueOf(patientServiceBillItem.getAmount()));
 			patientBillSummary.setRebate(String.valueOf(patientServiceBillItem.getPatientServiceBill().getRebateAmount()));
-			patientBillSummary.setTransactionDate(String.valueOf(patientServiceBillItem.getCreatedDate()));
+			patientBillSummary.setTransactionDate(DateUtils.getDateFromDateAsString(patientServiceBillItem.getCreatedDate(), "yyyy-MM-dd"));
 			patientBillSummary.setServiceOffered(patientServiceBillItem.getService().getName());
 			patientBillSummary.setIdentifier(patientServiceBillItem.getPatientServiceBill().getPatient()
 							.getPatientIdentifier().getIdentifier());
 			//add this build object to the list
 			allRegistrationBills.add(patientBillSummary);
 		}
+		if(!allRegistrationBills.isEmpty()) {
+			allFilteredRegistrationBillsSet.addAll(allRegistrationBills);
+		}
 		List<SimpleObject> simpleObjectList = new ArrayList<>();
-		if (!(allRegistrationBills.isEmpty())) {
-			simpleObjectList = SimpleObject.fromCollection(allRegistrationBills, ui, "billId", "patient", "category", "subCategory",
+		if(!allFilteredRegistrationBillsSet.isEmpty()) {
+			allRegistrationSetToList.addAll(allFilteredRegistrationBillsSet);
+		}
+		if (!(allRegistrationSetToList.isEmpty())) {
+			simpleObjectList = SimpleObject.fromCollection(allRegistrationSetToList, ui, "billId", "patient", "category", "subCategory",
 							"studentAttributeName", "serviceOffered", "waiver", "actualAmount", "paidAmount", "rebate", "transactionDate",
-							"transactionDate", "identifier", "patientId");
+							"identifier", "patientId");
 		}
 
 		return simpleObjectList;
